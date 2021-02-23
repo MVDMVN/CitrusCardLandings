@@ -1,0 +1,1505 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; }
+
+body {
+  margin: 50px 0 50px 0;
+  overflow-x: hidden; }
+
+ul {
+  margin: 0;
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  color: transparent; }
+
+form select,
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding: 0 0 0 12px;
+  background-color: #ffffff; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3B6D9A;
+  outline: none;
+  transition: 0.3s; }
+
+button {
+  display: block;
+  background: 0 0;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  line-height: 44px;
+  transition: .3s;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-size: 18px; }
+
+@keyframes text-right-slide-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(50px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+@keyframes text-left-slide-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+@keyframes text-bottom-slide-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@keyframes text-opacity-anim {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes graphic-width-90-anim {
+  0% {
+    width: 0%; }
+  100% {
+    width: 90%; } }
+@keyframes graphic-width-40-anim {
+  0% {
+    width: 0%; }
+  100% {
+    width: 40%; } }
+.c3 {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  /************************** HEADER SECTION **************************/
+  /************************** CAMERA SECTION **************************/
+  /************************** BOKE SECTION **************************/
+  /************************** MACRO SECTION **************************/
+  /************************** PORTRAIT SECTION **************************/
+  /************************** ACCUM SECTION **************************/
+  /************************** SCREEN SECTION **************************/
+  /************************** PROCESSOR SECTION **************************/
+  /************************** POWER SECTION **************************/
+  /************************** UNLOCK SECTION **************************/
+  /************************** SLOTS SECTION **************************/
+  /************************** COLORS SECTION **************************/
+  /************************** UI SECTION **************************/ }
+  .c3 .c3-header {
+    background: url("https://i.citrus.ua/uploads/promo/realme/c3-card/header/header-bg-2.jpg") left -139px center/120% no-repeat;
+    display: flex;
+    z-index: 3;
+    position: relative; }
+  .c3 .c3-header__container {
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 24px; }
+  .c3 .c3-header__banner {
+    display: block;
+    margin: 0 auto; }
+  @media screen and (max-width: 767px) {
+    .c3 .c3-header {
+      background: url("https://i.citrus.ua/uploads/promo/realme/c3-card/header/header-bg-2.jpg") left -500px center no-repeat;
+      padding-top: 40px;
+      padding-bottom: 60px; }
+    .c3 .c3-header__container {
+      padding-left: 0; } }
+  .c3 .c3-camera {
+    background: #DFF6FF; }
+  .c3 .c3-camera__container {
+    margin: 0 auto;
+    padding: 100px 24px 0 24px; }
+  .c3 .c3-camera__header {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 100px; }
+  .c3 .c3-camera-header__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 24px;
+    color: rgba(0, 0, 0, 0.87);
+    opacity: 0; }
+  .c3 .anim .c3-camera-header__title {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .c3-camera-header__text {
+    font-size: 20px;
+    line-height: 36px;
+    color: rgba(0, 0, 0, 0.87);
+    opacity: 0; }
+  .c3 .anim .c3-camera-header__text {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .c3-camera__content {
+    display: flex;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    justify-content: space-between; }
+  .c3 .c3-camera__image {
+    margin-right: 100px;
+    min-width: 615px;
+    max-width: 670px;
+    width: 100%;
+    opacity: 0; }
+  .c3 .anim .c3-camera__image {
+    animation: text-left-slide-anim 1s forwards;
+    animation-delay: .6s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .c3-camera__list {
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    padding-bottom: 70px; }
+  .c3 .c3-camera__item {
+    position: relative;
+    padding-left: 64px;
+    opacity: 0; }
+  .c3 .c3-camera__item:not(:last-child) {
+    margin-bottom: 48px; }
+  .c3 .c3-camera__title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 30px;
+    margin-bottom: 8px;
+    color: rgba(0, 0, 0, 0.87);
+    overflow-y: hidden; }
+  .c3 .c3-camera__text {
+    font-size: 20px;
+    line-height: 23px;
+    color: rgba(0, 0, 0, 0.87); }
+  .c3 .c3-camera__item:before {
+    content: '';
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 0;
+    left: 0; }
+  .c3 .c3-camera__item:before {
+    content: '';
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 0;
+    left: 0; }
+  .c3 .anim .c3-camera__item.macro {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: 1s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-camera__item.boke {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+    animation-delay: 1.2s; }
+  .c3 .anim .c3-camera__item.slow {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+    animation-delay: 1.4s; }
+  .c3 .anim .c3-camera__item.hd {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+    animation-delay: 1.6s; }
+  .c3 .c3-camera__item.macro:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/c3-card/camera/marco.svg") center/100% 100% no-repeat; }
+  .c3 .c3-camera__item.boke:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/c3-card/camera/boke.svg") center/100% 100% no-repeat; }
+  .c3 .c3-camera__item.slow:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/c3-card/camera/slow.svg") center/100% 100% no-repeat; }
+  .c3 .c3-camera__item.hd:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/c3-card/camera/hd.svg") center/100% 100% no-repeat; }
+  @media screen and (max-width: 1365px) {
+    .c3 .c3-camera__image {
+      margin-right: 30px; } }
+  @media screen and (max-width: 1023px) {
+    .c3 .c3-camera__container {
+      padding: 60px 24px 0 24px; }
+    .c3 .c3-camera__header {
+      margin: 0 auto 40px auto; }
+    .c3 .c3-camera-header__title {
+      font-size: 36px;
+      line-height: 42px; }
+    .c3 .c3-camera-header__text {
+      font-size: 16px;
+      line-height: 26px; }
+    .c3 .c3-camera__content {
+      justify-content: space-evenly; }
+    .c3 .c3-camera__image {
+      min-width: 420px;
+      max-width: 448px;
+      margin-right: 24px; }
+    .c3 .c3-camera__item {
+      padding-left: 48px;
+      margin-bottom: 24px;
+      width: 230px; }
+    .c3 .c3-camera__item:before {
+      width: 40px;
+      height: 40px; }
+    .c3 .c3-camera__title {
+      font-size: 22px;
+      line-height: 26px; }
+    .c3 .c3-camera__text {
+      font-size: 16px;
+      line-height: 19px; } }
+  @media screen and (max-width: 767px) {
+    .c3 .c3-camera__container {
+      padding: 60px 16px 0 16px; }
+    .c3 .c3-camera__header {
+      margin: 0 auto 24px auto; }
+    .c3 .c3-camera-header__title {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 8px;
+      opacity: 1; }
+    .c3 .c3-camera-header__text {
+      font-size: 12px;
+      line-height: 22px;
+      opacity: 1; }
+    .c3 .c3-camera__content {
+      flex-direction: column; }
+    .c3 .c3-camera__image {
+      min-width: 228px;
+      max-width: 448px;
+      margin-right: 0;
+      order: 2;
+      opacity: 1; }
+    .c3 .c3-camera__list {
+      order: 1;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      max-width: 430px;
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 28px; }
+    .c3 .c3-camera__item {
+      opacity: 1;
+      padding-left: 34px;
+      margin-bottom: 16px;
+      width: 45%; }
+    .c3 .anim .c3-camera__item.macro {
+      animation: none; }
+    .c3 .anim .c3-camera__item.boke {
+      animation: none; }
+    .c3 .anim .c3-camera__item.slow {
+      animation: none; }
+    .c3 .anim .c3-camera__item.hd {
+      animation: none; }
+    .c3 .anim .c3-camera-header__title {
+      animation: none; }
+    .c3 .anim .c3-camera-header__text {
+      animation: none; }
+    .c3 .anim .c3-camera__image {
+      animation: none; }
+    .c3 .c3-camera__item:before {
+      width: 32px;
+      height: 32px; }
+    .c3 .c3-camera__title {
+      font-size: 14px;
+      line-height: 16px; }
+    .c3 .c3-camera__text {
+      font-size: 10px;
+      line-height: 12px; } }
+  .c3 .c3-boke {
+    background: #fff;
+    padding: 100px 0 34px 0; }
+  .c3 .c3-boke__content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    padding-bottom: 80px; }
+  .c3 .c3-boke__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 24px;
+    opacity: 0; }
+  .c3 .anim .c3-boke__title {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .c3-boke__text {
+    font-size: 20px;
+    line-height: 36px;
+    color: rgba(0, 0, 0, 0.87);
+    opacity: 0; }
+  .c3 .anim .c3-boke__text {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .c3-boke__image {
+    margin: 0 auto;
+    display: flex; }
+  @media screen and (max-width: 1023px) {
+    .c3 .c3-boke {
+      padding: 60px 0 24px 0; }
+    .c3 .c3-boke__container {
+      padding: 0 24px; }
+    .c3 .c3-boke__title {
+      font-size: 36px;
+      line-height: 42px; }
+    .c3 .c3-boke__text {
+      font-size: 16px;
+      line-height: 26px; } }
+  @media screen and (max-width: 767px) {
+    .c3 .c3-boke__title {
+      font-size: 24px;
+      line-height: 32px;
+      opacity: 1; }
+    .c3 .c3-boke__text {
+      font-size: 12px;
+      line-height: 22px;
+      opacity: 1; }
+    .c3 .anim .c3-boke__title {
+      animation: none; }
+    .c3 .anim .c3-boke__text {
+      animation: none; } }
+  .c3 .c3-macro {
+    background: #fff;
+    padding-top: 100px; }
+  .c3 .c3-macro__content {
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 60px; }
+  .c3 .c3-macro__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    margin-right: 24px;
+    width: 80%;
+    color: rgba(0, 0, 0, 0.87);
+    opacity: 0; }
+  .c3 .anim .c3-macro__title {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .c3-macro__text {
+    font-size: 20px;
+    line-height: 36px;
+    color: rgba(0, 0, 0, 0.87);
+    max-width: 650px;
+    opacity: 0; }
+  .c3 .anim .c3-macro__text {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .c3-macro__image {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center center;
+    transition: background-size ease-in-out .6s; }
+  .c3 .c3-macro__image.first {
+    max-width: 1093px;
+    width: 100%;
+    margin: 0 auto 24px auto;
+    background-image: url("https://i.citrus.ua/uploads/promo/realme/c3-card/macro/first-image.jpg");
+    height: 460px; }
+  .c3 .c3-macro__images-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1093px;
+    width: 100%;
+    margin: 0 auto; }
+  .c3 .c3-macro__image.second {
+    max-width: 534px;
+    width: 100%;
+    background-image: url("https://i.citrus.ua/uploads/promo/realme/c3-card/macro/third-image.png");
+    height: 400px;
+    margin-right: 24px; }
+  .c3 .c3-macro__image.third {
+    max-width: 534px;
+    width: 100%;
+    background-image: url("https://i.citrus.ua/uploads/promo/realme/c3-card/macro/second-image.png");
+    height: 400px; }
+  .c3 .c3-macro__image:hover {
+    background-size: auto 105%; }
+  @media screen and (max-width: 1365px) {
+    .c3 .c3-macro__container {
+      padding: 0 24px; } }
+  @media screen and (max-width: 1023px) {
+    .c3 .c3-macro__title {
+      font-size: 36px;
+      line-height: 42px; }
+    .c3 .c3-macro__text {
+      font-size: 16px;
+      line-height: 26px; }
+    .c3 .c3-macro__image.first {
+      height: 403px; }
+    .c3 .c3-macro__image.second {
+      height: 343px;
+      margin-right: 24px; }
+    .c3 .c3-macro__image.third {
+      height: 343px; } }
+  @media screen and (max-width: 767px) {
+    .c3 .c3-macro {
+      padding-top: 60px; }
+    .c3 .c3-macro__content {
+      flex-direction: column;
+      text-align: center;
+      align-items: center; }
+    .c3 .c3-macro__container {
+      padding: 0 16px; }
+    .c3 .c3-macro__title {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 10px;
+      margin-right: 0;
+      opacity: 1; }
+    .c3 .c3-macro__text {
+      font-size: 12px;
+      line-height: 22px;
+      opacity: 1; }
+    .c3 .anim .c3-macro__title {
+      animation: none; }
+    .c3 .anim .c3-macro__text {
+      animation: none; } }
+  @media screen and (max-width: 660px) {
+    .c3 .c3-macro__image.first {
+      height: 264px;
+      margin: 0 auto 16px auto; }
+    .c3 .c3-macro__image.second {
+      height: 230px;
+      margin-right: 16px; }
+    .c3 .c3-macro__image.third {
+      height: 230px; } }
+  @media screen and (max-width: 470px) {
+    .c3 .c3-macro__image.first {
+      height: 182px; }
+    .c3 .c3-macro__image.second {
+      height: 155px; }
+    .c3 .c3-macro__image.third {
+      height: 155px; } }
+  @media screen and (max-width: 370px) {
+    .c3 .c3-macro__image.first {
+      height: 130px; }
+    .c3 .c3-macro__image.second {
+      height: 105px; }
+    .c3 .c3-macro__image.third {
+      height: 105px; } }
+  .c3 .c3-portrait {
+    background: url("https://i.citrus.ua/uploads/promo/realme/c3-card/portrait/portrait-bg.png") right 136px no-repeat, #FFF;
+    padding-top: 180px;
+    padding-bottom: 89px; }
+  .c3 .c3-portrait__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1250px;
+    width: 100%;
+    padding-left: 86px; }
+  .c3 .c3-portrait__content {
+    max-width: 500px;
+    padding-left: 60px; }
+  .c3 .c3-portrait__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 24px;
+    opacity: 0; }
+  .c3 .anim .c3-portrait__title {
+    animation: text-left-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .c3-portrait__text {
+    font-size: 20px;
+    line-height: 36px;
+    color: rgba(0, 0, 0, 0.87);
+    opacity: 0; }
+  .c3 .anim .c3-portrait__text {
+    animation: text-left-slide-anim 1s forwards;
+    animation-delay: .2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .c3-portrait__image {
+    opacity: 0; }
+  .c3 .anim .c3-portrait__image {
+    animation: text-right-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  @media screen and (max-width: 1365px) {
+    .c3 .c3-portrait__container {
+      padding-left: 24px;
+      padding-right: 165px; } }
+  @media screen and (max-width: 1023px) {
+    .c3 .c3-portrait {
+      background: url("https://i.citrus.ua/uploads/promo/realme/c3-card/portrait/portrait-bg.png") center right/600px no-repeat, #FFF;
+      padding-top: 85px; }
+    .c3 .c3-portrait__container {
+      padding-right: 113px; }
+    .c3 .c3-portrait__content {
+      max-width: 370px;
+      padding-left: 0; }
+    .c3 .c3-portrait__title {
+      font-size: 36px;
+      line-height: 42px; }
+    .c3 .c3-portrait__text {
+      font-size: 16px;
+      line-height: 26px; }
+    .c3 .c3-portrait__image {
+      max-width: 180px; } }
+  @media screen and (max-width: 767px) {
+    .c3 .c3-portrait {
+      background: url("https://i.citrus.ua/uploads/promo/realme/c3-card/portrait/portrait-bg-mobile.png") bottom -42px right -107px no-repeat, #FFF;
+      padding-bottom: 24px; }
+    .c3 .c3-portrait__container {
+      flex-direction: column;
+      padding: 0 16px; }
+    .c3 .c3-portrait__content {
+      text-align: center;
+      margin-bottom: 65px; }
+    .c3 .c3-portrait__title {
+      opacity: 1;
+      font-size: 24px;
+      line-height: 32px; }
+    .c3 .c3-portrait__text {
+      opacity: 1;
+      font-size: 12px;
+      line-height: 22px; }
+    .c3 .c3-portrait__image {
+      opacity: 1; }
+    .c3 .anim .c3-portrait__title {
+      animation: none; }
+    .c3 .anim .c3-portrait__text {
+      animation: none; }
+    .c3 .anim .c3-portrait__image {
+      animation: none; } }
+  .c3 .c3-accum {
+    background: url("https://i.citrus.ua/uploads/promo/realme/c3-card/accum/accum-bg.jpg") center center no-repeat; }
+  .c3 .c3-accum__container {
+    padding-top: 82px;
+    padding-bottom: 100px; }
+  .c3 .c3-accum__content {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto 60px auto;
+    text-align: center;
+    overflow: hidden; }
+  .c3 .c3-accum__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 14px;
+    opacity: 0; }
+  .c3 .anim .c3-accum__title {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .c3-accum__subtitle {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 24px;
+    opacity: 0; }
+  .c3 .anim .c3-accum__subtitle {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .c3-accum__text {
+    font-size: 20px;
+    line-height: 36px;
+    color: rgba(0, 0, 0, 0.87);
+    opacity: 0; }
+  .c3 .anim .c3-accum__text {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .c3-accum__image {
+    display: flex;
+    margin: 0 auto; }
+  .c3 .c3-accum__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 840px;
+    width: 100%;
+    margin: -130px auto 0 auto; }
+  .c3 .c3-accum__item {
+    width: 30%; }
+  .c3 .c3-accum__item:nth-child(-n+3) {
+    margin-bottom: 24px; }
+  .c3 .c3-accum__name {
+    font-size: 20px;
+    line-height: 23px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 8px; }
+  .c3 .c3-accum__hours {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 10px; }
+  .c3 .c3-accum__hours--text {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 30px; }
+  .c3 .c3-accum__item-scroll {
+    width: 100%;
+    position: relative;
+    border-radius: 10px; }
+  .c3 .c3-accum__item-scroll--progress {
+    background-color: #76bcfd;
+    opacity: .4;
+    border-radius: 10px;
+    height: 14px;
+    z-index: 1;
+    display: flex; }
+  .c3 .c3-accum__item-scroll--bg {
+    width: 0;
+    border: 1px #888;
+    height: 14px;
+    margin-bottom: -14px;
+    background: linear-gradient(90deg, #69FFFF 3.63%, #3AD9FF 100%);
+    box-shadow: 0px 3px 25px #0074b6;
+    border-radius: 10px;
+    z-index: 2;
+    position: absolute;
+    transition: width 1.5s;
+    transition-timing-function: ease-out; }
+  .c3 .anim .wait .c3-accum__item-scroll--bg {
+    width: 100%; }
+  .c3 .anim .calls .c3-accum__item-scroll--bg {
+    width: 50%; }
+  .c3 .anim .music .c3-accum__item-scroll--bg {
+    width: 40%; }
+  .c3 .anim .video .c3-accum__item-scroll--bg {
+    width: 42%; }
+  .c3 .anim .nav .c3-accum__item-scroll--bg {
+    width: 50%; }
+  .c3 .anim .games .c3-accum__item-scroll--bg {
+    width: 30%; }
+  @media screen and (max-width: 1023px) {
+    .c3 .c3-accum__container {
+      padding: 60px 24px 60px 24px; }
+    .c3 .c3-accum__content {
+      margin: 0 auto 40px auto; }
+    .c3 .c3-accum__title {
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 42px; }
+    .c3 .c3-accum__subtitle {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px; }
+    .c3 .c3-accum__text {
+      font-size: 16px;
+      line-height: 26px; }
+    .c3 .c3-accum__name {
+      font-size: 16px;
+      line-height: 19px; }
+    .c3 .c3-accum__hours {
+      font-size: 18px;
+      line-height: 24px; }
+    .c3 .c3-accum__hours--text {
+      font-size: 22px;
+      line-height: 26px; } }
+  @media screen and (max-width: 767px) {
+    .c3 .c3-accum__container {
+      padding: 60px 24px 60px 24px; }
+    .c3 .c3-accum__content {
+      margin: 0 auto 40px auto; }
+    .c3 .c3-accum__title {
+      font-size: 24px;
+      line-height: 32px;
+      opacity: 1; }
+    .c3 .c3-accum__subtitle {
+      font-size: 18px;
+      line-height: 21px;
+      opacity: 1; }
+    .c3 .c3-accum__text {
+      font-size: 12px;
+      line-height: 22px;
+      opacity: 1; }
+    .c3 .anim .c3-accum__title {
+      animation: none; }
+    .c3 .anim .c3-accum__subtitle {
+      animation: none; }
+    .c3 .anim .c3-accum__text {
+      animation: none; }
+    .c3 .c3-accum__list {
+      margin: -16% auto 0 auto; }
+    .c3 .c3-accum__item {
+      width: 45%; }
+    .c3 .c3-accum__item-scroll--progress {
+      height: 8px; }
+    .c3 .c3-accum__item-scroll--bg {
+      height: 8px;
+      margin-bottom: -8px; }
+    .c3 .wait .c3-accum__item-scroll--bg {
+      width: 100%; }
+    .c3 .calls .c3-accum__item-scroll--bg {
+      width: 50%; }
+    .c3 .music .c3-accum__item-scroll--bg {
+      width: 40%; }
+    .c3 .video .c3-accum__item-scroll--bg {
+      width: 42%; }
+    .c3 .nav .c3-accum__item-scroll--bg {
+      width: 50%; }
+    .c3 .games .c3-accum__item-scroll--bg {
+      width: 30%; }
+    .c3 .c3-accum__item:nth-child(-n+3) {
+      margin-bottom: 0; }
+    .c3 .c3-accum__item:nth-child(-n+4) {
+      margin-bottom: 16px; }
+    .c3 .c3-accum__name {
+      font-size: 10px;
+      line-height: 12px; }
+    .c3 .c3-accum__hours {
+      font-size: 12px;
+      line-height: 22px; }
+    .c3 .c3-accum__hours--text {
+      font-size: 14px;
+      line-height: 20px; } }
+  .c3 .c3-screen {
+    background: #fff; }
+  .c3 .c3-screen__container {
+    display: flex; }
+  .c3 .c3-screen__image {
+    margin-right: 24px; }
+  .c3 .c3-screen__content {
+    padding-top: 155px;
+    max-width: 535px; }
+  .c3 .c3-screen__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 24px;
+    color: rgba(0, 0, 0, 0.87);
+    opacity: 0; }
+  .c3 .anim .c3-screen__title {
+    animation: text-right-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .c3-screen__text {
+    font-size: 20px;
+    line-height: 36px;
+    margin-bottom: 38px;
+    color: rgba(0, 0, 0, 0.87);
+    opacity: 0; }
+  .c3 .anim .c3-screen__text {
+    animation: text-right-slide-anim 1s forwards;
+    animation-delay: .2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .c3-screen__text--accent {
+    color: #33D5FF;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 30px;
+    display: block;
+    margin-bottom: 10px; }
+  .c3 .c3-screen__list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    padding-bottom: 60px; }
+  .c3 .c3-screen__item {
+    max-width: 200px;
+    min-width: 90px;
+    padding: 0 5px;
+    text-align: center;
+    opacity: 0; }
+  .c3 .anim .c3-screen__item:nth-child(1) {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .8s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-screen__item:nth-child(2) {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: 1s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-screen__item:nth-child(3) {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: 1.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .c3-screen__item-text {
+    font-size: 20px;
+    line-height: 23px;
+    color: rgba(0, 0, 0, 0.87); }
+  @media screen and (max-width: 1365px) {
+    .c3 .c3-screen__image {
+      min-width: 482px;
+      max-width: 550px; }
+    .c3 .c3-screen__content {
+      padding-right: 24px; } }
+  @media screen and (max-width: 1023px) {
+    .c3 .c3-screen__container {
+      padding-right: 24px; }
+    .c3 .c3-screen__content {
+      padding-top: 100px; }
+    .c3 .c3-screen__title {
+      font-size: 36px;
+      line-height: 42px; }
+    .c3 .c3-screen__text {
+      font-size: 16px;
+      line-height: 26px; }
+    .c3 .c3-screen__text--accent {
+      font-size: 22px;
+      line-height: 26px; }
+    .c3 .c3-screen__item-text {
+      font-size: 16px;
+      line-height: 19px; }
+    .c3 .c3-screen__image {
+      min-width: 354px;
+      max-width: 440px; } }
+  @media screen and (max-width: 767px) {
+    .c3 .c3-screen__container {
+      flex-direction: column;
+      padding-right: 0; }
+    .c3 .c3-screen__content {
+      margin: 0 auto;
+      text-align: center;
+      padding: 60px 16px 60px 16px; }
+    .c3 .c3-screen__list {
+      margin: 0 auto;
+      justify-content: space-evenly;
+      padding-bottom: 0; }
+    .c3 .c3-screen__title {
+      font-size: 24px;
+      line-height: 32px;
+      opacity: 1; }
+    .c3 .c3-screen__text {
+      font-size: 12px;
+      line-height: 22px;
+      opacity: 1; }
+    .c3 .c3-screen__item {
+      min-width: 96px; }
+    .c3 .c3-screen__item-text {
+      font-size: 10px;
+      line-height: 12px;
+      opacity: 1; }
+    .c3 .anim .c3-screen__title {
+      animation: none; }
+    .c3 .anim .c3-screen__text {
+      animation: none; }
+    .c3 .c3-screen__text--accent {
+      font-size: 14px;
+      line-height: 16px; }
+    .c3 .c3-screen__image {
+      max-width: 390px;
+      min-width: 268px;
+      height: 390px; }
+    .c3 .c3-screen__item {
+      opacity: 1; }
+    .c3 .anim .c3-screen__item:nth-child(1) {
+      animation: none; }
+    .c3 .anim .c3-screen__item:nth-child(2) {
+      animation: none; }
+    .c3 .anim .c3-screen__item:nth-child(3) {
+      animation: none; } }
+  .c3 .c3-processor {
+    background: url("https://i.citrus.ua/uploads/promo/realme/c3-card/processor/processor-image-bg-new.png") center center no-repeat; }
+  .c3 .c3-processor__content {
+    padding-top: 482px;
+    padding-bottom: 8px;
+    max-width: 605px;
+    margin: 0 auto; }
+  .c3 .с3-processor__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 24px;
+    background: linear-gradient(90deg, #0bb9e6 0, #095bff 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0; }
+  .c3 .c3-processor__text {
+    font-size: 20px;
+    line-height: 36px;
+    color: #fff;
+    margin-bottom: 38px;
+    opacity: 0; }
+  .c3 .c3-processor__list {
+    display: flex;
+    justify-content: space-between; }
+  .c3 .c3-processor__item {
+    opacity: 0;
+    padding-bottom: 100px; }
+  .c3 .c3-processor__item-title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 30px;
+    color: #fff; }
+  .c3 .c3-processor__item-text {
+    font-size: 20px;
+    line-height: 23px;
+    color: #fff; }
+  .c3 .anim .с3-processor__title {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-processor__text {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-processor__item:nth-child(1) {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .8s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-processor__item:nth-child(2) {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: 1s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-processor__item:nth-child(3) {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: 1.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-processor__item:nth-child(4) {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: 1.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  @media screen and (max-width: 1023px) {
+    .c3 .c3-processor {
+      background: url("https://i.citrus.ua/uploads/promo/realme/c3-card/processor/processor-image.png") center center/150% no-repeat; }
+    .c3 .c3-processor__content {
+      max-width: 480px; }
+    .c3 .с3-processor__title {
+      font-size: 36px;
+      line-height: 42px; }
+    .c3 .c3-processor__text {
+      font-size: 16px;
+      line-height: 26px; }
+    .c3 .c3-processor__item-title {
+      font-size: 22px;
+      line-height: 30px; }
+    .c3 .c3-processor__item-text {
+      font-size: 16px;
+      line-height: 19px; } }
+  @media screen and (max-width: 767px) {
+    .c3 .c3-processor {
+      background: url("https://i.citrus.ua/uploads/promo/realme/c3-card/processor/processor-image-bg-2.png") top center no-repeat, #162233; }
+    .c3 .c3-processor__content {
+      max-width: 480px;
+      padding: 350px 16px 70px 16px; }
+    .c3 .с3-processor__title {
+      font-size: 24px;
+      line-height: 32px;
+      opacity: 1; }
+    .c3 .c3-processor__text {
+      font-size: 12px;
+      line-height: 22px;
+      opacity: 1; }
+    .c3 .c3-processor__item {
+      opacity: 1;
+      padding-bottom: 0; }
+    .c3 .c3-processor__item-title {
+      font-size: 14px;
+      line-height: 16px; }
+    .c3 .c3-processor__item-text {
+      font-size: 10px;
+      line-height: 12px; }
+    .c3 .anim .с3-processor__title {
+      animation: none; }
+    .c3 .anim .c3-processor__text {
+      animation: none; }
+    .c3 .anim .c3-processor__item:nth-child(1) {
+      animation: none; }
+    .c3 .anim .c3-processor__item:nth-child(2) {
+      animation: none; }
+    .c3 .anim .c3-processor__item:nth-child(3) {
+      animation: none; } }
+  .c3 .c3-power {
+    background: #EDF9FF; }
+  .c3 .c3-power__content {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 60px; }
+  .c3 .c3-power__title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 14px;
+    background: linear-gradient(90deg, #0bb9e6 0, #095bff 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0; }
+  .c3 .c3-power__subtitle {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 38px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 32px;
+    opacity: 0; }
+  .c3 .anim .c3-power__more-power .c3-power__title {
+    animation: text-left-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-power__more-power .c3-power__subtitle {
+    animation: text-left-slide-anim 1s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-power__more-power .c3-power__name {
+    animation: text-left-slide-anim .5s forwards;
+    animation-delay: 1s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-power__graphic-processing .c3-power__name {
+    animation: text-left-slide-anim .5s forwards;
+    animation-delay: 2.8s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-power__graphic-processing .c3-power__title {
+    animation: text-left-slide-anim .7s forwards;
+    animation-delay: 2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-power__graphic-processing .c3-power__subtitle {
+    animation: text-left-slide-anim .7s forwards;
+    animation-delay: 2.4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-power__more-power .c3-power__graphic.helio {
+    animation: graphic-width-90-anim 1s forwards;
+    animation-delay: 1.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-power__more-power .c3-power__graphic.snap {
+    animation: graphic-width-40-anim 1s forwards;
+    animation-delay: 1.4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-power__graphic-processing .c3-power__graphic.helio {
+    animation: graphic-width-90-anim 1s forwards;
+    animation-delay: 3.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-power__graphic-processing .c3-power__graphic.snap {
+    animation: graphic-width-40-anim 1s forwards;
+    animation-delay: 3.4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-power__more-power .c3-power__number {
+    animation: text-opacity-anim 1s forwards;
+    animation-delay: 2.8s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-power__graphic-processing .c3-power__number {
+    animation: text-opacity-anim 1s forwards;
+    animation-delay: 4.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .c3-power__graphic.helio {
+    width: 0%; }
+  .c3 .c3-power__graphic.snap {
+    width: 0%; }
+  .c3 .c3-power__more-power {
+    margin-bottom: 60px;
+    padding-left: 50px; }
+  .c3 .c3-power__graphic-processing {
+    padding-left: 50px; }
+  .c3 .c3-power__name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+    margin-bottom: 12px;
+    opacity: 0; }
+  .c3 .c3-power__graphic-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px; }
+  .c3 .c3-power__graphic {
+    background: linear-gradient(270deg, #5CFCFF 1.52%, #414AFF 100%);
+    margin-right: 16px;
+    height: 30px; }
+  .c3 .c3-power__number {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+    opacity: 0; }
+  @media screen and (max-width: 1023px) {
+    .c3 .c3-power__content {
+      padding: 40px 24px 40px 24px; }
+    .c3 .c3-power__more-power {
+      margin-bottom: 40px; }
+    .c3 .c3-power__title {
+      font-size: 24px;
+      line-height: 28px; }
+    .c3 .c3-power__subtitle {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 24px; }
+    .c3 .c3-power__name {
+      font-size: 16px;
+      line-height: 19px; }
+    .c3 .c3-power__number {
+      font-size: 16px;
+      line-height: 19px; } }
+  @media screen and (max-width: 767px) {
+    .c3 .c3-power__content {
+      padding: 40px 16px 40px 16px; }
+    .c3 .c3-power__more-power {
+      margin-bottom: 40px; }
+    .c3 .c3-power__title {
+      font-size: 18px;
+      line-height: 21px; }
+    .c3 .c3-power__subtitle {
+      font-size: 16px;
+      line-height: 19px; }
+    .c3 .c3-power__name {
+      font-size: 12px;
+      line-height: 14px; }
+    .c3 .c3-power__number {
+      font-size: 10px;
+      line-height: 12px; }
+    .c3 .c3-power__more-power .c3-power__title,
+    .c3 .c3-power__more-power .c3-power__subtitle,
+    .c3 .c3-power__more-power .c3-power__name,
+    .c3 .c3-power__graphic-processing .c3-power__name,
+    .c3 .c3-power__graphic-processing .c3-power__title,
+    .c3 .c3-power__graphic-processing .c3-power__subtitle,
+    .c3 .c3-power__more-power .c3-power__number,
+    .c3 .c3-power__graphic-processing .c3-power__number {
+      opacity: 1; }
+    .c3 .c3-power__graphic-processing .c3-power__graphic.helio,
+    .c3 .c3-power__more-power .c3-power__graphic.helio {
+      width: 70%; }
+    .c3 .c3-power__graphic-processing .c3-power__graphic.snap,
+    .c3 .c3-power__more-power .c3-power__graphic.snap {
+      width: 40%; }
+    .c3 .anim .c3-power__more-power .c3-power__title,
+    .c3 .anim .c3-power__more-power .c3-power__subtitle,
+    .c3 .anim .c3-power__more-power .c3-power__name,
+    .c3 .anim .c3-power__graphic-processing .c3-power__name,
+    .c3 .anim .c3-power__graphic-processing .c3-power__title,
+    .c3 .anim .c3-power__graphic-processing .c3-power__subtitle,
+    .c3 .anim .c3-power__more-power .c3-power__graphic.helio,
+    .c3 .anim .c3-power__more-power .c3-power__graphic.snap,
+    .c3 .anim .c3-power__graphic-processing .c3-power__graphic.helio,
+    .c3 .anim .c3-power__graphic-processing .c3-power__graphic.snap,
+    .c3 .anim .c3-power__more-power .c3-power__number,
+    .c3 .anim .c3-power__graphic-processing .c3-power__number {
+      animation: none; } }
+  .c3 .c3-unlock {
+    background: linear-gradient(194.62deg, #DAE8F9 20.69%, #ECF9FC 100%); }
+  .c3 .c3-unlock__container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px; }
+  .c3 .c3-unlock__content {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 100px; }
+  .c3 .c3-unlock__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 24px;
+    color: rgba(0, 0, 0, 0.87);
+    opacity: 0; }
+  .c3 .c3-unlock__subtitle {
+    font-size: 20px;
+    line-height: 36px;
+    color: rgba(0, 0, 0, 0.87);
+    opacity: 0; }
+  .c3 .c3-unlock__image {
+    display: flex;
+    align-self: flex-end;
+    margin-right: 112px;
+    opacity: 0; }
+  .c3 .anim .c3-unlock__title {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-unlock__subtitle {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-unlock__image {
+    animation: text-opacity-anim 1s forwards;
+    animation-delay: .8s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  @media screen and (max-width: 1365px) {
+    .c3 .c3-unlock__image {
+      margin-right: 0; } }
+  @media screen and (max-width: 1023px) {
+    .c3 .c3-unlock__container {
+      padding-top: 60px; }
+    .c3 .c3-unlock__content {
+      padding: 0 24px 80px 24px; }
+    .c3 .c3-unlock__title {
+      font-size: 36px;
+      line-height: 42px; }
+    .c3 .c3-unlock__text {
+      font-size: 16px;
+      line-height: 26px; }
+    .c3 .c3-unlock__image {
+      margin-left: 64px;
+      max-width: 700px; } }
+  @media screen and (max-width: 767px) {
+    .c3 .c3-unlock__content {
+      padding: 0 16px 40px 16px; }
+    .c3 .c3-unlock__title {
+      font-size: 24px;
+      line-height: 32px;
+      opacity: 1; }
+    .c3 .c3-unlock__subtitle {
+      font-size: 12px;
+      line-height: 22px;
+      opacity: 1; }
+    .c3 .c3-unlock__image {
+      margin-left: 0;
+      margin-right: -106px;
+      max-width: 420px;
+      opacity: 1; }
+    .c3 .anim .c3-unlock__title,
+    .c3 .anim .c3-unlock__subtitle,
+    .c3 .anim .c3-unlock__image {
+      animation: none; } }
+  .c3 .c3-slots {
+    background: linear-gradient(194.62deg, #DAE8F9 20.69%, #ECF9FC 100%); }
+  .c3 .c3-slots__container {
+    padding-top: 100px; }
+  .c3 .c3-slots__content {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 100px; }
+  .c3 .c3-slots__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 24px;
+    opacity: 0; }
+  .c3 .c3-slots__subtitle {
+    font-size: 20px;
+    line-height: 36px;
+    color: rgba(0, 0, 0, 0.87);
+    opacity: 0; }
+  .c3 .c3-slots__image {
+    display: flex;
+    margin: 0 auto;
+    opacity: 0; }
+  .c3 .anim .c3-slots__title {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-slots__subtitle {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-slots__image {
+    animation: text-opacity-anim 1s forwards;
+    animation-delay: .8s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  @media screen and (max-width: 1023px) {
+    .c3 .c3-slots__content {
+      padding: 0 24px 80px 24px; }
+    .c3 .c3-slots__container {
+      padding-top: 60px; }
+    .c3 .c3-slots__title {
+      font-size: 36px;
+      line-height: 42px; }
+    .c3 .c3-slots__subtitle {
+      font-size: 17px;
+      line-height: 26px; } }
+  @media screen and (max-width: 767px) {
+    .c3 .c3-slots__content {
+      padding: 0 16px 40px 0; }
+    .c3 .c3-slots__title {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 10px;
+      opacity: 1; }
+    .c3 .c3-slots__subtitle {
+      font-size: 13px;
+      line-height: 22px;
+      opacity: 1; }
+    .c3 .c3-slots__image {
+      opacity: 1; }
+    .c3 .anim .c3-slots__title,
+    .c3 .anim .c3-slots__subtitle,
+    .c3 .anim .c3-slots__image {
+      animation: none; } }
+  .c3 .c3-colors {
+    background: #fff; }
+  .c3 .c3-colors__container {
+    padding-top: 100px; }
+  .c3 .c3-colors__image {
+    display: flex;
+    margin: 0 auto 60px auto; }
+  .c3 .c3-colors__content {
+    max-width: 870px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .c3 .c3-colors__list {
+    display: flex;
+    justify-content: space-around;
+    max-width: 600px;
+    width: 100%;
+    padding-bottom: 40px; }
+  .c3 .c3-colors__item {
+    font-size: 28px;
+    line-height: 38px;
+    color: rgba(0, 0, 0, 0.87);
+    position: relative;
+    overflow: hidden;
+    opacity: 0; }
+  .c3 .c3-colors__item:nth-child(1) {
+    padding-right: 55px; }
+  .c3 .c3-colors__item:nth-child(1):after {
+    content: '';
+    position: absolute;
+    height: 48px;
+    width: 4px;
+    right: 0;
+    background-color: #FFC915;
+    opacity: 0; }
+  .c3 .c3-colors__title {
+    font-size: 20px;
+    line-height: 36px;
+    color: rgba(0, 0, 0, 0.87);
+    opacity: 0; }
+  .c3 .anim .c3-colors__item:nth-child(1) {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-colors__item:nth-child(2) {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .8s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-colors__item:nth-child(1):after {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-colors__title {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: 1.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  @media screen and (max-width: 1023px) {
+    .c3 .c3-colors__image {
+      margin-bottom: 50px; }
+    .c3 .c3-colors__list {
+      margin-bottom: 30px;
+      max-width: 500px; }
+    .c3 .c3-colors__item {
+      font-size: 22px;
+      line-height: 26px; }
+    .c3 .c3-colors__title {
+      font-size: 16px;
+      line-height: 26px; } }
+  @media screen and (max-width: 767px) {
+    .c3 .c3-colors__content {
+      padding: 0 16px; }
+    .c3 .c3-colors__list {
+      max-width: 245px;
+      text-align: center; }
+    .c3 .c3-colors__item {
+      font-size: 16px;
+      line-height: 19px; }
+    .c3 .c3-colors__item:nth-child(1) {
+      padding-right: 3px;
+      opacity: 1; }
+    .c3 .c3-colors__item:nth-child(2) {
+      opacity: 1; }
+    .c3 .c3-colors__item:nth-child(1):after {
+      top: 0;
+      opacity: 1; }
+    .c3 .c3-colors__title {
+      font-size: 12px;
+      line-height: 22px;
+      text-align: center;
+      opacity: 1; }
+    .c3 .anim .c3-colors__item:nth-child(1),
+    .c3 .anim .c3-colors__item:nth-child(2),
+    .c3 .anim .c3-colors__item:nth-child(1):after,
+    .c3 .anim .c3-colors__title {
+      animation: none; } }
+  .c3 .c3-ui {
+    background: #fff; }
+  .c3 .c3-ui__container {
+    padding: 100px 0 100px 0; }
+  .c3 .c3-ui__content {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+    padding-bottom: 60px; }
+  .c3 .c3-ui__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 24px;
+    opacity: 0; }
+  .c3 .c3-ui__subtitle {
+    font-size: 20px;
+    line-height: 36px;
+    color: rgba(0, 0, 0, 0.87);
+    opacity: 0; }
+  .c3 .c3-ui__image {
+    display: flex;
+    margin: 0 auto 24px auto;
+    opacity: 0; }
+  .c3 .c3-ui__logo {
+    display: flex;
+    margin: 0 auto;
+    opacity: 0; }
+  .c3 .anim .c3-ui__title {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-ui__subtitle {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-ui__image {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .8s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .c3 .anim .c3-ui__logo {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: 1.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  @media screen and (max-width: 1023px) {
+    .c3 .c3-ui__container {
+      padding: 60px 24px 60px 24px; }
+    .c3 .c3-ui__content {
+      margin: 0 auto 40px auto; }
+    .c3 .c3-ui__title {
+      font-size: 36px;
+      line-height: 42px; }
+    .c3 .c3-ui__subtitle {
+      font-size: 16px;
+      line-height: 26px; } }
+  @media screen and (max-width: 767px) {
+    .c3 .c3-ui__container {
+      padding: 60px 16px 60px 16px; }
+    .c3 .c3-ui__title {
+      font-size: 24px;
+      line-height: 32px;
+      opacity: 1; }
+    .c3 .c3-ui__subtitle {
+      font-size: 12px;
+      line-height: 22px;
+      opacity: 1; }
+    .c3 .c3-ui__image-container {
+      overflow-x: scroll;
+      width: 100%; }
+    .c3 .c3-ui__image {
+      min-width: 750px;
+      display: block;
+      opacity: 1; }
+    .c3 .c3-ui__logo {
+      opacity: 1; }
+    .c3 .anim .c3-ui__title,
+    .c3 .anim .c3-ui__subtitle,
+    .c3 .anim .c3-ui__image,
+    .c3 .anim .c3-ui__logo {
+      animation: none; } }
+
+/*# sourceMappingURL=style.css.map */

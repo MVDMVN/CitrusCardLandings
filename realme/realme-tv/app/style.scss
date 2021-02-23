@@ -1,0 +1,2411 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  color: transparent;
+}
+
+form select,
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding: 0 0 0 12px;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3b6d9a;
+  outline: none;
+  transition: 0.3s;
+}
+
+.btn,
+button {
+  display: block;
+  background: 0 0;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  line-height: 44px;
+  transition: 0.3s;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+}
+
+.base-padding {
+  padding: 0;
+}
+
+.realme-tv {
+  .tv-header {
+    background-color: #fff;
+    display: flex;
+  }
+
+  .tv-header__container {
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .tv-header__container picture {
+    display: flex;
+    justify-content: center;
+  }
+
+  .tv-advantages {
+    padding-top: 80px;
+    padding-bottom: 65px;
+    background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/advantages/advantages-bg.png")
+      no-repeat center;
+  }
+
+  .tv-advantages__list {
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .tv-advantages__item {
+    position: relative;
+    max-width: 423px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tv-advantages__item:nth-child(-n + 3) {
+    margin-bottom: 24px;
+  }
+
+  .tv-advantages__item:not(:nth-child(3n + 3)) {
+    margin-right: 24px;
+  }
+
+  .tv-advantages__text {
+    position: absolute;
+    bottom: 12px;
+    text-align: center;
+    max-width: 363px;
+  }
+
+  .tv-advantages__text p {
+    color: #fff;
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .tv-advantages__list {
+      max-width: 940px;
+    }
+
+    .tv-advantages__item {
+      max-width: 297px;
+    }
+
+    .tv-advantages__text {
+      bottom: 7px;
+      max-width: 225px;
+    }
+
+    .tv-advantages__text p {
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .tv-advantages__list {
+      max-width: 690px;
+    }
+
+    .tv-advantages__item {
+      max-width: 212px;
+    }
+
+    .tv-advantages__text {
+      bottom: 4px;
+      max-width: 160px;
+    }
+
+    .tv-advantages__text p {
+      font-size: 10px;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    .tv-advantages {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    .tv-advantages__item {
+      max-width: 212px;
+    }
+
+    .tv-advantages__item:not(:nth-child(3n + 3)) {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (max-width: 475px) {
+    .tv-advantages__list {
+      max-width: 600px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .tv-advantages__item {
+      max-width: initial;
+      min-height: 140px;
+      flex-basis: 45%;
+      flex-direction: column;
+      justify-content: flex-start;
+      background-color: #000;
+      margin-bottom: 24px;
+    }
+
+    .tv-advantages__item:nth-child(-n + 3) {
+      margin-bottom: 24px;
+    }
+
+    .tv-advantages__item:not(:nth-child(3n + 3)) {
+      margin-right: 0;
+    }
+
+    .tv-advantages__item:not(:nth-child(2n + 2)) {
+      margin-right: 16px;
+    }
+
+    .tv-advantages__text {
+      position: initial;
+      height: 40px;
+      align-items: center;
+      display: flex;
+    }
+  }
+
+  .tv-video__container {
+    max-width: 1366px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  .tv-video__image-container {
+    position: relative;
+  }
+
+  .tv-video__image-container:before {
+    content: "";
+    position: absolute;
+    cursor: pointer;
+    width: 63px;
+    height: 63px;
+    background: url(https://i.citrus.ua/uploads/promo/realme/tv-card/video/play.svg);
+    top: 50%;
+    right: 50%;
+    transform: translateY(-50%) translateX(50%);
+    pointer-events: none;
+    transition: background 0.3s ease-in;
+  }
+
+  .tv-video__image-container:hover:before {
+    background: url(https://i.citrus.ua/uploads/promo/realme/tv-card/video/play-hover.svg);
+  }
+
+  .tv-video__image {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .tv-video__container iframe {
+    min-height: 600px;
+    width: 100%;
+    margin-bottom: 80px;
+  }
+  @media screen and (max-width: 1365px) {
+    .tv-video__container iframe {
+      margin-bottom: 60px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .tv-video__container iframe {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .tv-video__container iframe {
+      margin-bottom: 40px;
+      max-height: 300px;
+      min-height: 250px;
+    }
+  }
+
+  .tv-blockquote {
+    background: #111111;
+    padding: 120px 0;
+  }
+
+  .tv-blockquote__text {
+    text-align: center;
+    font-weight: 500;
+    font-size: 66px;
+    line-height: 77px;
+    background: linear-gradient(270deg, #50da41 0, #a2d323 47%, #ffcc01 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .tv-blockquote {
+      padding: 100px 0;
+    }
+
+    .tv-blockquote__text {
+      font-size: 46px;
+      line-height: 154%;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .tv-blockquote {
+      padding: 60px 0;
+    }
+
+    .tv-blockquote__text {
+      font-size: 36px;
+      line-height: 142%;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .tv-blockquote__text {
+      font-size: 34px;
+      line-height: 140%;
+    }
+  }
+
+  .tv-display {
+    background: #111111;
+    padding: 0 24px;
+  }
+
+  .tv-display__container {
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .tv-display__header-container {
+    max-width: 1092px;
+    width: 100%;
+    margin: 0 auto 60px auto;
+  }
+
+  .tv-display__header-text {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    color: #fff;
+  }
+
+  .tv-display__image {
+    margin-bottom: 30px;
+  }
+
+  .tv-display__description-container {
+    max-width: 1092px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .tv-display__advantages-list {
+    display: flex;
+    color: #fff;
+    margin-bottom: 40px;
+  }
+
+  .tv-display__advantages-item {
+    font-weight: 500;
+    font-size: 22px;
+    position: relative;
+    padding-left: 36px;
+    color: #fff;
+  }
+
+  .tv-display__advantages-item:not(:last-child) {
+    margin-right: 26px;
+  }
+
+  .tv-display__advantages-item:before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    left: 0;
+    top: -3px;
+  }
+
+  .tv-display__advantages-item.brightness:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/display/icons/brightness.svg")
+      center/100% 100% no-repeat;
+  }
+
+  .tv-display__advantages-item.color:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/display/icons/color.svg")
+      center/100% 100% no-repeat;
+  }
+
+  .tv-display__advantages-item.contrast:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/display/icons/contrast.svg")
+      center/100% 100% no-repeat;
+  }
+
+  .tv-display__advantages-item.purity:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/display/icons/purity.svg")
+      center/100% 100% no-repeat;
+  }
+
+  .tv-display__advantages-item.clarity:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/display/icons/clarity.svg")
+      center/100% 100% no-repeat;
+  }
+
+  .tv-display__description {
+    color: #fff;
+    font-size: 18px;
+    line-height: 36px;
+    padding-bottom: 24px;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .tv-display {
+      padding: 0 24px;
+    }
+
+    .tv-display__header-container {
+      margin: 0 auto 30px auto;
+    }
+
+    .tv-display__header-text {
+      font-size: 38px;
+      line-height: 50px;
+    }
+
+    .tv-display__advantages-item {
+      font-size: 16px;
+      line-height: 18px;
+      padding-left: 30px;
+    }
+
+    .tv-display__advantages-item:before {
+      width: 24px;
+      height: 24px;
+      left: 0;
+      top: -3px;
+    }
+
+    .tv-display__advantages-item:not(:last-child) {
+      margin-right: 18px;
+    }
+
+    .tv-display__description {
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .tv-display {
+      padding: 0 24px;
+    }
+
+    .tv-display__header-text {
+      font-size: 36px;
+    }
+
+    .tv-display__advantages-item {
+      font-size: 15px;
+      padding-left: 30px;
+    }
+
+    .tv-display__advantages-item:before {
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: -2px;
+    }
+
+    .tv-display__advantages-item:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    .tv-display__description {
+      line-height: 24px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .tv-display {
+      padding: 0;
+    }
+
+    .tv-display__header-container {
+      margin: 0 auto 24px auto;
+      padding: 0 16px;
+    }
+
+    .tv-display__header-text {
+      font-size: 24px;
+      line-height: 40px;
+    }
+
+    .tv-display__description-container {
+      padding: 0 16px;
+    }
+
+    .tv-display__advantages-list {
+      flex-wrap: wrap;
+    }
+
+    .tv-display__advantages-item {
+      font-size: 16px;
+      padding-left: 25px;
+      max-width: 84px;
+    }
+
+    .tv-display__advantages-item:nth-child(1) {
+      margin-bottom: 10px;
+    }
+
+    .tv-display__advantages-item:before {
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: -2px;
+    }
+
+    .tv-display__advantages-item:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    .tv-display__description {
+      font-size: 12px;
+      line-height: 22px;
+    }
+  }
+
+  .tv-processor {
+    background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/processor/processor-bg-desc.png")
+      no-repeat top 0 center;
+  }
+
+  .tv-processor__mobile-image {
+    display: none;
+  }
+
+  .tv-processor__content {
+    max-width: 779px;
+    padding-left: 136px;
+    padding-top: 225px;
+    padding-bottom: 204px;
+  }
+
+  .tv-processor__title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    color: #fff;
+    margin-bottom: 40px;
+  }
+
+  .tv-processor__text {
+    font-size: 18px;
+    line-height: 36px;
+    color: #fff;
+  }
+
+  .tv-processor__accent {
+    color: #ffc915;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .tv-processor {
+      background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/processor/processor-bg-1024-gradient.png")
+          no-repeat top 0 center,
+        #000000;
+    }
+
+    .tv-processor__content {
+      max-width: 530px;
+      padding-left: 24px;
+      padding-top: 143px;
+      padding-bottom: 143px;
+    }
+
+    .tv-processor__title {
+      font-size: 36px;
+      line-height: 50px;
+      margin-bottom: 30px;
+    }
+
+    .tv-processor__text {
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .tv-processor {
+      background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/processor/processor-bg-768-gradient.png")
+          no-repeat top 0 center,
+        #000000;
+    }
+
+    .tv-processor__content {
+      max-width: 440px;
+      padding-left: 24px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    .tv-processor__title {
+      font-size: 32px;
+    }
+
+    .tv-processor__text {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .tv-processor {
+      background: #000000;
+    }
+
+    .tv-processor__mobile-image {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .tv-processor__content {
+      max-width: 440px;
+      padding: 0 16px 40px;
+    }
+
+    .tv-processor__title {
+      font-size: 24px;
+      line-height: 40px;
+    }
+
+    .tv-processor__text {
+      font-size: 12px;
+      line-height: 24px;
+    }
+  }
+
+  .tv-hdr {
+    background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/hdr/hdr-bg-desc.png")
+      center top no-repeat;
+  }
+
+  .tv-hdr__container {
+    max-width: 1092px;
+    margin: 0 auto;
+    padding: 55px 24px 32px 24px;
+  }
+
+  .tv-hdr__top-content {
+    display: flex;
+    padding-bottom: 190px;
+  }
+
+  .tv-hdr__title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    color: #fff;
+  }
+
+  .tv-hdr__text {
+    font-size: 18px;
+    line-height: 36px;
+    color: #fff;
+  }
+
+  .tv-hdr__bottom-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tv-hdr__after,
+  .tv-hdr__before {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #fff;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .tv-hdr__top-content {
+      padding-bottom: 142px;
+    }
+
+    .tv-hdr__title {
+      font-size: 38px;
+      line-height: 50px;
+    }
+
+    .tv-hdr__text {
+      font-size: 14px;
+      line-height: 26px;
+    }
+
+    .tv-hdr__bottom-content {
+      justify-content: space-between;
+    }
+
+    .tv-hdr__after,
+    .tv-hdr__before {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .tv-hdr__top-content {
+      padding-bottom: 60px;
+    }
+
+    .tv-hdr__title {
+      font-size: 36px;
+      line-height: 50px;
+    }
+
+    .tv-hdr__text {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    .tv-hdr__after,
+    .tv-hdr__before {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .tv-hdr__container {
+      padding: 40px 16px 12px 16px;
+    }
+
+    .tv-hdr__top-content {
+      flex-direction: column;
+      padding-bottom: 140px;
+    }
+
+    .tv-hdr__title {
+      margin-bottom: 20px;
+    }
+  }
+
+  .tv-frameless__container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 55px 0 32px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tv-frameless__title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    margin-right: 110px;
+  }
+
+  .tv-frameless__content {
+    font-size: 18px;
+    line-height: 36px;
+  }
+
+  .tv-frameless__image {
+    display: flex;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .tv-frameless__container {
+      padding: 90px 24px 32px 24px;
+    }
+
+    .tv-frameless__title {
+      font-size: 38px;
+      line-height: 50px;
+      margin-right: 110px;
+    }
+
+    .tv-frameless__content {
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .tv-frameless__container {
+      padding: 60px 24px 32px 24px;
+    }
+
+    .tv-frameless__title {
+      font-size: 36px;
+      line-height: 50px;
+      margin-right: 110px;
+    }
+
+    .tv-frameless__content {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .tv-frameless__container {
+      padding: 40px 16px 20px 16px;
+      flex-direction: column;
+    }
+
+    .tv-frameless__title {
+      font-size: 24px;
+      line-height: 40px;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    .tv-frameless__content {
+      font-size: 12px;
+      line-height: 22px;
+    }
+  }
+
+  .tv__sound {
+    background-color: #000;
+    padding-top: 120px;
+  }
+
+  .tv-sound__title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 66px;
+    line-height: 77px;
+    background: linear-gradient(270deg, #177493 0, #4bb994 53%, #d3ddde 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 120px;
+  }
+
+  .tv-sound__blockquote {
+    padding: 0 16px;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .tv__sound {
+      padding-top: 100px;
+    }
+
+    .tv-sound__title {
+      font-size: 46px;
+      line-height: 54px;
+      margin-bottom: 100px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .tv__sound {
+      padding-top: 60px;
+    }
+
+    .tv-sound__title {
+      font-size: 36px;
+      line-height: 42px;
+      margin-bottom: 60px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .tv-sound__title {
+      font-size: 34px;
+      line-height: 40px;
+    }
+  }
+
+  .speakers__container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 0 32px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .speakers__title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    color: #fff;
+    width: 100%;
+    max-width: 647px;
+  }
+
+  .speakers__text {
+    font-size: 18px;
+    line-height: 36px;
+    color: #fff;
+    max-width: 423px;
+  }
+
+  .tv-speakers__image--mob {
+    display: none;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .speakers__container {
+      padding: 0 24px 32px 24px;
+    }
+
+    .speakers__title {
+      font-size: 38px;
+      line-height: 50px;
+      max-width: 545px;
+    }
+
+    .speakers__text {
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .speakers__container {
+      padding: 0 24px 32px 24px;
+    }
+
+    .speakers__title {
+      font-size: 36px;
+      line-height: 50px;
+      max-width: 320px;
+      margin-right: 80px;
+    }
+
+    .speakers__text {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .speakers__container {
+      padding: 0 16px 20px 16px;
+      flex-direction: column;
+    }
+
+    .speakers__title {
+      font-size: 24px;
+      line-height: 40px;
+      margin-right: 0;
+      margin-bottom: 20px;
+      max-width: initial;
+    }
+
+    .speakers__text {
+      font-size: 12px;
+      line-height: 22px;
+      max-width: initial;
+    }
+
+    .tv-speakers__image {
+      display: none;
+    }
+
+    .tv-speakers__image--mob {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .tv-sound__dolby {
+    background-color: #0d0b0c;
+  }
+
+  .dolby__container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 55px 0 32px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .dolby__title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    color: #fff;
+    width: 100%;
+    max-width: 560px;
+  }
+
+  .dolby__text {
+    font-size: 18px;
+    line-height: 36px;
+    color: #fff;
+    max-width: 511px;
+  }
+  .tv-dolby__image-mobile {
+    display: none;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .dolby__container {
+      padding: 80px 24px 32px 24px;
+    }
+
+    .dolby__title {
+      font-size: 38px;
+      line-height: 50px;
+      max-width: 410px;
+      margin-right: 24px;
+    }
+
+    .dolby__text {
+      font-size: 14px;
+      line-height: 26px;
+      max-width: 506px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .dolby__container {
+      padding: 60px 24px 32px 24px;
+    }
+
+    .dolby__title {
+      font-size: 36px;
+      line-height: 50px;
+      max-width: 380px;
+      margin-right: 40px;
+    }
+
+    .dolby__text {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .dolby__container {
+      padding: 40px 16px 20px 16px;
+      flex-direction: column;
+    }
+
+    .dolby__title {
+      font-size: 24px;
+      line-height: 40px;
+      margin-right: 0;
+      margin-bottom: 20px;
+      max-width: initial;
+    }
+
+    .dolby__text {
+      font-size: 12px;
+      line-height: 22px;
+      max-width: initial;
+    }
+
+    .tv-dolby__image {
+      display: none;
+    }
+
+    .tv-dolby__image-mobile {
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  .tv-opportunities {
+    background: #fff;
+    padding-top: 120px;
+  }
+
+  .tv-opportunities__title {
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#91d9ff),
+      to(#5868fd)
+    );
+    background: -webkit-linear-gradient(left, #91d9ff 0, #5868fd 100%);
+    background: linear-gradient(90deg, #91d9ff 0, #5868fd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+    font-size: 66px;
+    line-height: 77px;
+    text-align: center;
+    margin-bottom: 120px;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .tv-opportunities {
+      padding-top: 100px;
+    }
+
+    .tv-opportunities__title {
+      font-size: 46px;
+      line-height: 54px;
+      margin-bottom: 100px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .tv-opportunities {
+      padding-top: 60px;
+    }
+
+    .tv-opportunities__blockquoute {
+      padding: 0 16px;
+    }
+
+    .tv-opportunities__title {
+      font-size: 36px;
+      line-height: 42px;
+      margin-bottom: 60px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .tv-opportunities__title {
+      font-size: 34px;
+      line-height: 40px;
+    }
+  }
+
+  .android__container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 0 32px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .android__title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    color: #000;
+    width: 100%;
+    max-width: 560px;
+  }
+
+  .android__text {
+    font-size: 18px;
+    line-height: 36px;
+    color: #000;
+    max-width: 511px;
+  }
+
+  .tv-opportunities__illustration {
+    width: 100%;
+    height: 520px;
+    background-image: url("https://i.citrus.ua/uploads/promo/realme/tv-card/android/bg-image.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top center;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .android__container {
+      padding: 0 24px 32px 24px;
+    }
+
+    .android__title {
+      font-size: 38px;
+      line-height: 50px;
+      max-width: 410px;
+      margin-right: 24px;
+    }
+
+    .android__text {
+      font-size: 14px;
+      line-height: 26px;
+      max-width: 506px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .android__container {
+      padding: 0 24px 32px 24px;
+    }
+
+    .android__title {
+      font-size: 36px;
+      line-height: 50px;
+      max-width: 380px;
+      margin-right: 40px;
+    }
+
+    .android__text {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    .tv-opportunities__illustration {
+      width: 100%;
+      height: 375px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .android__container {
+      padding: 0 16px 20px 16px;
+      flex-direction: column;
+    }
+
+    .android__title {
+      font-size: 24px;
+      line-height: 40px;
+      margin-right: 0;
+      margin-bottom: 20px;
+      max-width: initial;
+    }
+
+    .android__text {
+      font-size: 12px;
+      line-height: 22px;
+      max-width: initial;
+    }
+
+    .tv-opportunities__illustration {
+      width: 100%;
+      height: 290px;
+      background-size: auto 80%;
+    }
+  }
+
+  .tv-slider__swiper {
+    transition: opacity 0.6s ease;
+  }
+
+  .tv-slider__wrapper {
+    max-width: 1090px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 24px 120px 24px;
+    position: relative;
+  }
+
+  .slider__content {
+    margin-bottom: 60px;
+  }
+
+  .slider__title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    color: #000;
+    margin-bottom: 40px;
+  }
+
+  .slider__text {
+    font-size: 18px;
+    line-height: 36px;
+    color: #000;
+    margin-bottom: 16px;
+  }
+
+  .slider__subtext {
+    font-size: 14px;
+    line-height: 16px;
+    color: #000;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .tv-slider__wrapper {
+      padding: 0 24px 35px 24px;
+    }
+
+    .slider__content {
+      margin-bottom: 30px;
+    }
+
+    .slider__title {
+      font-size: 38px;
+      line-height: 60px;
+      margin-bottom: 30px;
+    }
+
+    .slider__text {
+      font-size: 14px;
+      line-height: 26px;
+      margin-bottom: 10px;
+    }
+
+    .slider__subtext {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    .tv-slider__swiper {
+      max-width: 790px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .tv-slider__wrapper {
+      padding: 0 24px 75px 24px;
+    }
+
+    .slider__title {
+      font-size: 36px;
+      line-height: 50px;
+      margin-bottom: 50px;
+    }
+
+    .slider__text {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    .tv-slider__swiper {
+      max-width: 590px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .tv-slider__wrapper {
+      padding: 0 24px 40px 24px;
+    }
+
+    .slider__content {
+      margin-bottom: 40px;
+    }
+
+    .slider__title {
+      font-size: 24px;
+      line-height: 40px;
+      margin-bottom: 20px;
+    }
+
+    .slider__text {
+      font-size: 12px;
+      line-height: 22px;
+      margin-bottom: 10px;
+    }
+
+    .slider__subtext {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    .tv-slider__swiper {
+      max-width: 790px;
+      padding: 0 8px;
+    }
+  }
+
+  .tv-apps {
+    background-color: #f5f5f5;
+  }
+
+  .tv-apps__content {
+    max-width: 1092px;
+    margin: 0 auto;
+    padding: 120px 0 32px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tv-apps__title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    color: #000;
+    max-width: 534px;
+    width: 100%;
+  }
+
+  .tv-apps__accent {
+    color: #ffc915;
+  }
+
+  .tv-apps__desc {
+    max-width: 534px;
+  }
+
+  .tv-apps__text {
+    font-size: 18px;
+    line-height: 36px;
+    color: #000;
+    margin-bottom: 16px;
+  }
+
+  .tv-apps__subtext {
+    font-size: 14px;
+    line-height: 16px;
+    color: #000;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .tv-apps__content {
+      padding: 80px 24px 32px 24px;
+    }
+
+    .tv-apps__title {
+      font-size: 38px;
+      line-height: 60px;
+      max-width: 378px;
+    }
+
+    .tv-apps__text {
+      font-size: 14px;
+      line-height: 26px;
+      margin-bottom: 10px;
+    }
+
+    .tv-apps__subtext {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .tv-apps__content {
+      padding: 60px 24px 32px 24px;
+    }
+
+    .tv-apps__title {
+      font-size: 36px;
+      line-height: 50px;
+      max-width: 300px;
+    }
+
+    .tv-apps__text {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .tv-slider__wrapper {
+      padding: 0 24px 40px 24px;
+    }
+
+    .slider__content {
+      margin-bottom: 40px;
+    }
+
+    .slider__title {
+      font-size: 24px;
+      line-height: 40px;
+      margin-bottom: 20px;
+    }
+
+    .slider__text {
+      font-size: 12px;
+      line-height: 22px;
+      margin-bottom: 10px;
+    }
+
+    .slider__subtext {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    .tv-slider__swiper {
+      max-width: 790px;
+      padding: 0 8px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .tv-apps__content {
+      padding: 40px 16px 20px 16px;
+      flex-direction: column;
+    }
+
+    .tv-apps__title {
+      font-size: 24px;
+      line-height: 40px;
+      margin-right: 0;
+      margin-bottom: 20px;
+      max-width: initial;
+    }
+
+    .tv-apps__title br {
+      display: none;
+    }
+
+    .tv-apps__accent {
+      margin-right: 6px;
+    }
+
+    .tv-apps__text {
+      font-size: 12px;
+      line-height: 22px;
+      max-width: initial;
+    }
+
+    .tv-apps__subtext {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  .tv-assistant {
+    display: flex;
+  }
+
+  .tv-assistant__left-content {
+    width: 50%;
+    padding: 36px 16px 36px 16px;
+  }
+
+  .tv-assistant__content {
+    max-width: 423px;
+    margin: 0 auto;
+  }
+
+  .tv-assistant__title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    margin-bottom: 20px;
+  }
+
+  .tv-assistant__text {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .tv-assistant__right-content {
+    width: 50%;
+    display: flex;
+  }
+
+  .tv-assistant__image-mob {
+    display: none;
+  }
+
+  .tv-assistant__mob-image {
+    display: none;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .tv-assistant__left-content {
+      padding: 42px 16px 42px 16px;
+    }
+
+    .tv-assistant__title {
+      font-size: 38px;
+      line-height: 50px;
+    }
+
+    .tv-assistant__text {
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .tv-assistant__left-content {
+      padding: 32px 16px 32px 16px;
+    }
+
+    .tv-assistant__title {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    .tv-assistant__text {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .tv-assistant {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tv-assistant__left-content {
+      padding: 32px 16px 32px 16px;
+      order: 2;
+      width: 100%;
+    }
+
+    .tv-assistant__title {
+      font-size: 36px;
+      line-height: 50px;
+    }
+
+    .tv-assistant__text {
+      font-size: 14px;
+      line-height: 26px;
+    }
+
+    .tv-assistant__right-content {
+      order: 1;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .tv-assistant__image-desc {
+      display: none;
+    }
+
+    .tv-assistant__image-mob {
+      display: flex;
+      max-width: 684px;
+      width: 100%;
+      height: 180px !important;
+    }
+
+    .tv-assistant__mob-image {
+      order: 3;
+      max-width: 684px;
+      width: 100%;
+      justify-content: center;
+      display: flex;
+      margin: 0 auto;
+    }
+  }
+
+  .tv-chromecast {
+    display: flex;
+  }
+
+  .tv-chromecast__left-content {
+    width: 50%;
+    display: flex;
+  }
+
+  .tv-chromecast__content {
+    max-width: 423px;
+    margin: 0 auto;
+  }
+
+  .tv-chromecast__logo {
+    margin-bottom: 12px;
+  }
+
+  .tv-chromecast__title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    margin-bottom: 20px;
+  }
+
+  .tv-chromecast__text {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .tv-chromecast__right-content {
+    width: 50%;
+    padding: 36px 0 36px 0;
+  }
+
+  .tv-chromecast__image-mob {
+    display: none;
+  }
+
+  .tv-chromecast__mob-image {
+    display: none;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .tv-chromecast__right-content {
+      padding: 42px 16px 42px 16px;
+    }
+
+    .tv-chromecast__title {
+      font-size: 38px;
+      line-height: 50px;
+    }
+
+    .tv-chromecast__text {
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .tv-chromecast__right-content {
+      padding: 32px 16px 32px 16px;
+    }
+
+    .tv-chromecast__title {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    .tv-chromecast__text {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .tv-chromecast {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tv-chromecast__left-content {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .tv-chromecast__title {
+      font-size: 36px;
+      line-height: 50px;
+    }
+
+    .tv-chromecast__text {
+      font-size: 14px;
+      line-height: 26px;
+    }
+
+    .tv-chromecast__right-content {
+      padding: 32px 16px 32px 16px;
+      width: 100%;
+    }
+
+    .tv-chromecast__image-desc {
+      display: none;
+    }
+
+    .tv-chromecast__image-mob {
+      display: flex;
+      max-width: 684px;
+      width: 100%;
+      height: 180px !important;
+    }
+
+    .tv-chromecast__mob-image {
+      order: 3;
+      max-width: 684px;
+      width: 100%;
+      justify-content: center;
+      display: flex;
+      margin: 0 auto;
+    }
+  }
+
+  .tv-remote {
+    display: flex;
+  }
+
+  .tv-remote__left-content {
+    width: 50%;
+    padding: 53px 0 53px 0;
+  }
+
+  .tv-remote__content {
+    max-width: 423px;
+    margin: 0 auto;
+  }
+
+  .tv-remote__title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    margin-bottom: 20px;
+  }
+
+  .tv-remote__text {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .tv-remote__right-content {
+    width: 50%;
+    display: flex;
+  }
+
+  .tv-remote__image {
+    min-width: 470px;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .tv-remote__left-content {
+      padding: 70px 16px 70px 16px;
+    }
+
+    .tv-remote__title {
+      font-size: 38px;
+      line-height: 50px;
+    }
+
+    .tv-remote__text {
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .tv-remote__left-content {
+      padding: 32px 16px 32px 16px;
+    }
+
+    .tv-remote__title {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    .tv-remote__text {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .tv-remote {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tv-remote__left-content {
+      padding: 32px 16px 32px 16px;
+      width: 100%;
+    }
+
+    .tv-remote__title {
+      font-size: 36px;
+      line-height: 50px;
+    }
+
+    .tv-remote__text {
+      font-size: 14px;
+      line-height: 26px;
+    }
+
+    .tv-remote__right-content {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  .tv-opportunity {
+    display: flex;
+    background-color: #151517;
+  }
+
+  .tv-opportunity__left-content {
+    width: 50%;
+  }
+
+  .tv-opportunity__right-content {
+    width: 50%;
+    padding: 36px 16px 36px 16px;
+    display: flex;
+  }
+
+  .tv-opportunity__content {
+    max-width: 458px;
+    margin: 0 auto;
+  }
+
+  .tv-opportunity__title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  .tv-opportunity__technology-list {
+    display: flex;
+    margin-bottom: 36px;
+  }
+
+  .tv-opportunity__technology-title {
+    color: #ffc915;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 26px;
+    padding-left: 70px;
+    position: relative;
+  }
+
+  .tv-opportunity__technology-title.wi-fi {
+    margin-right: 24px;
+  }
+
+  .tv-opportunity__technology-title.wi-fi:before {
+    position: absolute;
+    content: "";
+    width: 56px;
+    height: 56px;
+    left: 0;
+    top: -18px;
+    background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/technology/wi-fi-icon.svg")
+      center/100% 100% no-repeat;
+  }
+
+  .tv-opportunity__technology-title.bluetooth:before {
+    position: absolute;
+    content: "";
+    width: 56px;
+    height: 56px;
+    left: 0;
+    top: -18px;
+    background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/technology/bluetooth-icon.svg")
+      center/100% 100% no-repeat;
+  }
+
+  .tv-opportunity__connectors-list {
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tv-opportunity__connectors-title {
+    color: #fff;
+    font-size: 16px;
+    line-height: 22px;
+    padding-left: 24px;
+    position: relative;
+    min-width: 70px;
+  }
+
+  .tv-opportunity__connectors-title.hdmi,
+  .tv-opportunity__connectors-title.usb {
+    padding-left: 42px;
+  }
+
+  .tv-opportunity__connectors-title {
+    margin-right: 12px;
+  }
+
+  .tv-opportunity__connectors-title.hdmi {
+    margin-bottom: 12px;
+  }
+
+  .tv-opportunity__connectors-title.hdmi:before {
+    position: absolute;
+    content: "";
+    width: 34px;
+    height: 14px;
+    left: 0;
+    top: 4px;
+    background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/technology/hdmi.svg")
+      center/100% 100% no-repeat;
+  }
+
+  .tv-opportunity__connectors-title.usb:before {
+    position: absolute;
+    content: "";
+    width: 34px;
+    height: 14px;
+    left: 0;
+    top: 4px;
+    background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/technology/usb.svg")
+      center/100% 100% no-repeat;
+  }
+
+  .tv-opportunity__connectors-title.av:before {
+    position: absolute;
+    content: "";
+    width: 17px;
+    height: 17px;
+    left: 0;
+    top: 2px;
+    background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/technology/av.svg")
+      center/100% 100% no-repeat;
+  }
+
+  .tv-opportunity__connectors-title.lan:before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 2px;
+    background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/technology/lan.svg")
+      center/100% 100% no-repeat;
+  }
+
+  .tv-opportunity__connectors-title.dao:before {
+    position: absolute;
+    content: "";
+    width: 19px;
+    height: 19px;
+    left: 0;
+    top: 2px;
+    background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/technology/digital.svg")
+      center/100% 100% no-repeat;
+  }
+
+  .tv-opportunity__connectors-title.ant:before {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 18px;
+    left: 0;
+    top: 2px;
+    background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/technology/ant.svg")
+      center/100% 100% no-repeat;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .tv-opportunity__right-content {
+      padding: 30px 16px 0 46px;
+    }
+
+    .tv-opportunity__title {
+      font-size: 38px;
+      line-height: 50px;
+      margin-bottom: 26px;
+    }
+
+    .tv-opportunity__technology-title {
+      padding-left: 60px;
+    }
+
+    .tv-opportunity__technology-title.wi-fi:before,
+    .tv-opportunity__technology-title.bluetooth:before {
+      width: 52px;
+      height: 52px;
+      top: -15px;
+    }
+
+    .tv-opportunity__connectors-title {
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .tv-opportunity {
+      flex-direction: column;
+    }
+
+    .tv-opportunity__left-content {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .tv-opportunity__image {
+      display: flex;
+    }
+
+    .tv-opportunity__right-content {
+      padding: 14px 16px 36px 12px;
+      width: 100%;
+    }
+
+    .tv-opportunity__title {
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 26px;
+    }
+
+    .tv-opportunity__technology-title {
+      font-size: 16px;
+      line-height: 22px;
+      padding-left: 60px;
+    }
+
+    .tv-opportunity__technology-title.wi-fi:before,
+    .tv-opportunity__technology-title.bluetooth:before {
+      width: 48px;
+      height: 48px;
+      top: -15px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .tv-opportunity__right-content {
+      padding: 14px 8px 36px 8px;
+    }
+
+    .tv-opportunity__title {
+      font-size: 24px;
+      line-height: 40px;
+      margin-bottom: 24px;
+    }
+  }
+
+  @media screen and (max-width: 367px) {
+    .tv-opportunity__connectors-item:nth-child(4) {
+      margin-bottom: 6px;
+    }
+  }
+
+  .tv-installation {
+    background-image: url("https://i.citrus.ua/uploads/promo/realme/tv-card/installation/standart-image.png");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: top center;
+    height: 480px;
+    transition: background-image 0.5s;
+  }
+  .tv-installation__content {
+    display: flex;
+    justify-content: center;
+    padding-top: 45px;
+  }
+
+  .tv-installation__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    border-bottom: 4px solid #030303;
+    padding: 0 28px;
+    white-space: nowrap;
+    opacity: 0.2;
+    cursor: pointer;
+    transition: opacity 0.5s;
+  }
+
+  .tv-installation__title.active {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 767px) {
+    .tv-installation {
+      background-image: url("https://i.citrus.ua/uploads/promo/realme/tv-card/installation/standart-image-mob.png");
+      height: 290px;
+      position: relative;
+    }
+
+    .tv-installation__content {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      background-color: #fff;
+      padding: 25px 16px 25px 16px;
+    }
+
+    .tv-installation__title {
+      font-size: 12px;
+      line-height: 14px;
+      padding: 0 12px;
+    }
+  }
+
+  .tv-characteristics {
+    background-image: url("https://i.citrus.ua/uploads/promo/realme/tv-card/characteristics/characteristics-bg.png");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: top center;
+    height: 325px;
+  }
+
+  .tv-characteristics__content {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 120px 24px 0 24px;
+  }
+
+  .tv-characteristics__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tv-characteristics__item {
+    max-width: 239px;
+  }
+
+  .tv-characteristics__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    color: #000;
+    text-align: center;
+  }
+
+  .title__ident {
+    font-size: 18px;
+    line-height: 21px;
+    color: #000;
+  }
+
+  .tv-characteristics__desc {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .tv-characteristics__title {
+      font-size: 38px;
+      line-height: 45px;
+    }
+
+    .title__ident {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    .tv-characteristics__desc {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .tv-characteristics__item {
+      max-width: 140px;
+    }
+
+    .tv-characteristics__title {
+      font-size: 28px;
+      line-height: 33px;
+    }
+
+    .title__ident {
+      font-size: 11px;
+      line-height: 13px;
+    }
+
+    .tv-characteristics__desc {
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .tv-characteristics {
+      height: 435px;
+    }
+
+    .tv-characteristics__content {
+      padding-top: 40px;
+    }
+
+    .tv-characteristics__list {
+      flex-wrap: wrap;
+    }
+
+    .tv-characteristics__item {
+      max-width: initial;
+      width: 45%;
+      margin-bottom: 24px;
+    }
+
+    .tv-characteristics__item:last-child {
+      width: 100%;
+    }
+
+    .tv-characteristics__text {
+      max-width: 150px;
+      margin: 0 auto;
+    }
+
+    .tv-characteristics__text:last-child {
+      max-width: initial;
+      width: 100%;
+    }
+
+    .tv-characteristics__title {
+      font-size: 32px;
+      line-height: 37px;
+      text-align: left;
+    }
+
+    .title__ident {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    .tv-characteristics__desc {
+      font-size: 12px;
+      line-height: 14px;
+      text-align: left;
+    }
+  }
+
+  .tv-questions {
+    background: #f7f7f7;
+  }
+
+  .tv-questions__content {
+    max-width: 1100px;
+    padding: 120px 24px 100px 24px;
+    margin: 0 auto;
+  }
+
+  .tv-questions__text {
+    font-size: 20px;
+    line-height: 28px;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .tv-questions__content {
+      padding: 80px 24px 100px 24px;
+    }
+
+    .tv-questions__text {
+      font-size: 14px;
+      line-height: 150%;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .tv-questions__content {
+      padding: 60px 24px 80px 24px;
+    }
+
+    .tv-questions__text {
+      font-size: 14px;
+      line-height: 150%;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .tv-questions__content {
+      padding: 60px 24px 100px 24px;
+    }
+
+    .tv-questions__text {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+
+  .review-modal {
+    position: fixed;
+    top: 0;
+    z-index: 25;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .review-modal--show {
+    display: flex;
+  }
+  .review-modal__videous {
+    margin-left: 36px;
+    margin-right: 36px;
+    max-width: 1156px;
+    width: 100%;
+    padding-bottom: 651px;
+    position: relative;
+  }
+  .review-modal__videous iframe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .review-modal__videous a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .review-modal__close {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+  .review-modal__close::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    width: 20px;
+    height: 2px;
+    background-color: #000000;
+  }
+  .review-modal__close::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+    width: 20px;
+    height: 2px;
+    background-color: #000000;
+  }
+  @media screen and (max-width: 1300px) {
+    .review-modal__videous {
+      padding-bottom: 52.7%;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .review-modal__videous {
+      margin-left: 16px;
+      margin-right: 16px;
+      padding-bottom: 54%;
+    }
+    .review-modal__close {
+      display: none;
+    }
+    .review-modal__close::before,
+    .review-modal__close::after {
+      width: 15px;
+    }
+  }
+}

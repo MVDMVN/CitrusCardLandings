@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: 50px 0 50px 0;
+  overflow-x: hidden; }
+
+ul {
+  margin: 0;
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  color: transparent;
+  display: flex;
+  margin: 0; }
+
+form select,
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding: 0 0 0 12px;
+  background-color: #ffffff; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3b6d9a;
+  outline: none;
+  transition: 0.3s; }
+
+button {
+  display: block;
+  background: 0 0;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  line-height: 44px;
+  transition: 0.3s;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-size: 18px; }
+
+.v10 {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto; }
+  .v10 .v10-land-style {
+    margin: 100px 0; }
+  .v10 .v10-land-header {
+    background: url("https://i.citrus.ua/uploads/promo/dyson/v10/header/header-bg-desc.png") center center no-repeat; }
+  .v10 .v10-land__header-container {
+    padding-top: 120px;
+    padding-left: 136px; }
+  .v10 .v10-land__header-logo {
+    max-width: 311px;
+    width: 100%;
+    margin-bottom: 60px; }
+  .v10 .v10-land__header-title {
+    font-size: 42px;
+    line-height: 49px;
+    color: #333333;
+    max-width: 525px;
+    width: 100%;
+    margin-bottom: 161px; }
+  .v10 .v10-land__header-image--mob {
+    display: none; }
+  .v10 .v10-land__header-info {
+    max-width: 1130px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px 50px 24px; }
+  .v10 .v10-land__info-list {
+    display: flex;
+    justify-content: space-between; }
+  .v10 .v10-land__info-item {
+    width: 32%;
+    padding: 24px 50px;
+    background: #333; }
+  .v10 .v10-land__item-title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    color: #fff;
+    margin-bottom: 16px; }
+  .v10 .v10-land__item-text {
+    font-size: 24px;
+    line-height: 36px;
+    color: #fff; }
+  .v10 .v10-land__container {
+    max-width: 1155px;
+    padding: 0 24px;
+    margin: 0 auto; }
+  .v10 .v10-land__title-style {
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 59px;
+    margin-bottom: 60px;
+    text-align: center; }
+  .v10 .v10-land-features__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px 24px; }
+  .v10 .v10-features-item__image {
+    margin-bottom: 16px; }
+  .v10 .v10-features-item__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: #000;
+    margin-bottom: 8px; }
+  .v10 .v10-features-item__text {
+    font-size: 18px;
+    line-height: 26px;
+    color: #000;
+    font-weight: normal; }
+  .v10 .v10-land-equipment {
+    margin-bottom: 80px; }
+  .v10 .v10-land-equipment__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 33px 24px; }
+  .v10 .v10-equipment-item__text {
+    font-size: 18px;
+    line-height: 21px;
+    color: #000;
+    margin-top: 16px;
+    text-align: center; }
+  .v10 .v10-info {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px; }
+  .v10 .v10-info__content {
+    font-size: 18px;
+    line-height: 26px;
+    color: rgba(0, 0, 0, 0.87); }
+  @media screen and (max-width: 1365px) {
+    .v10 .v10-land-style {
+      margin: 80px 0; }
+    .v10 .v10-land__header-container {
+      padding-left: 24px; }
+    .v10 .v10-land__title-style {
+      font-size: 40px;
+      line-height: 47px;
+      margin-bottom: 56px; }
+    .v10 .v10-equipment-item__text {
+      font-size: 16px;
+      line-height: 19px; }
+    .v10 .v10-land-equipment__items {
+      grid-gap: 44px 24px; } }
+  @media screen and (max-width: 1023px) {
+    .v10 .v10-land-header {
+      background: url("https://i.citrus.ua/uploads/promo/dyson/v10/header/header-bg-desc.png") center center/100% no-repeat, linear-gradient(180deg, rgba(195, 191, 189, 0) 58.4%, #c3bfbd 77.78%); }
+    .v10 .v10-land__header-container {
+      padding-top: 60px; }
+    .v10 .v10-land__header-logo {
+      max-width: 215px;
+      margin-bottom: 20px; }
+    .v10 .v10-land__header-title {
+      font-size: 26px;
+      line-height: 30px;
+      margin-bottom: 90px;
+      max-width: 325px; }
+    .v10 .v10-land__item-title {
+      font-size: 18px;
+      line-height: 21px; }
+    .v10 .v10-land__item-text {
+      font-size: 12px;
+      line-height: 18px; }
+    .v10 .v10-land__info-item {
+      padding: 16px 20px; }
+    .v10 .v10-features-item__title {
+      font-size: 14px;
+      line-height: 22px; }
+    .v10 .v10-features-item__text {
+      font-size: 14px;
+      line-height: 22px; }
+    .v10 .v10-equipment-item__text {
+      font-size: 14px;
+      line-height: 16px; }
+    .v10 .v10-land-equipment__items {
+      grid-gap: 40px 24px; }
+    .v10 .v10-equipment-item__image,
+    .v10 .v10-features-item__image {
+      margin: 0 auto 16px auto; }
+    .v10 .v10-info__content {
+      font-size: 14px;
+      line-height: 22px; } }
+  @media screen and (max-width: 767px) {
+    .v10 .v10-land-header {
+      background: linear-gradient(180deg, #f4f4f4 31.93%, #c3bfbd 53.46%); }
+    .v10 .v10-land__header-container {
+      padding: 40px 16px 0 16px; }
+    .v10 .v10-land__header-title {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 24px;
+      max-width: 275px; }
+    .v10 .v10-land__header-image--mob {
+      display: flex;
+      margin: 0 auto; }
+    .v10 .v10-land__item-title {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 4px; }
+    .v10 .v10-land__item-text {
+      font-size: 12px;
+      line-height: 18px; }
+    .v10 .v10-land__info-item {
+      padding: 16px 20px;
+      max-width: 100%;
+      width: 100%; }
+    .v10 .v10-land__info-list {
+      flex-direction: column; }
+    .v10 .v10-land__info-item:not(:last-child) {
+      margin-bottom: 16px; }
+    .v10 .v10-land-equipment {
+      margin-bottom: 60px; } }
+  @media screen and (max-width: 610px) {
+    .v10 .v10-land-equipment__items {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media screen and (max-width: 560px) {
+    .v10 .v10-land__container {
+      padding: 0 16px; }
+    .v10 .v10-land__title-style {
+      font-size: 28px;
+      line-height: 33px;
+      margin-bottom: 40px; }
+    .v10 .v10-land-features__items {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 23px; } }
+
+/*# sourceMappingURL=style.css.map */

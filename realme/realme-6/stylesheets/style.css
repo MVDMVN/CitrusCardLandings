@@ -1,0 +1,1694 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; }
+
+body {
+  margin: 50px 0 50px 0;
+  overflow-x: hidden; }
+
+ul {
+  margin: 0;
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  color: transparent; }
+
+form select,
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding: 0 0 0 12px;
+  background-color: #ffffff; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3b6d9a;
+  outline: none;
+  transition: 0.3s; }
+
+button {
+  display: block;
+  background: 0 0;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  line-height: 44px;
+  transition: 0.3s;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-size: 18px; }
+
+@keyframes text-right-slide-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(50px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+@keyframes text-left-slide-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+@keyframes text-bottom-slide-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@keyframes text-opacity-anim {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes graphic-width-90-anim {
+  0% {
+    width: 0%; }
+  100% {
+    width: 90%; } }
+@keyframes graphic-width-40-anim {
+  0% {
+    width: 0%; }
+  100% {
+    width: 40%; } }
+.realme-6 {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative; }
+  .realme-6 .six-header {
+    background: url("https://i.citrus.ua/uploads/promo/realme/realme-6/header/header-image-ru-bg.png") center no-repeat;
+    display: flex;
+    z-index: 3;
+    position: relative; }
+  .realme-6 .six-header__container {
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 24px; }
+  .realme-6 .six-header__banner {
+    display: block;
+    margin: 0 auto; }
+  @media screen and (max-width: 767px) {
+    .realme-6 .six-header__container {
+      padding-left: 0; } }
+  .realme-6 .six-screen {
+    background: linear-gradient(180deg, #c1dafa -53.21%, #404bc8 109.2%); }
+  .realme-6 .six-screen__container {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 24px 0 60px; }
+  .realme-6 .six-screen__content {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    max-width: 540px;
+    width: 100%; }
+  .realme-6 .six-screen__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 24px;
+    color: #fff;
+    opacity: 0; }
+  .realme-6 .six-screen__subtitle {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+    margin-bottom: 24px;
+    color: #fff;
+    opacity: 0; }
+  .realme-6 .six-screen__text {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 32px;
+    color: #fff;
+    opacity: 0; }
+  .realme-6 .six-screen__image {
+    margin-right: 60px;
+    opacity: 0; }
+  .realme-6 .six-screen__list {
+    display: flex;
+    overflow-y: hidden;
+    justify-content: space-between;
+    max-width: 450px;
+    padding-right: 50px; }
+  .realme-6 .six-screen__item {
+    opacity: 0; }
+  .realme-6 .six-screen__item-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 8px;
+    color: #fff;
+    overflow-y: hidden; }
+  .realme-6 .six-screen__item-subtitle {
+    font-size: 20px;
+    line-height: 23px;
+    color: #fff; }
+  .realme-6 .anim .six-screen__title {
+    animation: text-right-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-screen__subtitle {
+    animation: text-right-slide-anim 1s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-screen__text {
+    animation: text-right-slide-anim 1s forwards;
+    animation-delay: .6s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-screen__item:nth-child(1) {
+    animation: text-right-slide-anim 1s forwards;
+    animation-delay: 1s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-screen__item:nth-child(2) {
+    animation: text-right-slide-anim 1s forwards;
+    animation-delay: 1.4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-screen__image {
+    animation: text-left-slide-anim 1s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  @media screen and (max-width: 1365px) {
+    .realme-6 .six-screen__content {
+      max-width: 458px; }
+    .realme-6 .six-screen__image {
+      margin-right: 90px; } }
+  @media screen and (max-width: 1023px) {
+    .realme-6 .c3-camera__container {
+      padding: 60px 24px 0 24px; }
+    .realme-6 .six-screen__content {
+      padding: 50px 0 50px 0;
+      max-width: 330px; }
+    .realme-6 .c3-camera__header {
+      margin: 0 auto 40px auto; }
+    .realme-6 .six-screen__title {
+      font-size: 36px;
+      line-height: 42px; }
+    .realme-6 .six-screen__subtitle {
+      font-size: 24px;
+      line-height: 28px; }
+    .realme-6 .six-screen__text {
+      font-size: 16px;
+      line-height: 26px; }
+    .realme-6 .six-screen__image {
+      max-width: 279px; }
+    .realme-6 .six-screen__item-title {
+      font-size: 22px;
+      line-height: 26px; }
+    .realme-6 .six-screen__item-subtitle {
+      font-size: 16px;
+      line-height: 19px; } }
+  @media screen and (max-width: 767px) {
+    .realme-6 .six-screen__container {
+      padding: 60px 16px 60px 16px;
+      flex-direction: column; }
+    .realme-6 .six-screen__content {
+      max-width: initial;
+      padding: 0 0 40px 0; }
+    .realme-6 .six-screen__title {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 8px;
+      opacity: 1; }
+    .realme-6 .six-screen__subtitle {
+      font-size: 18px;
+      line-height: 21px; }
+    .realme-6 .six-screen__text {
+      font-size: 12px;
+      line-height: 22px; }
+    .realme-6 .six-screen__content {
+      flex-direction: column;
+      order: 1; }
+    .realme-6 .six-screen__image {
+      max-width: 300px;
+      min-width: 280px;
+      padding: 0 16px 0 16px;
+      margin-right: 0;
+      order: 2; }
+    .realme-6 .six-screen__list {
+      justify-content: space-between;
+      padding-right: 0;
+      max-width: 288px;
+      width: 100%;
+      margin: 0 auto; }
+    .realme-6 .six-screen__item {
+      max-width: 160px; }
+    .realme-6 .six-screen__item-title {
+      font-size: 14px;
+      line-height: 18px; }
+    .realme-6 .six-screen__item-subtitle {
+      font-size: 12px;
+      line-height: 14px; }
+    .realme-6 .anim .six-screen__title,
+    .realme-6 .anim .six-screen__subtitle,
+    .realme-6 .anim .six-screen__text,
+    .realme-6 .anim .six-screen__item:nth-child(1),
+    .realme-6 .anim .six-screen__item:nth-child(2),
+    .realme-6 .anim .six-screen__image {
+      opacity: 1;
+      animation: none; } }
+  .realme-6 .six-camera {
+    background: #fff;
+    padding: 100px 0 100px 0; }
+  .realme-6 .six-camera__container {
+    display: flex; }
+  .realme-6 .six-camera__content {
+    max-width: 535px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 40px; }
+  .realme-6 .six-camera__image {
+    margin: 0 auto;
+    display: flex;
+    padding-left: 136px;
+    opacity: 0; }
+  .realme-6 .anim .six-camera__image {
+    animation: text-left-slide-anim 1s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .six-camera__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 24px;
+    opacity: 0; }
+  .realme-6 .anim .six-camera__title {
+    animation: text-right-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .six-camera__subtitle {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+    margin-bottom: 24px;
+    color: rgba(0, 0, 0, 0.87);
+    opacity: 0; }
+  .realme-6 .anim .six-camera__subtitle {
+    animation: text-right-slide-anim 1s forwards;
+    animation-delay: 0.4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .six-camera__text {
+    font-size: 20px;
+    line-height: 36px;
+    margin-bottom: 34px;
+    color: rgba(0, 0, 0, 0.87);
+    opacity: 0; }
+  .realme-6 .anim .six-camera__text {
+    animation: text-right-slide-anim 1s forwards;
+    animation-delay: 0.8s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .six-camera__item {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000000;
+    position: relative;
+    padding-left: 70px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    opacity: 0; }
+  .realme-6 .anim .six-camera__item:nth-child(1) {
+    animation: text-right-slide-anim 1s forwards;
+    animation-delay: 1.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-camera__item:nth-child(2) {
+    animation: text-right-slide-anim 1s forwards;
+    animation-delay: 1.4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-camera__item:nth-child(3) {
+    animation: text-right-slide-anim 1s forwards;
+    animation-delay: 1.6s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .six-camera__item:before {
+    content: "";
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    left: 0;
+    top: 0; }
+  .realme-6 .six-camera__item.ai:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/realme-6/camera/ai-svg.svg") center/100% 100% no-repeat; }
+  .realme-6 .six-camera__item.hdr:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/realme-6/camera/hdr-icon.svg") center/100% 100% no-repeat; }
+  .realme-6 .six-camera__item.boke:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/realme-6/camera/boke-icon.svg") center/100% 100% no-repeat; }
+  @media screen and (max-width: 1365px) {
+    .realme-6 .six-camera__image {
+      padding-left: 0;
+      margin-right: 24px;
+      margin-left: 24px; }
+    .realme-6 .six-camera__content {
+      max-width: 470px; } }
+  @media screen and (max-width: 1023px) {
+    .realme-6 .six-camera {
+      padding: 60px 0 60px 0; }
+    .realme-6 .six-camera__container {
+      padding: 0 24px; }
+    .realme-6 .six-camera__content {
+      max-width: 350px;
+      padding-top: 0; }
+    .realme-6 .six-camera__image {
+      margin: 0;
+      width: 329px;
+      height: 515px; }
+    .realme-6 .six-camera__title {
+      font-size: 36px;
+      line-height: 42px;
+      margin-bottom: 14px; }
+    .realme-6 .six-camera__subtitle {
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 24px; }
+    .realme-6 .six-camera__text {
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 30px; }
+    .realme-6 .six-camera__item {
+      font-size: 22px;
+      line-height: 26px;
+      height: 32px;
+      padding-left: 46px; }
+    .realme-6 .six-camera__item:before {
+      width: 32px;
+      height: 32px; } }
+  @media screen and (max-width: 767px) {
+    .realme-6 .six-camera__container {
+      flex-direction: column;
+      padding: 0 16px; }
+    .realme-6 .six-camera__content {
+      text-align: center; }
+    .realme-6 .six-camera__image {
+      margin: 0 auto 40px auto;
+      max-width: 305px;
+      height: 400px;
+      width: 100%; }
+    .realme-6 .six-camera__title {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 14px;
+      opacity: 1; }
+    .realme-6 .six-camera__subtitle {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 24px;
+      opacity: 1; }
+    .realme-6 .six-camera__text {
+      font-size: 12px;
+      line-height: 22px;
+      opacity: 1; }
+    .realme-6 .six-camera__list {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 340px;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto; }
+    .realme-6 .six-camera__item {
+      font-size: 14px;
+      line-height: 18px;
+      height: 32px;
+      padding-left: 37px; }
+    .realme-6 .six-camera__item:nth-child(1) {
+      max-width: 190px;
+      width: 100%; }
+    .realme-6 .six-camera__item:nth-child(2) {
+      width: 45%; }
+    .realme-6 .six-camera__item:nth-child(3) {
+      width: 45%; }
+    .realme-6 .anim .six-camera__title {
+      animation: none; }
+    .realme-6 .anim .six-camera__subtitle {
+      animation: none; }
+    .realme-6 .anim .six-camera__text {
+      animation: none; }
+    .realme-6 .anim .six-camera__item:nth-child(1),
+    .realme-6 .anim .six-camera__item:nth-child(2),
+    .realme-6 .anim .six-camera__item:nth-child(3),
+    .realme-6 .anim .six-camera__image {
+      opacity: 1;
+      animation: none; } }
+  .realme-6 .six-quadro {
+    background: linear-gradient(220.31deg, #f7f8ff 0%, #303db5 196.46%); }
+  .realme-6 .six-quadro__content {
+    padding-top: 100px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto; }
+  .realme-6 .six-quadro__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 14px;
+    opacity: 0; }
+  .realme-6 .six-quadro__subtitle {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 24px;
+    opacity: 0; }
+  .realme-6 .six-quadro__text {
+    font-size: 20px;
+    line-height: 32px;
+    color: rgba(0, 0, 0, 0.87);
+    padding-bottom: 60px;
+    opacity: 0; }
+  .realme-6 .six-quadro__image {
+    display: flex;
+    margin: 0 auto;
+    opacity: 0; }
+  .realme-6 .anim .six-quadro__title {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-quadro__subtitle {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-quadro__text {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .6s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-quadro__image {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .8s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .six-quadro__image-mobile {
+    display: none; }
+  @media screen and (max-width: 1023px) {
+    .realme-6 .six-quadro__content {
+      padding: 60px 24px 0 24px; }
+    .realme-6 .six-quadro__title {
+      font-size: 36px;
+      line-height: 42px; }
+    .realme-6 .six-quadro__subtitle {
+      font-size: 24px;
+      line-height: 28px; }
+    .realme-6 .six-quadro__text {
+      font-size: 16px;
+      line-height: 26px;
+      padding-bottom: 60px; } }
+  @media screen and (max-width: 530px) {
+    .realme-6 .six-quadro__container {
+      display: flex;
+      flex-direction: column; }
+    .realme-6 .six-quadro__content {
+      padding: 40px 16px 0 16px; }
+    .realme-6 .six-quadro__title {
+      font-size: 24px;
+      line-height: 32px;
+      opacity: 1; }
+    .realme-6 .six-quadro__subtitle {
+      font-size: 18px;
+      line-height: 21px;
+      opacity: 1; }
+    .realme-6 .six-quadro__text {
+      font-size: 12px;
+      line-height: 22px;
+      padding-bottom: 40px;
+      opacity: 1; }
+    .realme-6 .six-quadro__image {
+      display: none; }
+    .realme-6 .six-quadro__image-mobile {
+      display: flex;
+      align-self: flex-end; }
+    .realme-6 .anim .six-quadro__title,
+    .realme-6 .anim .six-quadro__subtitle,
+    .realme-6 .anim .six-quadro__text,
+    .realme-6 .anim .six-quadro__image {
+      animation: none; } }
+  .realme-6 .six-size {
+    background: #ffffff; }
+  .realme-6 .six-size__content {
+    padding-top: 100px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto; }
+  .realme-6 .six-size__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 14px;
+    opacity: 0; }
+  .realme-6 .six-size__subtitle {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 24px;
+    opacity: 0; }
+  .realme-6 .six-size__text {
+    font-size: 20px;
+    line-height: 32px;
+    color: rgba(0, 0, 0, 0.87);
+    padding-bottom: 60px;
+    opacity: 0; }
+  .realme-6 .six-size__image {
+    display: flex;
+    margin: 0 auto;
+    opacity: 0; }
+  .realme-6 .anim .six-size__title {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-size__subtitle {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-size__text {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .6s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-size__image {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .8s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  @media screen and (max-width: 1365px) {
+    .realme-6 .six-size__container {
+      padding: 0 24px; } }
+  @media screen and (max-width: 1023px) {
+    .realme-6 .six-size__content {
+      padding-top: 60px; }
+    .realme-6 .six-size__title {
+      font-size: 36px;
+      line-height: 42px; }
+    .realme-6 .six-size__subtitle {
+      font-size: 24px;
+      line-height: 28px; }
+    .realme-6 .six-size__text {
+      font-size: 16px;
+      line-height: 26px;
+      padding-bottom: 60px; } }
+  @media screen and (max-width: 530px) {
+    .realme-6 .six-size__container {
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column; }
+    .realme-6 .six-size__content {
+      padding: 40px 0 0 0; }
+    .realme-6 .six-size__title {
+      font-size: 24px;
+      line-height: 32px;
+      opacity: 1; }
+    .realme-6 .six-size__subtitle {
+      font-size: 18px;
+      line-height: 21px;
+      opacity: 1; }
+    .realme-6 .six-size__text {
+      font-size: 12px;
+      line-height: 22px;
+      padding-bottom: 40px;
+      opacity: 1; }
+    .realme-6 .anim .six-size__title,
+    .realme-6 .anim .six-size__subtitle,
+    .realme-6 .anim .six-size__text {
+      animation: none; }
+    .realme-6 .anim .six-size__image {
+      animation: none;
+      opacity: 1; } }
+  .realme-6 .six-module {
+    background: #ffffff; }
+  .realme-6 .six-module__content {
+    padding-top: 100px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto; }
+  .realme-6 .six-module__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 14px;
+    opacity: 0; }
+  .realme-6 .six-module__subtitle {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 24px;
+    opacity: 0; }
+  .realme-6 .six-module__text {
+    font-size: 20px;
+    line-height: 32px;
+    color: rgba(0, 0, 0, 0.87);
+    padding-bottom: 60px;
+    opacity: 0; }
+  .realme-6 .anim .six-module__title {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-module__subtitle {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-module__text {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .6s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .six-module__image-container {
+    opacity: 0; }
+  .realme-6 .anim .six-module__image-container:nth-child(1) {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: 1s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-module__image-container:nth-child(2) {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: 1.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .six-module__images {
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto; }
+  .realme-6 .six-module__image-container {
+    text-align: center;
+    padding-bottom: 100px; }
+  .realme-6 .six-module__image-container:nth-child(1) {
+    margin-right: 24px; }
+  .realme-6 .six-module__image {
+    margin-bottom: 24px; }
+  .realme-6 .six-module__image-text {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000; }
+  @media screen and (max-width: 1365px) {
+    .realme-6 .six-module__container {
+      padding: 0 24px; } }
+  @media screen and (max-width: 1023px) {
+    .realme-6 .six-module__content {
+      padding-top: 60px; }
+    .realme-6 .six-module__title {
+      font-size: 36px;
+      line-height: 42px; }
+    .realme-6 .six-module__subtitle {
+      font-size: 24px;
+      line-height: 28px; }
+    .realme-6 .six-module__text {
+      font-size: 16px;
+      line-height: 26px;
+      padding-bottom: 60px; }
+    .realme-6 .six-module__image-text {
+      font-size: 22px;
+      line-height: 26px; } }
+  @media screen and (max-width: 767px) {
+    .realme-6 .six-module__container {
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column; }
+    .realme-6 .six-module__content {
+      padding: 40px 0 0 0; }
+    .realme-6 .six-module__title {
+      font-size: 24px;
+      line-height: 32px; }
+    .realme-6 .six-module__subtitle {
+      font-size: 18px;
+      line-height: 21px; }
+    .realme-6 .six-module__text {
+      font-size: 12px;
+      line-height: 22px;
+      padding-bottom: 40px; }
+    .realme-6 .six-module__images {
+      flex-direction: column; }
+    .realme-6 .six-module__image-container:nth-child(1) {
+      margin-right: 0;
+      margin-bottom: 24px; }
+    .realme-6 .six-module__image {
+      margin-bottom: 12px; }
+    .realme-6 .six-module__image-text {
+      font-size: 16px;
+      line-height: 19px; }
+    .realme-6 .six-module__image-container {
+      padding-bottom: 0; }
+    .realme-6 .anim .six-module__title,
+    .realme-6 .anim .six-module__subtitle,
+    .realme-6 .anim .six-module__text,
+    .realme-6 .anim .six-module__image-container:nth-child(1),
+    .realme-6 .anim .six-module__image-container:nth-child(2) {
+      opacity: 1;
+      animation: none; } }
+  .realme-6 .six-stabilization {
+    background: #ffffff; }
+  .realme-6 .six-stabilization__content {
+    padding-top: 100px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto; }
+  .realme-6 .six-stabilization__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 14px;
+    opacity: 0; }
+  .realme-6 .six-stabilization__subtitle {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 24px;
+    opacity: 0; }
+  .realme-6 .six-stabilization__text {
+    font-size: 20px;
+    line-height: 32px;
+    color: rgba(0, 0, 0, 0.87);
+    padding-bottom: 60px;
+    opacity: 0; }
+  .realme-6 .six-stabilization__image {
+    display: flex;
+    margin: 0 auto;
+    opacity: 0; }
+  .realme-6 .anim .six-stabilization__title {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-stabilization__subtitle {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-stabilization__text {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .6s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-stabilization__image {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .8s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  @media screen and (max-width: 1365px) {
+    .realme-6 .six-stabilization__container {
+      padding: 0 24px; } }
+  @media screen and (max-width: 1023px) {
+    .realme-6 .six-stabilization__content {
+      padding-top: 60px; }
+    .realme-6 .six-stabilization__title {
+      font-size: 36px;
+      line-height: 42px; }
+    .realme-6 .six-stabilization__subtitle {
+      font-size: 24px;
+      line-height: 28px; }
+    .realme-6 .six-stabilization__text {
+      font-size: 16px;
+      line-height: 26px;
+      padding-bottom: 60px; } }
+  @media screen and (max-width: 530px) {
+    .realme-6 .six-stabilization__container {
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column; }
+    .realme-6 .six-stabilization__content {
+      padding: 40px 0 0 0; }
+    .realme-6 .six-stabilization__title {
+      font-size: 24px;
+      line-height: 32px; }
+    .realme-6 .six-stabilization__subtitle {
+      font-size: 18px;
+      line-height: 21px; }
+    .realme-6 .six-stabilization__text {
+      font-size: 12px;
+      line-height: 22px;
+      padding-bottom: 40px; }
+    .realme-6 .anim .six-stabilization__title,
+    .realme-6 .anim .six-stabilization__subtitle,
+    .realme-6 .anim .six-stabilization__text,
+    .realme-6 .six-stabilization__image {
+      animation: none;
+      opacity: 1; } }
+  .realme-6 .six-soloop {
+    background: #fff;
+    padding-top: 180px;
+    padding-bottom: 89px; }
+  .realme-6 .six-soloop__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1300px;
+    width: 100%;
+    padding-left: 60px; }
+  .realme-6 .six-soloop__content {
+    max-width: 640px;
+    padding-left: 60px;
+    padding-right: 60px; }
+  .realme-6 .six-soloop__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 14px;
+    opacity: 0; }
+  .realme-6 .anim .six-soloop__title {
+    animation: text-left-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .six-soloop__subtitle {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 24px;
+    opacity: 0; }
+  .realme-6 .anim .six-soloop__subtitle {
+    animation: text-left-slide-anim 1s forwards;
+    animation-delay: 0.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .six-soloop__text {
+    font-size: 20px;
+    line-height: 36px;
+    color: rgba(0, 0, 0, 0.87);
+    opacity: 0; }
+  .realme-6 .anim .six-soloop__text {
+    animation: text-left-slide-anim 1s forwards;
+    animation-delay: 0.4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .six-soloop__image {
+    opacity: 0;
+    padding-right: 40px; }
+  .realme-6 .anim .six-soloop__image {
+    animation: text-right-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  @media screen and (max-width: 1365px) {
+    .realme-6 .six-soloop__container {
+      padding-left: 24px;
+      padding-right: 24px; } }
+  @media screen and (max-width: 1023px) {
+    .realme-6 .six-soloop {
+      padding-top: 85px; }
+    .realme-6 .six-soloop__content {
+      max-width: 470px;
+      padding-left: 0; }
+    .realme-6 .six-soloop__title {
+      font-size: 36px;
+      line-height: 42px; }
+    .realme-6 .six-soloop__subtitle {
+      font-size: 24px;
+      line-height: 28px; }
+    .realme-6 .six-soloop__text {
+      font-size: 16px;
+      line-height: 26px; }
+    .realme-6 .six-soloop__image {
+      max-width: 180px; } }
+  @media screen and (max-width: 767px) {
+    .realme-6 .six-soloop {
+      padding-bottom: 24px; }
+    .realme-6 .six-soloop__container {
+      flex-direction: column;
+      padding: 0 16px; }
+    .realme-6 .six-soloop__content {
+      text-align: center;
+      margin-bottom: 65px;
+      padding-right: 0; }
+    .realme-6 .six-soloop__title {
+      opacity: 1;
+      font-size: 24px;
+      line-height: 32px; }
+    .realme-6 .six-soloop__subtitle {
+      opacity: 1;
+      font-size: 18px;
+      line-height: 21px; }
+    .realme-6 .six-soloop__text {
+      opacity: 1;
+      font-size: 12px;
+      line-height: 22px; }
+    .realme-6 .six-soloop__image {
+      opacity: 1;
+      padding: 0; }
+    .realme-6 .anim .six-soloop__title,
+    .realme-6 .anim .six-soloop__subtitle,
+    .realme-6 .anim .six-soloop__text,
+    .realme-6 .anim .six-soloop__image {
+      animation: none; } }
+  .realme-6 .six-processor {
+    background: url("https://i.citrus.ua/uploads/promo/realme/realme-6/processor/processor-image.jpg") center bottom no-repeat, #000000; }
+  .realme-6 .six-processor__container {
+    padding-bottom: 670px; }
+  .realme-6 .six-processor__content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 100px; }
+  .realme-6 .six-processor__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    color: #fff;
+    margin-bottom: 14px;
+    opacity: 0; }
+  .realme-6 .six-processor__subtitle {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+    color: #fff;
+    margin-bottom: 24px;
+    opacity: 0; }
+  .realme-6 .six-processor__text {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 32px;
+    color: #fff;
+    opacity: 0; }
+  .realme-6 .six-processor__list {
+    display: flex;
+    max-width: 660px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 100px; }
+  .realme-6 .six-processor__item {
+    max-width: 200px;
+    width: 100%;
+    color: #fff;
+    opacity: 0; }
+  .realme-6 .six-processor__item:not(:last-child) {
+    margin-right: 24px; }
+  .realme-6 .six-processor__item-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 10px; }
+  .realme-6 .six-processor__item-subtitle {
+    font-size: 20px;
+    line-height: 23px; }
+  .realme-6 .anim .six-processor__title {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-processor__subtitle {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-processor__text {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .6s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-processor__item:nth-child(1) {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: 1s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-processor__item:nth-child(2) {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: 1.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-processor__item:nth-child(3) {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: 1.4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  @media screen and (max-width: 1023px) {
+    .realme-6 .six-processor {
+      background: url("https://i.citrus.ua/uploads/promo/realme/realme-6/processor/processor-image.jpg") bottom center/140% no-repeat, #000000; }
+    .realme-6 .six-processor__content {
+      padding: 60px 24px 0 24px; }
+    .realme-6 .six-processor__title {
+      font-size: 36px;
+      line-height: 42px; }
+    .realme-6 .six-processor__subtitle {
+      font-size: 24px;
+      line-height: 28px; }
+    .realme-6 .six-processor__text {
+      font-size: 16px;
+      line-height: 26px; }
+    .realme-6 .six-processor__item-title {
+      font-size: 22px;
+      line-height: 26px; }
+    .realme-6 .six-processor__item-text {
+      font-size: 16px;
+      line-height: 19px; } }
+  @media screen and (max-width: 767px) {
+    .realme-6 .six-processor {
+      background: url("https://i.citrus.ua/uploads/promo/realme/realme-6/processor/processor-image-mobile-1.jpg") bottom center no-repeat, #000; }
+    .realme-6 .six-processor__container {
+      padding-bottom: 320px; }
+    .realme-6 .six-processor__content {
+      padding: 40px 16px 0 16px; }
+    .realme-6 .six-processor__title {
+      font-size: 24px;
+      line-height: 32px; }
+    .realme-6 .six-processor__subtitle {
+      font-size: 18px;
+      line-height: 21px; }
+    .realme-6 .six-processor__text {
+      font-size: 11px;
+      line-height: 20px; }
+    .realme-6 .six-processor__item-title {
+      font-size: 14px;
+      line-height: 18px; }
+    .realme-6 .six-processor__item-text {
+      font-size: 12px;
+      line-height: 14px; }
+    .realme-6 .anim .six-processor__title,
+    .realme-6 .anim .six-processor__subtitle,
+    .realme-6 .anim .six-processor__text,
+    .realme-6 .anim .six-processor__item:nth-child(1),
+    .realme-6 .anim .six-processor__item:nth-child(2),
+    .realme-6 .anim .six-processor__item:nth-child(3) {
+      animation: none;
+      opacity: 1; } }
+  .realme-6 .six-boost {
+    background: linear-gradient(180deg, #000000 0%, #2b3a89 100%); }
+  .realme-6 .six-boost__graphics {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 60px; }
+  .realme-6 .six-boost__title,
+  .realme-6 .six-graphic__title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 14px;
+    background: linear-gradient(270deg, #808AFE 1.89%, #BDC1FF 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0; }
+  .realme-6 .six-graphic__title {
+    background: linear-gradient(90deg, #9fb5ff 0%, #fefff3 36.9%, #c5ecff 56.05%, #e7fff8 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0; }
+  .realme-6 .anim .six-boost__title {
+    animation: text-left-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-boost__power .six-power__name {
+    animation: text-left-slide-anim 0.5s forwards;
+    animation-delay: 1s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-boost__power .six-power__graphic.helio {
+    animation: graphic-width-90-anim 1s forwards;
+    animation-delay: 1.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-boost__power .six-power__graphic.snap {
+    animation: graphic-width-40-anim 1s forwards;
+    animation-delay: 1.4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-boost__power .six-power__number {
+    animation: text-opacity-anim 1s forwards;
+    animation-delay: 1.4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .six-power__graphic.helio {
+    width: 0; }
+  .realme-6 .six-power__graphic.snap {
+    width: 0; }
+  .realme-6 .anim .six-graphic__title {
+    animation: text-left-slide-anim 1s forwards;
+    animation-delay: 2.8s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-boost__graphic-power .six-graphic__name {
+    animation: text-left-slide-anim 0.5s forwards;
+    animation-delay: 2.8s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-boost__graphic-power .six-power__title {
+    animation: text-left-slide-anim 0.7s forwards;
+    animation-delay: 2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-boost__graphic-power .six-power__graphic.helio {
+    animation: graphic-width-90-anim 1s forwards;
+    animation-delay: 3.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-boost__graphic-power .six-power__graphic.snap {
+    animation: graphic-width-40-anim 1s forwards;
+    animation-delay: 3.4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-boost__graphic-power .six-power__number {
+    animation: text-opacity-anim 1s forwards;
+    animation-delay: 3.6s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .six-graphic-power__graphic.helio {
+    width: 0; }
+  .realme-6 .six-graphic-power__graphic.snap {
+    width: 0; }
+  .realme-6 .six-boost__power {
+    margin-bottom: 60px;
+    padding-left: 50px; }
+  .realme-6 .six-boost__graphic-power {
+    padding-left: 50px; }
+  .realme-6 .six-power__name,
+  .realme-6 .six-graphic__name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #fff;
+    margin-bottom: 12px;
+    opacity: 0; }
+  .realme-6 .six-power__graphic-item,
+  .realme-6 .six-graphic-power__graphic-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px; }
+  .realme-6 .six-power__graphic {
+    background: linear-gradient(270deg, #bdc1ff 1.89%, #2539fb 100%);
+    margin-right: 16px;
+    height: 8px; }
+  .realme-6 .six-graphic-power__graphic-item .six-power__graphic {
+    background: linear-gradient(90deg, #9fb5ff 0%, #e7fff8 100%); }
+  .realme-6 .six-power__number {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #fff;
+    opacity: 0; }
+  .realme-6 .six-boost__description-content {
+    padding-top: 40px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto; }
+  .realme-6 .six-boost__description-title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    color: #fff;
+    margin-bottom: 14px;
+    opacity: 0; }
+  .realme-6 .six-boost__description-subtitle {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+    color: #fff;
+    margin-bottom: 24px;
+    opacity: 0; }
+  .realme-6 .six-boost__description-text {
+    font-size: 20px;
+    line-height: 32px;
+    color: #fff;
+    padding-bottom: 80px;
+    opacity: 0; }
+  .realme-6 .six-boost__description-image-container {
+    display: flex;
+    max-width: 770px;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+    opacity: 0; }
+  .realme-6 .six-boost__description-list {
+    display: flex;
+    flex-direction: column;
+    padding-top: 95px; }
+  .realme-6 .six-boost__description-item {
+    max-width: 200px;
+    width: 100%;
+    color: #fff; }
+  .realme-6 .six-boost__description-item:nth-child(1) {
+    margin-bottom: 24px; }
+  .realme-6 .six-boost__description-item-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 10px;
+    color: #fff;
+    position: relative; }
+  .realme-6 .six-boost__description-item-title:after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 19px;
+    background: url("https://i.citrus.ua/uploads/promo/realme/realme-6/boost/arrow-icon.svg") center/100% 100% no-repeat;
+    top: 6px;
+    left: 50px; }
+  .realme-6 .six-boost__description-item-subtitle {
+    font-size: 20px;
+    line-height: 23px;
+    color: #fff; }
+  .realme-6 .anim .six-boost__description-title {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-boost__description-subtitle {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-boost__description-text {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .6s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-boost__description-image-container {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .8s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  @media screen and (max-width: 1365px) {
+    .realme-6 .six-boost__description-container {
+      padding: 0 24px; } }
+  @media screen and (max-width: 1023px) {
+    .realme-6 .six-boost__title,
+    .realme-6 .six-graphic__title {
+      font-size: 24px;
+      line-height: 28px; }
+    .realme-6 .six-boost__description-content {
+      padding-top: 60px; }
+    .realme-6 .six-boost__description-title {
+      font-size: 36px;
+      line-height: 42px; }
+    .realme-6 .six-boost__description-subtitle {
+      font-size: 24px;
+      line-height: 28px; }
+    .realme-6 .six-boost__description-text {
+      font-size: 16px;
+      line-height: 26px;
+      padding-bottom: 60px; }
+    .realme-6 .six-power__name,
+    .realme-6 .six-graphic__name {
+      font-size: 16px;
+      line-height: 19px; }
+    .realme-6 .six-power__number {
+      font-size: 16px;
+      line-height: 19px; }
+    .realme-6 .six-boost__description-list {
+      padding-top: 60px; }
+    .realme-6 .six-boost__description-item-title {
+      font-size: 22px;
+      line-height: 26px; }
+    .realme-6 .six-boost__description-item-title:after {
+      width: 13px;
+      height: 16px;
+      top: 5px;
+      left: 50px; }
+    .realme-6 .six-boost__description-item-subtitle {
+      font-size: 16px;
+      line-height: 19px; }
+    .realme-6 .six-boost__description-image {
+      max-width: 390px; } }
+  @media screen and (max-width: 670px) {
+    .realme-6 .six-boost__description-container {
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column; }
+    .realme-6 .six-boost__description-content {
+      padding: 40px 0 0 0; }
+    .realme-6 .six-boost__power,
+    .realme-6 .six-boost__graphic-power {
+      padding-left: 30px;
+      padding-right: 10px; }
+    .realme-6 .six-power__graphic-item,
+    .realme-6 .six-graphic-power__graphic-item {
+      margin-bottom: 8px;
+      align-items: initial; }
+    .realme-6 .six-boost__title,
+    .realme-6 .six-graphic__title {
+      font-size: 16px;
+      line-height: 19px; }
+    .realme-6 .six-boost__description-title {
+      font-size: 24px;
+      line-height: 32px; }
+    .realme-6 .six-boost__description-subtitle {
+      font-size: 18px;
+      line-height: 21px; }
+    .realme-6 .six-boost__description-text {
+      font-size: 12px;
+      line-height: 22px;
+      padding-bottom: 40px; }
+    .realme-6 .six-power__name,
+    .realme-6 .six-graphic__name {
+      font-size: 12px;
+      line-height: 14px; }
+    .realme-6 .six-power__number {
+      font-size: 10px;
+      line-height: 9px; }
+    .realme-6 .six-boost__description-image-container {
+      flex-direction: column;
+      padding: 0 16px; }
+    .realme-6 .six-boost__description-item {
+      max-width: 150px;
+      text-align: center; }
+    .realme-6 .six-boost__description-list {
+      padding-top: 0;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 40px; }
+    .realme-6 .six-boost__description-item-title {
+      font-size: 14px;
+      line-height: 18px; }
+    .realme-6 .six-boost__description-item-title:after {
+      width: 10px;
+      height: 12px;
+      top: 3px;
+      left: 88px; }
+    .realme-6 .six-boost__description-item-subtitle {
+      font-size: 12px;
+      line-height: 14px; }
+    .realme-6 .six-boost__description-image {
+      max-width: 100%; }
+    .realme-6 .anim .six-boost__title {
+      opacity: 1;
+      animation: none; }
+    .realme-6 .anim .six-boost__power .six-power__name {
+      opacity: 1;
+      animation: none; }
+    .realme-6 .anim .six-boost__power .six-power__graphic.helio {
+      width: 90%;
+      animation: none; }
+    .realme-6 .anim .six-boost__power .six-power__graphic.snap {
+      width: 40%;
+      animation: none; }
+    .realme-6 .anim .six-boost__power .six-power__number {
+      opacity: 1;
+      animation: none; }
+    .realme-6 .anim .six-graphic__title {
+      opacity: 1;
+      animation: none; }
+    .realme-6 .anim .six-boost__graphic-power .six-graphic__name {
+      opacity: 1;
+      animation: none; }
+    .realme-6 .anim .six-boost__graphic-power .six-power__title {
+      opacity: 1;
+      animation: none; }
+    .realme-6 .anim .six-boost__graphic-power .six-power__graphic.helio {
+      width: 90%;
+      animation: none; }
+    .realme-6 .anim .six-boost__graphic-power .six-power__graphic.snap {
+      width: 40%;
+      animation: none; }
+    .realme-6 .anim .six-boost__graphic-power .six-power__number {
+      opacity: 1;
+      animation: none; }
+    .realme-6 .anim .six-boost__description-title,
+    .realme-6 .anim .six-boost__description-subtitle,
+    .realme-6 .anim .six-boost__description-text,
+    .realme-6 .anim .six-boost__description-image-container {
+      animation: none;
+      opacity: 1; } }
+  .realme-6 .six-charge {
+    background: linear-gradient(180deg, #c1dafa -53.21%, #404bc8 109.2%); }
+  .realme-6 .six-charge__container {
+    max-width: 900px;
+    width: 100%;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto; }
+  .realme-6 .six-charge__image {
+    margin-right: 95px;
+    opacity: 0; }
+  .realme-6 .six-charge__content {
+    padding-top: 100px;
+    max-width: 540px;
+    width: 100%; }
+  .realme-6 .six-charge__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    color: #fff;
+    margin-bottom: 14px;
+    opacity: 0; }
+  .realme-6 .six-charge__subtitle {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+    color: #fff;
+    margin-bottom: 24px;
+    opacity: 0; }
+  .realme-6 .six-charge__text {
+    font-size: 20px;
+    line-height: 32px;
+    color: #fff;
+    margin-bottom: 32px;
+    opacity: 0; }
+  .realme-6 .six-charge__list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    width: 100%; }
+  .realme-6 .six-charge__item {
+    max-width: 160px;
+    width: 100%;
+    color: #fff;
+    opacity: 0; }
+  .realme-6 .six-charge__item-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 10px;
+    color: #fff; }
+  .realme-6 .six-charge__item-subtitle {
+    font-size: 20px;
+    line-height: 23px;
+    color: #fff; }
+  .realme-6 .anim .six-charge__image {
+    animation: text-left-slide-anim 1s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-charge__title {
+    animation: text-right-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-charge__subtitle {
+    animation: text-right-slide-anim 1s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-charge__text {
+    animation: text-right-slide-anim 1s forwards;
+    animation-delay: .6s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-charge__item:nth-child(1) {
+    animation: text-right-slide-anim 1s forwards;
+    animation-delay: 1.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-charge__item:nth-child(2) {
+    animation: text-right-slide-anim 1s forwards;
+    animation-delay: 1.4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  @media screen and (max-width: 1023px) {
+    .realme-6 .six-charge__container {
+      max-width: 900px;
+      justify-content: space-evenly;
+      width: 100%;
+      padding: 100px 24px 0 24px; }
+    .realme-6 .six-charge__image {
+      margin-right: 0;
+      max-width: 210px; }
+    .realme-6 .six-charge__content {
+      padding-top: 0;
+      max-width: 330px;
+      width: 100%; }
+    .realme-6 .six-charge__title {
+      font-size: 36px;
+      line-height: 42px; }
+    .realme-6 .six-charge__subtitle {
+      font-size: 24px;
+      line-height: 28px; }
+    .realme-6 .six-charge__text {
+      font-size: 16px;
+      line-height: 26px; }
+    .realme-6 .six-charge__item-title {
+      font-size: 22px;
+      line-height: 26px; }
+    .realme-6 .six-charge__item-subtitle {
+      font-size: 16px;
+      line-height: 19px; } }
+  @media screen and (max-width: 767px) {
+    .realme-6 .six-charge__container {
+      max-width: 900px;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 0 16px; }
+    .realme-6 .six-charge__image {
+      order: 2;
+      margin-right: 0;
+      max-width: 210px; }
+    .realme-6 .six-charge__content {
+      order: 1;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      max-width: initial;
+      width: 100%;
+      text-align: center; }
+    .realme-6 .six-charge__title {
+      font-size: 24px;
+      line-height: 32px; }
+    .realme-6 .six-charge__subtitle {
+      font-size: 18px;
+      line-height: 21px; }
+    .realme-6 .six-charge__text {
+      font-size: 12px;
+      line-height: 22px; }
+    .realme-6 .six-charge__list {
+      margin: 0 auto; }
+    .realme-6 .six-charge__item-title {
+      font-size: 14px;
+      line-height: 18px; }
+    .realme-6 .six-charge__item-subtitle {
+      font-size: 12px;
+      line-height: 14px; }
+    .realme-6 .anim .six-charge__image,
+    .realme-6 .anim .six-charge__title,
+    .realme-6 .anim .six-charge__subtitle,
+    .realme-6 .anim .six-charge__text,
+    .realme-6 .anim .six-charge__item:nth-child(1),
+    .realme-6 .anim .six-charge__item:nth-child(2) {
+      animation: none;
+      opacity: 1; } }
+  .realme-6 .six-design {
+    background: #ffffff; }
+  .realme-6 .six-design__content {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto; }
+  .realme-6 .six-design__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 14px;
+    opacity: 0; }
+  .realme-6 .six-design__subtitle {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 24px;
+    opacity: 0; }
+  .realme-6 .six-design__text {
+    font-size: 20px;
+    line-height: 32px;
+    color: rgba(0, 0, 0, 0.87);
+    opacity: 0; }
+  .realme-6 .six-design__image {
+    display: flex;
+    margin: 0 auto;
+    opacity: 0; }
+  .realme-6 .anim .six-design__title {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-design__subtitle {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-design__text {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .6s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-design__image {
+    animation: text-bottom-slide-anim 1s forwards;
+    animation-delay: .8s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  @media screen and (max-width: 1365px) {
+    .realme-6 .six-design__container {
+      padding: 0 24px; } }
+  @media screen and (max-width: 1023px) {
+    .realme-6 .six-design__content {
+      padding-top: 60px; }
+    .realme-6 .six-design__title {
+      font-size: 36px;
+      line-height: 42px; }
+    .realme-6 .six-design__subtitle {
+      font-size: 24px;
+      line-height: 28px; }
+    .realme-6 .six-design__text {
+      font-size: 16px;
+      line-height: 26px;
+      padding-bottom: 60px; } }
+  @media screen and (max-width: 530px) {
+    .realme-6 .six-design__container {
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column; }
+    .realme-6 .six-design__content {
+      padding: 40px 0 0 0; }
+    .realme-6 .six-design__title {
+      font-size: 24px;
+      line-height: 32px; }
+    .realme-6 .six-design__subtitle {
+      font-size: 18px;
+      line-height: 21px; }
+    .realme-6 .six-design__text {
+      font-size: 12px;
+      line-height: 22px;
+      padding-bottom: 40px; }
+    .realme-6 .anim .six-design__title,
+    .realme-6 .anim .six-design__subtitle,
+    .realme-6 .anim .six-design__text,
+    .realme-6 .anim .six-design__image {
+      animation: none;
+      opacity: 1; } }
+  .realme-6 .six-image {
+    display: flex; }
+  .realme-6 .six-finger {
+    background: url("https://i.citrus.ua/uploads/promo/realme/realme-6/finger/finger-print-bg.png") center no-repeat; }
+  .realme-6 .six-finger__content {
+    max-width: 540px;
+    width: 100%;
+    padding: 160px 0 160px 136px; }
+  .realme-6 .six-finger__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 14px;
+    opacity: 0; }
+  .realme-6 .six-finger__subtitle {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 24px;
+    opacity: 0; }
+  .realme-6 .six-finger__text {
+    font-size: 20px;
+    line-height: 32px;
+    color: rgba(0, 0, 0, 0.87);
+    opacity: 0; }
+  .realme-6 .anim .six-finger__title {
+    animation: text-left-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-finger__subtitle {
+    animation: text-left-slide-anim 1s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .realme-6 .anim .six-finger__text {
+    animation: text-left-slide-anim 1s forwards;
+    animation-delay: .8s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  @media screen and (max-width: 1365px) {
+    .realme-6 .six-finger__content {
+      max-width: 460px;
+      width: 100%;
+      padding: 130px 0 130px 24px; } }
+  @media screen and (max-width: 1023px) {
+    .realme-6 .six-finger__content {
+      max-width: 340px;
+      width: 100%;
+      padding: 70px 0 70px 24px; }
+    .realme-6 .six-finger__title {
+      font-size: 36px;
+      line-height: 42px; }
+    .realme-6 .six-finger__subtitle {
+      font-size: 24px;
+      line-height: 28px; }
+    .realme-6 .six-finger__text {
+      font-size: 16px;
+      line-height: 26px; } }
+  @media screen and (max-width: 767px) {
+    .realme-6 .six-finger {
+      background: url("https://i.citrus.ua/uploads/promo/realme/realme-6/finger/finger-print-bg-mobile-3.png") center no-repeat; }
+    .realme-6 .six-finger__content {
+      max-width: 220px;
+      width: 100%;
+      padding: 40px 0 40px 16px; }
+    .realme-6 .six-finger__title {
+      font-size: 24px;
+      line-height: 32px; }
+    .realme-6 .six-finger__subtitle {
+      font-size: 18px;
+      line-height: 21px; }
+    .realme-6 .six-finger__text {
+      font-size: 12px;
+      line-height: 22px; }
+    .realme-6 .anim .six-finger__title,
+    .realme-6 .anim .six-finger__subtitle,
+    .realme-6 .anim .six-finger__text {
+      animation: none;
+      opacity: 1; } }
+  @media screen and (max-width: 505px) {
+    .realme-6 .six-finger {
+      background: url("https://i.citrus.ua/uploads/promo/realme/realme-6/finger/finger-print-bg-mobile-3.png") center left -255px no-repeat; } }
+
+/*# sourceMappingURL=style.css.map */

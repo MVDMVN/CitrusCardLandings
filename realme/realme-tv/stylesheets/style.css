@@ -1,0 +1,1539 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: 0; }
+
+ul {
+  margin: 0;
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  color: transparent; }
+
+form select,
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding: 0 0 0 12px;
+  background-color: #ffffff; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3b6d9a;
+  outline: none;
+  transition: 0.3s; }
+
+.btn,
+button {
+  display: block;
+  background: 0 0;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  line-height: 44px;
+  transition: 0.3s;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-size: 18px; }
+
+.base-padding {
+  padding: 0; }
+
+.realme-tv .tv-header {
+  background-color: #fff;
+  display: flex; }
+.realme-tv .tv-header__container {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center; }
+.realme-tv .tv-header__container picture {
+  display: flex;
+  justify-content: center; }
+.realme-tv .tv-advantages {
+  padding-top: 80px;
+  padding-bottom: 65px;
+  background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/advantages/advantages-bg.png") no-repeat center; }
+.realme-tv .tv-advantages__list {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+.realme-tv .tv-advantages__item {
+  position: relative;
+  max-width: 423px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+.realme-tv .tv-advantages__item:nth-child(-n + 3) {
+  margin-bottom: 24px; }
+.realme-tv .tv-advantages__item:not(:nth-child(3n + 3)) {
+  margin-right: 24px; }
+.realme-tv .tv-advantages__text {
+  position: absolute;
+  bottom: 12px;
+  text-align: center;
+  max-width: 363px; }
+.realme-tv .tv-advantages__text p {
+  color: #fff;
+  font-size: 18px; }
+@media screen and (max-width: 1365px) {
+  .realme-tv .tv-advantages__list {
+    max-width: 940px; }
+  .realme-tv .tv-advantages__item {
+    max-width: 297px; }
+  .realme-tv .tv-advantages__text {
+    bottom: 7px;
+    max-width: 225px; }
+  .realme-tv .tv-advantages__text p {
+    font-size: 14px; } }
+@media screen and (max-width: 1023px) {
+  .realme-tv .tv-advantages__list {
+    max-width: 690px; }
+  .realme-tv .tv-advantages__item {
+    max-width: 212px; }
+  .realme-tv .tv-advantages__text {
+    bottom: 4px;
+    max-width: 160px; }
+  .realme-tv .tv-advantages__text p {
+    font-size: 10px; } }
+@media screen and (max-width: 720px) {
+  .realme-tv .tv-advantages {
+    padding-top: 40px;
+    padding-bottom: 40px; }
+  .realme-tv .tv-advantages__item {
+    max-width: 212px; }
+  .realme-tv .tv-advantages__item:not(:nth-child(3n + 3)) {
+    margin-right: 0; } }
+@media screen and (max-width: 475px) {
+  .realme-tv .tv-advantages__list {
+    max-width: 600px;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .realme-tv .tv-advantages__item {
+    max-width: initial;
+    min-height: 140px;
+    flex-basis: 45%;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #000;
+    margin-bottom: 24px; }
+  .realme-tv .tv-advantages__item:nth-child(-n + 3) {
+    margin-bottom: 24px; }
+  .realme-tv .tv-advantages__item:not(:nth-child(3n + 3)) {
+    margin-right: 0; }
+  .realme-tv .tv-advantages__item:not(:nth-child(2n + 2)) {
+    margin-right: 16px; }
+  .realme-tv .tv-advantages__text {
+    position: initial;
+    height: 40px;
+    align-items: center;
+    display: flex; } }
+.realme-tv .tv-video__container {
+  max-width: 1366px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; }
+.realme-tv .tv-video__image-container {
+  position: relative; }
+.realme-tv .tv-video__image-container:before {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  width: 63px;
+  height: 63px;
+  background: url(https://i.citrus.ua/uploads/promo/realme/tv-card/video/play.svg);
+  top: 50%;
+  right: 50%;
+  transform: translateY(-50%) translateX(50%);
+  pointer-events: none;
+  transition: background 0.3s ease-in; }
+.realme-tv .tv-video__image-container:hover:before {
+  background: url(https://i.citrus.ua/uploads/promo/realme/tv-card/video/play-hover.svg); }
+.realme-tv .tv-video__image {
+  display: flex;
+  cursor: pointer; }
+.realme-tv .tv-video__container iframe {
+  min-height: 600px;
+  width: 100%;
+  margin-bottom: 80px; }
+@media screen and (max-width: 1365px) {
+  .realme-tv .tv-video__container iframe {
+    margin-bottom: 60px; } }
+@media screen and (max-width: 1023px) {
+  .realme-tv .tv-video__container iframe {
+    margin-bottom: 40px; } }
+@media screen and (max-width: 767px) {
+  .realme-tv .tv-video__container iframe {
+    margin-bottom: 40px;
+    max-height: 300px;
+    min-height: 250px; } }
+.realme-tv .tv-blockquote {
+  background: #111111;
+  padding: 120px 0; }
+.realme-tv .tv-blockquote__text {
+  text-align: center;
+  font-weight: 500;
+  font-size: 66px;
+  line-height: 77px;
+  background: linear-gradient(270deg, #50da41 0, #a2d323 47%, #ffcc01 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+@media screen and (max-width: 1365px) {
+  .realme-tv .tv-blockquote {
+    padding: 100px 0; }
+  .realme-tv .tv-blockquote__text {
+    font-size: 46px;
+    line-height: 154%; } }
+@media screen and (max-width: 1023px) {
+  .realme-tv .tv-blockquote {
+    padding: 60px 0; }
+  .realme-tv .tv-blockquote__text {
+    font-size: 36px;
+    line-height: 142%; } }
+@media screen and (max-width: 767px) {
+  .realme-tv .tv-blockquote__text {
+    font-size: 34px;
+    line-height: 140%; } }
+.realme-tv .tv-display {
+  background: #111111;
+  padding: 0 24px; }
+.realme-tv .tv-display__container {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto; }
+.realme-tv .tv-display__header-container {
+  max-width: 1092px;
+  width: 100%;
+  margin: 0 auto 60px auto; }
+.realme-tv .tv-display__header-text {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 65px;
+  color: #fff; }
+.realme-tv .tv-display__image {
+  margin-bottom: 30px; }
+.realme-tv .tv-display__description-container {
+  max-width: 1092px;
+  width: 100%;
+  margin: 0 auto; }
+.realme-tv .tv-display__advantages-list {
+  display: flex;
+  color: #fff;
+  margin-bottom: 40px; }
+.realme-tv .tv-display__advantages-item {
+  font-weight: 500;
+  font-size: 22px;
+  position: relative;
+  padding-left: 36px;
+  color: #fff; }
+.realme-tv .tv-display__advantages-item:not(:last-child) {
+  margin-right: 26px; }
+.realme-tv .tv-display__advantages-item:before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  left: 0;
+  top: -3px; }
+.realme-tv .tv-display__advantages-item.brightness:before {
+  background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/display/icons/brightness.svg") center/100% 100% no-repeat; }
+.realme-tv .tv-display__advantages-item.color:before {
+  background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/display/icons/color.svg") center/100% 100% no-repeat; }
+.realme-tv .tv-display__advantages-item.contrast:before {
+  background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/display/icons/contrast.svg") center/100% 100% no-repeat; }
+.realme-tv .tv-display__advantages-item.purity:before {
+  background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/display/icons/purity.svg") center/100% 100% no-repeat; }
+.realme-tv .tv-display__advantages-item.clarity:before {
+  background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/display/icons/clarity.svg") center/100% 100% no-repeat; }
+.realme-tv .tv-display__description {
+  color: #fff;
+  font-size: 18px;
+  line-height: 36px;
+  padding-bottom: 24px; }
+@media screen and (max-width: 1365px) {
+  .realme-tv .tv-display {
+    padding: 0 24px; }
+  .realme-tv .tv-display__header-container {
+    margin: 0 auto 30px auto; }
+  .realme-tv .tv-display__header-text {
+    font-size: 38px;
+    line-height: 50px; }
+  .realme-tv .tv-display__advantages-item {
+    font-size: 16px;
+    line-height: 18px;
+    padding-left: 30px; }
+  .realme-tv .tv-display__advantages-item:before {
+    width: 24px;
+    height: 24px;
+    left: 0;
+    top: -3px; }
+  .realme-tv .tv-display__advantages-item:not(:last-child) {
+    margin-right: 18px; }
+  .realme-tv .tv-display__description {
+    font-size: 14px;
+    line-height: 26px; } }
+@media screen and (max-width: 1023px) {
+  .realme-tv .tv-display {
+    padding: 0 24px; }
+  .realme-tv .tv-display__header-text {
+    font-size: 36px; }
+  .realme-tv .tv-display__advantages-item {
+    font-size: 15px;
+    padding-left: 30px; }
+  .realme-tv .tv-display__advantages-item:before {
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: -2px; }
+  .realme-tv .tv-display__advantages-item:not(:last-child) {
+    margin-right: 16px; }
+  .realme-tv .tv-display__description {
+    line-height: 24px; } }
+@media screen and (max-width: 767px) {
+  .realme-tv .tv-display {
+    padding: 0; }
+  .realme-tv .tv-display__header-container {
+    margin: 0 auto 24px auto;
+    padding: 0 16px; }
+  .realme-tv .tv-display__header-text {
+    font-size: 24px;
+    line-height: 40px; }
+  .realme-tv .tv-display__description-container {
+    padding: 0 16px; }
+  .realme-tv .tv-display__advantages-list {
+    flex-wrap: wrap; }
+  .realme-tv .tv-display__advantages-item {
+    font-size: 16px;
+    padding-left: 25px;
+    max-width: 84px; }
+  .realme-tv .tv-display__advantages-item:nth-child(1) {
+    margin-bottom: 10px; }
+  .realme-tv .tv-display__advantages-item:before {
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: -2px; }
+  .realme-tv .tv-display__advantages-item:not(:last-child) {
+    margin-right: 16px; }
+  .realme-tv .tv-display__description {
+    font-size: 12px;
+    line-height: 22px; } }
+.realme-tv .tv-processor {
+  background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/processor/processor-bg-desc.png") no-repeat top 0 center; }
+.realme-tv .tv-processor__mobile-image {
+  display: none; }
+.realme-tv .tv-processor__content {
+  max-width: 779px;
+  padding-left: 136px;
+  padding-top: 225px;
+  padding-bottom: 204px; }
+.realme-tv .tv-processor__title {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 65px;
+  color: #fff;
+  margin-bottom: 40px; }
+.realme-tv .tv-processor__text {
+  font-size: 18px;
+  line-height: 36px;
+  color: #fff; }
+.realme-tv .tv-processor__accent {
+  color: #ffc915; }
+@media screen and (max-width: 1365px) {
+  .realme-tv .tv-processor {
+    background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/processor/processor-bg-1024-gradient.png") no-repeat top 0 center, #000000; }
+  .realme-tv .tv-processor__content {
+    max-width: 530px;
+    padding-left: 24px;
+    padding-top: 143px;
+    padding-bottom: 143px; }
+  .realme-tv .tv-processor__title {
+    font-size: 36px;
+    line-height: 50px;
+    margin-bottom: 30px; }
+  .realme-tv .tv-processor__text {
+    font-size: 14px;
+    line-height: 26px; } }
+@media screen and (max-width: 1023px) {
+  .realme-tv .tv-processor {
+    background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/processor/processor-bg-768-gradient.png") no-repeat top 0 center, #000000; }
+  .realme-tv .tv-processor__content {
+    max-width: 440px;
+    padding-left: 24px;
+    padding-top: 30px;
+    padding-bottom: 30px; }
+  .realme-tv .tv-processor__title {
+    font-size: 32px; }
+  .realme-tv .tv-processor__text {
+    font-size: 14px;
+    line-height: 22px; } }
+@media screen and (max-width: 767px) {
+  .realme-tv .tv-processor {
+    background: #000000; }
+  .realme-tv .tv-processor__mobile-image {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px; }
+  .realme-tv .tv-processor__content {
+    max-width: 440px;
+    padding: 0 16px 40px; }
+  .realme-tv .tv-processor__title {
+    font-size: 24px;
+    line-height: 40px; }
+  .realme-tv .tv-processor__text {
+    font-size: 12px;
+    line-height: 24px; } }
+.realme-tv .tv-hdr {
+  background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/hdr/hdr-bg-desc.png") center top no-repeat; }
+.realme-tv .tv-hdr__container {
+  max-width: 1092px;
+  margin: 0 auto;
+  padding: 55px 24px 32px 24px; }
+.realme-tv .tv-hdr__top-content {
+  display: flex;
+  padding-bottom: 190px; }
+.realme-tv .tv-hdr__title {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 65px;
+  color: #fff; }
+.realme-tv .tv-hdr__text {
+  font-size: 18px;
+  line-height: 36px;
+  color: #fff; }
+.realme-tv .tv-hdr__bottom-content {
+  display: flex;
+  justify-content: space-between; }
+.realme-tv .tv-hdr__after,
+.realme-tv .tv-hdr__before {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #fff; }
+@media screen and (max-width: 1365px) {
+  .realme-tv .tv-hdr__top-content {
+    padding-bottom: 142px; }
+  .realme-tv .tv-hdr__title {
+    font-size: 38px;
+    line-height: 50px; }
+  .realme-tv .tv-hdr__text {
+    font-size: 14px;
+    line-height: 26px; }
+  .realme-tv .tv-hdr__bottom-content {
+    justify-content: space-between; }
+  .realme-tv .tv-hdr__after,
+  .realme-tv .tv-hdr__before {
+    font-size: 16px;
+    line-height: 19px; } }
+@media screen and (max-width: 1023px) {
+  .realme-tv .tv-hdr__top-content {
+    padding-bottom: 60px; }
+  .realme-tv .tv-hdr__title {
+    font-size: 36px;
+    line-height: 50px; }
+  .realme-tv .tv-hdr__text {
+    font-size: 14px;
+    line-height: 24px; }
+  .realme-tv .tv-hdr__after,
+  .realme-tv .tv-hdr__before {
+    font-size: 14px;
+    line-height: 16px; } }
+@media screen and (max-width: 767px) {
+  .realme-tv .tv-hdr__container {
+    padding: 40px 16px 12px 16px; }
+  .realme-tv .tv-hdr__top-content {
+    flex-direction: column;
+    padding-bottom: 140px; }
+  .realme-tv .tv-hdr__title {
+    margin-bottom: 20px; } }
+.realme-tv .tv-frameless__container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 55px 0 32px 0;
+  display: flex;
+  justify-content: space-between; }
+.realme-tv .tv-frameless__title {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 65px;
+  margin-right: 110px; }
+.realme-tv .tv-frameless__content {
+  font-size: 18px;
+  line-height: 36px; }
+.realme-tv .tv-frameless__image {
+  display: flex; }
+@media screen and (max-width: 1365px) {
+  .realme-tv .tv-frameless__container {
+    padding: 90px 24px 32px 24px; }
+  .realme-tv .tv-frameless__title {
+    font-size: 38px;
+    line-height: 50px;
+    margin-right: 110px; }
+  .realme-tv .tv-frameless__content {
+    font-size: 14px;
+    line-height: 26px; } }
+@media screen and (max-width: 1023px) {
+  .realme-tv .tv-frameless__container {
+    padding: 60px 24px 32px 24px; }
+  .realme-tv .tv-frameless__title {
+    font-size: 36px;
+    line-height: 50px;
+    margin-right: 110px; }
+  .realme-tv .tv-frameless__content {
+    font-size: 14px;
+    line-height: 24px; } }
+@media screen and (max-width: 767px) {
+  .realme-tv .tv-frameless__container {
+    padding: 40px 16px 20px 16px;
+    flex-direction: column; }
+  .realme-tv .tv-frameless__title {
+    font-size: 24px;
+    line-height: 40px;
+    margin-right: 0;
+    margin-bottom: 20px; }
+  .realme-tv .tv-frameless__content {
+    font-size: 12px;
+    line-height: 22px; } }
+.realme-tv .tv__sound {
+  background-color: #000;
+  padding-top: 120px; }
+.realme-tv .tv-sound__title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 66px;
+  line-height: 77px;
+  background: linear-gradient(270deg, #177493 0, #4bb994 53%, #d3ddde 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 120px; }
+.realme-tv .tv-sound__blockquote {
+  padding: 0 16px; }
+@media screen and (max-width: 1365px) {
+  .realme-tv .tv__sound {
+    padding-top: 100px; }
+  .realme-tv .tv-sound__title {
+    font-size: 46px;
+    line-height: 54px;
+    margin-bottom: 100px; } }
+@media screen and (max-width: 1023px) {
+  .realme-tv .tv__sound {
+    padding-top: 60px; }
+  .realme-tv .tv-sound__title {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 60px; } }
+@media screen and (max-width: 767px) {
+  .realme-tv .tv-sound__title {
+    font-size: 34px;
+    line-height: 40px; } }
+.realme-tv .speakers__container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 0 32px 0;
+  display: flex;
+  justify-content: space-between; }
+.realme-tv .speakers__title {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 65px;
+  color: #fff;
+  width: 100%;
+  max-width: 647px; }
+.realme-tv .speakers__text {
+  font-size: 18px;
+  line-height: 36px;
+  color: #fff;
+  max-width: 423px; }
+.realme-tv .tv-speakers__image--mob {
+  display: none; }
+@media screen and (max-width: 1365px) {
+  .realme-tv .speakers__container {
+    padding: 0 24px 32px 24px; }
+  .realme-tv .speakers__title {
+    font-size: 38px;
+    line-height: 50px;
+    max-width: 545px; }
+  .realme-tv .speakers__text {
+    font-size: 14px;
+    line-height: 26px; } }
+@media screen and (max-width: 1023px) {
+  .realme-tv .speakers__container {
+    padding: 0 24px 32px 24px; }
+  .realme-tv .speakers__title {
+    font-size: 36px;
+    line-height: 50px;
+    max-width: 320px;
+    margin-right: 80px; }
+  .realme-tv .speakers__text {
+    font-size: 14px;
+    line-height: 24px; } }
+@media screen and (max-width: 767px) {
+  .realme-tv .speakers__container {
+    padding: 0 16px 20px 16px;
+    flex-direction: column; }
+  .realme-tv .speakers__title {
+    font-size: 24px;
+    line-height: 40px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    max-width: initial; }
+  .realme-tv .speakers__text {
+    font-size: 12px;
+    line-height: 22px;
+    max-width: initial; }
+  .realme-tv .tv-speakers__image {
+    display: none; }
+  .realme-tv .tv-speakers__image--mob {
+    display: block;
+    margin: 0 auto; } }
+.realme-tv .tv-sound__dolby {
+  background-color: #0d0b0c; }
+.realme-tv .dolby__container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 55px 0 32px 0;
+  display: flex;
+  justify-content: space-between; }
+.realme-tv .dolby__title {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 65px;
+  color: #fff;
+  width: 100%;
+  max-width: 560px; }
+.realme-tv .dolby__text {
+  font-size: 18px;
+  line-height: 36px;
+  color: #fff;
+  max-width: 511px; }
+.realme-tv .tv-dolby__image-mobile {
+  display: none; }
+@media screen and (max-width: 1365px) {
+  .realme-tv .dolby__container {
+    padding: 80px 24px 32px 24px; }
+  .realme-tv .dolby__title {
+    font-size: 38px;
+    line-height: 50px;
+    max-width: 410px;
+    margin-right: 24px; }
+  .realme-tv .dolby__text {
+    font-size: 14px;
+    line-height: 26px;
+    max-width: 506px; } }
+@media screen and (max-width: 1023px) {
+  .realme-tv .dolby__container {
+    padding: 60px 24px 32px 24px; }
+  .realme-tv .dolby__title {
+    font-size: 36px;
+    line-height: 50px;
+    max-width: 380px;
+    margin-right: 40px; }
+  .realme-tv .dolby__text {
+    font-size: 14px;
+    line-height: 24px; } }
+@media screen and (max-width: 767px) {
+  .realme-tv .dolby__container {
+    padding: 40px 16px 20px 16px;
+    flex-direction: column; }
+  .realme-tv .dolby__title {
+    font-size: 24px;
+    line-height: 40px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    max-width: initial; }
+  .realme-tv .dolby__text {
+    font-size: 12px;
+    line-height: 22px;
+    max-width: initial; }
+  .realme-tv .tv-dolby__image {
+    display: none; }
+  .realme-tv .tv-dolby__image-mobile {
+    display: flex;
+    width: 100%; } }
+.realme-tv .tv-opportunities {
+  background: #fff;
+  padding-top: 120px; }
+.realme-tv .tv-opportunities__title {
+  background: -webkit-gradient(linear, left top, right top, from(#91d9ff), to(#5868fd));
+  background: -webkit-linear-gradient(left, #91d9ff 0, #5868fd 100%);
+  background: linear-gradient(90deg, #91d9ff 0, #5868fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+  font-size: 66px;
+  line-height: 77px;
+  text-align: center;
+  margin-bottom: 120px; }
+@media screen and (max-width: 1365px) {
+  .realme-tv .tv-opportunities {
+    padding-top: 100px; }
+  .realme-tv .tv-opportunities__title {
+    font-size: 46px;
+    line-height: 54px;
+    margin-bottom: 100px; } }
+@media screen and (max-width: 1023px) {
+  .realme-tv .tv-opportunities {
+    padding-top: 60px; }
+  .realme-tv .tv-opportunities__blockquoute {
+    padding: 0 16px; }
+  .realme-tv .tv-opportunities__title {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 60px; } }
+@media screen and (max-width: 1023px) {
+  .realme-tv .tv-opportunities__title {
+    font-size: 34px;
+    line-height: 40px; } }
+.realme-tv .android__container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 0 32px 0;
+  display: flex;
+  justify-content: space-between; }
+.realme-tv .android__title {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 65px;
+  color: #000;
+  width: 100%;
+  max-width: 560px; }
+.realme-tv .android__text {
+  font-size: 18px;
+  line-height: 36px;
+  color: #000;
+  max-width: 511px; }
+.realme-tv .tv-opportunities__illustration {
+  width: 100%;
+  height: 520px;
+  background-image: url("https://i.citrus.ua/uploads/promo/realme/tv-card/android/bg-image.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top center; }
+@media screen and (max-width: 1365px) {
+  .realme-tv .android__container {
+    padding: 0 24px 32px 24px; }
+  .realme-tv .android__title {
+    font-size: 38px;
+    line-height: 50px;
+    max-width: 410px;
+    margin-right: 24px; }
+  .realme-tv .android__text {
+    font-size: 14px;
+    line-height: 26px;
+    max-width: 506px; } }
+@media screen and (max-width: 1023px) {
+  .realme-tv .android__container {
+    padding: 0 24px 32px 24px; }
+  .realme-tv .android__title {
+    font-size: 36px;
+    line-height: 50px;
+    max-width: 380px;
+    margin-right: 40px; }
+  .realme-tv .android__text {
+    font-size: 14px;
+    line-height: 24px; }
+  .realme-tv .tv-opportunities__illustration {
+    width: 100%;
+    height: 375px; } }
+@media screen and (max-width: 767px) {
+  .realme-tv .android__container {
+    padding: 0 16px 20px 16px;
+    flex-direction: column; }
+  .realme-tv .android__title {
+    font-size: 24px;
+    line-height: 40px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    max-width: initial; }
+  .realme-tv .android__text {
+    font-size: 12px;
+    line-height: 22px;
+    max-width: initial; }
+  .realme-tv .tv-opportunities__illustration {
+    width: 100%;
+    height: 290px;
+    background-size: auto 80%; } }
+.realme-tv .tv-slider__swiper {
+  transition: opacity 0.6s ease; }
+.realme-tv .tv-slider__wrapper {
+  max-width: 1090px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 24px 120px 24px;
+  position: relative; }
+.realme-tv .slider__content {
+  margin-bottom: 60px; }
+.realme-tv .slider__title {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 65px;
+  color: #000;
+  margin-bottom: 40px; }
+.realme-tv .slider__text {
+  font-size: 18px;
+  line-height: 36px;
+  color: #000;
+  margin-bottom: 16px; }
+.realme-tv .slider__subtext {
+  font-size: 14px;
+  line-height: 16px;
+  color: #000;
+  mix-blend-mode: normal;
+  opacity: 0.6; }
+@media screen and (max-width: 1365px) {
+  .realme-tv .tv-slider__wrapper {
+    padding: 0 24px 35px 24px; }
+  .realme-tv .slider__content {
+    margin-bottom: 30px; }
+  .realme-tv .slider__title {
+    font-size: 38px;
+    line-height: 60px;
+    margin-bottom: 30px; }
+  .realme-tv .slider__text {
+    font-size: 14px;
+    line-height: 26px;
+    margin-bottom: 10px; }
+  .realme-tv .slider__subtext {
+    font-size: 12px;
+    line-height: 14px; }
+  .realme-tv .tv-slider__swiper {
+    max-width: 790px; } }
+@media screen and (max-width: 1023px) {
+  .realme-tv .tv-slider__wrapper {
+    padding: 0 24px 75px 24px; }
+  .realme-tv .slider__title {
+    font-size: 36px;
+    line-height: 50px;
+    margin-bottom: 50px; }
+  .realme-tv .slider__text {
+    font-size: 14px;
+    line-height: 24px; }
+  .realme-tv .tv-slider__swiper {
+    max-width: 590px; } }
+@media screen and (max-width: 767px) {
+  .realme-tv .tv-slider__wrapper {
+    padding: 0 24px 40px 24px; }
+  .realme-tv .slider__content {
+    margin-bottom: 40px; }
+  .realme-tv .slider__title {
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 20px; }
+  .realme-tv .slider__text {
+    font-size: 12px;
+    line-height: 22px;
+    margin-bottom: 10px; }
+  .realme-tv .slider__subtext {
+    font-size: 12px;
+    line-height: 14px; }
+  .realme-tv .tv-slider__swiper {
+    max-width: 790px;
+    padding: 0 8px; } }
+.realme-tv .tv-apps {
+  background-color: #f5f5f5; }
+.realme-tv .tv-apps__content {
+  max-width: 1092px;
+  margin: 0 auto;
+  padding: 120px 0 32px 0;
+  display: flex;
+  justify-content: space-between; }
+.realme-tv .tv-apps__title {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 65px;
+  color: #000;
+  max-width: 534px;
+  width: 100%; }
+.realme-tv .tv-apps__accent {
+  color: #ffc915; }
+.realme-tv .tv-apps__desc {
+  max-width: 534px; }
+.realme-tv .tv-apps__text {
+  font-size: 18px;
+  line-height: 36px;
+  color: #000;
+  margin-bottom: 16px; }
+.realme-tv .tv-apps__subtext {
+  font-size: 14px;
+  line-height: 16px;
+  color: #000;
+  mix-blend-mode: normal;
+  opacity: 0.6; }
+@media screen and (max-width: 1365px) {
+  .realme-tv .tv-apps__content {
+    padding: 80px 24px 32px 24px; }
+  .realme-tv .tv-apps__title {
+    font-size: 38px;
+    line-height: 60px;
+    max-width: 378px; }
+  .realme-tv .tv-apps__text {
+    font-size: 14px;
+    line-height: 26px;
+    margin-bottom: 10px; }
+  .realme-tv .tv-apps__subtext {
+    font-size: 12px;
+    line-height: 14px; } }
+@media screen and (max-width: 1023px) {
+  .realme-tv .tv-apps__content {
+    padding: 60px 24px 32px 24px; }
+  .realme-tv .tv-apps__title {
+    font-size: 36px;
+    line-height: 50px;
+    max-width: 300px; }
+  .realme-tv .tv-apps__text {
+    font-size: 14px;
+    line-height: 24px; } }
+@media screen and (max-width: 767px) {
+  .realme-tv .tv-slider__wrapper {
+    padding: 0 24px 40px 24px; }
+  .realme-tv .slider__content {
+    margin-bottom: 40px; }
+  .realme-tv .slider__title {
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 20px; }
+  .realme-tv .slider__text {
+    font-size: 12px;
+    line-height: 22px;
+    margin-bottom: 10px; }
+  .realme-tv .slider__subtext {
+    font-size: 12px;
+    line-height: 14px; }
+  .realme-tv .tv-slider__swiper {
+    max-width: 790px;
+    padding: 0 8px; } }
+@media screen and (max-width: 767px) {
+  .realme-tv .tv-apps__content {
+    padding: 40px 16px 20px 16px;
+    flex-direction: column; }
+  .realme-tv .tv-apps__title {
+    font-size: 24px;
+    line-height: 40px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    max-width: initial; }
+  .realme-tv .tv-apps__title br {
+    display: none; }
+  .realme-tv .tv-apps__accent {
+    margin-right: 6px; }
+  .realme-tv .tv-apps__text {
+    font-size: 12px;
+    line-height: 22px;
+    max-width: initial; }
+  .realme-tv .tv-apps__subtext {
+    font-size: 12px;
+    line-height: 14px; } }
+.realme-tv .tv-assistant {
+  display: flex; }
+.realme-tv .tv-assistant__left-content {
+  width: 50%;
+  padding: 36px 16px 36px 16px; }
+.realme-tv .tv-assistant__content {
+  max-width: 423px;
+  margin: 0 auto; }
+.realme-tv .tv-assistant__title {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 65px;
+  margin-bottom: 20px; }
+.realme-tv .tv-assistant__text {
+  font-size: 20px;
+  line-height: 32px; }
+.realme-tv .tv-assistant__right-content {
+  width: 50%;
+  display: flex; }
+.realme-tv .tv-assistant__image-mob {
+  display: none; }
+.realme-tv .tv-assistant__mob-image {
+  display: none; }
+@media screen and (max-width: 1365px) {
+  .realme-tv .tv-assistant__left-content {
+    padding: 42px 16px 42px 16px; }
+  .realme-tv .tv-assistant__title {
+    font-size: 38px;
+    line-height: 50px; }
+  .realme-tv .tv-assistant__text {
+    font-size: 14px;
+    line-height: 26px; } }
+@media screen and (max-width: 1023px) {
+  .realme-tv .tv-assistant__left-content {
+    padding: 32px 16px 32px 16px; }
+  .realme-tv .tv-assistant__title {
+    font-size: 30px;
+    line-height: 36px; }
+  .realme-tv .tv-assistant__text {
+    font-size: 14px;
+    line-height: 22px; } }
+@media screen and (max-width: 767px) {
+  .realme-tv .tv-assistant {
+    display: flex;
+    flex-direction: column; }
+  .realme-tv .tv-assistant__left-content {
+    padding: 32px 16px 32px 16px;
+    order: 2;
+    width: 100%; }
+  .realme-tv .tv-assistant__title {
+    font-size: 36px;
+    line-height: 50px; }
+  .realme-tv .tv-assistant__text {
+    font-size: 14px;
+    line-height: 26px; }
+  .realme-tv .tv-assistant__right-content {
+    order: 1;
+    width: 100%;
+    justify-content: center; }
+  .realme-tv .tv-assistant__image-desc {
+    display: none; }
+  .realme-tv .tv-assistant__image-mob {
+    display: flex;
+    max-width: 684px;
+    width: 100%;
+    height: 180px !important; }
+  .realme-tv .tv-assistant__mob-image {
+    order: 3;
+    max-width: 684px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto; } }
+.realme-tv .tv-chromecast {
+  display: flex; }
+.realme-tv .tv-chromecast__left-content {
+  width: 50%;
+  display: flex; }
+.realme-tv .tv-chromecast__content {
+  max-width: 423px;
+  margin: 0 auto; }
+.realme-tv .tv-chromecast__logo {
+  margin-bottom: 12px; }
+.realme-tv .tv-chromecast__title {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 65px;
+  margin-bottom: 20px; }
+.realme-tv .tv-chromecast__text {
+  font-size: 20px;
+  line-height: 32px; }
+.realme-tv .tv-chromecast__right-content {
+  width: 50%;
+  padding: 36px 0 36px 0; }
+.realme-tv .tv-chromecast__image-mob {
+  display: none; }
+.realme-tv .tv-chromecast__mob-image {
+  display: none; }
+@media screen and (max-width: 1365px) {
+  .realme-tv .tv-chromecast__right-content {
+    padding: 42px 16px 42px 16px; }
+  .realme-tv .tv-chromecast__title {
+    font-size: 38px;
+    line-height: 50px; }
+  .realme-tv .tv-chromecast__text {
+    font-size: 14px;
+    line-height: 26px; } }
+@media screen and (max-width: 1023px) {
+  .realme-tv .tv-chromecast__right-content {
+    padding: 32px 16px 32px 16px; }
+  .realme-tv .tv-chromecast__title {
+    font-size: 30px;
+    line-height: 36px; }
+  .realme-tv .tv-chromecast__text {
+    font-size: 14px;
+    line-height: 22px; } }
+@media screen and (max-width: 767px) {
+  .realme-tv .tv-chromecast {
+    display: flex;
+    flex-direction: column; }
+  .realme-tv .tv-chromecast__left-content {
+    width: 100%;
+    justify-content: center; }
+  .realme-tv .tv-chromecast__title {
+    font-size: 36px;
+    line-height: 50px; }
+  .realme-tv .tv-chromecast__text {
+    font-size: 14px;
+    line-height: 26px; }
+  .realme-tv .tv-chromecast__right-content {
+    padding: 32px 16px 32px 16px;
+    width: 100%; }
+  .realme-tv .tv-chromecast__image-desc {
+    display: none; }
+  .realme-tv .tv-chromecast__image-mob {
+    display: flex;
+    max-width: 684px;
+    width: 100%;
+    height: 180px !important; }
+  .realme-tv .tv-chromecast__mob-image {
+    order: 3;
+    max-width: 684px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto; } }
+.realme-tv .tv-remote {
+  display: flex; }
+.realme-tv .tv-remote__left-content {
+  width: 50%;
+  padding: 53px 0 53px 0; }
+.realme-tv .tv-remote__content {
+  max-width: 423px;
+  margin: 0 auto; }
+.realme-tv .tv-remote__title {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 65px;
+  margin-bottom: 20px; }
+.realme-tv .tv-remote__text {
+  font-size: 20px;
+  line-height: 32px; }
+.realme-tv .tv-remote__right-content {
+  width: 50%;
+  display: flex; }
+.realme-tv .tv-remote__image {
+  min-width: 470px; }
+@media screen and (max-width: 1365px) {
+  .realme-tv .tv-remote__left-content {
+    padding: 70px 16px 70px 16px; }
+  .realme-tv .tv-remote__title {
+    font-size: 38px;
+    line-height: 50px; }
+  .realme-tv .tv-remote__text {
+    font-size: 14px;
+    line-height: 26px; } }
+@media screen and (max-width: 1023px) {
+  .realme-tv .tv-remote__left-content {
+    padding: 32px 16px 32px 16px; }
+  .realme-tv .tv-remote__title {
+    font-size: 30px;
+    line-height: 36px; }
+  .realme-tv .tv-remote__text {
+    font-size: 14px;
+    line-height: 22px; } }
+@media screen and (max-width: 767px) {
+  .realme-tv .tv-remote {
+    display: flex;
+    flex-direction: column; }
+  .realme-tv .tv-remote__left-content {
+    padding: 32px 16px 32px 16px;
+    width: 100%; }
+  .realme-tv .tv-remote__title {
+    font-size: 36px;
+    line-height: 50px; }
+  .realme-tv .tv-remote__text {
+    font-size: 14px;
+    line-height: 26px; }
+  .realme-tv .tv-remote__right-content {
+    width: 100%;
+    justify-content: center; } }
+.realme-tv .tv-opportunity {
+  display: flex;
+  background-color: #151517; }
+.realme-tv .tv-opportunity__left-content {
+  width: 50%; }
+.realme-tv .tv-opportunity__right-content {
+  width: 50%;
+  padding: 36px 16px 36px 16px;
+  display: flex; }
+.realme-tv .tv-opportunity__content {
+  max-width: 458px;
+  margin: 0 auto; }
+.realme-tv .tv-opportunity__title {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 65px;
+  margin-bottom: 20px;
+  color: #fff; }
+.realme-tv .tv-opportunity__technology-list {
+  display: flex;
+  margin-bottom: 36px; }
+.realme-tv .tv-opportunity__technology-title {
+  color: #ffc915;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 26px;
+  padding-left: 70px;
+  position: relative; }
+.realme-tv .tv-opportunity__technology-title.wi-fi {
+  margin-right: 24px; }
+.realme-tv .tv-opportunity__technology-title.wi-fi:before {
+  position: absolute;
+  content: "";
+  width: 56px;
+  height: 56px;
+  left: 0;
+  top: -18px;
+  background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/technology/wi-fi-icon.svg") center/100% 100% no-repeat; }
+.realme-tv .tv-opportunity__technology-title.bluetooth:before {
+  position: absolute;
+  content: "";
+  width: 56px;
+  height: 56px;
+  left: 0;
+  top: -18px;
+  background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/technology/bluetooth-icon.svg") center/100% 100% no-repeat; }
+.realme-tv .tv-opportunity__connectors-list {
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap; }
+.realme-tv .tv-opportunity__connectors-title {
+  color: #fff;
+  font-size: 16px;
+  line-height: 22px;
+  padding-left: 24px;
+  position: relative;
+  min-width: 70px; }
+.realme-tv .tv-opportunity__connectors-title.hdmi,
+.realme-tv .tv-opportunity__connectors-title.usb {
+  padding-left: 42px; }
+.realme-tv .tv-opportunity__connectors-title {
+  margin-right: 12px; }
+.realme-tv .tv-opportunity__connectors-title.hdmi {
+  margin-bottom: 12px; }
+.realme-tv .tv-opportunity__connectors-title.hdmi:before {
+  position: absolute;
+  content: "";
+  width: 34px;
+  height: 14px;
+  left: 0;
+  top: 4px;
+  background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/technology/hdmi.svg") center/100% 100% no-repeat; }
+.realme-tv .tv-opportunity__connectors-title.usb:before {
+  position: absolute;
+  content: "";
+  width: 34px;
+  height: 14px;
+  left: 0;
+  top: 4px;
+  background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/technology/usb.svg") center/100% 100% no-repeat; }
+.realme-tv .tv-opportunity__connectors-title.av:before {
+  position: absolute;
+  content: "";
+  width: 17px;
+  height: 17px;
+  left: 0;
+  top: 2px;
+  background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/technology/av.svg") center/100% 100% no-repeat; }
+.realme-tv .tv-opportunity__connectors-title.lan:before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  left: 0;
+  top: 2px;
+  background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/technology/lan.svg") center/100% 100% no-repeat; }
+.realme-tv .tv-opportunity__connectors-title.dao:before {
+  position: absolute;
+  content: "";
+  width: 19px;
+  height: 19px;
+  left: 0;
+  top: 2px;
+  background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/technology/digital.svg") center/100% 100% no-repeat; }
+.realme-tv .tv-opportunity__connectors-title.ant:before {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  left: 0;
+  top: 2px;
+  background: url("https://i.citrus.ua/uploads/promo/realme/tv-card/technology/ant.svg") center/100% 100% no-repeat; }
+@media screen and (max-width: 1365px) {
+  .realme-tv .tv-opportunity__right-content {
+    padding: 30px 16px 0 46px; }
+  .realme-tv .tv-opportunity__title {
+    font-size: 38px;
+    line-height: 50px;
+    margin-bottom: 26px; }
+  .realme-tv .tv-opportunity__technology-title {
+    padding-left: 60px; }
+  .realme-tv .tv-opportunity__technology-title.wi-fi:before,
+  .realme-tv .tv-opportunity__technology-title.bluetooth:before {
+    width: 52px;
+    height: 52px;
+    top: -15px; }
+  .realme-tv .tv-opportunity__connectors-title {
+    font-size: 14px; } }
+@media screen and (max-width: 1023px) {
+  .realme-tv .tv-opportunity {
+    flex-direction: column; }
+  .realme-tv .tv-opportunity__left-content {
+    width: 100%;
+    margin: 0 auto; }
+  .realme-tv .tv-opportunity__image {
+    display: flex; }
+  .realme-tv .tv-opportunity__right-content {
+    padding: 14px 16px 36px 12px;
+    width: 100%; }
+  .realme-tv .tv-opportunity__title {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 26px; }
+  .realme-tv .tv-opportunity__technology-title {
+    font-size: 16px;
+    line-height: 22px;
+    padding-left: 60px; }
+  .realme-tv .tv-opportunity__technology-title.wi-fi:before,
+  .realme-tv .tv-opportunity__technology-title.bluetooth:before {
+    width: 48px;
+    height: 48px;
+    top: -15px; } }
+@media screen and (max-width: 767px) {
+  .realme-tv .tv-opportunity__right-content {
+    padding: 14px 8px 36px 8px; }
+  .realme-tv .tv-opportunity__title {
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 24px; } }
+@media screen and (max-width: 367px) {
+  .realme-tv .tv-opportunity__connectors-item:nth-child(4) {
+    margin-bottom: 6px; } }
+.realme-tv .tv-installation {
+  background-image: url("https://i.citrus.ua/uploads/promo/realme/tv-card/installation/standart-image.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: top center;
+  height: 480px;
+  transition: background-image 0.5s; }
+.realme-tv .tv-installation__content {
+  display: flex;
+  justify-content: center;
+  padding-top: 45px; }
+.realme-tv .tv-installation__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  border-bottom: 4px solid #030303;
+  padding: 0 28px;
+  white-space: nowrap;
+  opacity: 0.2;
+  cursor: pointer;
+  transition: opacity 0.5s; }
+.realme-tv .tv-installation__title.active {
+  opacity: 1; }
+@media screen and (max-width: 767px) {
+  .realme-tv .tv-installation {
+    background-image: url("https://i.citrus.ua/uploads/promo/realme/tv-card/installation/standart-image-mob.png");
+    height: 290px;
+    position: relative; }
+  .realme-tv .tv-installation__content {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 16px 25px 16px; }
+  .realme-tv .tv-installation__title {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 0 12px; } }
+.realme-tv .tv-characteristics {
+  background-image: url("https://i.citrus.ua/uploads/promo/realme/tv-card/characteristics/characteristics-bg.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: top center;
+  height: 325px; }
+.realme-tv .tv-characteristics__content {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 120px 24px 0 24px; }
+.realme-tv .tv-characteristics__list {
+  display: flex;
+  justify-content: space-between; }
+.realme-tv .tv-characteristics__item {
+  max-width: 239px; }
+.realme-tv .tv-characteristics__title {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+  color: #000;
+  text-align: center; }
+.realme-tv .title__ident {
+  font-size: 18px;
+  line-height: 21px;
+  color: #000; }
+.realme-tv .tv-characteristics__desc {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+  text-align: center; }
+@media screen and (max-width: 1365px) {
+  .realme-tv .tv-characteristics__title {
+    font-size: 38px;
+    line-height: 45px; }
+  .realme-tv .title__ident {
+    font-size: 14px;
+    line-height: 16px; }
+  .realme-tv .tv-characteristics__desc {
+    font-size: 14px;
+    line-height: 16px; } }
+@media screen and (max-width: 1023px) {
+  .realme-tv .tv-characteristics__item {
+    max-width: 140px; }
+  .realme-tv .tv-characteristics__title {
+    font-size: 28px;
+    line-height: 33px; }
+  .realme-tv .title__ident {
+    font-size: 11px;
+    line-height: 13px; }
+  .realme-tv .tv-characteristics__desc {
+    font-size: 10px;
+    line-height: 12px; } }
+@media screen and (max-width: 767px) {
+  .realme-tv .tv-characteristics {
+    height: 435px; }
+  .realme-tv .tv-characteristics__content {
+    padding-top: 40px; }
+  .realme-tv .tv-characteristics__list {
+    flex-wrap: wrap; }
+  .realme-tv .tv-characteristics__item {
+    max-width: initial;
+    width: 45%;
+    margin-bottom: 24px; }
+  .realme-tv .tv-characteristics__item:last-child {
+    width: 100%; }
+  .realme-tv .tv-characteristics__text {
+    max-width: 150px;
+    margin: 0 auto; }
+  .realme-tv .tv-characteristics__text:last-child {
+    max-width: initial;
+    width: 100%; }
+  .realme-tv .tv-characteristics__title {
+    font-size: 32px;
+    line-height: 37px;
+    text-align: left; }
+  .realme-tv .title__ident {
+    font-size: 12px;
+    line-height: 14px; }
+  .realme-tv .tv-characteristics__desc {
+    font-size: 12px;
+    line-height: 14px;
+    text-align: left; } }
+.realme-tv .tv-questions {
+  background: #f7f7f7; }
+.realme-tv .tv-questions__content {
+  max-width: 1100px;
+  padding: 120px 24px 100px 24px;
+  margin: 0 auto; }
+.realme-tv .tv-questions__text {
+  font-size: 20px;
+  line-height: 28px;
+  mix-blend-mode: normal;
+  opacity: 0.6; }
+@media screen and (max-width: 1365px) {
+  .realme-tv .tv-questions__content {
+    padding: 80px 24px 100px 24px; }
+  .realme-tv .tv-questions__text {
+    font-size: 14px;
+    line-height: 150%; } }
+@media screen and (max-width: 1023px) {
+  .realme-tv .tv-questions__content {
+    padding: 60px 24px 80px 24px; }
+  .realme-tv .tv-questions__text {
+    font-size: 14px;
+    line-height: 150%; } }
+@media screen and (max-width: 1023px) {
+  .realme-tv .tv-questions__content {
+    padding: 60px 24px 100px 24px; }
+  .realme-tv .tv-questions__text {
+    font-size: 12px;
+    line-height: 20px; } }
+.realme-tv .review-modal {
+  position: fixed;
+  top: 0;
+  z-index: 25;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center; }
+.realme-tv .review-modal--show {
+  display: flex; }
+.realme-tv .review-modal__videous {
+  margin-left: 36px;
+  margin-right: 36px;
+  max-width: 1156px;
+  width: 100%;
+  padding-bottom: 651px;
+  position: relative; }
+.realme-tv .review-modal__videous iframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none; }
+.realme-tv .review-modal__videous a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none; }
+.realme-tv .review-modal__close {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 50%; }
+.realme-tv .review-modal__close::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  width: 20px;
+  height: 2px;
+  background-color: #000000; }
+.realme-tv .review-modal__close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  width: 20px;
+  height: 2px;
+  background-color: #000000; }
+@media screen and (max-width: 1300px) {
+  .realme-tv .review-modal__videous {
+    padding-bottom: 52.7%; } }
+@media screen and (max-width: 767px) {
+  .realme-tv .review-modal__videous {
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-bottom: 54%; }
+  .realme-tv .review-modal__close {
+    display: none; }
+  .realme-tv .review-modal__close::before,
+  .realme-tv .review-modal__close::after {
+    width: 15px; } }
+
+/*# sourceMappingURL=style.css.map */

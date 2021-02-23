@@ -1,0 +1,3859 @@
+<template>
+  <skeleton typeSidebar="no-sidebar" v-if="!fullVersion">
+    <div class="static-content">
+
+      <style>
+        .big-container {
+          max-width: none;
+          width: auto;
+        }
+
+        .log--base .catalog__main-content, .shadow {
+          box-shadow: none;
+        }
+
+        * {
+          box-sizing: border-box;
+          font-family: Roboto, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          margin: 0;
+        }
+
+        ul {
+          margin: 0;
+          list-style: none;
+        }
+
+        img {
+          max-width: 100%;
+          color: transparent;
+        }
+
+        form select, input {
+          border: 1px solid #c4c4c4;
+          border-radius: 4px;
+          height: 36px;
+          width: 100%;
+          padding: 0 0 0 12px;
+          background-color: #ffffff;
+        }
+
+        a {
+          text-decoration: none;
+          cursor: pointer;
+          color: #3B6D9A;
+          outline: none;
+          transition: 0.3s;
+        }
+
+        .btn, button {
+          display: block;
+          background: 0 0;
+          cursor: pointer;
+          border: none;
+          text-align: center;
+          width: 100%;
+          line-height: 44px;
+          transition: .3s;
+          border-radius: 4px;
+          margin-bottom: 24px;
+          white-space: nowrap;
+          font-family: Roboto, sans-serif;
+          font-size: 18px;
+        }
+
+        .base-padding {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        .clear-padding {
+          margin-left: 0;
+          margin-right: 0;
+        }
+
+        @media screen and (max-width: 640px) {
+          .base-padding {
+            padding-left: 0;
+            padding-right: 0;
+          }
+
+          .clear-padding {
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+
+        @media screen and (max-width: 480px) {
+          .base-padding {
+            padding-left: 0;
+            padding-right: 0;
+          }
+
+          body .clear-padding {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+          }
+        }
+
+        footer.container-footer {
+          margin-top: 0;
+        }
+
+        .swiper-container {
+          margin: 0 auto;
+          position: relative;
+          overflow: hidden;
+          list-style: none;
+          padding: 0;
+          z-index: 1;
+        }
+
+        .swiper-container-android .swiper-slide, .swiper-wrapper {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+
+        .swiper-wrapper {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          display: flex;
+          box-sizing: content-box;
+        }
+
+        .swiper-slide {
+          flex-shrink: 0;
+          width: 100%;
+          height: 100%;
+          position: relative;
+        }
+
+        .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+          bottom: 10px;
+          left: 0;
+          width: 100%;
+        }
+
+        .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+          height: 20px;
+          z-index: auto;
+        }
+
+        .swiper-pagination {
+          position: absolute;
+          text-align: center;
+          transition: .3s;
+          transform: translate3d(0,0,0);
+        }
+
+        .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+          margin: 0 5px;
+        }
+
+        .swiper-pagination-clickable .swiper-pagination-bullet {
+          cursor: pointer;
+        }
+        .swiper-pagination-bullet-active {
+          background: #60b300;
+        }
+        .swiper-pagination-bullet-active {
+          opacity: 1;
+          background: #007aff;
+        }
+        .swiper-pagination-bullet {
+          width: 8px;
+          height: 8px;
+          display: inline-block;
+          border-radius: 100%;
+          background: #000;
+          opacity: .2;
+        }
+        .swiper-pagination-bullet-active {
+          background: #60b300;
+        }
+
+        header.header {
+          margin-bottom: 0;
+        }
+
+        @media screen and (max-width: 1023px) {
+          .layout {
+            padding-top: 50px;
+          }
+        }
+
+        .breadcrumbs {
+          display: none;
+        }
+
+        main[locale] .big-container {
+          max-width: initial;
+          width: 100%;
+          box-shadow: none !important;
+          margin-bottom: 0;
+        }
+
+        .base-padding {
+          padding: 0;
+        }
+
+        .realme .video-review::before {
+          padding-top: 62%;
+        }
+
+        .realme {
+          overflow: hidden;
+          background-color: #F8F8F8;
+        }
+
+        /*header*/
+        .realme-header {
+          background-color: #FFC916;
+        }
+
+        .realme-header__banner {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .realme-header__wrapper {
+          max-width: 1366px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .realme-header__wrapper {
+          position: relative;
+        }
+
+        .realme-header__swiper-button {
+          width: 40px;
+          height: 40px;
+          background: #FFFFFF;
+          border-radius: 50%;
+          z-index: 1;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        .realme-header__swiper-button:hover {
+          background: #202020;
+          box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .realme-header__swiper-button:focus {
+          outline: none;
+        }
+
+        .realme-header__swiper-button:hover::before,
+        .realme-header__swiper-button:hover::after {
+          background: #FFFFFF;
+        }
+
+        .realme-header__swiper-button.swiper-button-disabled {
+          opacity: 0.5;
+          background: #FFFFFF;
+          pointer-events: all;
+          box-shadow: none;
+        }
+
+        .realme-header__swiper-button.swiper-button-disabled::before,
+        .realme-header__swiper-button.swiper-button-disabled::after {
+          background: #D8D8D8;
+        }
+
+        .realme-header__swiper-button--prev {
+          left: 4px;
+        }
+
+        .realme-header__swiper-button--prev::before {
+          content: '';
+          position: absolute;
+          height: 2px;
+          width: 15px;
+          left: 12px;
+          top: 24px;
+          background: #D8D8D8;
+          transform: rotate(45deg);
+        }
+
+        .realme-header__swiper-button--prev::after {
+          content: '';
+          position: absolute;
+          height: 2px;
+          width: 15px;
+          left: 12px;
+          top: 14px;
+          background: #D8D8D8;
+          transform: rotate(-45deg);
+        }
+
+        .realme-header__swiper-button--next {
+          right: 4px;
+        }
+
+        .realme-header__swiper-button--next::before {
+          content: '';
+          position: absolute;
+          height: 2px;
+          width: 15px;
+          left: 14px;
+          top: 14px;
+          background: #D8D8D8;
+          transform: rotate(45deg);
+        }
+
+        .realme-header__swiper-button--next::after {
+          content: '';
+          position: absolute;
+          height: 2px;
+          width: 15px;
+          left: 14px;
+          top: 24px;
+          background: #D8D8D8;
+          transform: rotate(-45deg);
+        }
+
+        .realme-header__swiper .realme-header__swiper-pagination {
+          z-index: 1;
+          bottom: 20px;
+        }
+
+        .realme-header__swiper .realme-header__swiper-pagination .swiper-pagination-bullet {
+          width: 6px;
+          height: 6px;
+          background: #FFFFFF;
+          opacity: 0.5;
+          margin: 0 8px;
+        }
+
+        .realme-header__swiper .realme-header__swiper-pagination .swiper-pagination-bullet:focus {
+          outline: none;
+        }
+
+        .realme-header__swiper .realme-header__swiper-pagination .swiper-pagination-bullet-active {
+          width: 8px;
+          height: 8px;
+          opacity: 1;
+        }
+
+        @media screen and (max-width: 1365px) {
+          .realme-header__swiper-button {
+            display: none;
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+          .realme-header__swiper .realme-header__swiper-pagination {
+            bottom: 10px !important;
+          }
+        }
+
+        @media screen and (max-width: 560px) {
+          .realme-header__banner {
+            max-width: 320px;
+          }
+        }
+
+        /*categories*/
+
+        /*Баннер когда-то вернем*/
+        /*.realme-categories__wrapper {*/
+        /*  padding-left: 20px;*/
+        /*  padding-right: 20px;*/
+        /*  max-width: 1358px;*/
+        /*  margin-left: auto;*/
+        /*  margin-right: auto;*/
+        /*  position: relative;*/
+        /*}*/
+
+        /*.realme-categories__swiper-button {*/
+        /*  width: 40px;*/
+        /*  height: 40px;*/
+        /*  background: #ffffff;*/
+        /*  border-radius: 50%;*/
+        /*  top: 100px;*/
+        /*  z-index: 1;*/
+        /*}*/
+
+        /*.realme-categories__swiper-button:focus {*/
+        /*  outline: none;*/
+        /*}*/
+
+        /*.realme-categories__swiper-button:hover {*/
+        /*  background: #FDC800;*/
+        /*}*/
+
+        /*.realme-categories__swiper-button:hover::before {*/
+        /*  background-color: #ffffff;*/
+        /*}*/
+
+        /*.realme-categories__swiper-button:hover::after {*/
+        /*  background-color: #ffffff;*/
+        /*}*/
+
+        /*.realme-categories__swiper-button.swiper-button-disabled {*/
+        /*  display: none;*/
+        /*}*/
+
+        /*.realme-categories__swiper-prev {*/
+        /*  left: 0;*/
+        /*}*/
+
+        /*.realme-categories__swiper-next {*/
+        /*  right: 0;*/
+        /*}*/
+
+        /*.realme-categories__swiper-prev::before {*/
+        /*  position: absolute;*/
+        /*  content: '';*/
+        /*  width: 16px;*/
+        /*  height: 3px;*/
+        /*  background-color: #D8D8D8;*/
+        /*  top: 15px;*/
+        /*  left: 11px;*/
+        /*  transform: rotate(-45deg);*/
+        /*}*/
+
+        /*.realme-categories__swiper-prev::after {*/
+        /*  position: absolute;*/
+        /*  content: '';*/
+        /*  width: 16px;*/
+        /*  height: 3px;*/
+        /*  background-color: #D8D8D8;*/
+        /*  top: 24px;*/
+        /*  left: 11px;*/
+        /*  transform: rotate(45deg);*/
+        /*}*/
+
+        /*.realme-categories__swiper-next::before {*/
+        /*  position: absolute;*/
+        /*  content: '';*/
+        /*  width: 16px;*/
+        /*  height: 3px;*/
+        /*  background-color: #D8D8D8;*/
+        /*  top: 24px;*/
+        /*  left: 13px;*/
+        /*  transform: rotate(-45deg);*/
+        /*}*/
+
+        /*.realme-categories__swiper-next::after {*/
+        /*  position: absolute;*/
+        /*  content: '';*/
+        /*  width: 16px;*/
+        /*  height: 3px;*/
+        /*  background-color: #D8D8D8;*/
+        /*  top: 15px;*/
+        /*  left: 13px;*/
+        /*  transform: rotate(45deg);*/
+        /*}*/
+
+
+        /*.realme-categories__swiper-next {*/
+        /*  right: 0;*/
+        /*}*/
+
+        /*.realme-categories__swiper-pagination {*/
+        /*  margin-top: 28px;*/
+        /*  position: static;*/
+        /*}*/
+
+        /*.realme-categories__swiper-pagination .swiper-pagination-bullet {*/
+        /*  width: 6px;*/
+        /*  height: 6px;*/
+        /*  background: #E1E1E1;*/
+        /*  opacity: 1;*/
+        /*}*/
+
+        /*.realme-categories__swiper-pagination .swiper-pagination-bullet-active {*/
+        /*  background: #FDC800;*/
+        /*  width: 8px;*/
+        /*  height: 8px;*/
+        /*}*/
+
+        /*.realme-categories__item {*/
+        /*  width: 200px;*/
+        /*}*/
+
+        /*.realme-categories__item-link {*/
+        /*  display: block;*/
+        /*  padding-top: 20px;*/
+        /*  padding-left: 20px;*/
+        /*  padding-right: 20px;*/
+        /*  padding-bottom: 30px;*/
+        /*  background: #ffffff;*/
+        /*}*/
+
+        /*.realme-categories__item-image {*/
+        /*  width: 160px;*/
+        /*  height: 160px;*/
+        /*  margin-left: auto;*/
+        /*  margin-right: auto;*/
+        /*  display: flex;*/
+        /*  justify-content: center;*/
+        /*  align-items: center;*/
+        /*  margin-bottom: 12px;*/
+        /*}*/
+
+        /*.realme-categories__item-preview {*/
+        /*  max-height: 100%;*/
+        /*}*/
+
+        /*.realme-categories__item-link:hover {*/
+        /*  box-shadow: 0px 20px 40px rgba(61, 56, 39, 0.1);*/
+        /*}*/
+
+        /*.realme-categories__item-title {*/
+        /*  text-align: center;*/
+        /*  font-size: 16px;*/
+        /*  color: rgba(0, 0, 0, 0.87);*/
+        /*}*/
+
+
+        .realme-categories {
+          padding-top: 60px;
+          padding-bottom: 88px;
+          margin-bottom: 80px;
+          background: url('https://i.citrus.ua/uploads/promo/realme/categories/right-bg-x2.png') no-repeat right top 40px/167px 301px,
+          url('https://i.citrus.ua/uploads/promo/realme/categories/left-bg-x2.png') no-repeat left 9px center/220px 228px #202020;
+        }
+
+        .realme-categories__title {
+          color: #ffffff;
+          text-align: center;
+          margin-bottom: 32px;
+          font-size: 50px;
+          font-weight: 500;
+          line-height: normal;
+        }
+
+        .realme-categories__description {
+          margin-bottom: 60px;
+          max-width: 352px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .realme-categires__info {
+          font-size: 16px;
+          color: #ffffff;
+          text-align: center;
+        }
+
+        .realme-categires__info:not(:last-child) {
+          margin-bottom: 23px;
+        }
+
+        .realme__categories__items {
+          max-width: 1318px;
+          margin-left: auto;
+          margin-right: auto;
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .realme__categories__item-link {
+          max-width: 312px;
+          padding-top: 20px;
+          display: block;
+        }
+
+        .realme__categories__item-link:hover .realme__categories__image {
+          transform: translateY(-20px);
+        }
+
+        .realme__categories__item-link:hover .realme__categories__item-title {
+          color: #FFC916;
+        }
+
+        .realme__categories__image {
+          width: 272px;
+          height: 295px;
+          margin-bottom: 12px;
+          margin-left: auto;
+          margin-right: auto;
+          transition: transform 0.25s ease-out;
+        }
+
+        .realme__categories__preview {
+          max-height: 100%;
+        }
+
+        .realme__categories__item-title {
+          font-size: 16px;
+          color: #FFFFFF;
+          text-align: center;
+          transition: color 0.25s ease-out;
+        }
+
+        @media screen and (max-width: 1365px) {
+          .realme-categories {
+            padding-top: 40px;
+            padding-bottom: 71px;
+            background: #202020;
+          }
+
+          .realme-categories__title {
+            font-size: 40px;
+            margin-bottom: 24px;
+          }
+
+          .realme-categories__description {
+            margin-bottom: 54px;
+          }
+
+          .realme__categories__items {
+            max-width: 928px;
+          }
+
+          .realme__categories__item-link {
+            max-width: 214px;
+          }
+
+          .realme__categories__image {
+            width: 174px;
+            height: 210px;
+            margin-bottom: 2px;
+          }
+
+          .realme__categories__item-title {
+            font-size: 14px;
+          }
+        }
+
+        @media screen and (max-width: 1023px) {
+          .realme-categories {
+            padding-bottom: 40px;
+          }
+
+          .realme-categories__title {
+            font-size: 40px;
+            margin-bottom: 24px;
+          }
+
+          .realme__categories__items {
+            max-width: 684px;
+          }
+
+          .realme__categories__item-link {
+            width: 153px;
+            height: 197px;
+            padding-top: 12px;
+          }
+
+          .realme__categories__image {
+            width: 129px;
+            height: 138px;
+            margin-bottom: 10px;
+          }
+
+          .realme__categories__item-title {
+            font-size: 12px;
+          }
+        }
+
+        @media screen and (max-width: 720px) {
+          .realme-categories {
+            padding-top: 39px;
+            padding-bottom: 18px;
+          }
+
+          .realme-categires__info {
+            font-size: 14px;
+          }
+
+          .realme-categories__description {
+            margin-bottom: 42px;
+          }
+
+          .realme__categories__items {
+            max-width: 288px;
+            flex-wrap: wrap;
+          }
+
+          .realme__categories__item {
+            margin-bottom: 4px;
+          }
+
+          .realme__categories__image {
+            width: 112px;
+            height: 128px;
+          }
+
+          .realme__categories__item-link {
+            max-width: 136px;
+          }
+        }
+
+        /*semkov styles*/
+        .against-everyone {
+          background: url(https://i.citrus.ua/uploads/promo/realme/against-everyone/r-bg.png) left calc(50% - 425px) center no-repeat #FDC800;
+          padding: 196px 0 165px;
+          position: relative;
+        }
+
+        .against-everyone__inner {
+          display: flex;
+          align-items: flex-start;
+          max-width: 1419px;
+          margin: 0 auto;
+          padding: 0 50px 0 8px;
+        }
+
+        .against-everyone__text-wrp {
+          padding: 79px 112px;
+          background-color: #fff;
+          margin-left: -30px;
+          position: relative;
+        }
+
+        .against-everyone__text-wrp p {
+          font-size: 14px;
+          line-height: 16px;
+          margin-bottom: 16px;
+        }
+
+        .against-everyone__text-wrp p:last-child {
+          margin-bottom: 0;
+        }
+
+        .against-everyone > img,
+        .against-everyone__text-wrp > img {
+          position: absolute;
+        }
+
+        .against-everyone .money-img {
+          top: 59px;
+          left: 15%;
+        }
+
+        .against-everyone__text-wrp .no_clock-img {
+          right: -52px;
+          top: -74px;
+        }
+
+        .against-everyone__text-wrp .no_socket-img {
+          right: 313px;
+          bottom: -162px;
+        }
+
+        .against-everyone .no_headphones-img {
+          top: 11px;
+          left: 39%;
+        }
+
+        .against-everyone .graffiti-img {
+          top: -195px;
+          right: calc(50% - 502px);
+        }
+
+        .against-everyone__list {
+          margin-left: 20px;
+          list-style: disc;
+        }
+
+        .against-everyone__inner > img {
+          align-self: center;
+        }
+
+        @media screen and (max-width: 1400px) {
+          .against-everyone {
+            background: url(https://i.citrus.ua/uploads/promo/realme/against-everyone/r-bg.png) left 9% center no-repeat #FDC800;
+          }
+        }
+
+        @media screen and (max-width: 1023px) {
+          .against-everyone {
+            background-position: center 230px;
+          }
+
+          .against-everyone__inner {
+            flex-direction: column;
+            padding: 0 16px;
+            align-items: center;
+          }
+
+          .against-everyone__inner > img {
+            z-index: 1;
+          }
+
+          .against-everyone__text-wrp {
+            margin-left: 0;
+            margin-top: -100px;
+          }
+
+          .against-everyone .graffiti-img {
+            width: 260px;
+            right: 0;
+            top: -125px;
+          }
+
+          .against-everyone .money-img {
+            left: 30px;
+          }
+
+          .against-everyone .no_headphones-img {
+            left: auto;
+            right: 30px;
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+
+          .against-everyone .no_headphones-img {
+            top: 90px;
+            right: 0;
+            width: 100px;
+          }
+
+          .against-everyone__text-wrp {
+            padding: 79px 24px;
+            margin-top: -60px;
+          }
+
+          .against-everyone__text-wrp .no_clock-img {
+            width: 50px;
+            top: 0;
+            right: 0;
+          }
+
+          .against-everyone__text-wrp .no_socket-img {
+            right: 50%;
+            bottom: -70px;
+            transform: translateX(50%);
+            width: 120px;
+          }
+
+          .against-everyone .money-img {
+            left: 0;
+            top: 80px;
+          }
+
+          .against-everyone .graffiti-img {
+            left: 50%;
+            top: 20px;
+            transform: translateX(-50%);
+          }
+        }
+
+        @media screen and (max-width: 560px) {
+          .against-everyone .graffiti-img {
+            top: 20px;
+            width: 220px;
+          }
+
+          .against-everyone .no_headphones-img {
+            top: 90px;
+            right: 0;
+            width: 100px;
+            z-index: 1;
+          }
+
+          .against-everyone .money-img {
+            left: 0;
+            top: 50px;
+            z-index: 1;
+          }
+
+          .against-everyone {
+            padding-top: 166px;
+          }
+        }
+
+        /*semkov styles end*/
+
+      </style>
+
+      <style>
+        .products-promo {
+          margin-bottom: 20px;
+        }
+
+        .accessorize-section .promo-effect-1,
+        .smartphone-promo .promo-effect-1 {
+          bottom: 0;
+          left: 0;
+          z-index: 2;
+        }
+
+        .accessorize-section .promo-effect-1 img,
+        .smartphone-promo .promo-effect-1 img {
+          position: relative;
+          margin-bottom: -60%;
+          margin-left: -50%;
+        }
+
+        .smartphone-promo .promo-effect-1 img {
+          max-width: 318px;
+        }
+
+        .promo-section {
+          margin-bottom: 80px;
+        }
+
+        .accessorize-section .promo-effect-2,
+        .smartphone-promo .promo-effect-2 {
+          top: 0;
+          right: 0;
+          z-index: 2;
+        }
+
+        .accessorize-section .promo-effect-2 img,
+        .smartphone-promo .promo-effect-2 img {
+          position: relative;
+          margin-top: -50%;
+          margin-left: 50%;
+        }
+
+        .accessorize-section .promo-effect-2 img {
+          max-width: 336px;
+        }
+
+        .smartphone-promo .promo-effect-2 img {
+          max-width: 318px;
+        }
+
+        .promo-effect {
+          position: absolute;
+        }
+
+        .audio-section .promo-effect-1 {
+          right: 0;
+          top: 35%;
+          z-index: 3;
+        }
+
+        .audio-section .promo-effect-1 img {
+          position: relative;
+          left: 50%;
+        }
+
+        .promo-section {
+          margin-bottom: 80px;
+        }
+
+        .promo-section.promo-section_extra-col .grid-row {
+          flex-wrap: wrap;
+        }
+
+        .promo-section.promo-section_extra-col .grid-row .grid-col {
+          min-width: calc(50% - 12px);
+          max-width: calc(50% - 12px);
+          margin-bottom: 24px;
+        }
+
+        .promo-section__header {
+          margin-bottom: 35px;
+          text-align: center;
+          z-index: 3;
+        }
+
+        .promo-section__body {
+          position: relative;
+        }
+
+        .audio-section {
+          position: relative;
+          padding-bottom: 120px;
+        }
+
+        .audio-section__body::before {
+          content: "";
+          position: absolute;
+          top: 120px;
+          bottom: -120px;
+          left: 0;
+          right: 0;
+          background-color: #FDC800;
+        }
+
+        .product-card_large {
+          padding-top: 50px;
+          padding-bottom: 50px;
+        }
+
+        .promo-card.product-card_large_light {
+          background-color: #FFC916;
+        }
+
+        .promo-section__title-img {
+          max-width: 650px;
+          width: 100%;
+          z-index: 2;
+        }
+
+        .promo-card.product-card_large_light .promo-price {
+          color: black;
+        }
+
+        .promo-card__header {
+          max-width: 228px;
+          margin: 0 auto 50px auto;
+          text-align: center;
+        }
+
+        .promo-card__body {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 25px;
+        }
+
+        .promo-card__body .img_bg {
+          position: absolute;
+        }
+
+        .promo-card__body .img_product {
+          position: relative;
+        }
+
+        .promo-card__body .img_bg {
+          max-width: 120%;
+        }
+
+        .promo-card__body .img_product {
+          max-width: 50%;
+        }
+
+        .promo-card__footer {
+          text-align: center;
+          z-index: 4;
+        }
+
+        .promo-card--discount .promo-card__header-img {
+          margin-bottom: 10px;
+        }
+
+        .promo-card--discount .promo-card__timer {
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px;
+          padding-left: 13px;
+          padding-right: 12px;
+          width: 228px;
+          height: 40px;
+          background: #FFFFFF;
+          border-radius: 10px;
+          margin-left: auto;
+          margin-right: auto;
+          z-index: 1;
+          position: relative;
+        }
+
+        .promo-card--discount .promo-card__timer-info {
+          font-size: 12px;
+          color: #050505;
+          margin-right: 13px;
+          text-align: left;
+          margin-bottom: 0;
+        }
+
+        .promo-card--discount .promo-card__timer-counter {
+          display: flex;
+          margin-top: 2px;
+        }
+
+        .promo-card--discount .promo-card__timer-count {
+          display: flex;
+          flex-direction: column;
+          margin-right: 15px;
+          position: relative;
+        }
+
+        .promo-card--discount .promo-card__timer-count::after {
+          content: ':';
+          font-size: 20px;
+          font-weight: bold;
+          position: absolute;
+          right: -10px;
+          top: -2px;
+        }
+
+        .promo-card--discount .promo-card__timer-count b {
+          font-size: 20px;
+          font-weight: bold;
+          color: rgba(0, 0, 0, 0.87);
+        }
+
+        .promo-card--discount .promo-card__timer-count span {
+          font-size: 8px;
+          color: rgba(0, 0, 0, 0.54);
+          text-align: center;
+          margin-top: -4px;
+        }
+
+        .promo-card--discount .promo-card__timer-count--seconds {
+          margin-right: 0;
+        }
+
+        .promo-card--discount .promo-card__timer-count--seconds b {
+          color: #ff3300;
+        }
+
+        .promo-card--discount .promo-card__timer-count--seconds span {
+          color: #ff3300;
+        }
+
+        .promo-card--discount .promo-card__timer-count--seconds::after {
+          display: none;
+        }
+
+        .promo-card--discount .promo-price {
+          margin-bottom: 4px;
+          text-align: left;
+        }
+
+        .promo-card--discount .promo-price__old {
+          display: inline-block;
+          color: rgba(0, 0, 0, 0.54);
+          padding-right: 3px;
+          text-decoration: line-through;
+          font-size: 18px;
+        }
+
+        .promo-card--discount .promo-price__value {
+          color: #FF3300;
+        }
+
+        .promo-card--discount .promo-price__currency {
+          color: #FF3300;
+        }
+
+        .promo-card--discount .promo-card__footer {
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+        }
+
+        .promo-card--discount .promo-price {
+          display: flex;
+          flex-direction: column;
+          margin-right: 20px;
+          margin-bottom: 0;
+        }
+
+        .promo-card--discount .promo-price__value {
+          margin-top: -6px;
+        }
+
+        .promo-card--discount .promo-buy {
+          background: #FD4A20;
+          color: #FFFFFF;
+        }
+
+        .promo-card--discount .promo-buy:hover {
+          opacity: 0.8;
+          color: #ffffff;
+        }
+
+        .grid-row {
+          position: relative;
+          display: flex;
+          max-width: 1320px;
+          height: 100%;
+          flex-direction: row;
+          justify-content: space-between;
+          margin: auto;
+        }
+
+        .grid-row_column {
+          flex-direction: column;
+          height: 100%;
+        }
+
+        .grid-row_column > .grid-col {
+          height: 50%;
+        }
+
+        .grid-col {
+          flex: 1;
+          position: relative;
+        }
+
+        .grid-row:not(.grid-row_column) > .grid-col:first-child {
+          margin-right: 12px;
+        }
+
+        .grid-row:not(.grid-row_column) > .grid-col:last-child {
+          margin-left: 12px;
+        }
+
+        .grid-row_column > .grid-col:first-child {
+          margin-bottom: 12px;
+        }
+
+        .grid-row_column > .grid-col:last-child {
+          margin-top: 24px;
+        }
+
+        .promo-card {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          background-color: #202020;
+          color: white;
+        }
+
+        .promo-card_link:hover {
+          color: white;
+        }
+
+        .promo-card_row {
+          padding-right: 0;
+          flex-direction: row;
+        }
+
+
+        .promo-card_row .promo-img {
+          margin-top: 0;
+        }
+
+        .promo-info {
+          font-size: 36px;
+          line-height: 1.2;
+        }
+
+        .promo-card:not(.promo-card_row) .promo-info {
+          padding: 83px 112px 0 112px;
+          z-index: 4;
+        }
+
+        .promo-card_row .promo-info {
+          padding: 83px 0 83px 112px;
+          max-width: 60%;
+          z-index: 2;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .grid-col_reverse .promo-info {
+          order: 2;
+        }
+
+        .grid-col_reverse .promo-img {
+          order: 1;
+        }
+
+        .grid-col_reverse .promo-card_row .promo-info {
+          padding: 83px 45px 83px 0;
+        }
+
+        .promo-card_row .promo-info {
+          flex: 1;
+        }
+
+        .promo-price {
+          font-size: 24px;
+        }
+
+        .promo-price__old {
+          display: none;
+        }
+
+        .promo-title,
+        .promo-price {
+          margin-bottom: 16px;
+        }
+
+        .promo-card__timer {
+          display: none;
+        }
+
+        .promo-card__timer-bar {
+          width: 154px;
+          height: 2px;
+          background: rgba(0, 0, 0, 0.22);
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 4px;
+          position: relative;
+        }
+
+        .promo-card__timer-progress {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          background: #3A3A3A;
+        }
+
+        .promo-card__timer-info {
+          color: rgba(0, 0, 0, 0.87);
+          font-size: 12px;
+        }
+
+        .promo-buy {
+          display: inline-block;
+          padding: 10px 20px;
+          margin: 0;
+          font-size: 18px;
+          background-color: white;
+          border-radius: 80px;
+          color: black;
+        }
+
+        .promo-buy:hover {
+          color: #FF8637;
+        }
+
+        .promo-title__model {
+          color: #FDC800;
+        }
+
+        .promo-img {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 53px;
+          flex: 1;
+        }
+
+        .promo-card_row .promo-img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          overflow: hidden;
+        }
+
+        .grid-col_reverse .promo-info {
+          margin-left: 50%;
+        }
+
+
+        .promo-img__bg,
+        .promo-img__product {
+          max-width: 100%;
+          height: auto;
+        }
+
+        .buds-air {
+          background-image: url("https://i.citrus.ua/uploads/promo/realme/categories/bg/bg_buds_1.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
+
+        .buds-air .promo-img__product {
+          position: absolute;
+          max-width: 90%;
+        }
+
+        .buds-air .promo-img__bg {
+          position: absolute;
+          bottom: 15px;
+          max-width: 170%;
+        }
+
+        .buds-wireless {
+          background-color: #FDC800;
+          background-image: url("https://i.citrus.ua/uploads/promo/realme/categories/bg/alan_walker_logo%202.png");
+          background-repeat: no-repeat;
+          background-position: right center;
+          background-size: 25%;
+        }
+
+        .buds-wireless .promo-title__model {
+          color: black;
+        }
+
+        .buds-wireless .promo-img__product {
+          position: absolute;
+          max-width: 230px;
+          left: 0;
+          bottom: 0;
+        }
+
+        .buds-wireless .promo-img__bg {
+          position: absolute;
+          max-width: 320px;
+          bottom: 60px;
+          left: 0;
+        }
+
+
+        .buds-2 {
+          background-color: #202020;
+        }
+
+        .buds-2 .promo-img__product {
+          position: absolute;
+          right: 70px;
+          top: 0;
+          max-width: 220px;
+        }
+
+        .buds-2 .promo-img__bg {
+          position: absolute;
+          top: -50px;
+          right: -30px;
+          max-width: 450px;
+        }
+
+        .accessorize-section {
+          position: relative;
+        }
+
+        .accessorize-section:before {
+          content: '';
+          position: absolute;
+          height: 610px;
+          background-color: #FFFFFF;
+          width: 100%;
+          left: 0;
+          top: -80px;
+        }
+
+        .accessorize-section .promo-card {
+          min-height: 550px;
+        }
+
+        .realme-band {
+          background-color: #FDC800;
+        }
+
+        .realme-band .promo-info {
+          margin-left: 60%;
+        }
+
+        .realme-band .promo-title__model,
+        .realme-band .promo-price {
+          color: black;
+        }
+
+        .realme-band .promo-img__product {
+          position: absolute;
+          left: 0;
+          height: 100%;
+          max-width: 300%;
+        }
+
+        .realme-band .promo-img__bg {
+          position: absolute;
+          max-width: 400px;
+          left: -220px;
+          top: -0px;
+          transform: rotate(180deg);
+        }
+
+        .realme-band .promo-img__bg-2 {
+          position: absolute;
+          max-width: 400px;
+          right: -170px;
+          bottom: -230px;
+          transform: rotate(90deg);
+        }
+
+        .realme-band .promo-img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          overflow: hidden;
+        }
+
+        .power-banks .promo-img__bg {
+          max-width: 600px;
+          position: absolute;
+          right: -220px;
+          top: -200px;
+        }
+
+        .power-banks .promo-img__product {
+          position: absolute;
+          max-width: 326px;
+          right: 0px;
+        }
+
+        .power-banks .promo-img__body {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 50%;
+          width: 100%;
+        }
+
+        .power-banks .battery-power {
+          position: absolute;
+          bottom: 20px;
+          right: 40px;
+          font-size: 36px;
+          line-height: 1.2;
+          font-weight: bolder;
+        }
+
+        @media screen and (max-width: 1365px) {
+          .promo-card__header-img {
+            height: 30px;
+          }
+        }
+
+        @media screen and (max-width: 1024px) {
+          .audio-section {
+            padding-bottom: 0;
+          }
+
+          .audio-section__body::before {
+            display: none;
+          }
+
+          .accessorize-section:before {
+            height: 510px;
+          }
+
+          .accessorize-section .promo-effect,
+          .smartphone-promo .promo-effect {
+            max-width: 30%;
+          }
+
+          .accessorize-section .promo-effect-1 img,
+          .smartphone-promo .promo-effect-1 img {
+            margin-left: -35%;
+          }
+
+          .smartphone-promo .promo-effect-1 img {
+            max-width: none;
+            width: 100%;
+          }
+
+          .accessorize-section .promo-effect-2 img,
+          .smartphone-promo .promo-effect-2 img {
+            margin-left: 50%;
+          }
+
+          .smartphone-promo .promo-effect-2 img {
+            max-width: none;
+            width: 100%;
+          }
+
+          .accessorize-section .promo-effect-2 img {
+            margin-top: -60%;
+            max-width: none;
+            width: 100%;
+          }
+
+
+          .audio-section .promo-effect-1 {
+            max-width: 40%;
+            top: 0;
+          }
+
+          .audio-section .promo-effect-1 img {
+            margin-top: -50%;
+          }
+
+          .promo-card_row {
+            /*min-height: 350px;*/
+          }
+
+          .promo-card:not(.promo-card_row) .promo-info {
+            padding: 26px 67px 0 67px;
+          }
+
+          .promo-card_row .promo-info {
+            padding: 32px 0 32px 25px;
+          }
+
+          .grid-col_reverse .promo-card_row .promo-info {
+            padding: 32px 25px 32px 0;
+          }
+
+
+          .promo-info {
+            font-size: 20px;
+          }
+
+          .promo-buy {
+            font-size: 12px;
+          }
+
+          .buds-air .promo-img {
+            min-height: 350px;
+            margin-top: 24px;
+          }
+
+          .buds-air .promo-img__bg {
+            max-width: 530px;
+            bottom: 5px;
+          }
+
+
+          .buds-air .promo-img__product {
+            max-height: 300px;
+            bottom: 30px;
+          }
+
+          .buds-wireless .promo-img__product {
+            max-width: 160px;
+          }
+
+          .buds-wireless .promo-img__bg {
+            position: absolute;
+            max-width: 260px;
+            bottom: 20px;
+            left: -10px;
+          }
+
+          .buds-2 .promo-img__product {
+            position: absolute;
+            right: 50px;
+            top: 0;
+            max-width: 170px;
+          }
+
+          .buds-2 .promo-img__bg {
+            position: absolute;
+            top: -70px;
+            right: -70px;
+            max-width: 400px;
+          }
+
+          .accessorize-section .promo-card {
+            max-height: 280px;
+            min-height: 280px;
+          }
+
+          .power-banks .promo-img__bg {
+            max-width: 490px;
+            position: absolute;
+            right: -220px;
+            top: -230px;
+          }
+
+          .power-banks .promo-img__product {
+            max-width: 180px;
+          }
+
+          .power-banks .battery-power {
+            bottom: 10px;
+            right: 30px;
+            font-size: 18px;
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+          .promo-section.promo-section_extra-col .grid-row .grid-col:nth-child(odd) {
+            min-width: 100%;
+            margin-right: 0;
+            margin-bottom: 0;
+          }
+
+          .promo-section.promo-section_extra-col .grid-row .grid-col:nth-child(even) {
+            min-width: 100%;
+            margin-left: 0;
+            margin-bottom: 0;
+          }
+
+          .grid-col--reverse {
+            order: 1;
+          }
+
+          .grid-row {
+            flex-direction: column;
+          }
+
+          .grid-row:not(.grid-row_column) > .grid-col:first-child {
+            margin-right: 0;
+          }
+
+          .grid-row:not(.grid-row_column) > .grid-col:last-child {
+            margin-left: 0;
+          }
+
+          .grid-row_column > .grid-col:first-child {
+            margin-bottom: 0;
+          }
+
+          .grid-row_column > .grid-col:last-child {
+            margin-top: 0;
+          }
+
+          .smartphone-promo .promo-effect-2 img {
+            margin-left: 30%;
+          }
+
+
+          .audio-section .promo-effect-1 {
+            max-width: 25%;
+          }
+
+          .accessorize-section .promo-effect-1 {
+            top: 0;
+            bottom: initial;
+            right: 0;
+            left: initial;
+          }
+
+          .accessorize-section .promo-effect-1 img {
+            margin-left: 30%;
+            margin-top: -50%;
+          }
+
+          .accessorize-section .promo-effect-2 img {
+            margin-left: -20%;
+            margin-bottom: -70%;
+          }
+
+          .accessorize-section .promo-effect-2 {
+            bottom: 0;
+            top: initial;
+            left: 0;
+            right: initial;
+          }
+
+          .grid-col_reverse .promo-card_row .promo-info {
+            padding: 32px 10px 32px 0;
+          }
+
+          .promo-card_row {
+            min-height: 170px;
+          }
+
+          .promo-info {
+            font-size: 18px;
+          }
+
+          .promo-buy {
+            font-size: 12px;
+            display: inline-block;
+          }
+
+          .promo-price {
+            font-size: 18px;
+          }
+
+          .promo-title,
+          .promo-price {
+            margin-bottom: 8px;
+          }
+
+          .audio-section .promo-effect-1 img {
+            left: 30%;
+          }
+
+          .buds-air .promo-img {
+            min-height: 200px;
+            margin-top: 24px;
+          }
+
+          .buds-air .promo-img__bg {
+            max-width: 330px;
+            bottom: 5px;
+          }
+
+          .products-promo {
+            margin-bottom: -80px;
+          }
+
+          .buds-air .promo-img__product {
+            max-height: 170px;
+            bottom: 30px;
+          }
+
+          .buds-wireless .promo-img__bg {
+            bottom: 0;
+            max-width: 200px;
+          }
+
+
+          .buds-wireless .promo-img__product {
+            max-width: 112px;
+            left: 15px;
+          }
+
+          .buds-2 .promo-img__product {
+            max-width: 115px;
+            right: 40px;
+          }
+
+          .buds-2 .promo-img__bg {
+            max-width: 270px;
+            right: -30px;
+            top: -45px;
+          }
+
+          .realme-band,
+          .power-banks {
+            min-height: 270px;
+          }
+
+          .realme-band .promo-info {
+            margin-left: 55%;
+          }
+
+          .realme-band .promo-info .promo-price {
+            color: white;
+          }
+
+
+          .power-banks .promo-img__product {
+            max-width: 160px;
+          }
+
+          .power-banks .promo-img__bg {
+            max-width: 380px;
+            right: -150px;
+            top: -140px;
+          }
+        }
+
+        /**************************** Realme Review Section ****************************/
+        .realme-review {
+          position: relative;
+          padding: 0 24px 80px 24px;
+        }
+
+        .realme-review:before {
+          content: '';
+          position: absolute;
+          height: 310px;
+          background-color: #FDC800;
+          width: 100%;
+          left: 0;
+          bottom: 0;
+        }
+
+        .realme-review__title img {
+          height: auto;
+          margin: 0 auto 40px auto;
+          max-width: 650px;
+          width: 100%;
+          display: flex;
+        }
+
+        .realme-review__wrapper {
+          position: relative;
+          margin: 0 auto;
+          max-width: 1366px;
+        }
+
+        .realme-review__wrapper .swiper-container {
+          max-width: 1366px;
+        }
+
+        .review__preview {
+          position: relative;
+          cursor: pointer;
+          display: flex;
+          max-height: 239px;
+        }
+
+        .review__preview img {
+          max-height: 100%;
+          width: 100%;
+        }
+
+        .review__preview:before {
+          content: '';
+          position: absolute;
+          cursor: pointer;
+          width: 48px;
+          height: 48px;
+          background: url("https://i.citrus.ua/uploads/promo/realme/review/play_video.svg");
+          top: 50%;
+          right: 50%;
+          transform: translateY(-50%) translateX(50%);
+          pointer-events: none;
+        }
+
+        .review__preview:hover:before {
+          content: '';
+          position: absolute;
+          width: 48px;
+          height: 48px;
+          background: url("https://i.citrus.ua/uploads/promo/realme/review/play_video.svg"),
+          #FDC800;
+          border-radius: 50px;
+
+          top: 50%;
+          right: 50%;
+          transform: translateY(-50%) translateX(50%);
+        }
+
+        .realme-review__wrapper .realme-review__swiper-pagination {
+          border-radius: 50%;
+          position: relative;
+          transition: all 0.2s ease-in;
+          padding-top: 28px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .realme-review__wrapper .realme-review__swiper-pagination.swiper-pagination-lock {
+          display: none;
+        }
+
+        .realme-review__wrapper .swiper-pagination-bullet {
+          background: #fff;
+          opacity: 0.5;
+          transition: .3s;
+          width: 6px;
+          height: 6px;
+        }
+
+        .realme-review__wrapper .swiper-pagination-bullet-active {
+          opacity: 1;
+          width: 8px;
+          height: 8px;
+        }
+
+        /*.realme-review__swiper-next,*/
+        /*.realme-review__swiper-prev {*/
+        /*  width: 12px;*/
+        /*  height: 20px;*/
+        /*  background-color: #fff;*/
+        /*  border-radius: 50px;*/
+        /*  padding: 20px;*/
+        /*  outline:none;*/
+        /*}*/
+
+        /*.realme-review__swiper-next {*/
+        /*  background: url("https://i.citrus.ua/uploads/promo/realme/review/review-arrow-right.svg") no-repeat  12px center,*/
+        /*#FFF;*/
+        /*  top: 42%;*/
+        /*  right: -20px;*/
+        /*  z-index: 2;*/
+        /*  transition: .3s;*/
+        /*}*/
+
+        /*.realme-review__swiper-prev {*/
+        /*  background: url("https://i.citrus.ua/uploads/promo/realme/review/review-arrow.svg") no-repeat  12px center,*/
+        /*  #FFF;*/
+        /*  top: 42%;*/
+        /*  left: -20px;*/
+        /*  z-index: 2;*/
+        /*  transition: background .3s;*/
+        /*}*/
+
+        /*.realme-review__swiper-next:hover {*/
+        /*  background: url("https://i.citrus.ua/uploads/promo/realme/review/review-arrow-hover.svg") no-repeat  14px center,*/
+        /*  #000;*/
+        /*  transform: rotate(360deg);*/
+        /*}*/
+
+        /*.realme-review__swiper-prev:hover {*/
+        /*  background: url("https://i.citrus.ua/uploads/promo/realme/review/review-arrow-hover.svg") no-repeat  14px center,*/
+        /*  #000;*/
+        /*  transform: rotate(180deg);*/
+        /*}*/
+
+        .realme-review__swiper-button {
+          width: 40px;
+          height: 40px;
+          background: #FFFFFF;
+          border-radius: 50%;
+          z-index: 1;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        .realme-review__swiper-button:hover {
+          background: #202020;
+          box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .realme-review__swiper-button:focus {
+          outline: none;
+        }
+
+        .realme-review__swiper-button:hover::before,
+        .realme-review__swiper-button:hover::after {
+          background: #FFFFFF;
+        }
+
+        .realme-review__swiper-button.swiper-button-disabled {
+          opacity: 0.5;
+          pointer-events: all;
+          background: #ffffff;
+          box-shadow: none;
+        }
+
+        .realme-review__swiper-button.swiper-button-disabled::before,
+        .realme-review__swiper-button.swiper-button-disabled::after {
+          background: #D8D8D8;
+        }
+
+        .realme-review__swiper-prev {
+          left: -20px;
+        }
+
+        .realme-review__swiper-prev::before {
+          content: '';
+          position: absolute;
+          height: 2px;
+          width: 15px;
+          left: 12px;
+          top: 24px;
+          background: #D8D8D8;
+          transform: rotate(45deg);
+        }
+
+        .realme-review__swiper-prev::after {
+          content: '';
+          position: absolute;
+          height: 2px;
+          width: 15px;
+          left: 12px;
+          top: 14px;
+          background: #D8D8D8;
+          transform: rotate(-45deg);
+        }
+
+        .realme-review__swiper-next {
+          right: -20px;
+        }
+
+        .realme-review__swiper-next::before {
+          content: '';
+          position: absolute;
+          height: 2px;
+          width: 15px;
+          left: 14px;
+          top: 14px;
+          background: #D8D8D8;
+          transform: rotate(45deg);
+        }
+
+        .realme-review__swiper-next::after {
+          content: '';
+          position: absolute;
+          height: 2px;
+          width: 15px;
+          left: 14px;
+          top: 24px;
+          background: #D8D8D8;
+          transform: rotate(-45deg);
+        }
+
+        @media screen and (max-width: 1365px) {
+          .realme-review:before {
+            height: 260px;
+          }
+
+          .realme-review__swiper-next,
+          .realme-review__swiper-prev {
+            display: none;
+          }
+        }
+
+        @media screen and (max-width: 1023px) {
+          .realme-review:before {
+            height: 192px;
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+          .realme-review {
+            padding: 0 16px 40px 16px;
+          }
+
+          .realme-review__title img {
+            padding-top: 50px;
+            margin: 0 auto 20px auto;
+          }
+
+          .realme-review__wrapper .realme-review__swiper-pagination {
+            padding-bottom: 5px;
+          }
+        }
+
+        @media screen and (max-width: 560px) {
+          .review__preview {
+            max-height: 400px;
+          }
+
+          .review__preview img {
+            width: 100%;
+            max-width: 320px;
+            height: 190px;
+            margin: 0 auto;
+          }
+        }
+
+        /**************************** History Section ****************************/
+        .realme-history {
+          padding-top: 100px;
+          padding-bottom: 108px;
+          position: relative;
+          background-color: #ffffff;
+        }
+
+        .realme-history::before {
+          content: '';
+          position: absolute;
+          top: 100px;
+          left: calc(50% - 860px);
+          width: 282px;
+          height: 363px;
+          background: url('https://i.citrus.ua/uploads/promo/realme/history/bg-left.png') no-repeat center/contain;
+        }
+
+        .realme-history::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 321px;
+          height: 366px;
+          background: url('https://i.citrus.ua/uploads/promo/realme/history/bg-right.png') no-repeat center/contain;
+        }
+
+        .realme-history__title {
+          text-align: center;
+          font-size: 48px;
+          font-weight: bold;
+          margin-bottom: 24px;
+          text-transform: uppercase;
+        }
+
+        .realme-history__description {
+          max-width: 800px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 60px;
+        }
+
+        .realme-history__info {
+          font-size: 18px;
+          line-height: 1.5;
+          text-align: center;
+          color: #4E4E4E;
+        }
+
+        .realme-history__info:not(:last-child) {
+          margin-bottom: 16px;
+        }
+
+        .realme-history__image-overflow {
+          overflow: hidden;
+          height: 384px;
+        }
+
+        .realme-history__image {
+          max-width: 1756px;
+          overflow-x: auto;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .realme-history__preview {
+          min-width: 1756px;
+          padding-right: 15px;
+        }
+
+        .realme-history__scroll {
+          display: none;
+        }
+
+        @media screen and (max-width: 1750px) {
+          .realme-history__image-overflow {
+            margin-bottom: 24px;
+          }
+
+          .realme-history__scroll {
+            display: flex;
+            width: 168px;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: space-between;
+            align-items: center;
+          }
+        }
+
+        @media screen and (max-width: 1365px) {
+          .realme-history {
+            padding-top: 60px;
+            padding-bottom: 60px;
+          }
+
+          .realme-history::before {
+            width: 170px;
+            height: 218px;
+            left: 0;
+            top: 134px;
+          }
+
+          .realme-history::after {
+            width: 161px;
+            height: 184px;
+          }
+
+          .realme-history__title {
+            font-size: 24px;
+          }
+
+          .realme-history__description {
+            max-width: 600px;
+            margin-bottom: 33px;
+          }
+
+          .realme-history__info {
+            font-size: 16px;
+          }
+        }
+
+        @media screen and (max-width: 1023px) {
+          .realme-history {
+            padding-top: 40px;
+            padding-bottom: 50px;
+          }
+
+          .realme-history::before {
+            width: 124px;
+            height: 160px;
+            left: -40px;
+            top: 233px;
+          }
+
+          .realme-history::after {
+            width: 113px;
+            height: 129px;
+          }
+
+          .realme-history__image-overflow {
+            height: 325px;
+          }
+
+          .realme-history__preview {
+            min-width: 1507px;
+          }
+
+          .realme-history__description {
+            margin-bottom: 42px;
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+          .realme-history {
+            padding-bottom: 40px;
+          }
+
+          .realme-history::before {
+            display: none;
+          }
+
+          .realme-history::after {
+            display: none;
+          }
+
+          .realme-history__title {
+            font-size: 20px;
+          }
+
+          .realme-history__description {
+            padding-left: 16px;
+            padding-right: 16px;
+            font-size: 12px;
+            margin-bottom: 37px;
+          }
+
+          .realme-history__info {
+            text-align: left;
+            font-size: 12px;
+          }
+        }
+
+        /*achievements*/
+        .realme-achievements {
+          padding-top: 100px;
+          padding-bottom: 100px;
+          background-color: #F8F8F8;
+          position: relative;
+        }
+
+        .realme-achievements::before {
+          content: '';
+          position: absolute;
+          bottom: -560px;
+          left: -213px;
+          width: 693px;
+          pointer-events: none;
+          height: 878px;
+          background: url('https://i.citrus.ua/uploads/promo/realme/achievements/bg-left.png') no-repeat center/contain;
+        }
+
+        .realme-achievements::after {
+          content: '';
+          width: 329px;
+          height: 259px;
+          position: absolute;
+          top: -72px;
+          right: calc(100% - 1864px);
+          background: url('https://i.citrus.ua/uploads/promo/realme/achievements/bg-right.png') no-repeat center/contain;
+        }
+
+        .realme-achievements__title {
+          color: #000000;
+          font-size: 40px;
+          font-weight: bold;
+          text-align: center;
+          margin-bottom: 24px;
+          text-transform: uppercase;
+        }
+
+        .realme-achievements__description {
+          max-width: 828px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 60px;
+        }
+
+        .realme-achievements__info {
+          font-size: 18px;
+          line-height: 1.5;
+          text-align: center;
+        }
+
+        .realme-achievements__info:not(:last-child) {
+          margin-bottom: 20px;
+        }
+
+        .realme-achievements__image-overflow {
+          overflow: hidden;
+          height: 466px;
+        }
+
+        .realme-achievements__image {
+          max-width: 1449px;
+          margin-left: auto;
+          margin-right: auto;
+          overflow: auto;
+        }
+
+        .realme-achievements__preview {
+          min-width: 1449px;
+        }
+
+        .realme-achievements__scroll {
+          display: none;
+        }
+
+        @media screen and (max-width: 1809px) {
+          .realme-achievements::before {
+            display: none;
+          }
+        }
+
+        @media screen and (max-width: 1450px) {
+          .realme-achievements__image-overflow {
+            margin-bottom: 40px;
+          }
+
+          .realme-achievements__scroll {
+            display: flex;
+            width: 168px;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: space-between;
+            align-items: center;
+          }
+        }
+
+        @media screen and (max-width: 1365px) {
+          .realme-achievements {
+            padding-top: 60px;
+            padding-bottom: 83px;
+          }
+
+          .realme-achievements::before {
+            display: none;
+          }
+
+          .realme-achievements::after {
+            width: 207px;
+            height: 163px;
+            right: calc(100% - 1029px);
+          }
+
+          .realme-achievements__title {
+            font-size: 24px;
+          }
+
+          .realme-achievements__description {
+            max-width: 600px;
+            margin-bottom: 13px;
+          }
+
+          .realme-achievements__info {
+            font-size: 16px;
+          }
+
+          .realme-achievements__image {
+            max-width: 1416px;
+          }
+
+          .realme-achievements__preview {
+            min-width: 1416px;
+          }
+
+          .realme-achievements__image-overflow {
+            height: 458px;
+          }
+        }
+
+        @media screen and (max-width: 1023px) {
+          .realme-achievements {
+            padding-top: 40px;
+            padding-bottom: 49px;
+          }
+
+          .realme-achievements::after {
+            width: 151px;
+            height: 119px;
+            right: calc(100% - 773px);
+            top: -58px;
+          }
+
+          .realme-achievements__description {
+            margin-bottom: 37px;
+          }
+
+          .realme-achievements__image-overflow {
+            height: 395px;
+          }
+
+          .realme-achievements__image {
+            max-width: 1218px;
+          }
+
+          .realme-achievements__preview {
+            min-width: 1218px;
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+          .realme-achievements__title {
+            font-size: 20px;
+          }
+
+          .realme-achievements::after {
+            width: 95px;
+            height: 75px;
+            right: 0;
+            top: -45px;
+          }
+
+          .realme-achievements__description {
+            padding-left: 16px;
+            padding-right: 16px;
+          }
+
+          .realme-achievements__info {
+            font-size: 12px;
+            text-align: left;
+          }
+        }
+
+        /*year-modal*/
+        .review-modal {
+          position: fixed;
+          top: 0;
+          z-index: 25;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          background-color: rgba(0,0,0, 0.5);
+          display: none;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .review-modal--show {
+          display: flex;
+        }
+
+        .review-modal__videous {
+          margin-left: 36px;
+          margin-right: 36px;
+          max-width: 1156px;
+          width: 100%;
+          padding-bottom: 651px;
+          position: relative;
+        }
+
+        .review-modal__videous iframe {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: none;
+        }
+
+        .review-modal__videous a {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: none;
+        }
+
+        .review-modal__close {
+          position: absolute;
+          top: -20px;
+          right: -20px;
+          width: 40px;
+          height: 40px;
+          background-color: #ffffff;
+          border-radius: 50%;
+        }
+
+        .review-modal__close::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          width: 20px;
+          height: 2px;
+          background-color: #000000;
+        }
+
+        .review-modal__close::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+          width: 20px;
+          height: 2px;
+          background-color: #000000;
+        }
+
+        @media screen and (max-width: 1300px) {
+          .review-modal__videous {
+            padding-bottom: 52.7%;
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+          .review-modal__videous {
+            margin-left: 16px;
+            margin-right: 16px;
+            padding-bottom: 54%;
+          }
+
+          .review-modal__close {
+            display: none;
+          }
+
+          .review-modal__close::before,
+          .review-modal__close::after {
+            width: 15px;
+          }
+        }
+
+        /************************************** Footer BLOCK ******************************/
+        .valentine-footer {
+          padding-top: 120px;
+          padding-bottom: 80px;
+          background-color: #ffffff;
+        }
+        .valentine-footer__list {
+          display: flex;
+          padding: 0 12px;
+          max-width: 1320px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .valentine-footer__list .list-col {
+          flex-basis: calc(100% / 3);
+          margin: 0 12px;
+        }
+        .valentine-footer__list .list-col .col__item {
+          background: #ffffff;
+          border-radius: 10px;
+          padding: 24px 24px 0;
+          margin-bottom: 19px;
+        }
+        .valentine-footer__list .list-col .col__item .item__title {
+          font-size: 24px;
+          line-height: 28px;
+          margin-bottom: 26px;
+          margin-top: 0;
+        }
+        .valentine-footer__list .list-col .col__item .item__text {
+          font-size: 16px;
+          line-height: 150%;
+          color: rgba(0, 0, 0, 0.54);
+          padding-bottom: 24px;
+          margin: 0;
+        }
+        .valentine-footer__list .list-col .col__item .item__list {
+          padding-left: 18px;
+          margin: 0;
+          list-style: disc;
+          font-size: 16px;
+          line-height: 140%;
+          padding-bottom: 24px;
+          color: rgba(0, 0, 0, 0.54);
+        }
+        .valentine-footer__list .list-col .col__item .item__list li {
+          padding-bottom: 7px;
+        }
+        @media screen and (max-width: 1365px) {
+          .valentine-footer {
+            padding-top: 8%;
+          }
+        }
+        @media screen and (max-width: 1024px) {
+          .valentine-footer {
+            padding-bottom: 60px;
+          }
+          .valentine-footer__list .list-col .col__item .item__title {
+            font-size: 22px;
+            line-height: 26px;
+          }
+          .valentine-footer__list .list-col .col__item .item__text {
+            font-size: 14px;
+            line-height: 140%;
+            padding-bottom: 12px;
+          }
+          .valentine-footer__list .list-col .col__item .item__list {
+            font-size: 14px;
+            line-height: 140%;
+            padding-bottom: 12px;
+          }
+        }
+        @media screen and (max-width: 768px) {
+          .valentine-footer {
+            padding-bottom: 40px;
+          }
+          .valentine-footer__list {
+            flex-direction: column;
+            padding: 0 8px;
+          }
+          .valentine-footer__list .list-col {
+            margin: 0;
+          }
+          .valentine-footer__list .list-col .col__item {
+            padding: 24px 16px 0;
+            margin-bottom: 24px;
+          }
+          .valentine-footer__list .list-col .col__item .item__title {
+            font-size: 20px;
+            line-height: 23px;
+            margin-bottom: 23px;
+          }
+          .valentine-footer__list .list-col .col__item .item__text {
+            font-size: 12px;
+          }
+          .valentine-footer__list .list-col .col__item .item__list {
+            font-size: 12px;
+            padding-left: 16px;
+          }
+        }
+
+        /*faq*/
+        .valentine-faq {
+          padding-bottom: 20px;
+          background-color: #FFFFFF;
+        }
+
+        .valentine-faq__wrapper {
+          display: flex;
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 1320px;
+        }
+
+        .valentine-faq__title {
+          max-width: 327px;
+          margin-right: 8px;
+          margin-bottom: 0;
+          border-radius: 10px;
+          padding-top: 170px;
+          padding-left: 12px;
+          padding-right: 12px;
+          text-align: center;
+          color: rgba(0, 0, 0, 0.87);
+          font-size: 26px;
+          position: relative;
+          background: url('https://i.citrus.ua/uploads/promo/black-friday-static/faq-question.png') no-repeat top 30px center #ffffff;
+        }
+        .valentine-faq__items {
+          max-width: 983px;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+        .valentine-faq__item {
+          background-color: #ffffff;
+          margin-bottom: 8px;
+          border-radius: 10px;
+        }
+        .valentine-faq__item:hover {
+          box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.12),
+          0px 3px 14px rgba(0, 0, 0, 0.06),
+          0px 8px 10px rgba(0, 0, 0, 0.07);
+          transition: 0.25s;
+        }
+        .valentine-faq__item:last-child {
+          margin-bottom: 0;
+        }
+        .valentine-faq__answer {
+          height: 0;
+          overflow: hidden;
+          transition: height 0.2s linear;
+        }
+        .valentine-faq__item--open {
+          padding-bottom: 24px;
+        }
+        .valentine-faq__item--open .valentine-faq__question::after {
+          transform: rotate(180deg);
+        }
+        .valentine-faq__question {
+          text-align: left;
+          font-size: 18px;
+          line-height: 1.2;
+          color: rgba(0, 0, 0, 0.87);
+          margin: 0;
+          position: relative;
+          padding-left: 24px;
+          padding-right: 66px;
+          padding-top: 24px;
+          padding-bottom: 24px;
+          cursor: pointer;
+        }
+        .valentine-faq__question::after {
+          position: absolute;
+          content: '';
+          top: 30px;
+          right: 42px;
+          pointer-events: none;
+          width: 13px;
+          height: 12px;
+          transition: 0.25s;
+          background: url('https://i.citrus.ua/uploads/promo/black-friday-static/faq-ic.png') no-repeat center;
+        }
+        .valentine-faq__answer-text {
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.54);
+          margin-bottom: 12px;
+          padding-left: 24px;
+          padding-right: 56px;
+        }
+        .valentine-faq__answer-items {
+          padding-left: 24px;
+          padding-right: 56px;
+          margin-bottom: 12px;
+        }
+        .valentine-faq__answer-item {
+          position: relative;
+          padding-left: 16px;
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.54);
+          margin-bottom: 12px;
+        }
+        .valentine-faq__answer-item::before {
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background-color: rgba(0, 0, 0, 0.54);
+          left: 0;
+          top: 4px;
+          position: absolute;
+          content: '';
+        }
+        .valentine-faq__answer-text:last-child {
+          margin-bottom: 0;
+        }
+
+        .valentine-faq__main-sublist {
+          padding-left: 42px;
+          padding-right: 56px;
+        }
+
+        .valentine-faq__main-sublist b {
+          margin-bottom: 10px;
+          display: block;
+          font-weight: bold;
+        }
+
+        .valentine-faq__main-sublist li {
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.54);
+          margin-bottom: 10px;
+        }
+
+        .valentine-faq__second-list {
+          margin-bottom: 15px;
+        }
+
+        .valentine-faq__second-list li {
+          position: relative;
+          padding-left: 16px;
+        }
+
+        .valentine-faq__second-list li::before {
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background-color: rgba(0, 0, 0, 0.54);
+          left: 0;
+          top: 4px;
+          position: absolute;
+          content: '';
+        }
+
+        .teaser-header__text-content {
+          font-size: 26px;
+          font-weight: bold;
+          text-align: center;
+          color: #fff;
+          margin-bottom: 24px;
+        }
+
+
+
+        .valentine-faq__main-sublist--special b {
+          display: initial;
+        }
+
+        .valentine-faq__answer-sublist {
+          margin-left: 20px;
+          margin-top: 10px;
+        }
+
+        .valentine-faq__answer-sublist li {
+          margin-bottom: 10px;
+        }
+        @media screen and (max-width: 1365px) {
+          .valentine-faq__wrapper {
+            flex-direction: column;
+          }
+          .valentine-faq__title {
+            background: transparent;
+            max-width: none;
+            text-align: left;
+            margin-bottom: 30px;
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-top: 0;
+          }
+
+          .teaser-header__text-content {
+            font-size: 22px;
+            margin-bottom: 16px;
+          }
+          .valentine-faq__items {
+            max-width: none;
+            width: calc(100% - 16px);
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      </style>
+
+      <div class="realme">
+        <header class="realme-header realme__header">
+          <div class="realme-header__wrapper">
+            <div class="swiper-container realme-header__swiper">
+              <div class="swiper-wrapper realme-header__swiper-wrapper" id="realmeBanners">
+                <div class="swiper-slide">
+                  <a class="realme-header__banner-link" target="_blank" href="https://www.citrus.ua/smartfony/realme-5-pro-4128gb-blue-659509.html">
+                    <picture>
+                      <source srcset="https://i.citrus.ua/uploads/promo/realme/header/new/pro5-ru.jpg" media="(min-width: 561px)">
+                      <img class="realme-header__banner" src="https://i.citrus.ua/uploads/promo/realme/header/new/pro5-960-ru.jpg" alt="">
+                    </picture>
+                  </a>
+                </div><!--      pro5          -->
+
+                <div class="swiper-slide">
+                  <picture>
+                    <source srcset="https://i.citrus.ua/uploads/promo/realme/header/banner-new-ru.jpg" media="(min-width: 561px)">
+                    <img class="realme-header__banner" src="https://i.citrus.ua/uploads/promo/realme/header/banner-01-960-ru.jpg" alt="">
+                  </picture>
+                </div><!--      Protiv vseh          -->
+
+                <div class="swiper-slide">
+                  <a class="realme-header__banner-link" target="_blank" href="https://www.citrus.ua/smartfony/realme-c2-232gb-blue-659499.html">
+                    <picture>
+                      <source srcset="https://i.citrus.ua/uploads/promo/realme/header/new/c2-ru.jpg" media="(min-width: 561px)">
+                      <img class="realme-header__banner" src="https://i.citrus.ua/uploads/promo/realme/header/c2-960-ru.jpg" alt="">
+                    </picture>
+                  </a>
+                </div><!--C2-->
+
+                <div class="swiper-slide">
+                  <a class="realme-header__banner-link" target="_blank" href="https://www.citrus.ua/smartfony/realme-xt-8128gb-blue-gradient-659514.html">
+                    <picture>
+                      <source srcset="https://i.citrus.ua/uploads/promo/realme/header/new/xt-ru.jpg" media="(min-width: 561px)">
+                      <img class="realme-header__banner" src="https://i.citrus.ua/uploads/promo/realme/header/new/xt-960-ru.jpg" alt="">
+                    </picture>
+                  </a>
+                </div><!--       xt         -->
+
+                <div class="swiper-slide">
+                  <a class="realme-header__banner-link" target="_blank" href="https://www.citrus.ua/naushniki/besprovodnye-naushniki-realme-buds-air-white-661356.html">
+                    <picture>
+                      <source srcset="https://i.citrus.ua/uploads/promo/realme/header/air-buds-ru.jpg" media="(min-width: 561px)">
+                      <img class="realme-header__banner" src="https://i.citrus.ua/uploads/promo/realme/header/buds-air-960-ru.jpg" alt="">
+                    </picture>
+                  </a>
+                </div><!--     buds air           -->
+
+                <div class="swiper-slide">
+                  <a class="realme-header__banner-link" target="_blank" href="https://www.citrus.ua/naushniki/naushniki-realme-buds-wireless-yellow-661655.html">
+                    <picture>
+                      <source srcset="https://i.citrus.ua/uploads/promo/realme/header/wireless-ru.jpg" media="(min-width: 561px)">
+                      <img class="realme-header__banner" src="https://i.citrus.ua/uploads/promo/realme/header/wireless-960-ru.jpg" alt="">
+                    </picture>
+                  </a>
+                </div><!--       buds wireless         -->
+
+                <div class="swiper-slide">
+                  <a class="realme-header__banner-link" target="_blank" href="https://www.citrus.ua/smartfony/realme-x2-pro-8128gb-blue-659521.html">
+                    <picture>
+                      <source srcset="https://i.citrus.ua/uploads/promo/realme/header/new/x2pro-ru.jpg" media="(min-width: 561px)">
+                      <img class="realme-header__banner" src="https://i.citrus.ua/uploads/promo/realme/header/new/x2pro-960-ru.jpg" alt="">
+                    </picture>
+                  </a>
+                </div><!--x2 pro-->
+              </div>
+              <div class="swiper-pagination realme-header__swiper-pagination"></div>
+            </div>
+
+            <div class="swiper-button-prev realme-header__swiper-button realme-header__swiper-button--prev"></div>
+            <div class="swiper-button-next realme-header__swiper-button realme-header__swiper-button--next"></div>
+          </div>
+        </header>
+
+        <section class="realme-categories realme__categories">
+          <h1 class="realme-categories__title">REALME</h1>
+          <div class="realme-categories__description">
+            <p class="realme-categires__info">Я против цензуры и против расизма<br>
+              Я против стандартов и против сексизма<br>
+              Я против системы и я против всех<br>
+              Я настоящий, я трушный, свой для своих</p>
+
+            <p class="realme-categires__info">Я за четкие фотки и мега тусовки<br>
+              За хайп в соц. сетях и прикольные съемки<br>
+              Я за позитив и все лучшее - мне<br>
+              Я за все новое и я за realme</p>
+          </div>
+
+          <ul class="realme__categories__items" id="realmeCategories">
+            <li class="realme__categories__item">
+              <a class="realme__categories__item-link" target="_blank" href="https://www.citrus.ua/smartfony/brand-realme/">
+                <div class="realme__categories__image">
+                  <img class="realme__categories__preview"
+                       srcset="https://i.citrus.ua/uploads/promo/realme/categories/smart-phone-2x.png 2x"
+                       src="https://i.citrus.ua/uploads/promo/realme/categories/smart-phone-1x.png" alt="">
+                </div>
+
+                <p class="realme__categories__item-title">Смартфоны</p>
+              </a>
+            </li>
+
+            <li class="realme__categories__item">
+              <a class="realme__categories__item-link" target="_blank" href="https://www.citrus.ua/naushniki/brand-realme/">
+                <div class="realme__categories__image">
+                  <img class="realme__categories__preview"
+                       srcset="https://i.citrus.ua/uploads/promo/realme/categories/headphones-2x.png 2x"
+                       src="https://i.citrus.ua/uploads/promo/realme/categories/headphones-1x.png" alt="">
+                </div>
+
+                <p class="realme__categories__item-title">Наушники</p>
+              </a>
+            </li>
+
+            <li class="realme__categories__item">
+              <a class="realme__categories__item-link" target="_blank" href="https://www.citrus.ua/fitnes-trekery-160/brand-realme/">
+                <div class="realme__categories__image">
+                  <img class="realme__categories__preview"
+                       srcset="https://i.citrus.ua/uploads/promo/realme/categories/fitnes-treker-2x.png 2x"
+                       src="https://i.citrus.ua/uploads/promo/realme/categories/fitnes-treker-1x.png" alt="">
+                </div>
+
+                <p class="realme__categories__item-title">Фитнес-трекеры</p>
+              </a>
+            </li>
+
+            <li class="realme__categories__item">
+              <a class="realme__categories__item-link" target="_blank" href="https://www.citrus.ua/portativnye-batarei/brand-realme/">
+                <div class="realme__categories__image">
+                  <img class="realme__categories__preview"
+                       srcset="https://i.citrus.ua/uploads/promo/realme/categories/acc-2x.png 2x"
+                       src="https://i.citrus.ua/uploads/promo/realme/categories/acc-1x.png" alt="">
+                </div>
+
+                <p class="realme__categories__item-title">Технические аксессуары</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="realme-smartphones realme__smartphones">
+          <div class="realme-smartphones__wrapper">
+            <div class="realme-smartphones__title">
+              <img src="https://i.citrus.ua/uploads/promo/realme/categories/smartphones/phones-x2-ru.png" alt="">
+            </div>
+            <ul class="realme-smartphones__list" id="smartphonesList">
+            </ul>
+          </div>
+        </section>
+
+        <section class="products-promo">
+          <div class="promo-section promo-section_extra-col smartphone-promo">
+<!--            <div class="promo-section__header">-->
+<!--              <img class="promo-section__title-img" style="max-width: 650px;" src="https://i.citrus.ua/uploads/promo/realme/categories/smartphones/phones-x2-ru.png" alt="Smartphones">-->
+<!--            </div>-->
+
+            <div class="promo-section__body">
+              <div class="grid-row">
+                <div class="promo-effect promo-effect-2">
+                  <img src="https://i.citrus.ua/uploads/promo/realme/categories/bg/video-x2.png" alt="">
+                </div>
+
+                <div class="promo-effect promo-effect-1">
+                  <img src="https://i.citrus.ua/uploads/promo/realme/categories/bg/camera-yellow-x2.png" alt="">
+                </div>
+
+                <div class="grid-col">
+                  <a target="_blank" href="https://www.citrus.ua/smartfony/realme-5-pro-4128gb-blue-659509.html" class="promo-card promo-card_link product-card_large product-card_large_light" id="659509">
+                    <div class="promo-card__header">
+                      <img src="https://i.citrus.ua/uploads/promo/realme/categories/smartphones/x2-logo/real_pro-2x.png" alt="realme 5 pro" class="promo-card__header-img">
+                      <div class="promo-card__timer">
+                        <p class="promo-card__timer-info">
+                          Успей!<br>Осталось
+                        </p>
+                        <div class="promo-card__timer-counter">
+                          <p class="promo-card__timer-count">
+                            <b id="days">00</b>
+                            <span>дня</span>
+                          </p>
+                          <p class="promo-card__timer-count">
+                            <b id="hours">00</b>
+                            <span>часов</span>
+                          </p>
+                          <p class="promo-card__timer-count">
+                            <b id="minutes">00</b>
+                            <span>мин</span>
+                          </p>
+                          <p class="promo-card__timer-count promo-card__timer-count--seconds">
+                            <b id="seconds">00</b>
+                            <span>сек</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="promo-card__body">
+                      <img src="https://i.citrus.ua/uploads/promo/realme/categories/bg/black_bg_2.png" alt="" class="img_bg">
+                      <img src="https://i.citrus.ua/uploads/promo/realme/categories/smartphones/5-pro-new.png" alt="" class="img_product">
+                    </div>
+                    <div class="promo-card__footer">
+                      <div class="promo-price">
+                        <span class="promo-price__old">4 499</span>
+                        <span class="promo-price__value">5 499 ₴</span>
+                      </div>
+
+                      <div class="promo-controls">
+                        <span class="promo-buy">Купить</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="grid-col">
+                  <a target="_blank" href="https://www.citrus.ua/smartfony/realme-x2-pro-8128gb-white-659518.html" class="promo-card promo-card_link product-card_large" id="659521">
+                    <div class="promo-card__header">
+                      <img src="https://i.citrus.ua/uploads/promo/realme/categories/smartphones/x2-logo/X2_PRO-2x.png" alt="realme x2 pro" class="promo-card__header-img">
+                    </div>
+                    <div class="promo-card__body">
+                      <img src="https://i.citrus.ua/uploads/promo/realme/categories/bg/yellow_bg.png" alt="" class="img_bg">
+                      <img src="https://i.citrus.ua/uploads/promo/realme/categories/smartphones/realme-x2-new.png" alt="" class="img_product">
+                    </div>
+                    <div class="promo-card__footer">
+                      <div class="promo-price">
+                        <span class="promo-price__value">11 999 ₴</span>
+                      </div>
+
+                      <div class="promo-controls">
+                        <span class="promo-buy">Купить</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="grid-col grid-col--reverse">
+                  <a target="_blank" href="https://www.citrus.ua/smartfony/realme-c2-232gb-blue-659499.html" class="promo-card promo-card_link product-card_large" id="659499">
+                    <div class="promo-card__header">
+                      <img src="https://i.citrus.ua/uploads/promo/realme/categories/smartphones/x2-logo/real_c2-2x.png" alt="realme c2" class="promo-card__header-img">
+                    </div>
+                    <div class="promo-card__body">
+                      <img src="https://i.citrus.ua/uploads/promo/realme/categories/bg/yellow_bg.png" alt="" class="img_bg">
+                      <img src="https://i.citrus.ua/uploads/promo/realme/categories/smartphones/c2-new.png" alt="" class="img_product">
+                    </div>
+                    <div class="promo-card__footer">
+                      <div class="promo-price">
+                        <span class="promo-price__value">2 799 ₴</span>
+                      </div>
+
+                      <div class="promo-controls">
+                        <span class="promo-buy">Купить</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="grid-col">
+
+                  <a target="_blank" href="https://www.citrus.ua/smartfony/realme-xt-8128gb-blue-gradient-659514.html" class="promo-card promo-card_link product-card_large product-card_large_light" id="659514">
+                    <div class="promo-card__header">
+                      <img src="https://i.citrus.ua/uploads/promo/realme/categories/smartphones/x2-logo/real_xt-2x.png" alt="realme xt" class="promo-card__header-img">
+                    </div>
+                    <div class="promo-card__body">
+                      <img src="https://i.citrus.ua/uploads/promo/realme/categories/bg/black_bg_2.png" alt="" class="img_bg">
+                      <img src="https://i.citrus.ua/uploads/promo/realme/categories/smartphones/xt-new.png" alt="" class="img_product">
+                    </div>
+                    <div class="promo-card__footer">
+                      <div class="promo-price">
+                        <span class="promo-price__value">7 499 ₴</span>
+                      </div>
+
+                      <div class="promo-controls">
+                        <span class="promo-buy">Купить</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="audio-section promo-section">
+            <div class="promo-section__header">
+              <img class="promo-section__title-img" style="max-width: 650px;" src="https://i.citrus.ua/uploads/promo/realme/categories/audio/audio-x2-ru.png" alt="Audio">
+            </div>
+            <div class="promo-section__body audio-section__body">
+              <div class="grid-row">
+                <div class="grid-col">
+
+                  <a target="_blank" href="https://www.citrus.ua/naushniki/besprovodnye-naushniki-realme-buds-air-white-661356.html" class="promo-card promo-card_link buds-air" id="661356">
+                    <div class="promo-info">
+                      <div class="promo-title">
+                        <div class="promo-title__brand">Realme</div>
+                        <div class="promo-title__model">Buds Air</div>
+                      </div>
+
+                      <div class="promo-price">
+                        <span class="promo-price__value">1 499 ₴</span>
+                      </div>
+
+                      <div class="promo-controls">
+                        <span class="promo-buy">Купить</span>
+                      </div>
+                    </div>
+
+                    <div class="promo-img">
+                      <img class="promo-img__bg" src="https://i.citrus.ua/uploads/promo/realme/categories/bg/yellow_bg.png" alt="">
+                      <img class="promo-img__product" src="https://i.citrus.ua/uploads/promo/realme/categories/audio/headphones.png" alt="Buds Air">
+                    </div>
+                  </a>
+
+                </div>
+
+                <div class="grid-col">
+                  <div class="grid-row grid-row_column">
+                    <div class="promo-effect promo-effect-1">
+                      <img src="https://i.citrus.ua/uploads/promo/realme/against-everyone/no_headphones.png" alt="">
+                    </div>
+
+                    <div class="grid-col grid-col_reverse">
+                      <a target="_blank" href="https://www.citrus.ua/naushniki/naushniki-realme-buds-wireless-red-661661.html" class="promo-card promo-card_link promo-card_row buds-wireless" id="661655">
+                        <div class="promo-info">
+                          <div class="promo-title">
+                            <div class="promo-title__brand">Realme</div>
+                            <div class="promo-title__model">Buds Wireless</div>
+                          </div>
+
+                          <div class="promo-price">
+                            <span class="promo-price__value">859 ₴</span>
+                          </div>
+
+                          <div class="promo-controls">
+                            <span class="promo-buy">Купить</span>
+                          </div>
+                        </div>
+
+                        <div class="promo-img">
+                          <img class="promo-img__bg" src="https://i.citrus.ua/uploads/promo/realme/categories/bg/black_bg.png" alt="">
+                          <img class="promo-img__product" src="https://i.citrus.ua/uploads/promo/realme/categories/audio/buds_wireless.png" alt="Buds Wireless">
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="grid-col">
+                      <a target="_blank" href="https://www.citrus.ua/naushniki/naushniki-realme-buds-ii-black-661663.html" class="promo-card promo-card_link promo-card_row buds-2" id="661663">
+                        <div class="promo-info">
+                          <div class="promo-title">
+                            <div class="promo-title__brand">Realme</div>
+                            <div class="promo-title__model">Buds II</div>
+                          </div>
+
+                          <div class="promo-price">
+                            <span class="promo-price__value">199 ₴</span>
+                          </div>
+
+                          <div class="promo-controls">
+                            <span class="promo-buy">Купить</span>
+                          </div>
+                        </div>
+
+                        <div class="promo-img">
+                          <img class="promo-img__bg" src="https://i.citrus.ua/uploads/promo/realme/categories/bg/yellow_bg.png" alt="">
+                          <img class="promo-img__product" src="https://i.citrus.ua/uploads/promo/realme/categories/audio/buds2.png" alt="Buds II">
+                        </div>
+                      </a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accessorize-section promo-section">
+            <div style="display: flex; justify-content: center; align-items: center;" class="promo-section__header">
+              <img class="promo-section__title-img" src="https://i.citrus.ua/uploads/promo/realme/categories/accessories/accessories-x2-ru.png" alt="Accessories">
+            </div>
+
+            <div class="promo-section__body">
+              <div class="grid-row">
+
+                <div class="promo-effect promo-effect-1">
+                  <img src="https://i.citrus.ua/uploads/promo/realme/against-everyone/no_clock.png" alt="">
+                </div>
+
+                <div class="promo-effect promo-effect-2">
+                  <img src="https://i.citrus.ua/uploads/promo/realme/categories/accessories/no-socker-x2.png" alt="">
+                </div>
+
+                <div class="grid-col grid-col_reverse">
+                  <a target="_blank" href="https://www.citrus.ua/fitnes-trekery-160/fitnes-treker-realme-band-black-662191.html" class="promo-card promo-card_link promo-card_row realme-band">
+                    <div class="promo-info">
+                      <div class="promo-title">
+                        <div class="promo-title__brand">Realme</div>
+                        <div class="promo-title__model">Band</div>
+                      </div>
+
+                      <div class="promo-price">
+                        <span class="promo-price__value" style="opacity: 0; pointer-events: none;">559 ₴</span>
+                      </div>
+
+                      <div class="promo-controls">
+                        <span class="promo-buy">Купить</span>
+                      </div>
+                    </div>
+
+                    <div class="promo-img">
+                      <img class="promo-img__bg" src="https://i.citrus.ua/uploads/promo/realme/categories/bg/black_bg.png" alt="">
+                      <img class="promo-img__bg-2" src="https://i.citrus.ua/uploads/promo/realme/categories/bg/black_bg.png" alt="">
+                      <img class="promo-img__product" src="https://i.citrus.ua/uploads/promo/realme/categories/accessories/tennis_man%201.png" alt="Band">
+                    </div>
+                  </a>
+                </div>
+
+                <div class="grid-col">
+                  <a target="_blank" href="https://www.citrus.ua/portativnye-batarei/port-zp-realme-10-000mah-qc-18w-zhovta-662198.html" class="promo-card promo-card_link promo-card_row power-banks" id="662198">
+                    <div class="promo-info">
+                      <div class="promo-title">
+                        <div class="promo-title__brand">Realme</div>
+                        <div class="promo-title__model">Power Bank</div>
+                      </div>
+
+                      <div class="promo-price">
+                        <span class="promo-price__value">699 ₴</span>
+                      </div>
+
+                      <div class="promo-controls">
+                        <span class="promo-buy">Купить</span>
+                      </div>
+                    </div>
+
+                    <div class="promo-img">
+                      <div class="promo-img__body">
+                        <img class="promo-img__bg" src="https://i.citrus.ua/uploads/promo/realme/categories/bg/yellow_bg.png" alt="">
+                        <img class="promo-img__product" src="https://i.citrus.ua/uploads/promo/realme/categories/accessories/power_banks.png" alt="Power Bank">
+
+                      </div>
+                      <span class="battery-power">10000 mAh</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="realme__review realme-review">
+          <div class="realme-review__title">
+            <img src="https://i.citrus.ua/uploads/promo/realme/review/review-title-x2-ru.png" alt="Realme review title">
+          </div>
+
+          <div class="realme-review__wrapper">
+            <div class="swiper-container realme-review__swiper">
+              <div class="swiper-wrapper realme-review__swiper-wrapper" id="realmeReview">
+                <div class="swiper-slide slide-item swiper-slide-active">
+                  <div class="review__item">
+                    <div class="review__preview">
+                      <img class="videos__main-image" data-youtube-number="1" src="https://img.youtube.com/vi/cFfGe71PMuI/maxresdefault.jpg" alt="First photo">
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide slide-item swiper-slide-active">
+                  <div class="review__item">
+                    <div class="review__preview">
+                      <img class="videos__main-image" data-youtube-number="2" src="https://img.youtube.com/vi/j2GJQUx0XSw/maxresdefault.jpg" alt="First photo">
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide slide-item swiper-slide-active">
+                  <div class="review__item">
+                    <div class="review__preview">
+                      <img class="videos__main-image" data-youtube-number="3" src="https://img.youtube.com/vi/BegraL7rIUE/maxresdefault.jpg" alt="First photo">
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide slide-item swiper-slide-active">
+                  <div class="review__item">
+                    <div class="review__preview">
+                      <img class="videos__main-image" data-youtube-number="4" src="https://img.youtube.com/vi/ow5cKzfbp_o/maxresdefault.jpg" alt="First photo">
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide slide-item swiper-slide-active">
+                  <div class="review__item">
+                    <div class="review__preview">
+                      <img class="videos__main-image" data-youtube-number="5" src="https://img.youtube.com/vi/EvX_rLoSXOk/maxresdefault.jpg" alt="First photo">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination realme-review__swiper-pagination"></div>
+            </div>
+
+            <div class="swiper-button-prev realme-review__swiper-button realme-review__swiper-prev"></div>
+            <div class="swiper-button-next realme-review__swiper-button realme-review__swiper-next"></div>
+          </div>
+        </section>
+
+        <section class="realme-history realme__history">
+          <p class="realme-history__title">История</p>
+          <div class="realme-history__description">
+            <p class="realme-history__info">Realme была основана в мае 2018 года, зарекомендовав себя как бренд смартфонов, предлагающий устройства с высокой производительностью и модным дизайном в широком контексте электронной коммерции.</p>
+            <p class="realme-history__info">Продукты Realme сразу же после запуска получили широкое признание за свои «Производительность» и «Стиль». Бренд стремится предлагать мощную производительность, стильный дизайн, искренние услуги.</p>
+            <p class="realme-history__info">В настоящее время Realme вышла на рынки более 20 стран, таких как Украина, Китай, Испания, Италия, Франция, Англия, Индия, Индонезия, Вьетнам, Таиланд, Малайзия, Пакистан, Египет, Россия и др.</p>
+          </div>
+
+          <div class="realme-history__image-overflow">
+            <div class="realme-history__image" id="historyImage">
+              <img class="realme-history__preview" src="https://i.citrus.ua/uploads/promo/realme/history/his-x2-ru.png" alt="">
+            </div>
+          </div>
+
+          <div class="realme-history__scroll">
+            <img src="https://i.citrus.ua/uploads/promo/realme/history/arrow-left.png" alt="">
+            <img src="https://i.citrus.ua/uploads/promo/realme/history/hand.png" alt="">
+            <img src="https://i.citrus.ua/uploads/promo/realme/history/arrow-right.png" alt="">
+          </div>
+        </section>
+
+        <section class="realme-achievements realme__achievements">
+          <p class="realme-achievements__title">Достижения Бренда</p>
+          <div class="realme-achievements__description">
+            <p class="realme-achievements__info">Самый динамичный бренд смартфонов 28 октября 2019 бренд Realme, объявляет, что занимает 7-е место по статистике глобальных поставок смартфонов в третьем квартале 2019 года от Counterpoint.</p>
+            <p class="realme-achievements__info">Впервые Realme вошла в ТОП-7 брендов мобильных телефонов в 3-м квартале 2019 года. Что еще более важно, общий объем поставок в 3-м квартале составил более 10 миллионов, а годовой рост Realme достигает 808%, что занимает первое место в мире, и делает его самым быстрорастущим брендом смартфонов.</p>
+          </div>
+
+          <div class="realme-achievements__image-overflow">
+            <div class="realme-achievements__image" id="achievementsImage">
+              <img class="realme-achievements__preview" src="https://i.citrus.ua/uploads/promo/realme/achievements/achivements-new-x2-ru.png" alt="">
+            </div>
+          </div>
+
+          <div class="realme-achievements__scroll">
+            <img src="https://i.citrus.ua/uploads/promo/realme/history/arrow-left.png" alt="">
+            <img src="https://i.citrus.ua/uploads/promo/realme/history/hand.png" alt="">
+            <img src="https://i.citrus.ua/uploads/promo/realme/history/arrow-right.png" alt="">
+          </div>
+        </section>
+
+        <div class="raelme-review__modal review-modal" id="modalYoutube" data-close-modal="true">
+          <div class="review-modal__videous" id="videoList">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/cFfGe71PMuI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/j2GJQUx0XSw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/BegraL7rIUE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ow5cKzfbp_o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/EvX_rLoSXOk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button class="review-modal__close" data-close-modal="true"></button>
+          </div>
+        </div>
+
+        <section id="footerSeo" class="valentine-day__footer valentine-footer">
+          <div class="valentine-footer__list">
+            <div class="list-col">
+              <div class="col__item">
+                <h2 class="item__title">Бренд realme: выбирайте новое</h2>
+                <p class="item__text">Новое имя на ряду с устоявшимися мировыми лидерами в рейтингах гаджетов – впечатляющее зрелище. Бренд realme известен только 2 года, но его уже называют убийцей Ксиоми. Сейчас новичок занимает 7 место в рейтинге мировых продаж и это рекорд роста популярности среди смартфонов.</p>
+                <p class="item__text">История realme как самостоятельной марки началась в 2018 году. На рынке он с 2010 и ранее принадлежал известному китайскому производителю OPPO. За 2 года бренд вошел в рейтинг самых популярных в Индии, Китае и на рынках Европы. В первые 7 месяцев существования бренда было продано 4 млн товаров, в конце 2019 он вошел в 10-ку самых популярных и стал главным конкурентом Xiaomi.</p>
+              </div>
+              <div class="col__item">
+                <h2>Аксессуары realme: соберите полный комплект</h2>
+                <p class="item__text">Своя линейка аксессуаров позволяет поклонникам бренда получить всю картину и ощутить философию бренда по полной. Эргономичные и надежные чехлы для всех серий смартфонов, соответствующие им по дизайну, удобные рюкзаки и сумки для осознанного потребления, надежного хранения, и даже Power Bank в 3 цветовых решениях для стильной автономности! Техника риалми соответствует требованиям сильных личностей, которые идут в ногу со временем.</p>
+                <p class="item__text">Цитрус – лучшее место, где можно купить реалми в Украине! Мы официальные дистрибьюторы бренда, оформляем гарантию на все товары, а способ оплаты вы выбираете сами!</p>
+              </div>
+            </div>
+            <div class="list-col">
+              <div class="col__item">
+                <h2 class="item__title">Технологичность смартфонов realme для молодых и смелых!</h2>
+                <p class="item__text">В эффектной оболочке скрыты мощные инструменты продуктивности и комфорта:</p>
+                <ul class="item__list">
+                  <li>процессоры Qualcomm Snapdragon нового поколения;</li>
+                  <li>актуальные стандарты памяти: 8 Гб оперативной и 128 Гб встроенной памяти и слот для MicroSD – чтобы объем хранилища был почти безграничным!</li>
+                  <li>камеры с широким углом обзора и разрешением до 64 Мп, модели с 4 модулями основной камеры. В серии realme Х фронтальная камера – выдвижная, поддерживает разрешение 16 Мп, оснащена защитой от падений; в номерной серии, линейке Pro и моделях XT – фронтальная камера занимает крохотное пространство на передней панели, оставляя 9/10 площади дисплею с матрицей AMOLED!</li>
+                  <li>удобный интерфейс Color OS на Android открывает новый уровень многозадачности, делает ежедневные манипуляции простыми и доступными;</li>
+                  <li>биометрический датчик встроен прямо в экран. Разблокируйте смартфон одним касанием, и мгновенно приступайте к работе.</li>
+                </ul>
+                <p class="item__text">Смартфоны realme понравятся и любителям гейминга по ряду причин:</p>
+                <ul class="item__list">
+                  <li>оптимизированные свойства аккумулятора. Телефоны заряжаются более чем на половину всего за 30 минут. К примеру, realme 3 Pro может проигрывать музыку в течение 126 часов, показать 6 фильмов в качестве 1080Р к ряду, и смело выдержит 7 часов беспрерывного гейминга!</li>
+                  <li>матрица AMOLED, экстремально узкие рамки иммерсивного экрана, закаленное стекло и диагональ свыше 6 дюймов. Такой телефон создает эффект погружения при просмотре роликов, кино или в процессе игры, его удобно держать в руках. Новые впечатления по доступной цене – это реалми;</li>
+                  <li>в ассортименте есть модели с влагозащитой – must-have для тех, кто хочет играть в любых условиях!</li>
+                </ul>
+              </div>
+            </div>
+            <div class="list-col">
+              <div class="col__item">
+                <h2 class="item__title">Эффектный дизайн риалми</h2>
+                <p class="item__text">Здесь к внешней оболочке особый подход. Стильная наружность техники realme разработана при участии японского индустриального дизайнера Наото Фукасавы – любимца премиальных брендов Kaga, B&B Italia, Samsung. Корпусы имеют переливающийся неоновый блеск, напоминают грани бриллианта или природные материалы, применение которых в дизайне – уникально. Панели моделей realme X master edition повторяют структуру луковой и чесночной шелухи в теплых тонах. Эта линейка контрастирует с футуристичными холодными тонами Номерной и Pro серий.</p>
+              </div>
+              <div class="col__item">
+                <h2 class="item__title">Наушники realme – премиальное качество</h2>
+                <p class="item__text">Для создания идеального продукта, разработчики бренда привлекли экспертов в производстве аудиотехники. Результат – два поколения realme Buds. Глубокие и чистые басы, идеальная конфигурация, стильный дизайн – эти наушники отличаются высококлассным звуком и внешним видом. Их легко хранить и носить, купить наушники реалми теперь можно в Украине. Корпус наушников оснащен магнитами, они соединяются между собой, кабель сделан из термопластичного полиуретана, поэтому не путается. С максимально удобным форматом микронаушников, любимая музыка стала более доступной, в частности и по цене. С realme Buds просто заниматься спортом, путешествовать, учиться и просто слушать любимых исполнителей!</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="footerFaq" class="valentine__faq valentine-faq">
+          <div class="valentine-faq__wrapper">
+            <h2 class="valentine-faq__title">Часто задаваемые вопросы
+            </h2>
+            <ul aria-label="Accordion control" class="valentine-faq__items" data-bui-component="Accordion" itemscope="" itemtype="https://schema.org/FAQPage">
+
+              <li class="valentine-faq__item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+                <h3 class="valentine-faq__question" itemprop="name">📢 Что такое realme?
+                </h3>
+                <div class="valentine-faq__answer" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                  <div itemprop="text">
+                    <p class="valentine-faq__answer-text">Это бренд со своей уникальной философией, которая уже покорила Индию, Китай, Страны Европы, и теперь – realme в Украине! За 2 года существования, бренд ворвался в ТОП 10 самых популярных смартфонов. Это телефоны и гаджеты для молодых и смелых. Товары realme сочетают в себе высокую производительность и стильный дизайн!
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="valentine-faq__item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+                <h3 class="valentine-faq__question" itemprop="name">🧡 Какие товары у realme?
+                </h3>
+                <div class="valentine-faq__answer" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                  <div itemprop="text">
+                    <p class="valentine-faq__answer-text">В ассортименте есть смартфоны разных ценовых категорий, портативные батареи (power bank), фитнес-трекеры, наушники и фирменные аксессуары. Представители бренда анонсировали выход смарт-часов и телевизоров!</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="valentine-faq__item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+                <h3 class="valentine-faq__question" itemprop="name">🛒 Почему стоит выбрать realme?
+                </h3>
+                <div class="valentine-faq__answer" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                  <div itemprop="text">
+                    <p class="valentine-faq__answer-text">Есть одна отличительная черта в политике бренда. realme позиционирует себя как противоположный всем, остается в стороне от гонки лидирующих марок, но вмещает в себя новые технологии. Выбирая realme, вы выбираете уникальность, высокие технологии и неповторимый стиль.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="valentine-faq__item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+                <h3 class="valentine-faq__question" itemprop="name">🍊 Почему realme стоит купить в Цитрус?
+                </h3>
+                <div class="valentine-faq__answer" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                  <div itemprop="text">
+                    <p class="valentine-faq__answer-text">Цитрус – это качественное обслуживание и приятный покупательский опыт. Мы – единственный официальный дистрибьютор realme в Украине. Здесь вы получите гарантию на приобретенный товар, сможете выбрать удобный способ оплаты (наличными, картой или в кредит с фиксированным платежом), в процессе вам помогут консультанты. Покупка без рисков – это круто, акции, скидки и кэшбек – приятный бонус!</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+
+    </div>
+  </skeleton>
+</template>
+
+<script>
+  import trackUser from '~/mixins/trackUser';
+  import runInlineScriptsMixin from '~/mixins/runInlineScripts';
+
+  export default {
+    name: 'static-content',
+    analytics: {
+      pageCategoryName: 'static_page'
+    },
+    mixins: [trackUser, runInlineScriptsMixin],
+    props: {
+      data: {
+        type: Object
+      },
+      fullVersion: {
+        type: Boolean,
+        'default': false,
+      }
+    },
+    data () {
+      return {
+        html: '',
+      }
+    },
+    created () {
+      this.html = this.parseContent(this.data.content).html;
+    },
+    mounted() {
+      (function () {
+        if (!window.dataLayer) {
+          window.dataLayer = [];
+        }
+
+        // function fetchProducts(url, cb) {
+        //   const xhttp = new XMLHttpRequest();
+        //
+        //   xhttp.onreadystatechange = function () {
+        //     if (this.readyState === 4 && this.status === 200) {
+        //       cb(this);
+        //     }
+        //   };
+        //
+        //   xhttp.open('GET', url, true);
+        //   xhttp.send();
+        // }
+
+        // fetchProducts('https://api.citrus.ua/v5/products?segmentId=6448',  (res) => {
+        //   JSON.parse(res.response).data.forEach((product) => {
+        //     const productPromo = document.getElementById(product.id);
+        //
+        //     if (productPromo) {
+        //       if (product.prices.old > product.prices.price && Date.now() < new Date(2020, 4, 12).getTime()) {
+        //         initTimer();
+        //         productPromo.classList.add('promo-card--discount');
+        //         // productPromo.querySelector('.promo-price__old').innerHTML = `${product.prices.old}`;
+        //         // productPromo.querySelector('.promo-buy').textContent = 'Купить сейчас';
+        //       }
+        //
+        //       productPromo.href = `https://www.citrus.ua${product.url}`;
+        //       // productPromo.querySelector('.promo-price__value').innerHTML = `${product.prices.price} ₴`;
+        //     }
+        //   });
+        // });
+
+        // function createScript(url, onloadCb) {
+        //   const bodyElement = document.getElementsByTagName('BODY')[0];
+        //   const scriptContent = document.createElement('script');
+        //
+        //   scriptContent.type = 'text/javascript';
+        //   scriptContent.async = false;
+        //   scriptContent.src = url;
+        //   if (onloadCb) {
+        //     scriptContent.onload = onloadCb;
+        //   }
+        //   bodyElement.appendChild(scriptContent);
+        // }
+        //
+        // function renderCategories(categories) {
+        //   const realmeCategories = document.getElementById('realmeCategories');
+        //
+        //   realmeCategories.innerHTML = '';
+        //
+        //   categories.forEach((categorie) => {
+        //     realmeCategories.innerHTML += `
+        //       <div class="swiper-slide realme-categories__item">
+        //         <a class="realme-categories__item-link" href="${categorie.link}">
+        //           <div class="realme-categories__item-image">
+        //             <img class="realme-categories__item-preview" src="${categorie.preview}" alt="${categorie.title}">
+        //           </div>
+        //
+        //           <p class="realme-categories__item-title">${categorie.title}</p>
+        //         </a>
+        //       </div>
+        //     `;
+        //   });
+        // }
+        //
+        // function initSwiper() {
+        //   const bannersSwiper = new Swiper('.realme-header__swiper', {
+        //     slidesPerView: 1,
+        //     slidesPerGroup: 1,
+        //     spaceBetween: 0,
+        //     pagination: {
+        //       el: '.swiper-pagination',
+        //       clickable: true,
+        //     },
+        //     navigation: {
+        //       nextEl: '.swiper-button-next',
+        //       prevEl: '.swiper-button-prev',
+        //     },
+        //   });
+        //
+        //   const reviewSwiper = new Swiper('.realme-review__swiper', {
+        //     slidesPerView: 3,
+        //     slidesPerGroup: 1,
+        //     spaceBetween: 24,
+        //     watchOverflow: true,
+        //     breakpoints: {
+        //       767: {
+        //         slidesPerView: 2,
+        //       },
+        //       560: {
+        //         slidesPerView: 1,
+        //       },
+        //     },
+        //     pagination: {
+        //       el: '.realme-review__swiper-pagination',
+        //       clickable: true,
+        //     },
+        //     navigation: {
+        //       nextEl: '.realme-review__swiper-next',
+        //       prevEl: '.realme-review__swiper-prev',
+        //     },
+        //   });
+        // }
+
+        // function showModalYoutube() {
+        //   let videoNumber = +this.getAttribute('data-youtube-number');
+        //
+        //   let videoList = document.getElementById('videoList');
+        //   videoList.querySelector(`iframe:nth-child(${videoNumber}), a:nth-child(${videoNumber})`).style.display = 'block';
+        //
+        //   let videoModal = document.getElementById('modalYoutube');
+        //   videoModal.classList.add('review-modal--show');
+        // }
+        //
+        // function closeModal(event) {
+        //   if (!event.target.getAttribute('data-close-modal')) {
+        //     return;
+        //   }
+        //
+        //   let videoList = document.getElementById('videoList');
+        //   let frames = videoList.querySelectorAll('iframe, .video-review');
+        //
+        //   [].forEach.call(frames, function(frame) {
+        //     if(frame.tagName === "IFRAME") {
+        //       frame.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+        //     }
+        //     frame.style.display = 'none';
+        //   });
+        //
+        //
+        //   let videoModal = document.getElementById('modalYoutube');
+        //   videoModal.classList.remove('review-modal--show');
+        // }
+        //
+        // function onToggleFAQ() {
+        //   let isInAnimation = Boolean(this.getAttribute('data-in-animation'));
+        //   if (isInAnimation) {
+        //     return;
+        //   }
+        //   let parentNode = this.closest('.valentine-faq__item');
+        //   let container = parentNode.querySelector('.valentine-faq__answer');
+        //   let content = parentNode.querySelector('[itemprop="text"]');
+        //   let contentHeight = content.offsetHeight;
+        //   this.setAttribute('data-in-animation', 'true');
+        //   if (parentNode.classList.contains('valentine-faq__item--open')) {
+        //     container.style.height = contentHeight + 'px';
+        //     setTimeout( () => {
+        //       container.style.height = '0';
+        //       parentNode.classList.remove('valentine-faq__item--open');
+        //       this.removeAttribute('data-in-animation');
+        //     }, 50);
+        //   } else {
+        //     container.style.height = contentHeight + 'px';
+        //     parentNode.classList.add('valentine-faq__item--open');
+        //     setTimeout(() => {
+        //       container.style.height = 'auto';
+        //       this.removeAttribute('data-in-animation');
+        //     }, 400);
+        //   }
+        // }
+        //
+        // function addMouseScrollEvent (el) {
+        //   let pos = 0,
+        //     active = false,
+        //     mouseMoveHappened = false,
+        //     scrollInterval = null,
+        //     x = 0,
+        //     state = false;
+        //
+        //   function animateScroll (scrollTo) {
+        //     let startPosition = el.scrollLeft;
+        //     let stepsCount = 10;
+        //     let stepValue = (scrollTo - startPosition) / stepsCount * 3;
+        //
+        //     clearInterval(scrollInterval);
+        //
+        //     scrollInterval = setInterval (function () {
+        //       el.scrollLeft += stepValue;
+        //       stepsCount -= 1;
+        //
+        //       if(stepsCount <= 0) {
+        //         clearInterval(scrollInterval)
+        //       }
+        //     }, 10)
+        //   }
+        //
+        //   function onMousedown(e) {
+        //     pos = el.scrollLeft;
+        //     x = e.clientX || e.pageX;
+        //     active = true;
+        //     mouseMoveHappened = false;
+        //     e.preventDefault();
+        //   }
+        //
+        //   function onClick(e) {
+        //     active = false;
+        //     if(mouseMoveHappened) {
+        //       e.stopPropagation();
+        //       e.preventDefault();
+        //       state = false;
+        //     }
+        //   }
+        //
+        //   function onMousemove(e) {
+        //     if(active) {
+        //       let curX = e.clientX || e.pageX;
+        //
+        //       if (Math.abs(x - curX) >= 15) {
+        //         el.scrollLeft = pos - curX + x;
+        //         state = true;
+        //         mouseMoveHappened = true;
+        //       }
+        //     }
+        //   }
+        //
+        //   el.addEventListener('mousedown', onMousedown);
+        //   window.addEventListener('mousemove', onMousemove);
+        //   window.addEventListener('click', onClick);
+        // }
+
+        function initTimer() {
+          function getTimeStr(num) {
+            return num < 10 ? '0' + num : num;
+          }
+          function countdown() {
+            timerId = setTimeout(countdown, 1000);
+            const now = new Date();
+            let currentTime = now.getTime();
+            let remTime = eventTime - currentTime;
+            let s = Math.floor(remTime / 1000);
+            let m = Math.floor(s / 60);
+            let h = Math.floor(m / 60);
+            let d = Math.floor(h / 24);
+            h = h % 24;
+            m = m % 60;
+            s = s % 60;
+            if (d <= 0 && h <= 0 && m <= 0 && s <= 0) {
+              clearTimeout(timerId);
+              d = 0;
+              h = 0;
+              m = 0;
+              s = 0;
+            }
+            d = getTimeStr(d);
+            h = getTimeStr(h);
+            m = getTimeStr(m);
+            s = getTimeStr(s);
+            if (document.getElementById('days') && document.getElementById('hours') && document.getElementById('minutes') && document.getElementById('seconds')) {
+              if (d === '00') {
+                document.getElementById('days').parentElement.style.display = 'none';
+              } else {
+                document.getElementById('days').textContent = d;
+              }
+              document.getElementById('hours').textContent = h;
+              document.getElementById('minutes').textContent = m;
+              document.getElementById('seconds').textContent = s;
+            }
+          }
+          let timerId = null;
+          let year = 2020;
+          let month = 4;
+          let day = 10;
+          let startYear = 2020;
+          let startMonth = 3;
+          let startDay = 1;
+          let startDate = new Date(startYear, startMonth - 1, startDay);
+          let startTime = startDate.getTime();
+          let eventDate = new Date(year, month - 1, day);
+          let eventTime = eventDate.getTime();
+          let diffTime = eventTime - startTime;
+          countdown();
+        }
+
+        let isMobileApp = !Boolean(document.getElementById('header'));
+        if (isMobileApp) {
+          document.getElementById('footerSeo').style.display = "none";
+          document.getElementById('footerFaq').style.display = "none";
+        }
+
+        createScript('https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js', () => {
+          initSwiper();
+        });
+
+        // addMouseScrollEvent(document.getElementById('historyImage'));
+        // addMouseScrollEvent(document.getElementById('achievementsImage'));
+        //
+        // let faqButtons = document.querySelectorAll('.valentine-faq__question');
+        // [].forEach.call(faqButtons, function (button) {
+        //   button.addEventListener('click', onToggleFAQ);
+        // });
+        //
+        // let youtubeButtons = document.querySelectorAll('[data-youtube-number]');
+        // [].forEach.call(youtubeButtons, function(button) {
+        //   button.addEventListener('click', showModalYoutube);
+        // });
+        //
+        // let closeModalButtons = document.querySelectorAll('[data-close-modal]');
+        // [].forEach.call(closeModalButtons, function (button) {
+        //   button.addEventListener('click', closeModal);
+        // });
+      }());
+    },
+    destroyed () {
+      this.getTrackingForms().forEach(form => {
+          form.removeEventListener('submit', this.trackUser);
+      });
+    },
+    methods: {
+    }
+  };
+</script>

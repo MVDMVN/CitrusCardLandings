@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9bf6809e-aea2-490d-aa8e-342befd8b1ad" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1gMgppOmUYtxZDLUIv4Ts9AsLIX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Colors" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9bf6809e-aea2-490d-aa8e-342befd8b1ad" name="Default Changelist" comment="" />
+      <created>1598604391767</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598604391767</updated>
+      <workItem from="1598604393400" duration="278000" />
+      <workItem from="1598604680508" duration="37000" />
+      <workItem from="1598604726101" duration="9901000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="670" y="103" width="2255" height="1396" key="SettingsEditor" timestamp="1598605173217">
+      <screen x="0" y="23" width="1792" height="1060" />
+    </state>
+    <state x="-1359" y="-1396" width="2255" height="1396" key="SettingsEditor/-1664.-1417.2560.1417/896.-1417.2560.1417/0.23.1792.1060@-1664.-1417.2560.1417" timestamp="1598365293217" />
+    <state x="402" y="-879" key="SettingsEditor/0.23.1792.1056/-67.-1057.1920.1057@-67.-1057.1920.1057" timestamp="1598004052563" />
+    <state x="670" y="103" key="SettingsEditor/0.23.1792.1060/-67.-1057.1920.1057@0.23.1792.1060" timestamp="1598605173217" />
+  </component>
+</project>

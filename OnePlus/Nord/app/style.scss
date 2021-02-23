@@ -1,0 +1,1529 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  //margin: 0;
+  margin: 50px 0 50px 0;
+  overflow-x: hidden;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  color: transparent;
+}
+
+form select,
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding: 0 0 0 12px;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3b6d9a;
+  outline: none;
+  transition: 0.3s;
+}
+
+button {
+  display: block;
+  background: 0 0;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  line-height: 44px;
+  transition: 0.3s;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+}
+
+.nord {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+
+  .nord-header {
+    background-color: #fff;
+  }
+
+  .nord-header__container {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 16px 40px 16px;
+  }
+
+  .nord-header__content {
+    margin: 0 auto 24px auto;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .nord-header__title {
+    font-size: 42px;
+    line-height: 49px;
+    color: #000;
+    margin-bottom: 12px;
+  }
+
+  .nord-header__desc {
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+  }
+
+  .nord-header__image {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    .nord-header__container {
+      max-width: initial;
+      margin: 0 auto;
+      flex-direction: row;
+      padding: 60px 24px 40px 24px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nord-header__content {
+      max-width: 220px;
+      margin: 0 24px 0 0;
+    }
+
+    .nord-header__title {
+      font-size: 48px;
+      line-height: 56px;
+      margin-bottom: 14px;
+    }
+
+    .nord-header__desc {
+      font-size: 20px;
+      line-height: 23px;
+    }
+
+    .nord-header__image {
+      margin: 0;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .nord-header__container {
+      padding: 80px 24px 100px 24px;
+    }
+
+    .nord-header__content {
+      max-width: 300px;
+    }
+
+    .nord-header__title {
+      font-size: 66px;
+      line-height: 77px;
+      margin-bottom: 18px;
+    }
+
+    .nord-header__desc {
+      font-size: 26px;
+      line-height: 30px;
+    }
+
+    .nord-header__image {
+      max-width: 550px;
+    }
+  }
+
+  @media screen and (min-width: 1366px) {
+    .nord-header__container {
+      padding: 100px 24px 120px 24px;
+    }
+
+    .nord-header__content {
+      max-width: 430px;
+    }
+
+    .nord-header__title {
+      font-size: 92px;
+      line-height: 108px;
+      margin-bottom: 26px;
+    }
+
+    .nord-header__desc {
+      font-size: 36px;
+      line-height: 42px;
+    }
+
+    .nord-header__image {
+      max-width: 760px;
+    }
+  }
+
+  .nord-overview {
+    padding: 0 16px 40px 16px;
+  }
+
+  .nord-overview__list {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .nord-overview__item {
+    display: flex;
+    align-items: center;
+  }
+
+  .nord-overview__item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .nord-overview__image {
+    max-width: 110px;
+    width: 100%;
+    margin-right: 16px;
+  }
+
+  .nord-overview__image div.acc-image-height-container-100 {
+    height: 110px;
+  }
+
+  .nord-overview__title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000;
+  }
+
+  @media screen and (min-width: 768px) {
+    .nord-overview {
+      padding: 0 24px 80px 24px;
+    }
+
+    .nord-overview__list {
+      max-width: 660px;
+      width: 100%;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .nord-overview__item {
+      width: 45%;
+      margin-right: 24px;
+    }
+
+    .nord-overview__item:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .nord-overview {
+      padding: 0 24px 100px 24px;
+    }
+
+    .nord-overview__list {
+      max-width: 915px;
+    }
+
+    .nord-overview__title {
+      font-size: 20px;
+      line-height: 23px;
+    }
+
+    .nord-overview__image {
+      max-width: 145px;
+      margin-right: 18px;
+    }
+  }
+
+  @media screen and (min-width: 1366px) {
+    .nord-overview {
+      padding: 0 24px 120px 24px;
+    }
+
+    .nord-overview__list {
+      max-width: 1300px;
+    }
+
+    .nord-overview__item:not(:last-child) {
+      margin-bottom: 36px;
+    }
+
+    .nord-overview__title {
+      font-size: 28px;
+      line-height: 33px;
+    }
+
+    .nord-overview__image {
+      max-width: 200px;
+      margin-right: 24px;
+    }
+  }
+
+  .nord-camera {
+    background-color: #f9f9f9;
+    padding: 60px 16px 0 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nord-camera__content {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto 40px auto;
+  }
+
+  .nord-camera__title {
+    font-size: 22px;
+    line-height: 26px;
+    color: #000000;
+    margin-bottom: 14px;
+  }
+
+  .nord-camera__desc {
+    font-size: 14px;
+    line-height: 16px;
+    color: #666666;
+  }
+
+  .nord-camera__image {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .nord-camera__image div.acc-image-height-container-100 {
+    height: 255px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .nord-camera {
+      padding: 80px 0 0 0;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .nord-camera__content {
+      max-width: 220px;
+      width: 100%;
+      margin: 0 24px 0 0;
+    }
+
+    .nord-camera__image {
+      max-width: 420px;
+      margin: 0;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .nord-camera {
+      padding: 100px 0 0 0;
+    }
+
+    .nord-camera__content {
+      max-width: 300px;
+    }
+
+    .nord-camera__title {
+      font-size: 30px;
+      line-height: 35px;
+      margin-bottom: 18px;
+    }
+
+    .nord-camera__desc {
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    .nord-camera__image {
+      max-width: 570px;
+    }
+  }
+
+  @media screen and (min-width: 1366px) {
+    .nord-camera {
+      padding: 120px 0 0 0;
+    }
+
+    .nord-camera__content {
+      max-width: 425px;
+    }
+
+    .nord-camera__title {
+      font-size: 42px;
+      line-height: 49px;
+      margin-bottom: 26px;
+    }
+
+    .nord-camera__desc {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    .nord-camera__image {
+      max-width: 780px;
+    }
+  }
+
+  .nord-nightscape {
+    background: url("https://i.citrus.ua/uploads/promo/OnePlus-Nord/nightscape/nightscape-image.png")
+      no-repeat center/cover;
+  }
+
+  .nord-nightscape__title {
+    max-width: 400px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+    padding: 10px 16px 390px 16px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .nord-nightscape__title {
+      padding: 50px 16px 475px 83px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .nord-nightscape__title {
+      font-size: 18px;
+      line-height: 21px;
+      max-width: 540px;
+      padding: 80px 16px 630px 105px;
+    }
+  }
+
+  @media screen and (min-width: 1366px) {
+    .nord-nightscape__title {
+      font-size: 24px;
+      line-height: 28px;
+      max-width: 890px;
+      width: 100%;
+      padding: 120px 16px 630px 136px;
+    }
+  }
+
+  .nord-selfie {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+  }
+
+  .nord-selfie__content {
+    padding: 0 16px;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto 20px 83px;
+  }
+
+  .nord-selfie__title {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 14px;
+    color: #000000;
+  }
+
+  .nord-selfie__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nord-selfie__item:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  .nord-selfie__item-title {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 6px;
+    color: #000000;
+  }
+
+  .nord-selfie__item-desc {
+    font-size: 14px;
+    line-height: 16px;
+    color: #666666;
+  }
+
+  .nord-selfie__image {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 0 0 auto;
+  }
+
+  .nord-selfie__image div.acc-image-height-container-100 {
+    height: 165px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .nord-selfie__content {
+      max-width: 220px;
+      padding: 0;
+    }
+
+    .nord-selfie__image {
+      max-width: 500px;
+    }
+
+    .nord-selfie__image div.acc-image-height-container-100 {
+      height: 205px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .nord-selfie {
+      padding-top: 80px;
+    }
+
+    .nord-selfie__content {
+      max-width: 300px;
+    }
+
+    .nord-selfie__title {
+      font-size: 30px;
+      line-height: 35px;
+      margin-bottom: 18px;
+    }
+
+    .nord-selfie__item-title {
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    .nord-selfie__item-desc {
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    .nord-selfie__image {
+      max-width: 650px;
+    }
+  }
+
+  @media screen and (min-width: 1366px) {
+    .nord-selfie {
+      padding-top: 100px;
+    }
+
+    .nord-selfie__content {
+      max-width: 450px;
+    }
+
+    .nord-selfie__title {
+      font-size: 42px;
+      line-height: 49px;
+      margin-bottom: 26px;
+    }
+
+    .nord-selfie__item-title {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    .nord-selfie__item-desc {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    .nord-selfie__image {
+      max-width: 900px;
+    }
+  }
+
+  .nord-front {
+    padding: 60px 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nord-front__content {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto 40px auto;
+  }
+
+  .nord-front__title {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 14px;
+    color: #000000;
+  }
+
+  .nord-front__desc {
+    font-size: 14px;
+    line-height: 16px;
+    color: #666666;
+  }
+
+  .nord-front__list {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .nord-front__item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .nord-front__image {
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .nord-front__image div.acc-image-height-container-100 {
+    height: 218px;
+  }
+
+  .nord-front__item p {
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+  }
+
+  @media screen and (min-width: 768px) {
+    .nord-front {
+      padding: 60px 24px;
+    }
+
+    .nord-front__content {
+      max-width: 450px;
+      margin: 0 auto 40px auto;
+    }
+
+    .nord-front__list {
+      max-width: 450px;
+      flex-direction: row;
+    }
+
+    .nord-front__item:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 24px;
+    }
+
+    .nord-front__image div.acc-image-height-container-100 {
+      width: 212px;
+      height: 160px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .nord-front {
+      padding: 80px 24px;
+    }
+
+    .nord-front__content {
+      max-width: 620px;
+      margin: 0 auto 60px auto;
+    }
+
+    .nord-front__title {
+      font-size: 30px;
+      line-height: 35px;
+      margin-bottom: 18px;
+    }
+
+    .nord-front__desc {
+      font-size: 18px;
+      line-height: 21px;
+      color: #666666;
+    }
+
+    .nord-front__list {
+      max-width: 620px;
+    }
+
+    .nord-front__image {
+      margin-bottom: 24px;
+    }
+
+    .nord-front__item p {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  @media screen and (min-width: 1366px) {
+    .nord-front {
+      padding: 100px 24px;
+    }
+
+    .nord-front__content {
+      max-width: 870px;
+      margin: 0 auto 80px auto;
+    }
+
+    .nord-front__title {
+      font-size: 42px;
+      line-height: 49px;
+      margin-bottom: 28px;
+    }
+
+    .nord-front__desc {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    .nord-front__list {
+      max-width: 870px;
+    }
+
+    .nord-front__item p {
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+
+  .nord-video {
+    padding: 60px 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nord-video__content {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto 40px auto;
+  }
+
+  .nord-video__title {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 14px;
+    color: #000000;
+  }
+
+  .nord-video__desc {
+    font-size: 14px;
+    line-height: 16px;
+    color: #666666;
+  }
+
+  .nord-video__image {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .nord-video__image div.acc-image-height-container-100 {
+    height: 145px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .nord-video {
+      padding: 60px 24px;
+    }
+
+    .nord-video__content {
+      max-width: 450px;
+      width: 100%;
+      margin: 0 auto 40px auto;
+    }
+
+    .nord-video__image {
+      max-width: 450px;
+    }
+
+    .nord-video__image div.acc-image-height-container-100 {
+      height: 213px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .nord-video {
+      padding: 80px 24px;
+    }
+
+    .nord-video__content {
+      max-width: 620px;
+      margin: 0 auto 60px auto;
+    }
+
+    .nord-video__title {
+      font-size: 30px;
+      line-height: 35px;
+      margin-bottom: 18px;
+    }
+
+    .nord-video__desc {
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    .nord-video__image {
+      max-width: 620px;
+    }
+  }
+
+  @media screen and (min-width: 1366px) {
+    .nord-video {
+      padding: 100px 24px;
+    }
+
+    .nord-video__content {
+      max-width: 890px;
+      margin: 0 auto 80px auto;
+    }
+
+    .nord-video__title {
+      font-size: 42px;
+      line-height: 49px;
+      margin-bottom: 26px;
+    }
+
+    .nord-video__desc {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    .nord-video__image {
+      max-width: 890px;
+    }
+  }
+
+  .nord-scroll {
+    padding: 60px 16px 0 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nord-scroll__content {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto 40px auto;
+  }
+
+  .nord-scroll__title {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 14px;
+    color: #000000;
+  }
+
+  .nord-scroll__title span {
+    color: #00b2d2;
+  }
+
+  .nord-scroll__desc {
+    font-size: 14px;
+    line-height: 16px;
+    color: #666666;
+  }
+
+  .nord-scroll__desc span {
+    color: #000000;
+  }
+
+  .nord-scroll__image {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .nord-scroll__image div.acc-image-height-container-100 {
+    height: 210px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .nord-scroll {
+      padding: 60px 24px 0 24px;
+    }
+
+    .nord-scroll__content {
+      max-width: 450px;
+      width: 100%;
+      margin: 0 auto 40px auto;
+    }
+
+    .nord-scroll__image {
+      max-width: 330px;
+    }
+
+    .nord-video__image div.acc-image-height-container-100 {
+      height: 240px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .nord-scroll {
+      padding: 80px 24px 0 24px;
+    }
+
+    .nord-scroll__content {
+      max-width: 620px;
+      margin: 0 auto 60px auto;
+    }
+
+    .nord-scroll__title {
+      font-size: 30px;
+      line-height: 35px;
+      margin-bottom: 18px;
+    }
+
+    .nord-scroll__desc {
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    .nord-scroll__image {
+      max-width: 450px;
+    }
+  }
+
+  @media screen and (min-width: 1366px) {
+    .nord-scroll {
+      padding: 100px 24px 0 24px;
+    }
+
+    .nord-scroll__content {
+      max-width: 890px;
+      margin: 0 auto 80px auto;
+    }
+
+    .nord-scroll__title {
+      font-size: 42px;
+      line-height: 49px;
+      margin-bottom: 26px;
+    }
+
+    .nord-scroll__desc {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    .nord-scroll__image {
+      max-width: 650px;
+    }
+  }
+
+  .nord-oxygen {
+    background-color: #151515;
+    padding: 60px 0;
+  }
+
+  .nord-oxygen__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nord-oxygen__title {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 24px;
+    color: #ffffff;
+    padding: 0 16px;
+  }
+
+  .nord-oxygen__image {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto 24px auto;
+  }
+
+  .nord-oxygen__desc {
+    max-width: 400px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #9f9f9f;
+    padding: 0 16px;
+    margin: 0 0 0 auto;
+  }
+
+  .nord-oxygen__desc span {
+    color: #ffffff;
+  }
+
+  @media screen and (min-width: 768px) {
+    .nord-oxygen__container {
+      max-width: 566px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .nord-oxygen__title {
+      padding: 0;
+    }
+
+    .nord-oxygen__image {
+      max-width: 566px;
+    }
+
+    .nord-oxygen__image div.acc-image-height-container-100 {
+      height: 455px;
+    }
+
+    .nord-oxygen__desc {
+      max-width: 450px;
+      padding: 0;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .nord-oxygen {
+      padding: 80px 0;
+    }
+
+    .nord-oxygen__container {
+      max-width: 780px;
+    }
+
+    .nord-oxygen__title {
+      font-size: 30px;
+      line-height: 35px;
+      margin-bottom: 40px;
+    }
+
+    .nord-oxygen__image {
+      max-width: 780px;
+    }
+
+    .nord-oxygen__desc {
+      font-size: 18px;
+      line-height: 21px;
+      max-width: 540px;
+    }
+  }
+
+  @media screen and (min-width: 1366px) {
+    .nord-oxygen {
+      padding: 100px 0;
+    }
+
+    .nord-oxygen__container {
+      max-width: 1100px;
+    }
+
+    .nord-oxygen__title {
+      font-size: 30px;
+      line-height: 35px;
+      margin-bottom: 40px;
+    }
+
+    .nord-oxygen__image {
+      max-width: 1100px;
+    }
+
+    .nord-oxygen__desc {
+      font-size: 24px;
+      line-height: 28px;
+      max-width: 760px;
+    }
+  }
+
+  .nord-processor {
+    padding: 60px 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nord-processor__content {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto 40px auto;
+  }
+
+  .nord-processor__title {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 14px;
+    color: #000000;
+  }
+
+  .nord-processor__desc {
+    font-size: 14px;
+    line-height: 16px;
+    color: #666666;
+  }
+
+  .nord-processor__image {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .nord-processor__image div.acc-image-height-container-100 {
+    height: 100px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .nord-processor {
+      padding: 60px 24px;
+    }
+
+    .nord-processor__content {
+      max-width: 450px;
+      width: 100%;
+      margin: 0 auto 40px auto;
+    }
+
+    .nord-processor__image {
+      max-width: 450px;
+    }
+
+    .nord-processor__image div.acc-image-height-container-100 {
+      height: 90px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .nord-processor {
+      padding: 80px 24px;
+    }
+
+    .nord-processor__content {
+      max-width: 620px;
+      margin: 0 auto 60px auto;
+    }
+
+    .nord-processor__title {
+      font-size: 30px;
+      line-height: 35px;
+      margin-bottom: 18px;
+    }
+
+    .nord-processor__desc {
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    .nord-processor__image {
+      max-width: 620px;
+    }
+  }
+
+  @media screen and (min-width: 1366px) {
+    .nord-processor {
+      padding: 100px 24px;
+    }
+
+    .nord-processor__content {
+      max-width: 870px;
+      margin: 0 auto 80px auto;
+    }
+
+    .nord-processor__title {
+      font-size: 42px;
+      line-height: 49px;
+      margin-bottom: 26px;
+    }
+
+    .nord-processor__desc {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    .nord-processor__image {
+      max-width: 870px;
+    }
+  }
+
+  .nord-charge {
+    padding: 60px 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nord-charge__content {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto 40px auto;
+  }
+
+  .nord-charge__title {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 14px;
+    color: #000000;
+  }
+
+  .nord-charge__desc {
+    font-size: 14px;
+    line-height: 16px;
+    color: #666666;
+  }
+
+  .nord-charge__image {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .nord-charge__image div.acc-image-height-container-100 {
+    height: 145px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .nord-charge {
+      padding: 60px 0;
+    }
+
+    .nord-charge__content {
+      max-width: 450px;
+      width: 100%;
+      margin: 0 auto 40px auto;
+    }
+
+    .nord-charge__image {
+      max-width: 531px;
+      margin: 0 0 0 auto;
+    }
+
+    .nord-charge__image div.acc-image-height-container-100 {
+      height: 175px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .nord-charge {
+      padding: 80px 0;
+    }
+
+    .nord-charge__content {
+      max-width: 620px;
+      margin: 0 auto 60px auto;
+    }
+
+    .nord-charge__title {
+      font-size: 30px;
+      line-height: 35px;
+      margin-bottom: 18px;
+    }
+
+    .nord-charge__desc {
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    .nord-charge__image {
+      max-width: 725px;
+    }
+  }
+
+  @media screen and (min-width: 1366px) {
+    .nord-charge {
+      padding: 100px 0;
+    }
+
+    .nord-charge__content {
+      max-width: 870px;
+      margin: 0 auto 80px auto;
+    }
+
+    .nord-charge__title {
+      font-size: 42px;
+      line-height: 49px;
+      margin-bottom: 26px;
+    }
+
+    .nord-charge__desc {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    .nord-charge__image {
+      max-width: 1010px;
+    }
+  }
+
+  .nord-test {
+    background-color: #000000;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nord-test__content {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto 14px auto;
+    padding: 0 16px;
+  }
+
+  .nord-test__title {
+    font-size: 22px;
+    line-height: 26px;
+    color: #fff;
+  }
+
+  .nord-test__subtitle {
+    font-size: 22px;
+    line-height: 26px;
+    color: #00b2d2;
+  }
+
+  .nord-test__description-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nord-test__desc {
+    font-size: 14px;
+    line-height: 16px;
+    color: #b3b3b3;
+    padding: 0 16px;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto 40px auto;
+  }
+
+  .nord-test__image {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto 0 0;
+    padding-right: 16px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .nord-test {
+      justify-content: center;
+    }
+
+    .nord-test__content {
+      max-width: 410px;
+      margin: 0 0 40px 0;
+      padding: 0 0 0 83px;
+    }
+
+    .nord-test__description-container {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .nord-test__desc {
+      order: 1;
+      margin: 0;
+    }
+
+    .nord-test__image {
+      max-width: 415px;
+      padding: 0;
+      order: 0;
+      margin: 0 24px 0 0;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .nord-test__content {
+      max-width: 540px;
+      margin: 0 0 60px 0;
+      padding: 0 0 0 105px;
+    }
+
+    .nord-test__title,
+    .nord-test__subtitle {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    .nord-test__image {
+      max-width: 562px;
+    }
+
+    .nord-test__desc {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  @media screen and (min-width: 1366px) {
+    .nord-test__content {
+      max-width: 760px;
+      margin: 0 0 80px 0;
+      padding: 0 0 0 136px;
+    }
+
+    .nord-test__title,
+    .nord-test__subtitle {
+      font-size: 42px;
+      line-height: 49px;
+    }
+
+    .nord-test__image {
+      max-width: 790px;
+    }
+
+    .nord-test__desc {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  .nord-5g {
+    background-color: #000000;
+    padding: 60px 0 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nord-5g__content {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto 40px auto;
+    padding: 0 16px;
+  }
+
+  .nord-5g__title {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 14px;
+    color: #ffffff;
+  }
+
+  .nord-5g__desc {
+    font-size: 14px;
+    line-height: 16px;
+    color: #b3b3b3;
+  }
+
+  .nord-5g__image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    .nord-5g {
+      padding: 60px 0 0 0;
+    }
+
+    .nord-5g__content {
+      max-width: 450px;
+      width: 100%;
+      margin: 0 auto 40px auto;
+      padding: 0 24px;
+    }
+
+    .nord-5g__image div.acc-image-height-container-100 {
+      height: 450px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .nord-5g {
+      padding: 80px 0 0 0;
+    }
+
+    .nord-5g__content {
+      max-width: 620px;
+      margin: 0 auto 60px auto;
+    }
+
+    .nord-5g__title {
+      font-size: 30px;
+      line-height: 35px;
+      margin-bottom: 18px;
+    }
+
+    .nord-5g__desc {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  @media screen and (min-width: 1366px) {
+    .nord-5g {
+      padding: 100px 0 0 0;
+    }
+
+    .nord-5g__content {
+      max-width: 870px;
+      margin: 0 auto 80px auto;
+    }
+
+    .nord-5g__title {
+      font-size: 42px;
+      line-height: 49px;
+      margin-bottom: 26px;
+    }
+
+    .nord-5g__desc {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  .nord-info {
+    background-color: #000000;
+    padding: 60px 16px 100px 16px;
+  }
+
+  .nord-info__text {
+    font-size: 12px;
+    line-height: 14px;
+    color: #b3b3b3;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    .nord-info {
+      padding: 60px 24px 110px 24px;
+    }
+
+    .nord-info__text {
+      font-size: 12px;
+      line-height: 14px;
+      color: #b3b3b3;
+      max-width: 570px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .nord-info {
+      padding: 80px 24px 120px 24px;
+    }
+
+    .nord-info__text {
+      font-size: 14px;
+      line-height: 16px;
+      max-width: 620px;
+    }
+  }
+
+  @media screen and (min-width: 1366px) {
+    .nord-info {
+      padding: 100px 24px 140px 24px;
+    }
+
+    .nord-info__text {
+      max-width: 870px;
+    }
+  }
+}

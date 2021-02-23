@@ -1,0 +1,411 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 50px 0 50px 0;
+  overflow-x: hidden;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  color: transparent;
+}
+
+form select,
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding: 0 0 0 12px;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3b6d9a;
+  outline: none;
+  transition: 0.3s;
+}
+
+button {
+  display: block;
+  background: 0 0;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  line-height: 44px;
+  transition: 0.3s;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+}
+
+@keyframes text-right-slide-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes text-left-slide-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes text-bottom-slide-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes text-opacity-anim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes graphic-width-90-anim {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes graphic-width-40-anim {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 40%;
+  }
+}
+
+//animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+
+.toshiba-land .toshiba-land-section {
+  margin: 40px auto;
+}
+.toshiba-land .toshiba-land-section:last-child {
+  margin-bottom: 0;
+  background-color: #f4f4f4;
+}
+.toshiba-land .toshiba-land-section:last-child .toshiba-land__container {
+  padding: 35px 50px;
+}
+.toshiba-land .toshiba-land__container {
+  margin: 0 auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  max-width: calc(1200px + 16px);
+}
+.toshiba-land .toshiba-land__title-style {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+.toshiba-land .toshiba-header__wrapper {
+  background-color: #f4f4f4;
+  padding: 25px;
+  max-width: 1500px;
+  display: block;
+}
+.toshiba-land .toshiba-top-banner {
+  margin-bottom: 20px;
+}
+.toshiba-land .toshiba-for-whom__desc {
+  margin-top: 20px;
+}
+.toshiba-land .toshiba-for-whom__inner {
+  padding: 30px 40px;
+}
+.toshiba-land .toshiba-for-whom__title {
+  font-size: 18px;
+  color: #ef1616;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.toshiba-land .toshiba-for-whom__subtitle {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+.toshiba-land .toshiba-for-whom__list {
+  color: #ef1616;
+  padding-left: 40px;
+}
+.toshiba-land .for-whom-list__item {
+  margin-bottom: 35px;
+  position: relative;
+}
+.toshiba-land .for-whom-list__item::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #ef1616;
+  top: 2px;
+  left: -25px;
+}
+.toshiba-land .whom-list-item__title {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.toshiba-land .whom-list-item__subtitle {
+  font-size: 14px;
+  line-height: 120%;
+  font-weight: 300;
+}
+.toshiba-land .toshiba-features__catalog {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 56px;
+}
+.toshiba-land .features-catalog__item {
+  margin: 8px;
+  padding-left: 20px;
+  flex-basis: calc(100% / 2 - 16px);
+  text-align: center;
+}
+.toshiba-land .features-catalog-item__image {
+  margin: 10px 0;
+}
+.toshiba-land .features-catalog-item__title {
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.toshiba-land .features-catalog-item__title::before {
+  position: absolute;
+  width: 7px;
+  height: 100%;
+  background-color: #ef1616;
+  content: "";
+  bottom: 0;
+  left: -15px;
+  display: block;
+}
+.toshiba-land .features-catalog-item__text {
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.toshiba-land .functions-item__desc {
+  padding: 20px 8%;
+  max-width: 95%;
+}
+.toshiba-land .functions-item-desc__title {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 10px;
+  line-height: 120%;
+}
+.toshiba-land .functions-item-desc__title::before {
+  position: absolute;
+  display: block;
+  content: "";
+  background-color: #ef1616;
+  width: 16px;
+  height: 16px;
+  left: -24px;
+  top: 3px;
+}
+.toshiba-land .functions-item-desc__text {
+  font-weight: 300;
+  font-size: 14px;
+}
+.toshiba-land .toshiba-facts__wrapper {
+  display: flex;
+  background-color: #f4f4f4;
+  align-items: center;
+  padding: 40px 0;
+  margin: 50px 0 30px;
+}
+.toshiba-land .facts-wrapper__item {
+  flex-basis: 50%;
+}
+.toshiba-land .facts-wrapper__title {
+  margin: 0 0 0 40px;
+}
+.toshiba-land .facts-wrapper__title span {
+  background-color: #ef1616;
+  color: #fff;
+  padding: 0 10px 3px;
+  line-height: normal;
+  display: inline-block;
+  font-size: 36px;
+  font-weight: 600;
+}
+.toshiba-land .facts-wrapper__text {
+  max-width: 420px;
+  margin: 0 20px 0 50px;
+  font-weight: 300;
+  font-size: 20px;
+}
+.toshiba-land .toshiba-faq {
+  border-top: 1px solid #ebebeb;
+  padding-top: 65px;
+}
+.toshiba-land .toshiba-faq__title {
+  margin: 30px 60px 50px;
+  color: #ef1616;
+  font-size: 45px;
+  font-weight: 600;
+  text-align: center;
+}
+.toshiba-land .toshiba-faq__inner {
+  width: 91.66667%;
+  margin: 0 auto;
+}
+.toshiba-land .toshiba-faq__list {
+  padding-left: 20px;
+  margin: 16px 0;
+}
+.toshiba-land .faq-list__item {
+  padding-left: 28px;
+}
+.toshiba-land .faq-list__title {
+  display: inline-block;
+  background-color: #ef1616;
+  color: #fff;
+  padding: 5px 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.toshiba-land .faq-list__text {
+  font-weight: 300;
+  margin: 10px 0;
+  font-size: 14px;
+}
+.toshiba-land .toshiba-footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.toshiba-land .toshiba-footer__text {
+  font-weight: 600;
+  font-size: 28px;
+  margin: 15px 0 0;
+}
+.toshiba-land .toshiba-footer__text .lattice {
+  color: #ef1616;
+}
+@media screen and (max-width: 1100px) {
+  .toshiba-land .functions-item__desc {
+    padding: 20px;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 920px) {
+  .toshiba-land .features-catalog-item__title::before {
+    display: none;
+  }
+  .toshiba-land .functions-item__desc {
+    padding: 50px 20px;
+  }
+  .toshiba-land .facts-wrapper__title {
+    margin-left: 10px;
+  }
+  .toshiba-land .facts-wrapper__title span {
+    font-size: 42px;
+  }
+  .toshiba-land .facts-wrapper__text {
+    margin: 0 20px;
+  }
+  .toshiba-land .toshiba-faq__list {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 640px) {
+  .toshiba-land .toshiba-land__title-style {
+    font-size: 24px;
+  }
+  .toshiba-land .toshiba-header__wrapper {
+    text-align: center;
+  }
+  .toshiba-land .facts-wrapper__title span {
+    font-size: 32px;
+  }
+  .toshiba-land .toshiba-for-whom__inner {
+    padding: 30px 0;
+  }
+  .toshiba-land .features-catalog__item {
+    flex-basis: 100%;
+    padding-left: 0;
+  }
+  .toshiba-land .toshiba-facts__wrapper {
+    flex-direction: column;
+  }
+  .toshiba-land .toshiba-faq__title {
+    text-align: left;
+  }
+  .toshiba-land .facts-wrapper__item {
+    flex-basis: 100%;
+  }
+  .toshiba-land .facts-wrapper__text {
+    max-width: none;
+    font-size: 16px;
+  }
+  .toshiba-land .facts-wrapper__title {
+    margin: 0 0 30px 0;
+  }
+  .toshiba-land .toshiba-faq__inner {
+    width: 100%;
+  }
+  .toshiba-land .toshiba-footer__wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .toshiba-land .toshiba-footer__text {
+    font-size: 24px;
+  }
+}

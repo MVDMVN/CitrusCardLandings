@@ -1,0 +1,758 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: 50px 0 50px 0;
+  overflow-x: hidden; }
+
+ul {
+  margin: 0;
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  color: transparent; }
+
+form select,
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding: 0 0 0 12px;
+  background-color: #ffffff; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3b6d9a;
+  outline: none;
+  transition: 0.3s; }
+
+button {
+  display: block;
+  background: 0 0;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  line-height: 44px;
+  transition: 0.3s;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-size: 18px; }
+
+.rgm {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+  /************************** HEADER SECTION **************************/ }
+  .rgm .rgm-header {
+    background: url("https://i.citrus.ua/uploads/promo/Redmond/RGM-M805/header/header-bg-desc.png") center/100% no-repeat, #070707;
+    background-size: contain;
+    display: flex; }
+  .rgm .rgm-header__container {
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto; }
+  .rgm .rgm-header__content {
+    padding-top: 80px;
+    padding-left: 136px;
+    padding-bottom: 80px;
+    max-width: 535px;
+    width: 100%; }
+  .rgm .rgm-header__logo {
+    max-width: 311px;
+    width: 100%;
+    margin-bottom: 60px; }
+  .rgm .rgm-header__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 62px;
+    color: #ee7c00;
+    margin-bottom: 290px; }
+  .rgm .rgm-header__list {
+    max-width: 380px;
+    width: 100%; }
+  .rgm .rgm-header__item {
+    font-size: 26px;
+    line-height: 34%;
+    color: #fff;
+    position: relative;
+    padding: 22px 0 0 100px; }
+  .rgm .rgm-header__item:before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 0;
+    top: 0; }
+  .rgm .rgm-header__item.grill:before {
+    background: url("https://i.citrus.ua/uploads/promo/Redmond/RGM-M805/header/grill.svg") center/100% no-repeat; }
+  .rgm .rgm-header__item.all:before {
+    background: url("https://i.citrus.ua/uploads/promo/Redmond/RGM-M805/header/180.svg") center/100% no-repeat; }
+  .rgm .rgm-header__item:nth-child(1) {
+    margin-bottom: 42px; }
+  @media screen and (max-width: 1365px) {
+    .rgm .rgm-header__content {
+      padding-top: 60px;
+      padding-left: 24px;
+      padding-bottom: 70px;
+      max-width: 460px; }
+    .rgm .rgm-header__logo {
+      max-width: 220px;
+      margin-bottom: 40px; }
+    .rgm .rgm-header__title {
+      font-size: 38px;
+      line-height: 49px;
+      margin-bottom: 180px; }
+    .rgm .rgm-header__item {
+      color: #fff;
+      position: relative;
+      padding: 26px 0 0 75px; }
+    .rgm .rgm-header__item:before {
+      width: 60px;
+      height: 60px; } }
+  @media screen and (max-width: 1023px) {
+    .rgm .rgm-header__content {
+      padding-top: 40px;
+      padding-left: 24px;
+      padding-bottom: 50px;
+      max-width: 360px; }
+    .rgm .rgm-header__logo {
+      max-width: 160px; }
+    .rgm .rgm-header__title {
+      font-size: 28px;
+      line-height: 36px;
+      margin-bottom: 150px; }
+    .rgm .rgm-header__item {
+      font-size: 18px;
+      line-height: 23px;
+      color: #fff;
+      position: relative;
+      padding: 12px 0 0 65px; }
+    .rgm .rgm-header__item:nth-child(1) {
+      margin-bottom: 16px; }
+    .rgm .rgm-header__item:before {
+      width: 46px;
+      height: 46px; } }
+  @media screen and (max-width: 767px) {
+    .rgm .rgm-header {
+      background: url("https://i.citrus.ua/uploads/promo/Redmond/RGM-M805/header/header-bg-mob-2.png") center no-repeat, #070707; }
+    .rgm .rgm-header__title {
+      margin-bottom: 440px; } }
+  .rgm .rgm-tripple {
+    background: url("https://i.citrus.ua/uploads/promo/Redmond/RGM-M805/tripple/tripple-bg-desc-new.png") center/100% no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: flex-end; }
+  .rgm .rgm-tripple__container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 1200px; }
+  .rgm .rgm-tripple__image {
+    margin-right: 100px; }
+  .rgm .rgm-tripple__content {
+    padding-top: 160px;
+    margin-bottom: 370px;
+    max-width: 583px;
+    width: 100%; }
+  .rgm .rgm-tripple__title {
+    padding: 24px;
+    background-color: #ee7c00;
+    max-width: 583px;
+    width: 100%;
+    margin-bottom: 55px; }
+  .rgm .rgm-tripple__text {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 34px;
+    color: rgba(0, 0, 0, 0.87); }
+  .rgm .rgm-tripple__list {
+    max-width: 523px;
+    width: 100%; }
+  .rgm .rgm-tripple__item {
+    font-size: 20px;
+    line-height: 26px;
+    color: rgba(0, 0, 0, 0.87);
+    position: relative;
+    padding-left: 36px; }
+  .rgm .rgm-tripple__item:not(:last-child) {
+    margin-bottom: 24px; }
+  .rgm .rgm-tripple__item:before {
+    content: "";
+    position: absolute;
+    background: #ee7c00;
+    width: 8px;
+    height: 8px;
+    top: 8px;
+    left: 8px;
+    border-radius: 50%; }
+  @media screen and (max-width: 1365px) {
+    .rgm .rgm-tripple__container {
+      padding-left: 24px; }
+    .rgm .rgm-tripple__image {
+      margin-right: 80px;
+      max-width: 390px; }
+    .rgm .rgm-tripple__content {
+      padding-top: 60px;
+      margin-bottom: 180px;
+      max-width: 426px; }
+    .rgm .rgm-tripple__title {
+      margin-bottom: 20px; }
+    .rgm .rgm-tripple__text {
+      font-size: 26px;
+      line-height: 34px; }
+    .rgm .rgm-tripple__item {
+      font-size: 20px;
+      line-height: 26px; } }
+  @media screen and (max-width: 1023px) {
+    .rgm .rgm-tripple__image {
+      margin-right: 80px;
+      max-width: 290px; }
+    .rgm .rgm-tripple__content {
+      padding-top: 20px;
+      margin-bottom: 120px;
+      max-width: 330px; }
+    .rgm .rgm-tripple__title {
+      margin-bottom: 20px; }
+    .rgm .rgm-tripple__text {
+      font-size: 18px;
+      line-height: 23px; }
+    .rgm .rgm-tripple__list {
+      max-width: 272px;
+      margin-right: 24px; }
+    .rgm .rgm-tripple__item {
+      font-size: 16px;
+      line-height: 21px; } }
+  @media screen and (max-width: 767px) {
+    .rgm .rgm-tripple {
+      background: url("https://i.citrus.ua/uploads/promo/Redmond/RGM-M805/tripple/tripple-bg-desc-new.png") top -307px center no-repeat, #fff;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+    .rgm .rgm-tripple__container {
+      padding-left: 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 60px; }
+    .rgm .rgm-tripple__image {
+      margin-right: 0;
+      margin-bottom: 32px;
+      max-width: 260px; }
+    .rgm .rgm-tripple__content {
+      max-width: initial;
+      padding-top: 0;
+      margin-bottom: 40px; }
+    .rgm .rgm-tripple__title {
+      max-width: initial;
+      margin-bottom: 40px; }
+    .rgm .rgm-tripple__text {
+      font-size: 14px;
+      line-height: 21px;
+      max-width: 288px;
+      margin: 0 auto; }
+    .rgm .rgm-tripple__list {
+      max-width: 288px;
+      margin: 0 auto; }
+    .rgm .rgm-tripple__item {
+      font-size: 14px;
+      line-height: 18px; } }
+  .rgm .rgm-steps {
+    background-color: #fff; }
+  .rgm .rgm-steps__container {
+    padding: 60px 0 80px 0; }
+  .rgm .rgm-steps__header-container {
+    display: flex;
+    justify-content: flex-end; }
+  .rgm .rgm-steps__header {
+    background: #ee7c00;
+    max-width: 583px;
+    width: 100%;
+    padding: 24px;
+    margin-bottom: 60px; }
+  .rgm .rgm-steps__title {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 34px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 12px; }
+  .rgm .rgm-steps__subtitle {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.87); }
+  .rgm .rgm-steps__list {
+    display: flex;
+    justify-content: space-between; }
+  .rgm .rgm-steps__item {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; }
+  .rgm .rgm-steps__text {
+    max-width: 335px;
+    font-size: 20px;
+    line-height: 26px;
+    color: rgba(0, 0, 0, 0.87); }
+  .rgm .rgm-steps__text-info {
+    display: flex;
+    padding-top: 12px;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.87); }
+  .rgm .rgm-steps__text-tag {
+    color: #ee7c00; }
+  @media screen and (max-width: 1365px) {
+    .rgm .rgm-steps__header {
+      max-width: 425px; }
+    .rgm .rgm-steps__title {
+      font-size: 26px;
+      line-height: 34px; }
+    .rgm .rgm-steps__subtitle {
+      font-size: 20px;
+      line-height: 26px; }
+    .rgm .rgm-steps__list {
+      padding: 0 24px; }
+    .rgm .rgm-steps__text {
+      max-width: 240px; } }
+  @media screen and (max-width: 1023px) {
+    .rgm .rgm-steps__header {
+      max-width: 320px; }
+    .rgm .rgm-steps__title {
+      font-size: 18px;
+      line-height: 23px; }
+    .rgm .rgm-steps__subtitle {
+      font-size: 16px;
+      line-height: 21px; }
+    .rgm .rgm-steps__text {
+      font-size: 16px;
+      line-height: 21px;
+      max-width: 180px; }
+    .rgm .rgm-steps__text-info {
+      font-size: 10px;
+      line-height: 13px; } }
+  @media screen and (max-width: 767px) {
+    .rgm .rgm-steps__container {
+      padding: 20px 0 40px 0; }
+    .rgm .rgm-steps__header {
+      max-width: initial;
+      margin-bottom: 40px; }
+    .rgm .rgm-steps__title {
+      font-size: 14px;
+      line-height: 21px; }
+    .rgm .rgm-steps__subtitle {
+      font-size: 14px;
+      line-height: 18px; }
+    .rgm .rgm-steps__list {
+      flex-direction: column;
+      max-width: 400px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 16px; }
+    .rgm .rgm-steps__item {
+      width: 100%; }
+    .rgm .rgm-steps__item:not(:last-child) {
+      margin-bottom: 24px; }
+    .rgm .rgm-steps__text {
+      max-width: 235px;
+      font-size: 14px;
+      line-height: 21px; } }
+  .rgm .rgm-comparison {
+    background: url("https://i.citrus.ua/uploads/promo/Redmond/RGM-M805/comparison/comparison-bg.png") top center no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: flex-end; }
+  .rgm .rgm-comparison__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; }
+  .rgm .rgm-comparison__image {
+    margin-right: 100px; }
+  .rgm .rgm-comparison__content {
+    padding-top: 130px;
+    max-width: 583px;
+    width: 100%; }
+  .rgm .rgm-comparison__title {
+    max-width: 520px;
+    width: 100%;
+    margin-bottom: 55px; }
+  .rgm .rgm-comparison__text {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 34px;
+    color: rgba(0, 0, 0, 0.87); }
+  .rgm .rgm-comparison__list {
+    max-width: 560px;
+    width: 100%; }
+  .rgm .rgm-comparison__item {
+    font-size: 20px;
+    line-height: 26px;
+    color: rgba(0, 0, 0, 0.87);
+    position: relative;
+    padding-left: 105px;
+    padding-top: 12px;
+    height: 80px; }
+  .rgm .rgm-comparison__item:not(:last-child) {
+    margin-bottom: 36px; }
+  .rgm .rgm-comparison__item:before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 0;
+    left: 0; }
+  .rgm .rgm-comparison__item.fast:before {
+    background: url("https://i.citrus.ua/uploads/promo/Redmond/RGM-M805/comparison/fast.svg") center/100% no-repeat; }
+  .rgm .rgm-comparison__item.use:before {
+    background: url("https://i.citrus.ua/uploads/promo/Redmond/RGM-M805/comparison/use.svg") center/100% no-repeat; }
+  .rgm .rgm-comparison__item.compact:before {
+    background: url("https://i.citrus.ua/uploads/promo/Redmond/RGM-M805/comparison/compact.svg") center/100% no-repeat; }
+  .rgm .rgm-comparison__item.mobile:before {
+    background: url("https://i.citrus.ua/uploads/promo/Redmond/RGM-M805/comparison/mobile.svg") center/100% no-repeat; }
+  .rgm .rgm-comparison__item.econom:before {
+    background: url("https://i.citrus.ua/uploads/promo/Redmond/RGM-M805/comparison/econom.svg") center/100% no-repeat; }
+  @media screen and (max-width: 1365px) {
+    .rgm .rgm-comparison__container {
+      padding-left: 24px; }
+    .rgm .rgm-comparison__image {
+      margin-right: 80px;
+      max-width: 390px; }
+    .rgm .rgm-comparison__content {
+      padding-top: 60px;
+      padding-bottom: 80px;
+      max-width: 460px; }
+    .rgm .rgm-comparison__title {
+      margin-bottom: 20px; }
+    .rgm .rgm-comparison__text {
+      font-size: 26px;
+      line-height: 34px; }
+    .rgm .rgm-comparison__item {
+      font-size: 20px;
+      line-height: 26px;
+      height: 52px; }
+    .rgm .rgm-comparison__item:before {
+      width: 60px;
+      height: 60px; } }
+  @media screen and (max-width: 1023px) {
+    .rgm .rgm-comparison {
+      background: url("https://i.citrus.ua/uploads/promo/Redmond/RGM-M805/comparison/comparison-bg.png") top -110px center no-repeat; }
+    .rgm .rgm-comparison__image {
+      margin-right: 80px;
+      max-width: 290px; }
+    .rgm .rgm-comparison__content {
+      padding-top: 60px;
+      max-width: 330px; }
+    .rgm .rgm-comparison__title {
+      margin-bottom: 20px; }
+    .rgm .rgm-comparison__text {
+      font-size: 18px;
+      line-height: 23px; }
+    .rgm .rgm-comparison__list {
+      margin-right: 24px; }
+    .rgm .rgm-comparison__item {
+      font-size: 16px;
+      line-height: 21px; } }
+  @media screen and (max-width: 767px) {
+    .rgm .rgm-comparison {
+      background: url("https://i.citrus.ua/uploads/promo/Redmond/RGM-M805/tripple/tripple-bg-desc-new.png") top -424px center no-repeat, #fff;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+    .rgm .rgm-comparison__container {
+      padding-left: 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 60px; }
+    .rgm .rgm-comparison__image {
+      margin-right: 0;
+      margin-bottom: 32px;
+      max-width: 260px; }
+    .rgm .rgm-comparison__content {
+      max-width: initial;
+      padding-top: 0;
+      margin-bottom: 40px; }
+    .rgm .rgm-comparison__title {
+      max-width: initial;
+      margin-bottom: 40px; }
+    .rgm .rgm-comparison__text {
+      font-size: 14px;
+      line-height: 21px;
+      max-width: 288px;
+      margin: 0 auto; }
+    .rgm .rgm-comparison__list {
+      max-width: 288px;
+      margin: 0 auto; }
+    .rgm .rgm-comparison__item {
+      font-size: 14px;
+      line-height: 18px;
+      height: 36px;
+      padding-top: 0;
+      padding-left: 50px; }
+    .rgm .rgm-comparison__item:before {
+      width: 36px;
+      height: 36px; } }
+  .rgm .rgm-open {
+    background: #fff; }
+  .rgm .rgm-open__header-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-top: 60px;
+    margin-bottom: 60px; }
+  .rgm .rgm-open__header {
+    max-width: 583px;
+    width: 100%;
+    background: #EE7C00;
+    padding: 24px;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 34px;
+    color: rgba(0, 0, 0, 0.87); }
+  .rgm .rgm-open__content {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto 20px auto;
+    text-align: center; }
+  .rgm .rgm-open__title {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 34px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 12px; }
+  .rgm .rgm-open__subtitle {
+    font-size: 20px;
+    line-height: 26px;
+    color: rgba(0, 0, 0, 0.87); }
+  .rgm .rgm-open__image {
+    display: flex;
+    margin: 0 auto; }
+  @media screen and (max-width: 1365px) {
+    .rgm .rgm-open__header {
+      max-width: 430px;
+      text-align: center; }
+    .rgm .rgm-open__container {
+      padding: 0 24px; } }
+  @media screen and (max-width: 1023px) {
+    .rgm .rgm-open__header {
+      max-width: 320px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 23px; }
+    .rgm .rgm-open__title {
+      font-size: 18px;
+      line-height: 23px; }
+    .rgm .rgm-open__subtitle {
+      font-size: 16px;
+      line-height: 21px; } }
+  @media screen and (max-width: 767px) {
+    .rgm .rgm-open__header-container {
+      padding-top: 40px;
+      margin-bottom: 40px; }
+    .rgm .rgm-open__header {
+      max-width: initial;
+      width: 100%;
+      text-align: left; }
+    .rgm .rgm-open__container {
+      padding: 0 16px; }
+    .rgm .rgm-open__title {
+      font-size: 14px;
+      line-height: 21px; }
+    .rgm .rgm-open__subtitle {
+      font-size: 14px;
+      line-height: 18px; } }
+  .rgm .rgm-programm {
+    background: #000; }
+  .rgm .rgm-programm__content {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto 40px auto;
+    text-align: center;
+    padding-top: 100px; }
+  .rgm .rgm-programm__title {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 34px;
+    color: #EE7C00;
+    margin-bottom: 12px; }
+  .rgm .rgm-programm__subtitle {
+    font-size: 20px;
+    line-height: 26px;
+    color: #fff; }
+  .rgm .rgm-programm__image-desc {
+    display: flex;
+    margin: 0 auto; }
+  .rgm .rgm-programm__image-mob {
+    display: none; }
+  @media screen and (max-width: 1365px) {
+    .rgm .rgm-programm__container {
+      padding: 0 24px; } }
+  @media screen and (max-width: 1023px) {
+    .rgm .rgm-programm__content {
+      padding-top: 60px; }
+    .rgm .rgm-programm__title {
+      font-size: 18px;
+      line-height: 23px; }
+    .rgm .rgm-programm__subtitle {
+      font-size: 16px;
+      line-height: 21px; } }
+  @media screen and (max-width: 767px) {
+    .rgm .rgm-programm__container {
+      padding: 0; }
+    .rgm .rgm-programm__content {
+      padding: 0 16px; }
+    .rgm .rgm-programm__title {
+      padding-top: 40px;
+      font-size: 16px;
+      line-height: 21px; }
+    .rgm .rgm-programm__subtitle {
+      font-size: 14px;
+      line-height: 18px; }
+    .rgm .rgm-programm__image-desc {
+      display: none; }
+    .rgm .rgm-programm__image-mob {
+      display: flex;
+      margin: 0 auto; } }
+  .rgm .rgm-panels {
+    background: #000; }
+  .rgm .rgm-panels__container {
+    padding: 100px 24px 100px 24px; }
+  .rgm .rgm-panels__title {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 34px;
+    color: #EE7C00;
+    text-align: center;
+    margin-bottom: 60px; }
+  .rgm .rgm-panels__list {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; }
+  .rgm .rgm-panels__item {
+    width: 48%; }
+  .rgm .rgm-panels__image {
+    margin-bottom: 32px; }
+  .rgm .rgm-panels__text {
+    font-size: 20px;
+    line-height: 26px;
+    color: #fff;
+    max-width: 426px;
+    width: 100%; }
+  @media screen and (max-width: 1023px) {
+    .rgm .rgm-panels__container {
+      padding: 60px 24px 60px 24px; }
+    .rgm .rgm-panels__title {
+      font-size: 18px;
+      line-height: 23px;
+      margin-bottom: 40px; }
+    .rgm .rgm-panels__text {
+      font-size: 16px;
+      line-height: 21px; } }
+  @media screen and (max-width: 767px) {
+    .rgm .rgm-panels__container {
+      padding: 40px 16px 40px 16px; }
+    .rgm .rgm-panels__title {
+      font-size: 16px;
+      margin-bottom: 32px; }
+    .rgm .rgm-panels__list {
+      flex-direction: column;
+      align-items: center; }
+    .rgm .rgm-panels__item {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+    .rgm .rgm-panels__item:nth-child(1) {
+      margin-bottom: 40px; }
+    .rgm .rgm-panels__image {
+      margin-bottom: 20px; }
+    .rgm .rgm-panels__text {
+      font-size: 14px;
+      line-height: 18px; } }
+  .rgm .rgm-characteristics {
+    background: #fff; }
+  .rgm .rgm-characteristics__container {
+    padding: 100px 24px 100px 24px; }
+  .rgm .rgm-characteristics__content {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto 60px auto; }
+  .rgm .rgm-characteristics__title {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 34px;
+    color: #EE7C00;
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase; }
+  .rgm .rgm-characteristics__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 850px;
+    width: 100%;
+    margin: 0 auto; }
+  .rgm .rgm-characteristics__item {
+    width: 48%;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 20px; }
+  .rgm .rgm-characteristics__text {
+    font-size: 20px;
+    line-height: 26px;
+    color: rgba(0, 0, 0, 0.87); }
+  .rgm .rgm-characteristics__item:before {
+    content: "";
+    position: absolute;
+    background: #ee7c00;
+    width: 8px;
+    height: 8px;
+    top: 4px;
+    left: 0;
+    border-radius: 50%; }
+  .rgm .rgm-characteristics__image {
+    display: flex;
+    margin: 0 auto; }
+  @media screen and (max-width: 1023px) {
+    .rgm .rgm-characteristics__content {
+      margin: 0 auto 40px auto; }
+    .rgm .rgm-characteristics__title {
+      font-size: 18px;
+      line-height: 23px; }
+    .rgm .rgm-characteristics__text {
+      font-size: 16px;
+      line-height: 21px; } }
+  @media screen and (max-width: 767px) {
+    .rgm .rgm-characteristics__container {
+      padding: 60px 16px 60px 16px; }
+    .rgm .rgm-characteristics__title {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 40px; }
+    .rgm .rgm-characteristics__list {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-items: center; }
+    .rgm .rgm-characteristics__item {
+      width: 100%; }
+    .rgm .rgm-characteristics__text {
+      font-size: 14px;
+      line-height: 18px; } }
+
+/*# sourceMappingURL=style.css.map */

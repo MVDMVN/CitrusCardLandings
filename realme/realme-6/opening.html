@@ -1,0 +1,1393 @@
+      <style type="text/css">
+        * {
+          box-sizing: border-box;
+          font-family: Roboto, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          margin: 0;
+        }
+
+        a {
+          text-decoration: none;
+          cursor: pointer;
+          color: #3B6D9A;
+          outline: none;
+          transition: 0.3s;
+        }
+
+        ul {
+          margin: 0;
+          list-style: none;
+        }
+
+        img {
+          max-width: 100%;
+          color: transparent;
+        }
+
+        form select, input {
+          border: 1px solid #c4c4c4;
+          border-radius: 4px;
+          height: 36px;
+          width: 100%;
+          padding: 0 0 0 12px;
+          background-color: #ffffff;
+        }
+
+        .btn, button {
+          display: block;
+          background: 0 0;
+          cursor: pointer;
+          border: none;
+          text-align: center;
+          width: 100%;
+          line-height: 44px;
+          transition: .3s;
+          border-radius: 4px;
+          margin-bottom: 24px;
+          white-space: nowrap;
+          font-family: Roboto, sans-serif;
+          font-size: 18px;
+        }
+
+        .herson {
+          overflow: hidden;
+        }
+
+        .base-padding {
+          padding: 0;
+        }
+
+        @media screen and (max-width: 640px) {
+          .base-padding {
+            padding: 0;
+          }
+        }
+
+        @media screen and (max-width: 560px) {
+          .herson__header {
+            height: 478px;
+            background: url(https://i.citrus.ua/uploads/promo/herson-land/open_s_ru_mob.png) no-repeat center;
+          }
+
+          .herson__header img {
+            display: none;
+          }
+        }
+
+        .herson__events {
+          background: url(https://i.citrus.ua/uploads/promo/sunny-gallery/yellow-drop-event.png) left 300px no-repeat,
+          url(https://i.citrus.ua/uploads/promo/sunny-gallery/blue-drop-event.png) right 400px no-repeat;
+          position: relative;
+          padding: 0 16px 42px;
+          z-index: 1;
+        }
+
+        .events-block {
+          max-width: 978px;
+          margin: -11% auto 0;
+          background: #FFFFFF;
+          box-shadow: 0 8px 80px rgba(0, 0, 0, 0.1);
+          border-radius: 20px;
+        }
+
+        .wrap__timer {
+          max-width: 252px;
+          margin: 0 auto;
+          padding-top: 64px;
+          text-align: center;
+        }
+
+        .wrap__timer .timer__main {
+          display: flex;
+          margin-top: 18px;
+          justify-content: space-between;
+        }
+
+        .wrap__timer .timer__main .countdown__time {
+          width: 36px;
+        }
+
+        .wrap__timer .timer__main .countdown__time-left {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+        }
+
+        .wrap__timer .timer__main .countdown__time-left p {
+          font-weight: 300;
+          font-size: 32px;
+          line-height: 37px;
+          margin-bottom: 0;
+        }
+
+        .wrap__timer .timer__main .countdown__time-left .colon {
+          position: absolute;
+          right: -22px;
+        }
+
+        .wrap__timer .timer__main .countdown__time .time-left {
+          font-weight: 300;
+          font-size: 11px;
+          line-height: 13px;
+          color: #3E3E3E;
+        }
+
+        .events__desc {
+          padding: 30px 16px;
+          text-align: center;
+        }
+
+        .events__desc .desc-title {
+          font-size: 26px;
+          line-height: 30px;
+          margin-bottom: 14px;
+        }
+
+        .events__desc .desc-text {
+          font-size: 16px;
+          line-height: 19px;
+        }
+
+        .events-list .list-row {
+          display: flex;
+          justify-content: space-between;
+          max-width: 884px;
+          margin: 0 auto;
+          padding: 15px 16px 52px;
+        }
+
+        .events-list .list-row .list__item {
+          flex-basis: calc(100% / 3 - 14px);
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .events-list .list-row .list__item .item__title {
+          font-size: 16px;
+          line-height: 19px;
+        }
+
+        .events-list .list-row .list__item .item__date {
+          font-size: 14px;
+          line-height: 16px;
+          color: #727272;
+          padding: 7px 0 29px;
+          margin-top: auto;
+        }
+
+        .events-list .list-row .list__item .item__scroll-btn {
+          max-width: 217px;
+          border-radius: 40px;
+          height: 50px;
+          font-size: 18px;
+          color: #FFFFFF;
+          text-transform: uppercase;
+          margin: 28px auto;
+        }
+
+        .events-list .list-row .list__item .item__scroll-btn:hover {
+          transform: scale(1.05);
+        }
+
+        .events-list .list-row .list__item .orange-btn {
+          background: #FF680A;
+          box-shadow: 0 10px 30px rgba(255, 104, 10, 0.2);
+        }
+
+        .events-list .list-row .list__item .blue-btn {
+          background: #8FC80A;
+          box-shadow: 0 10px 30px rgba(246, 56, 44, 0.2);
+        }
+
+        .events-list .list-row .list__item .red-btn {
+          background: #F6382C;
+          box-shadow: 0 10px 30px rgba(246, 56, 44, 0.2);
+        }
+
+        .herson__bonus {
+          background: url(https://i.citrus.ua/uploads/promo/sunny-gallery/bonus-bg-top.png) no-repeat top center/100% auto,
+          url(https://i.citrus.ua/uploads/promo/buns_attack/bonus-bg-bottom.png) no-repeat bottom -2px center/100% auto,
+          radial-gradient(78.09% 105.3% at 26.93% 29.96%, #FF8A00 0%, #FC0228 100%),
+          radial-gradient(74.73% 66.24% at 42.97% -3.43%, #EFCC12 0%, #EF9712 100%), #C4C4C4;
+          padding-top: 90px;
+          padding-bottom: 141px;
+          position: relative;
+        }
+
+        .bonus__leave-top {
+          position: absolute;
+          pointer-events: none;
+          top: -30px;
+          right: 30px;
+        }
+
+        .bonus__citrus-left {
+          position: absolute;
+          pointer-events: none;
+          bottom: 100px;
+          left: 0;
+          width: 9%;
+        }
+
+        .bonus__citrus-right {
+          position: absolute;
+          pointer-events: none;
+          top: 161px;
+          right: 0;
+          width: 20%;
+        }
+
+        .bonus__description .bonus__title {
+          color: #ffffff;
+          font-size: 40px;
+          margin-bottom: 36px;
+        }
+
+        .bonus__body {
+          max-width: 1228px;
+          display: flex;
+          justify-content: space-between;
+          margin-left: auto;
+          margin-right: auto;
+          align-items: center;
+          padding-right: 130px;
+          padding-left: 40px;
+        }
+
+        .bonus__description p {
+          font-size: 18px;
+          color: #ffffff;
+          margin-bottom: 20px;
+        }
+
+
+        .bonus__image {
+          width: 100%;
+          margin-right: 30px;
+        }
+
+        .bonus__coupon {
+          max-width: 732px;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+        }
+
+        .bonus__coupon-title {
+          font-size: 40px;
+          color: #ffffff;
+          margin-bottom: 12px;
+        }
+
+        .bonus__coupon-description {
+          font-size: 24px;
+          color: #ffffff;
+          margin-bottom: 32px;
+        }
+
+        .bonus__coupon-form {
+          margin-left: 35px;
+          margin-right: 35px;
+          display: flex;
+        }
+
+        .bonus__coupon-form input {
+          height: 56px;
+          border-radius: 50px;
+          margin-right: 34px;
+          padding-left: 20px;
+          flex-grow: 3;
+          font-size: 24px;
+          color: #757575;
+        }
+
+        .bonus__coupon-form button {
+          height: 56px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50px;
+          flex-grow: 1;
+          background-color: #F6BD21;
+          color: rgba(255, 255, 255, 0.87);
+          font-size: 24px;
+          text-transform: uppercase;
+          transition: .3s;
+        }
+
+        .bonus__coupon-form button:hover {
+          transform: scale(1.05);
+        }
+
+        .bonus__success,
+        .bonus__fail {
+          display: none;
+          margin-bottom: 60px;
+          max-width: 1024px;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+        }
+
+        .bonus__success p:nth-child(1),
+        .bonus__fail p:nth-child(1) {
+          margin-bottom: 16px;
+          color: #ffffff;
+          font-size: 32px;
+        }
+
+        .bonus__success p:nth-child(2),
+        .bonus__fail p:nth-child(2) {
+          color: #ffffff;
+          font-size: 24px;
+        }
+
+        .bonus__success a,
+        .bonus__fail a {
+          color: #ffffff;
+          text-decoration: underline;
+        }
+
+        .bonus__success a:hover,
+        .bonus__fail a:hover {
+          color: #ff8637;
+        }
+
+        @media screen and (max-width: 1023px) {
+
+        }
+
+        @media screen and (max-width: 600px) {
+          .herson__bonus {
+            padding-bottom: 83px;
+            padding-top: 51px;
+          }
+
+          .bonus__leave-top,
+          .bonus__leave-bottom {
+            width: 130px;
+          }
+
+          .bonus__leave-top {
+            top: -40px;
+            right: -15px;
+          }
+
+          .bonus__leave-bottom {
+            left: -45px;
+            bottom: -30px;
+          }
+
+          .bonus__title {
+            font-size: 32px;
+          }
+
+          .bonus__body {
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: 40px;
+          }
+
+          .bonus__image {
+            margin-bottom: 30px;
+            padding-left: 20px;
+          }
+
+          .bonus__description p:nth-child(2) {
+            margin-bottom: 12px;
+          }
+
+          .bonus__coupon-description {
+            margin-bottom: 24px;
+          }
+
+          .bonus__coupon-form {
+            flex-direction: column;
+            margin-left: 0;
+            margin-right: 0;
+          }
+
+          .bonus__coupon-form input {
+            margin-bottom: 24px;
+          }
+
+          .bonus__success,
+          .bonus__fail {
+            text-align: center;
+          }
+
+          .bonus__success p:nth-child(1),
+          .bonus__fail p:nth-child(1) {
+            font-size: 24px;
+          }
+
+          .bonus__success p:nth-child(2),
+          .bonus__fail p:nth-child(2) {
+            font-size: 18px;
+          }
+        }
+
+        .herson__discounts {
+          background: url(https://i.citrus.ua/uploads/promo/sunny-gallery/discounts-drop-left.png) -10px 284px no-repeat;
+          padding-top: 58px;
+          padding-bottom: 20px;
+        }
+
+        .discounts__desc {
+          display: flex;
+          max-width: 1058px;
+          margin: 0 auto;
+          padding: 0 16px 32px;
+          align-items: center;
+        }
+
+        .discounts__desc .desc__text-block {
+          padding-left: 34px;
+          padding-right: 20px;
+        }
+
+        .discounts__desc img {
+          min-width: 330px;
+        }
+
+        .discounts__desc .desc__text-block p:first-child {
+          font-weight: 500;
+          font-size: 26px;
+          line-height: 22px;
+          margin-bottom: 14px;
+        }
+
+        .discounts__desc .desc__text-block p:last-child {
+          font-size: 18px;
+          line-height: 22px;
+        }
+
+        .discounts__top-products {
+          padding-top: 15px;
+        }
+
+        .discounts__top-products .top-products__title {
+          font-size: 28px;
+          line-height: 33px;
+          text-align: center;
+          margin-bottom: 14px;
+          color: #737374;
+        }
+
+        .discounts__top-products .top-products__sub-title {
+          font-size: 14px;
+          line-height: 16px;
+          text-align: center;
+          color: #717171;
+        }
+
+        .discounts__top-products .top-products__list {
+          display: flex;
+          padding: 64px 19px 0;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+        }
+
+        .discounts__top-products .top-products__list .product__item {
+          flex-basis: calc(100% / 6 - 7px);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 20px;
+          margin-right: 8px;
+        }
+
+        .discounts__top-products .top-products__list .product__item:nth-child(6n+6) {
+          margin-right: 0;
+        }
+
+        .discounts__top-products .top-products__list .product__item img {
+          width: 189px;
+        }
+
+        .discounts__top-products .top-products__list .product__item .item__name {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 14px;
+          color: #000000;
+          margin: 27px 0 7px;
+          height: 28px;
+          padding: 0 17px;
+          text-align: center;
+        }
+
+        .discounts__top-products .top-products__list .product__item .item__name:hover {
+          color: #FF8637;
+        }
+
+
+        .discounts__top-products .top-products__list .product__item .item__price {
+          font-weight: 700;
+          font-size: 30px;
+          line-height: 26px;
+          color: #000000;
+          padding: 10px 33px;
+          background: url(https://i.citrus.ua/uploads/promo/herson-land/price-gb.png) center no-repeat;
+        }
+
+        .discounts__top-products .top-products__list .product__item .item__price span {
+          display: block;
+          line-height: normal;
+          font-weight: 500;
+        }
+
+        .discounts__top-products .top-products__list .product__item .item__price .item__old-price {
+          font-size: 16px;
+          line-height: 19px;
+          font-weight: 400;
+          color: #000000;
+          text-decoration-line: line-through;
+        }
+
+        .discounts__top-products .top-products__list .product__item .item__price .currency {
+          font-size: 12px;
+          text-align: right;
+        }
+
+        .herson__feast {
+          position: relative;
+          padding-top: 131px;
+          padding-bottom: 83px;
+          background: url(https://i.citrus.ua/uploads/promo/sunny-gallery/feast-bg-bottom.png) no-repeat bottom -2px center/100% auto,
+          url(https://i.citrus.ua/uploads/promo/sunny-gallery/feast-bg-top.png) no-repeat top center/100% auto,
+          radial-gradient(154.57% 252.25% at -5.31% -27.58%, #C0DC11 0%, #72BD06 100%);
+        }
+
+        .feast__body {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          max-width: 1200px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .feast__image {
+          width: 78%;
+        }
+
+        .feast__description p:nth-child(1) {
+          color: #ffffff;
+          font-size: 26px;
+          font-weight: 500;
+          margin-bottom: 15px;
+        }
+
+        .feast__description p:nth-child(2) {
+          font-size: 18px;
+          line-height: 22px;
+          color: #ffffff;
+          margin-bottom: 24px;
+        }
+
+        .feast__description a {
+          color: #000000;
+          display: inline-block;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          padding-right: 27px;
+          padding-left: 64px;
+          font-size: 16px;
+          position: relative;
+          background-color: #ffffff;
+          border-radius: 60px;
+          transition: background-color 0.2s ease-in;
+        }
+
+        .feast__description a::before {
+          width: 37px;
+          height: 37px;
+          position: absolute;
+          content: '';
+          background: url(https://i.citrus.ua/uploads/promo/sunny-gallery/fb-icon.svg) no-repeat center/100% 100%;
+          left: 11px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        .feast__description a:hover,
+        .feast__description a:focus {
+          background-color: #FF863B;
+        }
+
+        .feast__leaves-top {
+          position: absolute;
+          pointer-events: none;
+          width: 300px;
+        }
+
+        .feast__leaves-top {
+          right: 80px;
+          top: -50px;
+        }
+
+        @media screen and (max-width: 1023px) {
+          .events-list .list-row {
+            padding: 15px 16px;
+          }
+
+          .bonus__body {
+            padding: 0;
+          }
+
+          .bonus__leave-top {
+            top: -36px;
+            right: 48px;
+          }
+
+          .herson__feast {
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-top: 125px;
+            padding-bottom: 120px;
+          }
+
+          .feast__leaves-top {
+            width: 185px;
+          }
+
+          .feast__leaves-top {
+            right: 0;
+          }
+
+          .feast__image {
+            min-width: 240px;
+          }
+
+          .feast__description p:nth-child(1) {
+            font-size: 22px;
+          }
+
+          .feast__description p:nth-child(2) {
+            font-size: 14px;
+            margin-bottom: 16px;
+          }
+
+          .feast__description a {
+            font-size: 14px;
+          }
+
+          .herson__bonus {
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-top: 130px;
+          }
+
+          .bonus__citrus-right,
+          .bonus__citrus-left {
+            display: none;
+          }
+
+          .bonus__coupon {
+            margin-top: 40px;
+          }
+
+          .bonus__title {
+            font-size: 31px;
+            margin-bottom: 22px;
+          }
+
+          .bonus__leave-top {
+            width: 150px;
+          }
+
+          .bonus__image {
+            min-width: 210px;
+          }
+
+          .bonus__coupon-title {
+            font-size: 36px;
+          }
+
+          .bonus__coupon-description {
+            font-size: 20px;
+            margin-bottom: 27px;
+          }
+
+          .bonus__coupon-form {
+            margin: 0 50px;
+          }
+
+          .bonus__coupon-form input,
+          .bonus__coupon-form button {
+            height: 46px;
+            font-size: 20px;
+          }
+        }
+
+        @media screen and (max-width: 560px) {
+          .herson__feast {
+            padding-top: 115px;
+          }
+
+          .feast__leaves-top {
+            right: -70px;
+          }
+
+          .feast__leaves-bottom {
+            left: -20px;
+            bottom: -80px;
+          }
+
+          .feast__body {
+            flex-direction: column;
+          }
+
+          .feast__image {
+            margin-bottom: 37px;
+            width: auto;
+            padding-left: 20px;
+          }
+        }
+
+        .herson__footer {
+          background: #F3F7FB;
+          padding-left: 24px;
+          padding-right: 24px;
+          padding-top: 54px;
+          padding-bottom: 119px;
+        }
+
+        .footer__description {
+          font-size: 12px;
+          color: #B1B1B1;
+        }
+
+        @media screen and (max-width: 822px) {
+          .discounts__desc {
+            flex-direction: column;
+            text-align: center;
+          }
+
+          .herson__discounts {
+            background: none;
+            background-size: 141px;
+            padding-top: 65px;
+          }
+
+          .discounts__desc .desc__text-block {
+            padding: 0;
+          }
+
+          .discounts__desc img {
+            max-width: 287px;
+            min-width: auto;
+          }
+
+          .discounts__desc .desc__text-block p:first-child {
+            font-size: 22px;
+            line-height: 22px;
+          }
+
+          .discounts__desc .desc__text-block p:last-child {
+            font-size: 14px;
+            line-height: 22px;
+          }
+
+          .discounts__top-products {
+            padding: 50px 16px 0;
+          }
+
+          .discounts__top-products .top-products__title {
+            font-size: 26px;
+            line-height: 30px;
+            margin-bottom: 19px;
+          }
+
+          .discounts__top-products .top-products__list {
+            padding: 37px 0;
+          }
+
+          .discounts__top-products .top-products__list .product__item {
+            margin-bottom: 34px;
+          }
+        }
+
+        @media screen and (max-width: 560px) {
+          .herson__events {
+            background: none;
+          }
+
+          .events-block {
+            margin: -53px auto 0;
+          }
+
+          .wrap__timer {
+            display: none;
+          }
+
+          .events__desc .desc-title {
+            font-size: 18px;
+            line-height: 21px;
+            margin-bottom: 23px;
+          }
+
+          .events__desc {
+            padding: 24px 16px 8px;
+          }
+
+          .events__desc .desc-text {
+            font-size: 12px;
+            line-height: 150%;
+          }
+
+          .events__desc .desc-text br {
+            display: none;
+          }
+
+          .list-row {
+            flex-direction: column;
+          }
+
+          .events-list .list-row {
+            padding-bottom: 0;
+          }
+
+          .events-list .list-row .list__item .item__scroll-btn {
+            max-width: 148px;
+            height: 32px;
+            line-height: 32px;
+            font-size: 14px;
+            margin: 0;
+          }
+
+          .events-list .list-row .list__item {
+            position: relative;
+            padding-left: 148px;
+            text-align: left;
+            margin-bottom: 31px;
+            align-items: flex-start;
+          }
+
+          .events-list .list-row .list__item img {
+            max-width: 102px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 22px;
+          }
+
+          .events-list .list-row .list__item .item__date {
+            padding: 3px 0 8px;
+          }
+
+          .herson__footer {
+            padding-bottom: 31px;
+            padding-left: 16px;
+            padding-right: 16px;
+          }
+        }
+
+        @media screen and (max-width: 320px) {
+          .events-list .list-row .list__item .item__date {
+            font-size: 12px;
+            line-height: 14px;
+          }
+
+          .events-list .list-row .list__item .item__title {
+            font-size: 14px;
+            line-height: 17px;
+          }
+        }
+
+
+        @media screen and (max-width: 1110px) {
+          .discounts__top-products .top-products__list .product__item {
+            flex-basis: calc(100% / 6 - 7px);
+          }
+
+          .discounts__top-products .top-products__list .product__item .item__price {
+            font-size: 27px;
+            line-height: 24px;
+          }
+        }
+
+        @media screen and (max-width: 1024px) {
+          .discounts__top-products .top-products__list .product__item {
+            flex-basis: calc(100% / 4 - 7px);
+          }
+
+          .discounts__top-products .top-products__list .product__item:nth-child(6n+6) {
+            margin-right: 8px;
+          }
+
+          .discounts__top-products .top-products__list .product__item:nth-child(4n+4) {
+            margin-right: 0;
+          }
+        }
+
+        @media screen and (max-width: 660px) {
+          .discounts__top-products .top-products__list .product__item {
+            flex-basis: calc(100% / 2 - 8px);
+          }
+
+          .discounts__top-products .top-products__list .product__item:nth-child(4n+4) {
+            margin-right: 8px;
+          }
+
+          .discounts__top-products .top-products__list .product__item:nth-child(2n+2) {
+            margin-right: 0;
+          }
+
+          .discounts__top-products .top-products__list .product__item .item__price {
+            font-size: 22px;
+            line-height: 20px;
+            padding: 10px 33px;
+          }
+
+          .discounts__top-products .top-products__list .product__item .item__price .item__old-price {
+            font-size: 12px;
+          }
+        }
+      </style>
+      <div class="herson">
+        <div class="herson__header"><img alt="Banner" src="https://i.citrus.ua/uploads/promo/herson-land/open_s_ru.png"/>
+        </div>
+        <div class="herson__events">
+          <div class="events-block">
+            <div class="wrap__timer">
+              <p class="timer-text">Спеши! До конца акции осталось:
+              </p>
+              <div class="timer__main">
+                <div class="countdown__time">
+                  <div class="countdown__time-left days">
+                    <p id="days">
+                    </p>
+                    <p class="colon">:
+                    </p>
+                  </div>
+                  <p class="time-left">Дней
+                  </p>
+                </div>
+                <div class="countdown__time">
+                  <div class="countdown__time-left hours">
+                    <p id="hours">
+                    </p>
+                    <p class="colon">:
+                    </p>
+                  </div>
+                  <p class="time-left">Часов
+                  </p>
+                </div>
+                <div class="countdown__time">
+                  <div class="countdown__time-left minutes">
+                    <p id="minutes">
+                    </p>
+                    <p class="colon">:
+                    </p>
+                  </div>
+                  <p class="time-left">Минут
+                  </p>
+                </div>
+                <div class="countdown__time">
+                  <div class="countdown__time-left seconds">
+                    <p id="seconds">
+                    </p>
+                  </div>
+                  <p class="time-left">Секунд
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="events__desc">
+              <p class="desc-title">Сезон на цитрусовые открыт!
+              </p>
+              <p class="desc-text">Встречай Цитрус в Херсоне! Грандиозное открытие, которое состоится 15.11 в ТРЦ «Украина». Приходи, получай больше ярких эмоций
+                и знакомься с супер ассортиментом впечатляющих гаджетов.
+                А еще, тебя ждет огромное количество акций, розыгрышей и активностей в честь открытия!
+              </p>
+            </div>
+            <div class="events-list">
+              <div class="list-row">
+                <div class="list__item">
+                  <p class="item__title"><strong>500</strong> бонусных грн
+                  </p>
+                  <p class="item__date">15.11.19 - 27.11.19</p>
+                  <img alt="" src="https://i.citrus.ua/uploads/promo/herson-land/1-new.png"/>
+                  <button class="item__scroll-btn orange-btn" id="bonus-btn">Подробнее
+                  </button>
+                </div>
+                <div class="list__item">
+                  <p class="item__title"><strong>Скидки</strong> на акционные товары
+                  </p>
+                  <p class="item__date">15.11.19 - 27.11.19</p>
+                  <img alt="" src="https://i.citrus.ua/uploads/promo/herson-land/2-new.png"/>
+                  <button class="item__scroll-btn red-btn" id="sale-btn">Подробнее
+                  </button>
+                </div>
+                <div class="list__item">
+                  <p class="item__title">Розыгрыш Huawei P30 Pro
+                  </p>
+                  <p class="item__date">15.11.19 - 27.11.19</p>
+                  <img alt="" src="https://i.citrus.ua/uploads/promo/herson-land/3-new.png"/>
+                  <button class="item__scroll-btn blue-btn" id="dog-btn">Подробнее
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="herson__bonus" id="bonus">
+          <img alt="" class="bonus__leave-top" src="https://i.citrus.ua/uploads/promo/sunny-gallery/leaves-purple.png"/>
+          <img alt="" class="bonus__citrus-right" src="https://i.citrus.ua/uploads/promo/herson-land/citrus-right.png"/>
+          <img alt="" class="bonus__citrus-left" src="https://i.citrus.ua/uploads/promo/herson-land/citrus-left.png"/>
+
+
+          <div class="bonus__body">
+            <div class="bonus__image">
+              <img alt="" src="https://i.citrus.ua/uploads/promo/herson-land/sale-500.png"/>
+            </div>
+            <div class="bonus__description">
+              <p class="bonus__title">500 бонусных гривен
+                каждому покупателю!
+              </p>
+              <p>Просто приди в Цитрус в дни открытия и получи больше! В частности, огромную плюшку 500 бонусных гривен на любые покупки.
+                Регистрируй свой номер прямо сейчас, чтобы получить 500 бонусных гривен на покупки в новом Цитрус
+              </p>
+            </div>
+          </div>
+          <div class="bonus__coupon" id="bonusCoupon">
+            <p class="bonus__coupon-title">Получи 500 бонусов 
+            </p>
+            <p class="bonus__coupon-description">на покупки в нашем новом ЦИТРУС в ТРЦ «Украина»
+            </p>
+            <form class="bonus__coupon-form" id="bonusForm">
+              <input autocomplete="off" id="bonusPhone" maxlength="19" name="phone" pattern="[\+]38\s[\(][0-9]{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+                     placeholder="+38(0__) ___-__-__" required="required" title="Формат: 38 (0XX) XXX-XX-XX" type="tel"/>
+              <button type="submit">Получить
+              </button>
+            </form>
+          </div>
+          <div class="bonus__success" id="bonusSuccess">
+            <p>500 бонусов начислены на номер <span id="successPhone">.</span>
+            </p>
+            <p>Посмотреть бонусы можно в <a href="https://my.citrus.ua/ru/club/bonus" target="_blank">личном кабинете</a>
+            </p>
+          </div>
+          <div class="bonus__fail" id="bonusFail">
+            <p>500 бонусов были начислены ранее на номер <span id="failPhone">.</span>
+            </p>
+            <p>Посмотреть бонусы можно в <a href="https://my.citrus.ua/ru/club/bonus" target="_blank">личном кабинете</a>
+            </p>
+          </div>
+        </div>
+        <div class="herson__discounts" id="sale">
+          <div class="discounts__desc">
+            <div class="desc__text-block">
+              <p>Скидки до 50%
+              </p>
+              <p>Именно так, и именно в дни открытия нового Цитрус - получи возможность приобрести больше впечатляющих гаджетов по невероятным ценам со скидкой до 50%
+              </p>
+            </div>
+            <img alt="" src="https://i.citrus.ua/uploads/promo/herson-land/sale-50.png"/>
+          </div>
+          <div class="discounts__top-products">
+            <p class="top-products__title">ТОП крутых предложений:
+            </p>
+            <p class="top-products__sub-title">Акционные цены доступны только в новом Цитрусе (ТРЦ «Украина»)
+            </p>
+            <div class="top-products__list">
+              <div class="product__item">
+                <img alt="" src="https://i.citrus.ua/uploads/promo/herson-land/products/iPhone-7.png"/>
+                <a class="item__name" href="https://www.citrus.ua/smartfony/iphone-7-32gb-black-apple-605297.html" target="_blank">Apple iPhone 7 
+32Gb</a>
+                <p class="item__price">
+                  <span class="item__old-price">13 999</span>
+                  9 999<span class="currency">грн</span>
+                </p>
+              </div>
+              <div class="product__item">
+                <img alt="" src="https://i.citrus.ua/uploads/promo/herson-land/products/XR.png"/>
+                <a class="item__name" href="https://www.citrus.ua/smartfony/iphone-xr-128gb-white-apple-633129.html" target="_blank">Apple iPhone Xr 
+128Gb</a>
+                <p class="item__price">
+                  <span class="item__old-price">24 999</span>
+                  17 999<span class="currency">грн</span>
+                </p>
+              </div>
+              <div class="product__item">
+                <img alt="" src="https://i.citrus.ua/uploads/promo/herson-land/products/iPhone-11-Pro-Max.png"/>
+                <a class="item__name" href="https://www.citrus.ua/smartfony/iphone-11-pro-max-256gb-midnight-green-apple-653249.html" target="_blank">Apple iPhone 11 Pro Max 256Gb</a>
+                <p class="item__price">
+                  <span class="item__old-price">46 999</span>
+                  39 999 <span class="currency">грн</span>
+                </p>
+              </div>
+              <div class="product__item">
+                <img alt="" src="https://i.citrus.ua/uploads/promo/herson-land/products/AW4.png"/>
+                <a class="item__name"
+                   href="https://www.citrus.ua/smart-chasy/apple-watch-series-3-42mm-space-grey-aluminum-case-with-black-sport-band-mql12fsa-618469.html"
+                   target="_blank">Apple Watch 
+Series 3</a>
+                <p class="item__price">
+                  <span class="item__old-price">7 999</span>
+                  6 499 <span class="currency">грн</span>
+                </p>
+              </div>
+              <div class="product__item">
+                <img alt="" src="https://i.citrus.ua/uploads/promo/herson-land/products/Ipad.png"/>
+                <a class="item__name" href="https://www.citrus.ua/planshety/ipad-97-32gb-space-gray-apple-626552.html" target="_blank">Apple iPad 9.7" 
+Wi-Fi 32GB</a>
+                <p class="item__price">
+                  <span class="item__old-price">9 699</span>
+                  8 499 <span class="currency">грн</span>
+                </p>
+              </div>
+              <div class="product__item">
+                <img alt="" src="https://i.citrus.ua/uploads/promo/herson-land/products/Lenovo_PAD.png"/>
+                <a class="item__name" href="https://www.citrus.ua/planshety/lenovo-tab-m10-lte-216gb-slate-black-650095.html" target="_blank">Lenovo Tab M10 
+LTE 2/16Gb</a>
+                <p class="item__price">
+                  <span class="item__old-price">5 499</span>
+                  4 999 <span class="currency">грн</span>
+                </p>
+              </div>
+              <div class="product__item">
+                <img alt="" src="https://i.citrus.ua/uploads/promo/herson-land/products/ZTE.png"/>
+                <a class="item__name" href="https://www.citrus.ua/smartfony/blade-a7-2019-232gb-black-zte-646521.html" target="_blank">ZTE Blade A7 2019 
+2/32Gb</a>
+                <p class="item__price">
+                  <span class="item__old-price">2 499</span>
+                  2 299<span class="currency">грн</span>
+                </p>
+              </div>
+              <div class="product__item">
+                <img alt="" src="https://i.citrus.ua/uploads/promo/herson-land/products/Lenovo_PAD.png"/>
+                <a class="item__name" href="https://www.citrus.ua/noutbuki-i-ultrabuki/lenovo-ideapad-330-15ikb-81dc00qmra-onyx-black-652986.html"
+                   target="_blank">Ноутбук Lenovo 
+IdeaPad</a>
+                <p class="item__price">
+                  <span class="item__old-price">7 999</span>
+                  6 999 <span class="currency">грн</span>
+                </p>
+              </div>
+              <div class="product__item">
+                <img alt="" src="https://i.citrus.ua/uploads/promo/herson-land/products/Bagland-Kontinent.png"/>
+                <a class="item__name" href="https://www.citrus.ua/sumki/sumka-dlya-noutbuka-bagland-kontinent-gray-646261.html" target="_blank">Сумка для ноутбука Bagland Kontinent</a>
+
+                <p class="item__price">
+                  <span class="item__old-price">799</span>
+                  499 <span class="currency">грн</span>
+                </p>
+              </div>
+              <div class="product__item">
+                <img alt="" src="https://i.citrus.ua/uploads/promo/herson-land/products/Luckysky-Casual.png"/>
+                <a class="item__name" href="https://www.citrus.ua/backpacks/ryukzak-luckysky-casual-light-gray-156-643925.html" target="_blank">Рюкзак Luckysky 
+Casual 15.6"</a>
+                <p class="item__price">
+                  <span class="item__old-price">2 499</span>
+                  1 249 <span class="currency">грн</span>
+                </p>
+              </div>
+              <div class="product__item">
+                <img alt="" src="https://i.citrus.ua/uploads/promo/herson-land/products/AIR-MUSIC-FLIP.png"/>
+                <a class="item__name" href="https://www.citrus.ua/akustika/portativnaya-akustika-air-music-flip-camo-614201.html" target="_blank">Air Music
+                  FLIP</a>
+
+                <p class="item__price">
+                  <span class="item__old-price">1 199</span>
+                  719 <span class="currency">грн</span>
+                </p>
+              </div>
+              <div class="product__item">
+                <img alt="" src="https://i.citrus.ua/uploads/promo/herson-land/products/AIR-MUSIC-Pods.png"/>
+                <a class="item__name" href="https://www.citrus.ua/naushniki/besprovodnye-naushniki-air-music-pods-white-641889.html" target="_blank">Air Music
+                  Pods</a>
+                <p class="item__price">
+                  <span class="item__old-price">1 599</span>
+                  1 119 <span class="currency">грн</span></p>
+              </div>
+              <div class="product__item">
+                <img alt="" src="https://i.citrus.ua/uploads/promo/herson-land/products/Vehicle-Blackbox.png"/>
+                <a class="item__name" href="https://www.citrus.ua/videoregistratory/videoregistrator-vehicle-blackbox-dual-lens-45-inch-652296.html"
+                   target="_blank">Видеорегистратор Vehicle Blackbox</a>
+                <p class="item__price">
+                  <span class="item__old-price">1 399</span>
+                  999 <span class="currency">грн</span>
+                </p>
+              </div>
+              <div class="product__item">
+                <img alt="" src="https://i.citrus.ua/uploads/promo/herson-land/products/ThiEYE-i60-Black.png"/>
+                <a class="item__name" href="https://www.citrus.ua/ekshn-kamery/ekshn-kamera-thieye-i60plus-black-selfiekit-plus-32gb-sd-654762.html" target="_blank">Экшн-камера ThiEYE 
+i60+ Black</a>
+                <p class="item__price">
+                  <span class="item__old-price">1 999</span>
+                  1 399<span class="currency">грн</span>
+                </p>
+              </div>
+              <div class="product__item">
+                <img alt="" src="https://i.citrus.ua/uploads/promo/herson-land/products/GPS-Elari-KidPhone 2.png"/>
+                <a class="item__name" href="https://www.citrus.ua/smart-chasy/detskiy-telefon-chasy-s-gps-trekerom-elari-kidphone-2-pink-624873.html"
+                   target="_blank">Детский телефон-часы Elari KidPhone 2</a>
+                <p class="item__price">
+                  <span class="item__old-price">999</span>
+                  799 <span class="currency">грн</span>
+                </p>
+              </div>
+              <div class="product__item">
+                <img alt="" src="https://i.citrus.ua/uploads/promo/herson-land/products/GameSir-G4s.png"/>
+                <a class="item__name" href="https://www.citrus.ua/aksessuary-dlya-gejminga/igrovoy-geympad-gamesir-g4s-615483.html" target="_blank">GameSir G4s</a>
+                <p class="item__price">
+                  <span class="item__old-price">999</span>
+                  800 <span class="currency">грн</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="herson__feast" id="dog">
+          <img alt="" class="feast__leaves-top" src="https://i.citrus.ua/uploads/promo/herson-land/cloud-yell.png"/>
+          <div class="feast__body">
+            <div class="feast__image"><img alt="" src="https://i.citrus.ua/uploads/promo/herson-land/honor-img.png"/>
+            </div>
+            <div class="feast__description">
+              <p>Розыгрыш Huawei P30 Pro
+              </p>
+              <p>Просто бери с собой апельсин и приходи к нам на открытие. В Цитрус даже апельсин может стать тем волшебным билетиком, что поможет тебе получить
+                телефон мечты - Huawei P30 Pro
+              </p>
+              <a href="https://www.facebook.com/events/411363466227348/" target="_blank">Присоединиться к мероприятию</a>
+            </div>
+          </div>
+        </div>
+        <div class="herson__footer">
+          <p class="footer__description">*Акция действует только в магазине «Цитрус» по адресу: г. Херсон, ТРЦ «Украина», ул. Ушакова, 45.
+            Скидки до 50% действуют на фиксированный список товаров с 15.11.19 по 27.11.19 или пока товар есть в наличии. Количество акционных товаров
+            ограничено. Фото товаров может отличаться от на-ходящихся в продаже. Акция не суммируется с другими акциями, скидками, бонусами. Продавец имеет
+            право изменять условия акции. Под бонусными гривнами понимается однократное начис-ление бонусов клиенту на один мобильный номер в формате
+            украинского GSM-оператора по про-грамме лояльности "Цитрус плюшки". Бонусы начисляются с 15.11.19 по 27.11.19 и действуют до 27.11.2019
+            включительно. За начислением бонусов обращайтесь к продавцам-консультантам. Бону-сами можно оплатить до 50% стоимости товара. Использовать бонусы
+            можно на все товары, за ис-ключением смартфонов, мобильных телефонов, ноутбуков, планшетов, iPad, iPhone, MacBook, iMac, фитнес-трекеров Xiaomi Mi
+            Band любой серии и товаров, указанных в Приложении к правилам бону-сной программы «Цитрус Плюшки» по ссылке https://www.citrus.ua/policy-club.
+            Юридические лица не участвуют в акции. Продавец имеет право изменять условия акции. Детали акции здесь и у продав-цов-консультантов.
+          </p>
+        </div>
+      </div>
+      <script>
+              ;(function () {
+        let year = 2019;
+        let month = 11;
+        let day = 28;
+        let eventDate = new Date(year, month - 1, day);
+        let eventTime = eventDate.getTime();
+
+        function getTimeStr (num) {
+          return num < 10 ? '0' + num : num;
+        }
+
+        function countdown () {
+          timerId = setTimeout(countdown, 1000);
+          const now = new Date();
+          let currentTime = now.getTime();
+          let remTime = eventTime - currentTime;
+          let s = Math.floor(remTime / 1000);
+          let m = Math.floor(s / 60);
+          let h = Math.floor(m / 60);
+          let d = Math.floor(h / 24);
+          h = h % 24;
+          m = m % 60;
+          s = s % 60;
+          if (d <= 0 && h <= 0 && m <= 0 && s <= 0) {
+            clearTimeout(timerId);
+            d = 0;
+            h = 0;
+            m = 0;
+            s = 0;
+          }
+          d = getTimeStr(d);
+          h = getTimeStr(h);
+          m = getTimeStr(m);
+          s = getTimeStr(s);
+          document.getElementById('days').innerText = d;
+          document.getElementById('days').textContent = d;
+          document.getElementById('hours').innerText = h;
+          document.getElementById('hours').textContent = h;
+          document.getElementById('minutes').innerText = m;
+          document.getElementById('minutes').textContent = m;
+          document.getElementById('seconds').innerText = s;
+          document.getElementById('seconds').textContent = s;
+        }
+
+        let timerId = null;
+        window.onload = countdown;
+        let bonusBlock = document.getElementById('bonus');
+        let bonusBtn = document.getElementById('bonus-btn');
+        let saleBlock = document.getElementById('sale');
+        let saleBtn = document.getElementById('sale-btn');
+        let dogBlock = document.getElementById('dog');
+        let dogBtn = document.getElementById('dog-btn');
+
+        function scrollToBonus () {
+          bonusBlock.scrollIntoView({block: 'start', behavior: 'smooth'});
+        }
+
+        function scrollToSale () {
+          saleBlock.scrollIntoView({block: 'start', behavior: 'smooth'});
+        }
+
+        function scrollToDog () {
+          dogBlock.scrollIntoView({block: 'start', behavior: 'smooth'});
+        }
+
+        bonusBtn.addEventListener('click', scrollToBonus);
+        saleBtn.addEventListener('click', scrollToSale);
+        dogBtn.addEventListener('click', scrollToDog);
+        const initMask = function (element) {
+          const telClick = function (event) {
+            if (!event.target.value.length) {
+              event.target.value = '+380';
+            }
+          };
+          const telInput = function (event) {
+            const x = event.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,1})(\d{0,2})(\d{0,3})(\d{0,2})(\d{0,2})/);
+            event.target.value = '+38' + (x[4] ? ' (0' + x[3] + ') ' : '0' + x[3]) + x[4] + (x[5] ? '-' + x[5] : '') + (x[6] ? '-' + x[6] : '');
+          };
+          element.addEventListener('click', telClick);
+          element.addEventListener('input', telInput);
+        };
+        const submitForm = function (event) {
+          event.preventDefault();
+          const formData = new FormData();
+          const userPhone = event.target.phone.value;
+          formData.append('phone|1454', userPhone);
+          const uri = 'https://api.citrus.ua/forms/4227/answers';
+          const config = {
+            method: 'POST',
+            body: formData
+          };
+          fetch(uri, config).then(function (response) {
+            return response.json();
+          }).then(function (response) {
+            if (response.success) {
+              document.getElementById('bonusCoupon').style.display = 'none';
+              document.getElementById('successPhone').textContent = userPhone;
+              document.getElementById('bonusSuccess').style.display = 'block';
+              event.target.reset();
+            } else {
+              throw new Error('Not success answer');
+            }
+          }).catch(function () {
+            document.getElementById('bonusCoupon').style.display = 'none';
+            document.getElementById('failPhone').textContent = userPhone;
+            document.getElementById('bonusFail').style.display = 'block';
+            event.target.reset();
+          });
+        };
+        const phone = document.getElementById('bonusPhone');
+        initMask(phone);
+        const form = document.getElementById('bonusForm');
+        form.addEventListener('submit', submitForm);
+      })();
+      </script>

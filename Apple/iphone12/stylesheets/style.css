@@ -1,0 +1,553 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: 50px 0 50px 0;
+  overflow-x: hidden; }
+
+ul {
+  margin: 0;
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  color: transparent; }
+
+form select,
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding: 0 0 0 12px;
+  background-color: #ffffff; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3b6d9a;
+  outline: none;
+  transition: 0.3s; }
+
+button {
+  display: block;
+  background: 0 0;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  line-height: 44px;
+  transition: 0.3s;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-size: 18px; }
+
+.iphone12 {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto; }
+  .iphone12 .iphone12-header {
+    background: #FFFFFF; }
+  .iphone12 .iphone12-header__container {
+    padding: 120px 24px 120px 24px;
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .iphone12 .iphone12-header__logo {
+    margin-bottom: 46px; }
+  .iphone12 .iphone12-header__title {
+    font-weight: 500;
+    font-size: 66px;
+    line-height: 86px;
+    color: #000;
+    text-align: center; }
+  .iphone12 .iphone12-header__image {
+    width: 100%;
+    margin: 0 auto; }
+  @media screen and (max-width: 1365px) {
+    .iphone12 .iphone12-header__container {
+      padding: 80px 24px 80px 24px; }
+    .iphone12 .iphone12-header__logo {
+      max-width: 300px;
+      width: 100%;
+      margin: 0 auto 32px auto; }
+    .iphone12 .iphone12-header__title {
+      font-size: 48px;
+      line-height: 62px; }
+    .iphone12 .iphone12-header__image {
+      max-width: 695px;
+      width: 100%; } }
+  @media screen and (max-width: 1023px) {
+    .iphone12 .iphone12-header__container {
+      padding: 60px 24px 60px 24px; }
+    .iphone12 .iphone12-header__logo {
+      max-width: 225px;
+      margin: 0 auto 24px auto; }
+    .iphone12 .iphone12-header__title {
+      font-size: 34px;
+      line-height: 44px; }
+    .iphone12 .iphone12-header__image {
+      max-width: 570px; } }
+  @media screen and (max-width: 767px) {
+    .iphone12 .iphone12-header__container {
+      padding: 40px 16px 40px 16px; }
+    .iphone12 .iphone12-header__logo {
+      max-width: 100px;
+      margin: 0 auto 16px auto; }
+    .iphone12 .iphone12-header__title {
+      font-size: 24px;
+      line-height: 31px; }
+    .iphone12 .iphone12-header__image {
+      max-width: 570px;
+      padding: 0 16px; } }
+  .iphone12 .iphone12-screen {
+    background: #000; }
+  .iphone12 .iphone12-screen__container {
+    padding: 100px 0 0 0; }
+  .iphone12 .iphone12-screen__content {
+    max-width: 1150px;
+    width: 100%;
+    margin: 0 auto 145px auto;
+    text-align: center; }
+  .iphone12 .iphone12-screen__title {
+    font-size: 64px;
+    line-height: 83px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 40px; }
+  .iphone12 .iphone12-screen__subtitle {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 52px;
+    color: #fff; }
+  .iphone12 .iphone12-screen__image-container {
+    display: flex;
+    justify-content: flex-end; }
+  @media screen and (max-width: 1365px) {
+    .iphone12 .iphone12-screen__container {
+      padding: 70px 0 0 0; }
+    .iphone12 .iphone12-screen__content {
+      max-width: 830px;
+      width: 100%;
+      margin: 0 auto 100px auto;
+      text-align: center; }
+    .iphone12 .iphone12-screen__title {
+      font-size: 46px;
+      line-height: 60px;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 28px; }
+    .iphone12 .iphone12-screen__subtitle {
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 36px;
+      color: #fff; }
+    .iphone12 .iphone12-screen__image {
+      max-width: 745px; } }
+  @media screen and (max-width: 1023px) {
+    .iphone12 .iphone12-screen__container {
+      padding: 60px 0 0 0; }
+    .iphone12 .iphone12-screen__content {
+      max-width: 620px;
+      width: 100%;
+      margin: 0 auto 70px auto;
+      text-align: center; }
+    .iphone12 .iphone12-screen__title {
+      font-size: 34px;
+      line-height: 44px;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 24px; }
+    .iphone12 .iphone12-screen__subtitle {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 26px;
+      color: #fff; }
+    .iphone12 .iphone12-screen__image {
+      max-width: 550px; } }
+  @media screen and (max-width: 767px) {
+    .iphone12 .iphone12-screen__container {
+      padding: 40px 0 0 0; }
+    .iphone12 .iphone12-screen__content {
+      padding: 0 16px;
+      margin: 0 auto 40px auto; }
+    .iphone12 .iphone12-screen__title {
+      font-size: 24px;
+      line-height: 31px; }
+    .iphone12 .iphone12-screen__subtitle {
+      font-size: 14px;
+      line-height: 18px; }
+    .iphone12 .iphone12-screen__image {
+      max-width: initial;
+      width: 305px;
+      height: 305px !important; } }
+  .iphone12 .iphone12-blocks {
+    background: #fff; }
+  .iphone12 .iphone12-blocks__container {
+    padding: 100px 0 0 0; }
+  .iphone12 .iphone12-blocks__title {
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 83px;
+    margin-bottom: 80px;
+    text-align: center; }
+  .iphone12 .iphone12-blocks__image {
+    display: flex;
+    margin: 0 auto; }
+  .iphone12 .iphone12-blocks__image-mob {
+    display: none; }
+  @media screen and (max-width: 1365px) {
+    .iphone12 .iphone12-blocks__container {
+      padding: 80px 0 80px 0; }
+    .iphone12 .iphone12-blocks__title {
+      font-size: 46px;
+      line-height: 60px;
+      margin-bottom: 60px; } }
+  @media screen and (max-width: 1023px) {
+    .iphone12 .iphone12-blocks__title {
+      font-size: 34px;
+      line-height: 44px; } }
+  @media screen and (max-width: 767px) {
+    .iphone12 .iphone12-blocks__container {
+      padding: 60px 0 0 0; }
+    .iphone12 .iphone12-blocks__title {
+      font-size: 24px;
+      line-height: 31px; }
+    .iphone12 .iphone12-blocks__image {
+      display: none; }
+    .iphone12 .iphone12-blocks__image-mob {
+      display: flex;
+      margin: 0 auto;
+      max-width: 387px;
+      width: 100%; } }
+  .iphone12 .iphone12-camera {
+    background: #DCE3EA; }
+  .iphone12 .iphone12-camera__container {
+    padding: 100px 0 0 0; }
+  .iphone12 .iphone12-camera__content {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto 145px auto;
+    text-align: center; }
+  .iphone12 .iphone12-camera__title {
+    font-size: 64px;
+    line-height: 83px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 40px; }
+  .iphone12 .iphone12-camera__subtitle {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 52px;
+    color: #000; }
+  .iphone12 .iphone12-camera__image-container {
+    display: flex;
+    justify-content: flex-end; }
+  @media screen and (max-width: 1365px) {
+    .iphone12 .iphone12-camera__container {
+      padding: 70px 0 0 0; }
+    .iphone12 .iphone12-camera__content {
+      max-width: 830px;
+      width: 100%;
+      margin: 0 auto 100px auto;
+      text-align: center; }
+    .iphone12 .iphone12-camera__title {
+      font-size: 46px;
+      line-height: 60px;
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 28px; }
+    .iphone12 .iphone12-camera__subtitle {
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 36px;
+      color: #000; }
+    .iphone12 .iphone12-camera__image {
+      max-width: 745px; } }
+  @media screen and (max-width: 1023px) {
+    .iphone12 .iphone12-camera__container {
+      padding: 60px 0 0 0; }
+    .iphone12 .iphone12-camera__content {
+      max-width: 620px;
+      width: 100%;
+      margin: 0 auto 70px auto;
+      text-align: center; }
+    .iphone12 .iphone12-camera__title {
+      font-size: 34px;
+      line-height: 44px;
+      font-weight: bold;
+      margin-bottom: 24px; }
+    .iphone12 .iphone12-camera__subtitle {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 26px; }
+    .iphone12 .iphone12-camera__image {
+      max-width: 550px; } }
+  @media screen and (max-width: 767px) {
+    .iphone12 .iphone12-camera__container {
+      padding: 40px 0 0 0; }
+    .iphone12 .iphone12-camera__content {
+      padding: 0 16px;
+      margin: 0 auto 40px auto; }
+    .iphone12 .iphone12-camera__title {
+      font-size: 24px;
+      line-height: 31px; }
+    .iphone12 .iphone12-camera__subtitle {
+      font-size: 14px;
+      line-height: 18px; }
+    .iphone12 .iphone12-camera__image {
+      max-width: initial;
+      width: 305px;
+      height: 305px !important; } }
+  .iphone12 .iphone12-magsafe {
+    background: #fff;
+    position: relative; }
+  .iphone12 .iphone12-magsafe__container {
+    padding-top: 100px; }
+  .iphone12 .iphone12-magsafe__title {
+    font-size: 64px;
+    line-height: 83px;
+    font-weight: bold;
+    color: #000;
+    text-align: center; }
+  .iphone12 .iphone12-magsafe__image {
+    display: flex;
+    margin: 0 auto; }
+  .iphone12 .iphone12-magsafe__disclamer {
+    position: absolute;
+    right: 13%;
+    bottom: 3%;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 36px;
+    color: #929195; }
+  @media screen and (max-width: 1365px) {
+    .iphone12 .iphone12-magsafe__container {
+      padding-top: 80px; }
+    .iphone12 .iphone12-magsafe__title {
+      font-size: 46px;
+      line-height: 60px; }
+    .iphone12 .iphone12-magsafe__disclamer {
+      font-size: 20px;
+      line-height: 26px; } }
+  @media screen and (max-width: 1023px) {
+    .iphone12 .iphone12-magsafe__title {
+      font-size: 34px;
+      line-height: 44px; }
+    .iphone12 .iphone12-magsafe__disclamer {
+      font-size: 16px;
+      line-height: 21px; } }
+  @media screen and (max-width: 767px) {
+    .iphone12 .iphone12-magsafe__title {
+      font-size: 24px;
+      line-height: 31px; }
+    .iphone12 .iphone12-magsafe__disclamer {
+      font-size: 10px;
+      line-height: 13px; } }
+  .iphone12 .iphone12-magsafe--info {
+    background: #E6F2DE;
+    padding: 100px 0; }
+  .iphone12 .iphone12-magsafe--info__title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 52px;
+    color: #000;
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto; }
+  @media screen and (max-width: 1365px) {
+    .iphone12 .iphone12-magsafe--info {
+      padding: 80px 0; }
+    .iphone12 .iphone12-magsafe--info__title {
+      font-size: 28px;
+      line-height: 36px;
+      max-width: 800px; } }
+  @media screen and (max-width: 1023px) {
+    .iphone12 .iphone12-magsafe--info {
+      padding: 75px 0; }
+    .iphone12 .iphone12-magsafe--info__title {
+      font-size: 20px;
+      line-height: 26px;
+      max-width: 615px; } }
+  @media screen and (max-width: 767px) {
+    .iphone12 .iphone12-magsafe--info {
+      padding: 45px 16px; } }
+  .iphone12 .iphone12-colors {
+    background: #F5F5F7;
+    position: relative; }
+  .iphone12 .iphone12-colors__container {
+    padding-top: 115px; }
+  .iphone12 .iphone12-colors__title {
+    font-size: 64px;
+    line-height: 83px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto 80px auto; }
+  .iphone12 .iphone12-colors__image {
+    display: flex;
+    margin: 0 auto; }
+  @media screen and (max-width: 1365px) {
+    .iphone12 .iphone12-colors__container {
+      padding-top: 80px; }
+    .iphone12 .iphone12-colors__title {
+      font-size: 46px;
+      line-height: 60px;
+      margin: 0 auto 60px auto;
+      max-width: 800px; }
+    .iphone12 .iphone12-colors__image {
+      max-width: 570px;
+      width: 100%; } }
+  @media screen and (max-width: 1023px) {
+    .iphone12 .iphone12-colors__title {
+      font-size: 34px;
+      line-height: 44px;
+      margin: 0 auto 40px auto;
+      max-width: 566px; }
+    .iphone12 .iphone12-colors__image {
+      max-width: 430px;
+      width: 100%; } }
+  @media screen and (max-width: 767px) {
+    .iphone12 .iphone12-colors__title {
+      font-size: 24px;
+      line-height: 31px;
+      margin: 0 auto 32px auto;
+      padding: 0 16px; }
+    .iphone12 .iphone12-colors__image {
+      padding: 0 24px; } }
+  .iphone12 .iphone12-characteristics {
+    background: #FFF;
+    padding: 100px 24px; }
+  .iphone12 .iphone12-characteristics__title {
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 78px;
+    margin-bottom: 20px;
+    color: #000;
+    text-align: center; }
+  .iphone12 .iphone12-characteristics__list {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto; }
+  .iphone12 .iphone12-characteristics__item {
+    width: 48%;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: #000;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+    display: flex; }
+  .iphone12 .iphone12-characteristics__item:nth-child(-n+14):before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 30%;
+    background-color: #7C7C7C;
+    left: 0;
+    bottom: 0; }
+  @media screen and (max-width: 1365px) {
+    .iphone12 .iphone12-characteristics {
+      padding: 80px 24px; }
+    .iphone12 .iphone12-characteristics__title {
+      font-size: 40px;
+      line-height: 52px; } }
+  @media screen and (max-width: 767px) {
+    .iphone12 .iphone12-characteristics {
+      padding: 45px 16px; }
+    .iphone12 .iphone12-characteristics__title {
+      font-size: 32px;
+      line-height: 42px; }
+    .iphone12 .iphone12-characteristics__list {
+      flex-direction: column; }
+    .iphone12 .iphone12-characteristics__item {
+      width: 100%;
+      margin-top: 24px;
+      padding-bottom: 24px; }
+    .iphone12 .iphone12-characteristics__item:nth-child(-n+15):before {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 50%;
+      background-color: #7C7C7C;
+      left: 0;
+      bottom: 0; } }
+  .iphone12 .iphone12-equipment {
+    background: #F5F5F7; }
+  .iphone12 .iphone12-equipment__container {
+    padding: 100px 0; }
+  .iphone12 .iphone12-equipment__title {
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 75px;
+    margin-bottom: 60px;
+    text-align: center;
+    color: #000; }
+  .iphone12 .iphone12-equipment__list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto; }
+  .iphone12 .iphone12-equipment__name {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 52px;
+    color: #0E0E0E;
+    text-align: center; }
+  @media screen and (max-width: 1365px) {
+    .iphone12 .iphone12-equipment__container {
+      padding: 80px 0; }
+    .iphone12 .iphone12-equipment__title {
+      font-size: 46px;
+      line-height: 54px; }
+    .iphone12 .iphone12-equipment__image {
+      max-width: 376px;
+      width: 100%; }
+    .iphone12 .iphone12-equipment__name {
+      font-size: 28px;
+      line-height: 36px; } }
+  @media screen and (max-width: 1023px) {
+    .iphone12 .iphone12-equipment__title {
+      font-size: 34px;
+      line-height: 40px;
+      margin-bottom: 60px; }
+    .iphone12 .iphone12-equipment__image {
+      max-width: 270px;
+      width: 100%; }
+    .iphone12 .iphone12-equipment__name {
+      font-size: 20px;
+      line-height: 26px; } }
+  @media screen and (max-width: 767px) {
+    .iphone12 .iphone12-equipment__container {
+      padding: 40px 16px; }
+    .iphone12 .iphone12-equipment__title {
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 24px; }
+    .iphone12 .iphone12-equipment__list {
+      flex-direction: column;
+      align-items: center; }
+    .iphone12 .iphone12-equipment__image {
+      max-width: 376px;
+      width: 100%; }
+    .iphone12 .iphone12-equipment__name {
+      font-size: 14px;
+      line-height: 18px; } }
+
+/*# sourceMappingURL=style.css.map */

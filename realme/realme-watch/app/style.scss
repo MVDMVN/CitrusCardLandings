@@ -1,0 +1,2977 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  //margin: 0;
+  margin: 50px 0 50px 0;
+  overflow-x: hidden;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  color: transparent;
+}
+
+form select,
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding: 0 0 0 12px;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3B6D9A;
+  outline: none;
+  transition: 0.3s;
+}
+
+button {
+  display: block;
+  background: 0 0;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  line-height: 44px;
+  transition: .3s;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+}
+
+@keyframes text-right-slide-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes text-left-slide-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes text-bottom-slide-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes text-opacity-anim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.watch {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+  /************************** HEADER SECTION **************************/
+
+  .watch-header {
+    background-color: #000;
+    display: flex;
+    z-index: 3;
+    position: relative;
+  }
+
+  .watch-header__container {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .watch-header__banner {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /************************** CHARACTERISTICS SECTION **************************/
+  .watch-characteristics {
+    background-color: #fff;
+    position: relative;
+    padding-top: 160px;
+    padding-bottom: 139px;
+  }
+
+  .watch-characteristics__container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .watch-characteristics__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 335px;
+    z-index: 1;
+  }
+
+  .watch-characteristics__image {
+    position: absolute;
+    //top: 0; /*-178*/
+    top: -178px;
+    left: 114px;
+    width: 357px;
+    z-index: 2;
+  }
+
+  .watch-characteristics__list {
+    max-width: 700px;
+    width: 100%;
+    margin-right: 135px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .watch-characteristics__item {
+    width: 45%;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+    position: relative;
+    padding-left: 75px;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  .anim .watch-characteristics__item:nth-child(odd) {
+    animation: text-right-slide-anim .7s forwards;
+  }
+
+  .anim .watch-characteristics__item:nth-child(even) {
+    animation: text-right-slide-anim .7s forwards;
+    animation-delay: .6s;
+  }
+
+
+  .watch-characteristics__item:before {
+    content: '';
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    left: 0;
+    top: 10px;
+  }
+
+  .watch-characteristics__item.screen:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/watches/icons/Sell_icon/screen.svg") center/100% 100% no-repeat;
+  }
+
+  .watch-characteristics__item.heart:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/watches/icons/Sell_icon/heart.svg") center/100% 100% no-repeat;
+  }
+
+  .watch-characteristics__item.activity:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/watches/icons/Sell_icon/activity.svg") center/100% 100% no-repeat;
+  }
+
+  .watch-characteristics__item.notifications:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/watches/icons/Sell_icon/notifications.svg") center/100% 100% no-repeat;
+  }
+
+  .watch-characteristics__item.dials:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/watches/icons/Sell_icon/dials.svg") center/100% 100% no-repeat;
+  }
+
+  .watch-characteristics__item.blood:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/watches/icons/Sell_icon/blood.svg") center/100% 100% no-repeat;
+  }
+
+  .watch-characteristics__item.sport:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/watches/icons/Sell_icon/sport.svg") center/100% 100% no-repeat;
+  }
+
+  .watch-characteristics__item.controls:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/watches/icons/Sell_icon/controls.svg") center/100% 100% no-repeat;
+  }
+
+  .watch-characteristics__item:nth-child(-n+6) {
+    margin-bottom: 43px;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .watch-characteristics {
+      padding-top: 100px;
+      padding-bottom: 30px;
+    }
+
+    .watch-characteristics__bg {
+      width: 242px;
+    }
+
+    .watch-characteristics__image {
+      top: -134px;
+      left: 82px;
+      width: 260px;
+    }
+
+    .watch-characteristics__list {
+      max-width: 545px;
+      margin-right: 65px;
+    }
+
+    .watch-characteristics__item {
+      font-size: 16px;
+      line-height: 19px;
+      padding-left: 58px;
+    }
+
+    .watch-characteristics__item:before {
+      width: 40px;
+      height: 40px;
+      top: 14px;
+    }
+
+    .watch-characteristics__item:nth-child(-n+6) {
+      margin-bottom: 34px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .watch-characteristics {
+      padding-top: 60px;
+      padding-bottom: 58px;
+    }
+
+    .watch-characteristics__bg {
+      width: 180px;
+    }
+
+    .watch-characteristics__image {
+      top: -92px;
+      left: 62px;
+      width: 190px;
+    }
+
+    .watch-characteristics__list {
+      max-width: 400px;
+      margin-right: 60px;
+    }
+
+    .watch-characteristics__item {
+      font-size: 12px;
+      line-height: 14px;
+      height: 52px;
+    }
+
+    .anim .watch-characteristics__item:nth-child(odd),
+    .anim .watch-characteristics__item:nth-child(even) {
+      opacity: 1;
+      transform: initial;
+      animation: none;
+    }
+
+    .watch-characteristics__item:before {
+      width: 32px;
+      height: 32px;
+      top: 14px;
+    }
+
+    .watch-characteristics__item:nth-child(-n+6) {
+      margin-bottom: 18px;
+    }
+
+  }
+
+  @media screen and (max-width: 767px) {
+    .watch-characteristics {
+      padding-top: 0;
+      background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/watches/watches-bg-mobile-4.png") center no-repeat, #fff;
+      height: 512px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-bottom: 0;
+    }
+
+    .watch-characteristics__bg,
+    .watch-characteristics__image {
+      display: none;
+    }
+
+    .watch-characteristics__list {
+      flex-direction: column;
+      align-items: center;
+      max-width: 315px;
+      margin-right: 16px;
+      margin-left: 411px;
+    }
+
+    .watch-characteristics__item {
+      width: 100%;
+      //max-width: 145px;
+      height: 40px;
+      padding-left: 42px;
+    }
+
+    .watch-characteristics__item:not(:last-child) {
+      margin-bottom: 18px;
+    }
+
+    .watch-characteristics__item:before {
+      top: 10px;
+    }
+  }
+
+
+  /************************** VIDEO SECTION **************************/
+  .watch-video {
+    height: 700px;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .watch-video__video {
+    max-width: 1366px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .watch-video {
+      height: 510px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .watch-video {
+      height: 375px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .watch-video {
+      height: 300px;
+    }
+  }
+
+  /************************** SCREEN SECTION **************************/
+
+  .watch-screen {
+    position: relative;
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/screen/screen-bg-desctop.png") bottom/100% 50% no-repeat;
+    padding-bottom: 226px;
+  }
+
+  .watch-screen__title {
+    //max-width: 1230px;
+    width: 90%;
+    background-color: #FFC815;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 86px;
+    color: #191919;
+    margin-bottom: 100px;
+    padding: 30px 0 30px 136px;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .anim .watch-screen__title {
+    animation: text-left-slide-anim .7s forwards;
+  }
+
+  .watch-screen__container {
+    max-width: 1094px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .watch-screen__screen-title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    color: #000;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .watch-screen__screen-subtext {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000;
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .watch-screen__text {
+    font-size: 20px;
+    line-height: 34px;
+    max-width: 423px;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .anim .watch-screen__screen-title {
+    animation: text-left-slide-anim .7s forwards;
+  }
+
+  .anim .watch-screen__screen-subtext {
+    animation: text-left-slide-anim .7s forwards;
+    animation-delay: .2s;
+  }
+
+  .anim .watch-screen__text {
+    animation: text-left-slide-anim .7s forwards;
+    animation-delay: .4s;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .watch-screen {
+      background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/screen/screen-bg-desctop.png") bottom/100% 57% no-repeat;
+      padding-bottom: 235px;
+    }
+
+    .watch-screen__title {
+      font-size: 44px;
+      line-height: 64px;
+      padding: 24px 0 24px 24px;
+      margin-bottom: 80px;
+    }
+
+    .watch-screen__container {
+      padding: 0 24px;
+    }
+
+    .watch-screen__screen-title {
+      font-size: 36px;
+      line-height: 46px;
+      margin-bottom: 10px;
+    }
+
+    .watch-screen__screen-subtext {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 40px;
+    }
+
+    .watch-screen__text {
+      font-size: 16px;
+      line-height: 24px;
+      max-width: 384px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .watch-screen {
+      background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/screen/screen-bg-desctop.png") bottom/94% 52% no-repeat;
+      padding-bottom: 165px;
+    }
+
+    .watch-screen__title {
+      font-size: 34px;
+      line-height: 46px;
+      padding: 20px 0 20px 24px;
+      margin-bottom: 60px;
+    }
+
+    .watch-screen__screen-title {
+      font-size: 28px;
+      line-height: 36px;
+      margin-bottom: 8px;
+    }
+
+    .watch-screen__screen-subtext {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 30px;
+    }
+
+    .watch-screen__text {
+      font-size: 12px;
+      line-height: 18px;
+      max-width: 280px;
+    }
+
+    .anim .watch-screen__title,
+    .anim .watch-screen__screen-title,
+    .anim .watch-screen__screen-subtext,
+    .anim .watch-screen__text {
+      opacity: 1;
+      transform: translateX(0);
+      animation: none;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .watch-screen {
+      background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/screen/screen-bg-mobile.png") bottom no-repeat;
+      padding-bottom: 280px;
+    }
+
+    .watch-screen__title {
+      font-size: 34px;
+      line-height: 42px;
+      padding: 20px 0 20px 16px;
+      margin-bottom: 40px;
+      width: 95%;
+    }
+
+    .watch-screen__screen-title {
+      font-size: 24px;
+      line-height: 34px;
+    }
+
+    .watch-screen__screen-subtext {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+
+    .watch-screen__text {
+      font-size: 12px;
+      line-height: 22px;
+      max-width: 288px;
+      margin-bottom: 40px;
+    }
+  }
+
+
+  /************************** DIALS SECTION **************************/
+
+  .watch-dials {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/dials/dials-bg.png") center/100% 100% no-repeat;
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+
+  .watch-dials__content {
+    max-width: 647px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .watch-dials__title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    margin-bottom: 10px;
+    color: #fff;
+    opacity: 0;
+  }
+
+  .watch-dials__subtitle {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 60px;
+    color: #fff;
+    opacity: 0;
+  }
+
+  .watch-dials__text {
+    font-size: 20px;
+    line-height: 34px;
+    color: #fff;
+    opacity: 0;
+  }
+
+  .anim .watch-dials__title {
+    animation: text-opacity-anim .7s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-dials__subtitle {
+    animation: text-opacity-anim .7s forwards;
+    animation-delay: .2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-dials__text {
+    animation: text-opacity-anim .7s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  @media screen and (max-width: 1365px) {
+    .watch-dials {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    .watch-dials__content {
+      max-width: 458px;
+    }
+
+    .watch-dials__title {
+      font-size: 36px;
+      line-height: 46px;
+      margin-bottom: 8px;
+    }
+
+    .watch-dials__subtitle {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 40px;
+    }
+
+    .watch-dials__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .watch-dials {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    .watch-dials__content {
+      padding: 0 16px;
+      max-width: 330px;
+    }
+
+    .watch-dials__title {
+      font-size: 28px;
+      line-height: 36px;
+    }
+
+    .watch-dials__subtitle {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 30px;
+    }
+
+    .watch-dials__text {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    .anim .watch-dials__title,
+    .anim .watch-dials__subtitle,
+    .anim .watch-dials__text {
+      opacity: 1;
+      transform: translateX(0);
+      animation: none;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .watch-dials {
+      background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/dials/dials-bg-mob.png") center no-repeat;
+    }
+
+    .watch-dials__content {
+      padding: 0 16px;
+      max-width: initial;
+      text-align: initial;
+    }
+
+    .watch-dials__title {
+      font-size: 24px;
+      line-height: 34px;
+      margin-bottom: 6px;
+    }
+
+    .watch-dials__subtitle {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+
+    .watch-dials__text {
+      font-size: 12px;
+      line-height: 22px;
+    }
+  }
+
+
+  /************************** DIALS SECTION **************************/
+
+  .watch-strap {
+    background-color: #fff;
+  }
+
+  .watch-strap__container {
+    padding: 160px 0 160px 0;
+    display: flex;
+  }
+
+  .watch-strap__content {
+    max-width: 540px;
+    width: 100%;
+    margin-left: 136px;
+    padding-top: 50px;
+  }
+
+  .watch-strap__title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    color: #000;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .watch-strap__subtitle {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000;
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .watch-strap__text {
+    font-size: 20px;
+    line-height: 34px;
+    color: #000;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .anim .watch-strap__title {
+    animation: text-left-slide-anim .7s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-strap__subtitle {
+    animation: text-left-slide-anim .7s forwards;
+    animation-delay: .2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-strap__text {
+    animation: text-left-slide-anim .7s forwards;
+    animation-delay: .6s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .watch-strap__colors {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  .anim .watch-strap__colors {
+    animation: text-right-slide-anim .7s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .watch-strap__image {
+    display: none;
+    margin-bottom: 24px;
+  }
+
+  .watch-strap__image.selected {
+    display: flex;
+    justify-content: center;
+  }
+
+  .watch-strap__colors-list {
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+  }
+
+  .watch-strap__colors-item {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    transition: .3s;
+  }
+
+  .watch-strap__colors-item:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  .watch-strap__colors-item.black {
+    background-color: #171717;
+  }
+
+  .watch-strap__colors-item.red {
+    background-color: #F65247;
+  }
+
+  .watch-strap__colors-item.blue {
+    background-color: #496DD1;
+  }
+
+  .watch-strap__colors-item.green {
+    background-color: #62763E;
+  }
+
+
+  @media screen and (max-width: 1365px) {
+    .watch-strap__container {
+      padding: 100px 24px 100px 24px;
+      justify-content: space-evenly;
+    }
+
+    .watch-strap__content {
+      padding-top: 40px;
+      max-width: 458px;
+      margin-left: 0;
+    }
+
+    .watch-strap__title {
+      font-size: 36px;
+      line-height: 46px;
+      margin-bottom: 8px;
+    }
+
+    .watch-strap__subtitle {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 40px;
+    }
+
+    .watch-strap__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .watch-strap__colors {
+      max-width: 360px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .watch-strap__container {
+      padding: 80px 24px 80px 24px;
+      justify-content: space-evenly;
+    }
+
+    .watch-strap__content {
+      padding-top: 30px;
+      max-width: 330px;
+      margin-left: 0;
+    }
+
+    .watch-strap__title {
+      font-size: 28px;
+      line-height: 36px;
+      margin-bottom: 8px;
+    }
+
+    .watch-strap__subtitle {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 40px;
+    }
+
+    .watch-strap__text {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    .watch-strap__colors {
+      max-width: 290px;
+    }
+
+    .anim .watch-strap__title,
+    .anim .watch-strap__subtitle,
+    .anim .watch-strap__text,
+    .anim .watch-strap__colors{
+      animation: none;
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .watch-strap__container {
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 16px 60px 16px;
+    }
+
+    .watch-strap__content {
+      margin-bottom: 40px;
+      max-width: 500px;
+    }
+
+    .watch-strap__title {
+      font-size: 24px;
+      line-height: 34px;
+    }
+
+    .watch-strap__subtitle {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .watch-strap__text {
+      font-size: 12px;
+      line-height: 22px;
+    }
+  }
+
+
+
+  /************************** ASSISTANT SECTION **************************/
+
+  .watch-assistant {
+    position: relative;
+    background: url(https://i.citrus.ua/uploads/promo/realme/watch-card/assistant/assistant-image.png) bottom no-repeat;
+    padding-bottom: 800px;
+    margin-bottom: 80px;
+  }
+
+  .watch-assistant__title {
+    width: 90%;
+    background-color: #FFC815;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 86px;
+    color: #191919;
+    margin-bottom: 100px;
+    padding: 30px 0 30px 136px;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .anim .watch-assistant__title {
+    animation: text-left-slide-anim .7s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .watch-assistant__container {
+    max-width: 1094px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .watch-assistant__screen-title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    color: #000;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .watch-assistant__screen-subtext {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000;
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .watch-assistant__text {
+    font-size: 20px;
+    line-height: 34px;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .anim .watch-assistant__screen-title {
+    animation: text-left-slide-anim .7s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-assistant__screen-subtext {
+    animation: text-left-slide-anim .7s forwards;
+    animation-delay: .2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-assistant__text {
+    animation: text-left-slide-anim .7s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .watch__disclaimer {
+    font-size: 20px;
+    line-height: 36px;
+    color: #9b9b9b;
+    max-width: 1094px;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .watch-assistant {
+      background: url(https://i.citrus.ua/uploads/promo/realme/watch-card/assistant/assistant-image.png) bottom/95% no-repeat;
+      padding-bottom: 58%;
+      margin-bottom: 60px;
+    }
+
+    .watch-assistant__title {
+      font-size: 44px;
+      line-height: 64px;
+      padding: 24px 0 24px 24px;
+      margin-bottom: 80px;
+    }
+
+    .watch-assistant__container {
+      padding: 0 24px;
+    }
+
+    .watch-assistant__screen-title {
+      font-size: 36px;
+      line-height: 46px;
+      margin-bottom: 10px;
+    }
+
+    .watch-assistant__screen-subtext {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 40px;
+    }
+
+    .watch-assistant__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .watch__disclaimer {
+      font-size: 16px;
+      line-height: 26px;
+      padding: 0 24px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .watch-assistant {
+      background: url(https://i.citrus.ua/uploads/promo/realme/watch-card/assistant/assistant-image.png) bottom/95% no-repeat;
+      padding-bottom: 58%;
+    }
+
+    .watch-assistant__title {
+      font-size: 34px;
+      line-height: 46px;
+      padding: 20px 0 20px 24px;
+      margin-bottom: 60px;
+    }
+
+    .watch-assistant__screen-title {
+      font-size: 28px;
+      line-height: 36px;
+      margin-bottom: 8px;
+    }
+
+    .watch-assistant__screen-subtext {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 30px;
+    }
+
+    .watch-assistant__text {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    .watch__disclaimer {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    .anim .watch-assistant__title,
+    .anim .watch-assistant__screen-title,
+    .anim .watch-assistant__screen-subtext,
+    .anim .watch-assistant__text {
+      opacity: 1;
+      transform: translateX(0);
+      animation: none;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .watch-assistant {
+      background: url(https://i.citrus.ua/uploads/promo/realme/watch-card/assistant/assistant-image-mobile.png) bottom no-repeat;
+      padding-bottom: 530px;
+      margin-bottom: 40px;
+    }
+
+    .watch-assistant__title {
+      font-size: 34px;
+      line-height: 42px;
+      padding: 20px 0 20px 16px;
+      margin-bottom: 40px;
+      width: 95%;
+    }
+
+    .watch-assistant__screen-title {
+      font-size: 24px;
+      line-height: 34px;
+    }
+
+    .watch-assistant__screen-subtext {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+
+    .watch-assistant__text {
+      font-size: 12px;
+      line-height: 22px;
+      margin-bottom: 40px;
+      height: 154px
+    }
+
+    .watch__disclaimer {
+      font-size: 12px;
+      line-height: 22px;
+      padding: 0 16px;
+    }
+  }
+
+
+  /************************** HEART SECTION **************************/
+
+  .watch-heart {
+    position: relative;
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/heart/heart-image.png") top 0 right -255% no-repeat, linear-gradient(175.52deg, #1F1F1F 6.9%, #070708 52.68%, #000000 96.44%);
+    padding-bottom: 160px;
+    margin-top: 81px;
+  }
+
+  .watch-heart__container {
+    padding-top: 160px;
+    max-width: 550px;
+    width: 100%;
+    margin-left: 136px;
+  }
+
+  .watch-heart__title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    margin-bottom: 12px;
+    color: #fff;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .watch-heart__subtext {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #fff;
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .watch-heart__text {
+    font-size: 20px;
+    line-height: 34px;
+    color: #fff;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .anim .watch-heart__title {
+    animation: text-left-slide-anim .7s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-heart__subtext {
+    animation: text-left-slide-anim .7s forwards;
+    animation-delay: .2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-heart__text {
+    animation: text-left-slide-anim .7s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .watch-heart__graphic {
+    display: flex;
+    margin: 0 auto 80px auto;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .watch-heart {
+      background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/heart/heart-image.png") top 29px right -163%/82% no-repeat, linear-gradient(175.52deg, #1F1F1F 6.9%, #070708 52.68%, #000000 96.44%);
+      padding-bottom: 100px;
+      margin-top: 60px;
+    }
+
+    .watch-heart__container {
+      max-width: 550px;
+      padding: 100px 24px 55px 24px;
+      margin-left: 0;
+    }
+
+    .watch-heart__title {
+      font-size: 36px;
+      line-height: 46px;
+      margin-bottom: 10px;
+    }
+
+    .watch-heart__subtext {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 40px;
+    }
+
+    .watch-heart__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .watch-heart {
+      background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/heart/heart-image.png") top 29px right -163%/82% no-repeat, linear-gradient(175.52deg, #1F1F1F 6.9%, #070708 52.68%, #000000 96.44%);
+      padding-bottom: 100px;
+    }
+
+    .watch-heart__container {
+      max-width: 400px;
+      padding: 80px 24px 55px 24px;
+      margin-left: 0;
+    }
+
+    .watch-heart__title {
+      font-size: 28px;
+      line-height: 36px;
+      margin-bottom: 8px;
+    }
+
+    .watch-heart__subtext {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 30px;
+    }
+
+    .watch-heart__text {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    .anim .watch-heart__title,
+    .anim .watch-heart__subtext,
+    .anim .watch-heart__text {
+      opacity: 1;
+      transform: translateX(0);
+      animation: none;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .watch-heart {
+      background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/heart/heart-image-mobile-2.png") bottom no-repeat, linear-gradient(175.52deg, #1F1F1F 6.9%, #070708 52.68%, #000000 96.44%);
+      padding-bottom: 410px;
+      margin-top: 40px;
+    }
+
+    .watch-heart__container {
+      max-width: initial;
+      padding: 80px 16px 24px 16px;
+      margin-left: 0;
+    }
+
+    .watch-heart__title {
+      font-size: 24px;
+      line-height: 34px;
+    }
+
+    .watch-heart__subtext {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+
+    .watch-heart__text {
+      font-size: 12px;
+      line-height: 22px;
+      margin-bottom: 0;
+    }
+
+    .watch-heart__graphic {
+      display: none;
+    }
+
+    .watch-heart .watch__disclaimer {
+      margin-bottom: 40px;
+    }
+  }
+
+
+  /************************** SPORT SECTION **************************/
+
+  .watch-sport {
+    position: relative;
+    background: #fff;
+    margin-bottom: 100px;
+  }
+
+  .watch-sport__container {
+    max-width: 1094px;
+    margin-left: 136px;
+    padding-top: 160px;
+    margin-bottom: 80px;
+  }
+
+  .watch-sport__title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    margin-bottom: 12px;
+    color: #000;
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  .watch-sport__subtitle {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000;
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  .watch-sport__text {
+    font-size: 20px;
+    line-height: 34px;
+    color: #000;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  .anim .watch-sport__title {
+    animation: text-bottom-slide-anim .7s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-sport__subtitle {
+    animation: text-bottom-slide-anim .7s forwards;
+    animation-delay: .2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-sport__text {
+    animation: text-bottom-slide-anim .7s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+
+  @media screen and (max-width: 1365px) {
+    .watch-sport__container {
+      padding: 100px 24px 0 24px;
+      margin-left: 0;
+      margin-bottom: 60px;
+    }
+
+    .watch-sport__title {
+      font-size: 36px;
+      line-height: 46px;
+      margin-bottom: 10px;
+    }
+
+    .watch-sport__subtitle {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 40px;
+    }
+
+    .watch-sport__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .watch-sport__container {
+      padding: 80px 24px 0 24px;
+    }
+
+    .watch-sport__title {
+      font-size: 28px;
+      line-height: 36px;
+      margin-bottom: 8px;
+    }
+
+    .watch-sport__subtitle {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 30px;
+    }
+
+    .watch-sport__text {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    .anim .watch-sport__title,
+    .anim .watch-sport__subtitle,
+    .anim .watch-sport__text {
+      opacity: 1;
+      transform: translateY(0);
+      animation: none;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .watch-sport {
+      background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/sport/sport-image-ru-mobile.png") bottom no-repeat, #fff;
+      padding-bottom: 500px;
+    }
+
+    .watch-sport__container {
+      padding: 60px 16px 0 16px;
+    }
+
+    .watch-sport__title {
+      font-size: 24px;
+      line-height: 34px;
+      margin-bottom: 8px;
+    }
+
+    .watch-sport__subtitle {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+
+    .watch-sport__text {
+      font-size: 12px;
+      line-height: 22px;
+    }
+
+    .watch-sport__image {
+      display: none;
+    }
+  }
+
+  /************************** PANEL SECTION **************************/
+
+  .watch-panel {
+    position: relative;
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/panel/panel-image-desc-2.png") top right no-repeat;
+  }
+
+  .watch-panel__title {
+    width: 90%;
+    background-color: #FFC815;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 86px;
+    color: #191919;
+    margin-bottom: 100px;
+    padding: 30px 0 30px 136px;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .watch-panel__container {
+    max-width: 500px;
+    width: 100%;
+    margin-left: 136px;
+  }
+
+  .watch-panel__panel-title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    color: #000;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .watch-panel__subtext {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000;
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .watch-panel__text {
+    font-size: 20px;
+    line-height: 34px;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .watch-panel__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+  }
+
+  .watch-panel__item {
+    position: relative;
+    width: 45%;
+    height: 72px;
+    padding-left: 60px;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .anim .watch-panel__title {
+    animation: text-left-slide-anim .7s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-panel__panel-title {
+    animation: text-left-slide-anim .7s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-panel__subtext {
+    animation: text-left-slide-anim .7s forwards;
+    animation-delay: .2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-panel__text {
+    animation: text-left-slide-anim .7s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-panel__item:nth-child(even) {
+    animation: text-left-slide-anim .7s forwards;
+    animation-delay: .6s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-panel__item:nth-child(odd) {
+    animation: text-left-slide-anim .7s forwards;
+    animation-delay: .8s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .watch-panel__item:before {
+    content: '';
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    top: 10px;
+    left: -8px;
+  }
+
+  .watch-panel__item.buds:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/panel/smart_icon/1_buds_air.svg") center/100% no-repeat;
+  }
+
+  .watch-panel__item.lamp:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/panel/smart_icon/5_Lamp.svg") center/100% no-repeat;
+  }
+
+  .watch-panel__item.air:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/panel/smart_icon/3_cleaner.svg") center/100% no-repeat;
+  }
+
+  .watch-panel__item.tv:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/panel/smart_icon/4_TV.svg") center/100% no-repeat;
+  }
+
+  .watch-panel__item.speakers:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/panel/smart_icon/2_Bluetooth.svg") center/100% no-repeat;
+  }
+
+  .watch-panel__item.more:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/panel/smart_icon/6_more.svg") center/100% no-repeat;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .watch-panel {
+      background: url(https://i.citrus.ua/uploads/promo/realme/watch-card/panel/panel-image-desc-2.png) top -50px right/50% no-repeat;
+      margin-bottom: 60px;
+    }
+
+    .watch-panel__title {
+      font-size: 44px;
+      line-height: 64px;
+      padding: 24px 0 24px 24px;
+      margin-bottom: 80px;
+    }
+
+    .watch-panel__container {
+      padding: 0 24px;
+      margin-left: 0;
+    }
+
+    .watch-panel__panel-title {
+      font-size: 36px;
+      line-height: 46px;
+      margin-bottom: 10px;
+    }
+
+    .watch-panel__subtext {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 40px;
+    }
+
+    .watch-panel__text {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+
+    .watch-panel__list {
+      margin-bottom: 70px;
+    }
+
+    .watch-panel__item {
+      position: relative;
+      width: 45%;
+      height: 45px;
+      padding-left: 40px;
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: 18px;
+    }
+
+    .watch-panel__item:before {
+      width: 40px;
+      height: 40px;
+      top: 0;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .watch-panel {
+      background: url(https://i.citrus.ua/uploads/promo/realme/watch-card/panel/panel-image-desc-2.png) top -50px right/50% no-repeat;
+      margin-bottom: 60px;
+    }
+
+    .watch-panel__container {
+      max-width: 380px;
+    }
+
+    .watch-panel__title {
+      font-size: 34px;
+      line-height: 46px;
+      padding: 20px 0 20px 24px;
+      margin-bottom: 50px;
+    }
+
+    .watch-panel__panel-title {
+      font-size: 28px;
+      line-height: 36px;
+      margin-bottom: 8px;
+    }
+
+    .watch-panel__subtext {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 24px;
+    }
+
+    .watch-panel__text {
+      font-size: 12px;
+      line-height: 18px;
+      margin-bottom: 16px;
+    }
+
+    .watch-panel__list {
+      margin-bottom: 70px;
+    }
+
+    .watch-panel__item {
+      position: relative;
+      width: 45%;
+      height: 32px;
+      padding-left: 32px;
+      font-size: 12px;
+      line-height: 14px;
+      margin-bottom: 16px;
+    }
+
+    .anim .watch-panel__title,
+    .anim .watch-panel__panel-title,
+    .anim .watch-panel__subtext,
+    .anim .watch-panel__text,
+    .anim .watch-panel__item:nth-child(even),
+    .anim .watch-panel__item:nth-child(odd){
+      opacity: 1;
+      transform: translateX(0);
+      animation: none;
+    }
+
+    .watch-panel__item:before {
+      content: '';
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      top: 0;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .watch-panel {
+      background: url(https://i.citrus.ua/uploads/promo/realme/watch-card/panel/panel-image-mobile.png) bottom no-repeat;
+      padding-bottom: 340px;
+      margin-bottom: 40px;
+    }
+
+    .watch-panel__title {
+      font-size: 34px;
+      line-height: 42px;
+      padding: 20px 16px 20px 16px;
+      margin-bottom: 40px;
+      width: 95%;
+    }
+
+    .watch-panel__container {
+      max-width: initial;
+      padding: 0 16px;
+    }
+
+    .watch-panel__panel-title {
+      font-size: 24px;
+      line-height: 34px;
+    }
+
+    .watch-panel__subtext {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+
+    .watch-panel__text {
+      font-size: 12px;
+      line-height: 22px;
+      margin-bottom: 40px;
+    }
+
+    .watch-panel__item {
+      position: relative;
+      width: 48%;
+      height: 32px;
+      padding-left: 32px;
+      font-size: 12px;
+      line-height: 14px;
+      margin-bottom: 16px;
+    }
+
+    .watch-panel__item:before {
+      content: '';
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      top: 0;
+      left: -4px
+    }
+  }
+
+  /************************** CONTROLS SECTION **************************/
+
+  .watch-controls {
+    position: relative;
+    background: #fff;
+    padding-top: 80px;
+  }
+
+  .watch-controls__container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .watch-controls__content {
+    padding-left: 47px;
+    max-width: 550px;
+    padding-top: 145px;
+  }
+
+  .watch-controls__title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    color: #000;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  .watch-controls__subtitle {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000;
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  .watch-controls__text {
+    font-size: 20px;
+    line-height: 34px;
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  .anim .watch-controls__title {
+    animation: text-right-slide-anim .7s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-controls__subtitle {
+    animation: text-left-slide-anim .7s forwards;
+    animation-delay: .2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-controls__text {
+    animation: text-left-slide-anim .7s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  @media screen and (max-width: 1365px) {
+    .watch-controls {
+      padding-top: 60px;
+    }
+
+    .watch-controls__container {
+      padding: 0 24px;
+    }
+
+    .watch-controls__image {
+      max-width: 500px;
+    }
+
+    .watch-controls__content {
+      padding-left: 30px;
+      max-width: 550px;
+      padding-top: 110px;
+    }
+
+    .watch-controls__title {
+      font-size: 36px;
+      line-height: 46px;
+      margin-bottom: 8px;
+    }
+
+    .watch-controls__subtitle {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 40px;
+    }
+
+    .watch-controls__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .watch-controls__image {
+      max-width: 425px;
+    }
+
+    .watch-controls__content {
+      padding-left: 12px;
+      max-width: 330px;
+      padding-top: 75px;
+    }
+
+    .watch-controls__title {
+      font-size: 28px;
+      line-height: 36px;
+      margin-bottom: 8px;
+    }
+
+    .watch-controls__subtitle {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 30px;
+    }
+
+    .watch-controls__text {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    .anim .watch-controls__title,
+    .anim .watch-controls__subtitle,
+    .anim .watch-controls__text{
+      opacity: 1;
+      transform: translateX(0);
+      animation: none;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .watch-controls {
+      position: relative;
+      background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/controls/controls-image-mobile.png") top center no-repeat,
+        #fff;
+      margin-top: 40px;
+      padding-bottom: 50px;
+    }
+
+    .watch-controls__image {
+      display: none;
+    }
+
+    .watch-controls__container {
+      padding: 0 16px;
+    }
+
+    .watch-controls__content {
+      padding-left: 0;
+      max-width: initial;
+      padding-top: 400px;
+    }
+
+    .watch-controls__title {
+      font-size: 24px;
+      line-height: 34px;
+      margin-bottom: 8px;
+    }
+
+    .watch-controls__subtitle {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+
+    .watch-controls__text {
+      font-size: 12px;
+      line-height: 22px;
+    }
+  }
+
+  /************************** NOTIFICATIONS SECTION **************************/
+
+  .watch-notifications {
+    position: relative;
+    background: #FAFAFA;
+    margin-bottom: 100px;
+  }
+
+  .watch-notifications__container {
+    max-width: 1094px;
+    margin-left: 136px;
+    padding-top: 160px;
+    margin-bottom: 80px;
+  }
+
+  .watch-notifications__title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    margin-bottom: 12px;
+    color: #000;
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  .watch-notifications__subtitle {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000;
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  .watch-notifications__text {
+    font-size: 20px;
+    line-height: 34px;
+    color: #000;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  .anim .watch-notifications__title {
+    animation: text-bottom-slide-anim .7s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-notifications__subtitle {
+    animation: text-bottom-slide-anim .7s forwards;
+    animation-delay: .2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-notifications__text {
+    animation: text-bottom-slide-anim .7s forwards;
+    animation-delay: .4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+
+
+  @media screen and (max-width: 1365px) {
+    .watch-notifications__container {
+      padding: 100px 24px 0 24px;
+      margin-left: 0;
+      margin-bottom: 60px;
+    }
+
+    .watch-notifications__title {
+      font-size: 36px;
+      line-height: 46px;
+      margin-bottom: 10px;
+    }
+
+    .watch-notifications__subtitle {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 40px;
+    }
+
+    .watch-notifications__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .watch-notifications__container {
+      padding: 80px 24px 0 24px;
+    }
+
+    .watch-notifications__title {
+      font-size: 28px;
+      line-height: 36px;
+      margin-bottom: 8px;
+    }
+
+    .watch-notifications__subtitle {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 30px;
+    }
+
+    .watch-notifications__text {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    .anim .watch-notifications__title,
+    .anim .watch-notifications__subtitle,
+    .anim .watch-notifications__text {
+      opacity: 1;
+      transform: translateY(0);
+      animation: none;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+
+    .watch-notifications__container {
+      padding: 50px 16px 0 16px;
+    }
+
+    .watch-notifications__title {
+      font-size: 24px;
+      line-height: 34px;
+      margin-bottom: 8px;
+    }
+
+    .watch-notifications__subtitle {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+
+    .watch-notifications__text {
+      font-size: 12px;
+      line-height: 22px;
+    }
+  }
+
+  /************************** APP SECTION **************************/
+
+  .watch-app {
+    background: #FFF;
+  }
+
+  .watch-app__container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .watch-app__content {
+    max-width: 540px;
+  }
+
+  .watch-app__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 66px;
+    color: #000;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .watch-app__subtitle {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000;
+    margin-bottom: 40px;
+  }
+
+  .watch-app__text {
+    font-size: 18px;
+    line-height: 30px;
+    color: #4a4a4a;
+    margin-bottom: 24px;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .watch-app__list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 200px;
+    margin-bottom: 24px;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .watch-app__item {
+    max-width: 88px;
+    width: 100%;
+  }
+
+  .watch-app__image {
+    max-width: 470px;
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  .anim .watch-app__image {
+    animation: app-image-anim 1s forwards;
+    animation-delay: 0.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  @keyframes app-image-anim {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .watch-app__link {
+    font-size: 16px;
+    line-height: 22px;
+    color: #5E8DFF;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .anim .watch-app__title {
+    animation: design-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-app__text {
+    animation: design-anim 1s forwards;
+    animation-delay: 0.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-app__list {
+    animation: design-anim 1s forwards;
+    animation-delay: 0.4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-app__link {
+    animation: design-anim 1s forwards;
+    animation-delay: 0.6s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  @keyframes design-anim {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @media screen and (max-width: 1365px) {
+    .watch-app__container {
+      padding: 100px 24px 100px 24px;
+    }
+
+    .watch-app__content {
+      max-width: 490px;
+    }
+
+    .watch-app__title {
+      font-size: 40px;
+      line-height: 54px;
+    }
+
+    .watch-app__subtitle {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 30px;
+    }
+
+    .watch-app__text {
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 20px;
+    }
+
+    .watch-app__list {
+      max-width: 136px;
+    }
+
+    .watch-app__item {
+      max-width: 56px;
+    }
+
+    .watch-app__image {
+      max-width: 351px;
+    }
+
+    .watch-app__title,
+    .watch-app__text,
+    .watch-app__list,
+    .watch-app__link,
+    .watch-app__image {
+      opacity: 1;
+      transform: translate(0);
+    }
+
+    .anim .watch-app__title,
+    .anim .watch-app__text,
+    .anim .watch-app__list,
+    .anim .watch-app__link,
+    .anim .watch-app__image {
+      animation: none;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .watch-app__content {
+      max-width: 330px;
+    }
+
+    .watch-app__title {
+      font-size: 32px;
+      line-height: 44px;
+    }
+
+    .watch-app__subtitle {
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    .watch-app__text {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 14px;
+    }
+
+    .watch-app__list {
+      max-width: 115px;
+    }
+
+    .watch-app__item {
+      max-width: 42px;
+    }
+
+    .watch-app__image {
+      max-width: 341px;
+    }
+
+    .anim .watch-app__title,
+    .anim .watch-app__text,
+    .anim .watch-app__list ,
+    .anim .watch-app__link,
+    .anim .watch-app__image {
+      opacity: 1;
+      transform: translateX(0);
+      animation: none;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .watch-app__container {
+      padding: 40px 16px 100px 16px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .watch-app__content {
+      max-width: initial;
+      margin-bottom: 40px;
+    }
+
+    .watch-app__title {
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    .watch-app__subtitle {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+
+    .watch-app__text {
+      font-size: 12px;
+      line-height: 22px;
+    }
+
+    .watch-app__list {
+      max-width: 135px;
+    }
+
+    .watch-app__item {
+      max-width: 60px;
+    }
+
+    .watch-app__image {
+      max-width: 288px;
+      width: 100%;
+    }
+  }
+
+
+
+
+  /************************** PANEL SECTION **************************/
+
+  .watch-quality {
+    position: relative;
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/quality/quality-image.png") top right no-repeat;
+  }
+
+  .watch-quality__title {
+    width: 90%;
+    background-color: #FFC815;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 86px;
+    color: #191919;
+    margin-bottom: 100px;
+    padding: 30px 0 30px 136px;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .watch-quality__container {
+    max-width: 510px;
+    width: 100%;
+    margin-left: 136px;
+  }
+
+  .watch-quality__quality-title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    color: #000;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .watch-quality__subtext {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000;
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .watch-quality__text {
+    font-size: 20px;
+    line-height: 34px;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .watch-quality__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  .watch-quality__item {
+    position: relative;
+    width: 45%;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .watch-quality__item-title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+    color: #000;
+    margin-bottom: 4px;
+  }
+
+  .watch-quality__item-subtitle {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .anim .watch-quality__title {
+    animation: text-left-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-quality__quality-title {
+    animation: text-left-slide-anim 1s forwards;
+    animation-delay: 0.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-quality__subtext {
+    animation: text-left-slide-anim 1s forwards;
+    animation-delay: 0.4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-quality__text {
+    animation: text-left-slide-anim 1s forwards;
+    animation-delay: 0.6s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-quality__item:nth-child(even) {
+    animation: text-left-slide-anim 1s forwards;
+    animation-delay: 0.6s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-quality__item:nth-child(odd) {
+    animation: text-left-slide-anim 1s forwards;
+    animation-delay: .8s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  @media screen and (max-width: 1365px) {
+    .watch-quality {
+      background: url(https://i.citrus.ua/uploads/promo/realme/watch-card/quality/quality-image.png) top right/48% no-repeat;
+      margin-bottom: 60px;
+    }
+
+    .watch-quality__title {
+      font-size: 44px;
+      line-height: 64px;
+      padding: 24px 0 24px 24px;
+      margin-bottom: 80px;
+    }
+
+    .watch-quality__container {
+      padding: 0 24px;
+      margin-left: 0;
+    }
+
+    .watch-quality__quality-title {
+      font-size: 36px;
+      line-height: 46px;
+      margin-bottom: 10px;
+    }
+
+    .watch-quality__subtext {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 40px;
+    }
+
+    .watch-quality__text {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+
+    .watch-quality__list {
+      margin-bottom: 70px;
+    }
+
+    .watch-quality__item {
+      margin-bottom: 20px;
+    }
+
+    .watch-quality__item-title {
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    .watch-quality__item-subtitle {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .watch-quality {
+      background: url(https://i.citrus.ua/uploads/promo/realme/watch-card/quality/quality-image.png) top right/43% no-repeat;
+    }
+
+    .watch-quality__container {
+      max-width: 380px;
+    }
+
+    .watch-quality__title {
+      font-size: 34px;
+      line-height: 46px;
+      padding: 20px 0 20px 24px;
+      margin-bottom: 50px;
+    }
+
+    .watch-quality__quality-title {
+      font-size: 28px;
+      line-height: 36px;
+      margin-bottom: 8px;
+    }
+
+    .watch-quality__subtext {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 24px;
+    }
+
+    .watch-quality__text {
+      font-size: 12px;
+      line-height: 18px;
+      margin-bottom: 16px;
+    }
+
+    .watch-quality__list {
+      margin-bottom: 70px;
+    }
+
+    .watch-quality__item {
+      margin-bottom: 18px;
+    }
+
+    .watch-quality__item-title {
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    .watch-quality__item-subtitle {
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    .anim .watch-quality__title,
+    .anim .watch-quality__quality-title,
+    .anim .watch-quality__subtext,
+    .anim .watch-quality__text,
+    .anim .watch-quality__item:nth-child(even),
+    .anim .watch-quality__item:nth-child(odd) {
+      opacity: 1;
+      transform: translateX(0);
+      animation: none;
+    }
+  }
+
+  @media screen and (max-width: 659px) {
+    .watch-quality {
+      background: url(https://i.citrus.ua/uploads/promo/realme/watch-card/quality/quality-image-mobile-2.png) top no-repeat;
+      height: 980px;
+      margin-bottom: 0;
+    }
+
+    .watch-quality__title {
+      font-size: 34px;
+      line-height: 42px;
+      padding: 20px 16px 20px 16px;
+      margin-bottom: 40px;
+      width: 95%;
+      color: #fff;
+    }
+
+    .watch-quality__container {
+      max-width: initial;
+      padding: 0 16px;
+    }
+
+    .watch-quality__quality-title {
+      font-size: 24px;
+      line-height: 34px;
+      color: #fff;
+    }
+
+    .watch-quality__subtext {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .watch-quality__text {
+      font-size: 12px;
+      line-height: 22px;
+      margin-bottom: 40px;
+      color: #fff;
+    }
+
+    .watch-quality__item-title {
+      font-size: 16px;
+      line-height: 19px;
+      color: #fff;
+    }
+
+    .watch-quality__item-subtitle {
+      font-size: 10px;
+      line-height: 12px;
+      color: #fff;
+    }
+
+  }
+
+
+  /************************** ABILITY SECTION **************************/
+
+  .watch-ability {
+    position: relative;
+    display: flex;
+  }
+
+  .watch-ability__left-content {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/ability/ability-bg-left.png") center center no-repeat;
+    width: 50%;
+  }
+
+  .watch-ability__list {
+    max-width: 450px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding-top: 180px;
+    padding-bottom: 180px;
+  }
+
+  .watch-ability__item {
+    width: 45%;
+    font-size: 16px;
+    line-height: 19px;
+    position: relative;
+    padding-left: 72px;
+    height: 60px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    color: #c2c2c2;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .watch-ability__item-text {
+    color: #c2c2c2;
+  }
+
+  .watch-ability__item:before {
+    content: '';
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    top: 0;
+    left: 0;
+  }
+
+  .watch-ability__item.sleep:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/ability/more_icon/1sleep.svg") center/100% 100% no-repeat;
+  }
+
+  .watch-ability__item.meditation:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/ability/more_icon/2Meditation.svg") center/100% 100% no-repeat;
+  }
+
+  .watch-ability__item.search:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/ability/more_icon/3find%20phone.svg") center/100% 100% no-repeat;
+  }
+
+  .watch-ability__item.unlock:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/ability/more_icon/4Unlock.svg") center/100% 100% no-repeat;
+  }
+
+  .watch-ability__item.achive:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/ability/more_icon/5Goal.svg") center/100% 100% no-repeat;
+  }
+
+  .watch-ability__item.weather:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/ability/more_icon/6weather.svg") center/100% 100% no-repeat;
+  }
+
+  .watch-ability__item.alarm:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/ability/more_icon/7Vibrating.svg") center/100% 100% no-repeat;
+  }
+
+  .watch-ability__item.water:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/ability/more_icon/8Drinking.svg") center/100% 100% no-repeat;
+  }
+
+  .watch-ability__item.activity:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/ability/more_icon/9sedentary.svg") center/100% 100% no-repeat;
+  }
+
+  .watch-ability__item.call:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/ability/more_icon/10Call.svg") center/100% 100% no-repeat;
+  }
+
+  .watch-ability__item.battery:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/ability/more_icon/11Battery.svg") center/100% 100% no-repeat;
+  }
+
+  .watch-ability__item.more:before {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/ability/more_icon/12more.svg") center/100% 100% no-repeat;
+  }
+
+  .watch-ability__right-content {
+    background: url("https://i.citrus.ua/uploads/promo/realme/watch-card/ability/ability-bg-right.png") center center no-repeat;
+    width: 50%;
+    position: relative;
+  }
+
+  .watch-ability__right-description {
+    position: absolute;
+    width: 100%;
+    bottom: 24px;
+    padding: 40px 0 40px 47px;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .watch-ability__title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+    color: #fff;
+    max-width: 500px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  .watch-ability__subtitle {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #fff;
+    max-width: 500px;
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  .anim .watch-ability__item:nth-child(even) {
+    animation: text-left-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-ability__item:nth-child(odd) {
+    animation: text-left-slide-anim 1s forwards;
+    animation-delay: .2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-ability__title {
+    animation: text-right-slide-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  .anim .watch-ability__subtitle {
+    animation: text-right-slide-anim 1s forwards;
+    animation-delay: .2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+  }
+
+  @media screen and (max-width: 1365px) {
+    .watch-ability {
+      padding: 80px 24px 80px 24px;
+    }
+
+    .watch-ability__list {
+      max-width: 550px;
+      padding: 100px 0 100px 0;
+    }
+
+    .watch-ability__item {
+      margin-bottom: 20px;
+      font-size: 14px;
+      line-height: 16px;
+      height: 48px;
+    }
+
+    .watch-ability__right-description {
+      padding: 30px 0 30px 30px;
+      bottom: 0;
+    }
+
+    .watch-ability__title {
+      font-size: 36px;
+      line-height: 46px;
+    }
+
+    .watch-ability__subtitle {
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+
+    .watch-ability__list {
+      max-width: 550px;
+      padding: 80px 0 80px 0;
+    }
+
+    .watch-ability__item {
+      margin-bottom: 20px;
+      font-size: 12px;
+      line-height: 14px;
+      height: 38px;
+      padding-left: 47px;
+    }
+
+    .watch-ability__item:before {
+      width: 32px;
+      height: 32px;
+      top: 5px;
+    }
+
+    .watch-ability__right-description {
+      padding: 24px 0 24px 12px;
+      bottom: 0;
+    }
+
+    .watch-ability__title {
+      font-size: 28px;
+      line-height: 36px;
+    }
+
+    .watch-ability__subtitle {
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    .anim .watch-ability__item:nth-child(even),
+    .anim .watch-ability__item:nth-child(odd),
+    .anim .watch-ability__title,
+    .anim .watch-ability__subtitle {
+      opacity: 1;
+      transform: translate(0);
+      animation: none;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .watch-ability {
+      flex-direction: column;
+      padding: 60px 0 60px 0;
+    }
+
+    .watch-ability__left-content {
+      width: 100%;
+      max-width: 660px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .watch-ability__list {
+      padding: 50px 0 50px 0;
+      justify-content: space-between;
+    }
+
+    .watch-ability__item {
+      width: 47%;
+    }
+
+    .watch-ability__right-content {
+      max-width: 660px;
+      width: 100%;
+      height: 452px;
+      margin: 0 auto;
+    }
+  }
+}

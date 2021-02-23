@@ -1,0 +1,3424 @@
+      <style>
+        .big-container {
+          max-width: none;
+          width: auto;
+        }
+
+        .log--base .catalog__main-content, .shadow {
+          box-shadow: none;
+        }
+
+        * {
+          box-sizing: border-box;
+          font-family: Roboto, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          margin: 0;
+        }
+
+        ul {
+          margin: 0;
+          list-style: none;
+        }
+
+        img {
+          max-width: 100%;
+          color: transparent;
+        }
+
+        form select, input {
+          border: 1px solid #c4c4c4;
+          border-radius: 4px;
+          height: 36px;
+          width: 100%;
+          padding: 0 0 0 12px;
+          background-color: #ffffff;
+        }
+
+        a {
+          text-decoration: none;
+          cursor: pointer;
+          color: #3B6D9A;
+          outline: none;
+          transition: 0.3s;
+        }
+
+        .btn, button {
+          display: block;
+          background: 0 0;
+          cursor: pointer;
+          border: none;
+          text-align: center;
+          width: 100%;
+          line-height: 44px;
+          transition: .3s;
+          border-radius: 4px;
+          margin-bottom: 24px;
+          white-space: nowrap;
+          font-family: Roboto, sans-serif;
+          font-size: 18px;
+        }
+
+        .base-padding {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        .clear-padding {
+          margin-left: 0;
+          margin-right: 0;
+        }
+
+        @media screen and (max-width: 640px) {
+          .base-padding {
+            padding-left: 0;
+            padding-right: 0;
+          }
+
+          .clear-padding {
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+
+        @media screen and (max-width: 480px) {
+          .base-padding {
+            padding-left: 0;
+            padding-right: 0;
+          }
+
+          body .clear-padding {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+          }
+        }
+
+        .swiper-container {
+          margin: 0 auto;
+          position: relative;
+          overflow: hidden;
+          list-style: none;
+          padding: 0;
+          z-index: 1;
+        }
+
+        .swiper-container-android .swiper-slide, .swiper-wrapper {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+
+        .swiper-wrapper {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          display: flex;
+          box-sizing: content-box;
+        }
+
+        .swiper-slide {
+          flex-shrink: 0;
+          width: 100%;
+          height: 100%;
+          position: relative;
+        }
+
+        header.header {
+          margin-bottom: 0;
+        }
+
+        @media screen and (max-width: 1023px) {
+          .layout {
+            padding-top: 50px;
+          }
+        }
+
+        .breadcrumbs {
+          display: none;
+        }
+
+        main[locale] .big-container {
+          max-width: initial;
+          width: 100%;
+          box-shadow: none !important;
+        }
+
+        .base-padding {
+          padding: 0;
+        }
+
+        .march-8 {
+          overflow: hidden;
+          background-color: #ffffff;
+          /*margin-bottom: -65px;*/
+        }
+
+        /*march-header*/
+        .march-header {
+          background: url("https://i.citrus.ua/uploads/promo/march-8/texture%208.png"),
+          #FFCA92;
+        }
+
+        .march-header__banner {
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+        }
+
+        /*march-hits*/
+        .march-hits {
+          padding-top: 100px;
+          background-color: #fafafa;
+        }
+
+        .march-hits__title {
+          font-weight: 500;
+          font-size: 40px;
+          color: #006647;
+          margin-bottom: 40px;
+          text-align: center;
+        }
+
+        @media screen and (max-width: 1365px) {
+          .march-hits {
+            padding-top: 60px;
+          }
+
+          .march-hits__title {
+            font-size: 28px;
+          }
+        }
+
+        @media screen and (max-width: 560px) {
+
+          .march-hits {
+            padding-bottom: 40px;
+          }
+
+          .march-hits__title {
+            font-size: 22px;
+            margin-bottom: 40px;
+          }
+        }
+
+        /******************************** PRODUCT SECTION ********************************/
+        .march-hits {
+          position: relative;
+        }
+
+        .march-products {
+          max-width: 1366px;
+          margin-left: auto;
+          margin-right: auto;
+          position: relative;
+          padding-bottom: 100px;
+          z-index: 1;
+        }
+
+        .march-products.march-products--show {
+          padding-bottom: 1px;
+        }
+
+        .march-hits__sticker {
+          position: absolute;
+          width: 266px;
+          height: 224px;
+          top: -125px;
+          right: calc(50% - 718px);
+        }
+
+        .march-products--show .march-products__item {
+          display: flex !important;
+        }
+
+        .march-products--show .march-products__more {
+          position: static;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 30px;
+          margin-bottom: 100px;
+          transform: none;
+        }
+
+        .march-products--show::after {
+          display: none;
+        }
+
+        .march-products::after {
+          content: '';
+          position: absolute;
+          left: 19px;
+          right: 19px;
+          bottom: 0;
+          height: 300px;
+          width: 100%;
+          background: linear-gradient(180deg, rgba(250, 250, 250, 0) 1.1%, #FAFAFA 21.67%);
+        }
+
+        .march-products__items {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        .march-products__item {
+          width: 213px;
+          background: #FFFFFF;
+          box-shadow: 0px 4px 8px rgba(0, 30, 50, 0.1);
+          border-radius: 10px;
+          padding-top: 16px;
+          padding-bottom: 16px;
+          display: flex;
+          flex-direction: column;
+          transition: box-shadow .3s;
+          transition-timing-function: cubic-bezier(.39,.29,.4,.98);
+          margin-left: 4px;
+          margin-right: 4px;
+          margin-bottom: 8px;
+        }
+
+        .march-products__item:nth-child(n + 19) {
+          display: none;
+        }
+
+        .march-products__item:hover {
+          box-shadow: 0 15px 36px rgba(0, 30, 50, 0.25);
+        }
+
+        .march-products__item-category {
+          width: calc(100% - 8px);
+          margin-left: auto;
+          margin-right: auto;
+          height: 42px;
+          padding-right: 36px;
+          padding-left: 12px;
+          display: flex;
+          align-items: center;
+          background: rgba(0, 0, 0, 0.06);
+          color: #3B6D9A;
+          font-weight: 500;
+          font-size: 14px;
+          position: relative;
+          border-radius: 8px;
+          margin-bottom: 12px;
+        }
+
+        .march-products__item-category::after {
+          width: 24px;
+          height: 24px;
+          position: absolute;
+          right: 12px;
+          top: 10px;
+          content: '';
+          background: url('https://i.citrus.ua/uploads/promo/new-year-2019-landing/arrow-right.png') no-repeat center;
+        }
+
+        .march-products__item-image {
+          width: 100%;
+          height: 181px;
+          margin-left: auto;
+          margin-right: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 6px;
+        }
+
+        .march-products__item-wrapper {
+          width: calc(100% - 32px);
+          margin-left: auto;
+          margin-right: auto;
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+        }
+
+        .march-products__item-wrapper:hover .march-products__item-title {
+          color: #FF8637;
+        }
+
+        .march-products__item-title {
+          color: #3B6D9A;
+          font-size: 14px;
+          margin-bottom: 8px;
+          transition: 0.25s;
+
+          display: block;
+          word-break: break-all;
+          display: -webkit-box;
+          max-width: 100%;
+          height: 32px;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .march-products__item-footer {
+          display: flex;
+          margin-top: auto;
+        }
+
+        .march-products__item-discount {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          margin-right: 8px;
+        }
+
+        .march-products__item-discount span:nth-child(1) {
+          display: block;
+          font-weight: bold;
+          font-size: 12px;
+          color: #FFFFFF;
+          padding-left: 4px;
+          padding-right: 4px;
+          background: #FF0000;
+          border-radius: 4px;
+        }
+
+        .march-products__item-discount span:nth-child(2) {
+          color: rgba(0, 0, 0, 0.54);
+          font-size: 16px;
+          text-decoration: line-through;
+        }
+
+        .march-products__item-price {
+          color: rgba(0, 0, 0, 0.87);
+          font-weight: 500;
+          font-size: 21px;
+          line-height: 1;
+        }
+
+        .march-products__item-price {
+          align-self: flex-end;
+        }
+
+        .march-products__item-price span:nth-child(1) {
+          color: rgba(0, 0, 0, 0.87);
+          font-weight: 500;
+          font-size: 21px;
+        }
+
+        .march-products__item-price span:nth-child(2) {
+          font-size: 13px;
+          font-weight: 500;
+          color: rgba(0, 0, 0, 0.87);
+        }
+
+        .march-products__show-more {
+          width: 56px;
+          height: 56px;
+          position: absolute;
+          bottom: 155px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 1;
+          background: url('https://i.citrus.ua/uploads/promo/march-8/show-more.png') no-repeat center #FF680A;
+          border-radius: 50%;
+          box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.12),
+          0px 1px 18px rgba(0, 0, 0, 0.06),
+          0px 6px 10px rgba(69, 76, 83, 0.07);
+        }
+
+        .march-products__show-more:hover {
+          transition: 0.3s;
+          opacity: 0.8;
+          box-shadow: 0 11px 15px rgba(0, 0, 0, 0.12), 0 9px 46px rgba(0, 0, 0, 0.06), 0 24px 38px rgba(0, 0, 0, 0.07);
+        }
+
+        .march-products__more {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 257px;
+          height: 46px;
+          display: flex;
+          bottom: 75px;
+          justify-content: center;
+          align-items: center;
+          line-height: normal;
+          background: #FF690A;
+          border-radius: 41px;
+          font-size: 18px;
+          font-weight: 900;
+          color: #ffffff;
+          text-transform: uppercase;
+          z-index: 1;
+          transition: color .3s,
+          box-shadow .3s,
+          background-color .3s  ;
+        }
+
+        .march-products__more:hover {
+          opacity: 0.8;
+          color: #ffffff;
+          box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.12), 0px 9px 46px rgba(0, 0, 0, 0.06), 0px 24px 38px rgba(0, 0, 0, 0.07);
+        }
+
+        @media screen and (max-width: 1365px) {
+          .march-hits__sticker {
+            width: 160px;
+            height: 135px;
+            top: -70px;
+            right: 43px;
+          }
+
+          .march-products__container {
+            max-width: 689px;
+          }
+
+          .march-products {
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+
+          .march-products__items {
+            flex-wrap: wrap;
+            margin-bottom: 0;
+          }
+
+          .march-products__item {
+            margin-bottom: 24px;
+            margin-left: 12px;
+            margin-right: 12px;
+          }
+
+          .march-products__item:nth-child(n + 16) {
+            display: none;
+          }
+
+          .march-products__more {
+            width: 257px;
+            height: 46px;
+            font-size: 18px;
+            bottom: 90px;
+          }
+        }
+
+        @media screen and (max-width: 1210px) {
+          .march-products {
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+
+          .march-products__item:nth-child(n + 13) {
+            display: none;
+          }
+        }
+
+        @media screen and (max-width: 985px) {
+          .march-products {
+            padding-left: 30px;
+            padding-right: 30px;
+          }
+
+          .march-products__item:nth-child(n + 10) {
+            display: none;
+          }
+        }
+
+        @media screen and (max-width: 900px) {
+          .march-products {
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+          .march-hits__sticker {
+            width: 147px;
+            height: 125px;
+            top: -50px;
+            right: 16px;
+          }
+
+          .march-products {
+            padding-left: 4px;
+            padding-right: 4px;
+          }
+
+          .march-products::after {
+            height: 320px;
+            left: 0;
+            right: 0;
+          }
+
+          .march-products__item-price {
+            position: relative;
+            top: 1px;
+          }
+
+          .march-products__container {
+            max-width: 451px;
+            padding-left: 8px;
+            padding-right: 8px;
+          }
+
+          .march-products__item {
+            margin-bottom: 8px;
+            width: calc(33% - 8px);
+            max-width: 214px;
+            flex-grow: 1;
+            min-width: 146px;
+            margin-left: 4px;
+            margin-right: 4px;
+          }
+
+          .march-products__item:nth-child(odd) {
+            margin-right: 8px;
+          }
+
+          .march-products__item-category {
+            font-size: 12px;
+          }
+
+          .march-products__item-title {
+            font-size: 12px;
+            height: 28px;
+          }
+
+          .march-products__item-image {
+            height: 124px;
+          }
+
+          .march-products__item-image img {
+            max-height: 100%;
+          }
+
+          .march-products__item-discount span:nth-child(2) {
+            font-size: 12px;
+          }
+
+          .march-products__item-price span:nth-child(1) {
+            font-size: 16px;
+          }
+
+          .march-products__item-price span:nth-child(2) {
+            font-size: 10px;
+          }
+
+          .march-products__show-more {
+            bottom: 90px;
+          }
+
+          .march-products__more {
+            bottom: 35px;
+            width: 288px;
+          }
+        }
+
+        @media screen and (max-width: 700px) {
+          .march-products__item-discount {
+            margin-right: 6px;
+          }
+        }
+
+        @media screen and (max-width: 690px) {
+          .march-products {
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+
+          .march-products__item:nth-child(n + 9) {
+            display: none;
+          }
+        }
+
+        @media screen and (max-width: 370px) {
+          .march-products {
+            padding-left: 4px;
+            padding-right: 4px;
+          }
+        }
+
+        /*march-products*/
+        .march-gifts {
+          padding-top: 81px;
+          padding-bottom: 58px;
+          background: url("https://i.citrus.ua/uploads/promo/march-8/texture%208.png"),
+          #FFDBB5;
+        }
+
+
+        .march-gifts__wrapper {
+          max-width: 1366px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .march-gifts__title {
+          color: #006647;
+          text-align: center;
+          margin-bottom: 60px;
+          font-size: 40px;
+          font-weight: 500;
+        }
+
+        .march-gifts__items {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          max-width: 1318px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .march-gifts__item {
+          width: 312px;
+          margin-bottom: 40px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+        }
+
+        .march-gifts a {
+          z-index: 5;
+        }
+
+        .march-gifts__item a:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: -12px;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: -1;
+          opacity: 0;
+          background: url("https://i.citrus.ua/uploads/promo/march-8/gifts/girl-hover.png") no-repeat center center;
+        }
+
+        .march-gifts__item p {
+          transition: .3s;
+        }
+
+        .march-gifts__item:hover p {
+          color: #FF680A;
+        }
+
+        .march-gifts__item a:hover:before {
+          animation: gifts-hover--anim .4s forwards;
+        }
+
+        @keyframes  gifts-hover--anim{
+          0% {
+            opacity: 0;
+            transform: scale(0) rotate(120deg);
+          }
+          100% {
+            opacity: 1;
+            transform: scale(1) rotate(0);
+          }
+        }
+
+        .march-gifts__item-image {
+          margin-bottom: 14px;
+        }
+
+        .march-gifts__item-title {
+          color: #000000;
+          font-size: 24px;
+          text-align: center;
+        }
+
+        @media screen and (max-width: 1365px) {
+          .march-gifts {
+            padding-top: 59px;
+          }
+
+          .march-gifts__wrapper {
+            max-width: 927px;
+          }
+
+          .march-gifts__item {
+            width: 214px;
+          }
+
+          .march-gifts__item-image {
+            width: 136px;
+            height: 146px;
+          }
+
+          .march-gifts__item-title {
+            font-size: 18px;
+          }
+        }
+
+        @media screen and (max-width: 1023px) {
+          .march-gifts {
+            padding-top: 43px;
+            padding-bottom: 15px;
+          }
+
+          .march-gifts__items {
+            max-width: 730px;
+          }
+
+          .march-gifts__item {
+            width: 152px;
+            margin-left: 12px;
+            margin-right: 12px;
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+          .march-gifts__item a:hover:before {
+            animation: none;
+          }
+        }
+
+        @media screen and (max-width: 560px) {
+          .march-gifts {
+            padding-top: 50px;
+          }
+
+          .march-gifts__title {
+            font-size: 22px;
+            margin-bottom: 38px;
+          }
+        }
+
+        @media screen and (max-width: 380px) {
+          .march-gifts__item {
+            width: 136px;
+            margin-left: 8px;
+            margin-right: 8px;
+          }
+        }
+
+        /******************************** ANY-PRICE SECTION ********************************/
+
+        .march-price {
+          background: #fff;
+          position: relative;
+          padding-top: 100px;
+        }
+
+        .march-price__sticker {
+          position: absolute;
+          width: 303px;
+          height: 220px;
+          top: -70px;
+          left: 140px;
+          z-index: 3;
+          cursor: pointer;
+        }
+
+        .march-price__title {
+          font-weight: 500;
+          font-size: 40px;
+          color: #006647;
+          margin-bottom: 80px;
+          text-align: center;
+        }
+
+        .anim.march-price__title {
+          animation: valentine-price__title--anim 0.7s forwards;
+          animation-delay: .7s;
+          animation-timing-function: cubic-bezier(.39,.29,.4,.98);
+        }
+
+        .march-price__container {
+          max-width: 1318px;
+          margin: 0 auto;
+          padding-bottom: 100px;
+        }
+
+        .march-price__list {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+        }
+
+        .march-price__item {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          height: 125px;
+          width: 100%;
+          max-width: 185px;
+          transition: .3s;
+          cursor: pointer;
+        }
+
+        .march-price__link:hover{
+          transform: translateY(-15px);
+        }
+
+        @media screen and (max-width: 1365px) {
+          .march-price {
+            padding-top: 60px;
+          }
+
+          .march-price__sticker {
+            width: 177px;
+            height: 135px;
+            top: -45px;
+            left: calc(0% + 30px);
+          }
+
+          .march-price__title {
+            font-size: 28px;
+          }
+
+          .march-price__container {
+            max-width: 976px;
+            margin: 0 auto;
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 90px;
+          }
+        }
+
+        @media screen and (max-width: 1023px) {
+          .march-price {
+            padding-left: 16px;
+            padding-right: 16px;
+          }
+
+          .march-price__sticker {
+            left: calc(0% + 10px);
+          }
+
+          .march-price__title {
+            margin-bottom: 30px;
+          }
+
+          .march-price__container {
+            padding-bottom: 50px;
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+          .march-price {
+            padding-top: 40px;
+          }
+
+          .march-price__sticker {
+            left: calc(0% - 35px);
+            width: 152px;
+            height: 115px;
+          }
+
+          .march-price__container {
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-bottom: 10px;
+          }
+
+          .march-price__title {
+            font-size: 22px;
+            padding: 0 50px;
+          }
+
+          .march-price__list {
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: baseline;
+          }
+
+          .march-price__item {
+            width: 50%;
+            max-width: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: initial;
+            margin-bottom: 20px;
+          }
+        }
+
+        /******************************** BRANDS SECTION ********************************/
+        .march-brands {
+          background: #FFF;
+          position: relative;
+        }
+
+        .march-brands__container {
+          max-width: 1366px;
+          margin: 0 auto;
+          position: relative;
+          padding-top: 60px;
+        }
+
+        .march-brands__title {
+          display: flex;
+          margin: 0 auto 60px;
+          font-weight: 500;
+          font-size: 40px;
+          color: #006647;
+          justify-content: center;
+        }
+
+        .march-brands__list {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .march-brands__list:after {
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0) -10.9%, #FFFFFF 57.67%);
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 140px;
+          right: 0;
+          left: 0;
+          transition: height 0.3s linear;
+          height: 150px;
+          z-index: 1;
+        }
+
+        .march-brands__list.opened:after {
+          display: none;
+        }
+
+        .march-brands__brand-item {
+          position: relative;
+          width: 200px;
+          margin-bottom: 40px;
+          display: flex;
+          margin-left: 27px;
+          align-items: center;
+          transition: .3s;
+        }
+
+
+        .march-brands__brand-item:nth-child(n+13) {
+          display: none;
+        }
+
+        .opened .march-brands__brand-item:nth-child(n+7) {
+          margin-bottom: 40px;
+        }
+
+        .march-brands__brand-item:hover {
+          transform: translateY(-15px);
+        }
+
+        .march-brands__show-more {
+          width: 58px;
+          height: 58px;
+          margin: 0 auto;
+          border-radius: 50%;
+          position: relative;
+          text-align: center;
+          top: -85px;
+          background: #FF680A url('https://i.citrus.ua/uploads/promo/black-friday-static/white-arrows.svg?_t=1573206119') center no-repeat;
+          cursor: pointer;
+          z-index: 2;
+        }
+
+        .march-brands__show-more:hover {
+          transition: 0.25s;
+          opacity: 0.8;
+          box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.12), 0px 9px 46px rgba(0, 0, 0, 0.06), 0px 24px 38px rgba(0, 0, 0, 0.07);
+        }
+
+        .march-brands__show-all {
+          text-align: center;
+          margin: 0 auto;
+          top: -65px;
+          position: relative;
+        }
+
+        .march-brands__list.opened + .march-brands__show-all {
+          top: -45px;
+        }
+
+        .show-all__link {
+          background: #FF680A;
+          border-radius: 50px;
+          display: inline-block;
+          width: 259px;
+          height: 48px;
+          text-transform: uppercase;
+          font-weight: 500;
+          font-size: 18px;
+          color: #FFFFFF;
+          padding: 12px 0 0 0;
+        }
+
+        .show-all__link:hover {
+          color: #ffffff;
+          opacity: 0.8;
+          box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.12), 0px 9px 46px rgba(0, 0, 0, 0.06), 0px 24px 38px rgba(0, 0, 0, 0.07);
+          transition: 0.25s;
+        }
+
+        @media screen and (max-width: 1365px) {
+          .march-brands__container {
+            width: 986px;
+          }
+
+          .march-brands__title {
+            font-size: 28px;
+            margin: 0 auto 60px;
+          }
+
+          .march-brands__list:after {
+            bottom: 150px;
+          }
+
+          .march-brands__brand-item {
+            width: 135px;
+            margin-bottom: 35px;
+          }
+
+          .opened .march-brands__brand-item:nth-child(n+7) {
+            margin-bottom: 35px;
+          }
+
+          .march-brands__show-more {
+            top: -95px;
+          }
+        }
+
+        @media screen and (max-width: 1023px) {
+          .march-brands__container {
+            width: 720px;
+          }
+
+          .march-brands__list:after {
+            bottom: 100px;
+          }
+
+          .march-brands__brand-item {
+            width: 94px;
+            margin-bottom: 20px;
+            margin-left: 22px;
+          }
+
+          .opened .march-brands__brand-item:nth-child(n+7) {
+            margin-bottom: 20px;
+          }
+
+          .march-brands__show-more {
+            top: -60px;
+          }
+
+          .march-brands__show-all {
+            top: -40px;
+          }
+
+          .march-brands__list.opened + .march-brands__show-all {
+            top: -15px;
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+          .march-brands__container {
+            max-width: 640px;
+            width: 100%;
+            padding-top: 92px;
+          }
+
+          .march-brands__title {
+            margin: 0 auto 47px;
+            font-size: 24px;
+          }
+
+          .march-brands__list {
+            justify-content: center;
+          }
+
+          .march-brands__brand-item {
+            width: 80px;
+          }
+
+          .show-all__link {
+            width: 288px;
+          }
+        }
+
+        @media screen and (max-width: 600px) {
+          .march-brands__list:after {
+            bottom: 100px;
+          }
+
+          .march-brands__brand-item:nth-child(3n+1) {
+            margin-left: 0;
+          }
+
+          .march-brands__show-more {
+            top: -50px;
+          }
+
+          .march-brands__show-all {
+            top: -30px;
+          }
+
+          .march-brands__list.opened + .march-brands__show-all {
+            top: -10px;
+          }
+        }
+
+        @media screen and (max-width: 570px) {
+
+          .march-brands__container {
+            max-width: 420px;
+          }
+
+          .march-brands__list:after {
+            bottom: 105px;
+          }
+
+          .march-brands__brand-item {
+            max-width: 110px;
+            width: 100%;
+          }
+
+          .march-brands__brand-item:nth-child(n+10) {
+            display: none;
+          }
+
+          .opened .march-brands__brand-item:nth-child(n+10) {
+            margin-bottom: 20px;
+          }
+
+          .march-brands__show-more {
+            top: -45px;
+          }
+
+          .march-brands__show-all {
+            top: -25px;
+          }
+
+          .march-brands__list.opened + .march-brands__show-all {
+            top: -5px;
+          }
+        }
+
+        @media screen and (max-width: 420px) {
+          .march-brands__container {
+            max-width: 300px;
+          }
+
+          .march-brands__brand-item {
+            max-width: 80px;
+          }
+        }
+
+        /*march-card*/
+        .march-card {
+          padding-top: 100px;
+          padding-bottom: 122px;
+          background:
+            url("https://i.citrus.ua/uploads/promo/march-8/texture%208.png"),
+            linear-gradient(0deg, #FAFAFA, #FAFAFA),
+            radial-gradient(50% 50% at 50% 50%, #F4FFD3 0%, #DAF87D 100%),
+            #DAF87D;
+        }
+
+        .march-card__content {
+          width: 543px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .march-card__title {
+          font-weight: 500;
+          font-size: 40px;
+          color: #006647;
+          margin-bottom: 60px;
+          text-align: center;
+        }
+
+        .march-card__image {
+          margin-bottom: 32px;
+          position: relative;
+        }
+
+        .march-card__image:before {
+          content: '';
+          position: absolute;
+          width: 94px;
+          height: 100%;
+          left: -94px;
+          opacity: 0.05;
+          background: url("https://i.citrus.ua/uploads/promo/march-8/card/flowers_left.png") no-repeat;
+        }
+
+        .march-card__image:after {
+          content: '';
+          position: absolute;
+          width: 95px;
+          height: 100%;
+          right: -90px;
+          opacity: 0.05;
+          background: url("https://i.citrus.ua/uploads/promo/march-8/card/flowers_right.png") no-repeat center center;
+        }
+
+        .march-card__select {
+          position: absolute;
+          width: 311px;
+          height: 72px;
+          right: 23px;
+          bottom: 24px;
+          background: url('https://i.citrus.ua/uploads/promo/march-8/icon-arrow-down.png') no-repeat center right 16px #FFFFFF;
+          border-radius: 50px;
+          color: #000000;
+          font-weight: bold;
+          font-size: 32px;
+          padding-left: 24px;
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          text-indent: 1px;
+          text-overflow: '';
+          outline: none;
+        }
+
+        .march-card__buy {
+          width: 200px;
+          height: 46px;
+          background: #FF690A;
+          border-radius: 41px;
+          font-weight: 900;
+          font-size: 18px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: auto;
+          margin-right: auto;
+          color: #FFFFFF;
+          text-transform: uppercase;
+        }
+
+        .march-card__buy:hover {
+          opacity: 0.8;
+          color: #ffffff;
+          box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.12), 0px 9px 46px rgba(0, 0, 0, 0.06), 0px 24px 38px rgba(0, 0, 0, 0.07);
+        }
+
+        @media screen and (max-width: 1365px) {
+          .march-card {
+            padding-top: 60px;
+            padding-bottom: 60px;
+          }
+
+          .march-card__content {
+            max-width: 381px;
+          }
+
+          .march-card__title {
+            font-size: 28px;
+            margin-bottom: 40px;
+          }
+
+          .march-card__image {
+            margin-bottom: 32px;
+          }
+
+          .march-card__image:before {
+            width: 94px;
+            height: 100%;
+            left: -65px;
+            top: 20px;
+            background: url("https://i.citrus.ua/uploads/promo/march-8/card/flowers_left-1024.png") no-repeat;
+          }
+
+          .march-card__image:after {
+            width: 95px;
+            height: 100%;
+            right: -78px;
+            background: url("https://i.citrus.ua/uploads/promo/march-8/card/flowers_right-1024.png") no-repeat center center;
+          }
+
+          .march-card__select {
+            width: 192px;
+            height: 46px;
+            font-size: 22px;
+          }
+
+          .march-card__buy {
+            width: 200px;
+            height: 46px;
+            font-size: 18px;
+          }
+        }
+
+        @media screen and (max-width: 560px) {
+          .march-card {
+            padding-top: 40px;
+            padding-bottom: 40px;
+          }
+
+          .march-card__title {
+            font-size: 22px;
+            margin-bottom: 24px;
+          }
+
+          .march-card__content {
+            width: 290px;
+          }
+          .march-card__image:before {
+            display: none;
+          }
+
+          .march-card__image:after {
+            display: none;
+          }
+
+          .march-card__select {
+            width: 142px;
+            height: 34px;
+            bottom: 16px;
+            right: 16px;
+            font-size: 16px;
+            background: url(https://i.citrus.ua/uploads/promo/march-8/icon-arrow-down.png) no-repeat center right 0px #FFFFFF;
+          }
+
+          .march-card__buy {
+            width: 288px;
+          }
+        }
+
+        /******************************** APP SECTION ********************************/
+        .valentine-app {
+          padding-top: 102px;
+          padding-bottom: 137px;
+          background: url("https://i.citrus.ua/uploads/promo/march-8/texture%208.png"),
+          #FFDBB5;
+        }
+
+        .valentine-app__wrapper {
+          max-width: 1366px;
+          margin-left: auto;
+          margin-right: auto;
+          padding-left: 79px;
+          padding-right: 36px;
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .valentine-app__description {
+          max-width: 439px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: -22px;
+        }
+
+        .valentine-app__text {
+          margin-bottom: 15px;
+        }
+
+        .valentine-app__info {
+          font-size: 18px;
+          text-align: center;
+          color: #000000;
+          margin-bottom: 28px;
+        }
+
+        .valentine-app__app-list {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          margin-bottom: 31px;
+        }
+
+        .valentine-app__app-link {
+          max-width: 199px;
+          display: block;
+          height: 60px;
+        }
+
+        .valentine-app__app-link:hover {
+          transform: translateY(-10px);
+        }
+
+        .valentine-app__form {
+          width: 100%;
+        }
+
+        .valentine-app__form-title {
+          color: #000000;
+          font-size: 18px;
+          margin-bottom: 35px;
+          text-align: center;
+        }
+
+        .valentine-app__form-container {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
+
+        .valentine-app__field {
+          position: relative;
+        }
+
+        .valentine-app__input {
+          background-color: #FFFFFF;
+          border-radius: 50px;
+          width: 196px;
+          font-size: 18px;
+          height: 43px;
+          position: relative;
+        }
+
+        .valentine-app__input::placeholder {
+          color: #757575;
+          opacity: 1;
+        }
+
+        .valentine-app__submit {
+          background: #FF690A;
+          border-radius: 41px;
+          width: 196px;
+          height: 43px;
+          font-weight: 900;
+          font-size: 15px;
+          color: #FFFFFF;
+          text-transform: uppercase;
+          position: relative;
+        }
+
+        .valentine-app__success {
+          display: none;
+          margin-top: -10px;
+          margin-top: 3px;
+        }
+
+        .valentine-app__success-title {
+          font-weight: 500;
+          font-size: 28px;
+          color: #000000;
+          margin-bottom: 14px;
+          text-align: center;
+        }
+
+        .valentine-app__success-description {
+          font-size: 18px;
+          text-align: center;
+          color: #000000;
+          margin-bottom: 10px;
+          line-height: 1.3;
+        }
+
+        .valentine-app__success-info {
+          font-size: 18px;
+          text-align: center;
+          color: #000000;
+          line-height: 1.3;
+          margin-bottom: 16px;
+        }
+
+        @media screen and (max-width: 1365px) {
+          .valentine-app {
+            padding-top: 70px;
+            padding-bottom: 60px;
+          }
+
+          .valentine-app__wrapper {
+            padding-left: 0;
+            padding-right: 0;
+            max-width: 900px;
+          }
+
+          .valentine-app__description {
+            max-width: 340px;
+            width: 100%;
+            margin-top: -4px;
+          }
+
+          .valentine-app__image {
+            min-width: 490px;
+            width: 490px;
+            align-self: center;
+          }
+
+          .valentine-app__text {
+            width: 300px;
+            margin-right: auto;
+          }
+
+          .valentine-app__info {
+            font-size: 12px;
+            max-width: 290px;
+            margin-right: auto;
+            margin-bottom: 20px;
+          }
+
+          .valentine-app__app-list {
+            justify-content: flex-start;
+            margin-bottom: 17px;
+          }
+
+          .valentine-app__app-item:nth-child(1) {
+            margin-right: 16px;
+          }
+
+          .valentine-app__app-link {
+            max-width: 139px;
+            height: 42px;
+          }
+
+          .valentine-app__form-title {
+            font-size: 14px;
+            width: 300px;
+          }
+
+          .valentine-app__input {
+            width: 159px;
+            height: 38px;
+            font-size: 14px;
+          }
+
+          .valentine-app__submit {
+            width: 159px;
+            height: 38px;
+            font-size: 14px;
+            line-height: normal;
+          }
+
+          .valentine-app__form-title {
+            margin-bottom: 30px;
+          }
+
+          .valentine-app__form-container {
+            margin-left: -24px;
+          }
+
+          .valentine-app__success {
+            max-width: 300px;
+            margin-right: auto;
+            margin-top: -7px;
+          }
+
+          .valentine-app__success-title {
+            font-size: 20px;
+          }
+
+          .valentine-app__success-description {
+            font-size: 14px;
+          }
+
+          .valentine-app__success-info {
+            font-size: 14px;
+          }
+        }
+
+        @media screen and (max-width: 1023px) {
+          .valentine-app {
+            padding-top: 70px;
+            padding-bottom: 61px;
+          }
+
+          .valentine-app__wrapper {
+            padding-left: 30px;
+            padding-right: 0;
+            max-width: 751px;
+          }
+
+          .valentine-app__image {
+            width: 430px;
+            min-width: 430px;
+            margin-right: -50px;
+          }
+
+          .valentine-app__text {
+            margin-left: auto;
+          }
+
+          .valentine-app__success-description {
+            font-size: 12px;
+          }
+
+          .valentine-app__success {
+            margin-left: auto;
+          }
+
+          .valentine-app__success-info {
+            font-size: 12px;
+            margin-bottom: 8px;
+          }
+
+          .valentine-app__info {
+            max-width: none;
+            padding-left: 0;
+            text-align: center;
+            margin-right: 0;
+          }
+
+          .valentine-app__app-list {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 297px;
+          }
+
+          .valentine-app__form-title {
+            width: auto;
+            margin-bottom: 17px;
+          }
+
+          .valentine-app__form-container {
+            margin-left: 2px;
+          }
+
+          .valentine-app__form-container {
+            min-width: 340px;
+          }
+        }
+
+        @media screen and (max-width: 640px) {
+          .valentine-app {
+            padding-top: 40px;
+            padding-bottom: 40px;
+          }
+
+          .valentine-app__wrapper {
+            padding-left: 16px;
+            padding-right: 16px;
+            flex-direction: column-reverse;
+          }
+
+          .valentine-app__image {
+            min-width: 288px;
+            width: 100%;
+            max-width: 350px;
+            margin-right: -20px;
+          }
+
+          .valentine-app__text {
+            width: 288px;
+          }
+
+          .valentine-app__description {
+            min-width: 288px;
+            width: 288px;
+            margin-top: 15px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          .valentine-app__info {
+            padding-left: 0;
+            margin-bottom: 26px;
+          }
+
+          .valentine-app__app-list {
+            margin-bottom: 10px;
+          }
+
+          .valentine-app__form-title {
+            font-size: 12px;
+          }
+
+          .valentine-app__form-container {
+            flex-direction: column;
+            align-items: center;
+            min-width: 100%;
+            margin-left: 0;
+          }
+
+          .valentine-app__input {
+            width: 288px;
+            height: 43px;
+            font-size: 15px;
+            margin-bottom: 22px;
+          }
+
+          .valentine-app__submit {
+            width: 288px;
+            height: 43px;
+            font-size: 15px;
+          }
+
+          .valentine-app__success-info {
+            margin-bottom: 20px;
+          }
+        }
+
+
+        /************************************** Footer BLOCK ******************************/
+        .valentine-footer {
+          padding-top: 124px;
+          padding-bottom: 80px;
+        }
+        .valentine-footer__list {
+          display: flex;
+          padding: 0 12px;
+          max-width: 1320px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .valentine-footer__list .list-col {
+          flex-basis: calc(100% / 3);
+          margin: 0 12px;
+        }
+        .valentine-footer__list .list-col .col__item {
+          background: #ffffff;
+          border-radius: 10px;
+          padding: 24px 24px 0;
+          margin-bottom: 19px;
+        }
+        .valentine-footer__list .list-col .col__item .item__title {
+          font-size: 24px;
+          line-height: 28px;
+          margin-bottom: 26px;
+          margin-top: 0;
+        }
+        .valentine-footer__list .list-col .col__item .item__text {
+          font-size: 16px;
+          line-height: 150%;
+          color: rgba(0, 0, 0, 0.54);
+          padding-bottom: 24px;
+          margin: 0;
+        }
+        .valentine-footer__list .list-col .col__item .item__list {
+          padding-left: 18px;
+          margin: 0;
+          list-style: disc;
+          font-size: 16px;
+          line-height: 140%;
+          padding-bottom: 24px;
+          color: rgba(0, 0, 0, 0.54);
+        }
+        .valentine-footer__list .list-col .col__item .item__list li {
+          padding-bottom: 7px;
+        }
+        @media screen and (max-width: 1365px) {
+          .valentine-footer {
+            padding-top: 8%;
+          }
+        }
+        @media screen and (max-width: 1024px) {
+          .valentine-footer {
+            padding-bottom: 60px;
+          }
+          .valentine-footer__list .list-col .col__item .item__title {
+            font-size: 22px;
+            line-height: 26px;
+          }
+          .valentine-footer__list .list-col .col__item .item__text {
+            font-size: 14px;
+            line-height: 140%;
+            padding-bottom: 12px;
+          }
+          .valentine-footer__list .list-col .col__item .item__list {
+            font-size: 14px;
+            line-height: 140%;
+            padding-bottom: 12px;
+          }
+        }
+        @media screen and (max-width: 768px) {
+          .valentine-footer {
+            padding-bottom: 40px;
+          }
+          .valentine-footer__list {
+            flex-direction: column;
+            padding: 0 8px;
+          }
+          .valentine-footer__list .list-col {
+            margin: 0;
+          }
+          .valentine-footer__list .list-col .col__item {
+            padding: 24px 16px 0;
+            margin-bottom: 24px;
+          }
+          .valentine-footer__list .list-col .col__item .item__title {
+            font-size: 20px;
+            line-height: 23px;
+            margin-bottom: 23px;
+          }
+          .valentine-footer__list .list-col .col__item .item__text {
+            font-size: 12px;
+          }
+          .valentine-footer__list .list-col .col__item .item__list {
+            font-size: 12px;
+            padding-left: 16px;
+          }
+        }
+
+        /*faq*/
+        .valentine-faq {
+          padding-bottom: 20px;
+        }
+
+        .valentine-faq__wrapper {
+          display: flex;
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 1320px;
+        }
+
+        .valentine-faq__title {
+          max-width: 327px;
+          margin-right: 8px;
+          margin-bottom: 0;
+          border-radius: 10px;
+          padding-top: 170px;
+          padding-left: 12px;
+          padding-right: 12px;
+          text-align: center;
+          color: rgba(0, 0, 0, 0.87);
+          font-size: 26px;
+          position: relative;
+          background: url('https://i.citrus.ua/uploads/promo/black-friday-static/faq-question.png') no-repeat top 30px center #ffffff;
+        }
+        .valentine-faq__items {
+          max-width: 983px;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+        .valentine-faq__item {
+          background-color: #ffffff;
+          margin-bottom: 8px;
+          border-radius: 10px;
+        }
+        .valentine-faq__item:hover {
+          box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.12),
+          0px 3px 14px rgba(0, 0, 0, 0.06),
+          0px 8px 10px rgba(0, 0, 0, 0.07);
+          transition: 0.25s;
+        }
+        .valentine-faq__item:last-child {
+          margin-bottom: 0;
+        }
+        .valentine-faq__answer {
+          height: 0;
+          overflow: hidden;
+          transition: height 0.2s linear;
+        }
+        .valentine-faq__item--open {
+          padding-bottom: 24px;
+        }
+        .valentine-faq__item--open .valentine-faq__question::after {
+          transform: rotate(180deg);
+        }
+        .valentine-faq__question {
+          text-align: left;
+          font-size: 18px;
+          line-height: 1.2;
+          color: rgba(0, 0, 0, 0.87);
+          margin: 0;
+          position: relative;
+          padding-left: 24px;
+          padding-right: 66px;
+          padding-top: 24px;
+          padding-bottom: 24px;
+          cursor: pointer;
+        }
+        .valentine-faq__question::after {
+          position: absolute;
+          content: '';
+          top: 30px;
+          right: 42px;
+          pointer-events: none;
+          width: 13px;
+          height: 12px;
+          transition: 0.25s;
+          background: url('https://i.citrus.ua/uploads/promo/black-friday-static/faq-ic.png') no-repeat center;
+        }
+        .valentine-faq__answer-text {
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.54);
+          margin-bottom: 12px;
+          padding-left: 24px;
+          padding-right: 56px;
+        }
+        .valentine-faq__answer-items {
+          padding-left: 24px;
+          padding-right: 56px;
+          margin-bottom: 12px;
+        }
+        .valentine-faq__answer-item {
+          position: relative;
+          padding-left: 16px;
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.54);
+          margin-bottom: 12px;
+        }
+        .valentine-faq__answer-item::before {
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background-color: rgba(0, 0, 0, 0.54);
+          left: 0;
+          top: 4px;
+          position: absolute;
+          content: '';
+        }
+        .valentine-faq__answer-text:last-child {
+          margin-bottom: 0;
+        }
+
+        .valentine-faq__main-sublist {
+          padding-left: 42px;
+          padding-right: 56px;
+        }
+
+        .valentine-faq__main-sublist b {
+          margin-bottom: 10px;
+          display: block;
+          font-weight: bold;
+        }
+
+        .valentine-faq__main-sublist li {
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.54);
+          margin-bottom: 10px;
+        }
+
+        .valentine-faq__second-list {
+          margin-bottom: 15px;
+        }
+
+        .valentine-faq__second-list li {
+          position: relative;
+          padding-left: 16px;
+        }
+
+        .valentine-faq__second-list li::before {
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background-color: rgba(0, 0, 0, 0.54);
+          left: 0;
+          top: 4px;
+          position: absolute;
+          content: '';
+        }
+
+        .teaser-header__text-content {
+          font-size: 26px;
+          font-weight: bold;
+          text-align: center;
+          color: #fff;
+          margin-bottom: 24px;
+        }
+
+
+
+        .valentine-faq__main-sublist--special b {
+          display: initial;
+        }
+
+        .valentine-faq__answer-sublist {
+          margin-left: 20px;
+          margin-top: 10px;
+        }
+
+        .valentine-faq__answer-sublist li {
+          margin-bottom: 10px;
+        }
+        @media screen and (max-width: 1365px) {
+          .valentine-faq__wrapper {
+            flex-direction: column;
+          }
+          .valentine-faq__title {
+            background: transparent;
+            max-width: none;
+            text-align: left;
+            margin-bottom: 30px;
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-top: 0;
+          }
+
+          .teaser-header__text-content {
+            font-size: 22px;
+            margin-bottom: 16px;
+          }
+          .valentine-faq__items {
+            max-width: none;
+            width: calc(100% - 16px);
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+
+        /******************************** CATEGORIES SECTION ********************************/
+
+        .march-categories {
+          background: #fff;
+          position: relative;
+          padding-top: 100px;
+        }
+
+        .march-categories__container {
+          max-width: 1320px;
+          margin: 0 auto;
+          position: relative;
+          padding-bottom: 90px;
+        }
+
+        .march-categories__title {
+          display: flex;
+          margin: 0 auto 60px;
+          font-weight: 500;
+          font-size: 40px;
+          color: #006647;
+          justify-content: center;
+        }
+
+        .march-categories__list {
+          display: flex;
+          flex-direction: row;
+          align-content: center;
+          flex-wrap: wrap;
+          margin-left: -24px;
+        }
+
+        .march-categories__categories-item {
+          width: 244px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 40px;
+          margin-left: 24px;
+          position: relative;
+          transition: .3s;
+        }
+
+        .categories-item__name {
+          font-weight: 500;
+          font-size: 16px;
+          color: #3B6D9A;
+        }
+
+        .categories-item__image,
+        .categories-item__name {
+          transition: .3s;
+          position: relative;
+        }
+
+        .march-categories__categories-item:before {
+          content: "";
+          position: absolute;
+          opacity: 0;
+          z-index: 0;
+          width: 100%;
+          height: 100%;
+          top: -20px;
+          background: url("https://i.citrus.ua/uploads/promo/march-8/categories/bg_category_4.png") center center no-repeat;
+        }
+
+        .march-categories__categories-item:hover:before {
+          animation: item-hover--anim .5s forwards;
+        }
+
+        /*@keyframes item-hover--anim {*/
+        /*  0% {*/
+        /*    opacity: 0;*/
+        /*    transform: scale(0);*/
+        /*  }*/
+        /*  100% {*/
+        /*    opacity: 1;*/
+        /*    transform: scale(1);*/
+        /*  }*/
+        /*}*/
+
+        @keyframes item-hover--anim {
+          0% {
+            opacity: 0;
+            top: -20px;
+          }
+          100% {
+            opacity: 1;
+            top: -2px;
+          }
+        }
+
+        .march-categories__categories-item:hover .categories-item__name {
+          color: #FF680A;
+        }
+
+        .march-categories__list:after {
+          display: none;
+        }
+
+        .march-categories__show-more {
+          display: none;
+        }
+
+        @media screen and (max-width: 1365px) {
+          .march-categories {
+            padding-top: 60px;
+          }
+
+          .march-categories__container {
+            width: 930px;
+          }
+
+          .march-categories__title {
+            font-size: 28px;
+            margin: 0 auto 60px;
+          }
+
+          .march-categories__categories-item {
+            width: 166px;
+          }
+
+          .march-categories__list:after {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 5.11%, #FFFFFF 57.67%);
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 170px;
+            right: 0;
+            left: 0;
+            transition: height 0.3s linear;
+            height: 130px;
+            z-index: 1;
+          }
+
+          .march-categories__list.opened:after {
+            display: none;
+          }
+
+          .march-categories__categories-item:nth-child(n+16) {
+            display: none;
+          }
+
+          .opened .march-categories__categories-item:nth-child(n+16) {
+            display: flex;
+            margin-bottom: 35px;
+          }
+
+          .categories-item__image:hover {
+            transform: none;
+          }
+
+          .march-categories__show-more {
+            display: block;
+            width: 56px;
+            height: 56px;
+            margin: 0 auto;
+            border-radius: 50%;
+            position: relative;
+            text-align: center;
+            top: -73px;
+            background: #FF680A url('https://i.citrus.ua/uploads/promo/black-friday-static/white-arrows.svg?_t=1573206119') center no-repeat;
+            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.12), 0px 1px 18px rgba(0, 0, 0, 0.06), 0px 6px 10px rgba(69, 76, 83, 0.07);
+            cursor: pointer;
+            z-index: 2;
+          }
+
+          .march-categories__show-more:hover {
+            transition: 0.25s;
+            background: #FF680A url('https://i.citrus.ua/uploads/promo/black-friday-static/arrows.svg') center no-repeat;
+            box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.12), 0px 9px 46px rgba(0, 0, 0, 0.06), 0px 24px 38px rgba(0, 0, 0, 0.07);
+          }
+
+          .categories-item__name {
+            font-size: 13px;
+          }
+        }
+
+        @media screen and (max-width: 1023px) {
+          .march-categories__container {
+            width: 690px;
+          }
+
+          .march-categories__categories-item {
+            width: 118px;
+            text-align: center;
+            word-break: break-word;
+            margin-bottom: 20px;
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+          .march-categories {
+            padding-top: 40px;
+          }
+
+          .march-categories__container {
+            max-width: 640px;
+            width: 100%;
+            padding-bottom: 40px;
+          }
+
+          .march-categories__title {
+            margin: 0 auto 34px;
+            font-size: 24px;
+          }
+
+          .march-categories__list {
+            justify-content: center;
+          }
+
+          .march-categories__categories-item {
+            width: 140px;
+            margin-bottom: 24px;
+          }
+
+          .march-categories__categories-item:hover:before {
+            animation: none;
+          }
+
+          .march-categories__categories-item:nth-child(n+13) {
+            display: none;
+          }
+
+          .march-categories__list:after {
+            bottom: 120px;
+          }
+
+          .march-categories__show-more {
+            top: -50px;
+          }
+        }
+
+        @media screen and (max-width: 467px) {
+          .march-categories__list:after {
+            bottom: 100px;
+          }
+
+          .march-categories__categories-item:nth-child(n+7) {
+            display: none;
+          }
+
+          .opened .march-categories__categories-item:nth-child(n+7) {
+            margin-bottom: 20px;
+          }
+
+          .march-categories__show-more {
+            top: -40px;
+          }
+        }
+
+
+      </style>
+
+      <div class="march-8">
+        <section class="march-8__header march-header">
+          <picture>
+            <source srcset="https://i.citrus.ua/uploads/promo/march-8/header/baner-4-mobile-ru.png" media="(max-width: 561px)">
+            <img class="march-header__banner" src="https://i.citrus.ua/uploads/promo/march-8/header/baner-4-ru.png" alt="">
+          </picture>
+        </section>
+
+        <section class="march-8__hits march-hits">
+          <!--          <img class="march-hits__sticker" src="https://i.citrus.ua/uploads/promo/march-8/stick_rozigr.png" alt="">-->
+          <div class="march-hits__wrapper">
+            <h1 class="march-hits__title">Подарки на 8 марта</h1>
+            <div class="march-products" id="hits-products">
+              <ul class="march-products__items" id="hits"></ul>
+              <button class="march-products__show-more" id="showHits"></button>
+              <a target="_blank" class="march-products__more" href="https://www.citrus.ua/actions/8-marta-goods/">Все товары</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="march-8__any-price march-price">
+          <img class="march-price__sticker" data-scroll-to="marchCard" src="https://i.citrus.ua/uploads/promo/march-8/stick_card_ru.png" alt="">
+          <p data-anim="true" class="march-price__title">Подарки на любой кошелек</p>
+          <div class="march-price__container">
+            <ul class="march-price__list">
+              <li class="march-price__item">
+                <a class="march-price__link" target="_blank" href="https://www.citrus.ua/actions/8-marta-goods/?prices%5Bmin%5D=10&prices%5Bmax%5D=500">
+                  <img src="https://i.citrus.ua/uploads/promo/march-8/anyprice/first-price.png" alt="First Price">
+                </a>
+              </li>
+              <li class="march-price__item">
+                <a class="march-price__link" target="_blank" href="https://www.citrus.ua/actions/8-marta-goods/?prices%5Bmin%5D=501&prices%5Bmax%5D=1000">
+                  <img src="https://i.citrus.ua/uploads/promo/march-8/anyprice/second-price.png" alt="Second Price">
+                </a>
+              </li>
+              <li class="march-price__item">
+                <a class="march-price__link" target="_blank" href="https://www.citrus.ua/actions/8-marta-goods/?prices%5Bmin%5D=1001&prices%5Bmax%5D=5000">
+                  <img src="https://i.citrus.ua/uploads/promo/march-8/anyprice/third-price.png" alt="Third Price">
+                </a>
+              </li>
+              <li class="march-price__item">
+                <a class="march-price__link" target="_blank" href="https://www.citrus.ua/actions/8-marta-goods/?prices%5Bmin%5D=5001&prices%5Bmax%5D=10000">
+                  <img src="https://i.citrus.ua/uploads/promo/march-8/anyprice/Frame%2085.png" alt="Fourth Price">
+                </a>
+              </li>
+              <li class="march-price__item">
+                <a class="march-price__link" target="_blank" href="https://www.citrus.ua/actions/8-marta-goods/?prices%5Bmin%5D=10000&prices%5Bmax%5D=100000">
+                  <img src="https://i.citrus.ua/uploads/promo/march-8/anyprice/Frame%20303-ru.png" alt="Fifth Price">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="march-8__gifts march-gifts">
+          <div class="march-gifts__wrapper">
+            <p class="march-gifts__title">Выбирай кому дарить</p>
+            <ul class="march-gifts__items">
+              <li class="march-gifts__item">
+                <a class="march-gifts__link" target="_blank" href="https://www.citrus.ua/actions/8-marta-goods/?segment=6440">
+                  <div class="march-gifts__item-image">
+                    <img class="march-gifts__item-preview" src="https://i.citrus.ua/uploads/promo/march-8/gifts/d_mam-2.png" alt="">
+                  </div>
+
+                  <p class="march-gifts__item-title">Маме</p>
+                </a>
+              </li>
+              <li class="march-gifts__item">
+                <a class="march-gifts__link" target="_blank" href="https://www.citrus.ua/actions/8-marta-goods/?segment=6441">
+                  <div class="march-gifts__item-image">
+                    <img class="march-gifts__item-preview" src="https://i.citrus.ua/uploads/promo/march-8/gifts/d_doter-2.png" alt="">
+                  </div>
+
+                  <p class="march-gifts__item-title">Дочке</p>
+                </a>
+              </li>
+              <li class="march-gifts__item">
+                <a class="march-gifts__link" target="_blank" href="https://www.citrus.ua/actions/8-marta-goods/?segment=6442">
+                  <div class="march-gifts__item-image">
+                    <img class="march-gifts__item-preview" src="https://i.citrus.ua/uploads/promo/march-8/gifts/d_wife-2.png" alt="">
+                  </div>
+
+                  <p class="march-gifts__item-title">Любимой</p>
+                </a>
+              </li>
+              <li class="march-gifts__item">
+                <a class="march-gifts__link" target="_blank" href="https://www.citrus.ua/actions/8-marta-goods/?segment=6443">
+                  <div class="march-gifts__item-image">
+                    <img class="march-gifts__item-preview" src="https://i.citrus.ua/uploads/promo/march-8/gifts/d_friend-2.png" alt="">
+                  </div>
+
+                  <p class="march-gifts__item-title">Подруге</p>
+                </a>
+              </li>
+              <li class="march-gifts__item">
+                <a class="march-gifts__link" target="_blank" href="https://www.citrus.ua/actions/8-marta-goods/?segment=6444">
+                  <div class="march-gifts__item-image">
+                    <img class="march-gifts__item-preview" src="https://i.citrus.ua/uploads/promo/march-8/gifts/d_grand_m-2.png" alt="">
+                  </div>
+
+                  <p class="march-gifts__item-title">Бабушке</p>
+                </a>
+              </li>
+              <li class="march-gifts__item">
+                <a class="march-gifts__link" target="_blank" href="https://www.citrus.ua/actions/8-marta-goods/?segment=6445">
+                  <div class="march-gifts__item-image">
+                    <img class="march-gifts__item-preview" src="https://i.citrus.ua/uploads/promo/march-8/gifts/d_sister-2.png" alt="">
+                  </div>
+
+                  <p class="march-gifts__item-title">Сестре</p>
+                </a>
+              </li>
+              <li class="march-gifts__item">
+                <a class="march-gifts__link" target="_blank" href="https://www.citrus.ua/actions/8-marta-goods/?segment=6446">
+                  <div class="march-gifts__item-image">
+                    <img class="march-gifts__item-preview" src="https://i.citrus.ua/uploads/promo/march-8/gifts/d_colleague-2.png" alt="">
+                  </div>
+
+                  <p class="march-gifts__item-title">Коллеге</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="march-8__brands march-brands">
+          <div class="march-brands__container">
+            <p class="march-brands__title">
+              Бренды
+            </p>
+
+            <ul class="march-brands__list" id="marchBrands"></ul>
+            <div class="march-brands__show-more"></div>
+            <div class="march-brands__show-all">
+              <a class="show-all__link" style="opacity: 0; pointer-events: none;" href="https://www.citrus.ua/brands" target="_blank">Все бренды</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="march-8__card march-card" id="marchCard">
+          <div class="march-card__content">
+            <p class="march-card__title">Закрутило с подарком?<br> Дари сертификат</p>
+
+            <div class="march-card__image">
+              <img src="https://i.citrus.ua/uploads/promo/march-8/card/card.png" alt="">
+              <select class="march-card__select" id="cardSelect">
+                <option value="https://www.citrus.ua/gift-certificates/karta-dlya-pokupok-100-grn-636941.html" selected="selected">100 грн</option>
+                <option value="https://www.citrus.ua/gift-certificates/karta-dlya-pokupok-200-grn-633788.html">200 грн</option>
+                <option value="https://www.citrus.ua/gift-certificates/karta-dlya-pokupok-500-grn-633801.html">500 грн</option>
+                <option value="https://www.citrus.ua/gift-certificates/karta-dlya-pokupok-1000-grn-633802.html">1 000 грн</option>
+                <option value="https://www.citrus.ua/gift-certificates/karta-dlya-pokupok-2000-grn-633804.html">2 000 грн</option>
+                <option value="https://www.citrus.ua/gift-certificates/karta-dlya-pokupok-5000-grn-633807.html">5 000 грн</option>
+                <option value="https://www.citrus.ua/gift-certificates/karta-dlya-pokupok-10000-grn-633809.html">10 000 грн</option>
+              </select>
+            </div>
+
+            <a class="march-card__buy" target="_blank" href="https://www.citrus.ua/gift-certificates/karta-dlya-pokupok-100-grn-636941.html" id="cardLink">Купить</a>
+          </div>
+        </section>
+
+        <section class="march-8__categories march-categories">
+          <div class="march-categories__container">
+            <p class="march-categories__title">Категории</p>
+            <ul class="march-categories__list" id="marchCategories"></ul>
+
+            <div class="march-categories__show-more"></div>
+          </div>
+        </section>
+
+        <section id="footerApp" class="valentine-day__app valentine-app">
+          <div class="valentine-app__wrapper">
+            <div data-anim="true" class="valentine-app__description">
+              <div class="valentine-app__text">
+                <img class="valentine-app__text-preview" src="https://i.citrus.ua/uploads/promo/march-8/app/text-phone_ru.png" alt="">
+              </div>
+              <p class="valentine-app__info" id="appText">
+                Получай дополнительно 100 грн на бонусный счёт<br>
+                за установку и дари больше радости любимым!
+              </p>
+
+              <div class="valentine-app__success" id="successWindow-1">
+                <p class="valentine-app__success-title">Отлично!</p>
+                <p class="valentine-app__success-description">
+                  Сообщение с ссылкой на установку приложения уже летит на твой номер.
+                </p>
+                <p class="valentine-app__success-info">
+                  Скорее проверяй SMS / Viber<br>
+                  или переходи:
+                </p>
+              </div>
+
+              <ul class="valentine-app__app-list">
+                <li class="valentine-app__app-item">
+                  <a class="valentine-app__app-link" target="_blank" href="https://et5kr.app.goo.gl/tWk1">
+                    <img src="https://i.citrus.ua/uploads/promo/teaser-14-february/app/app-store-ru.png" alt="">
+                  </a>
+                </li>
+                <li class="valentine-app__app-item">
+                  <a class="valentine-app__app-link" target="_blank" href="https://et5kr.app.goo.gl/w5Rt">
+                    <img src="https://i.citrus.ua/uploads/promo/teaser-14-february/app/google-play-ru.png" alt="">
+                  </a>
+                </li>
+              </ul>
+
+              <form data-modal-number="1" data-user-track="true" class="valentine-app__form">
+                <p class="valentine-app__form-title">или получи ссылку на скачивание</p>
+
+                <div class="valentine-app__form-container">
+                  <div class="valentine-app__field">
+                    <input type="tel"
+                           name="phone"
+                           required="required"
+                           placeholder="+380"
+                           maxlength="17"
+                           autocomplete="off"
+                           pattern="\+380\s\d{2}\s\d{3}\s\d{2}\s\d{2}"
+                           class="valentine-app__input"
+                           title="Формат: +380 XX XXX XX XX"
+                    >
+                  </div>
+                  <button class="valentine-app__submit">Отправить</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="valentine-app__image">
+              <img class="valentine-app_image-preview" src="https://i.citrus.ua/uploads/promo/march-8/app/phone_app.png" alt="">
+            </div>
+          </div>
+        </section>
+
+        <section id="footerSeo" class="valentine-day__footer valentine-footer">
+          <div class="valentine-footer__list">
+            <div class="list-col">
+              <div class="col__item">
+                <h2 class="item__title">Подарки на 8 марта – как удивить девушку, жену или маму?</h2>
+                <p class="item__text">«Женский» день в Украине – событие важное и приятное для каждой представительницы прекрасного пола. Изначально день 8 марта считался поводом заявить о солидарности и эмансипации женщин. Но со временем у этого праздника появился новый смысл. Сегодня это возможность порадовать близких, вручить ценный подарок маме, девушке или подруге.</p>
+                <p class="item__text">Подарок на 8 марта должен быть особенным. Этот день традиционно совпадает с наступлением весны, и все женщины рады весенним презентам: яркому букету, коробке конфет. Но это слишком просто и банально – куда лучше порадовать любимых женщин стильным гаджетом! «Цитрус» собрал лучшие подарки на одной странице:</p>
+                <ul class="item__list">
+                  <li>смартфоны;</li>
+                  <li>планшеты и ноутбуки;</li>
+                  <li>смарт-часы и фитнес-трекеры;</li>
+                  <li>бьюти-гаджеты;</li>
+                  <li>колонки и наушники;</li>
+                  <li>стильные рюкзаки;</li>
+                  <li>«умная» техника для дома.</li>
+                </ul>
+                <p class="item__text">Продвинутые гаджеты подходят для женщин всех возрастов. Оригинальный подарок вызовет настоящий восторг у дамы сердца - ведь новинки техники делают жизнь комфортнее и проще. «Цитрус» в это день проводит грандиозную распродажу – и это ваш шанс купить подарок на 8 марта с отличной скидкой!</p>
+              </div>
+            </div>
+            <div class="list-col">
+              <div class="col__item">
+                <h2 class="item__title">Лучший подарок для мамы или бабушки – умная техника для дома</h2>
+                <p class="item__text">Мама - главный человек в жизни каждого человека, и поздравить ее нужно в первую очередь. Цена подарка на 8 марта может быть невысокой, но он должен полностью отражать нежные и теплые чувства. «Цитрус» предлагает огромный выбор практичных подарков для самых близких:</p>
+                <ul class="item__list">
+                  <li>Роботы-уборщики Xiaomi, Philips, Samsung и др.</li>
+                  <li>Smart-телевизоры с диагональю от 40 дюймов и 4K разрешением;</li>
+                  <li>Техника для здоровья –портативный кардиомонитор, электронные зубные щетки;</li>
+                  <li>Товары для умной кухни – электронный термометр, кухонные весы, чашки и чайники.</li>
+                </ul>
+                <p class="item__text">Практичная техника снимет с женских плеч часть бытовых хлопот, поможет маме или любимой женщине больше времени посвящать себе.</p>
+              </div>
+              <div class="col__item">
+                <h2>Что подарить девушке или жене?</h2>
+                <p class="item__text">Подарок для любимой – важная часть «весеннего» праздника. Он должен быть креативным, стильным и при этом ярким, под стать владелице. А еще – отображать ее вкусы и пристрастия, которые изучил мужчина.</p>
+                <p class="item__text">Многие девушки мечтают получить на 8 марта мощный смартфон, продвинутый ноутбук или беспроводные наушники. Выбирайте универсальные и полезные гаджеты:</p>
+                <ul class="item__list">
+                  <li>техника Apple – iPhone і iPad;</li>
+                  <li>флагманские смартфоны Meizu, Xiaomi или Huawei;</li>
+                  <li>Smart Watch от известных брендов – Samsung Galaxy, Amazfit Bip;</li>
+                  <li>beauty-техника для ухода за лицом и телом;</li>
+                  <li>Bluetooth-наушники и колонки;</li>
+                  <li>сенсорные перчатки, портативные батареи и другие аксессуары.</li>
+                </ul>
+                <p class="item__text">Особой популярностью у современных девушек пользуются «умные» девайсы для косметологических процедур. Это вакуумные очистители лица, массажные ролеры, девайсы с вибромассажем и мини-щетки. Они созданы для простого и удобного ухода за кожей.</p>
+                <p class="item__text">Спортивной леди подойдут фитнес-браслеты или умные часы. Они могут считать потраченные калории, пройденные шаги и отображать множество показателей здоровья. Полезный гаджет станет отличным сюрпризом и финальным штрихом приятного дня.</p>
+              </div>
+            </div>
+            <div class="list-col">
+              <div class="col__item">
+                <h2 class="item__title">Прикольный подарок на 8 марта для дочери, сестры или подруги</h2>
+                <p class="item__text">В «женский» день сюрпризов ждут все представительницы прекрасного пола – в том числе, дочка или любимая сестра. Это отличная возможность проявить заботу, напомнить о своей любви каждой близкой женщине. Угодить дочери помогут стильные и молодежные девайсы:</p>
+                <ul class="item__list">
+                  <li>компактный ультрабук или новый смартфон для селфи;</li>
+                  <li>яркий рюкзак для ноутбука;</li>
+                  <li>портативная акустика – переносная колонка с необычным дизайном;</li>
+                  <li>флешка, объектив для смартфона или другой смарт-аксессуар.</li>
+                </ul>
+                <p class="item__text">Эти девайсы помогают выделиться из толпы, ощущать себя «на волне» последних модных тенденций. С портативной акустикой можно устроить веселую вечеринку, управляя треками со смартфона. А продвинутый телефон с камерой от 12,0 Мп буквально создан для Instagram - он позволит делать классные снимки, общаться с друзьями и всегда оставаться на связи.</p>
+                <p class="item__text">Активным и спортивным подойдет модный электротранспорт –моноколесо, гироборд или гироскутер. Персональный транспорт - лучший подарок для драйвовых и интересных прогулок.</p>
+              </div>
+              <div class="col__item">
+                <h2 class="item__title">Лучшие акции к 8 марта– в «Цитрусе»!</h2>
+                <p class="item__text">Интернет – магазин «Цитрус» собрал все стильные гаджеты на одной странице, для максимально удобного выбора. Вас ждут сниженные цены на самые актуальные и полезные новинки техники!</p>
+                <p class="item__text">Для клиентов существует бесплатная и курьерская доставка по городу. "Цитрус” предоставляет возможность оформить рассрочку с фиксированной оплатой.</p>
+                <p class="item__text">Возможна доставка по Украине с помощью почтовых сервисов: Запорожье, Днепропетровск, Харьков, Одесса, Полтава, Черкассы, Кривой Рог, Винница, Киев и другие города.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="footerFaq" class="valentine__faq valentine-faq">
+          <div class="valentine-faq__wrapper">
+            <h2 class="valentine-faq__title">Часто задаваемые вопросы
+            </h2>
+            <ul aria-label="Accordion control" class="valentine-faq__items" data-bui-component="Accordion" itemscope="" itemtype="https://schema.org/FAQPage">
+
+              <li class="valentine-faq__item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+                <h3 class="valentine-faq__question" itemprop="name">Что такое 8 марта?
+                </h3>
+                <div class="valentine-faq__answer" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                  <div itemprop="text">
+                    <p class="valentine-faq__answer-text">8 марта -  это «Женский» международный праздник, событие важное и приятное для каждой представительницы прекрасного пола. Изначально день 8 марта считался поводом заявить о солидарности и эмансипации женщин. Но со временем у этого праздника появился новый смысл. Сегодня это возможность порадовать близких, вручить ценный подарок маме, девушке или подруге.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="valentine-faq__item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+                <h3 class="valentine-faq__question" itemprop="name">Что дарить на 8 марта?
+                </h3>
+                <div class="valentine-faq__answer" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                  <div itemprop="text">
+                    <p class="valentine-faq__answer-text">Подарок на 8 марта должен быть особенным. Этот день традиционно совпадает с наступлением весны, и все женщины рады весенним презентам: яркому букету, коробке конфет. Но это слишком просто и банально – куда лучше порадовать любимых женщин стильным гаджетом! </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="valentine-faq__item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+                <h3 class="valentine-faq__question" itemprop="name">Какие модели смартфонов и другой техники можно купить с большой скидкой в Цитрусе?
+                </h3>
+                <div class="valentine-faq__answer" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                  <div itemprop="text">
+                    <ul class="valentine-faq__answer-items">
+                      <li class="valentine-faq__answer-item">📱 Смартфоны - iPhone 11 Pro Max, iPhone XR, Xiaomi Redmi Note 7 и Redmi Note 8 и многие другие.</li>
+                      <li class="valentine-faq__answer-item">📋 Планшеты - iPad 10.2", Lenovo Tab M10 и Samsung Galaxy Tab A 10.5" и многие другие.</li>
+                      <li class="valentine-faq__answer-item">💻 Ноутбуки - Apple MacBook Air 2019, Acer VivoBook, Lenovo IdeaPad 330, Asus TUF Gaming и другие.</li>
+                      <li class="valentine-faq__answer-item">🎧 Наушники - Apple AirPods, AIR Music Go Play, JBL E25BT, Sony Extra Bass.</li>
+                      <li class="valentine-faq__answer-item">🎵 Портативные колонки - JBL XTREME 2, Air Music Flip, Divoom Voombox-Power, и Tivoo-Max и т.д.</li>
+                      <li class="valentine-faq__answer-item">⌚ Smart Watch - Apple Watch Series 4, Samsung Galaxy Watch, GOGPS K15 и другие.</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="valentine-faq__item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+                <h3 class="valentine-faq__question" itemprop="name">Почему подарок на 8 марта нужно выбрать в Цитрус?
+                </h3>
+                <div class="valentine-faq__answer" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                  <div itemprop="text">
+                    <p class="valentine-faq__answer-text">Интернет – магазин «Цитрус» собрал все стильные гаджеты на одной странице, для максимально удобного выбора. Вас ждут сниженные цены на самые актуальные и полезные новинки техники!
+                      Для клиентов существует бесплатная и курьерская доставка по городу. "Цитрус” предоставляет возможность оформить кредит с фиксированной ежемесячной оплатой.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </section>
+      </div>
+
+<script>
+      (function() {
+
+        let brands = [
+          {
+            image: 'https://i.citrus.ua/uploads/promo/teaser-14-february/brands/apple.png',
+            url: '/brands/apple'
+          },
+          {
+            image: 'https://i.citrus.ua/uploads/promo/teaser-14-february/brands/samsung.png',
+            url: '/brands/samsung'
+          },
+          {
+            image: 'https://i.citrus.ua/uploads/brands_icons/realme_logo.svg',
+            url: '/brands/realme'
+          },
+          {
+            image: 'https://i.citrus.ua/uploads/promo/teaser-14-february/brands/Xiaomi.png',
+            url: '/brands/xiaomi'
+          },
+          {
+            image: 'https://i.citrus.ua/uploads/promo/teaser-14-february/brands/huavei_1.png',
+            url: '/brands/huawei'
+          },
+          {
+            image: 'https://i.citrus.ua/uploads/promo/teaser-14-february/brands/honor.png',
+            url: '/brands/honor'
+          },
+          {
+            image: 'https://i.citrus.ua/uploads/promo/teaser-14-february/brands/sony.png',
+            url: '/brands/sony'
+          },
+          {
+            image: 'https://i.citrus.ua/uploads/promo/teaser-14-february/brands/jbl.png',
+            url: '/brands/jbl'
+          },
+          {
+            image: 'https://i.citrus.ua/uploads/promo/teaser-14-february/brands/air.png',
+            url: '/brands/air-music'
+          },
+          {
+            image: 'https://i.citrus.ua/uploads/promo/teaser-14-february/brands/one%20plus.png',
+            url: '/brands/oneplus'
+          },
+          {
+            image: 'https://i.citrus.ua/uploads/promo/teaser-14-february/brands/asus.png',
+            url: '/brands/asus'
+          },
+          {
+            image: 'https://i.citrus.ua/uploads/promo/teaser-14-february/brands/likebike.png',
+            url: '/brands/likebike'
+          },
+          {
+            image: 'https://i.citrus.ua/uploads/promo/teaser-14-february/brands/lenovo.png',
+            url: '/brands/lenovo'
+          },
+          {
+            image: 'https://i.citrus.ua/uploads/promo/teaser-14-february/brands/acer.png',
+            url: '/brands/acer'
+          },
+          {
+            image: 'https://i.citrus.ua/uploads/promo/teaser-14-february/brands/gopro.png',
+            url: '/brands/gopro'
+          },
+          {
+            image: 'https://i.citrus.ua/uploads/promo/teaser-14-february/brands/marshall.png',
+            url: '/brands/marshall'
+          },
+          {
+            image: 'https://i.citrus.ua/uploads/promo/teaser-14-february/brands/hp.png',
+            url: '/brands/hp'
+          },
+          {
+            image: 'https://i.citrus.ua/uploads/promo/teaser-14-february/brands/divoom.png',
+            url: '/brands/divoom'
+          },
+          {
+            image: 'https://i.citrus.ua/uploads/promo/teaser-14-february/brands/enrgea.png',
+            url: '/brands/energea'
+          },
+          {
+            image: 'https://i.citrus.ua/uploads/promo/march-8/brands/dyson.png',
+            url: '/brands/dyson'
+          },
+          {
+            image: 'https://i.citrus.ua/uploads/promo/march-8/brands/beurer.png',
+            url: '/brands/beurer'
+          },
+          {
+            image: 'https://i.citrus.ua/uploads/promo/march-8/brands/roborock.png',
+            url: '/brands/roborock'
+          },
+          {
+            image: 'https://i.citrus.ua/uploads/promo/march-8/brands/amazfit.png',
+            url: '/brands/amazfit'
+          },
+          {
+            image: 'https://i.citrus.ua/uploads/promo/march-8/brands/beats.png',
+            url: '/brands/beats'
+          },
+        ];
+
+        let categoriesRU = [
+          {
+            name: "Смартфоны",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-smartphones.png",
+            url: "/smartfony/"
+          },
+          {
+            name: "Apple",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-apple.png",
+            url: "/brands/apple/"
+          },
+          {
+            name: "TV",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-tv.png",
+            url: "/televizory/"
+          },
+          {
+            name: "Фитнес-трекеры",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-fitness.png",
+            url: "/fitnes-trekery-160/"
+          },
+          {
+            name: "Наушники",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-headphones.png",
+            url: "/naushniki/"
+          },
+          {
+            name: "PlayStation",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-playstation.png",
+            url: "/igrovye-pristavki/brand-sony/"
+          },
+          {
+            name: "Игрушки",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-toys.png",
+            url: "/citrus-detyam/"
+          },
+          {
+            name: "Акустика",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-acoustics.png",
+            url: "/akustika/"
+          },
+          {
+            name: "Ноутбуки",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-notebooks.png",
+            url: "/noutbuki-i-ultrabuki/"
+          },
+          {
+            name: "Планшеты",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-tablets.png",
+            url: "/planshety/"
+          },
+          {
+            name: "Смарт-часы",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-smartwatches.png",
+            url: "/smart-chasy/"
+          },
+          {
+            name: "Роботы-пылесосы",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-vacuum-cleaners.png",
+            url: "/roboty-uborshhiki/"
+          },
+          {
+            name: "Смарт-весы",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-weights.png",
+            url: "/smart-vesy-163/"
+          },
+          {
+            name: "Beauty & relax",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-beauty.png",
+            url: "/gadzhety-dlya-fitnesa-i-zdorovya/"
+          },
+          {
+            name: "Эко-товары",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-eco.png",
+            url: "/eco-goods/"
+          },
+          {
+            name: "Умный дом",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-smarthouse.png",
+            url: "/tovary-dlya-doma-i-auto/"
+          },
+          {
+            name: "Фото и видео",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-cameras.png",
+            url: "/televizory-photo-video/"
+          },
+          {
+            name: "Видеорегистраторы",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-videoregistrators.png",
+            url: "/videoregistratory/"
+          },
+          {
+            name: "Дроны",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-quadrocopters.png",
+            url: "/kvadrokoptery-i-drony/"
+          },
+          {
+            name: "Рюкзаки",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-backpacks.png",
+            url: "/backpacks/"
+          },
+          {
+            name: "Цитрус Тревел",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories__travel.png",
+            url: "/travel/catalog/99afd0b2-6b96-76b2-48ec-3c6c3e4d2efc?show-type=show-more-recommended"
+          },
+          {
+            name: "Game Zone",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-gamezone.png",
+            url: "/razvlecheniya-i-sport/"
+          },
+          {
+            name: "Электротранспорт",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-trans.png",
+            url: "/personalnyy-transport/"
+          },
+          {
+            name: "Цитрус Ивенти",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories__events.png",
+            url: "/showtype/16_march/"
+          },
+          {
+            name: "Экшн-камеры",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-actioncamers.png",
+            url: "/ekshn-kamery/"
+          }
+        ];
+
+        let categoriesUA = [
+          {
+            name: "Смартфони",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-smartphones.png",
+            url: "/smartfony/"
+          },
+          {
+            name: "Apple",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-apple.png",
+            url: "/brands/apple/"
+          },
+          {
+            name: "TV",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-tv.png",
+            url: "/televizory/"
+          },
+          {
+            name: "Фітнес-трекери",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-fitness.png",
+            url: "/fitnes-trekery-160/"
+          },
+          {
+            name: "Навушники",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-headphones.png",
+            url: "/naushniki/"
+          },
+          {
+            name: "PlayStation",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-playstation.png",
+            url: "/igrovye-pristavki/brand-sony/"
+          },
+          {
+            name: "Іграшки",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-toys.png",
+            url: "/citrus-detyam/"
+          },
+          {
+            name: "Акустика",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-acoustics.png",
+            url: "/akustika/"
+          },
+          {
+            name: "Ноутбуки",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-notebooks.png",
+            url: "/noutbuki-i-ultrabuki/"
+          },
+          {
+            name: "Планшети",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-tablets.png",
+            url: "/planshety/"
+          },
+          {
+            name: "Смарт-годинники",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-smartwatches.png",
+            url: "/smart-chasy/"
+          },
+          {
+            name: "Роботи-пилососи",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-vacuum-cleaners.png",
+            url: "/roboty-uborshhiki/"
+          },
+          {
+            name: "Смарт-ваги",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-weights.png",
+            url: "/smart-vesy-163/"
+          },
+          {
+            name: "Beauty & relax",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-beauty.png",
+            url: "/gadzhety-dlya-fitnesa-i-zdorovya/"
+          },
+          {
+            name: "Еко-товари",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-eco.png",
+            url: "/eco-goods/"
+          },
+          {
+            name: "Розумний дім",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-smarthouse.png",
+            url: "/tovary-dlya-doma-i-auto/"
+          },
+          {
+            name: "Фото та відео",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-cameras.png",
+            url: "/televizory-photo-video/"
+          },
+          {
+            name: "Відеореєстратори",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-videoregistrators.png",
+            url: "/videoregistratory/"
+          },
+          {
+            name: "Дрони",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-quadrocopters.png",
+            url: "/kvadrokoptery-i-drony/"
+          },
+          {
+            name: "Рюкзаки",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-backpacks.png",
+            url: "/backpacks/"
+          },
+          {
+            name: "Цитрус Тревел",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories__travel.png",
+            url: "/travel/catalog/99afd0b2-6b96-76b2-48ec-3c6c3e4d2efc?show-type=show-more-recommended"
+          },
+          {
+            name: "Game Zone",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-gamezone.png",
+            url: "/razvlecheniya-i-sport/"
+          },
+          {
+            name: "Електротранспорт",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-trans.png",
+            url: "/personalnyy-transport/"
+          },
+          {
+            name: "Цитрус Івенти",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories__events.png",
+            url: "/showtype/16_march/"
+          },
+          {
+            name: "Екшн-камери",
+            image: "https://i.citrus.ua/uploads/promo/march-8/categories/categories-actioncamers.png",
+            url: "/ekshn-kamery/"
+          }
+        ];
+
+        function getDisplay(number) {
+          return (number == '0') ? 'none' : 'block';
+        }
+
+        function getOpacity(number) {
+          return (number == '0') ? '0' : '1';
+        }
+
+        function formatPrice(price) {
+          return (price || 0).toLocaleString().replace(/\D+/g, ' ');
+        }
+
+        function getProducts(element, arr) {
+          arr.forEach(function (item) {
+            element.innerHTML += `
+              <li class="march-products__item">
+                    <a href="https://www.citrus.ua${item.url}" target="_blank" class="march-products__item-wrapper">
+                      <div class="march-products__item-image">
+                        <img src="${item.preview.src}" alt="Product Image">
+                      </div>
+
+                      <p class="march-products__item-title">${item.name}</p>
+
+                      <div class="march-products__item-footer">
+                        <div class="march-products__item-discount" style="display:${getDisplay(item.prices.old)}">
+                          <span style="display:${getDisplay(item.sale.percent)}">-${item.sale.percent}%</span>
+                          <span style="display:${getDisplay(item.prices.old)}">${formatPrice(item.prices.old)}</span>
+                        </div>
+
+                        <div class="march-products__item-price">
+                          <span>${formatPrice(item.prices.price)}</span>
+                          <span>грн</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>`;
+          });
+        }
+
+        function getBrands(element, arr) {
+          arr.forEach(function (item) {
+            element.innerHTML += `
+            <li class="march-brands__brand-item">
+              <a class="brand-item__link" target="_blank" href="https://www.citrus.ua${item.url}">
+                <img class="brand-item__image" src="${item.image}" alt="">
+              </a>
+            </li>`;
+          });
+        }
+
+        function onShowMoreBrands() {
+          document.querySelector('.march-brands__list').classList.add('opened');
+          [].map.call(document.querySelectorAll('.march-brands__brand-item'), item => item.style.display = 'flex');
+          document.querySelector('.march-brands__show-more').remove();
+        }
+
+        function getCategories(element, arr) {
+          arr.forEach(function (item) {
+            if(item.name === "Цитрус Ивенти") {
+              element.innerHTML += `
+            <li class="march-categories__categories-item">
+              <a target="_blank" href="https://event.citrus.ua/ru/showtype/16_march/?_ga=2.117751689.1678156671.1582529336-577928158.1580914115">
+                <img class="categories-item__image" src="${item.image}" alt="Category Image">
+              </a>
+              <a target="_blank" href="https://event.citrus.ua/ru/showtype/16_march/?_ga=2.117751689.1678156671.1582529336-577928158.1580914115">
+                <p class="categories-item__name">${item.name}</p>
+              </a>
+            </li>`;
+            } else {
+              element.innerHTML += `
+            <li class="march-categories__categories-item">
+              <a target="_blank" href="https://www.citrus.ua${item.url}">
+                <img class="categories-item__image" src="${item.image}" alt="Category Image">
+              </a>
+              <a target="_blank" href="https://www.citrus.ua${item.url}">
+                <p class="categories-item__name">${item.name}</p>
+              </a>
+            </li>`;
+            }
+          });
+        }
+
+        function onShowMoreCategories() {
+          document.querySelector('.march-categories__list').classList.add('opened');
+          [].map.call(document.querySelectorAll('.march-categories__categories-item'), item => item.style.display = 'flex');
+          document.querySelector('.march-categories__show-more').remove();
+        }
+
+        function selectChange() {
+          const link = this.value;
+
+          const cardLink = document.getElementById('cardLink');
+          cardLink.href = link;
+        }
+
+        function initPhoneMask(el) {
+          let selectionStart = 9;
+          let selectionEnd = 9;
+
+          function initMask() {
+            let x = el.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,1})(\d{0,1})(\d{0,1})(\d{0,1})(\d{0,1})(\d{0,1})(\d{0,1})(\d{0,1})(\d{0,1})/);
+            el.value = '+380' + (x[2] ? ' ' + x[2] + x[3] : '') +
+              (x[4] ? ' ' + x[4] + x[5] + x[6] : '') +
+              (x[7] ? ' ' + x[7] + x[8] : '') +
+              (x[9] ? ' ' + x[9] + x[10] : '');
+
+            el.setSelectionRange(selectionStart, selectionStart);
+          }
+
+          function onKeyDown() {
+            selectionStart = el.selectionStart;
+            selectionEnd = el.selectionEnd;
+
+            if (!event.code) {
+              selectionStart = 17;
+              return;
+            }
+
+            if (!event.key.match(/\d/) && event.code !== 'Backspace' && event.code !== 'Delete' && event.code !== 'ArrowLeft' && event.code !== 'ArrowRight'
+              && event.code !== 'Enter' && event.code !== 'ControlLeft' && event.code !== 'ControlRight' && event.code !== 'KeyV' && event.code !== 'Tab'
+              && event.code !== 'NumpadEnter') {
+              event.preventDefault();
+              return;
+            }
+
+            if (!event.key.match(/\d/)) {
+              if (event.code === 'Backspace' || event.code === 'Delete') {
+                if (selectionStart !== selectionEnd && selectionEnd >= 6) {
+
+                  if (selectionStart < 4) {
+                    selectionStart = 4;
+                  }
+
+                  let arr = el.value.split('');
+                  arr.splice(selectionStart, selectionEnd - selectionStart);
+                  el.value = arr.join('');
+
+                  initMask();
+                  event.preventDefault();
+                  return;
+                }
+              }
+
+              if (event.code === 'Backspace') {
+                if (selectionStart <= 5) {
+                  el.setSelectionRange(4, 4);
+                  event.preventDefault();
+                  return;
+                }
+
+                let arr = el.value.split('');
+                selectionStart -= 1;
+
+                while (el.value[selectionStart] === undefined || !el.value[selectionStart].match(/\d/)) {
+                  selectionStart -= 1;
+                }
+
+                arr.splice(selectionStart, 1);
+                el.value = arr.join('');
+
+                initMask();
+                event.preventDefault();
+                return;
+              }
+              if (event.code === 'Delete') {
+                if (selectionStart === el.value.length) {
+                  event.preventDefault();
+                  return;
+                }
+
+                if (selectionStart <= 3) {
+                  el.setSelectionRange(4, 4);
+                  event.preventDefault();
+                  return;
+                }
+
+                let arr = el.value.split('');
+
+                while (el.value[selectionStart] === undefined || !el.value[selectionStart].match(/\d/)) {
+                  selectionStart += 1;
+                }
+
+                arr.splice(selectionStart, 1);
+                el.value = arr.join('');
+
+                initMask();
+                event.preventDefault();
+                return;
+              }
+              if (event.code === 'Enter') {
+                return;
+              }
+            }
+
+            if (event.key.match(/\d/)) {
+              if (selectionStart !== selectionEnd && selectionEnd >= 6) {
+
+                if (selectionStart < 4) {
+                  selectionStart = 5;
+                }
+
+                let arr = el.value.split('');
+                arr.splice(selectionStart, selectionEnd - selectionStart, event.key);
+                el.value = arr.join('');
+
+                selectionStart++;
+                initMask();
+                event.preventDefault();
+                return;
+              }
+
+              if (el.value.length === 17) {
+                event.preventDefault();
+                return;
+              }
+
+              if ((selectionStart === 5 || selectionStart === 4) && event.key === '0') {
+                event.preventDefault();
+                return;
+              }
+
+              if (selectionStart <= 3 && el.value.length >= 4) {
+                el.setSelectionRange(4, 4);
+                event.preventDefault();
+                return;
+              }
+
+              if (selectionStart === el.value.length) {
+                selectionStart = 17;
+                return;
+              }
+
+              let arr = el.value.split('');
+
+              while (!el.value[selectionStart].match(/\d/)) {
+                selectionStart += 1;
+              }
+
+              arr.splice(selectionStart, 0, event.key);
+              el.value = arr.join('');
+
+              selectionStart += 1;
+
+              initMask();
+              event.preventDefault();
+              return;
+            }
+          }
+
+          function onInput() {
+            initMask();
+          }
+
+          function onFocus() {
+            if (!el.value.startsWith('+380')) {
+              el.value = '+380';
+              setTimeout(() => el.setSelectionRange(5, 5), 1);
+            }
+          }
+
+          function onPaste() {
+            let clipboardData;
+            let pastedData;
+
+            event.stopPropagation();
+            event.preventDefault();
+
+            clipboardData = event.clipboardData || window.clipboardData;
+            pastedData = clipboardData.getData('Text');
+
+            pastedData = pastedData.replace(/\D/g, '');
+
+            if (pastedData.length >= 11 && pastedData.startsWith('380')) {
+              pastedData = pastedData.slice(3);
+            }
+
+            if (selectionStart <= 5) {
+              selectionStart = 5;
+              while (pastedData.startsWith('0') && pastedData.length !== 0) {
+                pastedData = pastedData.slice(1);
+              }
+            }
+
+            let arr = el.value.split('');
+            arr.splice(selectionStart, 0, pastedData);
+            el.value = arr.join('');
+
+            selectionStart = 17;
+            initMask();
+          }
+
+          el.addEventListener('focus', onFocus);
+          el.addEventListener('keydown', onKeyDown);
+          el.addEventListener('input', onInput);
+          el.addEventListener('paste', onPaste);
+        }
+
+        function submitForm(event) {
+          event.preventDefault();
+
+          const formNumber = +event.target.getAttribute('data-modal-number');
+          const formData = new FormData();
+
+          formData.append('phone|197', event.target.phone.value);
+          const uri = 'https://api.citrus.ua/forms/4319/answers';
+          const config = {
+            method: 'POST',
+            body: formData
+          };
+
+          fetch(uri, config);
+
+          dataLayer.push({
+            'event': '8 march',
+            'eventCategory': '8 march',
+            'eventAction': 'Form submit',
+          });
+
+          event.target.style.display = 'none';
+          document.getElementById(`successWindow-${formNumber}`).style.display = 'block'
+        }
+
+        function onToggleFAQ() {
+          let isInAnimation = Boolean(this.getAttribute('data-in-animation'));
+          if (isInAnimation) {
+            return;
+          }
+          let parentNode = this.closest('.valentine-faq__item');
+          let container = parentNode.querySelector('.valentine-faq__answer');
+          let content = parentNode.querySelector('[itemprop="text"]');
+          let contentHeight = content.offsetHeight;
+          this.setAttribute('data-in-animation', 'true');
+          if (parentNode.classList.contains('valentine-faq__item--open')) {
+            container.style.height = contentHeight + 'px';
+            setTimeout( () => {
+              container.style.height = '0';
+              parentNode.classList.remove('valentine-faq__item--open');
+              this.removeAttribute('data-in-animation');
+            }, 50);
+          } else {
+            container.style.height = contentHeight + 'px';
+            parentNode.classList.add('valentine-faq__item--open');
+            setTimeout(() => {
+              container.style.height = 'auto';
+              this.removeAttribute('data-in-animation');
+            }, 400);
+          }
+        }
+
+        function scrollToElement(event) {
+          event.preventDefault();
+
+          let elementId = event.target.getAttribute('data-scroll-to');
+          let element = document.getElementById(elementId);
+          element.scrollIntoView({block: 'start', behavior: 'smooth'});
+        }
+
+        const hits = document.getElementById('hits');
+        hits.innerHTML = '';
+
+        const showMoreHits = document.getElementById('showHits');
+        showMoreHits.addEventListener('click', function() {
+          this.style.display = 'none';
+          document.getElementById('hits-products').classList.add('march-products--show');
+        });
+
+        fetch('https://api.citrus.ua/v5/products?segmentId=6452')
+          .then(response => response.json())
+          .then(data => {
+            getProducts(hits, data.data);
+          });
+
+        let marchBrands = document.getElementById('marchBrands');
+        marchBrands.innerHTML = '';
+        getBrands(marchBrands, brands);
+
+        let cardSelect = document.getElementById('cardSelect');
+        cardSelect.addEventListener('change', selectChange);
+
+        let marchCategories = document.getElementById('marchCategories');
+        marchCategories.innerHTML = '';
+        getCategories(marchCategories, categoriesRU);
+
+        document.querySelector('.march-brands__show-more').addEventListener('click', onShowMoreBrands);
+        document.querySelector('.march-categories__show-more').addEventListener('click', onShowMoreCategories);
+
+        const phones = document.querySelectorAll('.march-8 input[type="tel"]');
+        [].forEach.call(phones, function (phone) {
+          initPhoneMask(phone);
+        });
+
+        const form = document.querySelector('.valentine-app__form');
+        form.addEventListener('submit', submitForm);
+
+        let faqButtons = document.querySelectorAll('.valentine-faq__question');
+        [].forEach.call(faqButtons, function (button) {
+          button.addEventListener('click', onToggleFAQ);
+        });
+
+        let scrollElements = document.querySelectorAll('[data-scroll-to]');
+        [].forEach.call(scrollElements, function (element) {
+          element.addEventListener('click', scrollToElement);
+        });
+
+        let isMobileApp = !Boolean(document.getElementById('header'));
+        if (isMobileApp) {
+          document.getElementById('footerApp').style.display = "none";
+          document.getElementById('footerSeo').style.display = "none";
+          document.getElementById('footerFaq').style.display = "none";
+        }
+      })();
+</script>

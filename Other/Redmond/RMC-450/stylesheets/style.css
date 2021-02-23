@@ -1,0 +1,692 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: 50px 0 50px 0;
+  overflow-x: hidden; }
+
+ul {
+  margin: 0;
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  color: transparent; }
+
+form select,
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding: 0 0 0 12px;
+  background-color: #ffffff; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3b6d9a;
+  outline: none;
+  transition: 0.3s; }
+
+button {
+  display: block;
+  background: 0 0;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  line-height: 44px;
+  transition: 0.3s;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-size: 18px; }
+
+.rmc {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto; }
+  .rmc .rmc-header {
+    background: url("https://i.citrus.ua/uploads/promo/Redmond/RMC-450/header/header-desc.png") center/100% no-repeat;
+    height: 818px; }
+  .rmc .rmc-header__content {
+    max-width: 370px;
+    width: 100%;
+    background-color: #fff;
+    margin-left: 250px;
+    padding: 40px 0 40px 0; }
+  .rmc .rmc-header__name {
+    font-size: 24px;
+    line-height: 31px;
+    color: #000;
+    margin-bottom: 8px;
+    margin-left: 24px; }
+  .rmc .rmc-header__title {
+    font-size: 24px;
+    line-height: 31px;
+    padding: 12px 24px;
+    background-color: #e50040;
+    color: #fff;
+    margin-bottom: 16px;
+    max-width: 267px;
+    width: 100%; }
+  .rmc .rmc-header__list {
+    margin-left: 24px; }
+  .rmc .rmc-header__item {
+    font-size: 18px;
+    line-height: 23px;
+    color: #000; }
+  .rmc .rmc-header__item:not(:last-child) {
+    margin-bottom: 6px; }
+  @media screen and (max-width: 1365px) {
+    .rmc .rmc-header {
+      height: 600px; }
+    .rmc .rmc-header__content {
+      max-width: 350px;
+      margin-left: 165px;
+      padding: 20px 0 20px 0; } }
+  @media screen and (max-width: 1023px) {
+    .rmc .rmc-header {
+      height: 440px; }
+    .rmc .rmc-header__content {
+      margin-left: 116px;
+      max-width: 250px; }
+    .rmc .rmc-header__name {
+      font-size: 16px;
+      line-height: 21px; }
+    .rmc .rmc-header__title {
+      font-size: 16px;
+      line-height: 21px; }
+    .rmc .rmc-header__item {
+      font-size: 14px;
+      line-height: 18px; } }
+  @media screen and (max-width: 767px) {
+    .rmc .rmc-header {
+      background: url("https://i.citrus.ua/uploads/promo/Redmond/RMC-450/header/header-mob.png") center no-repeat;
+      height: 495px; }
+    .rmc .rmc-header__content {
+      margin: 0 auto; } }
+  .rmc .rmc-functions {
+    background: url("https://i.citrus.ua/uploads/promo/Redmond/RMC-450/functions/functions-desc.jpg") top center/100% no-repeat, #000; }
+  .rmc .rmc-functions__container {
+    padding: 240px 0 100px 136px; }
+  .rmc .rmc-functions__content {
+    max-width: 650px;
+    width: 100%;
+    margin-bottom: 40px; }
+  .rmc .rmc-functions__title {
+    font-size: 32px;
+    line-height: 42px;
+    color: #fff;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em; }
+  .rmc .rmc-functions__title span {
+    color: #cba189; }
+  .rmc .rmc-functions__list {
+    display: flex;
+    flex-direction: column; }
+  .rmc .rmc-functions__item {
+    font-size: 20px;
+    line-height: 26px;
+    position: relative;
+    padding-left: 36px;
+    color: #fff; }
+  .rmc .rmc-functions__item:not(:last-child) {
+    margin-bottom: 16px; }
+  .rmc .rmc-functions__item:before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    left: 8px;
+    top: 8px;
+    background-color: #cba189;
+    border-radius: 50%; }
+  .rmc .rmc-functions__food-container {
+    margin: 0 auto;
+    padding-right: 136px; }
+  .rmc .rmc-functions__food-title {
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 16px;
+    color: #fff;
+    letter-spacing: 0.05em; }
+  .rmc .rmc-functions__food-subtitle {
+    font-size: 20px;
+    line-height: 26px;
+    color: #fff; }
+  @media screen and (max-width: 1365px) {
+    .rmc .rmc-functions__container {
+      padding: 160px 0 80px 24px; }
+    .rmc .rmc-functions__content {
+      max-width: 460px; } }
+  @media screen and (max-width: 1023px) {
+    .rmc .rmc-functions__container {
+      padding: 120px 0 60px 24px; }
+    .rmc .rmc-functions__content {
+      max-width: 330px; }
+    .rmc .rmc-functions__title {
+      font-size: 22px;
+      line-height: 29px; }
+    .rmc .rmc-functions__item {
+      font-size: 16px;
+      line-height: 21px; }
+    .rmc .rmc-functions__food-container {
+      padding-right: 24px; }
+    .rmc .rmc-functions__food-title {
+      font-size: 22px;
+      line-height: 29px; }
+    .rmc .rmc-functions__food-subtitle {
+      font-size: 16px;
+      line-height: 21px; } }
+  @media screen and (max-width: 767px) {
+    .rmc .rmc-functions {
+      background: url("https://i.citrus.ua/uploads/promo/Redmond/RMC-450/functions/functions-mob.jpg") top center no-repeat, #000; }
+    .rmc .rmc-functions__container {
+      padding: 234px 16px 40px 16px; }
+    .rmc .rmc-functions__content {
+      max-width: initial;
+      width: 100%;
+      margin: 0 auto 40px auto; }
+    .rmc .rmc-functions__title {
+      font-size: 16px;
+      line-height: 24px; }
+    .rmc .rmc-functions__item {
+      font-size: 14px;
+      line-height: 18px; }
+    .rmc .rmc-functions__item:before {
+      top: 5px; }
+    .rmc .rmc-functions__food-container {
+      padding: 0; }
+    .rmc .rmc-functions__food-title {
+      font-size: 16px;
+      line-height: 24px; }
+    .rmc .rmc-functions__food-subtitle {
+      font-size: 14px;
+      line-height: 21px; } }
+  .rmc .rmc-programms {
+    background: #000; }
+  .rmc .rmc-programms__content {
+    padding-top: 60px;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto; }
+  .rmc .rmc-programms__title {
+    font-size: 32px;
+    line-height: 42px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 16px; }
+  .rmc .rmc-programms__subtitle {
+    font-size: 20px;
+    line-height: 26px;
+    color: #fff;
+    margin-bottom: 16px; }
+  .rmc .rmc-programms__text {
+    font-size: 20px;
+    line-height: 26px;
+    color: #fff;
+    position: relative;
+    padding-left: 56px; }
+  .rmc .rmc-programms__text span {
+    color: #cba189; }
+  .rmc .rmc-programms__text:before {
+    content: "";
+    position: absolute;
+    background: url("https://i.citrus.ua/uploads/promo/Redmond/RMC-450/programms/programms-icon.svg") center/100% no-repeat;
+    width: 46px;
+    height: 46px;
+    left: 0;
+    top: 2px; }
+  .rmc .rmc-programms__image {
+    display: flex;
+    margin: 0 auto; }
+  @media screen and (max-width: 1365px) {
+    .rmc .rmc-programms__content {
+      padding: 40px 24px 0 24px; }
+    .rmc .rmc-programms__title {
+      font-size: 32px;
+      line-height: 42px; }
+    .rmc .rmc-programms__subtitle {
+      font-size: 20px;
+      line-height: 26px; }
+    .rmc .rmc-programms__text {
+      font-size: 20px;
+      line-height: 26px; }
+    .rmc .rmc-programms__image {
+      padding: 0 24px; } }
+  @media screen and (max-width: 1023px) {
+    .rmc .rmc-programms__title {
+      font-size: 22px;
+      line-height: 29px; }
+    .rmc .rmc-programms__subtitle {
+      font-size: 16px;
+      line-height: 21px; }
+    .rmc .rmc-programms__text {
+      font-size: 16px;
+      line-height: 21px; }
+    .rmc .rmc-programms__image {
+      padding: 0; } }
+  @media screen and (max-width: 767px) {
+    .rmc .rmc-programms__content {
+      padding: 40px 16px 20px 16px; }
+    .rmc .rmc-programms__title {
+      font-size: 16px;
+      line-height: 24px; }
+    .rmc .rmc-programms__subtitle {
+      font-size: 14px;
+      line-height: 21px; }
+    .rmc .rmc-programms__text {
+      font-size: 14px;
+      line-height: 21px; } }
+  .rmc .rmc-like {
+    background: url("https://i.citrus.ua/uploads/promo/Redmond/RMC-450/like/like-bg.jpg") center top no-repeat; }
+  .rmc .rmc-like__container {
+    display: flex;
+    position: relative; }
+  .rmc .rmc-like__content {
+    padding-top: 230px;
+    padding-bottom: 225px;
+    max-width: 1120px;
+    width: 100%; }
+  .rmc .rmc-like__title {
+    font-size: 32px;
+    line-height: 42px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #fff;
+    padding-left: 136px;
+    margin-bottom: 36px; }
+  .rmc .rmc-like__first-container,
+  .rmc .rmc-like__second-container {
+    max-width: 1120px;
+    width: 100%;
+    padding-left: 136px; }
+  .rmc .rmc-like__first-container {
+    background: linear-gradient(90deg, #d1a186 0%, rgba(209, 161, 134, 0) 109.97%); }
+  .rmc .rmc-like__second-container {
+    background: linear-gradient(90deg, #282828 0%, rgba(40, 40, 40, 0) 109.97%); }
+  .rmc .rmc-like__first-subtitle {
+    font-size: 20px;
+    line-height: 26px;
+    color: #fff;
+    max-width: 550px;
+    width: 100%;
+    padding: 16px 0; }
+  .rmc .rmc-like__second-subtitle {
+    font-size: 20px;
+    line-height: 26px;
+    color: #fff;
+    max-width: 550px;
+    width: 100%;
+    padding: 16px 0; }
+  .rmc .rmc-like__image {
+    position: absolute;
+    right: 0%; }
+  .rmc .rmc-like__image-mob {
+    display: none; }
+  @media screen and (max-width: 1365px) {
+    .rmc .rmc-like__content {
+      padding-top: 115px;
+      padding-bottom: 130px; }
+    .rmc .rmc-like__title,
+    .rmc .rmc-like__first-container,
+    .rmc .rmc-like__second-container {
+      padding-left: 24px; }
+    .rmc .rmc-like__image {
+      max-width: 420px; } }
+  @media screen and (max-width: 1023px) {
+    .rmc .rmc-like__content {
+      padding-top: 56px;
+      padding-bottom: 56px; }
+    .rmc .rmc-like__title {
+      font-size: 22px;
+      line-height: 29px;
+      margin-bottom: 24px; }
+    .rmc .rmc-like__first-subtitle,
+    .rmc .rmc-like__second-subtitle {
+      font-size: 16px;
+      line-height: 21px;
+      max-width: 340px; }
+    .rmc .rmc-like__image {
+      max-width: 300px; } }
+  @media screen and (max-width: 767px) {
+    .rmc .rmc-like {
+      background: url("https://i.citrus.ua/uploads/promo/Redmond/RMC-450/like/like-image-mob.png") bottom center no-repeat, url("https://i.citrus.ua/uploads/promo/Redmond/RMC-450/like/like-bg.jpg") bottom -150px center no-repeat, #000;
+      padding-bottom: 331px; }
+    .rmc .rmc-like__container {
+      flex-direction: column; }
+    .rmc .rmc-like__content {
+      padding-top: 60px;
+      padding-bottom: 12px; }
+    .rmc .rmc-like__title,
+    .rmc .rmc-like__first-container,
+    .rmc .rmc-like__second-container {
+      padding: 0 16px; }
+    .rmc .rmc-like__title {
+      font-size: 16px;
+      line-height: 24px; }
+    .rmc .rmc-like__first-subtitle,
+    .rmc .rmc-like__second-subtitle {
+      font-size: 14px;
+      line-height: 21px; }
+    .rmc .rmc-like__image {
+      display: none; }
+    .rmc .rmc-like__image-mob {
+      display: flex;
+      bottom: 0; } }
+  .rmc .rmc-suvid {
+    background: #000; }
+  .rmc .rmc-suvid__container {
+    padding-top: 100px;
+    padding-bottom: 60px; }
+  .rmc .rmc-suvid__title {
+    padding-left: 136px;
+    font-size: 32px;
+    line-height: 42px;
+    color: #fff;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 36px; }
+  .rmc .rmc-suvid__title-accent {
+    color: #bf9880; }
+  .rmc .rmc-suvid__first-row {
+    display: flex;
+    align-items: center;
+    max-width: 1230px;
+    width: 100%;
+    margin-bottom: 24px; }
+  .rmc .first-row__image {
+    margin-right: 24px; }
+  .rmc .first-row__text {
+    font-size: 20px;
+    line-height: 26px;
+    color: #fff;
+    max-width: 540px;
+    width: 100%; }
+  .rmc .rmc-suvid__second-row {
+    display: flex;
+    padding-left: 136px; }
+  .rmc .second-row__left-image {
+    margin-right: 24px; }
+  .rmc .second-row__content-image {
+    margin-bottom: 24px; }
+  .rmc .second-row__content-text {
+    max-width: 760px;
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    line-height: 26px; }
+  @media screen and (max-width: 1365px) {
+    .rmc .rmc-suvid__title {
+      padding-left: 24px; }
+    .rmc .rmc-suvid__first-row {
+      padding-right: 24px; }
+    .rmc .first-row__image {
+      max-width: 482px; }
+    .rmc .rmc-suvid__second-row {
+      padding-left: 105px; }
+    .rmc .second-row__left-image {
+      max-width: 240px; }
+    .rmc .second-row__content-image {
+      max-width: 654px; }
+    .rmc .second-row__content-text {
+      padding-right: 24px; } }
+  @media screen and (max-width: 1023px) {
+    .rmc .rmc-suvid__container {
+      padding-top: 60px;
+      padding-bottom: 60px; }
+    .rmc .rmc-suvid__title {
+      font-size: 22px;
+      line-height: 29px; }
+    .rmc .first-row__image {
+      max-width: 354px; }
+    .rmc .first-row__text {
+      font-size: 16px;
+      line-height: 21px; }
+    .rmc .second-row__left-image {
+      max-width: 160px; }
+    .rmc .rmc-suvid__second-row {
+      padding-left: initial;
+      justify-content: flex-end;
+      padding-left: 80px; }
+    .rmc .second-row__content-image {
+      max-width: 504px; }
+    .rmc .second-row__content-text {
+      font-size: 16px;
+      line-height: 21px; } }
+  @media screen and (max-width: 767px) {
+    .rmc .rmc-suvid__title {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 0 16px;
+      margin-bottom: 24px; }
+    .rmc .rmc-suvid__first-row {
+      flex-direction: column;
+      padding: 0; }
+    .rmc .first-row__image {
+      margin-right: 0;
+      margin-bottom: 24px; }
+    .rmc .first-row__text {
+      padding: 0 16px;
+      max-width: initial;
+      margin-bottom: 24px;
+      font-size: 14px;
+      line-height: 21px; }
+    .rmc .rmc-suvid__second-row {
+      flex-direction: column;
+      padding: 0;
+      max-width: initial;
+      align-items: center; }
+    .rmc .second-row__content-image {
+      display: none; }
+    .rmc .second-row__content-text {
+      padding: 0 16px;
+      font-size: 14px;
+      line-height: 21px; } }
+  .rmc .rmc-time {
+    background: #000; }
+  .rmc .rmc-time__container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+  .rmc .rmc-time__content {
+    max-width: 540px;
+    width: 100%;
+    padding: 135px 0 135px 0;
+    margin-right: 24px; }
+  .rmc .rmc-time__text:nth-child(2) {
+    margin-bottom: 16px; }
+  .rmc .rmc-time__title {
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 16px;
+    color: #fff;
+    letter-spacing: 0.05em; }
+  .rmc .rmc-time__text {
+    font-size: 20px;
+    line-height: 26px;
+    color: #fff; }
+  .rmc .rmc-time__text span {
+    color: #dcb199; }
+  @media screen and (max-width: 1365px) {
+    .rmc .rmc-time__container {
+      justify-content: center; }
+    .rmc .rmc-time__content {
+      padding: 65px 0 65px 24px; }
+    .rmc .rmc-time__image {
+      max-width: 490px;
+      padding: 20px 0; } }
+  @media screen and (max-width: 1023px) {
+    .rmc .rmc-time__content {
+      padding: 28px 0 28px 24px; }
+    .rmc .rmc-time__content:nth-child(2) {
+      margin-bottom: 12px; }
+    .rmc .rmc-time__title {
+      font-size: 22px;
+      line-height: 29px;
+      margin-bottom: 12px; }
+    .rmc .rmc-time__text {
+      font-size: 16px;
+      line-height: 21px; }
+    .rmc .rmc-time__image {
+      max-width: 360px; } }
+  @media screen and (max-width: 767px) {
+    .rmc .rmc-time__container {
+      flex-direction: column;
+      justify-content: center; }
+    .rmc .rmc-time__content {
+      padding: 20px 16px 0 16px;
+      max-width: initial;
+      margin-right: 0; }
+    .rmc .rmc-time__title {
+      font-size: 16px;
+      line-height: 24px; }
+    .rmc .rmc-time__text {
+      font-size: 14px;
+      line-height: 21px; }
+    .rmc .rmc-time__image {
+      max-width: 100%; } }
+  .rmc .rmc-convenience {
+    background: #000; }
+  .rmc .rmc-convenience__container {
+    padding: 100px 0 100px 0; }
+  .rmc .rmc-convenience__title {
+    font-size: 32px;
+    line-height: 42px;
+    color: #fff;
+    margin-bottom: 36px;
+    padding-left: 136px;
+    letter-spacing: 0.05em; }
+  .rmc .rmc-convenience__title span {
+    color: #dcb199; }
+  .rmc .rmc-convenience__image-mob {
+    display: none; }
+  .rmc .rmc-convenience__list {
+    max-width: 1040px;
+    width: 100%;
+    padding-left: 136px; }
+  .rmc .rmc-convenience__item {
+    color: #fff;
+    font-size: 20px;
+    line-height: 26px;
+    position: relative;
+    padding-left: 62px; }
+  .rmc .rmc-convenience__item:nth-child(1) {
+    margin-bottom: 24px; }
+  .rmc .rmc-convenience__item:before {
+    content: '';
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    left: 0;
+    top: 0; }
+  .rmc .rmc-convenience__item:nth-child(1):before {
+    background: url("https://i.citrus.ua/uploads/promo/Redmond/RMC-450/convenience/convenience-icon-1.svg") center/100% no-repeat; }
+  .rmc .rmc-convenience__item:nth-child(2):before {
+    background: url("https://i.citrus.ua/uploads/promo/Redmond/RMC-450/convenience/convenience-icon-2.svg") center/100% no-repeat; }
+  .rmc .rmc-convenience__item span {
+    color: #dcb199; }
+  @media screen and (max-width: 1365px) {
+    .rmc .rmc-convenience__container {
+      padding: 80px 0 80px 0; }
+    .rmc .rmc-convenience__title {
+      padding-left: 24px;
+      margin-bottom: 24px; }
+    .rmc .rmc-convenience__list {
+      padding: 0 24px; } }
+  @media screen and (max-width: 1023px) {
+    .rmc .rmc-convenience__container {
+      padding: 60px 0 60px 0; }
+    .rmc .rmc-convenience__title {
+      font-size: 22px;
+      line-height: 29px; }
+    .rmc .rmc-convenience__item {
+      font-size: 16px;
+      line-height: 21px; }
+    .rmc .rmc-convenience__item:nth-child(1) {
+      margin-bottom: 18px; } }
+  @media screen and (max-width: 767px) {
+    .rmc .rmc-convenience__title {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 0 16px; }
+    .rmc .rmc-convenience__image {
+      display: none; }
+    .rmc .rmc-convenience__image-mob {
+      display: flex; }
+    .rmc .rmc-convenience__list {
+      padding: 0 16px; }
+    .rmc .rmc-convenience__item {
+      font-size: 14px;
+      line-height: 21px;
+      padding-left: 48px; }
+    .rmc .rmc-convenience__item:before {
+      width: 36px;
+      height: 36px; } }
+  .rmc .rmc-complect {
+    background: url("https://i.citrus.ua/uploads/promo/Redmond/RMC-450/complect/complect-bg-desc.png") center/100% no-repeat; }
+  .rmc .rmc-complect__content {
+    padding: 120px 24px 690px 136px; }
+  .rmc .rmc-complect__title {
+    font-size: 32px;
+    line-height: 42px;
+    letter-spacing: 0.05em;
+    color: #fff;
+    margin-bottom: 16px; }
+  .rmc .rmc-complect__title span {
+    color: #dcb199; }
+  .rmc .rmc-complect__item {
+    font-size: 20px;
+    line-height: 26px;
+    color: #fff;
+    position: relative;
+    padding-left: 36px; }
+  .rmc .rmc-complect__item:not(:last-child) {
+    margin-bottom: 16px; }
+  .rmc .rmc-complect__item:before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    left: 8px;
+    top: 8px;
+    background-color: #dcb199; }
+  @media screen and (max-width: 1365px) {
+    .rmc .rmc-complect {
+      background: url("https://i.citrus.ua/uploads/promo/Redmond/RMC-450/complect/complect-bg-desc.png") top center/100% no-repeat; }
+    .rmc .rmc-complect__content {
+      padding: 60px 0 660px 24px; } }
+  @media screen and (max-width: 1023px) {
+    .rmc .rmc-complect__content {
+      padding: 50px 0 505px 24px; }
+    .rmc .rmc-complect__title {
+      font-size: 22px;
+      line-height: 29px;
+      margin-bottom: 14px; }
+    .rmc .rmc-complect__item {
+      font-size: 16px;
+      line-height: 21px; } }
+  @media screen and (max-width: 767px) {
+    .rmc .rmc-complect {
+      background: url("https://i.citrus.ua/uploads/promo/Redmond/RMC-450/complect/complect-bg-desc.png") top -185px center no-repeat; }
+    .rmc .rmc-complect__content {
+      padding: 40px 0 483px 16px; }
+    .rmc .rmc-complect__title {
+      font-size: 16px;
+      line-height: 24px; }
+    .rmc .rmc-complect__item {
+      font-size: 14px;
+      line-height: 18px;
+      padding-right: 16px; } }
+
+/*# sourceMappingURL=style.css.map */

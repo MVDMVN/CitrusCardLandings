@@ -1,0 +1,1909 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: 50px 0 50px 0;
+  overflow-x: hidden; }
+
+ul {
+  margin: 0;
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  color: transparent; }
+
+form select,
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding: 0 0 0 12px;
+  background-color: #ffffff; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3B6D9A;
+  outline: none;
+  transition: 0.3s; }
+
+button {
+  display: block;
+  background: 0 0;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  line-height: 44px;
+  transition: .3s;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-size: 18px; }
+
+/************************** HEADER SECTION **************************/
+.neo {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 1px 0px 21px rgba(0, 0, 0, 0.25);
+  border-radius: 10px; }
+  .neo .neo-header {
+    background-color: #fff; }
+  .neo .neo-header__container {
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative; }
+  .neo .neo-header__picture img {
+    opacity: 0;
+    transform: translateY(1000px); }
+  .neo .anim .neo-header__picture img {
+    animation: header-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+@keyframes header-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(1000px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+  @media screen and (max-width: 1023px) {
+    .neo .anim .neo-header__picture img {
+      opacity: 1;
+      transform: translate(0);
+      animation: none; } }
+  .neo .neo-header__bg {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/header/header-devider.png") bottom center no-repeat; }
+  .neo .neo-advantages {
+    padding-top: 80px;
+    padding-bottom: 70px;
+    background: #111;
+    z-index: 2;
+    position: relative; }
+  .neo .neo-advantages__list {
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+  .neo .neo-advantages__item {
+    position: relative;
+    max-width: 423px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(100px); }
+  .neo .anim .neo-advantages__item:nth-child(-n+3) {
+    animation: advantages-anim 0.7s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-advantages__item:nth-child(n+4) {
+    animation: advantages-anim 0.7s forwards;
+    animation-delay: 0.3s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+@keyframes advantages-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+  .neo .neo-advantages__item:nth-child(-n+3) {
+    margin-bottom: 24px; }
+  .neo .neo-advantages__item-image {
+    width: 70px; }
+  .neo .neo-advantages__text-title {
+    color: #fff;
+    font-size: 20px; }
+  .neo .neo-advantages__text-description {
+    color: #9B9B9B;
+    font-size: 18px;
+    line-height: 21px; }
+  @media screen and (max-width: 1365px) {
+    .neo .neo-advantages__list {
+      max-width: 940px; }
+    .neo .neo-advantages__item {
+      max-width: 297px; } }
+  @media screen and (max-width: 1023px) {
+    .neo .neo-advantages__list {
+      max-width: 820px;
+      padding: 0 16px; }
+    .neo .neo-advantages__item {
+      max-width: initial;
+      width: 50%; }
+    .neo .anim .neo-advantages__item {
+      animation: none;
+      opacity: 1;
+      transform: translate(0); }
+    .neo .anim .neo-advantages__item:nth-child(n+4) {
+      animation: none;
+      opacity: 1;
+      transform: translate(0); }
+    .neo .anim .neo-advantages__item:nth-child(-n+3) {
+      animation: none;
+      opacity: 1;
+      transform: translate(0); }
+    .neo .anim .neo-advantages__item:nth-child(n+4) {
+      animation: none;
+      opacity: 1;
+      transform: translate(0); }
+    .neo .neo-advantages__item:nth-child(-n+4) {
+      margin-bottom: 24px; }
+    .neo .neo-advantages__text-title {
+      font-size: 14px;
+      line-height: 19px; }
+    .neo .neo-advantages__text-description {
+      font-size: 12px;
+      line-height: 14px; } }
+  @media screen and (max-width: 720px) {
+    .neo .neo-advantages {
+      padding-top: 40px;
+      padding-bottom: 40px; }
+    .neo .neo-advantages__item:not(:nth-child(3n+3)) {
+      margin-right: 0; } }
+  @media screen and (max-width: 490px) {
+    .neo .neo-advantages__list {
+      max-width: 600px;
+      flex-wrap: wrap;
+      justify-content: center; }
+    .neo .neo-advantages__item {
+      max-width: initial;
+      min-height: 140px;
+      flex-basis: 45%;
+      flex-direction: column;
+      justify-content: flex-start;
+      background-color: #111;
+      margin-bottom: 24px;
+      text-align: center; }
+    .neo .neo-advantages__item:nth-child(-n+3) {
+      margin-bottom: 24px; }
+    .neo .neo-advantages__item:not(:nth-child(3n+3)) {
+      margin-right: 0; }
+    .neo .neo-advantages__item:not(:nth-child(2n+2)) {
+      margin-right: 16px; }
+    .neo .neo-advantages__text-description {
+      position: initial;
+      height: 65px;
+      width: 134px;
+      align-items: center;
+      justify-content: center;
+      display: flex; } }
+  .neo .top-devider {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/video/top-devider.png") top center no-repeat; }
+  .neo .bottom-devider {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/video/bottom-devider.png") bottom center no-repeat; }
+  .neo .neo-video {
+    height: 700px;
+    width: 100%;
+    position: relative;
+    cursor: pointer; }
+  .neo .neo-video__video {
+    max-width: 1366px;
+    width: 100%;
+    height: 100%; }
+  @media screen and (max-width: 1365px) {
+    .neo .neo-video {
+      height: 510px; } }
+  @media screen and (max-width: 1023px) {
+    .neo .neo-video {
+      height: 375px; } }
+  @media screen and (max-width: 767px) {
+    .neo .neo-video {
+      height: 300px; } }
+  .neo .neo-chip {
+    position: relative;
+    color: #111111; }
+  .neo .neo-chip__content {
+    max-width: 675px;
+    padding-left: 136px;
+    padding-top: 100px;
+    padding-bottom: 90px; }
+  .neo .neo-chip__bg {
+    background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/chip/chip-bg.png") right center no-repeat, #111;
+    position: absolute;
+    width: 100%;
+    height: 620px;
+    top: 0; }
+  .neo .neo-chip__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 65px;
+    color: #fff;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateX(-100px); }
+  .neo .neo-chip__text {
+    font-size: 18px;
+    line-height: 30px;
+    color: #9B9B9B;
+    opacity: 0;
+    transform: translateX(-100px); }
+  .neo .anim .neo-chip__title {
+    animation: chip-title-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-chip__text {
+    animation: chip-title-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98);
+    animation-delay: 0.2s; }
+@keyframes chip-title-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+  .neo .neo-chip__accent {
+    color: #FFC915; }
+  @media screen and (max-width: 1365px) {
+    .neo .neo-chip__bg {
+      background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/chip/chip-bg-1024.png") right center no-repeat, #111;
+      height: 588px; }
+    .neo .neo-chip__content {
+      max-width: 530px;
+      padding-left: 24px;
+      padding-top: 143px;
+      padding-bottom: 135px; }
+    .neo .neo-chip__title {
+      font-size: 36px;
+      line-height: 50px;
+      margin-bottom: 30px; }
+    .neo .neo-chip__text {
+      font-size: 14px;
+      line-height: 26px; } }
+  @media screen and (max-width: 1023px) {
+    .neo .neo-chip__bg {
+      background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/chip/chip-bg-768.png") right center no-repeat, #111;
+      height: 552px; }
+    .neo .neo-chip__content {
+      max-width: 385px;
+      padding-left: 24px;
+      padding-top: 30px;
+      padding-bottom: 30px; }
+    .neo .neo-chip__title {
+      font-size: 32px; }
+    .neo .neo-chip__text {
+      font-size: 18px;
+      line-height: 24px; }
+    .neo .anim .neo-chip__title {
+      transform: translateX(0);
+      opacity: 1;
+      animation: none; }
+    .neo .anim .neo-chip__text {
+      transform: translateX(0);
+      opacity: 1;
+      animation: none; } }
+  @media screen and (max-width: 767px) {
+    .neo .neo-chip {
+      background: #111; }
+    .neo .neo-chip__bg {
+      position: initial;
+      background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/chip/chip-bg-mobile.png") center no-repeat, #111111;
+      height: 400px; }
+    .neo .neo-chip__mobile-image {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px; }
+    .neo .neo-chip__content {
+      max-width: 440px;
+      padding: 0 16px 40px; }
+    .neo .neo-chip__title {
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 20px; }
+    .neo .neo-chip__text {
+      font-size: 12px;
+      line-height: 22px; } }
+  .neo .neo-delay {
+    background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/delay/top-devider.png") top center no-repeat, url("https://i.citrus.ua/uploads/promo/realme/neo-card/delay/bottom-devider.png") bottom center no-repeat, #1b1b1b; }
+  .neo .neo-delay__container {
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex; }
+  .neo .neo-delay__left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; }
+  .neo .neo-delay__headphones {
+    max-width: 250px;
+    left: 23%;
+    top: 35px;
+    position: absolute;
+    opacity: 0;
+    transform: scale(0); }
+  .neo .neo-delay__phone {
+    padding-top: 200px;
+    max-width: 600px; }
+  .neo .neo-delay__phone-mobile {
+    display: none; }
+  .neo .neo-delay__right-content {
+    max-width: 560px;
+    width: 100%;
+    padding-top: 188px;
+    margin-left: 50px;
+    padding-right: 24px; }
+  .neo .neo-delay__delay {
+    font-weight: 300;
+    font-size: 50px;
+    margin-bottom: 12px;
+    color: #FFC915;
+    opacity: 0;
+    transform: translateX(50px); }
+  .neo .neo-delay__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 66px;
+    margin-bottom: 40px;
+    color: #fff;
+    opacity: 0;
+    transform: translateX(50px); }
+  .neo .neo-delay__text {
+    font-size: 18px;
+    line-height: 30px;
+    color: #9b9b9b;
+    opacity: 0;
+    transform: translateX(50px); }
+  .neo .anim .neo-delay__headphones {
+    animation: headphones-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-delay__delay {
+    animation: delay-anim 0.7s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-delay__title {
+    animation: delay-anim 0.7s forwards;
+    animation-delay: 0.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-delay__text {
+    animation: delay-anim 0.7s forwards;
+    animation-delay: 0.4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+@keyframes headphones-anim {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(45deg); }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0); } }
+@keyframes delay-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(50px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+  @media screen and (max-width: 1365px) {
+    .neo .neo-delay__headphones {
+      max-width: 200px; }
+    .neo .neo-delay__phone {
+      padding-top: 150px;
+      max-width: 480px; }
+    .neo .neo-delay__right-content {
+      padding-top: 100px;
+      padding-bottom: 115px;
+      margin-left: 10px; }
+    .neo .neo-delay__title {
+      font-size: 40px;
+      line-height: 54px;
+      margin-bottom: 30px; }
+    .neo .neo-delay__text {
+      font-size: 18px;
+      line-height: 28px; } }
+  @media screen and (max-width: 1023px) {
+    .neo .neo-delay__headphones {
+      max-width: 150px;
+      left: 10%; }
+    .neo .neo-delay__phone {
+      max-width: 480px;
+      height: 500px;
+      position: absolute;
+      bottom: 9%;
+      left: -20%; }
+    .neo .neo-delay__left-content {
+      width: 100%; }
+    .neo .neo-delay__right-content {
+      padding-top: 150px;
+      padding-bottom: 115px;
+      margin-left: 10px; }
+    .neo .neo-delay__delay {
+      font-size: 36px;
+      line-height: 42px; }
+    .neo .neo-delay__title {
+      font-size: 32px;
+      line-height: 44px;
+      margin-bottom: 20px; }
+    .neo .neo-delay__text {
+      line-height: 24px; }
+    .neo .anim .neo-delay__headphones {
+      animation: none;
+      opacity: 1;
+      transform: scale(1) rotate(0); }
+    .neo .anim .neo-delay__delay,
+    .neo .anim .neo-delay__title,
+    .neo .anim .neo-delay__text {
+      transform: translateX(0);
+      opacity: 1;
+      animation: none; } }
+  @media screen and (max-width: 767px) {
+    .neo .neo-delay__container {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 16px; }
+    .neo .neo-delay__headphones {
+      display: none; }
+    .neo .neo-delay__phone {
+      display: none; }
+    .neo .neo-delay__phone-mobile {
+      display: flex;
+      margin-bottom: 24px; }
+    .neo .neo-delay__right-content {
+      padding: 0 0 115px 0; }
+    .neo .neo-delay__delay {
+      font-size: 26px;
+      line-height: 35px; }
+    .neo .neo-delay__title {
+      font-size: 24px;
+      line-height: 36px; }
+    .neo .neo-delay__text {
+      font-size: 12px;
+      line-height: 22px; } }
+  .neo .neo-pair {
+    background: #fff; }
+  .neo .neo-pair__container {
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 170px;
+    padding-bottom: 150px; }
+  .neo .neo-pair__content {
+    max-width: 550px;
+    width: 100%; }
+  .neo .neo-pair__technology {
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 59px;
+    color: #FFC915;
+    margin-bottom: 12px;
+    opacity: 0;
+    transform: translateX(-50px); }
+  .neo .neo-pair__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 66px;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateX(-50px); }
+  .neo .neo-pair__text {
+    font-size: 18px;
+    line-height: 30px;
+    color: #4a4a4a;
+    opacity: 0;
+    transform: translateX(-50px); }
+  .neo .neo-pair__image {
+    opacity: 0;
+    transform: translateX(50px); }
+  .neo .anim .neo-pair__image {
+    animation: pair-image-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-pair__technology {
+    animation: pair-anim 0.7s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-pair__title {
+    animation: pair-anim 0.7s forwards;
+    animation-delay: 0.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-pair__text {
+    animation: pair-anim 0.7s forwards;
+    animation-delay: 0.4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+@keyframes pair-image-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(50px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+@keyframes pair-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+  .neo .neo-pair__image-mob {
+    display: none; }
+  @media screen and (max-width: 1365px) {
+    .neo .neo-pair__container {
+      padding: 100px 24px 50px 24px; }
+    .neo .neo-pair__title {
+      font-size: 40px;
+      line-height: 54px;
+      margin-bottom: 30px; }
+    .neo .neo-pair__content {
+      max-width: 500px; }
+    .neo .neo-pair__image {
+      max-width: 345px; } }
+  @media screen and (max-width: 1023px) {
+    .neo .neo-pair__container {
+      padding: 80px 24px 50px 24px; }
+    .neo .neo-pair__content {
+      max-width: 350px;
+      padding-right: 16px; }
+    .neo .neo-pair__technology {
+      font-size: 36px;
+      line-height: 42px; }
+    .neo .neo-pair__title {
+      font-size: 32px;
+      line-height: 44px;
+      margin-bottom: 20px; }
+    .neo .neo-pair__text {
+      font-size: 18px;
+      line-height: 24px; }
+    .neo .neo-pair__image {
+      max-width: 315px; }
+    .neo .anim .neo-pair__image,
+    .neo .anim .neo-pair__technology,
+    .neo .anim .neo-pair__title,
+    .neo .anim .neo-pair__text {
+      opacity: 1;
+      transform: translateX(0);
+      animation: none; } }
+  @media screen and (max-width: 767px) {
+    .neo .neo-pair__container {
+      flex-direction: column;
+      padding: 30px 16px 50px 16px; }
+    .neo .neo-pair__content {
+      max-width: initial;
+      width: 100%;
+      margin-bottom: 42px; }
+    .neo .neo-pair__technology {
+      font-size: 26px;
+      line-height: 35px; }
+    .neo .neo-pair__title {
+      font-size: 24px;
+      line-height: 36px; }
+    .neo .neo-pair__text {
+      font-size: 12px;
+      line-height: 22px; }
+    .neo .neo-pair__image {
+      max-width: 250px; } }
+  .neo .neo-bass {
+    background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/bass/%20bass-devider-top.png") top center no-repeat, #000;
+    padding-bottom: 600px; }
+  .neo .neo-bass__container {
+    max-width: 1366px;
+    width: 100%;
+    padding-top: 170px; }
+  .neo .neo-bass__content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 50px; }
+  .neo .neo-bass__title {
+    max-width: 535px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 66px;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(50px); }
+  .neo .neo-bass__text {
+    max-width: 535px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 30px;
+    color: #9B9B9B;
+    opacity: 0;
+    transform: translateY(50px); }
+  .neo .anim .neo-bass__title {
+    animation: bass-anim 0.7s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-bass__text {
+    animation: bass-anim 0.7s forwards;
+    animation-delay: 0.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+@keyframes bass-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+  .neo .neo-bass__bg {
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/bass/bass-bg.png") center/100% 100%, #000; }
+  @media screen and (max-width: 1365px) {
+    .neo .neo-bass {
+      padding-bottom: 500px; }
+    .neo .neo-bass__container {
+      padding-top: 150px; }
+    .neo .neo-bass__content {
+      padding-left: 24px;
+      padding-right: 24px; }
+    .neo .neo-bass__title {
+      font-size: 40px;
+      line-height: 54px; }
+    .neo .neo-bass__text {
+      line-height: 28px; }
+    .neo .neo-bass__bg {
+      height: 515px;
+      background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/bass/bass-bg-1024.png") center/100% 100%, #000; } }
+  @media screen and (max-width: 1023px) {
+    .neo .neo-bass {
+      padding-bottom: 350px; }
+    .neo .neo-bass__title {
+      font-size: 32px;
+      line-height: 44px; }
+    .neo .neo-bass__text {
+      line-height: 24px; }
+    .neo .neo-bass__bg {
+      height: 380px;
+      background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/bass/bass-bg-768.png") center/100% 100%, #000; }
+    .neo .anim .neo-bass__title,
+    .neo .anim .neo-bass__text {
+      animation: none;
+      opacity: 1;
+      transform: translateY(0); } }
+  @media screen and (max-width: 767px) {
+    .neo .neo-bass {
+      padding-bottom: 250px; }
+    .neo .neo-bass__content {
+      flex-direction: column;
+      padding: 0 16px; }
+    .neo .neo-bass__title {
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 20px; }
+    .neo .neo-bass__text {
+      font-size: 12px;
+      line-height: 22px; }
+    .neo .neo-bass__bg {
+      height: 300px;
+      background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/bass/bass-bg-mobile.png") center 100%, #000; } }
+  .neo .neo-dynamic {
+    background: #000;
+    height: 1065px; }
+  .neo .neo-dynamic__container {
+    max-width: 1366px;
+    width: 100%;
+    padding-top: 170px; }
+  .neo .neo-dynamic__content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 50px; }
+  .neo .neo-dynamic__title {
+    max-width: 535px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 66px;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(50px); }
+  .neo .neo-dynamic__text {
+    max-width: 535px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 30px;
+    color: #9B9B9B;
+    opacity: 0;
+    transform: translateY(50px); }
+  .neo .anim .neo-dynamic__title {
+    animation: dynamic-anim 0.7s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-dynamic__text {
+    animation: dynamic-anim 0.7s forwards;
+    animation-delay: 0.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+@keyframes dynamic-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+  .neo .neo-dynamic__bg {
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/bass/second-bass-bg.png") center/82% 100% no-repeat, #000; }
+  @media screen and (max-width: 1365px) {
+    .neo .neo-dynamic {
+      height: 980px; }
+    .neo .neo-dynamic__container {
+      padding-top: 150px; }
+    .neo .neo-dynamic__content {
+      padding-left: 24px;
+      padding-right: 24px; }
+    .neo .neo-dynamic__title {
+      font-size: 40px;
+      line-height: 54px; }
+    .neo .neo-dynamic__text {
+      line-height: 28px; }
+    .neo .neo-dynamic__bg {
+      height: 515px;
+      background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/bass/second-bass-bg-1024.png") center/80% 100% no-repeat, #000; } }
+  @media screen and (max-width: 1023px) {
+    .neo .neo-dynamic {
+      height: 775px; }
+    .neo .neo-dynamic__title {
+      font-size: 32px;
+      line-height: 44px; }
+    .neo .neo-dynamic__text {
+      line-height: 24px; }
+    .neo .neo-dynamic__bg {
+      height: 380px;
+      background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/bass/second-bass-bg-768.png") center/80% 100% no-repeat, #000; }
+    .neo .anim .neo-dynamic__title,
+    .neo .anim .neo-dynamic__text {
+      animation: none;
+      opacity: 1;
+      transform: translateY(0); } }
+  @media screen and (max-width: 767px) {
+    .neo .neo-dynamic {
+      height: 650px; }
+    .neo .neo-dynamic__content {
+      flex-direction: column;
+      padding: 0 16px; }
+    .neo .neo-dynamic__title {
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 20px; }
+    .neo .neo-dynamic__text {
+      font-size: 12px;
+      line-height: 22px; }
+    .neo .neo-dynamic__bg {
+      height: 250px;
+      background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/bass/second-bass-bg-mobile.png") center 100% no-repeat, #000; } }
+  .neo .neo-sensor {
+    background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/sensor/bg-top.png") top center no-repeat, #fff;
+    padding-top: 180px;
+    padding-bottom: 100px; }
+  .neo .neo-sensor__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: start; }
+  .neo .neo-sensor__left-content {
+    position: relative; }
+  .neo .neo-sensor__pulse {
+    position: absolute;
+    left: 33%;
+    top: 10.5%;
+    background: rgba(255, 201, 21, 0.15);
+    box-shadow: 0 0 0 0 #ff793f;
+    border-radius: 50%;
+    animation: pulse-orange 2s infinite; }
+@keyframes pulse-orange {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 201, 21, 0.7); }
+  60% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 201, 21, 0.3); }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 201, 21, 0); } }
+  .neo .neo-sensor__content {
+    max-width: 550px; }
+  .neo .neo-sensor__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 66px;
+    color: #000;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateX(-50px); }
+  .neo .neo-sensor__list {
+    margin-bottom: 25px; }
+  .neo .neo-sensor__item {
+    font-size: 18px;
+    line-height: 30px;
+    color: #000;
+    position: relative;
+    padding-left: 15px;
+    max-height: 52px;
+    border-left: 4px solid #FFC915;
+    opacity: 0;
+    transform: translateX(-50px); }
+  .neo .neo-sensor__item:not(:last-child) {
+    margin-bottom: 14px; }
+  .neo .neo-sensor__text {
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    mix-blend-mode: normal;
+    opacity: 0;
+    transform: translateX(-50px); }
+  .neo .anim .neo-sensor__title {
+    animation: sensor-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-sensor__item:nth-child(1) {
+    animation: sensor-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-sensor__item:nth-child(2) {
+    animation: sensor-anim 1s forwards;
+    animation-delay: 0.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-sensor__item:nth-child(3) {
+    animation: sensor-anim 1s forwards;
+    animation-delay: 0.4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-sensor__item:nth-child(4) {
+    animation: sensor-anim 1s forwards;
+    animation-delay: 0.6s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-sensor__text {
+    animation: sensor-anim 1s forwards;
+    animation-delay: 0.8s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+@keyframes sensor-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+  @media screen and (max-width: 1365px) {
+    .neo .neo-sensor__container {
+      align-items: center;
+      padding: 0 24px; }
+    .neo .neo-sensor__image {
+      max-width: 330px; }
+    .neo .neo-sensor__content {
+      max-width: 458px; }
+    .neo .neo-sensor__title {
+      font-size: 40px;
+      line-height: 54px;
+      margin-bottom: 30px; }
+    .neo .neo-sensor__item {
+      font-size: 18px;
+      line-height: 28px; }
+    .neo .neo-sensor__item:not(:last-child) {
+      margin-bottom: 18px; }
+    .neo .neo-sensor__text {
+      font-size: 16px;
+      line-height: 22px; } }
+  @media screen and (max-width: 1023px) {
+    .neo .neo-sensor {
+      padding-top: 100px; }
+    .neo .neo-sensor__image {
+      max-width: 290px; }
+    .neo .neo-sensor__content {
+      max-width: 340px; }
+    .neo .neo-sensor__title {
+      font-size: 32px;
+      line-height: 44px;
+      margin-bottom: 22px; }
+    .neo .neo-sensor__item {
+      font-size: 14px;
+      line-height: 22px; }
+    .neo .neo-sensor__item:not(:last-child) {
+      margin-bottom: 27px; }
+    .neo .anim .neo-sensor__title,
+    .neo .anim .neo-sensor__item:nth-child(1),
+    .neo .anim .neo-sensor__item:nth-child(2),
+    .neo .anim .neo-sensor__item:nth-child(3),
+    .neo .anim .neo-sensor__item:nth-child(4),
+    .neo .anim .neo-sensor__text {
+      opacity: 1;
+      transform: translateX(0);
+      animation: none; } }
+  @media screen and (max-width: 767px) {
+    .neo .neo-sensor {
+      padding-top: 15px;
+      padding-bottom: 60px; }
+    .neo .neo-sensor__container {
+      flex-direction: column;
+      padding: 0 16px; }
+    .neo .neo-sensor__image {
+      max-width: 236px;
+      margin-bottom: 30px; }
+    .neo .neo-sensor__content {
+      max-width: initial;
+      margin-bottom: 20px; }
+    .neo .neo-sensor__title {
+      font-size: 24px;
+      line-height: 36px; }
+    .neo .neo-sensor__item {
+      font-size: 12px;
+      line-height: 20px; }
+    .neo .neo-sensor__item:not(:last-child) {
+      margin-bottom: 12px; }
+    .neo .neo-sensor__text {
+      font-size: 12px;
+      line-height: 20px; }
+    .neo .neo-sensor__pulse {
+      left: 34%;
+      top: 8.5%;
+      width: 48px;
+      height: 48px; } }
+  .neo .neo-assistant {
+    background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/assistant/top-bg.png") top center no-repeat, #F7F7F7;
+    padding-top: 150px;
+    padding-bottom: 60px; }
+  .neo .neo-assistant__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; }
+  .neo .neo-assistant__content {
+    max-width: 620px; }
+  .neo .neo-assistant__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 66px;
+    color: #000;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateX(-50px); }
+  .neo .neo-assistant__text {
+    font-size: 18px;
+    line-height: 30px;
+    color: #4A4A4A;
+    margin-bottom: 26px;
+    opacity: 0;
+    transform: translateX(-50px); }
+  .neo .neo-assistant__tip {
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    mix-blend-mode: normal;
+    opacity: 0;
+    transform: translateX(-50px); }
+  .neo .neo-assistant__image {
+    opacity: 0;
+    transform: translateX(50px); }
+  .neo .anim .neo-assistant__title {
+    animation: assistant-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-assistant__text {
+    animation: assistant-anim 1s forwards;
+    animation-delay: 0.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-assistant__tip {
+    animation: assistant-anim 1s forwards;
+    animation-delay: 0.4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-assistant__image {
+    animation: assistant-image-anim 1s forwards;
+    animation-delay: 0.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+@keyframes assistant-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+@keyframes assistant-image-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(50px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+  @media screen and (max-width: 1365px) {
+    .neo .neo-assistant__container {
+      padding: 0 24px; }
+    .neo .neo-assistant__content {
+      max-width: 460px; }
+    .neo .neo-assistant__title {
+      font-size: 40px;
+      line-height: 54px;
+      margin-bottom: 30px; }
+    .neo .neo-assistant__text {
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 26px; }
+    .neo .neo-assistant__tip {
+      font-size: 16px;
+      line-height: 22px; } }
+  @media screen and (max-width: 1023px) {
+    .neo .neo-assistant {
+      padding-top: 120px; }
+    .neo .neo-assistant__content {
+      max-width: 330px; }
+    .neo .neo-assistant__title {
+      font-size: 32px;
+      line-height: 44px;
+      margin-bottom: 20px; }
+    .neo .neo-assistant__text {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 20px; }
+    .neo .neo-assistant__image {
+      max-width: 381px; }
+    .neo .anim .neo-assistant__title,
+    .neo .anim .neo-assistant__text,
+    .neo .anim .neo-assistant__tip,
+    .neo .anim .neo-assistant__image {
+      animation: none;
+      opacity: 1;
+      transform: translate(0); } }
+  @media screen and (max-width: 767px) {
+    .neo .neo-assistant__container {
+      flex-direction: column;
+      padding: 0 16px; }
+    .neo .neo-assistant__content {
+      max-width: initial; }
+    .neo .neo-assistant__title {
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 20px; }
+    .neo .neo-assistant__text {
+      font-size: 12px;
+      line-height: 22px;
+      margin-bottom: 20px; }
+    .neo .neo-assistant__tip {
+      font-size: 12px;
+      line-height: 20px;
+      margin-bottom: 52px; }
+    .neo .neo-assistant__image {
+      max-width: 310px; } }
+  .neo .neo-autonomy {
+    background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/autonomy/top-bg.png") top center no-repeat, #1A1A1A; }
+  .neo .neo-autonomy__container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 100px; }
+  .neo .neo-autonomy__content {
+    max-width: 560px;
+    padding-top: 150px; }
+  .neo .neo-autonomy__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 66px;
+    color: #fff;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(-50px); }
+  .neo .neo-autonomy__text {
+    font-size: 24px;
+    line-height: 28px;
+    color: #fff;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(50px); }
+  .neo .anim .neo-autonomy__title {
+    animation: autonomy-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-autonomy__text:nth-child(2) {
+    animation: autonomy-anim 1s forwards;
+    animation-delay: 0.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-autonomy__text:nth-child(4) {
+    animation: autonomy-anim 1s forwards;
+    animation-delay: 0.4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-autonomy__text:nth-child(6) {
+    animation: autonomy-anim 1s forwards;
+    animation-delay: 0.6s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+@keyframes autonomy-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(50px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+  .neo .neo-autonomy__devider {
+    height: 20px;
+    width: 0;
+    background: linear-gradient(270deg, #FAD961 0%, #F7921C 100%);
+    margin-bottom: 30px; }
+  .neo .anim .neo-autonomy__devider {
+    animation: devider-anim 1s forwards;
+    animation-delay: 1s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-autonomy__second-devider {
+    animation: devider-anim 3s forwards;
+    animation-delay: 1.4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-autonomy__third-devider {
+    animation: devider-anim 4s forwards;
+    animation-delay: 1.6s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+@keyframes devider-anim {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+  .neo .neo-autonomy__second-devider {
+    max-width: 106px; }
+  .neo .neo-autonomy__third-devider {
+    max-width: 53px; }
+  @media screen and (max-width: 1365px) {
+    .neo .neo-autonomy__container {
+      padding: 0 24px 80px 24px;
+      align-items: center;
+      justify-content: space-around; }
+    .neo .neo-autonomy__image {
+      height: 530px !important; }
+    .neo .neo-autonomy__content {
+      max-width: 460px; }
+    .neo .neo-autonomy__title {
+      font-size: 40px;
+      line-height: 54px;
+      margin-bottom: 30px; }
+    .neo .neo-autonomy__text {
+      font-size: 22px;
+      line-height: 26px; }
+    .neo .neo-autonomy__devider {
+      margin-bottom: 25px; } }
+  @media screen and (max-width: 1023px) {
+    .neo .neo-autonomy__image {
+      height: 500px !important; }
+    .neo .neo-autonomy__content {
+      max-width: 330px;
+      padding-top: 100px; }
+    .neo .neo-autonomy__title {
+      font-size: 32px;
+      line-height: 44px; }
+    .neo .neo-autonomy__text {
+      font-size: 16px;
+      line-height: 19px; }
+    .neo .anim .neo-autonomy__title,
+    .neo .anim .neo-autonomy__text:nth-child(2),
+    .neo .anim .neo-autonomy__text:nth-child(4),
+    .neo .anim .neo-autonomy__text:nth-child(6) {
+      opacity: 1;
+      transform: translate(0);
+      animation: none; }
+    .neo .anim .neo-autonomy__devider,
+    .neo .anim .neo-autonomy__second-devider,
+    .neo .anim .neo-autonomy__third-devider {
+      width: 100%;
+      animation: none; } }
+  @media screen and (max-width: 767px) {
+    .neo .neo-autonomy__container {
+      flex-direction: column;
+      padding: 0 16px 50px 16px; }
+    .neo .neo-autonomy__image {
+      height: 320px !important; }
+    .neo .neo-autonomy__content {
+      max-width: initial; }
+    .neo .neo-autonomy__title {
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 20px; }
+    .neo .neo-autonomy__text {
+      font-size: 14px;
+      line-height: 22px; }
+    .neo .neo-autonomy__devider {
+      margin-bottom: 20px;
+      height: 8px; } }
+  .neo .neo-colors {
+    background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/colors/bg-top.png") top center no-repeat, #fff;
+    position: relative; }
+  .neo .neo-colors__bottom-bg {
+    background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/colors/bottom-bg.png") bottom center no-repeat;
+    height: 86px;
+    position: absolute;
+    bottom: 0;
+    width: 100%; }
+  .neo .neo-colors__container {
+    display: flex;
+    justify-content: space-evenly; }
+  .neo .neo-colors__content {
+    max-width: 540px;
+    padding-top: 190px; }
+  .neo .neo-colors__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 66px;
+    color: #000;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateX(-50px); }
+  .neo .neo-colors__text {
+    font-size: 18px;
+    line-height: 30px;
+    color: #000;
+    margin-bottom: 24px;
+    opacity: 0;
+    transform: translateX(-50px); }
+  .neo .neo-colors__colors {
+    display: flex;
+    justify-content: space-between;
+    max-width: 240px;
+    opacity: 0;
+    transform: translateX(-50px); }
+  .neo .anim .neo-colors__title {
+    animation: colors-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-colors__text {
+    animation: colors-anim 1s forwards;
+    animation-delay: 0.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-colors__colors {
+    animation: colors-anim 1s forwards;
+    animation-delay: 0.4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-colors__headphones {
+    animation: colors-image-anim 1s forwards;
+    animation-delay: 0.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .neo-colors__color {
+    max-width: 45px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+    transition: 0.3s border-bottom-color;
+    cursor: pointer;
+    padding-bottom: 4px; }
+  .neo .neo-colors__color.red {
+    border-bottom: 8px solid #E42727; }
+  .neo .neo-colors__color.green {
+    border-bottom: 8px solid #7AA259; }
+  .neo .neo-colors__color.white {
+    border-bottom: 8px solid #EBEBEB; }
+  .neo .neo-colors__headphones {
+    padding-bottom: 30px;
+    opacity: 0;
+    transform: translateX(100px); }
+@keyframes colors-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+@keyframes colors-image-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+  @media screen and (max-width: 1365px) {
+    .neo .neo-colors__container {
+      padding: 0 24px; }
+    .neo .neo-colors__content {
+      padding: 190px 16px 0 16px; }
+    .neo .neo-colors__title {
+      font-size: 40px;
+      line-height: 54px;
+      margin-bottom: 30px; }
+    .neo .neo-colors__text {
+      font-size: 18px;
+      line-height: 28px; }
+    .neo .neo-colors__headphones {
+      max-width: 380px; } }
+  @media screen and (max-width: 1023px) {
+    .neo .neo-colors__container {
+      padding: 0 16px 160px 16px;
+      align-items: flex-end; }
+    .neo .neo-colors__content {
+      padding: 160px 16px 0 16px;
+      margin-right: 40px; }
+    .neo .neo-colors__title {
+      font-size: 32px;
+      line-height: 44px;
+      margin-bottom: 20px; }
+    .neo .neo-colors__text {
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 20px; }
+    .neo .neo-colors__headphones {
+      max-width: 253px;
+      width: 100%;
+      height: 500px;
+      padding-bottom: 0; }
+    .neo .anim .neo-colors__title,
+    .neo .anim .neo-colors__text,
+    .neo .anim .neo-colors__colors,
+    .neo .anim .neo-colors__headphones {
+      transform: translate(0);
+      animation: none;
+      opacity: 1; } }
+  @media screen and (max-width: 767px) {
+    .neo .neo-colors__container {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 16px 32px 16px; }
+    .neo .neo-colors__content {
+      max-width: initial;
+      padding: 100px 0 50px 0;
+      margin-right: 0; }
+    .neo .neo-colors__title {
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 20px; }
+    .neo .neo-colors__text {
+      font-size: 12px;
+      line-height: 22px;
+      margin-bottom: 12px; }
+    .neo .neo-colors__color {
+      font-size: 12px;
+      line-height: 16px;
+      max-width: 45px; }
+    .neo .neo-colors__headphones {
+      max-width: 166px;
+      width: 100%;
+      height: 325px; } }
+  .neo .neo-features {
+    background: #EFEFEF;
+    z-index: 2; }
+  .neo .neo-features__container {
+    padding-bottom: 100px; }
+  .neo .neo-features__first-feature {
+    display: flex;
+    position: relative; }
+  .neo .neo-features__first-image {
+    margin-left: 136px;
+    opacity: 0; }
+  .neo .neo-features__first-text {
+    position: absolute;
+    left: 40%;
+    bottom: 10%;
+    color: transparent;
+    -webkit-text-stroke: 1px #000000;
+    font-size: 78px;
+    line-height: 110%;
+    opacity: 0;
+    transform: translateX(50px); }
+  .neo .neo-features__first-attach {
+    position: absolute;
+    right: 0;
+    top: 5%; }
+  .neo .neo-features__second-feature {
+    display: flex;
+    position: relative;
+    flex-direction: row-reverse; }
+  .neo .neo-features__second-image {
+    margin-right: 136px;
+    opacity: 0; }
+  .neo .neo-features__second-text {
+    position: absolute;
+    left: 17%;
+    top: 10%;
+    color: transparent;
+    -webkit-text-stroke: 1px #000000;
+    font-size: 78px;
+    line-height: 110%;
+    opacity: 0;
+    transform: translateX(-50px);
+    z-index: 1; }
+  .neo .anim .neo-features__first-image {
+    animation: features-image-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-features__first-text {
+    animation: features-first-text-anim 1s forwards;
+    animation-delay: 0.5s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-features__second-image {
+    animation: features-image-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-features__second-text {
+    animation: features-text-anim 1s forwards;
+    animation-delay: 0.5s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .neo-features__second-attach {
+    position: absolute;
+    left: 0;
+    bottom: 17%; }
+@keyframes features-image-anim {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes features-first-text-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(50px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+@keyframes features-text-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+  @media screen and (max-width: 1365px) {
+    .neo .neo-features__first-image {
+      margin-left: 24px;
+      width: 538px; }
+    .neo .neo-features__first-text {
+      font-size: 54px;
+      line-height: 108%;
+      left: 500px; }
+    .neo .neo-features__first-attach {
+      width: 40%; }
+    .neo .neo-features__second-image {
+      margin-right: 24px;
+      width: 538px; }
+    .neo .neo-features__second-text {
+      font-size: 54px;
+      line-height: 108%;
+      right: 422px;
+      left: initial; }
+    .neo .neo-features__second-attach {
+      width: 40%; } }
+  @media screen and (max-width: 1023px) {
+    .neo .neo-features__first-image {
+      width: 413px; }
+    .neo .neo-features__first-text {
+      font-size: 42px;
+      left: 390px; }
+    .neo .neo-features__second-image {
+      width: 413px; }
+    .neo .neo-features__second-text {
+      font-size: 42px;
+      right: 330px;
+      left: initial; }
+    .neo .anim .neo-features__first-image,
+    .neo .anim .neo-features__first-text,
+    .neo .anim .neo-features__second-image,
+    .neo .anim .neo-features__second-text {
+      opacity: 1;
+      transform: translate(0);
+      animation: none; } }
+  @media screen and (max-width: 767px) {
+    .neo .neo-features__container {
+      padding-bottom: 1px; }
+    .neo .neo-features__first-attach,
+    .neo .neo-features__second-attach {
+      display: none; }
+    .neo .neo-features__first-feature {
+      flex-direction: column;
+      align-items: center;
+      max-width: 288px;
+      margin: 0 auto 150px auto; }
+    .neo .neo-features__first-image {
+      width: 288px;
+      margin-left: 0; }
+    .neo .neo-features__first-text {
+      font-size: 37px;
+      line-height: 120%;
+      left: 0px;
+      bottom: -105px; }
+    .neo .neo-features__second-feature {
+      flex-direction: column;
+      align-items: center;
+      max-width: 288px;
+      margin: 0 auto 150px auto; }
+    .neo .neo-features__second-image {
+      margin-right: initial;
+      width: 288px;
+      margin-left: 0; }
+    .neo .neo-features__second-text {
+      font-size: 37px;
+      line-height: 120%;
+      left: 0px;
+      bottom: -62px;
+      right: initial;
+      top: initial; } }
+  .neo .neo-design {
+    background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/design/bg-top.png") top center no-repeat, url("https://i.citrus.ua/uploads/promo/realme/neo-card/design/bg-main.png") left center no-repeat, url("https://i.citrus.ua/uploads/promo/realme/neo-card/design/bg-bottom.png") bottom center no-repeat, #000;
+    position: relative; }
+  .neo .neo-design__container {
+    display: flex;
+    justify-content: flex-end; }
+  .neo .neo-design__content {
+    max-width: 540px;
+    padding-top: 210px;
+    padding-bottom: 202px;
+    margin-right: 136px; }
+  .neo .neo-design__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 66px;
+    margin-bottom: 40px;
+    color: #fff;
+    opacity: 0;
+    transform: translateX(50px); }
+  .neo .neo-design__text {
+    font-size: 18px;
+    line-height: 30px;
+    color: #9b9b9b;
+    opacity: 0;
+    transform: translateX(50px); }
+  .neo .anim .neo-design__title {
+    animation: design-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-design__text {
+    animation: design-anim 1s forwards;
+    animation-delay: 0.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+@keyframes design-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(50px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+  @media screen and (max-width: 1365px) {
+    .neo .neo-design {
+      background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/design/bg-top.png") top center no-repeat, url("https://i.citrus.ua/uploads/promo/realme/neo-card/design/bg-main.png") left -90px center no-repeat, url("https://i.citrus.ua/uploads/promo/realme/neo-card/design/bg-bottom.png") bottom center no-repeat, #000; }
+    .neo .neo-design__content {
+      margin-right: 24px;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      max-width: 450px; }
+    .neo .neo-design__title {
+      font-size: 40px;
+      line-height: 54px;
+      margin-bottom: 30px; }
+    .neo .neo-design__text {
+      font-size: 18px;
+      line-height: 28px; } }
+  @media screen and (max-width: 1023px) {
+    .neo .neo-design {
+      background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/design/bg-top.png") top center no-repeat, url("https://i.citrus.ua/uploads/promo/realme/neo-card/design/bg-main.png") left -90px center/120% no-repeat, url("https://i.citrus.ua/uploads/promo/realme/neo-card/design/bg-bottom.png") bottom center no-repeat, #000; }
+    .neo .neo-design__content {
+      padding-top: 204px;
+      padding-bottom: 180px;
+      max-width: 330px; }
+    .neo .neo-design__title {
+      font-size: 32px;
+      line-height: 44px;
+      margin-bottom: 20px; }
+    .neo .neo-design__text {
+      font-size: 18px;
+      line-height: 24px; }
+    .neo .anim .neo-design__title,
+    .neo .anim .neo-design__text {
+      opacity: 1;
+      transform: translate(0);
+      animation: none; } }
+  @media screen and (max-width: 767px) {
+    .neo .neo-design {
+      background: url("https://i.citrus.ua/uploads/promo/realme/neo-card/design/bg-top.png") top center no-repeat, url("https://i.citrus.ua/uploads/promo/realme/neo-card/design/bg-main-mobile.png") top 90px center no-repeat, url("https://i.citrus.ua/uploads/promo/realme/neo-card/design/bg-bottom.png") bottom center no-repeat, #000; }
+    .neo .neo-design__container {
+      padding: 0 16px; }
+    .neo .neo-design__content {
+      padding-top: 420px;
+      padding-bottom: 130px;
+      max-width: initial;
+      margin-right: 0; }
+    .neo .neo-design__title {
+      font-size: 24px;
+      line-height: 36px; }
+    .neo .neo-design__text {
+      font-size: 12px;
+      line-height: 22px; } }
+  .neo .neo-app {
+    background: #FFF; }
+  .neo .neo-app__container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 100px;
+    padding-bottom: 100px; }
+  .neo .neo-app__content {
+    max-width: 590px; }
+  .neo .neo-app__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 66px;
+    color: #000;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateX(-50px); }
+  .neo .neo-app__text {
+    font-size: 18px;
+    line-height: 30px;
+    color: #4a4a4a;
+    margin-bottom: 24px;
+    opacity: 0;
+    transform: translateX(-50px); }
+  .neo .neo-app__list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 200px;
+    margin-bottom: 24px;
+    opacity: 0;
+    transform: translateX(-50px); }
+  .neo .neo-app__item {
+    max-width: 88px;
+    width: 100%; }
+  .neo .neo-app__image {
+    max-width: 261px;
+    opacity: 0;
+    transform: translateX(100px); }
+@keyframes app-image-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+  .neo .neo-app__link {
+    font-size: 16px;
+    line-height: 22px;
+    color: #5E8DFF;
+    opacity: 0;
+    transform: translateX(-50px); }
+  .neo .anim .neo-app__title {
+    animation: design-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-app__text {
+    animation: design-anim 1s forwards;
+    animation-delay: 0.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-app__list {
+    animation: design-anim 1s forwards;
+    animation-delay: 0.4s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-app__link {
+    animation: design-anim 1s forwards;
+    animation-delay: 0.6s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-app__image {
+    animation: app-image-anim 1s forwards;
+    animation-delay: 0.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+@keyframes design-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+  @media screen and (max-width: 1365px) {
+    .neo .neo-app__container {
+      padding: 100px 24px 100px 24px; }
+    .neo .neo-app__content {
+      max-width: 490px; }
+    .neo .neo-app__title {
+      font-size: 40px;
+      line-height: 54px;
+      margin-bottom: 30px; }
+    .neo .neo-app__text {
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 20px; }
+    .neo .neo-app__list {
+      max-width: 136px; }
+    .neo .neo-app__item {
+      max-width: 56px; } }
+  @media screen and (max-width: 1023px) {
+    .neo .neo-app__content {
+      max-width: 330px; }
+    .neo .neo-app__title {
+      font-size: 32px;
+      line-height: 44px;
+      margin-bottom: 20px; }
+    .neo .neo-app__text {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 14px; }
+    .neo .neo-app__list {
+      max-width: 115px; }
+    .neo .neo-app__item {
+      max-width: 42px; }
+    .neo .neo-app__image {
+      max-width: 245px; }
+    .neo .anim .neo-app__title,
+    .neo .anim .neo-app__text,
+    .neo .anim .neo-app__list,
+    .neo .anim .neo-app__link,
+    .neo .anim .neo-app__image {
+      animation: none;
+      transform: translate(0);
+      opacity: 1; } }
+  @media screen and (max-width: 767px) {
+    .neo .neo-app__container {
+      padding: 40px 16px 100px 16px;
+      flex-direction: column;
+      align-items: center; }
+    .neo .neo-app__content {
+      max-width: initial;
+      margin-bottom: 40px; }
+    .neo .neo-app__title {
+      font-size: 24px;
+      line-height: 36px; }
+    .neo .neo-app__text {
+      font-size: 12px;
+      line-height: 22px; }
+    .neo .neo-app__list {
+      max-width: 135px; }
+    .neo .neo-app__item {
+      max-width: 60px; }
+    .neo .neo-app__image {
+      max-width: 270px;
+      height: 539px; } }
+  .neo .neo-characteristics {
+    background: #F1F2F4;
+    position: relative;
+    z-index: 1; }
+  .neo .neo-characteristics__top-attach {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; }
+  .neo .neo-characteristics__bottom-attach {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1; }
+  .neo .neo-characteristics__container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 24px 100px 24px;
+    z-index: 2; }
+  .neo .neo-characteristics__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+  .neo .neo-characteristics__item {
+    width: 33%;
+    height: 132px;
+    opacity: 0;
+    transform: translateY(50px); }
+  .neo .anim .neo-characteristics__item:nth-child(-n+3) {
+    animation: characteristics-anim 1s forwards;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+  .neo .anim .neo-characteristics__item:nth-child(n+4) {
+    animation: characteristics-anim 1s forwards;
+    animation-delay: 0.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+@keyframes characteristics-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+  .neo .neo-characteristics__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    margin-bottom: 12px; }
+  .neo .neo-characteristics__ident {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: bold; }
+  .neo .neo-characteristics__desc {
+    max-width: 268px;
+    width: 100%;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    height: 63px; }
+  @media screen and (max-width: 1365px) {
+    .neo .neo-characteristics__top-attach {
+      width: 582px;
+      height: 185px; }
+    .neo .neo-characteristics__bottom-attach {
+      width: 582px;
+      height: 185px; }
+    .neo .neo-characteristics__container {
+      padding: 80px 24px 80px 24px; } }
+  @media screen and (max-width: 1023px) {
+    .neo .neo-characteristics__title {
+      font-size: 40px;
+      line-height: 47px; }
+    .neo .neo-characteristics__ident {
+      font-size: 18px;
+      line-height: 21px; }
+    .neo .neo-characteristics__desc {
+      font-size: 14px;
+      line-height: 16px;
+      max-width: 212px; }
+    .neo .neo-characteristics__top-attach {
+      width: 490px;
+      height: 149px; }
+    .neo .neo-characteristics__bottom-attach {
+      width: 490px;
+      height: 149px; }
+    .neo .anim .neo-characteristics__item:nth-child(-n+3),
+    .neo .anim .neo-characteristics__item:nth-child(n+4) {
+      opacity: 1;
+      transform: translate(0);
+      animation: none; } }
+  @media screen and (max-width: 767px) {
+    .neo .neo-characteristics__container {
+      padding: 40px 16px 40px 16px; }
+    .neo .neo-characteristics__item {
+      width: 50%; }
+    .neo .anim .neo-characteristics__item:nth-child(-n+3) {
+      animation: none; }
+    .neo .anim .neo-characteristics__item:nth-child(n+4) {
+      animation: none; }
+    .neo .anim .neo-characteristics__item:nth-child(-n+2) {
+      animation: characteristics-anim 0.7s forwards;
+      animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+    .neo .anim .neo-characteristics__item:nth-child(n+4) {
+      animation: characteristics-anim 0.7s forwards;
+      animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+    .neo .anim .neo-characteristics__item:nth-child(-n+6) {
+      animation: characteristics-anim 0.7s forwards;
+      animation-timing-function: cubic-bezier(0.39, 0.29, 0.4, 0.98); }
+    .neo .neo-characteristics__title {
+      font-size: 28px;
+      line-height: 33px; }
+    .neo .neo-characteristics__ident {
+      font-size: 12px;
+      line-height: 14px; }
+    .neo .neo-characteristics__desc {
+      font-size: 10px;
+      line-height: 12px;
+      max-width: 130px; }
+    .neo .neo-characteristics__top-attach {
+      display: none; }
+    .neo .neo-characteristics__bottom-attach {
+      display: none; } }
+  .neo .neo-tip {
+    background-color: #F7F7F7; }
+  .neo .neo-tip__container {
+    max-width: 1096px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 0 120px 0; }
+  .neo .neo-tip__text {
+    font-size: 20px;
+    line-height: 32px;
+    color: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.6; }
+  @media screen and (max-width: 1365px) {
+    .neo .neo-tip__container {
+      padding: 100px 24px 120px 24px; }
+    .neo .neo-tip__text {
+      line-height: 28px; } }
+  @media screen and (max-width: 1023px) {
+    .neo .neo-tip__container {
+      padding: 100px 24px 120px 24px; } }
+  @media screen and (max-width: 767px) {
+    .neo .neo-tip__container {
+      padding: 40px 16px 80px 16px; }
+    .neo .neo-tip__text {
+      font-size: 14px;
+      line-height: 22px; } }
+
+/*# sourceMappingURL=style.css.map */

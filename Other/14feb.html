@@ -1,0 +1,2678 @@
+      <style>
+        .big-container {
+          max-width: none;
+          width: auto;
+        }
+
+        .log--base .catalog__main-content, .shadow {
+          box-shadow: none;
+        }
+
+        * {
+          box-sizing: border-box;
+          font-family: Roboto, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          margin: 0;
+        }
+
+        ul {
+          margin: 0;
+          list-style: none;
+        }
+
+        img {
+          max-width: 100%;
+          color: transparent;
+        }
+
+        form select, input {
+          border: 1px solid #c4c4c4;
+          border-radius: 4px;
+          height: 36px;
+          width: 100%;
+          padding: 0 0 0 12px;
+          background-color: #ffffff;
+        }
+
+        a {
+          text-decoration: none;
+          cursor: pointer;
+          color: #3B6D9A;
+          outline: none;
+          transition: 0.3s;
+        }
+
+        .btn, button {
+          display: block;
+          background: 0 0;
+          cursor: pointer;
+          border: none;
+          text-align: center;
+          width: 100%;
+          line-height: 44px;
+          transition: .3s;
+          border-radius: 4px;
+          margin-bottom: 24px;
+          white-space: nowrap;
+          font-family: Roboto, sans-serif;
+          font-size: 18px;
+        }
+
+        .base-padding {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        .clear-padding {
+          margin-left: 0;
+          margin-right: 0;
+        }
+
+        @media screen and (max-width: 640px) {
+          .base-padding {
+            padding-left: 0;
+            padding-right: 0;
+          }
+
+          .clear-padding {
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+
+        @media screen and (max-width: 480px) {
+          .base-padding {
+            padding-left: 0;
+            padding-right: 0;
+          }
+
+          body .clear-padding {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+          }
+        }
+
+        .swiper-container {
+          margin: 0 auto;
+          position: relative;
+          overflow: hidden;
+          list-style: none;
+          padding: 0;
+          z-index: 1;
+        }
+
+        .swiper-container-android .swiper-slide, .swiper-wrapper {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+
+        .swiper-wrapper {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          display: flex;
+          box-sizing: content-box;
+        }
+
+        .swiper-slide {
+          flex-shrink: 0;
+          width: 100%;
+          height: 100%;
+          position: relative;
+        }
+
+        header.header {
+          margin-bottom: 0;
+        }
+
+        @media screen and (max-width: 1023px) {
+          .layout {
+            padding-top: 50px;
+          }
+        }
+
+        .breadcrumbs {
+          display: none;
+        }
+
+        main[locale] .big-container {
+          max-width: initial;
+          width: 100%;
+          box-shadow: none !important;
+        }
+
+        .base-padding {
+          padding: 0;
+        }
+
+        footer.container-footer {
+        }
+
+        .valentine-apple {
+          overflow: hidden;
+          background-color: #ffffff;
+          margin-bottom: -65px;
+        }
+
+
+        /******************************** BANNER SECTION ********************************/
+
+        /******************************** Header SECTION ********************************/
+        .valentine-header {
+          background: #02B0F9;
+          position: relative;
+          padding-top: 50px;
+        }
+
+        .valentine-header__sky-left {
+          position: absolute;
+          top: 321px;
+          left: calc(50% - 895px);
+        }
+
+        .anim.valentine-header__sky-left {
+          animation: header-left-cloud--anim 0.7s forwards;
+          animation-timing-function: cubic-bezier(.39,.29,.4,.98);
+        }
+
+        @keyframes header-left-cloud--anim {
+          0% {transform: translateX(-200px);}
+          70% {transform: translateX(15px);}
+          100% {transform: translateX(0);}
+        }
+
+        .valentine-header__sky-right {
+          position: absolute;
+          top: 300px;
+          right: -60px;
+          z-index: 1;
+          transform: translateX(300px);
+        }
+
+        .anim.valentine-header__sky-right  {
+          animation: header-right-cloud--anim 0.7s forwards;
+          animation-timing-function: cubic-bezier(.39,.29,.4,.98);
+          animation-delay: 0.2s;
+        }
+
+        @keyframes header-right-cloud--anim {
+          0% {transform: translateX(300px);}
+          70% {transform: translateX(-15px);}
+          100% {transform: translateX(0);}
+        }
+
+        .valentine-header__wrapper {
+          max-width: 1366px;
+          margin-left: auto;
+          margin-right: auto;
+          padding-left: 60px;
+          padding-right: 70px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .valentine-header__description {
+          min-width: 416px;
+        }
+
+        .valentine-header__text-preview {
+          width: 100%;
+          display: block;
+          max-width: 330px;
+          opacity: 0;
+        }
+
+        .anim.valentine-header__text-preview {
+          animation: valentine-header__text-preview--anim 0.7s forwards;
+          animation-timing-function: cubic-bezier(.39,.29,.4,.98);
+          animation-delay: 0.5s;
+        }
+
+        @keyframes valentine-header__text-preview--anim {
+          0% {opacity: 1;transform: scale(0);}
+          50% {opacity: 1;transform: scale(1.2);}
+          70% {opacity: 1;transform: scale(0.8);}
+          100% {opacity: 1;transform: scale(1);}
+        }
+
+        .valentine-header__mouse {
+          display: flex;
+          justify-content: center;
+          position: relative;
+          padding-bottom: 32px;
+        }
+
+        .valentine-header__mouse:before {
+          content: '';
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background: #fff;
+          position: absolute;
+          right: calc(50% - 2px);
+          top: 9px;
+          opacity: 0;
+        }
+
+        .valentine-header__mouse:before {
+          animation: valentine-header__mouse--anim 1.5s infinite;
+          animation-timing-function: cubic-bezier(.39,.29,.4,.98);
+        }
+
+        @keyframes valentine-header__mouse--anim {
+          0% {
+            opacity: 1;
+          }
+          60% {
+            opacity: 1;
+            transform: translateY(17px);
+          }
+          70% {
+            opacity: 0;
+            transform: translateY(17px);
+          }
+        }
+
+
+        @media screen and (max-width: 1365px) {
+          .valentine-header {
+            padding-top: 61px;
+            padding-bottom: 41px;
+          }
+
+          .valentine-header__sky-left {
+            top: 228px;
+            left: 24px;
+            width: 94px;
+          }
+
+          .valentine-header__sky-right {
+            width: 160px;
+            right: 55px;
+            bottom: -32px;
+          }
+
+          .valentine-header__wrapper {
+            padding-left: 119px;
+            padding-right: 171px;
+          }
+
+          .valentine-header__image {
+            min-width: 377px;
+            width: 55%;
+          }
+
+          .valentine-header__text {
+            min-width: 249px;
+            width: 73%;
+            margin-left: auto;
+          }
+
+          .valentine-header__description {
+            min-width: auto;
+          }
+        }
+
+        @media screen and (max-width: 1023px) {
+          .valentine-header {
+            padding-top: 70px;
+            padding-bottom: 53px;
+          }
+
+          .valentine-header__sky-left {
+            top: 241px;
+            left: -39px;
+          }
+
+          .valentine-header__sky-right {
+            right: 20px;
+            bottom: -18px;
+          }
+
+          .valentine-header__wrapper {
+            padding-left: 18px;
+            padding-right: 84px;
+          }
+
+          .valentine-header__image {
+            margin-right: 5px;
+          }
+        }
+
+        @media screen and (max-width: 670px) {
+          .valentine-header {
+            padding-top: 0;
+            padding-bottom: 10px;
+          }
+
+          .valentine-header__sky-right {
+            right: -67px;
+            bottom: 25px;
+          }
+
+          .valentine-header__wrapper {
+            padding-left: 20px;
+            flex-direction: column;
+            padding-right: 20px;
+          }
+
+          .valentine-header__image {
+            max-width: 377px;
+            min-width: 220px;
+            margin-right: 0;
+            margin-bottom: 13px;
+            width: 60%;
+          }
+
+          .valentine-header__text {
+            margin-left: auto;
+            margin-right: auto;
+            min-width: 168px;
+            width: 63%;
+            padding-bottom: 20px;
+          }
+
+          .valentine-header__mouse {
+            padding-bottom: 10px;
+          }
+        }
+
+        /******************************** Apple Watch SECTION ********************************/
+
+
+        .valentine__button--border {
+          display: none;
+        }
+
+        .valentine-watch {
+          padding-top: 40px;
+        }
+
+        .valentine-watch__container {
+          max-width: 1366px;
+          margin-left: auto;
+          margin-right: auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .valentine-watch__content {
+          display: flex;
+          align-items: center;
+          max-width: 695px;
+          width: 100%;
+        }
+
+
+        .valentine-watch__illustration {
+          opacity: 0;
+        }
+
+        .anim.valentine-watch__illustration {
+          animation: valentine-watch__illustration--anim 1s forwards;
+          animation-timing-function: cubic-bezier(.39,.29,.4,.98);
+          animation-delay: .2s;
+        }
+
+        @keyframes valentine-watch__illustration--anim {
+          0% {
+            transform: scale3d(1, 1, 1);
+          }
+          30% {
+            transform: scale3d(1.25, .75, 1);
+          }
+          40% {
+            transform: scale3d(0.75, 1.25, 1);
+          }
+          50% {
+            transform: scale3d(1.15, .85, 1);
+          }
+          65% {
+            transform: scale3d(.95, 1.05, 1);
+          }
+          75% {
+            transform: scale3d(1.05, .95, 1);
+          }
+          100% {
+            opacity: 1;
+            transform: scale3d(1, 1, 1);
+          }
+        }
+
+        .valentine-watch__description {
+          max-width: 325px;
+        }
+
+        .valentine-watch__title {
+          font-weight: 500;
+          font-size: 42px;
+          color: rgba(0, 0, 0, 0.87);
+          margin-bottom: 20px;
+        }
+
+        .valentine-watch__text {
+          font-size: 22px;
+          color: rgba(0, 0, 0, 0.87);
+          margin-bottom: 25px;
+        }
+
+        .valentine-watch__price {
+          font-size: 20px;
+          color: rgba(0, 0, 0, 0.87);
+          margin-bottom: 25px;
+        }
+
+        .valentine-watch__price-value {
+          font-size: 24px;
+          font-weight: 500;
+        }
+
+        .valentine-watch__button {
+          width: 254px;
+          height: 43px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #FF690A;
+          font-weight: 500;
+          font-size: 16px;
+          color: #FFFFFF;
+          text-transform: uppercase;
+          border-radius: 41px;
+          position: relative;
+          padding-bottom: 3px;
+        }
+
+        .valentine-watch__button:hover {
+          color: #000000;
+          box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.12), 0px 9px 46px rgba(0, 0, 0, 0.06), 0px 24px 38px rgba(0, 0, 0, 0.07);
+          transition: .25s;
+        }
+
+        .valentine-watch__button:before {
+          content: '';
+          position: absolute;
+          top: -4px;
+          left: -3px;
+          width: 251px;
+          height: 41px;
+          border: 1.5px solid #000000;
+          border-radius: 41px;
+        }
+
+        @media screen and (max-width: 1365px) {
+          .valentine-watch__container {
+            min-width: 912px;
+            width: 100%;
+            padding: 0 16px;
+          }
+
+          .valentine-watch__content {
+            max-width: 563px;
+            width: 100%;
+            padding-right: 16px;
+          }
+
+          .valentine-watch__photo {
+            width: 100%;
+            min-width: 228px;
+          }
+
+          .valentine-watch__title {
+            font-size: 32px;
+            margin-bottom: 16px;
+          }
+
+          .valentine-watch__text {
+            font-size: 14px;
+            margin-bottom: 16px;
+          }
+
+          .valentine-watch__price {
+            font-size: 16px;
+          }
+
+          .valentine-watch__price-value {
+            font-size: 20px;
+          }
+
+          .valentine-watch__button {
+            font-size: 14px;
+            width: 181px;
+            height: 41px;
+          }
+
+          .valentine-watch__button::before {
+            width: 178px;
+            height: 39px;
+          }
+
+          .valentine-watch__illustration {
+            min-width: 366px;
+          }
+
+        }
+
+        @media screen and (max-width: 1023px) {
+          .valentine-watch__container {
+            min-width: 706px;
+            width: 100%;
+            padding: 0 16px;
+          }
+
+          .valentine-watch__content {
+            max-width: 420px;
+            max-height: 270px;
+            width: 100%;
+            padding-right: 16px;
+          }
+
+          .valentine-watch__photo {
+            width: 100%;
+            max-width: 170px;
+            max-height: 210px;
+          }
+
+          .valentine-watch__title {
+            font-size: 24px;
+            margin-bottom: 12px;
+          }
+
+          .valentine-watch__text {
+            margin-bottom: 12px;
+          }
+
+          .valentine-watch__illustration {
+            min-width: 305px;
+            max-width: 470px;
+          }
+        }
+
+        @media screen and (max-width: 740px) {
+          .valentine-watch {
+            padding-top: 10px;
+            position: relative;
+          }
+
+          .valentine-watch:before {
+            content: '';
+            position: absolute;
+            min-width: 232px;
+            width: 80%;
+            height: 1px;
+            background-color: rgba(0, 0, 0, 0.12);
+            bottom: -20px;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+          }
+
+          .valentine-watch__container {
+            flex-direction: column;
+            max-width: 420px;
+            min-width: 288px;
+            width: 100%;
+          }
+
+          .valentine-watch__content {
+            max-height: initial;
+            margin-bottom: 45px;
+            flex-direction: column;
+            padding-right: 0;
+          }
+
+          .valentine-watch__photo {
+            width: 100%;
+            max-width: 200px;
+            max-height: 200px;
+            min-width: initial;
+            margin-bottom: 40px;
+          }
+
+          .valentine-watch__button {
+            min-width: 288px;
+            width: 100%;
+            height: 36px;
+            margin: 0 auto;
+            padding-bottom: 2px;
+          }
+
+          .valentine-watch__button:before {
+            display: none;
+          }
+
+
+          .valentine__button--border {
+            display: inline;
+            min-width: 288px;
+            width: 100%;
+            height: 36px;
+            margin: 0 auto;
+            position: absolute;
+            top: -4px;
+            left: -3px;
+            border: 1.5px solid #000000;
+            border-radius: 41px;
+          }
+        }
+
+        /******************************** AirPods SECTION ********************************/
+
+        .valentine-airpods {
+          padding-top: 80px;
+        }
+
+        .valentine-airpods__container {
+          max-width: 1366px;
+          margin-left: auto;
+          margin-right: auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .valentine-airpods__content {
+          display: flex;
+          align-items: center;
+          max-width: 695px;
+          width: 100%;
+        }
+
+        .valentine-airpods__illustration {
+          opacity: 0;
+          padding-right: 16px;
+        }
+
+        .anim.valentine-airpods__illustration {
+          animation: valentine-airpods__illustration--anim 1s forwards;
+          animation-timing-function: cubic-bezier(.39,.29,.4,.98);
+          animation-delay: .2s;
+        }
+
+        @keyframes valentine-airpods__illustration--anim {
+          0% {
+            transform: scale3d(1, 1, 1);
+          }
+          30% {
+            transform: scale3d(1.25, .75, 1);
+          }
+          40% {
+            transform: scale3d(0.75, 1.25, 1);
+          }
+          50% {
+            transform: scale3d(1.15, .85, 1);
+          }
+          65% {
+            transform: scale3d(.95, 1.05, 1);
+          }
+          75% {
+            transform: scale3d(1.05, .95, 1);
+          }
+          100% {
+            opacity: 1;
+            transform: scale3d(1, 1, 1);
+          }
+        }
+
+        .valentine-airpods__description {
+          max-width: 325px;
+        }
+
+        .valentine-airpods__title {
+          font-weight: 500;
+          font-size: 42px;
+          color: rgba(0, 0, 0, 0.87);
+          margin-bottom: 20px;
+        }
+
+        .valentine-airpods__text {
+          font-size: 22px;
+          color: rgba(0, 0, 0, 0.87);
+          margin-bottom: 25px;
+        }
+
+        .valentine-airpods__price {
+          font-size: 20px;
+          color: rgba(0, 0, 0, 0.87);
+          margin-bottom: 25px;
+          margin-top: 8px;
+        }
+
+        .valentine-airpods__price-value {
+          font-size: 24px;
+          font-weight: 500;
+        }
+
+        .valentine-airpods__button {
+          width: 254px;
+          height: 43px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #FF690A;
+          font-weight: 500;
+          font-size: 16px;
+          color: #FFFFFF;
+          text-transform: uppercase;
+          border-radius: 41px;
+          position: relative;
+          padding-bottom: 3px;
+        }
+
+        .valentine-airpods__button:hover {
+          color: #000000;
+          box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.12), 0px 9px 46px rgba(0, 0, 0, 0.06), 0px 24px 38px rgba(0, 0, 0, 0.07);
+          transition: 0.25s;
+        }
+
+        .valentine-airpods__button:before {
+          content: '';
+          position: absolute;
+          top: -4px;
+          left: -3px;
+          width: 251px;
+          height: 38px;
+          border: 1.5px solid #000000;
+          border-radius: 41px;
+          padding-bottom: 3px;
+        }
+
+        @media screen and (max-width: 1365px) {
+          .valentine-airpods__container {
+            min-width: 912px;
+            width: 100%;
+            padding: 0 16px;
+          }
+
+          .valentine-airpods__content {
+            max-width: 563px;
+            width: 100%;
+            padding-right: 16px;
+          }
+
+          .valentine-airpods__photo {
+            width: 100%;
+            min-width: 228px;
+          }
+
+          .valentine-airpods__title {
+            font-size: 32px;
+            margin-bottom: 16px;
+          }
+
+          .valentine-airpods__text {
+            font-size: 14px;
+            margin-bottom: 16px;
+          }
+
+          .valentine-airpods__price {
+            font-size: 16px;
+          }
+
+          .valentine-airpods__price-value {
+            font-size: 20px;
+          }
+
+          .valentine-airpods__button {
+            font-size: 14px;
+            width: 181px;
+            height: 41px;
+          }
+
+          .valentine-airpods__button::before {
+            width: 178px;
+            height: 36px;
+          }
+
+          .valentine-airpods__illustration {
+            min-width: 366px;
+          }
+        }
+
+        @media screen and (max-width: 1023px) {
+          .valentine-airpods__container {
+            min-width: 706px;
+            width: 100%;
+            padding: 0 16px;
+          }
+
+          .valentine-airpods__content {
+            max-width: 420px;
+            max-height: 270px;
+            width: 100%;
+            padding-right: 16px;
+          }
+
+          .valentine-airpods__photo {
+            width: 100%;
+            max-width: 170px;
+            max-height: 210px;
+          }
+
+          .valentine-airpods__title {
+            font-size: 24px;
+            margin-bottom: 12px;
+          }
+
+          .valentine-airpods__text {
+            margin-bottom: 12px;
+          }
+
+          .valentine-airpods__illustration {
+            min-width: 305px;
+            max-width: 470px;
+          }
+        }
+
+        @media screen and (max-width: 740px) {
+          .valentine-airpods {
+            padding-top: 60px;
+            position: relative;
+          }
+
+          .valentine-airpods:before {
+            content: '';
+            position: absolute;
+            min-width: 232px;
+            width: 80%;
+            height: 1px;
+            background-color: rgba(0, 0, 0, 0.12);
+            bottom: -20px;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+          }
+
+          .valentine-airpods__container {
+            flex-direction: column;
+            max-width: 420px;
+            min-width: 288px;
+            width: 100%;
+          }
+
+          .valentine-airpods__content {
+            max-height: initial;
+            margin-bottom: 45px;
+            flex-direction: column;
+            padding-right: 0;
+            order: 1;
+          }
+
+          .valentine-airpods__description {
+            order: 2;
+          }
+
+          .valentine-airpods__photo {
+            width: 100%;
+            max-width: 200px;
+            max-height: 200px;
+            min-width: initial;
+            margin-bottom: 40px;
+            order: 1;
+          }
+
+          .valentine-airpods__button {
+            min-width: 288px;
+            width: 100%;
+            height: 36px;
+            margin: 0 auto;
+            padding-bottom: 2px;
+          }
+
+          .valentine-airpods__button:before {
+            display: none;
+          }
+
+          .valentine-airpods__illustration {
+            order: 2;
+          }
+        }
+
+        /******************************** iPhone SECTION ********************************/
+
+        .valentine-iphone {
+          padding-top: 80px;
+        }
+
+        .valentine-iphone__container {
+          max-width: 1366px;
+          margin-left: auto;
+          margin-right: auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .valentine-iphone__content {
+          display: flex;
+          align-items: center;
+          max-width: 695px;
+          width: 100%;
+        }
+
+        .valentine-iphone__illustration {
+          opacity: 0;
+        }
+
+        .anim.valentine-iphone__illustration {
+          animation: valentine-iphone__illustration--anim 1s forwards;
+          animation-timing-function: cubic-bezier(.39,.29,.4,.98);
+          animation-delay: .2s;
+        }
+
+        @keyframes valentine-iphone__illustration--anim {
+          0% {
+            transform: scale3d(1, 1, 1);
+          }
+          30% {
+            transform: scale3d(1.25, .75, 1);
+          }
+          40% {
+            transform: scale3d(0.75, 1.25, 1);
+          }
+          50% {
+            transform: scale3d(1.15, .85, 1);
+          }
+          65% {
+            transform: scale3d(.95, 1.05, 1);
+          }
+          75% {
+            transform: scale3d(1.05, .95, 1);
+          }
+          100% {
+            opacity: 1;
+            transform: scale3d(1, 1, 1);
+          }
+        }
+
+        .valentine-iphone__description {
+          max-width: 325px;
+        }
+
+        .valentine-iphone__title {
+          font-weight: 500;
+          font-size: 42px;
+          color: rgba(0, 0, 0, 0.87);
+          margin-bottom: 20px;
+        }
+
+        .valentine-iphone__text {
+          font-size: 22px;
+          color: rgba(0, 0, 0, 0.87);
+          margin-bottom: 25px;
+        }
+
+        .valentine__discount {
+          background-color: #FF0000;
+          border-radius: 4px;
+          color: #fff;
+          padding: 4px 8px;
+          font-size: 14px;
+        }
+
+        .valentine-iphone__price {
+          font-size: 20px;
+          color: rgba(0, 0, 0, 0.87);
+          margin-bottom: 25px;
+          margin-top: 8px;
+        }
+
+        .valentine-iphone__price-value {
+          font-size: 24px;
+          font-weight: 500;
+        }
+
+        .valentine-iphone__button {
+          width: 254px;
+          height: 43px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #FF690A;
+          font-weight: 500;
+          font-size: 16px;
+          color: #FFFFFF;
+          text-transform: uppercase;
+          border-radius: 41px;
+          position: relative;
+          padding-bottom: 3px;
+        }
+
+        .valentine-iphone__button:hover {
+          color: #000000;
+          box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.12), 0px 9px 46px rgba(0, 0, 0, 0.06), 0px 24px 38px rgba(0, 0, 0, 0.07);
+          transition: 0.25s;
+        }
+
+        .valentine-iphone__button:before {
+          content: '';
+          position: absolute;
+          top: -4px;
+          left: -3px;
+          width: 251px;
+          height: 41px;
+          border: 1.5px solid #000000;
+          border-radius: 41px;
+        }
+
+        @media screen and (max-width: 1365px) {
+          .valentine-iphone__container {
+            min-width: 912px;
+            width: 100%;
+            padding: 0 16px;
+          }
+
+          .valentine-iphone__content {
+            max-width: 563px;
+            width: 100%;
+            padding-right: 16px;
+          }
+
+          .valentine-iphone__photo {
+            width: 100%;
+            min-width: 228px;
+          }
+
+          .valentine-iphone__title {
+            font-size: 32px;
+            margin-bottom: 16px;
+          }
+
+          .valentine-iphone__text {
+            font-size: 14px;
+            margin-bottom: 16px;
+          }
+
+          .valentine-iphone__price {
+            font-size: 16px;
+          }
+
+          .valentine-iphone__price-value {
+            font-size: 20px;
+          }
+
+          .valentine-iphone__button {
+            font-size: 14px;
+            width: 181px;
+            height: 41px;
+          }
+
+          .valentine-iphone__button::before {
+            width: 178px;
+            height: 39px;
+          }
+
+          .valentine-iphone__illustration {
+            min-width: 366px;
+          }
+        }
+
+        @media screen and (max-width: 1023px) {
+          .valentine-iphone__container {
+            min-width: 706px;
+            width: 100%;
+            padding: 0 16px;
+          }
+
+          .valentine-iphone__content {
+            max-width: 420px;
+            max-height: 270px;
+            width: 100%;
+            padding-right: 16px;
+          }
+
+          .valentine-iphone__photo {
+            width: 100%;
+            max-width: 170px;
+            max-height: 210px;
+          }
+
+          .valentine-iphone__title {
+            font-size: 24px;
+            margin-bottom: 12px;
+          }
+
+          .valentine-iphone__text {
+            margin-bottom: 12px;
+          }
+
+          .valentine-iphone__illustration {
+            min-width: 305px;
+            max-width: 470px;
+          }
+        }
+
+        @media screen and (max-width: 740px) {
+          .valentine-iphone {
+            padding-top: 60px;
+            position: relative;
+          }
+
+          .valentine-iphone:before {
+            content: '';
+            position: absolute;
+            min-width: 232px;
+            width: 80%;
+            height: 1px;
+            background-color: rgba(0, 0, 0, 0.12);
+            bottom: -20px;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+          }
+
+          .valentine-iphone__container {
+            flex-direction: column;
+            max-width: 420px;
+            min-width: 288px;
+            width: 100%;
+          }
+
+          .valentine-iphone__content {
+            max-height: initial;
+            margin-bottom: 45px;
+            flex-direction: column;
+            padding-right: 0;
+          }
+
+          .valentine-iphone__photo {
+            width: 100%;
+            max-width: 200px;
+            max-height: 200px;
+            min-width: initial;
+            margin-bottom: 40px;
+          }
+
+          .valentine-iphone__button {
+            min-width: 288px;
+            width: 100%;
+            height: 36px;
+            margin: 0 auto;
+            padding-bottom: 2px;
+          }
+
+          .valentine-iphone__button:before {
+            display: none;
+          }
+        }
+
+        /******************************** iPad SECTION ********************************/
+
+        .valentine-ipad {
+          padding-top: 80px;
+        }
+
+        .valentine-ipad__container {
+          max-width: 1366px;
+          margin-left: auto;
+          margin-right: auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .valentine-ipad__content {
+          display: flex;
+          align-items: center;
+          max-width: 695px;
+          width: 100%;
+        }
+
+        .valentine-ipad__illustration {
+          opacity: 0;
+          padding-right: 16px;
+        }
+
+        .anim.valentine-ipad__illustration {
+          animation: valentine-ipad__illustration--anim 1s forwards;
+          animation-timing-function: cubic-bezier(.39,.29,.4,.98);
+          animation-delay: .2s;
+        }
+
+        @keyframes valentine-ipad__illustration--anim {
+          0% {
+            transform: scale3d(1, 1, 1);
+          }
+          30% {
+            transform: scale3d(1.25, .75, 1);
+          }
+          40% {
+            transform: scale3d(0.75, 1.25, 1);
+          }
+          50% {
+            transform: scale3d(1.15, .85, 1);
+          }
+          65% {
+            transform: scale3d(.95, 1.05, 1);
+          }
+          75% {
+            transform: scale3d(1.05, .95, 1);
+          }
+          100% {
+            opacity: 1;
+            transform: scale3d(1, 1, 1);
+          }
+        }
+
+        .valentine-ipad__description {
+          max-width: 325px;
+        }
+
+        .valentine-ipad__title {
+          font-weight: 500;
+          font-size: 42px;
+          color: rgba(0, 0, 0, 0.87);
+          margin-bottom: 20px;
+        }
+
+        .valentine-ipad__text {
+          font-size: 22px;
+          color: rgba(0, 0, 0, 0.87);
+          margin-bottom: 25px;
+        }
+
+        .valentine-ipad__price {
+          font-size: 20px;
+          color: rgba(0, 0, 0, 0.87);
+          margin-bottom: 25px;
+          margin-top: 8px;
+        }
+
+        .valentine-ipad__price-value {
+          font-size: 24px;
+          font-weight: 500;
+        }
+
+        .valentine-ipad__button {
+          width: 254px;
+          height: 43px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #FF690A;
+          font-weight: 500;
+          font-size: 16px;
+          color: #FFFFFF;
+          text-transform: uppercase;
+          border-radius: 41px;
+          position: relative;
+          padding-bottom: 3px;
+        }
+
+        .valentine-ipad__button:hover {
+          color: #000000;
+          box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.12), 0px 9px 46px rgba(0, 0, 0, 0.06), 0px 24px 38px rgba(0, 0, 0, 0.07);
+          transition: 0.25s;
+        }
+
+        .valentine-ipad__button:before {
+          content: '';
+          position: absolute;
+          top: -4px;
+          left: -3px;
+          width: 251px;
+          height: 41px;
+          border: 1.5px solid #000000;
+          border-radius: 41px;
+        }
+
+        @media screen and (max-width: 1365px) {
+          .valentine-ipad__container {
+            min-width: 912px;
+            width: 100%;
+            padding: 0 16px;
+          }
+
+          .valentine-ipad__content {
+            max-width: 563px;
+            width: 100%;
+            padding-right: 16px;
+          }
+
+          .valentine-ipad__photo {
+            width: 100%;
+            min-width: 228px;
+          }
+
+          .valentine-ipad__title {
+            font-size: 32px;
+            margin-bottom: 16px;
+          }
+
+          .valentine-ipad__text {
+            font-size: 14px;
+            margin-bottom: 16px;
+          }
+
+          .valentine-ipad__price {
+            font-size: 16px;
+          }
+
+          .valentine-ipad__price-value {
+            font-size: 20px;
+          }
+
+          .valentine-ipad__button {
+            font-size: 14px;
+            width: 181px;
+            height: 41px;
+          }
+
+          .valentine-ipad__button::before {
+            width: 178px;
+            height: 39px;
+          }
+
+          .valentine-ipad__illustration {
+            min-width: 366px;
+          }
+        }
+
+        @media screen and (max-width: 1023px) {
+          .valentine-ipad__container {
+            min-width: 706px;
+            width: 100%;
+            padding: 0 16px;
+          }
+
+          .valentine-ipad__content {
+            max-width: 420px;
+            max-height: 270px;
+            width: 100%;
+            padding-right: 16px;
+          }
+
+          .valentine-ipad__photo {
+            width: 100%;
+            max-width: 170px;
+            max-height: 210px;
+          }
+
+          .valentine-ipad__title {
+            font-size: 24px;
+            margin-bottom: 12px;
+          }
+
+          .valentine-ipad__text {
+            margin-bottom: 12px;
+          }
+
+          .valentine-ipad__illustration {
+            min-width: 305px;
+            max-width: 470px;
+          }
+        }
+
+        @media screen and (max-width: 740px) {
+          .valentine-ipad {
+            padding-top: 60px;
+          }
+
+          .valentine-ipad__container {
+            flex-direction: column;
+            max-width: 420px;
+            min-width: 288px;
+            width: 100%;
+          }
+
+          .valentine-ipad__content {
+            max-height: initial;
+            margin-bottom: 45px;
+            flex-direction: column;
+            padding-right: 0;
+            order: 1;
+          }
+
+          .valentine-ipad__description {
+            order: 2;
+          }
+
+          .valentine-ipad__photo {
+            width: 100%;
+            max-width: 200px;
+            max-height: 200px;
+            min-width: initial;
+            margin-bottom: 40px;
+            order: 1;
+          }
+
+          .valentine-ipad__button {
+            min-width: 288px;
+            width: 100%;
+            height: 36px;
+            margin: 0 auto;
+            padding-bottom: 2px;
+          }
+
+          .valentine-ipad__button:before {
+            display: none;
+          }
+
+          .valentine-ipad__illustration {
+            order: 2;
+          }
+        }
+
+
+        /******************************** RECOMMENDATIONS SECTION ********************************/
+        .valentine-recommendations {
+          position: relative;
+          padding-top: 95px;
+          padding-bottom: 142px;
+          background: url('https://i.citrus.ua/uploads/promo/valentine-apple-land/valentine-apple-devider.png') no-repeat bottom -1px center/100% auto,
+          #FFFFFF;
+        }
+
+        .valentine-recommendations__wrapper {
+          max-width: 1366px;
+          margin-left: auto;
+          margin-right: auto;
+          position: relative;
+        }
+
+        .valentine-recommendations__title {
+          color: #02B0F9;
+          text-align: center;
+          font-weight: 900;
+          font-size: 48px;
+          margin-bottom: 48px;
+          opacity: 0;
+        }
+
+        .anim.valentine-recommendations__title {
+          animation: valentine-woman__title--anim 0.7s forwards;
+          animation-timing-function: cubic-bezier(.39,.29,.4,.98);
+        }
+
+        @keyframes valentine-woman__title--anim {
+          0% {opacity: 1;transform: scale(0);}
+          50% {opacity: 1;transform: scale(1.2);}
+          70% {opacity: 1;transform: scale(0.8);}
+          100% {opacity: 1;transform: scale(1);}
+        }
+
+        @media screen and (max-width: 1365px) {
+          .valentine-recommendations {
+            padding-top: 109px;
+            padding-bottom: 64px;
+          }
+
+          .valentine-recommendations__title {
+            font-size: 28px;
+          }
+        }
+
+        @media screen and (max-width: 1023px) {
+          .valentine-recommendations {
+            padding-top: 98px;
+            padding-bottom: 87px;
+          }
+        }
+
+        @media screen and (max-width: 700px) {
+          .valentine-recommendations {
+            padding-top: 52px;
+            padding-bottom: 61px;
+          }
+
+          .valentine-recommendations__title {
+            font-size: 24px;
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+        }
+
+        /******************************** Product Cards SECTION ********************************/
+
+        .valentine-products {
+          max-width: 1366px;
+          margin-left: auto;
+          margin-right: auto;
+          padding-left: 20px;
+          padding-right: 20px;
+          position: relative;
+          z-index: 1;
+          opacity: 0;
+        }
+
+        .anim.valentine-products {
+          animation: valentine-products--anim 1s forwards;
+        }
+
+        @keyframes valentine-products--anim {
+          from { opacity: 0; transform: translate3d(0, 100%, 0); }
+          to   { opacity: 1; transform: none; }
+        }
+
+        .valentine-products__items {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 32px;
+          flex-wrap: wrap;
+        }
+
+        .valentine-products__item {
+          width: 213px;
+          min-width: 213px;
+          margin-bottom: 15px;
+          background: #FFFFFF;
+          box-shadow: 0 4px 8px rgba(0, 30, 50, 0.1);
+          border-radius: 10px;
+          padding-top: 8px;
+          padding-bottom: 16px;
+          margin-left: 4px;
+          margin-right: 4px;
+          display: flex;
+          flex-direction: column;
+          transition: box-shadow .3s;
+          transition-timing-function: cubic-bezier(.39,.29,.4,.98);
+        }
+
+        .valentine-products__item:hover {
+          box-shadow: 0 15px 36px rgba(0, 30, 50, 0.25);
+        }
+
+        .apple-products__item--xit {
+          position: relative;
+        }
+
+        .apple-products__item--xit::after {
+          width: 54px;
+          height: 52px;
+          position: absolute;
+          content: '';
+          left: -5px;
+          top: -10px;
+          background: url('https://i.citrus.ua/uploads/promo/valentine-apple-land/valentine-sale-ru.svg') no-repeat center/100% 100%;
+        }
+
+        @media screen and (max-width: 500px) {
+          .apple-products__item--xit::after {
+            width: 35px;
+            height: 33px;
+            top: -10px;
+            left: -5px;
+          }
+        }
+
+        .valentine-products__item-image {
+          width: 100%;
+          height: 181px;
+          margin-left: auto;
+          margin-right: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 6px;
+        }
+
+        .valentine-products__item-wrapper {
+          width: calc(100% - 32px);
+          margin-left: auto;
+          margin-right: auto;
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+        }
+
+        .valentine-products__item-wrapper:hover .valentine-products__item-title {
+          color: #FF8637;
+        }
+
+        .valentine-products__item-title {
+          color: #3B6D9A;
+          font-size: 14px;
+          margin-bottom: 8px;
+          transition: 0.25s;
+
+          display: block;
+          word-break: break-all;
+          display: -webkit-box;
+          max-width: 100%;
+          height: 32px;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .valentine-products__item-footer {
+          display: flex;
+          margin-top: auto;
+        }
+
+        .valentine-products__item-discount {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          margin-right: 8px;
+        }
+
+        .valentine-products__item-discount span:nth-child(1) {
+          display: inline-block;
+          font-weight: bold;
+          font-size: 12px;
+          color: #FFFFFF;
+          padding-left: 4px;
+          padding-right: 4px;
+          background: #FF0000;
+          border-radius: 4px;
+        }
+
+        .valentine-products__item-discount span:nth-child(2) {
+          color: rgba(0, 0, 0, 0.54);
+          font-size: 16px;
+          text-decoration: line-through;
+        }
+
+        .valentine-products__item-price {
+          color: rgba(0, 0, 0, 0.87);
+          font-weight: 500;
+          font-size: 21px;
+          line-height: 1;
+        }
+
+        .valentine-products__item-price {
+          align-self: flex-end;
+        }
+
+        .valentine-products__item-price span:nth-child(1) {
+          color: rgba(0, 0, 0, 0.87);
+          font-weight: 500;
+          font-size: 21px;
+        }
+
+        .valentine-products__item-price span:nth-child(2) {
+          font-size: 13px;
+          font-weight: 500;
+          color: rgba(0, 0, 0, 0.87);
+        }
+
+        @media screen and (max-width: 1365px) {
+          .valentine-products__container {
+            max-width: 689px;
+          }
+
+          .valentine-products {
+            padding-left: 80px;
+            padding-right: 80px;
+          }
+
+
+          .valentine-products__items {
+            flex-wrap: wrap;
+            margin-bottom: 0;
+          }
+
+          .valentine-products__item {
+            margin-bottom: 24px;
+            margin-left: 12px;
+            margin-right: 12px;
+          }
+        }
+
+        @media screen and (max-width: 1023px) {
+          .valentine-products__container {
+            padding-left: 16px;
+            padding-right: 16px;
+          }
+        }
+
+        @media screen and (max-width: 900px) {
+          .valentine-products {
+            padding-left: 25px;
+            padding-right: 25px;
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+          .valentine-products {
+            padding-left: 4px;
+            padding-right: 4px;
+          }
+
+          .valentine-products__item-price {
+            position: relative;
+            top: 1px;
+          }
+
+          .valentine-products__items {
+            margin-bottom: 8px;
+          }
+
+          .valentine-products__item {
+            margin-bottom: 8px;
+            width: calc(33% - 8px);
+            max-width: 214px;
+            flex-grow: 1;
+            min-width: 146px;
+            margin-left: 4px;
+            margin-right: 4px;
+          }
+
+          .valentine-products__item:nth-child(odd) {
+            margin-right: 8px;
+          }
+
+          .valentine-products__item-title {
+            font-size: 12px;
+            height: 28px;
+          }
+
+          .valentine-products__item-image {
+            height: 124px;
+          }
+
+          .valentine-products__item-image img {
+            max-height: 100%;
+          }
+
+          .valentine-products__item-discount span:nth-child(2) {
+            font-size: 12px;
+          }
+
+          .valentine-products__item-price span:nth-child(1) {
+            font-size: 14px;
+          }
+
+          .valentine-products__item-price span:nth-child(2) {
+            font-size: 10px;
+          }
+        }
+
+        /******************************** SEND VALENTINE ********************************/
+
+        .loader {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background: white;
+          opacity: 0.6;
+          z-index: 10;
+          display: none;
+        }
+
+        .send-valentine-checkbox {
+          display: flex;
+          align-items: center;
+          width: fit-content;
+          cursor: pointer;
+          margin: 0 auto;
+        }
+
+        .send-valentine-checkbox input[type='checkbox'] { display: none; }
+
+        .send-valentine-checkbox__label {
+          font-weight: 500;
+          font-size: 20px;
+          color: rgba(0, 0, 0, 0.87);
+          margin-left: 32px;
+        }
+
+        .send-valentine-checkbox__checkbox {
+          width: 46px;
+          height: 46px;
+          border-radius: 50%;
+          border: 3px solid #FF680A;
+          position: relative;
+        }
+
+        .send-valentine-checkbox__checkbox::after {
+          content: '';
+          position: absolute;
+          top: -1px;
+          left: -2px;
+          font-size: 36px;
+          transform: scale(0.6);
+          color: #FF680A;
+          display: none;
+          width: 46px;
+          height: 46px;
+          background: url(https://i.citrus.ua/uploads/promo/main-14-february/send-valentine/Vector.png) no-repeat center/contain;
+        }
+
+        .send-valentine-checkbox input[type='checkbox']:checked + .send-valentine-checkbox__checkbox {
+          background: white;
+        }
+
+        .send-valentine-checkbox input[type='checkbox']:checked + .send-valentine-checkbox__checkbox::after {
+          display: block;
+        }
+
+        .send-valentine {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          background: #E9F8FF;
+        }
+
+        .send-valentine__title {
+          margin-bottom: 50px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          margin-top: 30px;
+        }
+
+        .send-valentine__title {
+          font-weight: 900;
+          font-size: 48px;
+          color: #02B0F9;
+          text-align: center;
+        }
+
+        .anim.send-valentine__title{
+          animation: send-valentine__title--anim 1s forwards;
+          animation-timing-function: cubic-bezier(.39,.29,.4,.98);
+        }
+
+        @keyframes send-valentine__title--anim {
+          0% {opacity: 1;transform: scale(0);}
+          50% {opacity: 1;transform: scale(1.2);}
+          70% {opacity: 1;transform: scale(0.8);}
+          100% {opacity: 1;transform: scale(1);}
+        }
+
+        .send-valentine-scenario {
+          max-width: 645px;
+          padding: 0 30px;
+        }
+
+        .send-valentine-scenario__items {
+          position: relative;
+          margin-top: 26px;
+        }
+
+        .send-valentine-scenario__items .swiper-container {
+          max-width: 545px;
+        }
+
+        .send-valentine-scenario__item {
+          border: 3px solid transparent;
+          border-radius: 20px;
+          overflow: hidden;
+          cursor: pointer;
+          display: flex;
+        }
+
+        .send-valentine-scenario__item.active {
+          border-color: #00A0D8;
+          background: #E9F8FF;
+        }
+
+        .send-valentine-scenario-next,
+        .send-valentine-scenario-prev {
+          width: 11px;
+          height: 18px;
+          cursor: pointer;
+          background-size: 10px 44px;
+          top: 47%;
+        }
+
+        .send-valentine-scenario-next {
+          right: -30px;
+        }
+
+        .send-valentine-scenario-prev {
+          left: -30px;
+        }
+
+        .send-valentine-scenario__selected {
+          max-width: 535px;
+          width: 100%;
+          height: 450px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto;
+        }
+
+        .send-valentine-scenario__selected img {
+          display: block;
+        }
+
+        .send-valentine-form {
+          max-width: 420px;
+          width: 100%;
+          padding-bottom: 10px;
+          margin-left: 90px;
+          position: relative;
+        }
+
+        .send-valentine-form input,
+        .send-valentine-form textarea {
+          border: 1.5px solid #00A0D8;
+        }
+
+        .send-valentine-form input::placeholder,
+        .send-valentine-form textarea::placeholder {
+          font-weight: 500;
+          font-size: 16px;
+          color: #757575;
+        }
+
+        .send-valentine-form__input {
+          position: relative;
+          max-width: 100%;
+          border-radius: 50px;
+          margin-bottom: 20px;
+          height: 46px;
+        }
+
+        .send-valentine-form input {
+          border-radius: 50px;
+          background: transparent;
+          z-index: 3;
+          position: relative;
+          height: 100%;
+          padding-left: 20px;
+          font-size: 16px;
+        }
+
+        .send-valentine-form__input::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: white;
+          position: absolute;
+          top: 3px;
+          left: 3px;
+          z-index: 1;
+          border-radius: 50px;
+        }
+
+        .send-valentine-form__textarea {
+          position: relative;
+          max-width: 100%;
+          border-radius: 22px;
+          margin-bottom: 12px;
+        }
+
+        .send-valentine-form__textarea::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 99%;
+          background: white;
+          position: absolute;
+          top: 3px;
+          left: 3px;
+          z-index: 1;
+          border-radius: 22px;
+        }
+
+        .send-valentine-form textarea {
+          width: 100%;
+          height: 216px;
+          padding: 12px 20px;
+          border-radius: 22px;
+          background: transparent;
+          z-index: 3;
+          position: relative;
+          outline: none;
+          resize: none;
+          font-size: 16px;
+        }
+
+        .send-valentine-form__label {
+          font-size: 20px;
+          color: rgba(0, 0, 0, 0.87);
+          font-weight: 500;
+          margin-bottom: 16px;
+        }
+
+        .send-valentine-form__counter {
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.54);
+          text-align: right;
+        }
+
+        .send-valentine-form__submit {
+          width: 241px;
+          height: 43px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #FF690A;
+          font-weight: 900;
+          font-size: 18px;
+          color: #FFFFFF;
+          text-transform: uppercase;
+          border-radius: 41px;
+          position: relative;
+          margin-left: auto;
+          margin-top: 24px;
+        }
+
+        .send-valentine-form__submit::before {
+          content: '';
+          position: absolute;
+          top: -4px;
+          left: -4px;
+          width: 241px;
+          height: 44px;
+          border: 1.5px solid #000000;
+          border-radius: 41px;
+        }
+
+        .send-valentine-thanks {
+          display: none;
+        }
+
+        .send-valentine-thanks__preview {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 8px;
+        }
+
+        .send-valentine-thanks__title {
+          font-weight: 500;
+          font-size: 40px;
+          text-align: center;
+          color: #000000;
+          margin-bottom: 20px;
+        }
+
+        .send-valentine-thanks__subtitle {
+          font-size: 18px;
+          text-align: center;
+          color: #000000;
+        }
+
+        @media screen and (max-width: 1156px) {
+          .send-valentine-scenario {
+            max-width: 450px;
+          }
+
+          .send-valentine__title {
+            font-size: 28px;
+          }
+        }
+
+        @media screen and (max-width: 1005px) {
+          .send-valentine-form {
+            max-width: 365px;
+            margin-left: 50px;
+          }
+        }
+
+        @media screen and (max-width: 890px) {
+          .send-valentine-scenario {
+            max-width: 325px;
+          }
+
+          .send-valentine-scenario__selected {
+            height: auto;
+            margin-bottom: 25px;
+          }
+
+          .send-valentine-checkbox__label {
+            font-size: 14px;
+          }
+
+          .send-valentine-checkbox__checkbox {
+            width: 34px;
+            height: 34px;
+          }
+
+          .send-valentine-checkbox__checkbox::after {
+            width: 34px;
+            height:34px;
+            font-size: 34px;
+          }
+        }
+
+        @media screen and (max-width: 775px) {
+          .send-valentine-form {
+            max-width: 320px;
+          }
+        }
+
+        @media screen and (max-width: 720px) {
+          .send-valentine {
+            padding-top: 5px;
+          }
+
+          .send-valentine__title {
+            font-size: 26px;
+          }
+
+          .send-valentine-scenario {
+            max-width: 100%;
+            margin-bottom: 55px;
+          }
+
+          .send-valentine-form {
+            margin: 0 auto;
+            max-width: 100%;
+            padding: 0 16px;
+          }
+
+          .send-valentine-form__submit {
+            margin-right: auto;
+          }
+
+          .send-valentine-scenario-next {
+            right: -20px;
+          }
+
+          .send-valentine-scenario-prev {
+            left: -20px;
+          }
+
+          .send-valentine-checkbox__label {
+            margin-left: 14px;
+          }
+
+          .send-valentine-thanks__subtitle {
+            margin-bottom: 40px;
+          }
+        }
+
+      </style>
+
+      <div class="valentine-apple">
+        <section class="valentine-day__header valentine-header">
+          <img class="valentine-header__sky-left" data-anim="true" src="https://i.citrus.ua/uploads/promo/teaser-14-february/header/sky-left.png" alt="">
+          <img class="valentine-header__sky-right" data-anim="true" src="https://i.citrus.ua/uploads/promo/teaser-14-february/header/sky-right.png" alt="">
+          <div class="valentine-header__wrapper">
+            <div class="valentine-header__image">
+              <img class="valentine-header__preview" src="https://i.citrus.ua/uploads/promo/valentine-apple-land/header-girl-boy-1.png" alt="">
+            </div>
+
+            <div class="valentine-header__description">
+              <div class="valentine-header__text">
+                <img data-anim="true" class="valentine-header__text-preview" src="https://i.citrus.ua/uploads/promo/valentine-apple-land/valentine-apple-banner-text-ru.svg"
+                     alt="">
+              </div>
+            </div>
+          </div>
+          <div data-anim="true" class="valentine-header__mouse">
+            <img src="https://i.citrus.ua/uploads/promo/valentine-apple-land/apple-mouse.svg" alt="mouse icon">
+          </div>
+        </section>
+
+        <section class="valentine-apple__watch valentine-watch">
+          <div class="valentine-watch__container">
+            <div data-anim="true"  class="valentine-watch__content">
+              <img class="valentine-watch__photo" src="https://i.citrus.ua/uploads/promo/valentine-apple-land/valentine-watch.png" alt="Apple Watch Photo">
+              <div class="valentine-watch__description">
+                <p class="valentine-watch__title">Apple Watch</p>
+                <p class="valentine-watch__text">Влюбленные часов не замечают ... Но они точно следят за тем, как бьется сердце друг друга. Просто представь - ее сердцебиение всегда на расстоянии руки.</p>
+                <p class="valentine-watch__price">от <span class="valentine-watch__price-value">6 799</span> ₴</p>
+                <a class="valentine-watch__button" target="_blank" href="https://www.citrus.ua/smart-chasy/brand-apple/">
+                  Выбрать подарок
+                  <div class="valentine__button--border"></div>
+                </a>
+              </div>
+            </div>
+            <div data-anim="true" class="valentine-watch__illustration">
+              <img src="https://i.citrus.ua/uploads/promo/valentine-apple-land/valentine-watch-ill-ru.png" alt="Apple Watch Illustration">
+            </div>
+          </div>
+        </section>
+
+        <section class="valentine-apple__airpods valentine-airpods">
+          <div class="valentine-airpods__container">
+            <div data-anim="true" class="valentine-airpods__illustration">
+              <img src="https://i.citrus.ua/uploads/promo/valentine-apple-land/valentine-airpods-ill-ru.png" alt="Apple AirPods Illustration">
+            </div>
+            <div data-anim="true" class="valentine-airpods__content">
+              <div class="valentine-airpods__description">
+                <p class="valentine-airpods__title">AirPods</p>
+                <p class="valentine-airpods__text">И не важно, если она любит старый добрый рок-н-ролл, а ты - хип-хоп. Когда вы вместе, вам неважно под ритм какого стиля слушать дыхание друг друга.</p>
+                <span class="valentine__discount">-1000₴</span>
+                <p class="valentine-airpods__price">от <span class="valentine-airpods__price-value">3 999</span> ₴</p>
+                <a class="valentine-airpods__button" target="_blank" href="https://www.citrus.ua/naushniki/brand-apple/naznachenie_true-wireless-stereo-tws/
+">
+                  <div class="valentine__button--border"></div>
+                  Выбрать подарок</a>
+              </div>
+              <img class="valentine-airpods__photo" src="https://i.citrus.ua/uploads/promo/valentine-apple-land/valentine-airpods.png?_t=1580893089" alt="Apple AirPods Photo">
+            </div>
+          </div>
+        </section>
+
+        <section class="valentine-apple__iphone valentine-iphone">
+          <div class="valentine-iphone__container">
+            <div data-anim="true" class="valentine-iphone__content">
+              <img class="valentine-iphone__photo" src="https://i.citrus.ua/uploads/promo/valentine-apple-land/valentine-iphone.png" alt="Apple iPhone Photo">
+              <div class="valentine-iphone__description">
+                <p class="valentine-iphone__title">iPhone XR</p>
+                <p class="valentine-iphone__text">Какая разница в какой вы стране, если вы вместе? Путешествуйте, получайте яркие эмоции и непременно делайте совместные селфи на зависть социальным сетям.</p>
+                <span class="valentine__discount">-2000₴</span>
+                <p class="valentine-iphone__price">от <span class="valentine-iphone__price-value">16 999</span> ₴</p>
+                <a class="valentine-iphone__button" target="_blank" href="https://www.citrus.ua/smartfony/iphone-xr-64gb-coral-apple-633124.html">
+                  <div class="valentine__button--border"></div>
+                  Выбрать подарок
+                </a>
+              </div>
+            </div>
+            <div data-anim="true" class="valentine-iphone__illustration">
+              <img src="https://i.citrus.ua/uploads/promo/valentine-apple-land/valentine-iphone-ill-ru.png" alt="Apple iPhone Illustration">
+            </div>
+          </div>
+        </section>
+
+        <section class="valentine-apple__ipad valentine-ipad">
+          <div class="valentine-ipad__container">
+            <div data-anim="true" class="valentine-ipad__illustration">
+              <img src="https://i.citrus.ua/uploads/promo/valentine-apple-land/valentine-ipad-ill-ru.png" alt="Apple AirPods Illustration">
+            </div>
+            <div data-anim="true" class="valentine-ipad__content">
+              <div class="valentine-ipad__description">
+                <p class="valentine-ipad__title">iPad 10.2</p>
+                <p class="valentine-ipad__text">Смотреть кино, играть, слушать музыку и просматривать интервью в YouTube - делайте это вместе с iPad и под теплым пледом!</p>
+                <span class="valentine__discount">-1500₴</span>
+                <p class="valentine-ipad__price">от <span class="valentine-ipad__price-value">8 999</span> ₴</p>
+                <a class="valentine-ipad__button" target="_blank" href="https://www.citrus.ua/planshety/ipad-102-32gb-silver-apple-2019-653256.html">
+                  <div class="valentine__button--border"></div>
+                  Выбрать подарок
+                </a>
+              </div>
+              <img class="valentine-ipad__photo" src="https://i.citrus.ua/uploads/promo/valentine-apple-land/valentine-ipad.png" alt="Apple iPad Photo">
+            </div>
+          </div>
+        </section>
+
+        <section class="valentine-day__recommendations valentine-recommendations">
+          <div class="valentine-recommendations__wrapper">
+
+            <p data-anim="true" class="valentine-recommendations__title">Топовые подарки любимым</p>
+
+            <div data-anim="true" class="valentine-products">
+              <ul class="valentine-products__items" id="recommendations"></ul>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="valentine-day__send-valentine send-valentine">
+          <p class="send-valentine__title" data-anim="true">Отправь валентинку</p>
+
+          <div class="send-valentine-scenario">
+            <div class="send-valentine-scenario__selected">
+              <img data-url="https://i.citrus.ua/uploads/images/creatives/val_1_535_ru.png" src="https://i.citrus.ua/uploads/images/creatives/val_1_535_ru.png" alt="image">
+            </div>
+
+            <div class="send-valentine-scenario__confirm">
+              <label class="send-valentine-checkbox">
+                <input type="checkbox">
+                <span class="send-valentine-checkbox__checkbox"></span>
+                <span class="send-valentine-checkbox__label">Использовать эту валентинку</span>
+              </label>
+            </div>
+
+            <div class="send-valentine-scenario__items">
+              <div class="swiper-container">
+                <ul class="swiper-wrapper send-valentine-scenario__list">
+                  <li class="swiper-slide send-valentine-scenario__item" data-url="https://i.citrus.ua/uploads/images/creatives/val_1_535_ru.png">
+                    <img src="https://i.citrus.ua/uploads/images/creatives/val_1_535_ru.png" alt="image">
+                  </li>
+                  <li class="swiper-slide send-valentine-scenario__item" data-url="https://i.citrus.ua/uploads/images/creatives/val_3_535_ru.png">
+                    <img src="https://i.citrus.ua/uploads/images/creatives/val_3_535_ru.png" alt="image">
+                  </li>
+                  <li class="swiper-slide send-valentine-scenario__item" data-url="https://i.citrus.ua/uploads/images/creatives/val_2_535_ru.png">
+                    <img src="https://i.citrus.ua/uploads/images/creatives/val_2_535_ru.png" alt="image">
+                  </li>
+                  <li class="swiper-slide send-valentine-scenario__item" data-url="https://i.citrus.ua/uploads/images/creatives/val_4_535_ru.png">
+                    <img src="https://i.citrus.ua/uploads/images/creatives/val_4_535_ru.png" alt="image">
+                  </li>
+                </ul>
+              </div>
+
+              <div class="swiper-button-prev send-valentine-scenario-prev"></div>
+              <div class="swiper-button-next send-valentine-scenario-next"></div>
+            </div>
+          </div>
+
+          <div class="send-valentine-form">
+            <div class="loader"></div>
+
+            <form id="send-valentine-form">
+              <p class="send-valentine-form__label">От кого</p>
+              <div class="send-valentine-form__input">
+                <input type="text" placeholder="Ваше имя" name="senderName" required>
+              </div>
+              <div class="send-valentine-form__input">
+                <input type="email" placeholder="Ваш Email" name="senderEmail" required>
+              </div>
+              <p class="send-valentine-form__label">Кому</p>
+              <div class="send-valentine-form__input">
+                <input type="text" placeholder="Имя получателя" name="recipientName" required>
+              </div>
+              <div class="send-valentine-form__input">
+                <input type="email" placeholder="Email получателя" name="recipientEmail" required>
+              </div>
+              <div class="send-valentine-form__textarea">
+                <textarea type="text" placeholder="Сообщение" maxlength="400" name="message" required></textarea>
+              </div>
+              <div class="send-valentine-form__counter"><span class="current">0</span> / 400</div>
+              <button class="send-valentine-form__submit" type="submit">Отправить</button>
+            </form>
+
+            <div class="send-valentine-thanks">
+              <div class="send-valentine-thanks__preview">
+                <img src="https://i.citrus.ua/uploads/promo/main-14-february/send-valentine/mail.png" alt="letter">
+              </div>
+
+              <p class="send-valentine-thanks__title">
+                Отлично!
+              </p>
+
+              <p class="send-valentine-thanks__subtitle">
+                Твоя валентинка уже в пути! Еще несколько мгновений и она окажется в электронные ящике любимого человека.
+              </p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+<script>
+(function () {
+        if (!window.dataLayer) {
+          window.dataLayer = [];
+        }
+
+        function createScript (url, onloadCb) {
+          const bodyElement = document.getElementsByTagName('BODY')[0];
+          const scriptContent = document.createElement('script');
+          scriptContent.type = 'text/javascript';
+          scriptContent.async = false;
+          scriptContent.src = url;
+          if (onloadCb) {
+            scriptContent.onload = onloadCb;
+          }
+          bodyElement.appendChild(scriptContent);
+        }
+
+        function debounce(f, ms) {
+          let timer = null;
+          return function () {
+            let _this = this;
+            let onComplete = function () {
+              f.apply(_this, arguments);
+              timer = null;
+            };
+            if (timer) {
+              clearTimeout(timer);
+            }
+            timer = setTimeout(onComplete, ms);
+          };
+        }
+
+        function onScroll() {
+          let images = [].slice.call(document.querySelectorAll('img[data-src]'));
+
+          function lazyLoad () {
+            let scrollTop = window.pageYOffset;
+            images.forEach( (image, i) => {
+              let { top } =  image.getBoundingClientRect();
+              if(top - 800 < scrollTop ) {
+                image.src = image.getAttribute('data-src');
+                images[i] = null;
+              }
+            });
+
+            images = [].filter.call(images, item => item);
+          }
+
+          window.addEventListener('scroll', function (e) {
+            lazyLoad();
+          });
+
+          lazyLoad();
+        }
+
+        function makeAnimation(elements) {
+          let screenHeight;
+          let elemToViewPort;
+
+          const timeToDisableAnim = 3000;
+
+          function addAnimation(elem) {
+            elem.classList.add('anim');
+            elem.setAttribute('data-anim', 'false');
+
+            let timer = setInterval(function () {
+              let elemToTop = elem.getBoundingClientRect().top;
+              let elemToBottom = elem.getBoundingClientRect().bottom;
+
+              if (elemToBottom <= 0 || elemToTop >= screenHeight) {
+                elem.classList.remove('anim');
+                elem.setAttribute('data-anim', 'true');
+                clearInterval(timer);
+                timer = null;
+              }
+            }, timeToDisableAnim);
+          }
+
+          function onScrollAnimate() {
+            elements.forEach(function (elem) {
+              let elemToTop = elem.getBoundingClientRect().top;
+              let elemToBottom = elem.getBoundingClientRect().bottom;
+
+              if (((elemToTop <= elemToViewPort && elemToTop >= 0) || (elemToBottom >= screenHeight / 4 && elemToTop <= 0)) && elem.getAttribute('data-anim') === 'true') {
+                if (!elem.complete && elem.tagName === 'IMG') {
+                  elem.setAttribute('data-anim', 'false');
+                  elem.addEventListener('load', function () {
+                    addAnimation(elem);
+                  });
+
+                  return;
+                }
+
+                if (elem.tagName !== 'IMG') {
+                  let images = elem.querySelectorAll('img');
+
+                  [].forEach.call(images, function (image) {
+                    if (!image.complete) {
+                      image.addEventListener('load', function () {
+                        onScrollAnimate();
+                        return;
+                      });
+                    }
+                  });
+                }
+
+                addAnimation(elem);
+              }
+            });
+          }
+
+          function onResize() {
+            screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            elemToViewPort = screenHeight - screenHeight / 4;
+          }
+
+          onResize();
+          onResize = debounce(onResize, 10);
+
+          onScrollAnimate();
+          onScrollAnimate = debounce(onScrollAnimate, 10);
+
+          document.addEventListener('scroll', onScrollAnimate);
+          window.addEventListener('resize', onResize);
+        }
+
+        let stockItems = [
+          642209,
+          656292,
+          633124,
+          653217,
+          653236,
+          652865,
+          653257,
+          605297,
+          650399,
+          614780
+        ];
+
+        function getHit (item) {
+          return stockItems.find((stockItem) => stockItem === item.id) ? ' apple-products__item--xit' : '';
+        }
+
+        function getPageData() {
+          function getDisplay(number) {
+            return (number == '0') ? 'none' : 'block';
+          }
+
+          function getOpacity(number) {
+            return (number == '0') ? '0' : '1';
+          }
+
+          function formatPrice (price) {
+            return (price || 0).toLocaleString().replace(/\D+/g, ' ');
+          }
+
+          function getProducts(element, arr) {
+            arr.forEach(function (item) {
+              element.innerHTML += `<li class="valentine-products__item${getHit(item)}">
+                      <a href="https://www.citrus.ua${item.url}" target="_blank" class="valentine-products__item-wrapper">
+                        <div class="valentine-products__item-image">
+                          <img src="${item.preview.src}" alt="Product Image">
+                        </div>
+
+                        <p class="valentine-products__item-title">${item.name}</p>
+
+                        <div class="valentine-products__item-footer">
+                          <div class="valentine-products__item-discount" style="display:${getDisplay(item.prices.old)}">
+                            <span>-${item.sale.percent}%</span>
+                            <span style="display:${getDisplay(item.prices.old)}">${formatPrice(item.prices.old)}</span>
+                          </div>
+
+                          <div class="valentine-products__item-price">
+                            <span>${formatPrice(item.prices.price)}</span>
+                            <span>грн</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>`;
+            });
+          }
+
+          function initSendValentineSwiper() {
+            let valentineSliderButtons = {
+              prevBtn: document.querySelector('.send-valentine-scenario-prev'),
+              nextBtn: document.querySelector('.send-valentine-scenario-next'),
+            };
+
+            let valentineSlider = new Swiper('.send-valentine-scenario__items .swiper-container', {
+              slidesPerView: 3,
+              spaceBetween: 10,
+              prevButton: valentineSliderButtons.prevBtn,
+              nextButton: valentineSliderButtons.nextBtn,
+              breakpoints: {
+                890: {
+                  slidesPerView: 2,
+                }
+              }
+            });
+          }
+
+          createScript('https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js', function () {
+            initSendValentineSwiper();
+          });
+
+          let textareaCounter = document.querySelector('.send-valentine-form__counter .current');
+          let selectedScenario = document.querySelector('.send-valentine-scenario__selected img');
+          let selectedValentineCheckbox = document.querySelector('.send-valentine-checkbox input[type="checkbox"]');
+          let sendValentineForm = document.getElementById('send-valentine-form');
+          let thanksWindow = document.querySelector('.send-valentine-thanks');
+          let loader = document.querySelector('.send-valentine-form .loader');
+          let itemActiveClassName = 'active';
+
+          Array.from(document.querySelectorAll('.send-valentine-scenario__item'))
+            .forEach((item, index, array) => {
+              item.addEventListener('click', (event) => {
+                selectedValentineCheckbox.checked = false;
+                selectedScenario.dataset.url = item.dataset.url;
+                selectedScenario.src = item.querySelector('img').src;
+                array.forEach(item => item.classList.remove(itemActiveClassName));
+                item.classList.add(itemActiveClassName);
+              });
+            });
+
+          document.querySelector('.send-valentine-form__textarea textarea').addEventListener('input', (event) => {
+            textareaCounter.textContent = event.target.value.length;
+          });
+
+          sendValentineForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const formData = new FormData();
+            const formSendRequest = new XMLHttpRequest;
+            const data = {
+              senderName: form.senderName.value,
+              senderEmail: form.senderEmail.value,
+              recipientName: form.recipientName.value,
+              recipientEmail: form.recipientEmail.value,
+              message: form.message.value,
+              image: selectedScenario.dataset.url,
+            };
+            const notAllowedCharacters = ['http', '://', '.com', '.net', '.ua', '.ru', '.org'];
+
+            function isDisabledFormSend() {
+              let messageContainsUrls = notAllowedCharacters.reduce((acc, v) => form.message.value.includes(v) || acc, false);
+
+              return messageContainsUrls;
+            }
+
+            if (!isDisabledFormSend()) {
+              formData.set('fio|1517', data.senderName);
+              formData.set('sender_email|1754', data.senderEmail);
+              formData.set('order_to_name|22', data.recipientName);
+              formData.set('email|1758', data.recipientEmail);
+              formData.set('message|1755', data.message);
+              formData.set('img_link|1756', data.image);
+
+              formSendRequest.open('POST', 'https://api.citrus.ua/forms/4294/answers', true);
+              formSendRequest.send(formData);
+
+              formSendRequest.onload = () => {
+                form.style.display = 'none';
+                loader.style.display = 'none';
+                thanksWindow.style.display = 'block';
+              }
+            }
+          });
+
+          let recommendations = document.getElementById('recommendations');
+          recommendations.innerHTML = '';
+
+          fetch('https://api.citrus.ua/v5/products?segmentId=6419')
+            .then(response => response.json())
+            .then(data => {
+              getProducts(recommendations, data.data);
+            });
+        }
+
+        getPageData();
+
+        let animationImages = document.querySelectorAll('[data-anim]');
+        animationImages = [].slice.call(animationImages);
+        makeAnimation(animationImages);
+
+        onScroll = debounce(onScroll, 100);
+        onScroll();
+
+      })();
+</script>

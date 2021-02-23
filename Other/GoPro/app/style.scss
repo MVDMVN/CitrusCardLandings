@@ -1,0 +1,782 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  //margin: 0;
+  margin: 50px 0 50px 0;
+  overflow-x: hidden;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  color: transparent;
+}
+
+form select,
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding: 0 0 0 12px;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3b6d9a;
+  outline: none;
+  transition: 0.3s;
+}
+
+button {
+  display: block;
+  background: 0 0;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  line-height: 44px;
+  transition: 0.3s;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+}
+
+@keyframes text-right-slide-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes text-left-slide-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes text-bottom-slide-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes text-opacity-anim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.gopro9 {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+
+  .gopro9-header {
+    background-color: #f2fbff;
+    display: flex;
+  }
+
+  .gopro9-header__container {
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .gopro9-header__container picture {
+    display: flex;
+    justify-content: center;
+  }
+
+  .gopro9-resolution {
+    background: #000;
+  }
+
+  .gopro9-resolution__content {
+    padding: 90px 24px 90px 24px;
+    max-width: 830px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .gopro9-resolution__title {
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 66px;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+
+  .gopro9-resolution__subtitle {
+    font-size: 18px;
+    line-height: 27px;
+    color: #fff;
+  }
+
+  .gopro9-resolution__image {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .gopro9-resolution__image--mob {
+    display: none;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .gopro9-resolution__content {
+      padding: 80px 24px 80px 24px;
+    }
+
+    .gopro9-resolution__title {
+      font-size: 40px;
+      line-height: 47px;
+    }
+
+    .gopro9-resolution__subtitle {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .gopro9-resolution__content {
+      padding: 60px 24px 60px 24px;
+    }
+
+    .gopro9-resolution__title {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    .gopro9-resolution__subtitle {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .gopro9-resolution__content {
+      padding: 60px 16px 60px 16px;
+    }
+
+    .gopro9-resolution__image {
+      display: none;
+    }
+
+    .gopro9-resolution__image--mob {
+      display: flex;
+      margin: 0 auto;
+    }
+  }
+
+  .gopro9-pixels {
+    background: #000;
+  }
+
+  .gopro9-pixels__content {
+    padding: 90px 24px 90px 24px;
+    max-width: 830px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .gopro9-pixels__title {
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 66px;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+
+  .gopro9-pixels__subtitle {
+    font-size: 18px;
+    line-height: 27px;
+    color: #fff;
+  }
+
+  .gopro9-pixels__image {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .gopro9-pixels__image--mob {
+    display: none;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .gopro9-pixels__content {
+      padding: 80px 24px 80px 24px;
+    }
+
+    .gopro9-pixels__title {
+      font-size: 40px;
+      line-height: 47px;
+    }
+
+    .gopro9-pixels__subtitle {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .gopro9-pixels__content {
+      padding: 60px 24px 60px 24px;
+    }
+
+    .gopro9-pixels__title {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    .gopro9-pixels__subtitle {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .gopro9-pixels__content {
+      padding: 60px 16px 60px 16px;
+    }
+
+    .gopro9-pixels__image {
+      display: none;
+    }
+
+    .gopro9-pixels__image--mob {
+      display: flex;
+      margin: 0 auto;
+    }
+  }
+
+  .gopro9-screens {
+    background: #000;
+  }
+
+  .gopro9-screens__content {
+    padding: 90px 24px 90px 24px;
+    max-width: 830px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .gopro9-screens__title {
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 66px;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+
+  .gopro9-screens__subtitle {
+    font-size: 18px;
+    line-height: 27px;
+    color: #fff;
+  }
+
+  .gopro9-screens__image {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .gopro9-screens__image--mob {
+    display: none;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .gopro9-screens__content {
+      padding: 80px 24px 80px 24px;
+    }
+
+    .gopro9-screens__title {
+      font-size: 40px;
+      line-height: 47px;
+    }
+
+    .gopro9-screens__subtitle {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .gopro9-screens__content {
+      padding: 60px 24px 60px 24px;
+    }
+
+    .gopro9-screens__title {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    .gopro9-screens__subtitle {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .gopro9-screens__content {
+      padding: 60px 16px 60px 16px;
+    }
+
+    .gopro9-screens__image {
+      display: none;
+    }
+
+    .gopro9-screens__image--mob {
+      display: flex;
+      margin: 0 auto;
+    }
+  }
+
+  .gopro9-hypersmooth {
+    background: #000;
+  }
+
+  .gopro9-hypersmooth__content {
+    padding: 90px 24px 90px 24px;
+    max-width: 830px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .gopro9-hypersmooth__title {
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 66px;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+
+  .gopro9-hypersmooth__subtitle {
+    font-size: 18px;
+    line-height: 27px;
+    color: #fff;
+  }
+
+  .gopro9-hypersmooth__image {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .gopro9-hypersmooth__image--mob {
+    display: none;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .gopro9-hypersmooth__content {
+      padding: 80px 24px 80px 24px;
+    }
+
+    .gopro9-hypersmooth__title {
+      font-size: 40px;
+      line-height: 47px;
+    }
+
+    .gopro9-hypersmooth__subtitle {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .gopro9-hypersmooth__content {
+      padding: 60px 24px 60px 24px;
+    }
+
+    .gopro9-hypersmooth__title {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    .gopro9-hypersmooth__subtitle {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .gopro9-hypersmooth__content {
+      padding: 60px 16px 60px 16px;
+    }
+
+    .gopro9-hypersmooth__image {
+      display: none;
+    }
+
+    .gopro9-hypersmooth__image--mob {
+      display: flex;
+      margin: 0 auto;
+    }
+  }
+
+  .gopro9-slowmo {
+    background: #000;
+  }
+
+  .gopro9-slowmo__content {
+    padding: 90px 24px 90px 24px;
+    max-width: 830px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .gopro9-slowmo__title {
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 66px;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+
+  .gopro9-slowmo__subtitle {
+    font-size: 18px;
+    line-height: 27px;
+    color: #fff;
+  }
+
+  .gopro9-slowmo__image {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .gopro9-slowmo__image--mob {
+    display: none;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .gopro9-slowmo__content {
+      padding: 80px 24px 80px 24px;
+    }
+
+    .gopro9-slowmo__title {
+      font-size: 40px;
+      line-height: 47px;
+    }
+
+    .gopro9-slowmo__subtitle {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .gopro9-slowmo__content {
+      padding: 60px 24px 60px 24px;
+    }
+
+    .gopro9-slowmo__title {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    .gopro9-slowmo__subtitle {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .gopro9-slowmo__content {
+      padding: 60px 16px 60px 16px;
+    }
+
+    .gopro9-slowmo__image {
+      display: none;
+    }
+
+    .gopro9-slowmo__image--mob {
+      display: flex;
+      margin: 0 auto;
+    }
+  }
+
+  .gopro9-timewarp {
+    background: #000;
+  }
+
+  .gopro9-timewarp__content {
+    padding: 90px 24px 90px 24px;
+    max-width: 830px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .gopro9-timewarp__title {
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 66px;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+
+  .gopro9-timewarp__subtitle {
+    font-size: 18px;
+    line-height: 27px;
+    color: #fff;
+  }
+
+  .gopro9-timewarp__image {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .gopro9-timewarp__image--mob {
+    display: none;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .gopro9-timewarp__content {
+      padding: 80px 24px 80px 24px;
+    }
+
+    .gopro9-timewarp__title {
+      font-size: 40px;
+      line-height: 47px;
+    }
+
+    .gopro9-timewarp__subtitle {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .gopro9-timewarp__content {
+      padding: 60px 24px 60px 24px;
+    }
+
+    .gopro9-timewarp__title {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    .gopro9-timewarp__subtitle {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .gopro9-timewarp__content {
+      padding: 60px 16px 60px 16px;
+    }
+
+    .gopro9-timewarp__image {
+      display: none;
+    }
+
+    .gopro9-timewarp__image--mob {
+      display: flex;
+      margin: 0 auto;
+    }
+  }
+
+  .gopro9-hindsight {
+    background: #000;
+  }
+
+  .gopro9-hindsight__content {
+    padding: 90px 24px 90px 24px;
+    max-width: 830px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .gopro9-hindsight__title {
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 66px;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+
+  .gopro9-hindsight__subtitle {
+    font-size: 18px;
+    line-height: 27px;
+    color: #fff;
+  }
+
+  .gopro9-hindsight__image {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .gopro9-hindsight__image--mob {
+    display: none;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .gopro9-hindsight__content {
+      padding: 80px 24px 80px 24px;
+    }
+
+    .gopro9-hindsight__title {
+      font-size: 40px;
+      line-height: 47px;
+    }
+
+    .gopro9-hindsight__subtitle {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .gopro9-hindsight__content {
+      padding: 60px 24px 60px 24px;
+    }
+
+    .gopro9-hindsight__title {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    .gopro9-hindsight__subtitle {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .gopro9-hindsight__content {
+      padding: 60px 16px 60px 16px;
+    }
+
+    .gopro9-hindsight__image {
+      display: none;
+    }
+
+    .gopro9-hindsight__image--mob {
+      display: flex;
+      margin: 0 auto;
+    }
+  }
+
+  .gopro9-streams {
+    background: #000;
+  }
+
+  .gopro9-streams__content {
+    padding: 90px 24px 90px 24px;
+    max-width: 830px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .gopro9-streams__title {
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 66px;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+
+  .gopro9-streams__subtitle {
+    font-size: 18px;
+    line-height: 27px;
+    color: #fff;
+  }
+
+  .gopro9-streams__image {
+    display: flex;
+    margin: 0 auto;
+    padding-bottom: 100px;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .gopro9-streams__content {
+      padding: 80px 24px 80px 24px;
+    }
+
+    .gopro9-streams__title {
+      font-size: 40px;
+      line-height: 47px;
+    }
+
+    .gopro9-streams__subtitle {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .gopro9-streams__image {
+      max-width: 420px;
+      width: 100%;
+      padding-bottom: 80px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .gopro9-streams__content {
+      padding: 60px 24px 60px 24px;
+    }
+
+    .gopro9-streams__title {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    .gopro9-streams__subtitle {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .gopro9-streams__content {
+      padding: 60px 16px 60px 16px;
+    }
+
+    .gopro9-streams__image {
+      padding: 0 24px;
+      max-width: 300px;
+      width: 100%;
+      padding-bottom: 60px;
+    }
+  }
+}

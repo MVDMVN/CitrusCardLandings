@@ -1,0 +1,5714 @@
+    <style>
+      .big-container {
+        max-width: none;
+        width: auto;
+      }
+
+      .log--base .catalog__main-content, .shadow {
+        box-shadow: none;
+      }
+
+      * {
+        box-sizing: border-box;
+        font-family: Roboto, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        margin: 0;
+      }
+      ul {
+        margin: 0;
+        list-style: none;
+      }
+      img {
+        max-width: 100%;
+        color: transparent;
+      }
+      form select, input {
+        border: 1px solid #c4c4c4;
+        border-radius: 4px;
+        height: 36px;
+        width: 100%;
+        padding: 0 0 0 12px;
+        background-color: #ffffff;
+      }
+      a {
+        text-decoration: none;
+        cursor: pointer;
+        color: #3B6D9A;
+        outline: none;
+        transition: 0.3s;
+      }
+      .btn, button {
+        display: block;
+        background: 0 0;
+        cursor: pointer;
+        border: none;
+        text-align: center;
+        width: 100%;
+        line-height: 44px;
+        transition: .3s;
+        border-radius: 4px;
+        margin-bottom: 24px;
+        white-space: nowrap;
+        font-family: Roboto, sans-serif;
+        font-size: 18px;
+      }
+      .base-padding {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .clear-padding {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      @media screen and (max-width: 640px) {
+        .base-padding {
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .clear-padding {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .base-padding {
+          padding-left: 0;
+          padding-right: 0;
+        }
+        body .clear-padding {
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+      }
+      .swiper-container {
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        list-style: none;
+        padding: 0;
+        z-index: 1;
+      }
+      .swiper-container-android .swiper-slide, .swiper-wrapper {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+      .swiper-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        box-sizing: content-box;
+      }
+      .swiper-slide {
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+      header.header {
+        margin-bottom: 0;
+      }
+      @media screen and (max-width: 1023px) {
+        .layout {
+          padding-top: 50px;
+        }
+      }
+      .breadcrumbs {
+        display: none;
+      }
+      main[locale] .big-container {
+        max-width: initial;
+        width: 100%;
+        box-shadow: none !important;
+      }
+      .base-padding {
+        padding: 0;
+      }
+
+      .new-year {
+        overflow: hidden;
+        background-color: #ffffff;
+      }
+
+      /************************************** Header BLOCK ******************************/
+      .year-header {
+        padding-top: 92px;
+        position: relative;
+        padding-bottom: 84px;
+        background: url('https://i.citrus.ua/uploads/promo/new-year-2019-landing/header/bg-bottom.png') repeat-x bottom -1px center/auto auto #F2F2F2;
+      }
+
+      .year-header__squirrel {
+        position: absolute;
+        left: calc(50% - 8px);
+        top: 553px;
+      }
+
+      .year-header__tree {
+        position: absolute;
+      }
+
+      .year-header__tree--1 {
+        top: 375px;
+        left: calc(50% - 605px);
+        width: 65px;
+      }
+
+      .year-header__tree--2 {
+        left: calc(50% - 62px);
+        top: 431px;
+        width: 34px;
+      }
+
+      .year-header__tree--3 {
+        left: calc(50% - -43px);
+        top: 436px;
+        width: 55px;
+      }
+
+      .year-header__tree--4 {
+        left: calc(50% + 487px);
+        top: 483px;
+        width: 60px;
+      }
+
+      .year-header__tree--5 {
+        top: 387px;
+        left: calc(50% + 570px);
+      }
+
+      .year-header__container {
+        display: flex;
+        max-width: 1366px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 136px;
+        padding-right: 37px;
+      }
+
+      .year-header__сhristmas-tree {
+        margin-right: 65px;
+        position: relative;
+      }
+
+      .year-header__tree-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        opacity: 0;
+      }
+
+      .year-header__tree-image.anim {
+        animation: year-header__tree-image--anim 1s forwards 0.3s;
+      }
+
+      @keyframes year-header__tree-image--anim {
+        0% {
+          opacity: 0.4;
+          transform: translateY(20%);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .year-header__gift-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        opacity: 0;
+      }
+
+      .year-header__gift-top.anim {
+        transform-origin: bottom;
+        animation: year-header__gift-top--anim 0.6s forwards 0.9s;
+      }
+
+      @keyframes year-header__gift-top--anim {
+        0% {
+          transform: scale(0);
+          opacity: 0;
+        }
+
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .year-header__gift-bottom {
+        z-index: 3;
+        position: relative;
+        opacity: 0;
+      }
+
+      .year-header__gift-bottom.anim {
+        transform-origin: bottom;
+        animation: year-header__gift-bottom--anim 0.6s forwards;
+      }
+
+      @keyframes year-header__gift-bottom--anim {
+        0% {
+          transform: scale(0);
+          opacity: 0;
+        }
+
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .year-header__text {
+        display: block;
+        margin-top: 87px;
+        align-self: flex-start;
+      }
+
+      .year-header__title {
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 32px;
+        color: #000000;
+      }
+
+      @media screen and (max-width: 1365px) {
+        .year-header {
+          padding-top: 64px;
+          padding-bottom: 59px;
+          background: url('https://i.citrus.ua/uploads/promo/new-year-2019-landing/header/bg-bottom.png') repeat-x bottom -1px center/1419px auto #F2F2F2;
+        }
+
+        .year-header__squirrel {
+          left: calc(50% + 9px);
+          top: 78%;
+          width: 48px;
+        }
+
+        .year-header__tree--1 {
+          top: 61%;
+          left: 5%;
+          width: 49px;
+        }
+
+        .year-header__tree--2 {
+          left: 46%;
+          top: 70%;
+          width: 24px;
+        }
+
+        .year-header__tree--3 {
+          left: calc(50% + 36px);
+          top: 64%;
+          width: 39px;
+        }
+
+        .year-header__tree--4 {
+          left: calc(50% + 344px);
+          top: 66%;
+          width: 40px;
+        }
+
+        .year-header__tree--5 {
+          top: 53%;
+          width: 63px;
+          left: calc(50% + 401px);
+        }
+
+        .year-header__container {
+          padding-left: 121px;
+          padding-right: 62px;
+        }
+
+        .year-header__сhristmas-tree {
+          min-width: 336px;
+          margin-right: 50px;
+        }
+
+        .year-header__text {
+          min-width: 440px;
+          margin-top: 35px;
+        }
+
+        .year-header__title {
+          margin-bottom: 14px;
+          font-size: 24px;
+        }
+      }
+
+      @media screen and (max-width: 1023px) {
+        .year-header {
+          padding-top: 47px;
+          padding-bottom: 43px;
+          background: url('https://i.citrus.ua/uploads/promo/new-year-2019-landing/header/bg-bottom.png') repeat-x bottom -1px center/1024px auto #F2F2F2;
+        }
+
+        .year-header__squirrel {
+          top: 77%;
+          width: 32px;
+          z-index: 1;
+        }
+
+        .year-header__tree--1 {
+          top: 62%;
+          left: 7%;
+          width: 33px;
+        }
+
+        .year-header__tree--2 {
+          left: 48%;
+          top: 69%;
+          width: 19px;
+        }
+
+        .year-header__tree--3 {
+          left: calc(50% + 62px);
+          top: 65%;
+          width: 30px;
+        }
+
+        .year-header__tree--4 {
+          left: calc(50% + 254px);
+          top: 67%;
+          width: 31px;
+        }
+
+        .year-header__tree--5 {
+          top: 53%;
+          width: 47px;
+          left: calc(50% + 295px);
+        }
+
+        .year-header__container {
+          padding-left: 105px;
+          padding-right: 50px;
+        }
+
+        .year-header__сhristmas-tree {
+          margin-right: 36px;
+          min-width: 225px;
+        }
+
+        .year-header__text {
+          min-width: 287px;
+          margin-top: 6px;
+        }
+
+        .year-header__title {
+          font-size: 18px;
+        }
+      }
+
+      @media screen and (max-width: 700px) {
+        .year-header {
+          padding-top: 23px;
+          padding-bottom: 32px;
+          background: url('https://i.citrus.ua/uploads/promo/new-year-2019-landing/header/bg-bottom.png') repeat-x bottom -1px center/2000px auto #F2F2F2;
+        }
+
+        .year-header__squirrel {
+          display: none;
+        }
+
+        .year-header__tree {
+          display: none;
+        }
+
+        .year-header__container {
+          flex-direction: column;
+          align-items: center;
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+
+        .year-header__сhristmas-tree {
+          margin-right: 0;
+          min-width: 154px;
+          width: 53%;
+          max-width: 221px;
+          margin-bottom: 18px;
+        }
+
+        .year-header__text {
+          align-self: center;
+          width: 287px;
+        }
+      }
+
+      /************************************** Discounts BLOCK ******************************/
+      .year-discounts {
+        background: url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/discount/bg_2_top.png?_t=1575901150") repeat-x top -1px center/auto auto,
+        url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/discount/bg_2_bottom.png?_t=1575901150") repeat-x bottom -1px center/auto auto, #FAFAFA;
+        position: relative;
+        padding-top: 95px;
+        margin-bottom: 65px;
+      }
+
+      .year-discounts__container {
+        max-width: 1366px;
+        margin: 0 auto;
+        display: flex;
+        padding: 0 152px 0 115px;
+      }
+
+      .year-discounts__title {
+        display: flex;
+        flex-direction: column;
+        margin-right: 216px;
+      }
+
+      .year-discounts__header {
+        padding-top: 16px;
+      }
+
+      .year-discounts__percent {
+        position: relative;
+        align-self: center;
+        min-width: 508px;
+      }
+
+      .year-discounts__youtube {
+        position: absolute;
+        right: -78%;
+        bottom: 43%;
+        width: 52px;
+        height: 47px;
+        border: none;
+        padding: 0;
+        opacity: 0;
+        background: url('https://i.citrus.ua/uploads/promo/new-year-2019-landing/youtube-x2-v2.png') no-repeat center/100%;
+      }
+
+      .year-discounts__youtube:focus {
+        outline: none;
+      }
+
+      .year-discounts__discount {
+        padding-left: 65px;
+        padding-top: 5px;
+      }
+
+      .anim.year-discounts__discount {
+        animation: discounts-anim 1s forwards ease-out;
+        opacity: 1;
+      }
+
+      @keyframes discounts-anim {
+        0% { transform: translate3d(0, 0, 0) ; }
+        80% {transform: translate3d(0, 0, 0); }
+        90% {transform: translate3d(-50px, 20px, 0); }
+        100% { transform: translate3d(0, 0, 0); }
+      }
+
+      .year-discounts__percent:active  .year-discounts__discount{
+        animation-play-state: paused;
+        animation: discounts-anim-repeat 1s forwards ease-in;
+      }
+
+      @keyframes discounts-anim-repeat {
+        0% { transform: translate3d(0, 0, 0) ; }
+        80% {transform: translate3d(0, 0, 0); }
+        90% {transform: translate3d(-50px, 20px, 0); }
+        100% { transform: translate3d(0, 0, 0); }
+      }
+
+      .year-discounts__percent:active  .year-discounts__axe{
+        animation-play-state: paused;
+        animation: discounts-axe-anim-repeat 1s forwards ease-in;
+      }
+
+      .year-discounts__axe {
+        position: absolute;
+        right: 90px;
+        top: 36px;
+        opacity: 0;
+      }
+
+      .anim.year-discounts__axe {
+        animation: discounts-axe-anim 1s forwards ease-in;
+        opacity: 1;
+      }
+
+      @keyframes discounts-axe-anim {
+        0% { transform: translate3d(110vw, 0, 0) rotate(0deg);}
+        80% { transform: translate3d(0, 0, 0) rotate(-1440deg);}
+        90% {transform: translate3d(-50px, 20px, 0) rotate(-1440deg);}
+        100% {transform: translate3d(0,0,0) rotate(-1440deg);}
+      }
+
+      @keyframes discounts-axe-anim-repeat {
+        0% { transform: translate3d(110vw, 0, 0) rotate(0deg);}
+        80% { transform: translate3d(0, 0, 0) rotate(-1440deg);}
+        90% {transform: translate3d(-50px, 20px, 0) rotate(-1440deg);}
+        100% {transform: translate3d(0,0,0) rotate(-1440deg);}
+      }
+
+      .year-discounts__tree-axe {
+        margin-top: -32px;
+        position: relative;
+      }
+
+      .tree-axe__hand {
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        left: 0;
+        transform-origin: 31% 85%;
+      }
+
+      .tree-axe__hand.anim {
+        animation: tree-axe__hand--anim 3.5s infinite;
+        animation-direction: alternate-reverse;
+      }
+
+      @keyframes tree-axe__hand--anim {
+        0% { transform: rotate(-5deg);}
+        100% {transform: rotate(10deg);}
+      }
+
+      .tree-axe__tree {
+        z-index: 3;
+        position: relative;
+      }
+
+      .tree-axe__sugrob {
+        bottom: -8%;
+        right: calc(50% - 63px);
+        z-index: 4;
+        min-width: 526px;
+      }
+
+      .year-discounts__bird-1,
+      .year-discounts__bird-2,
+      .year-discounts__bird-3,
+      .year-discounts__youtube-container,
+      .year-discounts__squirrel-2,
+      .year-discounts__tree-1,
+      .year-discounts__tree-2,
+      .year-discounts__tree-3,
+      .tree-axe__sugrob{
+        position: absolute;
+      }
+
+      .big-tree-animation,
+      .medium-tree-animation,
+      .small-tree-animation {
+        transform-origin: bottom;
+        opacity: 0;
+      }
+
+      .anim.big-tree-animation {
+        animation: trees--animations 0.7s forwards ease-in;
+      }
+
+      .anim.medium-tree-animation {
+        animation: trees--animations 0.7s forwards ease-in;
+        animation-delay: 0.2s;
+      }
+
+      .anim.small-tree-animation {
+        animation: trees--animations 0.7s forwards ease-in;
+        animation-delay: 0.4s;
+      }
+
+      @keyframes trees--animations {
+        0% { opacity: 0; transform: scale(0);}
+        85% { opacity: 1; transform: scale(1.2);}
+        100% {opacity: 1; transform: scale(1);}
+      }
+
+      .year-discounts__bird-1 {
+        right: calc(50% - 130px);
+        top: 31%;
+      }
+
+      .year-discounts__bird-2 {
+        right: calc(50% - 654px);
+        top: 3%;
+        width: 37px;
+        height: 25px;
+        transform: rotate(54deg);
+      }
+
+      .year-discounts__bird-3 {
+        right: calc(50% - 662px);
+        top: 45.8%;
+        width: 27px;
+        height: 15px;
+
+      }
+
+      .year-discounts__tree-1 {
+        width: 123px;
+        height: 174px;
+        left: calc(50% - 590px);
+        bottom: 6%;
+      }
+
+      .year-discounts__tree-2 {
+        width: 62px;
+        height: 112px;
+        left: calc(50% - 663px);
+        bottom: 11%;
+      }
+
+      .year-discounts__tree-3 {
+        width: 42px;
+        height: 76px;
+        left: calc(50% - 476px);
+        bottom: 17%;
+      }
+
+      .year-discounts__youtube-container {
+        right: calc(50% - 96px);
+        bottom: 8.7%;
+      }
+
+      .year-discounts__squirrel-1 {
+        width: 51px;
+        height: 45px;
+        opacity: 0;
+      }
+
+      .year-discounts__squirrel-2 {
+        right: calc(50% - 616px);
+        bottom: -3%;
+        width: 72px;
+        height: 64px;
+      }
+
+      .squirrels--animations {
+        transform-origin: bottom;
+        opacity: 0;
+      }
+
+      .anim.squirrels--animations {
+        animation: squirrel--animations 0.5s forwards ease-in;
+        animation-delay: 0.2s;
+      }
+
+      @keyframes squirrel--animations {
+        0% { opacity: 1; transform: scale(0) translate3d(0,0,0);}
+        50% { opacity: 1; transform: scale(1.2) translate3d(0, -25px, 0); }
+        100% {opacity: 1; transform: scale(1) translate3d(0,0,0);}
+      }
+
+      .year-discounts__youtube-container.anim .squirrels--animations-scale {
+        animation: squirrel--animations-scale 0.5s forwards ease-in;
+        animation-delay: 0.2s;
+      }
+
+      @keyframes squirrel--animations-scale {
+        0% { opacity: 1; transform: scale(0, 0) translate3d(0,0,0);}
+        50% { opacity: 1; transform: scale(-1.2, 1.2) translate3d(0, -25px, 0); }
+        100% {opacity: 1; transform: scale(-1, 1) translate3d(0,0,0);}
+      }
+
+      .year-discounts__youtube-container.anim .year-discounts__youtube {
+        animation: year-discounts__youtube--anim 0.5s forwards ease-in 0.2s, year-discounts__youtube--anim-bouncing 3s infinite reverse 0.7s ease-in-out;
+        transform-origin: center;
+      }
+
+      .year-discounts__youtube-container.anim .year-discounts__youtube:hover {
+        animation: year-discounts__youtube--anim 0.5s forwards ease-in 0.2s,
+                   year-discounts__youtube--anim-bouncing 3s infinite reverse 0.7s ease-in-out,
+                   year-discounts__youtube-hover 0.1s ease-in forwards;
+        transform-origin: center;
+      }
+
+      @keyframes year-discounts__youtube-hover {
+        0% {
+          transform: scale(1.2) translate3d(0,0,0) rotate(0deg);
+          opacity: 1;
+        }
+
+        100% {
+          transform: scale(1.2) translate3d(0,0,0) rotate(-15deg);
+          opacity: 1;
+        }
+      }
+
+      @keyframes year-discounts__youtube--anim {
+        0% { opacity: 1; transform: scale(0) translate3d(0,0,0);}
+        50% { opacity: 1; transform: scale(1.2) translate3d(0, -25px, 0); }
+        100% {opacity: 1; transform: scale(1) translate3d(0,0,0);}
+      }
+
+      @keyframes year-discounts__youtube--anim-bouncing {
+        0% { opacity: 1; transform: scale(1) translate3d(0,0,0);}
+        50% { opacity: 1; transform: scale(1.2) translate3d(0, 0, 0); }
+        100% {opacity: 1; transform: scale(1) translate3d(0,0,0);}
+      }
+
+      @media screen and (max-width: 1365px) {
+        .year-discounts {
+          background: url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/discount/bg_2_top.png?_t=1575901150") repeat-x top -1px center/1419px auto,
+          url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/discount/bg_2_bottom.png?_t=1575901150") repeat-x bottom -1px center/1419px auto, #FAFAFA;
+          margin-bottom: 60px;
+          padding-top: 54px;
+        }
+
+        .year-discounts__discount {
+          height: 135px;
+          padding-left: 39px;
+          margin: 0 auto;
+          padding-top: 0;
+        }
+
+        .year-discounts__container {
+          padding: 0 141px 0 116px;
+        }
+
+        .year-discounts__title {
+          margin-right: 150px;
+          min-width: 335px;
+        }
+
+        .year-discounts__percent {
+          min-width: 350px;
+        }
+
+        .year-discounts__axe {
+          right: 50px;
+          top: 24px;
+          width: 76px;
+          height: 54px;
+        }
+
+        .year-discounts__tree-axe {
+          min-width: 260px;
+          margin-top: -17px;
+          margin-left: 0;
+        }
+
+        .tree-axe__sugrob {
+          right: calc(50% - 50px);
+          min-width: 367px;
+        }
+
+        .year-discounts__tree-1 {
+          width: 86px;
+          height: 122px;
+          left: calc(50% - 416px);
+          bottom: 10%;
+        }
+
+        .year-discounts__tree-2 {
+          width: 43px;
+          height: 78px;
+          left: calc(50% - 465px);
+          bottom: 15%;
+        }
+
+        .year-discounts__tree-3 {
+          width: 31px;
+          height: 57px;
+          left: calc(50% - 338px);
+          bottom: 22%;
+        }
+
+        .year-discounts__bird-1 {
+          right: calc(50% - 89px);
+          top: 29%;
+          width: 25px;
+        }
+
+        .year-discounts__bird-2 {
+          right: 5.5%;
+          top: 1%;
+          width: 25px;
+          height: 22px;
+          transform: rotate(50deg);
+        }
+
+        .year-discounts__bird-3 {
+          right: 5%;
+          top: 42.8%;
+          width: 18px;
+          height: 11px;
+        }
+
+        .year-discounts__youtube-container {
+          right: calc(50% - 67px);
+          bottom: 12.7%;
+        }
+
+        .year-discounts__youtube {
+          width: 35px;
+          height: 32px;
+          bottom: 24%;
+        }
+
+        .year-discounts__squirrel-1 {
+          width: 35px;
+          height: 31px;
+        }
+
+        .year-discounts__squirrel-2 {
+          width: 50px;
+          height: 44px;
+          right: 8%;
+          bottom: 1%;
+        }
+
+      }
+
+      @media screen and (max-width: 1023px) {
+
+        .year-discounts {
+          padding-top: 50px;
+          background: url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/discount/bg_2_top.png?_t=1575901150") repeat-x top -1px center/1024px auto,
+          url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/discount/bg_2_bottom.png?_t=1575901150") repeat-x bottom -1px center/1024px auto, #FAFAFA;
+          margin-bottom: 54px;
+        }
+
+        .year-discounts__container {
+          padding: 0 110px 0 90px;
+        }
+
+        .year-discounts__header {
+          padding-top: 0;
+        }
+
+        .year-discounts__percent {
+          min-width: 253px;
+        }
+
+        .year-discounts__discount {
+          height: 95px;
+        }
+
+        .year-discounts__title {
+          margin-right: 111px;
+          min-width: 253px;
+          padding-top: 6px;
+        }
+
+        .year-discounts__tree-axe {
+          min-width: 153px;
+          margin-top: -23px;
+          margin-left: 0;
+        }
+
+        .tree-axe__sugrob {
+          right: calc(50% - 50px);
+          bottom: -9%;
+          min-width: 272px;
+        }
+
+        .year-discounts__axe {
+          right: 29px;
+          top: 17px;
+          width: 56.92px;
+          height: 40.06px;
+        }
+
+        .year-discounts__bird-1 {
+          right: calc(50% - 75px);
+          top: 28%;
+        }
+
+        .year-discounts__squirrel-1 {
+          width: 26px;
+          height: 23px;
+        }
+
+
+        .year-discounts__bird-2 {
+          right: 4.9%;
+          top: 2%;
+          width: 19px;
+          height: 15px;
+        }
+
+        .year-discounts__bird-3 {
+          right: 4.5%;
+          top: 42.8%;
+          width: 14px;
+          height: 7px;
+        }
+
+        .year-discounts__tree-1 {
+          left: calc(50% - 302px);
+          width: 63.7px;
+          height: 90.11px;
+        }
+
+
+        .year-discounts__tree-2 {
+          left: calc(50% - 338px);
+          width: 32.11px;
+          height: 58px;
+        }
+
+
+        .year-discounts__tree-3 {
+          left: calc(50% - 242px);
+          bottom: 18%;
+          width: 21.75px;
+          height: 39.36px;
+        }
+
+        .year-discounts__youtube-container {
+          right: calc(50% - 56px);
+          bottom: 10.2%;
+        }
+
+        .year-discounts__squirrel-1 {
+          width: 26px;
+          height: 23px;
+        }
+
+        .year-discounts__squirrel-2 {
+          width: 37px;
+          height: 33px;
+          right: 7%;
+          bottom: -2%;
+        }
+
+      }
+
+      @media screen and (max-width: 700px) {
+
+        .year-discounts {
+          margin-bottom: 47px;
+          background: url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/discount/bg_2_top.png?_t=1575901150") repeat-x top -1px center/320px auto,
+          url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/discount/bg_2_bottom.png?_t=1575901150") repeat-x bottom -1px center/320px auto, #FAFAFA;
+        }
+
+        .year-discounts__container {
+          flex-direction: column;
+          align-items: center;
+          padding: 0;
+        }
+
+        .year-discounts__title {
+          margin: 0 auto 56px auto;
+          width: 207px;
+        }
+
+        .year-discounts__discount {
+          height: 100px;
+          padding-top: 0;
+        }
+
+        .year-discounts__tree-axe {
+          min-width: 131px;
+          width: 40%;
+          max-width: 180px;
+        }
+
+        .tree-axe__tree {
+          height: initial;
+        }
+
+        .tree-axe__sugrob {
+          right: calc(50% - 40px);
+          bottom: -5%;
+          min-width: 181px;
+        }
+
+        .year-discounts__tree-1,
+        .year-discounts__tree-2,
+        .year-discounts__tree-3 {
+          display: none;
+        }
+
+        .year-discounts__bird-1 {
+          right: calc(50% + 79px);
+          top: 68%;
+          width: 12px;
+        }
+
+        .year-discounts__bird-2 {
+          right: calc(50% - 120px);
+          top: 54%;
+          width: 19px;
+          height: 15px;
+        }
+
+        .year-discounts__bird-3 {
+          right: calc(50% - 118px);
+          top: 74.8%;
+          width: 9px;
+          height: 5px;
+        }
+
+        .year-discounts__youtube-container {
+          right: calc(50% + 100px);
+          bottom: 5%;
+        }
+
+        .year-discounts__youtube {
+          right: -32px;
+          bottom: -24%;
+        }
+
+        .year-discounts__squirrel-1 {
+          width: 18.02px;
+          height: 15.9px;
+        }
+
+        .year-discounts__squirrel-2 {
+          right: calc(50% - 121px);
+          bottom: -1%;
+          width: 25.44px;
+          height: 22.61px;
+        }
+      }
+
+  /************************************** Promo BLOCK ******************************/
+
+  .year-promo {
+    background: url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/promo/bg_4_top-promo.png?_t=1576006889") repeat-x top -1px center/auto auto,
+    url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/promo/bg_4_bottom-promo.png?_t=1576006889") repeat-x bottom -1px center/auto auto, #FAFAFA;
+    position: relative;
+    padding-bottom: 115px;
+  }
+
+  .year-promo__container {
+    max-width: 1366px;
+    margin: 0 auto;
+    display: flex;
+    padding-left: 179px;
+    padding-right: 146px;
+  }
+
+  .year-promo__company {
+    /*min-width: 421px;*/
+    position: relative;
+    z-index: 1;
+    margin-right: 143px;
+  }
+
+  .company__tree {
+    position: relative;
+  }
+
+  .company__deer{
+    position: absolute;
+    left: calc(50% - 215px);
+    bottom: 0;
+  }
+
+  .company__tree-mini {
+    position: absolute;
+    left: calc(50% - 212px);
+    bottom: 0;
+  }
+
+  .company-tree--animations,
+  .company-deer--animations,
+  .company-tree-mini--animations{
+    transform-origin: bottom;
+    opacity: 0;
+  }
+
+  .anim.company-tree--animations {
+    animation: company--animations 0.7s forwards ease-in;
+  }
+
+  .anim.company-deer--animations {
+    animation: company--animations 0.7s forwards ease-in;
+    animation-delay: 0.1s;
+  }
+
+  .anim.company-tree-mini--animations {
+    animation: company--animations 0.7s forwards ease-in;
+    animation-delay: 0.2s;
+  }
+
+  .squirrels-company--animations {
+    transform-origin: bottom;
+    opacity: 0;
+  }
+
+  .anim.squirrels-company--animations {
+    animation: squirrel--animations 0.7s forwards ease-in;
+    animation-delay: 0.4s;
+  }
+
+  @keyframes company--animations {
+    0% { opacity: 1; transform: scale(0) translate3d(0,0,0);}
+    50% { opacity: 1; transform: scale(1.2) translate3d(0, -25px, 0); }
+    100% {opacity: 1; transform: scale(1) translate3d(0,0,0);}
+  }
+
+  .year-promo__conditions {
+    display: block;
+    margin-top: 33px;
+    align-self: center;
+    position: relative;
+  }
+
+  .year-promo__conditions:before {
+      content: '';
+      position: absolute;
+      width: 304px;
+      left: 50%;
+      transform: translateX(-50%);
+      pointer-events: none;
+      bottom: -50px;
+      height: 27px;
+      background: url(https://i.citrus.ua/uploads/promo/new-year-2019-landing/button-shadow.png) no-repeat center/100% 100%;
+  }
+
+  .year-promo__condition {
+    transform-origin: center;
+    opacity: 0;
+  }
+
+  .anim.year-promo__condition {
+    animation: condition--animation 1s forwards;
+  }
+
+  @keyframes condition--animation {
+    0% {opacity: 0; transform: scale(0);}
+    50% {opacity: 1; transform: scale(1.2); }
+    100% {opacity: 1; transform: scale(1);}
+  }
+
+  .year-promo__youtube-container {
+    position: absolute;
+    bottom: 14%;
+    left: calc(50% - 590px);
+  }
+
+  .year-promo__youtube {
+    position: absolute;
+    right: -78%;
+    bottom: 43%;
+    width: 52px;
+    height: 47px;
+    border: none;
+    padding: 0;
+    opacity: 0;
+    z-index: 1;
+    background: url('https://i.citrus.ua/uploads/promo/new-year-2019-landing/youtube-x2-v2.png') no-repeat center/100%;
+  }
+
+  .year-promo__youtube:focus {
+    outline: none;
+  }
+
+  .year-promo__squirrel-1 {
+    opacity: 0;
+  }
+
+  .year-promo__youtube-container.anim .squirrels--animations-scale {
+    animation: squirrel--animations-scale 0.5s forwards ease-in;
+    animation-delay: 0.2s;
+  }
+
+  .year-promo__youtube-container.anim .year-promo__youtube {
+    animation: year-discounts__youtube--anim 0.5s forwards 0.2s ease-in,
+               year-discounts__youtube--anim-bouncing 2s infinite alternate-reverse 0.7s ease-in;
+  }
+
+  .year-promo__youtube-container.anim .year-promo__youtube:hover {
+    transform-origin: center;
+    animation: year-discounts__youtube--anim 0.5s forwards 0.2s ease-in,
+               year-discounts__youtube--anim-bouncing 2s infinite alternate-reverse 0.7s ease-in,
+               year-promo__youtube--anim-hover 0.1s ease-in forwards;
+  }
+
+  @keyframes year-promo__youtube--anim-hover {
+    0% {
+      opacity: 1;
+      transform: scale(1.2) translate3d(0,0,0) rotate(0deg);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1.2) translate3d(0,0,0) rotate(-15deg);
+    }
+  }
+
+  .year-promo__squirrel-2 {
+    position: absolute;
+    transform: scale(-1, 1);
+    bottom: 45%;
+    left: calc(50% - 76px);
+  }
+
+  .year-promo__tree-1 {
+    position: absolute;
+    width: 42px;
+    height: 76px;
+    right: calc(50% - 599px);
+    top: 2%;
+  }
+
+  .year-promo__tree-2 {
+    position: absolute;
+    width: 70px;
+    height: 127px;
+    right: calc(50% - 681px);
+    top: 14%;
+  }
+
+  @media screen and (max-width: 1365px) {
+
+    .year-promo {
+      background: url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/promo/bg_4_top-promo.png?_t=1576006889") repeat-x top -1px center/1373px auto,
+      url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/promo/bg_4_bottom-promo.png?_t=1576006889") repeat-x bottom -1px center/1373px auto, #FAFAFA;
+      padding-bottom: 75px;
+    }
+
+    .year-promo__container {
+      padding-left: 182px;
+      padding-right: 115px;
+    }
+
+    .year-promo__company {
+      min-width: 294px;
+      margin-right: 100px;
+    }
+
+    .company__deer {
+      left: 0;
+    }
+
+    .company__tree-mini {
+      left: 0;
+    }
+
+    .year-promo__conditions {
+      min-width: 332px;
+      margin-top: 23px;
+    }
+    .year-promo__conditions:before {
+      width: 212px;
+      bottom: -53px;
+      height: 18px;
+    }
+
+    .year-promo__youtube-container {
+      bottom: 13%;
+      left: 9%;
+    }
+
+    .year-promo__youtube {
+      width: 35px;
+      height: 32px;
+    }
+
+    .year-promo__squirrel-1 {
+      width: 50.25px;
+      height: 44.67px;
+    }
+
+    .year-promo__squirrel-2 {
+      bottom: 45%;
+      left: calc(50% - 24px);
+      width: 39.78px;
+      height: 34.9px;
+    }
+
+    .year-promo__tree-1 {
+      right: calc(50% - 441px);
+      width: 29.31px;
+      height: 53.04px;
+    }
+
+    .year-promo__tree-2 {
+      right: calc(50% - 499px);
+      width: 48.85px;
+      height: 88.64px;
+    }
+
+  }
+
+  @media screen and (max-width: 1023px) {
+
+    .year-promo {
+    background: url('https://i.citrus.ua/uploads/promo/new-year-2019-landing/promo/bg_4_top-promo.png?_t=1576006889') repeat-x top -1px center/1025px auto,
+    url('https://i.citrus.ua/uploads/promo/new-year-2019-landing/promo/bg_4_bottom-promo.png?_t=1576006889') repeat-x bottom -1px center/1025px auto, #FAFAFA;
+      padding-bottom: 55px;
+    }
+
+    .year-promo__container {
+      padding-left: 123px;
+      padding-right: 106px;
+    }
+
+    .year-promo__company {
+      min-width: 200px;
+      margin-right: 74px;
+    }
+
+    .year-promo__conditions {
+      min-width: 247px;
+      margin-top: 15px;
+    }
+
+    .year-promo__conditions:before {
+      width: 157px;
+      bottom: -38px;
+      height: 13px;
+    }
+
+    .year-promo__youtube-container {
+      bottom: 11%;
+    }
+
+    .year-promo__squirrel-1 {
+      width: 37.27px;
+      height: 33.13px;
+    }
+
+    .year-promo__squirrel-2 {
+      bottom: 45%;
+      left: calc(50% - 37px);
+      width: 29.51px;
+      height: 25.89px;
+    }
+
+    .year-promo__tree-1 {
+      right: calc(50% - 352px);
+      top: 14%;
+      width: 36.24px;
+      height: 65.75px;
+    }
+
+    .year-promo__tree-2 {
+      right: calc(50% - 308px);
+      top: 2%;
+      width: 21.74px;
+      height: 39.35px;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .year-promo__container {
+      flex-direction: column;
+      align-items: center;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .year-promo__company {
+      min-width: 154px;
+      width: 53%;
+      max-width: 200px;
+      margin-right: 0;
+    }
+
+    .year-promo__conditions {
+      align-self: center;
+      width: 197px;
+      min-width: 197px;
+      margin-top: 48px;
+    }
+
+    .year-promo__tree-1,
+    .year-promo__tree-2 {
+      display: none;
+    }
+
+    .year-promo__youtube-container {
+      bottom: 41%;
+      left: calc(50% - 140px);
+    }
+
+    .year-promo__squirrel-1 {
+      width: 21px;
+      height: 19px;
+    }
+
+
+    .year-promo__squirrel-2 {
+      bottom: 55%;
+      left: calc(50% + 108px);
+    }
+
+    .year-promo__youtube {
+      right: -124%;
+      bottom: 14%;
+    }
+  }
+
+  @media screen and (min-width: 1921px) {
+    .year-promo{
+      background: url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/promo/bg_4_top-promo.png?_t=1576006889") repeat-x center top -1px/100% auto,
+      url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/promo/bg_4_bottom-promo.png?_t=1576006889") repeat-x center bottom -1px/100% auto, #FAFAFA;
+    }
+  }
+
+
+  /************************************** product BLOCK ******************************/
+  .year-products__title {
+    color: #9BC438;
+    font-weight: 900;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+  }
+
+  .year-products__container {
+    max-width: 1366px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .year-products__items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+
+  .year-products__item {
+    width: 214px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding-top: 3px;
+    padding-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .year-products__item-category {
+    width: calc(100% - 8px);
+    margin-left: auto;
+    margin-right: auto;
+    height: 42px;
+    padding-right: 36px;
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.06);
+    color: #3B6D9A;
+    font-weight: 500;
+    font-size: 14px;
+    position: relative;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+
+  .year-products__item-category::after {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    content: '';
+    background: url('https://i.citrus.ua/uploads/promo/new-year-2019-landing/arrow-right.png') no-repeat center;
+  }
+
+  .year-products__item-image {
+    width: 100%;
+    height: 181px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+
+  .year-products__item-wrapper {
+    width: calc(100% - 32px);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .year-products__item-wrapper:hover .year-products__item-title {
+    color: #FF8637;
+  }
+
+  .year-products__item-title {
+    color: #3B6D9A;
+    font-size: 14px;
+    margin-bottom: 8px;
+    transition: 0.25s;
+
+    display: block;
+    word-break: break-all;
+    display: -webkit-box;
+    max-width: 100%;
+    height: 32px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .year-products__item-footer {
+    display: flex;
+    margin-top: auto;
+  }
+
+  .year-products__item-discount {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 8px;
+  }
+
+  .year-products__item-discount span:nth-child(1) {
+    display: block;
+    font-weight: bold;
+    font-size: 12px;
+    color: #FFFFFF;
+    padding-left: 4px;
+    padding-right: 4px;
+    background: #FF0000;
+    border-radius: 4px;
+  }
+
+  .year-products__item-discount span:nth-child(2) {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 16px;
+    text-decoration: line-through;
+  }
+
+  .year-products__item-price {
+    color: rgba(0, 0, 0, 0.87);
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 1;
+  }
+
+  .year-products__item-price {
+    align-self: flex-end;
+    /*position: relative;*/
+    /*top: 2px;*/
+  }
+
+  .year-products__item-price span:nth-child(1) {
+    color: rgba(0, 0, 0, 0.87);
+    font-weight: 500;
+    font-size: 21px;
+  }
+
+  .year-products__item-price span:nth-child(2) {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  .year-products__redirect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 900;
+    margin-left: auto;
+    margin-right: auto;
+    color: #FFFFFF;
+    height: 82px;
+    max-width: 423px;
+    position: relative;
+    background: url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/new-year-button.png") no-repeat center/100% 100%;
+    animation: year-products__redirect--anim 2s infinite ease;
+    animation-direction: alternate-reverse;
+  }
+
+  @keyframes year-products__redirect--anim {
+    0% {
+      transform: translateY(-10px);
+    }
+
+    100% {
+      transform: translateY(10px);
+    }
+  }
+
+  .year-products__redirect::after {
+    content: '';
+    position: absolute;
+    width: 304px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    bottom: -50px;
+    height: 27px;
+    background: url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/button-shadow.png") no-repeat center/100% 100%;
+    animation: year-products__redirect-after--anim 2s infinite ease;
+    animation-direction: alternate-reverse;
+    transform-origin: left;
+  }
+
+  @keyframes year-products__redirect-after--anim {
+    0% {
+      transform: scaleX(0.8) translateX(-50%) translateY(10px);
+    }
+
+    100% {
+      transform: scaleX(1) translateX(-50%) translateY(-10px);
+    }
+  }
+
+  .year-products__redirect:hover {
+    color: #FFFFFF;
+    opacity: 0.8;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .year-products__title {
+      font-size: 32px;
+    }
+
+    .year-products__container {
+      max-width: 689px;
+    }
+
+    .year-products__items {
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .year-products__item {
+      margin-bottom: 24px;
+    }
+
+    .year-products__redirect {
+      max-width: 327px;
+      height: 64px;
+      font-size: 25px;
+    }
+
+    .year-products__redirect::after {
+      max-width: 236px;
+      height: 21px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .year-products__title {
+      font-size: 24px;
+    }
+
+    .year-products__container {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .year-products__item-price {
+      position: relative;
+      top: 1px;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .year-products__title {
+      margin-bottom: 16px;
+    }
+
+    .year-products__container {
+      max-width: 451px;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
+    .year-products__items {
+      margin-bottom: 8px;
+    }
+
+    .year-products__item {
+      margin-bottom: 8px;
+      width: auto;
+      max-width: 214px;
+      flex-grow: 1;
+      flex-basis: 146px;
+    }
+
+    .year-products__item:nth-child(odd) {
+      margin-right: 8px;
+    }
+
+    .year-products__item-category {
+      font-size: 12px;
+    }
+
+    .year-products__item-title {
+      font-size: 12px;
+      height: 28px;
+    }
+
+    .year-products__item-image {
+      height: 124px;
+    }
+
+    .year-products__item-image img {
+      max-height: 100%;
+    }
+
+    .year-products__item-discount span:nth-child(2) {
+      font-size: 12px;
+    }
+
+    .year-products__item-price span:nth-child(1) {
+      font-size: 16px;
+    }
+
+    .year-products__item-price span:nth-child(2) {
+      font-size: 10px;
+    }
+
+    .year-products__redirect {
+      max-width: 248px;
+      height: 48px;
+      font-size: 18px;
+    }
+
+    .year-products__redirect::after {
+      width: 179px;
+      height: 16px;
+      bottom: -33px;
+    }
+  }
+
+  /************************************** Best Offers BLOCK ******************************/
+  .new-year__best-offers {
+    margin-bottom: 91px;
+  }
+
+  /************************************** Gift BLOCK ******************************/
+  .year-gifts {
+    position: relative;
+    padding-top: 41px;
+    padding-bottom: 83px;
+    margin-bottom: -23px;
+    background: url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/gifts/bg-bottom.png") repeat-x center bottom -1px/1900px auto,
+                url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/gifts/bg-top.png") repeat-x center top -1px/1937px auto #fafafa;
+  }
+
+  .year-gifts__tree {
+    position: absolute;
+  }
+
+  .year-gifts__tree--1 {
+    bottom: 86px;
+    left: calc(50% - 684px);
+    width: 71px;
+  }
+
+  .year-gifts__tree--2 {
+    bottom: 119px;
+    left: calc(50% - 590px);
+    width: 40px;
+  }
+
+  .year-gifts__container {
+    max-width: 1366px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    padding-left: 194px;
+    padding-right: 149px;
+  }
+
+  .year-gifts__text {
+    margin-right: 271px;
+    align-self: flex-start;
+    margin-top: 31px;
+    opacity: 0;
+    transform-origin: center;
+  }
+
+  .year-gifts__text.anim {
+    animation: year-gifts__text--anim 1s forwards;
+  }
+
+  @keyframes year-gifts__text--anim {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .year-gifts__image {
+    position: relative;
+  }
+
+  .year-gifts__youtube {
+    position: absolute;
+    right: 36px;
+    top: 28%;
+    width: 52px;
+    height: 47px;
+    border: none;
+    z-index: 2;
+    opacity: 0;
+    transform-origin: center;
+    background: url('https://i.citrus.ua/uploads/promo/new-year-2019-landing/youtube-x2-v2.png') no-repeat center/100%;
+  }
+
+  .year-gifts__youtube:focus {
+    outline: none;
+  }
+
+  .year-gifts__youtube.anim {
+    animation: year-gifts__youtube--anim 0.5s forwards 1s, year-gifts__youtube--anim-bouncing 3s infinite reverse 1.5s ease-in-out;
+  }
+
+  .year-gifts__youtube.anim:hover {
+    transform-origin: center;
+    animation: year-gifts__youtube--anim 0.5s forwards 1s,
+               year-gifts__youtube--anim-bouncing 3s infinite alternate-reverse 1.5s ease-in,
+               year-gifts__youtube--anim-hover 0.1s ease-in forwards;
+  }
+
+  @keyframes year-gifts__youtube--anim {
+    0% {
+      opacity: 0;
+      transform: translateY(50%) translateX(-50%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0) translateY(0);
+    }
+  }
+
+  @keyframes year-gifts__youtube--anim-bouncing {
+    0% { opacity: 1; transform: scale(1) translateX(0) translateY(0)}
+    50% { opacity: 1; transform: scale(1.2) translateX(0) translateY(0); }
+    100% {opacity: 1; transform: scale(1) translateX(0) translateY(0);}
+  }
+
+  @keyframes year-gifts__youtube--anim-hover {
+    0% {
+      opacity: 1;
+      transform: translateY(0) translateX(0) scale(1.2) rotate(0deg);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0) translateX(0) scale(1.2) rotate(-15deg);
+    }
+  }
+
+  .year-gifts__deer,
+  .year-gifts__gifts-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .year-gifts__deer {
+    z-index: 1;
+    opacity: 0;
+  }
+
+  .year-gifts__deer.anim {
+    animation: year-gifts__deer--anim 1s forwards 0.3s;
+  }
+
+  @keyframes year-gifts__deer--anim {
+    0% {
+      opacity: 0.4;
+      transform: translateY(20%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .year-gifts__gifts-top {
+    transform: scale(-1, 1);
+    opacity: 0;
+  }
+
+  .year-gifts__gifts-top.anim {
+    transform-origin: bottom;
+    animation: year-gifts__gifts-top--anim 0.6s forwards 0.9s;
+  }
+
+  @keyframes year-gifts__gifts-top--anim {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+
+    100% {
+      transform: scale(-1, 1);
+      opacity: 1;
+    }
+  }
+
+  .year-gifts__gifts-bottom {
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: scale(-1, 1);
+  }
+
+  .year-gifts__gifts-bottom.anim {
+    transform-origin: bottom;
+    animation: year-gifts__gifts-bottom--anim 0.6s forwards;
+  }
+
+  @keyframes year-gifts__gifts-bottom--anim {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+
+    100% {
+      transform: scale(-1, 1);
+      opacity: 1;
+    }
+  }
+
+  .year-gifts__image img:nth-child(4) {
+    position: absolute;
+    max-width: none;
+    bottom: -124px;
+    left: -161px;
+    z-index: 2;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .year-gifts {
+      padding-top: 21px;
+      padding-bottom: 43px;
+      margin-bottom: 7px;
+    }
+
+    .year-gifts__tree--1 {
+      bottom: 53px;
+      left: calc(50% - 476px);
+      width: 49px;
+    }
+
+    .year-gifts__tree--2 {
+      bottom: 73px;
+      left: calc(50% - 409px);
+      width: 29px;
+    }
+
+    .year-gifts__container {
+      padding-left: 171px;
+      padding-right: 139px;
+    }
+
+    .year-gifts__text {
+      margin-right: 189px;
+      min-width: 222px;
+      max-width: 318px;
+      width: 42%;
+      z-index: 1;
+    }
+
+    .year-gifts__image {
+      min-width: 303px;
+      max-width: 434px;
+    }
+
+    .year-gifts__image img:nth-child(4) {
+      width: 74vw;
+      max-width: 800px;
+    }
+
+    .year-gifts__youtube {
+      width: 35px;
+      height: 32px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .year-gifts {
+      background: url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/gifts/bg-bottom.png") repeat-x center bottom -1px/1200px auto,
+                  url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/gifts/bg-top.png") repeat-x center top -1px/1937px auto #fafafa;
+    }
+
+    .year-gifts__container {
+      padding-left: 131px;
+      padding-right: 107px;
+    }
+
+    .year-gifts__text {
+      margin-right: 140px;
+      min-width: 164px;
+      max-width: 222px;
+    }
+
+    .year-gifts__image {
+      min-width: 200px;
+    }
+
+    .year-gifts__image img:nth-child(4) {
+      bottom: -91px;
+      left: -80px;
+      max-width: 595px;
+      width: 68vw;
+    }
+
+    .year-gifts__youtube {
+      right: 8%;
+      top: 26%;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .year-gifts {
+      padding-top: 40px;
+      padding-bottom: 0;
+      margin-top: -40px;
+      margin-bottom: 37px;
+      background: url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/gifts/bg-bottom.png") repeat-x center bottom -1px/700px auto,
+      url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/gifts/bg-top.png") repeat-x center top -1px/1937px auto #fafafa;
+    }
+
+    .year-gifts__container {
+      padding-left: 83px;
+      padding-right: 83px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .year-gifts__text {
+      margin-top: 0;
+      margin-right: 0;
+      margin-bottom: 40px;
+      align-self: center;
+    }
+
+    .year-gifts__image {
+      min-width: 163px;
+      max-width: 284px;
+    }
+
+    .year-gifts__image img:nth-child(4) {
+      display: none;
+    }
+
+    .year-gifts__youtube {
+      right: 2%;
+      top: 22%;
+    }
+  }
+
+  @media screen and (min-width: 1921px) {
+    .year-gifts {
+      background: url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/gifts/bg-bottom.png") repeat-x center bottom -1px/100% auto,
+      url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/gifts/bg-top.png") repeat-x center top -1px/100% auto #fafafa;
+    }
+  }
+
+  /************************************** Best Gifts BLOCK ******************************/
+  .new-year__best-gifts {
+    z-index: 1;
+    position: relative;
+    margin-bottom: 140px;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .new-year__best-gifts {
+      margin-bottom: 120px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .new-year__best-gifts {
+      margin-bottom: 60px;
+    }
+  }
+
+  @media screen and (max-width: 700px ) {
+    .new-year__best-gifts {
+      margin-bottom: 70px;
+    }
+  }
+
+  /************************************** Categories BLOCK ******************************/
+
+      .year-categories {
+        background: #FFFFFF;
+        padding-top: 15px;
+      }
+
+      .year-categories__container {
+        max-width: 1366px;
+        margin: 0 auto;
+      }
+
+      .year-categories__title {
+        font-size: 40px;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-align: center;
+        color: #73A400;
+        margin-bottom: 41px;
+      }
+
+      .year-categories__items {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        flex-wrap: wrap;
+      }
+
+      .year-categories__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 13px;
+        margin-left: 24px;
+        position: relative;
+        width: 244px;
+      }
+
+      .year-categories__item a:hover {
+        transform: scale(1.1);
+      }
+
+      .year-categories__photo-container {
+        width: 180px;
+        height: 185px;
+        margin-bottom: 18px;
+      }
+
+      .year-categories__text {
+        font-weight: 500;
+        font-size: 16px;
+        color: #3B6D9A;
+        text-align: center;
+      }
+
+      @media screen and (max-width: 1365px) {
+
+        .year-categories__container {
+          max-width: 926px;
+        }
+
+        .year-categories__title {
+          font-size: 32px;
+          margin-bottom: 24px;
+        }
+
+        .year-categories__items {
+          margin-left: -24px;
+          position: relative;
+        }
+
+        .year-categories__items:after {
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0) -10.9%, #FFFFFF 57.67%);
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 15px;
+          right: 0;
+          left: 0;
+          transition: height 0.3s linear;
+          height: 250px;
+          z-index: 1;
+        }
+
+        .year-categories__items.opened:after {
+          display: none;
+        }
+
+        .year-categories__item {
+          width: 166px;
+          margin-bottom: 12px;
+        }
+
+        .year-categories__item:nth-child(n+16) {
+          display: none;
+        }
+
+        .year-categories__show-more {
+          width: 56px;
+          height: 56px;
+          margin: 0 auto;
+          border-radius: 50%;
+          position: relative;
+          top: -90px;
+          background: #9BC438 url(https://i.citrus.ua/uploads/promo/black-friday-static/white-arrows.svg?_t=1573206119) center no-repeat;
+          cursor: pointer;
+          z-index: 2;
+        }
+
+        .year-categories__show-more:hover {
+          transition: 0.3s;
+          box-shadow: 0 11px 15px rgba(0, 0, 0, 0.12), 0 9px 46px rgba(0, 0, 0, 0.06), 0 24px 38px rgba(0, 0, 0, 0.07);
+        }
+      }
+
+      @media screen and (max-width: 1023px) {
+
+        .year-categories__container {
+          max-width: 740px;
+        }
+
+        .year-categories__title {
+          font-size: 24px;
+          margin-bottom: 24px;
+        }
+
+        .year-categories__items {
+          margin-left: 0;
+        }
+
+        .year-categories__items:after {
+          bottom: 0;
+        }
+
+        .year-categories__item {
+          width: 118px;
+          margin-bottom: 46px;
+        }
+
+        .year-categories__item:nth-child(n+11) {
+          margin-bottom: 0;
+        }
+
+        .opened .year-categories__item:nth-child(n+12) {
+          margin-bottom: 46px;
+        }
+
+        .year-categories__text {
+          font-size: 14px;
+        }
+
+        .year-categories__photo-container {
+          width: 141px;
+          height: 140px;
+        }
+
+        .year-categories__show-more {
+          top: -85px;
+        }
+
+      }
+
+      @media screen and (max-width: 720px) {
+
+        .year-categories__container {
+          max-width: 640px;
+        }
+
+        .year-categories__item a:hover {
+          transform: none;
+        }
+
+        .year-categories__item {
+          width: 100px;
+        }
+
+        .year-categories__photo-container {
+          width: 120px;
+          height: 116px;
+        }
+      }
+
+      @media screen and (max-width: 640px) {
+        .year-categories__container {
+          max-width: 620px;
+          padding: 0 16px;
+        }
+
+        .year-categories__title {
+          font-size: 22px;
+        }
+
+
+        .year-categories__items:after {
+          bottom: 0;
+        }
+
+        .year-categories__item {
+          margin-left: 0;
+          width: 50%;
+          max-width: initial;
+        }
+
+        .year-categories__item:nth-child(4),
+        .year-categories__item:nth-child(5),
+        .year-categories__item:nth-child(6) {
+          margin-bottom: 0;
+        }
+
+        .opened .year-categories__item:nth-child(4),
+        .opened .year-categories__item:nth-child(5),
+        .opened .year-categories__item:nth-child(6) {
+          margin-bottom: 46px;
+        }
+
+        .year-categories__item:nth-child(n+7) {
+          display: none;
+        }
+
+        .year-categories__photo-container {
+          max-width: 188px;
+          width: 100%;
+          height: 167px;
+          margin-bottom: 26px;
+        }
+
+        .year-categories__show-more {
+          top: -90px;
+        }
+
+      }
+
+      @media screen and (max-width: 350px) {
+
+        .year-categories__title {
+          margin-bottom: 17px;
+        }
+
+        .year-categories__item {
+          margin-bottom: 12px;
+        }
+
+        .year-categories__photo-container {
+          height: 141px;
+        }
+      }
+
+
+  /************************************** Any-Price BLOCK ******************************/
+
+  .year-prices {
+    background: url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/bg_5_bottom.png?_t=1576097752") repeat-x center bottom -1px/1900px auto,
+    url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/bg_3%20top.png?_t=1576097752") repeat-x center top -1px/1937px auto #fafafa;
+    position: relative;
+  }
+
+  .year-prices__container {
+    max-width: 1366px;
+    margin: 0 auto;
+    padding-left: 158px;
+    padding-right: 108px;
+    padding-bottom: 250px;
+    padding-top: 222px;
+  }
+
+  .year-prices__title {
+    font-weight: 900;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #73A400;
+    margin-bottom: 48px;
+  }
+
+  .year-prices__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .year-prices__item {
+    position: relative;
+    transition: 0.3s;
+  }
+
+  .year-prices__item a img {
+    transition: 0.3s;
+  }
+
+  .anim.year-prices__items .year-prices__item:nth-child(2):hover,
+  .anim.year-prices__items .year-prices__item:nth-child(3):hover,
+  .anim.year-prices__items .year-prices__item:nth-child(4):hover {
+    animation-play-state: paused;
+  }
+
+  .year-prices__item > a {
+    display: block;
+    transition: transform ease .3s;
+  }
+
+  .year-prices__item:hover > a {
+    transform: translateY(-24px);
+  }
+
+  .year-prices__item:nth-child(2) {
+    transform: translateX(-150%);
+  }
+
+  .year-prices__item:nth-child(2) img {
+    transform: rotate(-180deg);
+  }
+
+  .year-prices__item:nth-child(3) {
+    transform: translateX(-280%);
+  }
+
+  .year-prices__item:nth-child(3) img {
+    transform: rotate(-270deg);
+  }
+
+  .year-prices__item:nth-child(4) {
+    transform: translateX(-390%);
+  }
+
+  .year-prices__item:nth-child(4) img {
+    transform: rotate(-180deg);
+  }
+
+  .anim.year-prices__items .year-prices__item:nth-child(2) {
+    animation: second-price--animation 1s forwards;
+    animation-delay: 0.1s;
+  }
+
+  @keyframes second-price--animation {
+    100% {transform: translateX(0);}
+  }
+
+  .anim.year-prices__items .year-prices__item:nth-child(2) img {
+    animation: second-image-rotate--animation 1s forwards;
+  }
+
+  @keyframes second-image-rotate--animation {
+    100% {transform: rotate(0deg);}
+  }
+
+  .anim.year-prices__items .year-prices__item:nth-child(3) {
+    animation: third-price--animation 1s forwards;
+    animation-delay: 0.1s;
+  }
+
+  @keyframes third-price--animation {
+    100% {transform: translateX(0);}
+  }
+
+  .anim.year-prices__items .year-prices__item:nth-child(3) img {
+    animation: third-image-rotate--animation 1s forwards;
+  }
+
+  @keyframes third-image-rotate--animation {
+    100% {transform: rotate(0deg);}
+  }
+
+  .anim.year-prices__items .year-prices__item:nth-child(4) {
+    animation: fourth-price--animation 1s forwards;
+    animation-delay: 0.1s;
+  }
+
+  @keyframes fourth-price--animation {
+    100% {transform: translateX(0);}
+  }
+
+  .anim.year-prices__items .year-prices__item:nth-child(4) img {
+    animation: fourth-image-rotate--animation 1s forwards;
+  }
+
+  @keyframes fourth-image-rotate--animation {
+    100% {transform: rotate(360deg);}
+  }
+
+  .year-prices__item:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    bottom: -50px;
+    height: 27px;
+    background: url(https://i.citrus.ua/uploads/promo/new-year-2019-landing/button-shadow.png) no-repeat center/100% 100%;
+  }
+
+  .year-prices__tree-container {
+    position: absolute;
+    left: calc(0% - 191px);
+    top: 110px;
+    transform: rotate(55deg);
+    max-width: 546px;
+    min-width: 360px;
+    width: 27%;
+  }
+
+  .year-prices__tree {
+    width: 563px;
+    z-index: 2;
+    position: relative;
+  }
+
+  .year-prices__hand-axe {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    transform-origin: 70% 46%;
+  }
+
+  .anim.year-prices__hand-axe {
+    animation: prices-hand--animation 1.5s infinite;
+    animation-direction: alternate-reverse;
+  }
+
+  @keyframes prices-hand--animation {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(10deg);}
+  }
+
+  @media screen and (max-width: 1365px) {
+
+    .year-prices {
+      background: url(https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/bg_5_bottom.png?_t=1576097752) repeat-x center bottom -1px/1365px auto, url(https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/bg_3%20top.png?_t=1576097752) repeat-x center top -1px/1365px auto #fafafa;
+    }
+
+    .year-prices__container {
+      max-width: 976px;
+      padding-left: 155px;
+      padding-right: 156px;
+      padding-bottom: 160px;
+      padding-top: 36px;
+    }
+
+    .year-prices__title {
+      font-size: 32px;
+      margin-bottom: 45px;
+    }
+
+    .year-prices__item:nth-child(1) {
+      width: 114.46px;
+    }
+
+    .year-prices__item:nth-child(2) {
+      width: 129.11px;
+      transform: translateX(-125%);
+    }
+
+    .year-prices__item:nth-child(3) {
+      width: 143.07px;
+      transform: translateX(-230%);
+    }
+
+    .year-prices__item:nth-child(4) {
+      width: 161.31px;
+      transform: translateX(-325%);
+    }
+
+    .year-prices__tree-container {
+      left: calc(0% - 109px);
+      top: 8px;
+      min-width: 300px;
+      max-width: 375px;
+      width: 29%;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+
+  .year-prices {
+    background: url(https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/bg_5_bottom.png?_t=1576097752) repeat-x center bottom -1px/1023px auto,
+    url(https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/bg_3%20top.png?_t=1576097752) repeat-x center top -1px/1023px auto #fafafa;
+  }
+
+    .year-prices__container {
+      max-width: 732px;
+      padding-left: 120px;
+      padding-right: 120px;
+    }
+
+    .year-prices__title {
+      font-size: 24px;
+      margin-bottom: 34px;
+    }
+
+
+    .year-prices__item:nth-child(1) {
+      width: 84.9px;
+    }
+
+    .year-prices__item:nth-child(2) {
+      width: 95.78px;
+      transform: translateX(-120%);
+    }
+
+    .year-prices__item:nth-child(3) {
+      width: 106.13px;
+      transform: translateX(-230%);
+    }
+
+    .year-prices__item:nth-child(4) {
+      width: 119.66px;
+      transform: translateX(-320%);
+    }
+
+    .year-prices__tree-container {
+      left: calc(0% - 96px);
+      top: 4px;
+      min-width: 245px;
+      max-width: 370px;
+    }
+
+  }
+
+  @media screen and (max-width: 767px) {
+
+    .year-prices__tree-container {
+      left: calc(0% - 130px);
+      top: 4px;
+      min-width: 245px;
+      max-width: 370px;
+    }
+
+  }
+
+  @media screen and (max-width: 720px) {
+
+    .year-prices {
+      background: url('https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/bg_5_bottom.png?_t=1576097752') repeat-x center bottom -1px/720px auto,
+      url('https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/bg_3%20top.png?_t=1576097752') repeat-x center top -1px/720px auto #fafafa;
+    }
+
+    .year-prices__container {
+      max-width: 640px;
+      width: 100%;
+      min-width: 320px;
+      padding: 0 16px;
+    }
+
+    .year-prices__items {
+      flex-wrap: wrap;
+      align-items: baseline;
+    }
+
+    .small .year-prices__item:after {
+      display: none;
+    }
+
+    .year-prices__items .year-prices__item {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: initial;
+    }
+
+    .year-prices__tree-container {
+      display: none;
+    }
+
+    .year-prices__items .year-prices__item:nth-child(1) {
+      margin-bottom: 42px;
+      min-width: 90px;
+      transform: none;
+    }
+
+    .year-prices__items .year-prices__item:nth-child(2) {
+      margin-bottom: 42px;
+      min-width: 102px;
+      transform: none;
+    }
+
+    .year-prices__items .year-prices__item:nth-child(3) {
+      min-width: 112px;
+      transform: none;
+    }
+
+    .year-prices__items .year-prices__item:nth-child(4) {
+      min-width: 122px;
+      transform: none;
+      z-index: initial;
+    }
+
+    .year-prices__items .year-prices__item:nth-child(1) img,
+    .year-prices__items .year-prices__item:nth-child(2) img,
+    .year-prices__items .year-prices__item:nth-child(3) img,
+    .year-prices__items .year-prices__item:nth-child(4) img {
+      transform: none;
+    }
+
+    .year-prices__items.anim .year-prices__item:nth-child(1),
+    .year-prices__items.anim .year-prices__item:nth-child(2),
+    .year-prices__items.anim .year-prices__item:nth-child(3),
+    .year-prices__items.anim .year-prices__item:nth-child(4),
+    .anim.year-prices__items .year-prices__item:nth-child(1) img,
+    .anim.year-prices__items .year-prices__item:nth-child(2) img,
+    .anim.year-prices__items .year-prices__item:nth-child(3) img,
+    .anim.year-prices__items .year-prices__item:nth-child(4) img {
+      animation: none;
+    }
+  }
+
+  @media screen and (min-width: 1921px) {
+    .year-prices{
+      background: url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/bg_5_bottom.png?_t=1576097752") repeat-x center bottom -1px/100% auto,
+      url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/bg_3%20top.png?_t=1576097752") repeat-x center top -1px/100% auto #fafafa;
+    }
+  }
+
+  /************************************** Card BLOCK ******************************/
+  .year-card {
+    margin-top: 116px;
+    padding-top: 44px;
+    padding-bottom: 216px;
+    position: relative;
+    background: url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/gifts/bg-bottom.png") repeat-x center bottom -1px/1900px auto,
+                url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/gifts/bg-top.png") repeat-x center top -1px/1937px auto #fafafa;
+  }
+
+  .year-card__container {
+    max-width: 1366px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 86px;
+  }
+
+  .year-card__content {
+    max-width: 547px;
+  }
+
+  .year-card__text {
+    margin-bottom: 39px;
+  }
+
+  .year-card__plastic {
+    max-width: 543px;
+    position: relative;
+    height: 301px;
+    border-radius: 34px;
+    margin-bottom: 32px;
+    background: url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/card/plastic-ua.jpg") no-repeat center/100% 100%;
+  }
+
+  .year-card__select {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+  }
+
+  .year-card__select::after {
+    width: 16px;
+    position: absolute;
+    content: '';
+    height: 10px;
+    right: 24px;
+    top: 33px;
+    pointer-events: none;
+    background: url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/arrow-bottom.png") no-repeat center;
+  }
+
+  .year-card__select select {
+    width: 311px;
+    height: 72px;
+    background-color: #ffffff;
+    font-size: 32px;
+    font-weight: bold;
+    border-radius: 50px;
+    padding-left: 24px;
+    border: none;
+  }
+
+  .year-card__select select:focus {
+    outline: none;
+  }
+
+  .year-card__select select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+
+  .year-card__select select::-ms-expand {
+    display: none;
+  }
+
+  .year-card__redirect {
+    max-width: 313px;
+    height: 82px;
+    display: flex;
+    background: url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/new-year-button.png") no-repeat center/100% 100%;
+    position: relative;
+    font-size: 32px;
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    animation: year-products__redirect--anim 2s infinite ease;
+    animation-direction: alternate-reverse;
+  }
+
+  .year-card__redirect::after {
+    content: '';
+    position: absolute;
+    width: 234px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    bottom: -50px;
+    height: 27px;
+    background: url(https://i.citrus.ua/uploads/promo/new-year-2019-landing/button-shadow.png) no-repeat center/100% 100%;
+    animation: year-products__redirect-after--anim 2s infinite ease;
+    animation-direction: alternate-reverse;
+    transform-origin: left;
+  }
+
+  .year-card__redirect:hover {
+    color: #ffffff;
+    opacity: 0.8;
+  }
+
+  .year-card__deer {
+    position: absolute;
+    top: -95px;
+    right: calc(50% - 959px);
+    transform: translateX(100%) rotate(45deg);
+  }
+
+  .year-card__deer.anim {
+    animation: year-card__deer--anim 1s forwards;
+  }
+
+  @keyframes year-card__deer--anim {
+    0% {
+      transform: translateX(100%) rotate(45deg);
+    }
+
+    100% {
+      transform: translateX(0) rotate(0deg);
+    }
+  }
+
+  .year-card__tail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform-origin: 54.5% 96.3%;
+  }
+
+  .year-card__tail.anim {
+    animation: year-card__tail--anim 2s infinite ease-in-out;
+    animation-direction: alternate-reverse;
+  }
+
+  @keyframes year-card__tail--anim {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(40deg);
+    }
+  }
+
+  @media screen and (max-width: 1365px) {
+    .year-card {
+      margin-top: 93px;
+    }
+
+    .year-card__text {
+      width: 385px;
+      margin-bottom: 22px;
+    }
+
+    .year-card__content {
+      max-width: 382px;
+    }
+
+    .year-card__plastic {
+      height: 212px;
+      border-radius: 24px;
+      margin-bottom: 25px;
+    }
+
+    .year-card__select {
+      right: 38px;
+      bottom: 20px;
+    }
+
+    .year-card__select select {
+      width: 195px;
+      height: 44px;
+      font-size: 22px;
+    }
+
+    .year-card__select::after {
+      top: 18px;
+    }
+
+    .year-card__redirect {
+      height: 60px;
+      max-width: 247px;
+      font-size: 25px;
+    }
+
+    .year-card__deer {
+      top: -46px;
+      right: -24px;
+      width: 511px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .year-card {
+      margin-top: 63px;
+    }
+
+    .year-card__container {
+      padding-left: 68px;
+    }
+
+    .year-card__text {
+      width: 285px;
+    }
+
+    .year-card__plastic {
+      height: 155px;
+      margin-bottom: 14px;
+      border-radius: 20px;
+    }
+
+    .year-card__content {
+      max-width: 285px;
+    }
+
+    .year-card__select {
+      right: 15px;
+      bottom: 15px;
+    }
+
+    .year-card__select select {
+      height: 33px;
+      font-size: 16px;
+      width: 145px;
+    }
+
+    .year-card__select::after {
+      top: 13px;
+      right: 10px;
+    }
+
+    .year-card__redirect {
+      height: 48px;
+      max-width: 182px;
+      font-size: 18px;
+    }
+
+    .year-card__redirect::after {
+      width: 161px;
+    }
+
+    .year-card__deer {
+      top: -39px;
+      right: -29px;
+      width: 404px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .year-card__container {
+      padding-left: 40px;
+    }
+
+    .year-card__deer {
+      right: calc(50% - 415px);
+    }
+
+    .year-card__select {
+      right: 29px;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .year-card {
+      padding-top: 54px;
+      margin-top: 72px;
+    }
+
+    .year-card__deer {
+      position: relative;
+      right: -20px;
+      top: 0;
+      width: 100%;
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .year-card__container {
+      padding-left: 0;
+    }
+
+    .year-card__content {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .year-card__text {
+      margin-bottom: 17px;
+    }
+
+    .year-card__redirect {
+      margin-bottom: 32px;
+    }
+  }
+
+  @media screen and (min-width: 1921px) {
+    .year-card{
+      background: url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/gifts/bg-bottom.png") repeat-x center bottom -1px/100% auto,
+      url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/gifts/bg-top.png") repeat-x center top -1px/100% auto #fafafa;
+    }
+  }
+
+  /************************************** Super Deals BLOCK ******************************/
+
+  .super-deals {
+    /*background: url(https://i.citrus.ua/uploads/promo/new-year-2019-landing/super-deals-bg.png) center no-repeat;*/
+    background: url(https://i.citrus.ua/uploads/promo/new-year-2019-landing/super-deals/bg_6_middle.png?_t=1576151069) repeat top -20px center;
+    /*height: 912px;*/
+    margin: -61px 0 50px 0;
+    position: relative;
+  }
+
+  .super-deals:before {
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 97px;
+    background: url(https://i.citrus.ua/uploads/promo/new-year-2019-landing/super-deals/bg_6_top.png?_t=1576151069) repeat-x top 0px center;
+    top: -60px;
+  }
+
+  .super-deals:after {
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 97px;
+    background: url(https://i.citrus.ua/uploads/promo/new-year-2019-landing/super-deals/bg_6_bottom.png?_t=1576151069) repeat-x top 0px center;
+    bottom: -35px;
+  }
+
+  .super-deals__container {
+    padding-top: 89px;
+    padding-bottom: 161px;
+    max-width: 1505px;
+    margin: 0 auto;
+  }
+
+  .super-deals__title {
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 59px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 47px;
+
+  }
+
+  .super-deals__products {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .super-deals__item {
+    padding: 62px 133px 77px;
+    z-index: 2;
+    position: relative;
+  }
+
+  .super-deals__item:after {
+    content: '';
+    background: url(https://i.citrus.ua/uploads/promo/new-year-2019-landing/super-deals-window.png) center no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .super-deals__item:before {
+    content: '';
+    background: url(https://i.citrus.ua/uploads/promo/new-year-2019-landing/under-windoq-bg.png) center no-repeat;
+    width: 361px;
+    height: 49px;
+    position: absolute;
+    left: 49%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    user-select: none;
+    bottom: -21px;
+  }
+
+  .super-deals__item:first-child,
+  .super-deals__item:last-child {
+    transform: scale(0.8);
+    position: absolute;
+    bottom: -31px;
+    z-index: 1;
+  }
+
+  .super-deals__item:first-child {
+    left: -58px;
+    transform: translate3d(150px, 0, 0) scale(0.8);
+  }
+
+  .anim.super-deals__item:first-child {
+    animation: left-deals--animation 1.2s forwards ease-out;
+    animation-timing-function: cubic-bezier(.19,.66,.24,.99);
+  }
+
+  @keyframes left-deals--animation {
+    0% {transform: translate3d(150px, 0, 0) scale(0.8); }
+    100% {transform: translate3d(0, 0, 0) scale(0.8);}
+  }
+
+  .super-deals__item:last-child {
+    right: -58px;
+    transform: translate3d(-150px, 0, 0) scale(0.8);
+  }
+
+  .anim.super-deals__item:last-child {
+    animation: right-deals--animation 1.2s forwards ease-out;
+    animation-timing-function: cubic-bezier(.19,.66,.24,.99);
+  }
+
+  @keyframes right-deals--animation {
+    0% {transform: translate3d(-150px, 0, 0) scale(0.8); }
+    100% {transform: translate3d(0, 0, 0) scale(0.8);}
+  }
+
+  .super-deals__item .item__link{
+    display: block;
+
+  }
+
+  .super-deals__item .item__link:hover .item__title{
+    color: #FF8637;
+  }
+
+  .super-deals__products .item__description {
+    max-width: 341px;
+    width: 100%;
+    background: url(https://i.citrus.ua/uploads/promo/new-year-2019-landing/super-deals-card_center.png) center no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 28px 40px 6px;
+  }
+
+  .super-deals__item .item__title {
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 33px;
+    margin: 0;
+    position: relative;
+    z-index: 10;
+    height: 67px;
+    overflow: hidden;
+    transition: .3s;
+
+    display: block;
+    word-break: break-all;
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+
+  .super-deals__item .item__old-price {
+    text-decoration: line-through;
+    font-size: 28px;
+    line-height: 32px;
+    color: rgba(0, 0, 0, 0.54);
+    margin: 10px 0 0;
+  }
+
+  .super-deals__item .item__price {
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 47px;
+    color: #FF680A;
+    position: relative;
+    padding-right: 20px;
+    margin: 0;
+  }
+
+  .super-deals__item .item__price .currency {
+    position: absolute;
+    font-size: 21px;
+    transform: rotate(-90deg);
+    right: -5px;
+    top: 0;
+  }
+
+  .super-deals__item .item__preview {
+    max-height: 200px;
+    margin-top: 20px;
+  }
+
+  .super-deals__item .item__preview .preview__image {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1365px) {
+    .super-deals {
+      /*background-size: 1365px;*/
+      /*height: 652px;*/
+    }
+
+    .super-deals__container {
+      padding-top: 65px;
+      padding-bottom: 138px;
+      max-width: 1024px;
+    }
+
+    .super-deals__title {
+      font-size: 32px;
+      line-height: 37px;
+      margin-bottom: 27px;
+    }
+
+    .super-deals__item {
+      padding: 23px 86px 39px;
+    }
+
+    .super-deals__item:after {
+      background-size: contain;
+    }
+
+    .super-deals__item:before {
+      background: url(https://i.citrus.ua/uploads/promo/new-year-2019-landing/under-windoq-bg.png) center center/222px no-repeat;
+      width: 230px;
+      bottom: -20px;
+    }
+
+    .super-deals__products .item__description {
+      max-width: 210px;
+      padding: 24px 25px 10px;
+      background-size: cover;
+    }
+
+    .super-deals__item .item__preview {
+      max-width: 122px;
+    }
+
+    .super-deals__item .item__title {
+      font-size: 18px;
+      line-height: 21px;
+      height: 42px;
+    }
+
+    .super-deals__item .item__old-price {
+      font-size: 16px;
+      line-height: normal;
+      margin: 4px 0 0;
+    }
+
+    .super-deals__item .item__price {
+      font-size: 24px;
+      line-height: 28px;
+      padding-right: 12px;
+    }
+
+    .super-deals__item:first-child {
+      left: 10px;
+      bottom: -17px;
+    }
+
+    .super-deals__item:last-child {
+      right: 16px;
+      bottom: -19px;
+    }
+
+    .super-deals__item .item__price .currency {
+      font-size: 13px;
+    }
+    .super-deals__item .item__preview .preview__image{
+      width: auto;
+      height: 100%;
+      max-height: 122px;
+      max-width: 100%;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .super-deals {
+      margin-top: -107px;
+      /*background-size: 1024px;*/
+      /*height: 488px;*/
+    }
+
+    .super-deals__container {
+      max-width: 768px;
+      padding-top: 50px;
+      padding-bottom: 115px;
+    }
+
+    .super-deals__title {
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 20px;
+      height: 33px;
+    }
+
+    .super-deals__products .item__description {
+      max-width: 163px;
+      padding: 18px 25px 17px;
+    }
+
+    .super-deals__item {
+      padding: 18px 67px 30px;
+    }
+
+    .super-deals__item:before {
+      background: url(https://i.citrus.ua/uploads/promo/new-year-2019-landing/under-windoq-bg.png) center center/173px no-repeat;
+      width: 173px;
+    }
+
+    .super-deals__item .item__title {
+      font-size: 14px;
+      line-height: 16px;
+      height: 33px;
+    }
+
+    .super-deals__item .item__old-price {
+      font-size: 12px;
+    }
+
+    .super-deals__item .item__price {
+      font-size: 18px;
+      line-height: 21px;
+      padding-right: 8px;
+    }
+
+    .super-deals__item .item__price .currency {
+      font-size: 9px;
+    }
+
+    .super-deals__item .item__preview {
+      max-width: 96px;
+      margin-top: 7px;
+    }
+    .super-deals__item .item__preview .preview__image{
+      max-height: 96px;
+    }
+
+    .super-deals__item:first-child {
+      left: -7px;
+      bottom: -14px;
+    }
+
+    .super-deals__item:last-child {
+      right: -6px;
+      bottom: -13px;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .super-deals {
+      background: url(https://i.citrus.ua/uploads/promo/new-year-2019-landing/super-deals/bg_6_middle.png?_t=1576151069) repeat top 0 center;
+      background-size: 35px;
+
+    }
+    .super-deals:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 35px;
+    background: url(https://i.citrus.ua/uploads/promo/new-year-2019-landing/super-deals/bg_6_top.png?_t=1576151069) repeat-x top 0 center;
+    top: -18px;
+    background-size: 35px;
+    }
+    .super-deals:after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 35px;
+      background: url(https://i.citrus.ua/uploads/promo/new-year-2019-landing/super-deals/bg_6_bottom.png?_t=1576151069) repeat-x top 0 center;
+      bottom: -18px;
+      background-size: 35px;
+    }
+
+
+    .super-deals__container {
+      padding: 50px 0 80px;
+    }
+
+    .super-deals__title {
+      font-size: 22px;
+      line-height: 26px;
+      padding: 0 20px;
+      margin-bottom: 24px;
+    }
+    .super-deals__products{
+      flex-direction: column;
+      align-items: center;
+    }
+    .super-deals__item{
+      padding: 18px 66px 15px;
+      margin-bottom: 28px;
+      max-width: 338px;
+    }
+
+    .super-deals__item:before {
+      background: url(https://i.citrus.ua/uploads/promo/new-year-2019-landing/under-windoq-bg.png) center center/171px no-repeat;
+      width: 171px;
+      bottom: -27px;
+    }
+
+    .super-deals__item:first-child, .super-deals__item:last-child {
+      position: static;
+      transform: scale(1);
+    }
+
+    .anim.super-deals__item:first-child, .anim.super-deals__item:last-child {
+      animation: none;
+    }
+
+    .super-deals__products .item__description {
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .super-deals {
+      margin-top: -300px;
+    }
+  }
+
+
+  /************************************** Mobile-app BLOCK ******************************/
+      .flex         { display: flex; }
+      .flex.around  { justify-content: space-around; }
+      .flex.between { justify-content: space-between; }
+      .flex.center  { align-items: center; }
+      .full-width   { width: 100%; }
+
+      .form-text-base {
+        font-size: 18px;
+        color: rgba(0, 0, 0, 0.87);
+      }
+
+      .mobile-app * {
+        padding: 0;
+        margin: 0;
+        line-height: normal;
+        box-sizing: border-box;
+      }
+
+      .mobile-app__container {
+        max-width: 1366px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+
+      .mobile-app__preview {
+        position: relative;
+        max-width: 500px;
+        opacity: 0;
+      }
+
+      .anim.mobile-app__preview {
+        animation: mobile-preview--animation 1s forwards;
+      }
+
+      @keyframes mobile-preview--animation {
+        0% {opacity: 0; transform: scale(0);}
+        50% {opacity: 1; transform: scale(1.2);}
+        100% {opacity: 1; transform: scale(1);}
+      }
+
+      .preview__phone {
+        margin-top: 20px;
+      }
+
+      .preview__pie-right,
+      .preview__pie-left {
+        position: absolute;
+        top: 75px;
+      }
+
+      .preview__pie-right {
+        right: -85px;
+        transform: translate3d(-150px, 0, 0) rotate(-25deg);
+      }
+
+      .anim.preview__pie-left {
+        animation: pie-left--animation 0.5s forwards;
+        animation-delay: 0.3s;
+      }
+
+      @keyframes pie-left--animation {
+        100% {transform: translate3d(0,0,0) rotate(0);}
+      }
+
+      .preview__pie-left {
+        left: 0;
+        transform: translate3d(150px, 0, 0) rotate(25deg);
+      }
+
+      .anim.preview__pie-right {
+        animation: pie-right--animation 0.5s forwards;
+        animation-delay: 0.3s;
+      }
+
+      @keyframes pie-right--animation {
+        100% {transform: translate3d(0,0,0) rotate(0);}
+      }
+
+      .mobile-app__form {
+        max-width: 416px;
+      }
+
+      .mobile-app__form .loader {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: white;
+        opacity: 0.3;
+        display: none;
+      }
+
+      .form__header {
+        margin-bottom: 15px;
+      }
+
+      .form__body {
+        margin-bottom: 32px;
+      }
+
+      .form__footer {
+        position: relative;
+      }
+
+      .form__header img {
+        width: 100%;
+      }
+
+      .form__get-sms,
+      .form__bonus-text {
+        margin-bottom: 28px;
+        text-align: center;
+      }
+
+      .form__download-buttons a,
+      .form__phone-input,
+      .form__submit {
+        display: block;
+        max-width: 200px;
+        width: 100%;
+      }
+      .form__download-buttons a:not(:first-child),
+      .form__submit { margin-left: 16px; }
+
+      .form__phone-input,
+      .form__submit {
+        height: 46px;
+      }
+
+      .form__download-buttons img {
+        width: 100%;
+      }
+
+      .form__phone-input {
+        border: 2px solid #9BC438;
+        border-radius: 50px;
+        padding: 0 0 0 12px;
+        font-size: 18px;
+      }
+
+      .form__submit {
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 20px;
+        color: white;
+        background: url('https://i.citrus.ua/uploads/promo/new-year-2019-landing/mobile-app/button.png') no-repeat center/100% 100%;
+      }
+
+      .form__submit:hover {
+        opacity: 0.8;
+      }
+
+      .mobile-app .thanks__title {
+        font-weight: 500;
+        font-size: 40px;
+        text-align: center;
+        color: #9BC438;
+        margin-bottom: 20px;
+      }
+
+      @media screen and (max-width: 1324px) and (min-width: 927px) {
+        .mobile-app__preview {
+          transform: translateX(-45px);
+        }
+      }
+
+      @media screen and (max-width: 1324px) {
+        .form__header {
+          margin-bottom: 10px;
+        }
+
+        .form__body {
+          margin-bottom: 22px;
+        }
+
+        .form__bonus-text,
+        .form__get-sms {
+          margin-bottom: 18px;
+        }
+
+        .mobile-app__preview {
+          max-width: 420px;
+        }
+
+        .preview__pie-right {
+          right: -85px;
+          top: 50px;
+          transform: translate3d(-100px, 0, 0) rotate(-25deg) scale(0.7);
+        }
+
+        .anim.preview__pie-left {
+          animation: pie-left--animation 0.5s forwards;
+          animation-delay: 0.3s;
+        }
+
+        @keyframes pie-left--animation {
+          100% {transform: translate3d(0,0,0) rotate(0) scale(0.7);}
+        }
+
+        .preview__pie-left {
+          top: 50px;
+          transform: translate3d(100px, 0, 0) rotate(25deg) scale(0.7);
+        }
+
+        .anim.preview__pie-right {
+          animation: pie-right--animation 0.5s forwards;
+          animation-delay: 0.3s;
+        }
+
+        @keyframes pie-right--animation {
+          100% {transform: translate3d(0,0,0) rotate(0) scale(0.7);}
+        }
+
+        .mobile-app__form {
+          max-width: 350px;
+        }
+
+        .form-text-base {
+          font-size: 12px;
+        }
+      }
+
+      @media screen and (max-width: 927px) {
+        .preview__pie-right {
+          right: -85px;
+          top: -10px;
+          transform: translate3d(-75px, 0, 0) rotate(-25deg) scale(0.5);
+        }
+
+        .anim.preview__pie-left {
+          animation: pie-left--animation 0.5s forwards;
+          animation-delay: 0.3s;
+        }
+
+        @keyframes pie-left--animation {
+          100% {transform: translate3d(0,0,0) rotate(0) scale(0.5);}
+        }
+
+        .preview__pie-left {
+          top: -10px;
+          left: -35px;
+          transform: translate3d(75px, 0, 0) rotate(25deg) scale(0.5);
+        }
+
+        .anim.preview__pie-right {
+          animation: pie-right--animation 0.5s forwards;
+          animation-delay: 0.3s;
+        }
+
+        @keyframes pie-right--animation {
+          100% {transform: translate3d(0,0,0) rotate(0) scale(0.5);}
+        }
+
+        .mobile-app__form {
+          max-width: 300px;
+        }
+
+        .mobile-app__preview {
+          max-width: 300px;
+          transform: translateX(-20px);
+        }
+      }
+
+      @media screen and (max-width: 720px) {
+        .new-year__mobile-app          { margin-top: 80px; }
+        .mobile-app__container > .flex { flex-wrap: wrap; }
+
+        .form__header,
+        .form__body,
+        .form__footer {
+          max-width: 420px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .form__header img {
+          max-width: 75%;
+          display: block;
+          margin: 0 auto;
+          transform: scale(0.8);
+        }
+
+        .form__body {
+          margin-bottom: 20px;
+        }
+
+        .mobile-app__form {
+          max-width: 100%;
+        }
+
+        .mobile-app__preview {
+          margin-top: 40px;
+          transform: none;
+        }
+
+        .preview__pie-left {
+          left: -60px;
+        }
+
+        .mobile-app__preview img {
+          margin-top: 0;
+        }
+
+        .form__submit {
+          font-size: 18px;
+        }
+      }
+
+      @media screen and (max-width: 410px) {
+        .mobile-app .form__form > .flex { flex-wrap: wrap; }
+
+        .mobile-app__preview {
+          max-width: 220px;
+        }
+
+        .preview__pie-left,
+        .preview__pie-right {
+          transform: scale(0.4);
+          top: -50px;
+        }
+
+        .preview__pie-right {
+          right: -85px;
+          top: -50px;
+          transform: translate3d(-75px, 0, 0) rotate(-25deg) scale(0.4);
+        }
+
+        .anim.preview__pie-left {
+          animation: pie-left--animation 0.5s forwards;
+          animation-delay: 0.3s;
+        }
+
+        @keyframes pie-left--animation {
+          100% {transform: translate3d(0,0,0) rotate(0) scale(0.4);}
+        }
+
+        .preview__pie-left {
+          top: -50px;
+          transform: translate3d(75px, 0, 0) rotate(25deg) scale(0.4);
+        }
+
+        .anim.preview__pie-right {
+          animation: pie-right--animation 0.5s forwards;
+          animation-delay: 0.3s;
+        }
+
+        @keyframes pie-right--animation {
+          100% {transform: translate3d(0,0,0) rotate(0) scale(0.4);}
+        }
+
+        .form__submit,
+        .form__phone-input {
+          max-width: 100%;
+        }
+
+        .form__phone-input {
+          margin-bottom: 24px;
+        }
+
+        .form__footer {
+          max-width: 220px;
+        }
+
+        .form__submit {
+          background-image: url('https://i.citrus.ua/uploads/promo/new-year-2019-landing/mobile-app/button-large.png');
+          margin: 0 auto;
+        }
+      }
+
+  /************************************** Footer BLOCK ******************************/
+      .new-year-footer {
+        padding-top: 120px;
+        padding-bottom: 80px;
+        background: url("https://i.citrus.ua/uploads/promo/new-year-2019-landing/footer/top-bg.png") no-repeat top -1px center/100% auto #FAFAFA;
+      }
+      .new-year-footer-list {
+        display: flex;
+        padding: 0 12px;
+        max-width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .new-year-footer-list .list-col {
+        flex-basis: calc(100% / 3);
+        margin: 0 12px;
+      }
+      .new-year-footer-list .list-col .col__item {
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 24px 24px 0;
+        margin-bottom: 19px;
+      }
+      .new-year-footer-list .list-col .col__item .item__title {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 26px;
+        margin-top: 0;
+      }
+      .new-year-footer-list .list-col .col__item .item__text {
+        font-size: 16px;
+        line-height: 150%;
+        color: rgba(0, 0, 0, 0.54);
+        padding-bottom: 24px;
+        margin: 0;
+      }
+      .new-year-footer-list .list-col .col__item .item__list {
+        padding-left: 18px;
+        margin: 0;
+        list-style: disc;
+        font-size: 16px;
+        line-height: 140%;
+        padding-bottom: 24px;
+        color: rgba(0, 0, 0, 0.54);
+      }
+      .new-year-footer-list .list-col .col__item .item__list li {
+        padding-bottom: 7px;
+      }
+      @media screen and (max-width: 1365px) {
+        .new-year-footer {
+          padding-top: 8%;
+        }
+      }
+      @media screen and (max-width: 1024px) {
+        .new-year-footer {
+          padding-bottom: 60px;
+        }
+        .new-year-footer-list .list-col .col__item .item__title {
+          font-size: 22px;
+          line-height: 26px;
+        }
+        .new-year-footer-list .list-col .col__item .item__text {
+          font-size: 14px;
+          line-height: 140%;
+          padding-bottom: 12px;
+        }
+        .new-year-footer-list .list-col .col__item .item__list {
+          font-size: 14px;
+          line-height: 140%;
+          padding-bottom: 12px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .new-year-footer {
+          padding-bottom: 40px;
+        }
+        .new-year-footer-list {
+          flex-direction: column;
+          padding: 0 8px;
+        }
+        .new-year-footer-list .list-col {
+          margin: 0;
+        }
+        .new-year-footer-list .list-col .col__item {
+          padding: 24px 16px 0;
+          margin-bottom: 24px;
+        }
+        .new-year-footer-list .list-col .col__item .item__title {
+          font-size: 20px;
+          line-height: 23px;
+          margin-bottom: 23px;
+        }
+        .new-year-footer-list .list-col .col__item .item__text {
+          font-size: 12px;
+        }
+        .new-year-footer-list .list-col .col__item .item__list {
+          font-size: 12px;
+          padding-left: 16px;
+        }
+      }
+
+      /*faq*/
+      .new-year-faq {
+        padding-bottom: 20px;
+        background-color: #FAFAFA;
+      }
+
+      .new-year-faq__wrapper {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1320px;
+      }
+
+      .new-year-faq__title {
+        max-width: 327px;
+        margin-right: 8px;
+        margin-bottom: 0;
+        border-radius: 10px;
+        padding-top: 170px;
+        padding-left: 12px;
+        padding-right: 12px;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.87);
+        font-size: 26px;
+        position: relative;
+        background: url('https://i.citrus.ua/uploads/promo/black-friday-static/faq-question.png') no-repeat top 30px center #ffffff;
+      }
+      .new-year-faq__items {
+        max-width: 983px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      .new-year-faq__item {
+        background-color: #ffffff;
+        margin-bottom: 8px;
+        border-radius: 10px;
+      }
+      .new-year-faq__item:hover {
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.12),
+        0px 3px 14px rgba(0, 0, 0, 0.06),
+        0px 8px 10px rgba(0, 0, 0, 0.07);
+        transition: 0.25s;
+      }
+      .new-year-faq__item:last-child {
+        margin-bottom: 0;
+      }
+      .new-year-faq__answer {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.2s linear;
+      }
+      .new-year-faq__item--open {
+        padding-bottom: 24px;
+      }
+      .new-year-faq__item--open .new-year-faq__question::after {
+        transform: rotate(180deg);
+      }
+      .new-year-faq__question {
+        text-align: left;
+        font-size: 18px;
+        line-height: 1.2;
+        color: rgba(0, 0, 0, 0.87);
+        margin: 0;
+        position: relative;
+        padding-left: 24px;
+        padding-right: 66px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        cursor: pointer;
+      }
+      .new-year-faq__question::after {
+        position: absolute;
+        content: '';
+        top: 30px;
+        right: 42px;
+        pointer-events: none;
+        width: 13px;
+        height: 12px;
+        transition: 0.25s;
+        background: url('https://i.citrus.ua/uploads/promo/black-friday-static/faq-ic.png') no-repeat center;
+      }
+      .new-year-faq__answer-text {
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.54);
+        margin-bottom: 12px;
+        padding-left: 24px;
+        padding-right: 56px;
+      }
+      .new-year-faq__answer-items {
+        padding-left: 24px;
+        padding-right: 56px;
+        margin-bottom: 12px;
+      }
+      .new-year-faq__answer-item {
+        position: relative;
+        padding-left: 16px;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.54);
+        margin-bottom: 12px;
+      }
+      .new-year-faq__answer-item::before {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.54);
+        left: 0;
+        top: 4px;
+        position: absolute;
+        content: '';
+      }
+      .new-year-faq__answer-text:last-child {
+        margin-bottom: 0;
+      }
+
+      .new-year-faq__main-sublist {
+        padding-left: 42px;
+        padding-right: 56px;
+      }
+
+      .new-year-faq__main-sublist b {
+        margin-bottom: 10px;
+        display: block;
+        font-weight: bold;
+      }
+
+      .new-year-faq__main-sublist li {
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.54);
+        margin-bottom: 10px;
+      }
+
+      .new-year-faq__second-list {
+        margin-bottom: 15px;
+      }
+
+      .new-year-faq__second-list li {
+        position: relative;
+        padding-left: 16px;
+      }
+
+      .new-year-faq__second-list li::before {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.54);
+        left: 0;
+        top: 4px;
+        position: absolute;
+        content: '';
+      }
+
+      .new-year-faq__main-sublist--special b {
+        display: initial;
+      }
+
+      .new-year-faq__answer-sublist {
+        margin-left: 20px;
+        margin-top: 10px;
+      }
+
+      .new-year-faq__answer-sublist li {
+        margin-bottom: 10px;
+      }
+      @media screen and (max-width: 1365px) {
+        .new-year-faq__wrapper {
+          flex-direction: column;
+        }
+        .new-year-faq__title {
+          background: transparent;
+          max-width: none;
+          text-align: left;
+          margin-bottom: 30px;
+          padding-left: 8px;
+          padding-right: 8px;
+          padding-top: 0;
+        }
+        .new-year-faq__items {
+          max-width: none;
+          width: calc(100% - 16px);
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      /*year-modal*/
+      .year-modal {
+        position: fixed;
+        top: 0;
+        z-index: 25;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0,0,0, 0.5);
+        display: none;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .year-modal--show {
+        display: flex;
+      }
+
+      .year-modal__videous {
+        margin-left: 36px;
+        margin-right: 36px;
+        max-width: 1156px;
+        width: 100%;
+        padding-bottom: 651px;
+        position: relative;
+      }
+
+      .year-modal__videous iframe {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+      }
+
+      .year-modal__videous a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+      }
+
+      .year-modal__close {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        width: 40px;
+        height: 40px;
+        background-color: #ffffff;
+        border-radius: 50%;
+      }
+
+      .year-modal__close::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%) rotate(45deg);
+        width: 20px;
+        height: 3px;
+        background-color: #000000;
+      }
+
+      .year-modal__close::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+        width: 20px;
+        height: 3px;
+        background-color: #000000;
+      }
+
+      @media screen and (max-width: 1300px) {
+        .year-modal__videous {
+          padding-bottom: 52.7%;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .year-modal__videous {
+          margin-left: 16px;
+          margin-right: 16px;
+          padding-bottom: 54%;
+        }
+
+        .year-modal__close {
+          width: 20px;
+          height: 20px;
+          top: -10px;
+          right: -10px;
+        }
+
+        .year-modal__close::before,
+        .year-modal__close::after {
+          width: 15px;
+        }
+      }
+
+      .snowflake {
+        background: url('https://image.flaticon.com/icons/png/512/23/23904.png');
+        background-size: cover;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        will-change: transform;
+        opacity: 0;
+        transition: transform .1s linear;
+        z-index: 999999;
+      }
+
+      #xmas {
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        position: fixed;
+        pointer-events: none;
+        z-index: 20;
+      }
+
+
+    </style>
+    <div class="new-year">
+      <div class="new-year__header year-header">
+        <img class="year-header__squirrel squirrels--animations" data-anim="true" src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/squirrel.png" alt="">
+        <img class="year-header__tree year-header__tree--1 big-tree-animation" data-anim="true" src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/tree.png" alt="">
+        <img class="year-header__tree year-header__tree--2 small-tree-animation" data-anim="true" src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/tree.png" alt="">
+        <img class="year-header__tree year-header__tree--3 medium-tree-animation" data-anim="true" src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/tree.png" alt="">
+        <img class="year-header__tree year-header__tree--4 medium-tree-animation" data-anim="true" src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/tree.png" alt="">
+        <img class="year-header__tree  year-header__tree--5 big-tree-animation" data-anim="true" src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/tree.png" alt="">
+
+        <div class="year-header__container">
+          <div class="year-header__сhristmas-tree">
+            <img class="year-header__tree-image" src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/header/christmas-tree.png" data-anim="true" alt="">
+            <img class="year-header__gift-top" src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/header/gift-top.png" alt="" data-anim="true">
+            <img class="year-header__gift-bottom" src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/header/gift-bot.png" alt="" data-anim="true">
+          </div>
+
+          <div class="year-header__text">
+            <h1 class="year-header__title">Новогодние подарки со скидкой</h1>
+            <img src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/header/text-v2-ru.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="new-year__discounts year-discounts">
+
+        <img class="year-discounts__tree-1 big-tree-animation" data-anim="true" src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/tree.png?_t=1575900909" alt="">
+        <img class="year-discounts__tree-2 medium-tree-animation" data-anim="true" src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/tree.png?_t=1575900909" alt="">
+        <img class="year-discounts__tree-3 small-tree-animation" data-anim="true" src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/tree.png?_t=1575900909" alt="">
+
+        <div class="year-discounts__container">
+          <div class="year-discounts__title" id="discountsTitle">
+            <div class="year-discounts__text">
+              <img class="year-discounts__header" src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/discount/price-v2-ru.svg?_t=1575903421" alt="">
+            </div>
+            <div class="year-discounts__percent">
+              <img class="year-discounts__discount" data-anim="true" src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/discount/70.png?_t=1575905307" alt="">
+              <img class="year-discounts__axe" data-anim="true" src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/discount/topor.png?_t=1576504505" alt="">
+            </div>
+          </div>
+
+          <div class="year-discounts__tree-axe">
+            <img class="tree-axe__hand anim" src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/discount/topor_hand.png?_t=1575902149" alt="">
+            <img class="tree-axe__sugrob" src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/discount/sugrob_3.png?_t=1575903311" alt="">
+            <img class="tree-axe__tree" src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/discount/tree_axe.png?_t=1575902082" alt="">
+          </div>
+
+          <div class="year-discounts__youtube-container" data-anim="true">
+            <button class="year-youtube year-discounts__youtube" data-youtube-number="1"></button>
+            <img class="year-discounts__squirrel-1 squirrels--animations-scale" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/squirrel.png?_t=1575900941" alt="">
+          </div>
+
+          <img class="year-discounts__squirrel-2 squirrels--animations" data-anim="true" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/squirrel.png?_t=1575900941" alt="">
+
+          <img class="year-discounts__bird-1" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/discount/bird.png?_t=1575901642" alt="">
+          <img class="year-discounts__bird-2" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/discount/bird.png?_t=1575901642" alt="">
+          <img class="year-discounts__bird-3" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/discount/bird.png?_t=1575901642" alt="">
+        </div>
+
+      </div>
+
+      <div class="new-year__best-offers year-products">
+        <p class="year-products__title">Лучшие предложения</p>
+        <div class="year-products__container">
+          <ul class="year-products__items" id="bestProducts"></ul>
+
+          <a href="https://www.citrus.ua/actions/new-year-2020" class="year-products__redirect" target="_blank">За скидками</a>
+        </div>
+      </div>
+
+      <div class="new-year__gifts year-gifts">
+        <img class="year-gifts__tree year-gifts__tree--1 medium-tree-animation" data-anim="true" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/tree.png" alt="">
+        <img class="year-gifts__tree year-gifts__tree--2 small-tree-animation" data-anim="true"  src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/tree.png" alt="">
+        <div class="year-gifts__container">
+          <img class="year-gifts__text" data-anim="true" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/gifts/text-ru.svg" alt="">
+
+          <div class="year-gifts__image">
+            <img class="year-gifts__deer" data-anim="true" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/gifts/deer.png" alt="">
+            <img class="year-gifts__gifts-top" data-anim="true" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/header/gift-top.png" alt="">
+            <img class="year-gifts__gifts-bottom" data-anim="true" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/header/gift-bot.png" alt="">
+            <img data-anim="true" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/gifts/snow.png" alt="">
+            <button class="year-youtube year-gifts__youtube" data-anim="true" data-youtube-number="2"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="new-year__best-gifts year-products">
+        <p class="year-products__title">Лучшие идеи подарков</p>
+        <div class="year-products__container">
+          <ul class="year-products__items" id="bestGifts"></ul>
+
+          <a href="https://www.citrus.ua/actions/podarki-do-1000-griven" class="year-products__redirect" target="_blank">За подарками</a>
+        </div>
+      </div>
+
+      <div class="new-year__promo year-promo">
+        <div class="year-promo__container">
+          <div class="year-promo__company">
+            <img class="company__tree company-tree--animations"data-anim="true" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/promo/Tree-promo.png?_t=1576006890" alt="">
+            <img class="company__deer company-deer--animations" data-anim="true" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/promo/deer-promo.png?_t=1576006890" alt="">
+            <img class="company__tree-mini company-tree-mini--animations" data-anim="true" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/promo/small-tree-promo.png?_t=1576006890" alt="">
+          </div>
+
+          <div class="year-promo__conditions">
+            <img class="year-promo__condition" data-anim="true" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/promo/conditions-promo.svg?_t=1576053038" alt="">
+          </div>
+
+          <img class="year-promo__tree-1 small-tree-animation" data-anim="true" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/tree.png?_t=1575900909" alt="">
+          <img class="year-promo__tree-2 medium-tree-animation" data-anim="true" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/tree.png?_t=1575900909" alt="">
+
+          <div class="year-promo__youtube-container" data-anim="true">
+            <button class="year-youtube year-promo__youtube" data-youtube-number="3"></button>
+            <img class="year-promo__squirrel-1 squirrels--animations-scale" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/squirrel.png?_t=1575900941" alt="">
+          </div>
+          <img class="year-promo__squirrel-2 squirrels-company--animations" data-anim="true" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/squirrel.png?_t=1575900941" alt="">
+        </div>
+      </div>
+
+      <div class="new-year__best-packs year-products">
+        <p class="year-products__title">Лучшие для набора</p>
+        <div class="year-products__container">
+          <ul class="year-products__items" id="bestPacks"></ul>
+
+          <a href="https://www.citrus.ua/actions/poluchi-bolshe-1-1-3" class="year-products__redirect" target="_blank">За покупками</a>
+        </div>
+      </div>
+
+      <div class="new-year__card year-card">
+        <div class="year-card__container">
+          <div class="year-card__content">
+            <img class="year-card__text" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/card/text-ru.svg" alt="">
+
+            <div class="year-card__plastic">
+              <div class="year-card__select">
+                <select id="cardSelect">
+                  <option value="https://www.citrus.ua/gift-certificates/karta-dlya-pokupok-100-grn-636941.html">100 грн</option>
+                  <option value="https://www.citrus.ua/gift-certificates/karta-dlya-pokupok-200-grn-633788.html">200 грн</option>
+                  <option value="https://www.citrus.ua/gift-certificates/karta-dlya-pokupok-500-grn-633801.html">500 грн</option>
+                  <option value="https://www.citrus.ua/gift-certificates/karta-dlya-pokupok-1000-grn-633802.html">1 000 грн</option>
+                  <option value="https://www.citrus.ua/gift-certificates/karta-dlya-pokupok-2000-grn-633804.html">2 000 грн</option>
+                  <option value="https://www.citrus.ua/gift-certificates/karta-dlya-pokupok-5000-grn-633807.html">5 000 грн</option>
+                  <option value="https://www.citrus.ua/gift-certificates/karta-dlya-pokupok-10000-grn-633809.html">10 000 грн</option>
+                </select>
+              </div>
+            </div>
+
+            <a class="year-card__redirect" id="cardLink" href="https://www.citrus.ua/gift-certificates/karta-dlya-pokupok-100-grn-636941.html" target="_blank">Купить</a>
+          </div>
+        </div>
+
+        <div class="year-card__deer" data-anim="true">
+          <img  src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/card/deer.png" alt="">
+          <img class="year-card__tail anim" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/card/tail.png" alt="">
+        </div>
+      </div>
+
+      <div class="new-year__deals-week super-deals">
+        <div class="super-deals__container">
+          <p class="super-deals__title">Супер предложения недели</p>
+          <div class="super-deals__products" id="superDeal"></div>
+        </div>
+      </div>
+
+      <div class="new-year__categories year-categories">
+        <div class="year-categories__container">
+          <p class="year-categories__title">Лучшие категории</p>
+          <ul class="year-categories__items">
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/smartfony/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/smartphones.png?_t=1576146363"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/smartfony/" target="_blank">Смартфоны</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/apple/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/apple.png?_t=1576146362"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/apple/" target="_blank">Apple</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/televizory/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/tv.png?_t=1576146363"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/televizory/" target="_blank">TV</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/fitnes-trekery-160/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/fitnes-trackers.png?_t=1576146362"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/fitnes-trekery-160/" target="_blank">Фитнес-трекеры</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/citrus-detyam/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/toys.png?_t=1576146363"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/citrus-detyam/" target="_blank">Игрушки</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/igrovye-pristavki/brand-sony/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/playstations.png?_t=1576146363"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/igrovye-pristavki/brand-sony/" target="_blank">PlayStation</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/naushniki/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/headphones.png?_t=1576146362"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/naushniki/" target="_blank">Наушники</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/akustika/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/acoustics.png?_t=1576146362"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/akustika/" target="_blank">Акустика</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/noutbuki-i-ultrabuki/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/notebooks.png?_t=1576146362"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/noutbuki-i-ultrabuki/" target="_blank">Ноутбуки</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/planshety/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/tablets.png?_t=1576146363"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/planshety/" target="_blank">Планшеты</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/smart-chasy/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/smart-watches.png?_t=1576146363"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/smart-chasy/" target="_blank">Смарт-часы</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/roboty-uborshhiki/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/robot-cleanes.png?_t=1576146363"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/roboty-uborshhiki/" target="_blank">Роботы-пылесосы</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/smart-vesy-163/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/smart-scales.png?_t=1576146363"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/smart-vesy-163/" target="_blank">Смарт-весы</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/gadzhety-dlya-fitnesa-i-zdorovya/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/beauty.png?_t=1576146362"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/gadzhety-dlya-fitnesa-i-zdorovya/" target="_blank">Beauty & Relax</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/personalnyy-transport/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/electro-transports.png?_t=1576146797"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/personalnyy-transport/" target="_blank">Персональный транспорт</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/tovary-dlya-doma-i-auto/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/smart-house.png?_t=1576146797"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/tovary-dlya-doma-i-auto/" target="_blank">Умный дом</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/foto-video/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/photo-video.png?_t=1576148008"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/foto-video/" target="_blank">Фото и видео</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/videoregistratory/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/video-registrators.png?_t=1576148008"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/videoregistratory/" target="_blank">Видеорегистраторы</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/kvadrokoptery-i-drony/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/drones.png?_t=1576146797"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/kvadrokoptery-i-drony/" target="_blank">Дроны</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/backpacks/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/backpacks.png?_t=1576146797"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/backpacks/" target="_blank">Рюкзаки</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/gadzhety-virtualnoj-realnosti/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/vr.png?_t=1576146798"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/gadzhety-virtualnoj-realnosti/" target="_blank">VR</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/game-zone/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/game-zone.png?_t=1576146797"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/game-zone/" target="_blank">Game Zone</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/eco-goods/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/eco-goods.png?_t=1576146797"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/eco-goods/" target="_blank">Экотовары</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/x-stream/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/x-treame.png?_t=1576146798"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/x-stream/" target="_blank">X-tream</a>
+              </p>
+            </li>
+
+            <li class="year-categories__item">
+              <a class="year-categories__photo-container" href="https://www.citrus.ua/ekshn-kamery/" target="_blank">
+                <img alt="" class="year-categories__photo" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/categories/action-cameras.png?_t=1576148008"  />
+              </a>
+
+              <p class="year-categories__text">
+                <a class="year-categories__item-link" href="https://www.citrus.ua/ekshn-kamery/" target="_blank">Экшн-камеры</a>
+              </p>
+            </li>
+          </ul>
+          <div class="year-categories__show-more"></div>
+        </div>
+      </div>
+
+      <div class="new-year__any-price year-prices">
+        <div class="year-prices__container">
+          <p class="year-prices__title">
+            Подарки на любую цену
+          </p>
+          <ul data-anim="true" class="year-prices__items" id="pricesItems">
+            <li class="year-prices__item">
+              <a href="https://www.citrus.ua/actions/new-year-2020?prices%5Bmin%5D=15&prices%5Bmax%5D=500" target="_blank">
+                <img class="year-prices__price" id="firstPrice" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/500.png?_t=1576097706" alt="">
+              </a>
+            </li>
+            <li class="year-prices__item">
+              <a href="https://www.citrus.ua/actions/new-year-2020?prices%5Bmin%5D=15&prices%5Bmax%5D=1000" target="_blank">
+                <img class="year-prices__price" id="secondPrice" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/1000.png?_t=1576165790" alt="">
+              </a>
+            </li>
+            <li class="year-prices__item">
+              <a href="https://www.citrus.ua/actions/new-year-2020?prices%5Bmin%5D=15&prices%5Bmax%5D=5000" target="_blank">
+                <img class="year-prices__price" id="thirdPrice" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/5000.png?_t=1576097707" alt="">
+              </a>
+            </li>
+            <li class="year-prices__item">
+              <a href="https://www.citrus.ua/actions/new-year-2020?prices%5Bmin%5D=15&prices%5Bmax%5D=10000" target="_blank">
+                <img class="year-prices__price" id="fourthPrice" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/10000.png?_t=1576097707" alt="">
+              </a>
+            </li>
+          </ul>
+          <div class="year-prices__tree-container" data-anim="true">
+            <img class="year-prices__tree" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/tree_left.png?_t=1576587617" alt="">
+            <img class="year-prices__hand-axe anim" src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/tree__axe_left%20.png?_t=1576587616" alt="">
+          </div>
+        </div>
+      </div>
+
+      <section class="new-year__mobile-app mobile-app" id="newYearApp">
+        <div class="mobile-app__container">
+          <div class="flex around full-width">
+            <div class="mobile-app__form form full-width">
+              <div class="form__header">
+                <img src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/mobile-app/top_gift_ru.svg" alt="gift">
+              </div>
+
+              <div class="form__body">
+                <p class="form__bonus-text form-text-base">
+                  Получай дополнительно 100 грн на бонусный счет
+                  за установку и дари больше радости близким!
+                </p>
+
+                <div class="form__download-buttons flex center between">
+                  <a href="https://et5kr.app.goo.gl/T5GD" target="_blank">
+                    <img src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/mobile-app/app_store_ru.svg" alt="iOs">
+                  </a>
+
+                  <a href="https://et5kr.app.goo.gl/F11V" target="_blank">
+                    <img src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/mobile-app/google_play_ru.svg" alt="Android">
+                  </a>
+                </div>
+              </div>
+
+              <div class="form__footer">
+                <div class="loader"></div>
+
+                <p class="form__get-sms form-text-base">
+                  или получай ссылку на загрузку
+                </p>
+
+                <form class="form__form" data-user-track="true">
+                  <div class="flex center between">
+                    <input class="form__phone-input"
+                           autocomplete="off"
+                           maxlength="19"
+                           name="phone"
+                           pattern="\+38\s[\(][0-9]{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+                           placeholder="+38"
+                           required=""
+                           title="Формат: +38 (XXX) XXX-XX-XX"
+                           type="tel"
+                    >
+
+                    <button type="submit" class="form__submit">
+                      Получить
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div data-anim="true" class="mobile-app__preview preview full-width">
+              <img  src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/mobile-app/pie_right.png?1" alt="pie" data-anim="true" class="preview__pie-right">
+              <img  src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/mobile-app/pie_left.png?1" alt="pie" data-anim="true" class="preview__pie-left">
+              <img  src="no-image.jpg" data-src="https://i.citrus.ua/uploads/promo/new-year-2019-landing/mobile-app/phone.png?1" alt="preview" class="preview__phone">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="new-year__footer new-year-footer">
+        <div class="new-year-footer-list">
+          <div class="list-col">
+            <div class="col__item">
+              <h2 class="item__title">Новогодние скидки в “Цитрусе” - волшебство, доступное каждому!
+              </h2>
+              <p class="item__text">Зима - время уютных праздников и приятных сюрпризов. А “Цитрус” любит делать сюрпризы! Поэтому мы подготовили для вас новогодние и рождественские скидки до 70%. Выбирайте понравившиеся девайсы на нашем сайте уже сегодня! Новогодние акции - отличный повод порадовать себя или близких полезным подарком.</p>
+            </div>
+            <div class="col__item">
+              <h2 class="item__title">Делайте подарки вместе с “Цитрусом”!
+              </h2>
+              <p class="item__text">Чтобы сюрприз приносил удовольствие, постарайтесь заранее продумать все нюансы - увлечения, образ жизни, привычки близких. На новогодних акциях найдутся подарки для каждого. Чтобы вам было комфортно совершать праздничные покупки, мы собрали собственную коллекцию хороших идей. Подборка из более 1000 подарков до 1000 грн. поможет подарить приятные эмоции и сэкономит время.</p>
+              <p class="item__text">А если вы не знаете, что выбрать в подарок из всего многообразия, подарочный сертификат от “Цитрус” будет лучшим решением. Близкий человек, коллега или партнер сможет самостоятельно подобрать нужный девайс. Сертификат можно оформить на сумму от 100 до 10000 грн. Он совместим с любыми предновогодними скидками и станет прекрасным сюрпризом под елку.</p>
+            </div>
+          </div>
+          <div class="list-col">
+            <div class="col__item">
+              <h2 class="item__title">Как долго продлится период распродаж?
+              </h2>
+              <p class="item__text">Чтобы каждый успел подготовиться к праздникам без суеты, большая новогодняя распродажа продлится весь декабрь.  А в январе мы продолжим радовать рождественскими скидками.</p>
+            </div>
+            <div class="col__item">
+              <h2 class="item__title">Преимущества предновогодней распродажи в “Citrus”
+              </h2>
+              <p class="item__text">Мы предлагаем самые интересные праздничные предложения от проверенных производителей:</p>
+              <ul class="item__list">
+                <li>Apple;</li>
+                <li>Acer;</li>
+                <li>Xiaomi;</li>
+                <li>AIRMUSIC;</li>
+                <li>JBL;</li>
+                <li>Lenovo;</li>
+                <li>Like.Bike;</li>
+                <li>Huawei;</li>
+                <li>GoPro;</li>
+                <li>InMotion;</li>
+                <li>и др.</li>
+              </ul>
+              <p class="item__text">Наши специалисты проконсультируют при покупке и помогут сделать лучший выбор.</p>
+              <p class="item__text">Вы самостоятельно выбираете комфортный для себя механизм оплаты - картой или наложенным платежом. А также можете оформить кредит с фиксированным ежемесячным взносом.</p>
+              <p class="item__text">“Цитрус” осуществляет доставку по Украине: Черновцы, Николаев, Харьков, Херсон, Полтава, Винница. А также - бесплатную доставку курьером в пределах Киева, Одессы.</p>
+            </div>
+          </div>
+          <div class="list-col">
+            <div class="col__item">
+              <h2 class="item__title">Как сделать выбор и на что обратить внимание на новогодних акциях?
+              </h2>
+              <p class="item__text">Хорошие скидки на технику на Новый год помогут сэкономить на покупке давно желанного устройства: дополнить свой дом качественной электроникой, приобрести гаджет для работы или развлечений. На сайте интернет-магазина “Цитрус” вы найдете интересные и полезные предложения в различных категориях:</p>
+              <ul class="item__list">
+                <li>Смартфоны - чтобы быть на связи с близкими и делиться моментами жизни.</li>
+                <li>Портативные батареи для зарядки.</li>
+                <li>Моноподы и штативы - для мобильной фотографии и не только.</li>
+                <li>Ноутбуки, ультрабуки, планшеты - для досуга или работы.</li>
+                <li>Акустика и наушники - для ценителей качественного звука.</li>
+                <li>Телевизоры и проекторы, чтобы создать собственный кинозал прямо у себя дома.</li>
+                <li>Устройства для геймеров - контроллеры, геймпады, джойстики.</li>
+                <li>Гаджеты для здорового образа жизни - смарт-часы, фитнес-трекеры, трекеры сна, электронные зубные щетки.</li>
+                <li>Товары для дома - увлажнители воздуха, пылесосы, блендеры, весы. В этот период особенно выгодно приобретать крупную бытовую технику.</li>
+                <li>Персональный электротранспорт для нескучных прогулок - электровелосипеды, моноколеса, электроскутеры.</li>
+                <li>Игрушки - игровые наборы, коллекционные фигурки, конструкторы, интерактивные роботы.</li>
+                <li>Аксессуары, которые помогут подчеркнуть индивидуальность - рюкзаки, ремешки для часов, чехлы.</li>
+                <li>Качественная канцелярия;</li>
+                <li>и многое другое.</li>
+              </ul>
+              <p class="item__text">А для самых выгодных покупок проводится уникальный марафон гаджетов! Каждый день мы выбираем для вас девайс или аксессуар по наиболее выгодной цене. Эта впечатляющая новогодняя акция продлится до самого Нового года 2020.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="new-year__faq new-year-faq">
+        <div class="new-year-faq__wrapper">
+          <h2 class="new-year-faq__title">Часто задаваемые вопросы под Новый год 2020
+          </h2>
+          <ul aria-label="Accordion control" class="new-year-faq__items" data-bui-component="Accordion" itemscope="" itemtype="https://schema.org/FAQPage">
+            <li class="new-year-faq__item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+              <h3 class="new-year-faq__question" itemprop="name">🎁 Что подарить на Новый год 2020?
+              </h3>
+              <div class="new-year-faq__answer" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                <div itemprop="text">
+                  <ol class="new-year-faq__main-sublist">
+                    <li><b>Что подарить мужчине или парню на Новый год?</b>
+                      <ul class="new-year-faq__second-list">
+                        <li class="new-year-faq__second-item">Технику Apple: Iphone, Air Pods, Apple Watch, MacBook</li>
+                        <li class="new-year-faq__second-item">Смартфоны: Samsung Galaxy Note, Samsung Galaxy S10+, Samsung Galaxy A70, Samsung Galaxy A50, Xiaomi Mi Note 10, Xiami Mi 9T, Xiaomi Redmi Note 8 Pro</li>
+                        <li class="new-year-faq__second-item">Наушники - Galaxy Buds, Xiaomi Air Dots, JBL, AirMusic</li>
+                        <li class="new-year-faq__second-item">Акустику - JBL</li>
+                        <li class="new-year-faq__second-item">Play Station, VR шолом, ігри й аксесуари для Play Station</li>
+                        <li class="new-year-faq__second-item">Смарт часы: Samsung, Huawei, Amazfit</li>
+                        <li class="new-year-faq__second-item">Фитнесс-трекеры - Xiaomi Mi band 4</li>
+                        <li class="new-year-faq__second-item">Планшет</li>
+                        <li class="new-year-faq__second-item">Ноутбук</li>
+                        <li class="new-year-faq__second-item">Рюкзак</li>
+                        <li class="new-year-faq__second-item">Худи, Футболку, кепку  ФанШмот с интересными принтами</li>
+                      </ul>
+                    </li>
+
+                    <li><b>Что подарить женщине или девушке на Новый год?</b>
+                      <ul class="new-year-faq__second-list">
+                        <li class="new-year-faq__second-item">Технику Apple: Iphone, Air Pods, Apple Watch, MacBook</li>
+                        <li class="new-year-faq__second-item">Смартфоны: Samsung Galaxy Note, Samsung Galaxy S10+, Samsung Galaxy A70, Samsung Galaxy A50, Xiaomi Mi Note 10, Xiami Mi 9T, Xiaomi Redmi Note 8 Pro</li>
+                        <li class="new-year-faq__second-item">Наушники - Galaxy Buds, Xiaomi Air Dots, JBL, AirMusic</li>
+                        <li class="new-year-faq__second-item">Акустику - JBL</li>
+                        <li class="new-year-faq__second-item">Смарт часы: Samsung, Huawei, Amazfit</li>
+                        <li class="new-year-faq__second-item">Фитнесс-трекеры - Xiaomi Mi band 4</li>
+                        <li class="new-year-faq__second-item">Планшет</li>
+                        <li class="new-year-faq__second-item">Ноутбук</li>
+                        <li class="new-year-faq__second-item">Рюкзак</li>
+                        <li class="new-year-faq__second-item">Бьюти гаджеты</li>
+                        <li class="new-year-faq__second-item">Худи, Футболку, кепку  ФанШмот с интересными принтами</li>
+                      </ul>
+                    </li>
+
+                    <li><b>Что подарить ребенку на Новый год?</b>
+                      <ul class="new-year-faq__second-list">
+                        <li class="new-year-faq__second-item">Смарт-часы</li>
+                        <li class="new-year-faq__second-item">Игрушки: LOL, 3д ручка, Волшебное игровое снаряжение Frozen 2 - ПЕРЧАТКА ЭЛЬЗЫ (свет, ледяной заряд), Игровой набор с куклой L.O.L. Surprise серии "O.M.G. Winter Disco" - ЛЕДИ КРИСТАЛЛ (с аксес.), Машинки роботизированные WowWee R.E.V., Игровой набор Poopsie - ЛАМА С СЮРПРИЗАМИ (со слайм-аксессуарами)</li>
+                        <li class="new-year-faq__second-item">Планшет: Samsung, Huawei, Lenovo</li>
+                        <li class="new-year-faq__second-item">Смартфоны: Samsung Galaxy A30s, Samsung Galaxy A20, Xiaomi Redmi 8, Xiaomi Redmi Note 8, Iphone 8</li>
+                        <li class="new-year-faq__second-item">Ноутбук: Lenovo, Hp, Acer</li>
+                        <li class="new-year-faq__second-item">Гироборд, самокат, велосипед</li>
+                      </ul>
+                    </li>
+
+                    <li><b>Что подарить родителям на Новый год?</b>
+                      <ul class="new-year-faq__second-list">
+                        <li class="new-year-faq__second-item">Смартфоны: Samsung Galaxy A30s, Samsung Galaxy A20, Xiaomi Redmi 8, Xiaomi Redmi Note 8, Iphone 8</li>
+                        <li class="new-year-faq__second-item">Курс обучения по использованию смартфона</li>
+                        <li class="new-year-faq__second-item">Робот Пылесос </li>
+                        <li class="new-year-faq__second-item">Весы кухонные Beurer KS 19 Bon Appetit</li>
+                        <li class="new-year-faq__second-item">Электрогрелка Beurer HK 37</li>
+                        <li class="new-year-faq__second-item">Блендер Pinlo Little Monster Cooking Machine</li>
+                        <li class="new-year-faq__second-item">Чайник Xiaomi Mijia Multifunctional Electric Kettle White</li>
+                        <li class="new-year-faq__second-item">Телевизор</li>
+                        <li class="new-year-faq__second-item">Планшет</li>
+                      </ul>
+                    </li>
+
+                    <li><b>Что подарить семье на Новый год?</b>
+                      <ul class="new-year-faq__second-list">
+                        <li class="new-year-faq__second-item">Телевизор</li>
+                        <li class="new-year-faq__second-item">Акустическую систему</li>
+                        <li class="new-year-faq__second-item">1000 подарков по 1000 грн</li>
+                        <li class="new-year-faq__second-item">Смарт-весы</li>
+                        <li class="new-year-faq__second-item">Фитнесс-трекеры</li>
+                        <li class="new-year-faq__second-item">Электра-Транспорт</li>
+                        <li class="new-year-faq__second-item">Самокаты</li>
+                        <li class="new-year-faq__second-item">Рюкзаки</li>
+                        <li class="new-year-faq__second-item">Play-station</li>
+                      </ul>
+                    </li>
+
+                  </ol>
+                </div>
+              </div>
+            </li>
+
+
+            <li class="new-year-faq__item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+              <h3 class="new-year-faq__question" itemprop="name">❄ На какие товары в Цитрусе будут максимальные новогодние скидки?
+              </h3>
+              <div class="new-year-faq__answer" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                <div itemprop="text">
+                  <ul class="new-year-faq__answer-items">
+                    <li class="new-year-faq__answer-item">Ноутбуки - до 20% топовые модели:
+                      <ol class="new-year-faq__answer-sublist">
+                        <li>Acer Aspire 5 A515-52G-30D0 (NX.H55EU.008) Black (636912) - 20%</li>
+                        <li>Lenovo IdeaPad 320S-13IKB (81AK00ELRA) Mineral Grey - 17%</li>
+                        <li>Asus X570ZD-E4022 (90NB0IU1-M00900) Black - 15%</li>
+                      </ol>
+                    </li>
+
+                    <li class="new-year-faq__answer-item">Смартфоны - до 50% топовые модели:
+                      <ol class="new-year-faq__answer-sublist">
+                        <li>Samsung Galaxy A30s - 13%</li>
+                        <li>Samsung Galaxy S10e - 16%</li>
+                        <li>Samsung Galaxy A70 - 17%</li>
+                        <li>Xiaomi Mi 9T - 18%</li>
+                        <li>Xioami Redmi Note 8 Pro - 10%</li>
+                        <li>Xiaomi Mi Note 10 - 13 %</li>
+                      </ol>
+                    </li>
+
+                    <li class="new-year-faq__answer-item">Планшеты - до 20% топовые модели:
+                      <ol class="new-year-faq__answer-sublist">
+                        <li>Huawei MediaPad T3 10" 2/16Gb Wi-Fi Grey (AGS-W09) - 20%</li>
+                        <li>Samsung Galaxy Tab A 10.1" 2019 32Gb LTE - 11%</li>
+                        <li>Huawei MediaPad M5 Lite 10" 3/32Gb LTE - 19 %</li>
+                        <li>Lenovo Tab E10 Wi-Fi 2/16Gb - 13%</li>
+                      </ol>
+                    </li>
+
+                    <li class="new-year-faq__answer-item">Наушники - до 70% топовые модели:
+                      <ol class="new-year-faq__answer-sublist">
+                        <li>Наушники JBL FREE - 33%</li>
+                        <li>Наушники AIR MUSIC Go Play - 18%</li>
+                        <li>Наушники ENOD EAE202 - 48%</li>
+                      </ol>
+                    </li>
+
+                    <li class="new-year-faq__answer-item">Акустика - до 60% топовые модели:
+                      <ol class="new-year-faq__answer-sublist">
+                        <li>Акустика Divoom Macchiato Blue - 50%</li>
+                        <li>Акустика Divoom Tivoo-Max Black - 51%</li>
+                        <li>Портативная акустика Air Music FLIP - 33%</li>
+                      </ol>
+                    </li>
+
+                    <li class="new-year-faq__answer-item">ТV - до 30%</li>
+                    <li class="new-year-faq__answer-item">Электротранспорт - до 25%</li>
+                    <li class="new-year-faq__answer-item">Рюкзаки до 70%</li>
+                    <li class="new-year-faq__answer-item">Смарт-часы - до 40%</li>
+
+                    <li class="new-year-faq__answer-item">Умный дом - до 50%</li>
+                    <li class="new-year-faq__answer-item">Бьюти и Релакс - до 30%</li>
+                    <li class="new-year-faq__answer-item">Фитнесс и здоровье - до 50%</li>
+                    <li class="new-year-faq__answer-item">Фото-видео - до 25%</li>
+
+                    <li class="new-year-faq__answer-item">Товары для геймеров - до 70%</li>
+                    <li class="new-year-faq__answer-item">Игрушки - до 50%</li>
+                    <li class="new-year-faq__answer-item">Apple - до 40% топовые модели:
+                      <ol class="new-year-faq__answer-sublist">
+                        <li>Apple iPhone 8 plus - 36%</li>
+                        <li>Apple MacBook Air 13"/128 - 12%</li>
+                      </ol>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="new-year-faq__item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+              <h3 class="new-year-faq__question" itemprop="name">🕘 Когда начинаются скидки на Новый год 2020?
+              </h3>
+              <div class="new-year-faq__answer" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                <div itemprop="text">
+                  <p class="new-year-faq__answer-text">Чтобы каждый успел подготовиться к праздникам без суеты, большая новогодняя распродажа продлится весь декабрь. А в январе мы продолжим радовать рождественскими скидками.</p>
+                </div>
+              </div>
+            </li>
+            <li class="new-year-faq__item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+              <h3 class="new-year-faq__question" itemprop="name">🎄 Почему новогодние подарки стоит выбирать в Цитрусе?
+              </h3>
+              <div class="new-year-faq__answer" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                <div itemprop="text">
+                  <ol class="new-year-faq__main-sublist new-year-faq__main-sublist--special">
+                    <li><b>Потому что в Цитрусе ты получаешь удивительный сервис</b> - тебя обязательно проконсультируют, помогут подобрать правильный подарок и объяснят как пользоваться каждым гаджетом.</li>
+                    <li>Потому что ты можешь не ходить по магазинам, а сделать заказ в интернет магазине и воспользоваться <b>бесплатной доставкой.</b> Поспеши сделать заказ заранее.</li>
+                    <li>Потому что <b>гаджеты - это лучший подарок</b></li>
+                    <li>Потому что ты можешь купить подарки всей семье по выгодной цене воспользовавшись акцией 1+1 = 3.<b>Покупай 3 товара по цене двух.</b></li>
+                    <li>Потому что в Цитрусе действуют <b>скидки до -70%</b></li>
+                    <li>Потому что в Цитрусе есть <b>1000 подарков по 1000 грн - чтобы можно было купить недорогие подарки всем</b></li>
+                    <li>Потому что в Цитрусе есть система лояльности и <b>ты получаешь кэшбек за каждую покупку, который ты можешь потратить потом на другие покупки</b></li>
+                    <li>Потому что в Цитрусе действуют постоянные <b>акции на разные товары</b> с которыми покупки становятся выгоднеее</li>
+                    <li>Потому что в Цитрусе ты найдешь <b>широкий ассортимент</b> от игрушек для детей, эко товаров, рюкзаков, бьют гаджетов, умной техники для дома, смартфонов, ноутбуков и теликом.</li>
+                    <li>Потому что если ты не знаешь что подарить ты можешь купить <b>подарочную карту</b> и точно угадать с подарком для друзей.</li>
+                  </ol>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="new-year__modal year-modal" id="modalYoutube" data-close-modal="true">
+        <div class="year-modal__videous" id="videoList">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/4I8e861r5ag" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/LB6zFYLmrM8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/4DKirHE4UWo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <button class="year-modal__close" data-close-modal="true"></button>
+        </div>
+      </div>
+
+      <canvas id="xmas"></canvas>
+    </div>
+
+<script>
+(function () {
+        if (!window.dataLayer) {
+          window.dataLayer = [];
+        }
+
+        function onShowMoreCategories() {
+          document.querySelector('.year-categories__items').classList.add('opened');
+          [].map.call(document.querySelectorAll('.year-categories__item'), item => item.style.display = 'flex');
+          document.querySelector('.year-categories__show-more').remove();
+        }
+
+        function anyPriceChange () {
+          let screenWidth = window.innerWidth;
+
+          let firstPrice = document.getElementById('firstPrice');
+          let secondPrice = document.getElementById('secondPrice');
+          let thirdPrice = document.getElementById('thirdPrice');
+          let fourthPrice = document.getElementById('fourthPrice');
+
+          let pricesItems = document.getElementById('pricesItems');
+
+
+          if(screenWidth <= 720) {
+            pricesItems.classList.add("small");
+            firstPrice.src = "https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/mob/do_500_m.png?_t=1576142337";
+            secondPrice.src = "https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/mob/do_1000_m.png?_t=1576165670";
+            thirdPrice.src = "https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/mob/do_5000_m.png?_t=1576142337";
+            fourthPrice.src = "https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/mob/do_10000_m.png?_t=1576142337";
+          } else {
+            pricesItems.classList.remove("small");
+            firstPrice.src = "https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/500.png?_t=1576097706";
+            secondPrice.src = "https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/1000.png?_t=1576165790";
+            thirdPrice.src = "https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/5000.png?_t=1576097707";
+            fourthPrice.src = "https://i.citrus.ua/uploads/promo/new-year-2019-landing/any-price/10000.png?_t=1576097707";
+          }
+        }
+
+        function initMask(element) {
+          function telClick(event) {
+            if (!event.target.value.length) {
+              event.target.value = '+380';
+            }
+          }
+          function telInput(event) {
+            const x = event.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,1})(\d{0,2})(\d{0,3})(\d{0,2})(\d{0,2})/);
+            event.target.value = '+38' + (x[4] ? ' (0' + x[3] + ') ' : '0' + x[3]) + x[4] + (x[5] ? '-' + x[5] : '') + (x[6] ? '-' + x[6] : '');
+          }
+          element.addEventListener('click', telClick);
+          element.addEventListener('input', telInput);
+        }
+
+        function toggleLoader(element, state) {
+          if (state) {
+            return element.style.display = 'block';
+          }
+
+          return element.style.display = 'none';
+        }
+
+        function submitForm(event) {
+          event.preventDefault();
+          const loader = document.querySelector('.mobile-app__form .loader');
+          toggleLoader(loader, true);
+          const formData = new FormData();
+          formData.append('phone|197', event.target.phone.value);
+          const uri = 'https://api.citrus.ua/forms/4243/answers';
+          const config = {
+            method: 'POST',
+            body: formData
+          };
+
+          const thanksWindow = `
+            <p class="thanks__title">Отлично!</p>
+
+            <p class="form-text-base" style="margin-bottom: 12px;">Сообщение со ссылкой на установку приложения уже летит на твой номер.</p>
+            <p class="form-text-base" style="margin-bottom: 12px;">Скорее проверяй SMS / Viber</p>
+            <p class="form-text-base">или переходи:</p>
+          `;
+
+          fetch(uri, config)
+            .then(function (response) {
+              toggleLoader(loader, !response.ok);
+
+              document.querySelector('.mobile-app__form .form__footer').style.display = 'none';
+              document.querySelector('.mobile-app__form .form__bonus-text').innerHTML = thanksWindow;
+            });
+
+            dataLayer.push({
+              'event': 'NewYear',
+              'eventCategory': 'NewYear',
+              'eventAction': 'Form submit'
+            });
+        }
+
+        function onToggleFAQ() {
+          let isInAnimation = Boolean(this.getAttribute('data-in-animation'));
+          if (isInAnimation) {
+            return;
+          }
+          let parentNode = this.closest('.new-year-faq__item');
+          let container = parentNode.querySelector('.new-year-faq__answer');
+          let content = parentNode.querySelector('[itemprop="text"]');
+          let contentHeight = content.offsetHeight;
+          this.setAttribute('data-in-animation', 'true');
+          if (parentNode.classList.contains('new-year-faq__item--open')) {
+            container.style.height = contentHeight + 'px';
+            setTimeout( () => {
+              container.style.height = '0';
+              parentNode.classList.remove('new-year-faq__item--open');
+              this.removeAttribute('data-in-animation');
+            }, 50);
+          } else {
+            container.style.height = contentHeight + 'px';
+            parentNode.classList.add('new-year-faq__item--open');
+            setTimeout(() => {
+              container.style.height = 'auto';
+              this.removeAttribute('data-in-animation');
+            }, 400);
+          }
+        }
+
+        function getPageData() {
+          function getDisplay(number) {
+            return (number == '0') ? 'none' : 'block';
+          }
+
+          function getOpacity(number) {
+            return (number == '0') ? '0' : '1';
+          }
+
+          function formatPrice (price) {
+            return (price || 0).toLocaleString().replace(/\D+/g, ' ');
+          }
+
+          function getProducts(element, arr) {
+            arr.forEach(function (item) {
+              element.innerHTML += `<li class="year-products__item">
+                      <a href="https://www.citrus.ua/${item.category.slug}" target="_blank" class="year-products__item-category">${item.category.name}</a>
+
+                      <a href="https://www.citrus.ua${item.url}" target="_blank" class="year-products__item-wrapper">
+                        <div class="year-products__item-image">
+                          <img src="${item.preview.src}" alt="">
+                        </div>
+
+                        <p class="year-products__item-title">${item.name}</p>
+
+                        <div class="year-products__item-footer">
+                          <div class="year-products__item-discount" style="display:${getDisplay(item.prices.old)}">
+                            <span style="display:${getDisplay(item.sale.percent)}">-${item.sale.percent}%</span>
+                            <span style="display:${getDisplay(item.prices.old)}">${formatPrice(item.prices.old)}</span>
+                          </div>
+
+                          <div class="year-products__item-price">
+                            <span>${formatPrice(item.prices.price)}</span>
+                            <span>грн</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>`;
+            });
+          }
+
+          function getDeals(element, arr) {
+            arr = arr.slice(0, 3);
+            arr.forEach(function (item) {
+              element.innerHTML += `<div data-anim="true" class="super-deals__item">
+               <a class="item__link" target="_blank" href="https://www.citrus.ua${item.url}">
+              <div class="item__description">
+                <p class="item__title" title='${item.name}'>${item.name}</p>
+                <p class="item__old-price" style="opacity: ${getOpacity(item.prices.old)}">${formatPrice(item.prices.old)}</p>
+                <p class="item__price">${formatPrice(item.prices.price)} <span class="currency">грн</span></p>
+                <div class="item__preview">
+                  <img class="preview__image" src="${item.preview.src}" alt="">
+                </div>
+              </div>
+              </a>
+            </div>`;
+            });
+          }
+
+
+          let bestProducts = document.getElementById('bestProducts');
+          bestProducts.innerHTML = '';
+
+          let bestGifts = document.getElementById('bestGifts');
+          bestGifts.innerHTML = '';
+
+          let bestPacks = document.getElementById('bestPacks');
+          bestPacks.innerHTML = '';
+
+          let superDeal = document.getElementById('superDeal');
+          superDeal.innerHTML = '';
+
+          fetch('https://api.citrus.ua/v5/new-year?locale=ru')
+            .then(response => response.json())
+            .then(data => {
+              getProducts(bestProducts, data.data.segments[0].products);
+              getProducts(bestGifts, data.data.segments[1].products);
+              getProducts(bestPacks, data.data.segments[2].products);
+              getDeals(superDeal, data.data.segments[3].products);
+
+              let animationImages = document.querySelectorAll('[data-anim]');
+              animationImages = [].slice.call(animationImages);
+              makeAnimation(animationImages);
+            });
+        }
+
+        function selectChange() {
+          let link = this.value;
+
+          let cardLink = document.getElementById('cardLink');
+          cardLink.href = link;
+        }
+
+        function hideFooterSections() {
+          let footerSections = document.querySelectorAll('#newYearApp, #newYearFooter, #newYearFaq');
+          [].forEach.call(footerSections, section => section.style.display = 'none');
+        }
+
+        function debounce(f, ms) {
+          let timer = null;
+          return function () {
+            let _this = this;
+            let onComplete = function () {
+              f.apply(_this, arguments);
+              timer = null;
+            };
+            if (timer) {
+              clearTimeout(timer);
+            }
+            timer = setTimeout(onComplete, ms);
+          };
+        }
+
+        function onScroll() {
+          let images = [].slice.call(document.querySelectorAll('.new-year img[data-src]'));
+
+          function lazyLoad () {
+            let scrollTop = window.pageYOffset;
+            images.forEach( (image, i) => {
+              let { top } =  image.getBoundingClientRect();
+              if(top - 700 < scrollTop ) {
+                image.src = image.getAttribute('data-src');
+                images[i] = null;
+              }
+            });
+
+            images = [].filter.call(images, item => item);
+          }
+
+          window.addEventListener('scroll', function (e) {
+            lazyLoad();
+          });
+
+          lazyLoad();
+        }
+
+        function makeAnimation(elements) {
+          let screenHeight;
+          let elemToViewPort;
+
+
+          const timeToDisableAnim = 3000;
+
+          function addAnimation (elem) {
+            elem.classList.add('anim');
+            elem.setAttribute('data-anim', 'false');
+
+            let timer = setInterval(function () {
+              let elemToTop = elem.getBoundingClientRect().top;
+              let elemToBottom = elem.getBoundingClientRect().bottom;
+
+              if (elemToBottom <= 0 || elemToTop >= screenHeight) {
+                elem.classList.remove('anim');
+                elem.setAttribute('data-anim', 'true');
+                clearInterval(timer);
+                timer = null;
+              }
+            }, timeToDisableAnim);
+          }
+
+          function onScrollAnimate () {
+            elements.forEach(function (elem) {
+              let elemToTop = elem.getBoundingClientRect().top;
+              let elemToBottom = elem.getBoundingClientRect().bottom;
+
+              if (((elemToTop <= elemToViewPort && elemToTop >= 0) || (elemToBottom >= screenHeight / 4 && elemToTop <= 0)) && elem.getAttribute('data-anim') === 'true') {
+                if (!elem.complete && elem.tagName === 'IMG') {
+                  elem.setAttribute('data-anim', 'false');
+                  elem.addEventListener('load', function() {
+                    addAnimation(elem);
+                  });
+
+                  return;
+                }
+
+                if (elem.tagName !== 'IMG') {
+                  let images = elem.querySelectorAll('img');
+
+                  [].forEach.call(images, function(image) {
+                    if(!image.complete) {
+                      image.addEventListener('load', function() {
+                        onScrollAnimate();
+                        return;
+                      });
+                    }
+                  });
+                }
+
+                addAnimation(elem);
+              }
+            });
+          }
+
+          function onResize () {
+            screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            elemToViewPort = screenHeight - screenHeight / 4;
+          }
+
+          onResize();
+          onResize = debounce(onResize, 10);
+
+          onScrollAnimate();
+          onScrollAnimate = debounce(onScrollAnimate, 10);
+
+          document.addEventListener('scroll', onScrollAnimate);
+          window.addEventListener('resize', onResize);
+        }
+
+        function initSnow() {
+          const config = {
+            maxSnowflakeCount: 100,
+            size: {
+              min: 5,
+              max: 10,
+            },
+            speed: {
+              min: 100,
+              max: 800,
+            },
+            fps: 24,
+            creationInterval: 400,
+            screenWidth: window.innerWidth,
+
+          };
+
+          function random(min, max) {
+            return min + (Math.random()*(max-min+1) | 0);
+          }
+
+          function snowFlake ({speed, size, startXPos}) {
+            this.speed = speed;
+            this.size = size;
+            this.position = {
+              y: 0,
+              x: startXPos,
+            };
+            this.direction = {
+              x: random(-1, 1),
+              y: random(1, 3),
+            };
+
+            this.$el = document.createElement('div');
+            this.$el.classList.add('snowflake');
+            this.$el.style.width = this.size + 'px';
+            this.$el.style.height = this.size + 'px';
+
+            setTimeout(() => {
+              this.$el.style.opacity = 1;
+            }, config.creationInterval);
+
+            this.iterations = 0;
+            let updatePosition = function updatePosition() {
+
+              this.iterations += 1;
+
+              if(this.iterations % 10 === 0) {
+                this.direction.x += random(-1, 1);
+                this.direction.x = Math.min(2, this.direction.x);
+                this.direction.x = Math.max(-2, this.direction.x);
+              }
+
+              this.position.x += this.direction.x;
+              this.position.y += this.direction.y;
+
+              this.$el.style.transform = `translate(${this.position.x}px, ${this.position.y}px)`;
+
+              if(this.position.x < 0 || this.position.x > config.screenWidth) {
+                this.$el.style.opacity = 0;
+
+                this.position = {
+                  y: 0,
+                  x: startXPos,
+                };
+
+                setTimeout(() => {
+                  this.$el.style.opacity = 1;
+                }, config.creationInterval);
+              }
+            };
+
+            updatePosition = updatePosition.bind(this);
+
+            function animate () {
+              updatePosition();
+            }
+
+            document.body.appendChild(this.$el);
+            setInterval(animate, 1000 / config.fps);
+
+          }
+
+          let snowflakes = [];
+
+          function createSnowFlake () {
+            setTimeout(() => {
+              snowflakes.push(new snowFlake({
+                speed: random(config.speed.min, config.speed.max),
+                size: random(config.size.min, config.size.max),
+                startXPos: random(0, config.screenWidth),
+              }));
+
+              if (snowflakes.length < config.maxSnowflakeCount) {
+                createSnowFlake();
+              }
+
+            }, config.creationInterval);
+          }
+          createSnowFlake();
+        }
+
+        function showModalYoutube() {
+          let videoNumber = +this.getAttribute('data-youtube-number');
+
+          let videoList = document.getElementById('videoList');
+          videoList.querySelector(`iframe:nth-child(${videoNumber}), a:nth-child(${videoNumber})`).style.display = 'block';
+
+          let videoModal = document.getElementById('modalYoutube');
+          videoModal.classList.add('year-modal--show');
+        }
+
+        function closeModal(event) {
+          if (!event.target.getAttribute('data-close-modal')) {
+            return;
+          }
+
+          let videoList = document.getElementById('videoList');
+          let frames = videoList.querySelectorAll('iframe, .video-review');
+
+          [].forEach.call(frames, function(frame) {
+            if(frame.tagName === "IFRAME") {
+              frame.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+            }
+            frame.style.display = 'none';
+          });
+
+
+          let videoModal = document.getElementById('modalYoutube');
+          videoModal.classList.remove('year-modal--show');
+        }
+
+        function initLetItSnow () {
+          (function() {
+            var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
+              function(callback) {
+                window.setTimeout(callback, 1000 / 60);
+              };
+            window.requestAnimationFrame = requestAnimationFrame;
+          })();
+
+          var flakes = [],
+            canvas = document.getElementById("xmas"),
+            ctx = canvas.getContext("2d"),
+            mX = -100,
+            mY = -100;
+
+          if( window.innerWidth < 999 ){
+            var flakeCount = 125;
+          } else {
+            var flakeCount = 450;
+          }
+
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+
+          function snow() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (var i = 0; i < flakeCount; i++) {
+              var flake = flakes[i],
+                x = mX,
+                y = mY,
+                minDist = 250,
+                x2 = flake.x,
+                y2 = flake.y;
+
+              var dist = Math.sqrt((x2 - x) * (x2 - x) + (y2 - y) * (y2 - y)),
+                dx = x2 - x,
+                dy = y2 - y;
+
+              if (dist < minDist) {
+                var force = minDist / (dist * dist),
+                  xcomp = (x - x2) / dist,
+                  ycomp = (y - y2) / dist,
+                  deltaV = force;
+
+                flake.velX -= deltaV * xcomp;
+                flake.velY -= deltaV * ycomp;
+
+              } else {
+                flake.velX *= .98;
+                if (flake.velY <= flake.speed) {
+                  flake.velY = flake.speed;
+                }
+                flake.velX += Math.cos(flake.step += .05) * flake.stepSize;
+              }
+
+              ctx.fillStyle = "rgba(249,249,249," + flake.opacity + ")";
+              flake.y += flake.velY;
+              flake.x += flake.velX;
+
+              if (flake.y >= canvas.height || flake.y <= 0) {
+                reset(flake);
+              }
+
+              if (flake.x >= canvas.width || flake.x <= 0) {
+                reset(flake);
+              }
+
+              ctx.beginPath();
+              ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2);
+              ctx.fill();
+            }
+            requestAnimationFrame(snow);
+          }
+
+          function reset(flake) {
+            flake.x = Math.floor(Math.random() * canvas.width);
+            flake.y = 0;
+            flake.size = (Math.random() * 3) + 2;
+            flake.speed = (Math.random() * 1) + 0.5;
+            flake.velY = flake.speed;
+            flake.velX = 0;
+            flake.opacity = (Math.random() * 0.5) + 0.3;
+          }
+
+          function init() {
+            for (var i = 0; i < flakeCount; i++) {
+              var x = Math.floor(Math.random() * canvas.width),
+                y = Math.floor(Math.random() * canvas.height),
+                size = (Math.random() * 3) + 4,
+                speed = (Math.random() * 1) + 0.5,
+                opacity = (Math.random() * 0.5) + 0.3;
+
+              flakes.push({
+                speed: speed,
+                velY: speed,
+                velX: 0,
+                x: x,
+                y: y,
+                size: size,
+                stepSize: (Math.random()) / 160,
+                step: 0,
+                opacity: opacity
+              });
+            }
+
+            snow();
+          }
+
+          canvas.addEventListener("mousemove", function(e) {
+            mX = e.clientX,
+              mY = e.clientY
+          });
+
+          window.addEventListener("resize",function(){
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+          });
+
+          init();
+        }
+
+        getPageData();
+        anyPriceChange();
+
+        window.addEventListener('resize', anyPriceChange);
+
+        document.querySelector('.year-categories__show-more').addEventListener('click', onShowMoreCategories);
+
+        let isMobileApp = !Boolean(document.getElementById('header'));
+        if (isMobileApp) {
+          hideFooterSections();
+        }
+
+        let phones = document.querySelectorAll('.new-year input[type="tel"]');
+        [].forEach.call(phones, function (phone) {
+          initMask(phone);
+        });
+
+        let faqButtons = document.querySelectorAll('.new-year-faq__question');
+        [].forEach.call(faqButtons, function (button) {
+          button.addEventListener('click', onToggleFAQ);
+        });
+
+        let youtubeButtons = document.querySelectorAll('[data-youtube-number]');
+        [].forEach.call(youtubeButtons, function(button) {
+          button.addEventListener('click', showModalYoutube);
+        });
+
+        let closeModalButtons = document.querySelectorAll('[data-close-modal]');
+        [].forEach.call(closeModalButtons, function (button) {
+          button.addEventListener('click', closeModal);
+        });
+
+        let forms = document.querySelectorAll('.mobile-app .form__form');
+        [].forEach.call(forms, function (form) {
+          form.addEventListener('submit', submitForm);
+        });
+
+        let cardSelect = document.getElementById('cardSelect');
+        cardSelect.addEventListener('change', selectChange);
+
+        onScroll = debounce(onScroll, 100);
+        onScroll();
+
+        initLetItSnow();
+      })();
+</script>

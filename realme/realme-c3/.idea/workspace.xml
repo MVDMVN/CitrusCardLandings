@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4846dbe0-a09f-45b5-a89c-fec35d2a3f42" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1gDRkS0GMDgFSKSU9rupfj3RxrJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="144" y="-926" width="1032" height="815" key="SettingsEditor" timestamp="1598432556399">
+      <screen x="-67" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="760" y="253" width="1032" height="815" key="SettingsEditor/0.23.1792.1056/43.-1057.1920.1057@0.23.1792.1056" timestamp="1597748815300" />
+    <state x="254" y="-926" key="SettingsEditor/0.23.1792.1056/43.-1057.1920.1057@43.-1057.1920.1057" timestamp="1597843923753" />
+    <state x="144" y="-926" key="SettingsEditor/0.23.1792.1060/-67.-1057.1920.1057@-67.-1057.1920.1057" timestamp="1598432556399" />
+    <state x="436" y="150" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597835947549">
+      <screen x="0" y="23" width="1792" height="1056" />
+    </state>
+    <state x="436" y="150" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1792.1056/43.-1057.1920.1057@0.23.1792.1056" timestamp="1597835947549" />
+    <state x="668" y="-822" width="670" height="676" key="search.everywhere.popup" timestamp="1597923492672">
+      <screen x="43" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="668" y="-822" width="670" height="676" key="search.everywhere.popup/0.23.1792.1056/43.-1057.1920.1057@43.-1057.1920.1057" timestamp="1597923492672" />
+  </component>
+</project>
