@@ -1,0 +1,1637 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 50px 0 50px 0;
+  overflow-x: hidden;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  color: transparent;
+}
+
+form select,
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding: 0 0 0 12px;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3b6d9a;
+  outline: none;
+  transition: 0.3s;
+}
+
+button {
+  display: block;
+  background: 0 0;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  line-height: 44px;
+  transition: 0.3s;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+}
+
+.kivi-710 {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 18px;
+  }
+
+  @media screen and (min-width: 1366px) {
+    padding: 0;
+  }
+
+  .kivi-710-header {
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+
+    &__content {
+      padding: 12px 16px 8px 16px;
+      background: url("https://i.citrus.ua/uploads/promo/Kivi-710-ultra-tv/Header/header-image.png?_t=1612794809")
+        bottom no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &__title {
+      margin-bottom: 27px;
+      padding: 0px 16px 0px 16px;
+      font-weight: bold;
+      font-size: 51px;
+      line-height: 100%;
+      text-transform: uppercase;
+      color: #000000;
+    }
+    &__subtitle {
+      margin-bottom: 12px;
+      padding: 23px 16px 0px 16px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      color: #000000;
+    }
+    &__google-assistance-logo {
+      width: 120px;
+      height: 27px;
+      margin-bottom: 16px;
+    }
+    &__choise-image {
+      width: 105px;
+      height: 58px;
+      margin-bottom: 16px;
+    }
+    &__text {
+      font-size: 8px;
+      font-weight: 500;
+      line-height: 100%;
+      text-align: left;
+      color: #ffffff;
+      width: 196px;
+    }
+
+    @media screen and (min-width: 768px) {
+      background: url("https://i.citrus.ua/uploads/promo/Kivi-710-ultra-tv/Header/header-image.png?_t=1612794809")
+        bottom no-repeat;
+      background-size: cover;
+
+      &__title {
+        margin-bottom: 49px;
+        padding: 0px 43px 0px 43px;
+        font-size: 64px;
+        color: #ffffff;
+      }
+
+      &__subtitle {
+        margin-bottom: 15px;
+        padding: 58px 43px 0px 43px;
+        font-size: 18px;
+        color: #fff;
+      }
+
+      &__content {
+        padding: 0px 43px 16px 43px;
+        background: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-end;
+        width: 450px;
+      }
+
+      &__google-assistance-logo {
+        width: 157px;
+        height: 30px;
+        margin-bottom: 21px;
+        margin-right: 42px;
+      }
+      &__choise-image {
+        width: 125px;
+        height: 64px;
+        margin-bottom: 21px;
+        margin-right: 20px;
+      }
+      &__text {
+        font-size: 10px;
+        width: 450px;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      &__title {
+        margin-bottom: 59px;
+        padding: 0px 58px 0px 58px;
+        font-size: 90px;
+      }
+
+      &__subtitle {
+        margin-bottom: 19px;
+        padding: 78px 58px 0px 58px;
+        font-size: 26px;
+      }
+
+      &__content {
+        padding: 0px 0px 16px 58px;
+        width: 615px;
+      }
+
+      &__google-assistance-logo {
+        width: 212px;
+        height: 42px;
+        margin-bottom: 36px;
+        margin-right: 57px;
+      }
+
+      &__choise-image {
+        width: 168px;
+        height: 86px;
+        margin-bottom: 42px;
+        margin-right: 95px;
+      }
+
+      &__text {
+        width: 555px;
+      }
+    }
+
+    @media screen and (min-width: 1366px) {
+      &__title {
+        margin-bottom: 78px;
+        padding: 0px 80px 0px 80px;
+        font-size: 126px;
+      }
+
+      &__subtitle {
+        margin: 108px 0px 25px 0px;
+        padding: 0px 80px 0px 80px;
+        font-size: 37px;
+      }
+
+      &__content {
+        padding: 0px 0px 32px 80px;
+        width: 986px;
+      }
+
+      &__google-assistance-logo {
+        width: 294px;
+        height: 58px;
+        margin-bottom: 55px;
+        margin-right: 78px;
+      }
+
+      &__choise-image {
+        width: 232px;
+        height: 120px;
+        margin-bottom: 63px;
+        margin-right: 95px;
+      }
+
+      &__text {
+        width: 906px;
+      }
+    }
+  }
+
+  .kivi-710-cpu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 181px;
+    padding-right: 16px;
+    background: url("https://i.citrus.ua/uploads/promo/Kivi-710-ultra-tv/Cpu/cpu-image.png?_t=1612794808")
+      center no-repeat;
+    background-size: cover;
+
+    &__subtitle {
+      width: 100px;
+      font-size: 14px;
+      line-height: 18px;
+      font-style: normal;
+      font-weight: 300;
+      text-align: left;
+      color: #ffffff;
+    }
+
+    @media screen and (min-width: 768px) {
+      height: 415px;
+      padding-right: 53px;
+      &__subtitle {
+        width: 200px;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      height: 561px;
+      padding-right: 71px;
+
+      &__subtitle {
+        width: 270px;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    @media screen and (min-width: 1366px) {
+      height: 776px;
+      padding-right: 98px;
+
+      &__subtitle {
+        width: 370px;
+        font-size: 27px;
+        line-height: 35px;
+      }
+    }
+  }
+
+  .kivi-710-hdr {
+    display: flex;
+    flex-direction: column;
+
+    &__img {
+      line-height: 1px;
+    }
+
+    &__img img {
+      width: 100%;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px 16px 48px 16px;
+    }
+
+    &__title {
+      font-size: 44px;
+      line-height: 44px;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    &__subtitle {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 300;
+      margin-bottom: 8px;
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+
+      &__img {
+        width: 50%;
+      }
+
+      &__content {
+        align-items: center;
+        width: 50%;
+      }
+
+      &__title {
+        width: 236px;
+      }
+
+      &__subtitle {
+        width: 236px;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      &__img img {
+        height: 100%;
+      }
+      &__title {
+        font-size: 60px;
+        line-height: 60px;
+        width: 322px;
+        margin-bottom: 16px;
+      }
+
+      &__subtitle {
+        font-size: 18px;
+        line-height: 24px;
+        width: 322px;
+        margin-bottom: 12px;
+      }
+    }
+
+    @media screen and (min-width: 1366px) {
+      &__title {
+        font-size: 85px;
+        line-height: 85px;
+        width: 454px;
+        margin-bottom: 24px;
+      }
+
+      &__subtitle {
+        font-size: 26px;
+        line-height: 34px;
+        width: 454px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .kivi-710-clear {
+    display: flex;
+    flex-direction: column;
+
+    &__img {
+      line-height: 1px;
+    }
+
+    &__img img {
+      width: 100%;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px 16px 48px 16px;
+    }
+
+    &__title {
+      font-size: 44px;
+      line-height: 44px;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    &__subtitle {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 300;
+      margin-bottom: 8px;
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      margin-bottom: 98px;
+
+      &__img {
+        width: 50%;
+        order: 2;
+      }
+
+      &__content {
+        align-items: center;
+        width: 50%;
+      }
+
+      &__title {
+        width: 236px;
+      }
+
+      &__subtitle {
+        width: 236px;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 132px;
+      &__title {
+        font-size: 60px;
+        line-height: 60px;
+        width: 322px;
+        margin-bottom: 16px;
+      }
+
+      &__subtitle {
+        font-size: 18px;
+        line-height: 24px;
+        width: 322px;
+        margin-bottom: 12px;
+      }
+    }
+
+    @media screen and (min-width: 1366px) {
+      margin-bottom: 176px;
+      &__title {
+        font-size: 85px;
+        line-height: 85px;
+        width: 454px;
+        margin-bottom: 24px;
+      }
+
+      &__subtitle {
+        font-size: 26px;
+        line-height: 34px;
+        width: 454px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .kivi-710-contrast {
+    display: flex;
+    flex-direction: column;
+
+    &__img img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 32px 16px 48px 16px;
+    }
+
+    &__title {
+      font-size: 44px;
+      line-height: 44px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+    &__subtitle {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 300;
+      margin-bottom: 8px;
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      margin-bottom: 115px;
+      &__img {
+        width: 50%;
+      }
+
+      &__content {
+        align-items: center;
+        width: 50%;
+      }
+
+      &__title {
+        width: 236px;
+      }
+
+      &__subtitle {
+        width: 236px;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 157px;
+      &__img img {
+        height: 100%;
+      }
+      &__title {
+        font-size: 60px;
+        line-height: 60px;
+        width: 322px;
+        margin-bottom: 16px;
+      }
+
+      &__subtitle {
+        font-size: 18px;
+        line-height: 24px;
+        width: 322px;
+        margin-bottom: 12px;
+      }
+    }
+
+    @media screen and (min-width: 1366px) {
+      margin-bottom: 225px;
+      &__title {
+        font-size: 85px;
+        line-height: 85px;
+        width: 454px;
+        margin-bottom: 24px;
+      }
+
+      &__subtitle {
+        font-size: 26px;
+        line-height: 34px;
+        width: 454px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .kivi-710-upscaling {
+    display: flex;
+    flex-direction: column;
+
+    &__img img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 32px 16px 48px 16px;
+    }
+
+    &__title {
+      font-size: 44px;
+      line-height: 44px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+    &__subtitle {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 300;
+      margin-bottom: 8px;
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      margin-bottom: 98px;
+
+      &__img {
+        width: 65%;
+        order: 2;
+      }
+
+      &__content {
+        align-items: flex-end;
+        width: 50%;
+      }
+
+      &__title {
+        width: 236px;
+      }
+
+      &__subtitle {
+        width: 236px;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 132px;
+      &__title {
+        font-size: 60px;
+        line-height: 60px;
+        width: 322px;
+        margin-bottom: 16px;
+      }
+
+      &__subtitle {
+        font-size: 18px;
+        line-height: 24px;
+        width: 322px;
+        margin-bottom: 12px;
+      }
+    }
+
+    @media screen and (min-width: 1366px) {
+      margin-bottom: 176px;
+      &__title {
+        font-size: 85px;
+        line-height: 85px;
+        width: 454px;
+        margin-bottom: 24px;
+      }
+
+      &__subtitle {
+        font-size: 26px;
+        line-height: 34px;
+        width: 454px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .kivi-710-memc {
+    display: flex;
+    flex-direction: column;
+
+    &__img img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 32px 16px 0px 16px;
+      margin-bottom: 48px;
+    }
+
+    &__title {
+      font-size: 44px;
+      line-height: 44px;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    &__subtitle {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 300;
+    }
+
+    @media screen and (min-width: 768px) {
+      &__content {
+        align-items: center;
+        padding: 64px 16px 0px 16px;
+        margin-bottom: 115px;
+      }
+
+      &__title {
+        width: 320px;
+        text-align: center;
+      }
+
+      &__subtitle {
+        width: 320px;
+        text-align: center;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 157px;
+      &__content {
+        padding: 0px 16px 0px 16px;
+        margin-bottom: 0px;
+      }
+
+      &__title {
+        font-size: 60px;
+        line-height: 60px;
+        width: 468px;
+        margin-bottom: 16px;
+      }
+
+      &__subtitle {
+        font-size: 18px;
+        line-height: 24px;
+        width: 468px;
+      }
+    }
+
+    @media screen and (min-width: 1366px) {
+      margin-bottom: 211px;
+      &__content {
+        padding: 113px 16px 0px 16px;
+      }
+
+      &__title {
+        font-size: 90px;
+        line-height: 90px;
+        width: 647px;
+        margin-bottom: 24px;
+      }
+
+      &__subtitle {
+        font-size: 26px;
+        line-height: 34px;
+        width: 647px;
+      }
+    }
+  }
+
+  .kivi-710-uniformity {
+    display: flex;
+    flex-direction: column;
+
+    &__img img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 32px 16px 0px 16px;
+      margin-bottom: 48px;
+    }
+
+    &__title {
+      font-size: 44px;
+      line-height: 44px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+    &__subtitle {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 300;
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      margin-bottom: 72px;
+
+      &__img {
+        width: 50%;
+      }
+
+      &__content {
+        align-items: center;
+        width: 50%;
+        padding: 0;
+        margin-bottom: 0px;
+      }
+
+      &__title {
+        width: 236px;
+      }
+
+      &__subtitle {
+        width: 236px;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 97px;
+
+      &__content {
+        margin-bottom: 0px;
+      }
+
+      &__title {
+        font-size: 60px;
+        line-height: 60px;
+        width: 322px;
+        margin-bottom: 16px;
+      }
+
+      &__subtitle {
+        font-size: 18px;
+        line-height: 24px;
+        width: 322px;
+      }
+    }
+
+    @media screen and (min-width: 1366px) {
+      margin-bottom: 135px;
+      &__title {
+        font-size: 85px;
+        line-height: 85px;
+        width: 454px;
+        margin-bottom: 24px;
+      }
+
+      &__subtitle {
+        font-size: 26px;
+        line-height: 34px;
+        width: 454px;
+      }
+    }
+  }
+
+  .kivi-710-audio {
+    display: flex;
+    flex-direction: column;
+
+    &__img {
+      line-height: 1px;
+    }
+
+    &__img img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 32px 16px 0px 16px;
+      background: #000000;
+    }
+
+    &__title {
+      font-size: 44px;
+      line-height: 44px;
+      font-weight: 500;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+    &__subtitle {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 300;
+      color: #ffffff;
+      margin-bottom: 24px;
+    }
+
+    @media screen and (min-width: 768px) {
+      &__content {
+        height: 307px;
+        align-items: left;
+        padding-left: 83px;
+        margin-bottom: 0px;
+        background: url(https://i.citrus.ua/uploads/promo/Kivi-710-ultra-tv/Audio/audio-image-1.png)
+            top 42px right 17px / 280px auto no-repeat,
+          #000000;
+      }
+
+      &__title {
+        width: 354px;
+      }
+
+      &__subtitle {
+        width: 354px;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      &__content {
+        height: 414px;
+        padding-left: 105px;
+        background: url(https://i.citrus.ua/uploads/promo/Kivi-710-ultra-tv/Audio/audio-image-1.png)
+            top 57px right 23px / 365px auto no-repeat,
+          #000000;
+      }
+
+      &__title {
+        width: 484px;
+        font-size: 60px;
+        line-height: 60px;
+        margin-bottom: 16px;
+      }
+
+      &__subtitle {
+        width: 484px;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    @media screen and (min-width: 1366px) {
+      &__content {
+        height: 572px;
+        padding-left: 136px;
+        background: url(https://i.citrus.ua/uploads/promo/Kivi-710-ultra-tv/Audio/audio-image-1.png)
+            top 79px right 32px / 523px auto no-repeat,
+          #000000;
+      }
+
+      &__title {
+        width: 671px;
+        font-size: 85px;
+        line-height: 85px;
+        margin-bottom: 24px;
+      }
+
+      &__subtitle {
+        width: 671px;
+        font-size: 26px;
+        line-height: 34px;
+      }
+    }
+  }
+
+  .kivi-710-ecosystem {
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+      background: #0a5fda;
+      width: 100%;
+      height: 117px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 270px;
+      margin-bottom: -15px;
+    }
+
+    &__item img {
+      height: auto;
+      max-height: 100%;
+      min-height: 100%;
+    }
+
+    &__item {
+      position: relative;
+      width: 120px;
+      height: 30px;
+      margin-bottom: 15px;
+    }
+
+    &__item:nth-child(3) {
+      margin-left: 15px;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 32px 16px 0px 16px;
+      margin-bottom: 48px;
+    }
+
+    &__title {
+      font-size: 26px;
+      line-height: 26px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    &__title span {
+      color: #0a5fda;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 300;
+    }
+    &__img img {
+      width: 100%;
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+
+      &__header {
+        height: 90px;
+      }
+
+      &__img {
+        width: 50%;
+      }
+
+      &__content {
+        align-items: center;
+        width: 50%;
+      }
+
+      &__title {
+        width: 236px;
+      }
+
+      &__subtitle {
+        width: 236px;
+      }
+
+      &__items {
+        height: 32px;
+        width: 625px;
+        position: relative;
+        justify-content: space-between;
+        margin-bottom: 0px;
+      }
+
+      &__item {
+        display: flex;
+        align-items: center;
+        width: auto;
+        margin-bottom: 0px;
+      }
+
+      &__item:not(:first-child) {
+        margin-left: 0px;
+      }
+
+      &__item:not(:first-child)::before {
+        content: "";
+        border-left: 1px solid #ffffff;
+        position: absolute;
+        top: 5px;
+        left: -25px;
+        height: 24px;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 64px;
+
+      &__header {
+        height: 122px;
+      }
+      &__img img {
+        height: 100%;
+      }
+      &__title {
+        font-size: 36px;
+        line-height: 36px;
+        width: 322px;
+        margin-bottom: 16px;
+      }
+
+      &__subtitle {
+        font-size: 18px;
+        line-height: 24px;
+        width: 322px;
+        margin-bottom: 12px;
+      }
+
+      &__items {
+        height: 42px;
+        width: 845px;
+      }
+
+      &__item {
+        height: 42px;
+      }
+
+      &__item:not(:first-child)::before {
+        content: "";
+        border-left: 2px solid #ffffff;
+        position: absolute;
+        top: 5px;
+        left: -26px;
+        height: 33px;
+      }
+    }
+
+    @media screen and (min-width: 1366px) {
+      margin-bottom: 80px;
+
+      &__header {
+        height: 169px;
+      }
+
+      &__title {
+        font-size: 50px;
+        line-height: 50px;
+        width: 454px;
+        margin-bottom: 24px;
+      }
+
+      &__subtitle {
+        font-size: 26px;
+        line-height: 34px;
+        width: 454px;
+        margin-bottom: 16px;
+      }
+
+      &__items {
+        height: 58px;
+        width: 1165px;
+      }
+
+      &__item {
+        height: 58px;
+      }
+
+      &__item:not(:first-child)::before {
+        content: "";
+        border-left: 2px solid #ffffff;
+        position: absolute;
+        top: 7px;
+        left: -35px;
+        height: 45px;
+      }
+    }
+  }
+
+  .kivi-710-interior {
+    display: flex;
+    flex-direction: column;
+
+    &__img img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    &__title {
+      font-size: 26px;
+      line-height: 26px;
+      font-weight: 500;
+      padding: 0px 16px 0px 16px;
+      margin-bottom: 32px;
+    }
+
+    @media screen and (min-width: 768px) {
+      align-items: center;
+
+      &__title {
+        width: 425px;
+        text-align: center;
+        font-size: 44px;
+        line-height: 44px;
+        margin-bottom: 40px;
+        padding: 0px;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      &__title {
+        font-size: 60px;
+        line-height: 60px;
+        width: 575px;
+        margin-bottom: 56px;
+      }
+    }
+
+    @media screen and (min-width: 1366px) {
+      &__title {
+        font-size: 85px;
+        line-height: 85px;
+        width: 794px;
+        margin-bottom: 75px;
+      }
+
+      &__subtitle {
+        font-size: 26px;
+        line-height: 34px;
+        width: 647px;
+      }
+    }
+  }
+
+  .kivi-710-connection {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#0a5fda, #0a5fda) 0 0/100% 120px no-repeat;
+
+    &__img {
+      width: 164px;
+      height: 164px;
+      display: block;
+      margin: 37px auto 24px;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0px 16px;
+      position: relative;
+      margin-bottom: 37px;
+    }
+
+    &__title {
+      font-size: 36px;
+      line-height: 36px;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    &__subtitle span {
+      font-size: 15px;
+      line-height: 15px;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    &__subtitle {
+      font-size: 12px;
+      line-height: 15px;
+      font-weight: 400;
+      margin-bottom: 9px;
+      margin-left: 50px;
+      text-transform: uppercase;
+      width: 239px;
+    }
+
+    &__subtitle--hdmi::before {
+      content: "";
+      background-image: url(https://i.citrus.ua/uploads/promo/Kivi-710-ultra-tv/Connection/connection-hdmi-image.png);
+      background-size: cover, 32px 32px;
+      display: block;
+      width: 32px;
+      height: 32px;
+      top: 104px;
+      left: 17px;
+      position: absolute;
+    }
+
+    &__subtitle--usb::before {
+      content: "";
+      background-image: url(https://i.citrus.ua/uploads/promo/Kivi-710-ultra-tv/Connection/connection-usb-image.png);
+      background-size: cover, 32px 32px;
+      display: block;
+      width: 32px;
+      height: 32px;
+      top: 159px;
+      left: 17px;
+      position: absolute;
+    }
+
+    @media screen and (min-width: 768px) {
+      background: linear-gradient(#0a5fda, #0a5fda) 0 0/100% 210px no-repeat;
+      flex-direction: row;
+      padding: 70px 40px 0px 40px;
+      justify-content: space-between;
+      align-items: center;
+
+      &__img {
+        width: 274px;
+        height: 274px;
+        margin: 0px 0px 40px 0px;
+        order: 2;
+      }
+
+      &__title {
+        margin-top: 0px;
+        margin-left: 83px;
+        margin-bottom: 48px;
+        color: #ffffff;
+      }
+
+      &__subtitle {
+        margin-left: 83px;
+        width: 290px;
+      }
+
+      &__content {
+        padding: 0px;
+        margin-bottom: 0px;
+      }
+
+      &__subtitle--hdmi::before {
+        top: 122px;
+        left: 17px;
+      }
+
+      &__subtitle--usb::before {
+        top: 165px;
+        left: 17px;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      background: linear-gradient(#0a5fda, #0a5fda) 0 0/100% 275px no-repeat;
+
+      padding: 95px 52px 0px 104px;
+
+      &__img {
+        width: 370px;
+        height: 370px;
+      }
+
+      &__title {
+        font-size: 50px;
+        line-height: 50px;
+        margin-top: -40px;
+        margin-left: 0px;
+        margin-bottom: 65px;
+      }
+
+      &__subtitle {
+        font-size: 14px;
+        line-height: 17px;
+        margin-left: 70px;
+        width: 390px;
+      }
+
+      &__subtitle span {
+        font-size: 21px;
+        line-height: 21px;
+        font-weight: 500;
+        margin-bottom: 6px;
+      }
+
+      &__subtitle--hdmi::before {
+        background-size: cover, 43px 25px;
+        width: 45px;
+        height: 35px;
+        top: 123px;
+        left: 0px;
+      }
+
+      &__subtitle--usb::before {
+        background-size: cover, 43px 25px;
+        width: 45px;
+        height: 35px;
+        top: 175px;
+        left: 0px;
+      }
+    }
+
+    @media screen and (min-width: 1366px) {
+      background: linear-gradient(#0a5fda, #0a5fda) 0 0/100% 375px no-repeat;
+      padding: 132px 72px 0px 72px;
+
+      &__img {
+        width: 511px;
+        height: 511px;
+      }
+
+      &__title {
+        font-size: 68px;
+        line-height: 68px;
+        margin-top: -45px;
+        margin-left: 64px;
+        margin-bottom: 92px;
+      }
+
+      &__subtitle {
+        font-size: 16px;
+        line-height: 19px;
+        margin-left: 161px;
+        margin-bottom: 21px;
+        width: 440px;
+      }
+
+      &__subtitle span {
+        font-size: 28px;
+        line-height: 28px;
+        margin-bottom: 8px;
+      }
+
+      &__subtitle--hdmi::before {
+        background-size: cover, 60px 48px;
+        width: 60px;
+        height: 48px;
+        top: 177px;
+        left: 66px;
+      }
+
+      &__subtitle--usb::before {
+        background-size: cover, 60px 48px;
+        width: 60px;
+        height: 48px;
+        top: 255px;
+        left: 66px;
+      }
+    }
+  }
+}
+
+.acc-product-description__custom-html
+  .kivi-710
+  .kivi-710-header
+  .kivi-710-header__google-assistance-logo
+  div.acc-image-height-container-100 {
+  height: 27px;
+}
+.acc-product-description__custom-html
+  .kivi-710
+  .kivi-710-header
+  .kivi-710-header__choise-image
+  div.acc-image-height-container-100 {
+  height: 55px;
+}
+
+.acc-product-description__custom-html
+  .kivi-710
+  .kivi-710-hdr
+  div.acc-image-height-container-100 {
+  height: 100vw;
+}
+
+.acc-product-description__custom-html
+  .kivi-710
+  .kivi-710-clear
+  div.acc-image-height-container-100 {
+  height: 100vw;
+}
+
+.acc-product-description__custom-html
+  .kivi-710
+  .kivi-710-contrast
+  div.acc-image-height-container-100 {
+  height: 75vw;
+}
+
+.acc-product-description__custom-html
+  .kivi-710
+  .kivi-710-upscaling
+  div.acc-image-height-container-100 {
+  height: 86vw;
+}
+
+.acc-product-description__custom-html
+  .kivi-710
+  .kivi-710-memc
+  div.acc-image-height-container-100 {
+  height: 49vw;
+}
+
+.acc-product-description__custom-html
+  .kivi-710
+  .kivi-710-uniformity
+  div.acc-image-height-container-100 {
+  height: 76vw;
+}
+
+.acc-product-description__custom-html
+  .kivi-710
+  .kivi-710-audio
+  div.acc-image-height-container-100 {
+  height: 56.2vw;
+}
+
+.acc-product-description__custom-html
+  .kivi-710
+  .kivi-710-ecosystem
+  .kivi-710-ecosystem__items
+  div.acc-image-height-container-100 {
+  height: 32px;
+}
+
+.acc-product-description__custom-html
+  .kivi-710
+  .kivi-710-ecosystem__item:nth-child(3) {
+  margin-left: 0px;
+}
+
+.acc-product-description__custom-html
+  .kivi-710
+  .kivi-710-ecosystem
+  .kivi-710-ecosystem__img
+  div.acc-image-height-container-100 {
+  height: 81.9vw;
+}
+
+.acc-product-description__custom-html
+  .kivi-710
+  .kivi-710-interior__img
+  div.acc-image-height-container-100 {
+  height: 59.2vw;
+  width: 100vw;
+}
+
+.acc-product-description__custom-html
+  .kivi-710
+  .kivi-710-connection
+  div.acc-image-height-container-100 {
+  height: 51.2vw;
+}
+
+.acc-product-description__custom-html .kivi-710 .kivi-710-connection {
+  background: linear-gradient(#0a5fda, #0a5fda) 0 0/100% 36vw no-repeat;
+}
+
+@media screen and (min-width: 500px) {
+  .acc-product-description__custom-html .kivi-710 .kivi-710-connection {
+    background: linear-gradient(#0a5fda, #0a5fda) 0 0/100% 31vw no-repeat;
+  }
+
+  .acc-product-description__custom-html
+    .kivi-710
+    .kivi-710-connection
+    .kivi-710-connection__title {
+    margin-top: 24px;
+  }
+
+  .acc-product-description__custom-html
+    .kivi-710
+    .kivi-710-connection
+    .kivi-710-connection__subtitle--hdmi::before {
+    top: 123px;
+  }
+
+  .acc-product-description__custom-html
+    .kivi-710
+    .kivi-710-connection
+    .kivi-710-connection__subtitle--usb::before {
+    top: 176px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .acc-product-description__custom-html
+    .kivi-710
+    .kivi-710-header
+    .kivi-710-header__google-assistance-logo
+    div.acc-image-height-container-100 {
+    height: 30px;
+  }
+  .acc-product-description__custom-html
+    .kivi-710
+    .kivi-710-header
+    .kivi-710-header__choise-image
+    div.acc-image-height-container-100 {
+    height: 65px;
+  }
+
+  .acc-product-description__custom-html
+    .kivi-710
+    .kivi-710-hdr
+    div.acc-image-height-container-100 {
+    height: 50vw;
+  }
+
+  .acc-product-description__custom-html
+    .kivi-710
+    .kivi-710-clear
+    div.acc-image-height-container-100 {
+    height: 50vw;
+  }
+
+  .acc-product-description__custom-html
+    .kivi-710
+    .kivi-710-contrast
+    div.acc-image-height-container-100 {
+    height: 38vw;
+  }
+
+  .acc-product-description__custom-html
+    .kivi-710
+    .kivi-710-upscaling
+    div.acc-image-height-container-100 {
+    height: 48vw;
+  }
+
+  .acc-product-description__custom-html
+    .kivi-710
+    .kivi-710-uniformity
+    div.acc-image-height-container-100 {
+    height: 38vw;
+  }
+
+  .acc-product-description__custom-html
+    .kivi-710
+    .kivi-710-ecosystem
+    .kivi-710-ecosystem__img
+    div.acc-image-height-container-100 {
+    height: 40.9vw;
+  }
+
+  .acc-product-description__custom-html
+    .kivi-710
+    .kivi-710-ecosystem
+    .kivi-710-ecosystem__items
+    div.acc-image-height-container-100 {
+    width: 119px;
+  }
+
+  .acc-product-description__custom-html
+    .kivi-710
+    .kivi-710-connection
+    div.acc-image-height-container-100 {
+    height: 32.4vw;
+  }
+
+  .acc-product-description__custom-html .kivi-710 .kivi-710-connection {
+    background: linear-gradient(#0a5fda, #0a5fda) 0 0/100% 26vw no-repeat;
+  }
+
+  .acc-product-description__custom-html
+    .kivi-710
+    .kivi-710-connection
+    .kivi-710-connection__title {
+    margin-top: -30px;
+  }
+
+  .acc-product-description__custom-html
+    .kivi-710
+    .kivi-710-connection
+    .kivi-710-connection__subtitle--hdmi::before {
+    top: 90px;
+  }
+
+  .acc-product-description__custom-html
+    .kivi-710
+    .kivi-710-connection
+    .kivi-710-connection__subtitle--usb::before {
+    top: 135px;
+  }
+}
