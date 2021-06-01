@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OnePLus 8T</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="referral">
+      <div class="referral-header referral__header" data-anim="true">
+        <div class="referral-header__image">
+          <img
+            src="https://i.citrus.ua/uploads/promo/referral/header/promo.png"
+            alt="зарабатывай с нами"
+          />
+        </div>
+        <img
+          class="referral-header__title"
+          src="https://i.citrus.ua/uploads/promo/referral/header/title-ru.svg"
+        />
+        <p class="referral-header__description">
+          Получай бонусы на покупки и для себя, и для своих гаджет-бро.
+          К-к-комбо
+        </p>
+        <!-- button class="referral-header__link" data-scroll-to="referralPromo">Начать</button -->
+      </div>
+      <div class="referral-instruction referral__instruction">
+        <img
+          src="https://i.citrus.ua/uploads/promo/referral/instruction/title-ru.svg"
+          class="referral-instruction__title"
+        />
+
+        <ol class="referral-instruction__items" data-anim="true">
+          <li class="referral-instruction__item">
+            <div class="referral-instruction__item-image">
+              <img
+                src="https://i.citrus.ua/uploads/promo/referral/instruction/item-1.svg"
+                alt="Шаг 1"
+              />
+            </div>
+            <p class="referral-instruction__item-description">
+              Покупаешь что-то ну оооочень гаджетовое в Цитрус
+            </p>
+          </li>
+
+          <li class="referral-instruction__item">
+            <div class="referral-instruction__item-image">
+              <img
+                src="https://i.citrus.ua/uploads/promo/referral/instruction/item-2.svg"
+                alt="Шаг 2"
+              />
+            </div>
+            <p class="referral-instruction__item-description">
+              Тебе приходит промокод
+            </p>
+          </li>
+
+          <li class="referral-instruction__item">
+            <div class="referral-instruction__item-image">
+              <img
+                src="https://i.citrus.ua/uploads/promo/referral/instruction/item-3.svg"
+                alt="Шаг 3"
+              />
+            </div>
+            <p class="referral-instruction__item-description">
+              Отправляешь его гаджет-бро
+            </p>
+          </li>
+
+          <li class="referral-instruction__item">
+            <div class="referral-instruction__item-image">
+              <img
+                src="https://i.citrus.ua/uploads/promo/referral/instruction/item-4.svg"
+                alt="Шаг 4"
+              />
+            </div>
+            <p class="referral-instruction__item-description">
+              Гаджет-бро покупает что-то со скидкой, применяя промокод
+            </p>
+          </li>
+
+          <li class="referral-instruction__item" id="referralPromo">
+            <div class="referral-instruction__item-image">
+              <img
+                src="https://i.citrus.ua/uploads/promo/referral/instruction/item-5.svg"
+                alt="Шаг 5"
+              />
+            </div>
+            <p class="referral-instruction__item-description">
+              Буум! Процент от покупки гаджет-бро превращается в бонус, который
+              ты получаешь
+            </p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="referral-footer referral__footer">
+        <div class="referral-faq referral__faq">
+          <ul class="referral-faq__tabs">
+            <li
+              class="referral-faq__tab referral-faq__tab--active"
+              data-tab="1"
+            >
+              Хочу отправить промокод
+            </li>
+            <li class="referral-faq__tab" data-tab="2">
+              Мне отправили промокод
+            </li>
+          </ul>
+
+          <ul
+            aria-label="Accordion control"
+            class="page-faq"
+            data-faq="1"
+            data-bui-component="Accordion"
+            itemscope=""
+            itemtype="https://schema.org/FAQPage"
+          >
+            <li
+              class="page-faq__item"
+              itemprop="mainEntity"
+              itemscope=""
+              itemtype="https://schema.org/Question"
+            >
+              <h3 class="page-faq__question" itemprop="name">
+                Как я могу стать участником реферальной программы?
+              </h3>
+              <div class="page-faq__answer-container">
+                <div class="page-faq__answer-content">
+                  <div
+                    class="page-faq__answer"
+                    itemprop="acceptedAnswer"
+                    itemscope=""
+                    itemtype="https://schema.org/Answer"
+                  >
+                    <div itemprop="text">
+                      <p class="page-faq__answer-text">
+                        Для того, чтобы стать участником реферальной программы,
+                        необходимо быть зарегистрированным участником программы
+                        лояльности и купить товар из акционной категории.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="page-faq__item"
+              itemprop="mainEntity"
+              itemscope=""
+              itemtype="https://schema.org/Question"
+            >
+              <h3 class="page-faq__question" itemprop="name">
+                Где я могу посмотреть промокоды?
+              </h3>
+              <div class="page-faq__answer-container">
+                <div class="page-faq__answer-content">
+                  <div
+                    class="page-faq__answer"
+                    itemprop="acceptedAnswer"
+                    itemscope=""
+                    itemtype="https://schema.org/Answer"
+                  >
+                    <div itemprop="text">
+                      <p class="page-faq__answer-text">
+                        Посмотреть доступные промокоды ты можешь в личном
+                        кабинете на сайте или в приложении "Цитрус" в разделе
+                        "Промокоды".
+                      </p>
+                    </div>
+                    <ul class="page-faq__images">
+                      <li class="page-faq__image">
+                        <img
+                          src="https://i.citrus.ua/uploads/promo/referral/faq/show-promocodes-ru.jpg"
+                          alt=""
+                        />
+                      </li>
+                      <li class="page-faq__image">
+                        <img
+                          src="https://i.citrus.ua/uploads/promo/referral/faq/show-promocodes-2-ru.jpg"
+                          alt=""
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="page-faq__item"
+              itemprop="mainEntity"
+              itemscope=""
+              itemtype="https://schema.org/Question"
+            >
+              <h3 class="page-faq__question" itemprop="name">
+                Могу ли я использовать свой промокод для получения скидки при
+                покупке?
+              </h3>
+              <div class="page-faq__answer-container">
+                <div class="page-faq__answer-content">
+                  <div
+                    class="page-faq__answer"
+                    itemprop="acceptedAnswer"
+                    itemscope=""
+                    itemtype="https://schema.org/Answer"
+                  >
+                    <div itemprop="text">
+                      <p class="page-faq__answer-text">
+                        Нет. Твоим промокодом могут воспользоваться все твои
+                        друзья. При каждом использовании таких промокодов ты
+                        будешь получать кешбэк.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="page-faq__item"
+              itemprop="mainEntity"
+              itemscope=""
+              itemtype="https://schema.org/Question"
+            >
+              <h3 class="page-faq__question" itemprop="name">
+                Сколько друзей я могу пригласить?
+              </h3>
+              <div class="page-faq__answer-container">
+                <div class="page-faq__answer-content">
+                  <div
+                    class="page-faq__answer"
+                    itemprop="acceptedAnswer"
+                    itemscope=""
+                    itemtype="https://schema.org/Answer"
+                  >
+                    <div itemprop="text">
+                      <p class="page-faq__answer-text">
+                        Больше друзей — больше кешбэка. Но помни, что для
+                        каждого промокода свои условия использования и
+                        начисления. Подробности в личном кабинете.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="page-faq__item"
+              itemprop="mainEntity"
+              itemscope=""
+              itemtype="https://schema.org/Question"
+            >
+              <h3 class="page-faq__question" itemprop="name">
+                Что я получу, передав промокод друзьям?
+              </h3>
+              <div class="page-faq__answer-container">
+                <div class="page-faq__answer-content">
+                  <div
+                    class="page-faq__answer"
+                    itemprop="acceptedAnswer"
+                    itemscope=""
+                    itemtype="https://schema.org/Answer"
+                  >
+                    <div itemprop="text">
+                      <p class="page-faq__answer-text">
+                        При каждом использовании промокода друзьями ты будешь
+                        получать кешбэк.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="page-faq__item"
+              itemprop="mainEntity"
+              itemscope=""
+              itemtype="https://schema.org/Question"
+            >
+              <h3 class="page-faq__question" itemprop="name">
+                Что получит друг, воспользовавшись моим промокодом?
+              </h3>
+              <div class="page-faq__answer-container">
+                <div class="page-faq__answer-content">
+                  <div
+                    class="page-faq__answer"
+                    itemprop="acceptedAnswer"
+                    itemscope=""
+                    itemtype="https://schema.org/Answer"
+                  >
+                    <div itemprop="text">
+                      <p class="page-faq__answer-text">
+                        При использовании промокода твой друг получит скидку,
+                        соответствующую актуальному акционному предложению.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="page-faq__item"
+              itemprop="mainEntity"
+              itemscope=""
+              itemtype="https://schema.org/Question"
+            >
+              <h3 class="page-faq__question" itemprop="name">
+                Как я смогу использовать бонусы кешбэк, которые будут начислены
+                после использования промокодов друзьями?
+              </h3>
+              <div class="page-faq__answer-container">
+                <div class="page-faq__answer-content">
+                  <div
+                    class="page-faq__answer"
+                    itemprop="acceptedAnswer"
+                    itemscope=""
+                    itemtype="https://schema.org/Answer"
+                  >
+                    <div itemprop="text">
+                      <p class="page-faq__answer-text">
+                        Все бонусы кешбэк, которые ты получишь за использование
+                        твоего промокода друзьями, можешь использовать как форму
+                        оплаты в эквиваленте 1 бонус кешбэк = 1 гривна. Оплатить
+                        бонусами можно до 50% суммы чека.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <ul
+            aria-label="Accordion control"
+            class="page-faq"
+            data-faq="2"
+            data-bui-component="Accordion"
+            itemscope=""
+            itemtype="https://schema.org/FAQPage"
+          >
+            <li
+              class="page-faq__item"
+              itemprop="mainEntity"
+              itemscope=""
+              itemtype="https://schema.org/Question"
+            >
+              <h3 class="page-faq__question" itemprop="name">
+                Как использовать промокод?
+              </h3>
+              <div class="page-faq__answer-container">
+                <div class="page-faq__answer-content">
+                  <div
+                    class="page-faq__answer"
+                    itemprop="acceptedAnswer"
+                    itemscope=""
+                    itemtype="https://schema.org/Answer"
+                  >
+                    <div itemprop="text">
+                      <p class="page-faq__answer-text">
+                        Ты можешь ввести промокод при заказе на сайте и в
+                        приложении или продиктовать кассиру в магазине в момент
+                        оформления чека.
+                      </p>
+                    </div>
+                    <ul class="page-faq__images">
+                      <li class="page-faq__image">
+                        <img
+                          src="https://i.citrus.ua/uploads/promo/referral/faq/use-promocode.jpg"
+                          alt=""
+                        />
+                      </li>
+                      <li class="page-faq__image">
+                        <img
+                          src="https://i.citrus.ua/uploads/promo/referral/faq/use-promocode-2.jpg"
+                          alt=""
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="page-faq__item"
+              itemprop="mainEntity"
+              itemscope=""
+              itemtype="https://schema.org/Question"
+            >
+              <h3 class="page-faq__question" itemprop="name">
+                Сколько раз я могу использовать промокод?
+              </h3>
+              <div class="page-faq__answer-container">
+                <div class="page-faq__answer-content">
+                  <div
+                    class="page-faq__answer"
+                    itemprop="acceptedAnswer"
+                    itemscope=""
+                    itemtype="https://schema.org/Answer"
+                  >
+                    <div itemprop="text">
+                      <p class="page-faq__answer-text">
+                        Промокод можно использовать только один раз.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="page-faq__item"
+              itemprop="mainEntity"
+              itemscope=""
+              itemtype="https://schema.org/Question"
+            >
+              <h3 class="page-faq__question" itemprop="name">
+                Могу ли я использовать промокоды, которые я получил от разных
+                друзей?
+              </h3>
+              <div class="page-faq__answer-container">
+                <div class="page-faq__answer-content">
+                  <div
+                    class="page-faq__answer"
+                    itemprop="acceptedAnswer"
+                    itemscope=""
+                    itemtype="https://schema.org/Answer"
+                  >
+                    <div itemprop="text">
+                      <p class="page-faq__answer-text">
+                        Да. Если у тебя есть разные промокоды, ты можешь
+                        использовать их при заказе товара, но при условии, что
+                        используешь один промокод в одном чеке.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="page-faq__item"
+              itemprop="mainEntity"
+              itemscope=""
+              itemtype="https://schema.org/Question"
+            >
+              <h3 class="page-faq__question" itemprop="name">
+                Какие условия использования промокода?
+              </h3>
+              <div class="page-faq__answer-container">
+                <div class="page-faq__answer-content">
+                  <div
+                    class="page-faq__answer"
+                    itemprop="acceptedAnswer"
+                    itemscope=""
+                    itemtype="https://schema.org/Answer"
+                  >
+                    <div itemprop="text">
+                      <p class="page-faq__answer-text">
+                        Для каждого промокода условия использования разные.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="page-faq__item"
+              itemprop="mainEntity"
+              itemscope=""
+              itemtype="https://schema.org/Question"
+            >
+              <h3 class="page-faq__question" itemprop="name">
+                Получу ли я кешбэк с покупки, если передам промокод друга?
+              </h3>
+              <div class="page-faq__answer-container">
+                <div class="page-faq__answer-content">
+                  <div
+                    class="page-faq__answer"
+                    itemprop="acceptedAnswer"
+                    itemscope=""
+                    itemtype="https://schema.org/Answer"
+                  >
+                    <div itemprop="text">
+                      <p class="page-faq__answer-text">
+                        Нет. Каждый реферальный купон уникален и хранит данные
+                        источника. Кешбэк будет начислен другу, который получил
+                        промокод от Цитрус. Для получения личного реферального
+                        купона с возможностью делиться им с друзьями, нужно
+                        купить товар из списка акционных товаров реферальной
+                        программы.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="page-faq__item"
+              itemprop="mainEntity"
+              itemscope=""
+              itemtype="https://schema.org/Question"
+            >
+              <h3 class="page-faq__question" itemprop="name">
+                Могу ли я купить несколько позиций и получить скидку на каждую?
+              </h3>
+              <div class="page-faq__answer-container">
+                <div class="page-faq__answer-content">
+                  <div
+                    class="page-faq__answer"
+                    itemprop="acceptedAnswer"
+                    itemscope=""
+                    itemtype="https://schema.org/Answer"
+                  >
+                    <div itemprop="text">
+                      <p class="page-faq__answer-text">
+                        Да. Ты можешь выбрать несколько акционных позиций и
+                        получить скидку на каждую. Но только один раз.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="page-faq__item"
+              itemprop="mainEntity"
+              itemscope=""
+              itemtype="https://schema.org/Question"
+            >
+              <h3 class="page-faq__question" itemprop="name">
+                Могу ли я передать промокод другу?
+              </h3>
+              <div class="page-faq__answer-container">
+                <div class="page-faq__answer-content">
+                  <div
+                    class="page-faq__answer"
+                    itemprop="acceptedAnswer"
+                    itemscope=""
+                    itemtype="https://schema.org/Answer"
+                  >
+                    <div itemprop="text">
+                      <p class="page-faq__answer-text">
+                        Да. Ты можешь передать промокод, полученный от друга,
+                        другим друзьям. Условия использования для твоих друзей
+                        будут такие же, как и для тебя.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <!-- button class="referral-faq__link" data-scroll-to="referralPromo">Начать</button -->
+        </div>
+      </div>
+
+      <div
+        class="referral-success"
+        id="referralSuccess"
+        data-modal-close="true"
+      >
+        <div class="referral-success__container">
+          <button
+            class="referral-success__close"
+            data-modal-close="true"
+          ></button>
+          <img
+            src="https://i.citrus.ua/uploads/promo/referral/success/success.jpg"
+            alt=""
+          />
+          <p class="referral-success__title">Спасибо!</p>
+          <p class="referral-success__description">
+            Промокод отправлен в SMS/Viber, а также он доступен в твоем
+            <a
+              target="_blank"
+              href="https://my.citrus.ua/ru/club/referral-promocodes"
+              >личном кабинете</a
+            >. Делись промокодом, накапливай бонусы!
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="referral-success"
+        id="referralRegistered"
+        data-modal-close="true"
+      >
+        <div class="referral-success__container">
+          <button
+            class="referral-success__close"
+            data-modal-close="true"
+          ></button>
+          <img
+            src="https://i.citrus.ua/uploads/promo/referral/success/success.jpg"
+            alt=""
+          />
+          <p class="referral-success__title">Спасибо!</p>
+          <p class="referral-success__description">
+            Промокод <b>был отправлен ранее</b> в SMS/Viber, а также он доступен
+            в твоем
+            <a
+              target="_blank"
+              href="https://my.citrus.ua/ru/club/referral-promocodes"
+              >личном кабинете</a
+            >. Делись промокодом, накапливай бонусы!
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="referral-preview"
+        id="referralPreview"
+        data-modal-close="true"
+      >
+        <div class="referral-preview__content">
+          <button
+            class="referral-success__close"
+            data-modal-close="true"
+          ></button>
+          <div class="referral-preview__image-container"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    (function () {
+      if (!window.dataLayer) {
+        window.dataLayer = [];
+      }
+
+      function debounce(f, ms) {
+        let timer = null;
+        return function () {
+          let _this = this;
+          let onComplete = function () {
+            f.apply(_this, arguments);
+            timer = null;
+          };
+          if (timer) {
+            clearTimeout(timer);
+          }
+          timer = setTimeout(onComplete, ms);
+        };
+      }
+
+      function openPreviewModal() {
+        const previewModal = document.getElementById('referralPreview');
+        const imgSrc = this.querySelector('img').src;
+
+        const imageContainer = previewModal.querySelector(
+          '.referral-preview__image-container',
+        );
+        imageContainer.innerHTML = '';
+
+        const image = document.createElement('img');
+        image.setAttribute('src', imgSrc);
+        imageContainer.append(image);
+
+        previewModal.style.display = 'flex';
+      }
+
+      function closeModal(event) {
+        if (event.target.getAttribute('data-modal-close')) {
+          document.getElementById('referralSuccess').style.display = 'none';
+          document.getElementById('referralPreview').style.display = 'none';
+          document.getElementById('referralRegistered').style.display = 'none';
+        }
+      }
+
+      function onToggleFAQ(el) {
+        if (el.target) {
+          el = el.target;
+        }
+
+        let isInAnimation = Boolean(el.getAttribute('data-in-animation'));
+        if (isInAnimation) {
+          return;
+        }
+        let parentNode = el.closest('.page-faq__item');
+        let container = parentNode.querySelector('.page-faq__answer-container');
+        let content = parentNode.querySelector('.page-faq__answer-content');
+        let contentHeight = content.offsetHeight;
+        el.setAttribute('data-in-animation', 'true');
+        if (parentNode.classList.contains('page-faq__item--open')) {
+          container.style.height = contentHeight + 'px';
+          setTimeout(() => {
+            container.style.height = '0';
+            parentNode.classList.remove('page-faq__item--open');
+            el.removeAttribute('data-in-animation');
+          }, 50);
+        } else {
+          container.style.height = contentHeight + 'px';
+          parentNode.classList.add('page-faq__item--open');
+          setTimeout(() => {
+            container.style.height = 'auto';
+            el.removeAttribute('data-in-animation');
+          }, 400);
+        }
+      }
+
+      function toggleTab() {
+        if (this.classList.contains('referral-faq__tab--active')) {
+          return;
+        }
+
+        const tabNumber = +this.getAttribute('data-tab');
+        const faqs = document.querySelectorAll('[data-faq]');
+
+        [].forEach.call(tabs, function (tab) {
+          tab.classList.remove('referral-faq__tab--active');
+        });
+
+        [].forEach.call(faqs, function (faq) {
+          faq.style.display = 'none';
+        });
+
+        this.classList.add('referral-faq__tab--active');
+
+        document.querySelector(`[data-faq='${tabNumber}']`).style.display =
+          'block';
+      }
+
+      function makeAnimation(elements) {
+        let screenHeight;
+        let elemToViewPort;
+
+        const timeToDisableAnim = 3000;
+
+        function addAnimation(elem) {
+          elem.classList.add('anim');
+          elem.setAttribute('data-anim', 'false');
+
+          let timer = setInterval(function () {
+            let elemToTop = elem.getBoundingClientRect().top;
+            let elemToBottom = elem.getBoundingClientRect().bottom;
+
+            if (elemToBottom <= 0 || elemToTop >= screenHeight) {
+              elem.classList.remove('anim');
+              elem.setAttribute('data-anim', 'true');
+              clearInterval(timer);
+              timer = null;
+            }
+          }, timeToDisableAnim);
+        }
+
+        function onScrollAnimate() {
+          elements.forEach(function (elem) {
+            let elemToTop = elem.getBoundingClientRect().top;
+            let elemToBottom = elem.getBoundingClientRect().bottom;
+
+            if (
+              ((elemToTop <= elemToViewPort && elemToTop >= 0) ||
+                (elemToBottom >= screenHeight / 4 && elemToTop <= 0)) &&
+              elem.getAttribute('data-anim') === 'true'
+            ) {
+              if (!elem.complete && elem.tagName === 'IMG') {
+                elem.setAttribute('data-anim', 'false');
+                elem.addEventListener('load', function () {
+                  addAnimation(elem);
+                });
+
+                return;
+              }
+
+              if (elem.tagName !== 'IMG') {
+                let images = elem.querySelectorAll('img');
+
+                [].forEach.call(images, function (image) {
+                  if (!image.complete) {
+                    image.addEventListener('load', function () {
+                      onScrollAnimate();
+                      return;
+                    });
+                  }
+                });
+              }
+
+              addAnimation(elem);
+            }
+          });
+        }
+
+        function onResize() {
+          screenHeight =
+            window.innerHeight ||
+            document.documentElement.clientHeight ||
+            document.body.clientHeight;
+          elemToViewPort = screenHeight - screenHeight / 4;
+        }
+
+        onResize();
+        onResize = debounce(onResize, 10);
+
+        onScrollAnimate();
+        onScrollAnimate = debounce(onScrollAnimate, 10);
+
+        document.addEventListener('scroll', onScrollAnimate);
+        window.addEventListener('resize', onResize);
+      }
+
+      let animationImages = document.querySelectorAll('[data-anim]');
+      animationImages = [].slice.call(animationImages);
+      makeAnimation(animationImages);
+
+      const previewImages = document.querySelectorAll('.page-faq__image');
+      [].forEach.call(previewImages, function (preview) {
+        preview.addEventListener('click', openPreviewModal);
+      });
+
+      const modalClosers = document.querySelectorAll('[data-modal-close]');
+      [].forEach.call(modalClosers, function (closer) {
+        closer.addEventListener('click', closeModal);
+      });
+
+      const faqButtons = document.querySelectorAll('.page-faq__question');
+      [].forEach.call(faqButtons, function (button) {
+        onToggleFAQ(button);
+        button.addEventListener('click', onToggleFAQ);
+      });
+
+      const tabs = document.querySelectorAll('[data-tab]');
+      [].forEach.call(tabs, function (tab) {
+        tab.addEventListener('click', toggleTab);
+      });
+    })();
+  </script>
+</html>

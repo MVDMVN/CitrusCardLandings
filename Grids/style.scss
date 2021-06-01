@@ -1,0 +1,21 @@
+#grid {
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1.5vw;
+}
+#grid > div {
+  font-size: 5vw;
+  padding: 24px;
+  background: gold;
+  text-align: center;
+  min-width: 130px;
+}
+
+@media screen and (min-width: 1360px) {
+  #grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1.5vw;
+  }
+}

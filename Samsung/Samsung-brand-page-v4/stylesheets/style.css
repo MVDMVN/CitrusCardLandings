@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: 0;
+  overflow-x: hidden; }
+
+ul {
+  margin: 0;
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  color: transparent; }
+
+form select,
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding: 0 0 0 12px;
+  background-color: #ffffff; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3b6d9a;
+  outline: none;
+  transition: 0.3s; }
+
+button {
+  display: block;
+  background: 0 0;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  line-height: 44px;
+  transition: 0.3s;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-size: 18px; }
+
+.samsung-header {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto; }
+  .samsung-header__title {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    color: rgba(0, 0, 0, 0.87);
+    text-align: center;
+    padding: 32px 0 16px 0; }
+  .samsung-header__banner {
+    display: block;
+    margin: 0 auto; }
+  .samsung-header__swiper {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    max-width: 1366px;
+    width: 100%;
+    padding-bottom: 40px; }
+  .samsung-header__swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    box-sizing: content-box;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  .samsung-header__wrapper {
+    position: relative; }
+  .samsung-header__slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative; }
+  .samsung-header__swiper-button {
+    display: none; }
+  .samsung-header__swiper-pagination {
+    z-index: 1;
+    bottom: 20px; }
+  .samsung-header__swiper-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0.54);
+    opacity: 0.3;
+    margin: 0 8px; }
+  .samsung-header__swiper-pagination .swiper-pagination-bullet:focus {
+    outline: none; }
+  .samsung-header__swiper-pagination .swiper-pagination-bullet-active {
+    width: 8px;
+    height: 8px;
+    opacity: 1; }
+  .samsung-header__swiper-pagination.swiper-pagination-bullets {
+    bottom: 0;
+    left: 0;
+    width: 100%; }
+  .samsung-header .swiper-pagination {
+    position: absolute;
+    text-align: center;
+    transition: 0.3s;
+    transform: translate3d(0, 0, 0);
+    width: 100%; }
+  .samsung-header .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 5px; }
+  @media screen and (min-width: 768px) {
+    .samsung-header__title {
+      font-size: 38px;
+      line-height: 45px;
+      padding: 32px 0 24px 0; } }
+  @media screen and (min-width: 1024px) {
+    .samsung-header__swiper-button {
+      width: 53px;
+      height: 53px;
+      background: #ffffff;
+      border-radius: 50%;
+      z-index: 1;
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+      display: block;
+      cursor: pointer;
+      transition: 0.5s; }
+    .samsung-header__swiper-button:hover {
+      background: #202020;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25); }
+    .samsung-header__swiper-button:focus {
+      outline: none; }
+    .samsung-header__swiper-button:hover::before, .samsung-header__swiper-button:hover::after {
+      background: #ffffff; }
+    .samsung-header__swiper-button.swiper-button-disabled::before, .samsung-header__swiper-button.swiper-button-disabled::after {
+      background: #d8d8d8; }
+    .samsung-header__swiper-button--prev {
+      left: 14px; }
+    .samsung-header__swiper-button--prev::before {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 15px;
+      left: 18px;
+      top: 30px;
+      background: #d8d8d8;
+      transform: rotate(45deg); }
+    .samsung-header__swiper-button--prev::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 15px;
+      left: 18px;
+      top: 20px;
+      background: #d8d8d8;
+      transform: rotate(-45deg); }
+    .samsung-header__swiper-button--next {
+      right: 14px; }
+    .samsung-header__swiper-button--next::before {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 15px;
+      left: 20px;
+      top: 20px;
+      background: #d8d8d8;
+      transform: rotate(45deg); }
+    .samsung-header__swiper-button--next::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 15px;
+      left: 20px;
+      top: 30px;
+      background: #d8d8d8;
+      transform: rotate(-45deg); } }
+  @media screen and (min-width: 1366px) {
+    .samsung-header__title {
+      font-size: 48px;
+      line-height: 56px;
+      padding: 64px 0 48px 0; } }
+.samsung-categories__title {
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  padding: 24px 0;
+  text-align: center; }
+.samsung-categories__list {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px 8px;
+  justify-content: center;
+  padding: 0 8px; }
+.samsung-categories__item {
+  max-width: 150px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center; }
+.samsung-categories__link {
+  color: #1d1d1f;
+  transition: 0.3s; }
+  .samsung-categories__link:hover {
+    color: #f6731c; }
+.samsung-categories__item-container {
+  background: #fafafa;
+  box-shadow: inset 0px 0px 24px #e1e1e1;
+  border-radius: 50%;
+  max-width: 120px;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px auto; }
+.samsung-categories__image {
+  display: flex;
+  align-items: center;
+  height: 75px;
+  width: 75px; }
+.samsung-categories__item-title {
+  font-size: 14px;
+  line-height: 18px; }
+@media screen and (min-width: 768px) {
+  .samsung-categories__title {
+    font-size: 32px;
+    line-height: 37px;
+    margin-bottom: 40px; }
+  .samsung-categories__list {
+    max-width: 900px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px 24px; }
+  .samsung-categories__item {
+    max-width: 210px; }
+  .samsung-categories__item-container {
+    max-width: 165px;
+    height: 165px; }
+  .samsung-categories__image {
+    height: 105px;
+    width: 105px; }
+  .samsung-categories__item-title {
+    font-size: 16px;
+    line-height: 21px; } }
+@media screen and (min-width: 1024px) {
+  .samsung-categories__list {
+    max-width: 1366px;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr); } }
+@media screen and (min-width: 1366px) {
+  .samsung-categories__list {
+    max-width: 1366px;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr); } }
+
+/*# sourceMappingURL=style.css.map */

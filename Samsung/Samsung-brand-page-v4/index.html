@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samsung Brand Page</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="samsung">
+      <section class="samsung-header samsung__header">
+        <h1 class="samsung-header__title">Samsung</h1>
+        <div class="samsung-header__wrapper">
+          <div class="swiper-container samsung-header__swiper">
+            <div class="swiper-wrapper samsung-header__swiper-wrapper" id="samsungBanners"></div>
+            <div class="swiper-pagination samsung-header__swiper-pagination"></div>
+          </div>
+
+          <div class="swiper-button-prev samsung-header__swiper-button samsung-header__swiper-button--prev"></div>
+          <div class="swiper-button-next samsung-header__swiper-button samsung-header__swiper-button--next"></div>
+        </div>
+      </section>
+      <section class="samsung-ecosystem samsung__ecosystem">
+        <p class="samsung-ecosystem__title">Экосистемы Samsung</p>
+        <ul class="samsung-ecosystem__list" id="samsungEcosystemItems"></ul>
+      </section>
+      <section class="samsung-categories samsung__categories">
+        <p class="samsung-categories__title">Другие категории бренда</p>
+        <ul class="samsung-categories__list" id="samsungCategoriesList"></ul>
+      </section>
+    </div>
+    <script>
+      (function () {
+        if (!window.dataLayer) {
+          window.dataLayer = [];
+        }
+
+        let bannerSwiper;
+
+        const categories = [
+          {
+            name: 'Смартфоны',
+            icon: 'https://i.citrus.ua/uploads/shop/7/5/75cb4a8ce6d76dac7d7f15526d07c975.jpg',
+            url: 'smartfony/brand-samsung/',
+          },
+          {
+            name: 'Планшеты',
+            icon: 'https://i.citrus.ua/uploads/shop/0/6/06cc524c81ef5d473b62f064fff04c35.jpg',
+            url: 'planshety/brand-samsung/',
+          },
+          {
+            name: 'Мониторы',
+            icon: 'https://i.citrus.ua/uploads/shop/0/8/08a4fbcd3d9c5691fa9639e850f2b0dc.jpg',
+            url: 'monitory/brand-samsung/',
+          },
+          {
+            name: 'Чехлы для смартфонов',
+            icon: 'https://i.citrus.ua/uploads/shop/2/5/250a972e7654e264fdfa331a808485b7.jpg',
+            url: 'chekhly-dlya-smartfonov/brand-samsung/',
+          },
+          {
+            name: 'Чехлы для планшетов',
+            icon: 'https://i.citrus.ua/uploads/shop/6/5/65912537bb635fb2da20cd7b7f771b6e.jpg',
+            url: 'chekhly-dlya-planshetov/brand-samsung/',
+          },
+          {
+            name: 'Защитные стекла и пленки для смартфонов',
+            icon: 'https://i.citrus.ua/uploads/shop/e/f/efc14dfa799d578fd5a82e8164528b7f.jpg',
+            url: 'zashchitnye-plenki-dlya-smartfonov/brand-samsung/',
+          },
+          {
+            name: 'Защитные пленки для планшетов',
+            icon: 'https://i.citrus.ua/uploads/shop/9/7/976e2038bf559f995290774eae44e1b6.jpg',
+            url: 'zashchitnye-plenki-dlya-planshetov/brand-samsung/',
+          },
+          {
+            name: 'Зарядные устройства',
+            icon: 'https://i.citrus.ua/uploads/shop/b/1/b17cf9b402e4185bb86cb358f45170f9.jpg',
+            url: 'zaryadnye-ustroystva-23/brand-samsung/',
+          },
+          {
+            name: 'Карты памяти',
+            icon: 'https://i.citrus.ua/uploads/shop/2/6/26bb50519b0148d376fffafd9f72ccc6.jpg',
+            url: 'karty-pamyati/brand-samsung/',
+          },
+          {
+            name: 'Внешние жесткие диски',
+            icon: 'https://i.citrus.ua/uploads/shop/5/a/5acdf735c5aab41bc5c833f4e6b2ccf7.png',
+            url: 'vneshnie-zhestkie-diski/brand-samsung/',
+          },
+          {
+            name: 'Наушники',
+            icon: 'https://i.citrus.ua/uploads/shop/5/2/524b46840965887dd34090d8b231f898.jpg',
+            url: 'naushniki/brand-samsung/',
+          },
+          {
+            name: 'Акустика',
+            icon: 'https://i.citrus.ua/uploads/shop/3/5/350f76530de81d4c3149f7fab5d5f7ac.jpg',
+            url: 'akustika/brand-samsung/',
+          },
+          {
+            name: 'Смарт-часы',
+            icon: 'https://i.citrus.ua/uploads/shop/9/b/9bc4a7111fc0dac7f304694a46c3505d.jpg',
+            url: 'smart-chasy/brand-samsung/',
+          },
+          {
+            name: 'Аксессуары для смарт-часов',
+            icon: 'https://i.citrus.ua/uploads/shop/7/1/71ce5bdcdc62541691494589e9a2e028.png',
+            url: 'aksessuary-dlya-smart-chasov/brand-samsung/',
+          },
+          {
+            name: 'Микроволновки',
+            icon: 'https://i.citrus.ua/uploads/shop/d/1/d114b675d8f0e89fc74d8576f1ce87c9.png',
+            url: 'mikrovolnovki/brand-samsung/',
+          },
+          {
+            name: 'Кондиционеры',
+            icon: 'https://i.citrus.ua/uploads/shop/2/4/24b333af4f82f98e96334cce2d6724f0.png',
+            url: 'kondicionery/brand-samsung/',
+          },
+          {
+            name: 'Телевизоры',
+            icon: 'https://i.citrus.ua/uploads/shop/8/e/8e0e37cfa746636414ddcf62d1055307.jpg',
+            url: 'televizory/brand-samsung/',
+          },
+          {
+            name: 'Фирменные рамки для ТВ',
+            icon: 'https://i.citrus.ua/uploads/shop/1/2/126f99d9c553ea2cd589c73cddcc3bfe.jpg',
+            url: 'firmennye-ramki-dlya-tv/brand-samsung/',
+          },
+          {
+            name: 'Кронштейны и крепления',
+            icon: 'https://i.citrus.ua/uploads/shop/b/8/b87b645829dfd59647600fa473b434d9.jpg',
+            url: 'kronshtejny-i-krepleniya/brand-samsung/',
+          },
+          {
+            name: 'Фитнес-трекеры',
+            icon: 'https://i.citrus.ua/uploads/shop/b/2/b2aaaf5a5158818c0939264264506da4.jpg',
+            url: 'fitnes-trekery-160/brand-samsung/',
+          },
+          {
+            name: 'Аксессуары для фитнес-трекеров',
+            icon: 'https://i.citrus.ua/uploads/shop/a/e/ae64440df184bb8895c768c845cb4c21.jpg',
+            url: 'aksessuary-dlya-fitnes-trekerov/brand-samsung/',
+          },
+        ];
+
+        function createScript(url, onloadCb) {
+          const bodyElement = document.getElementsByTagName('BODY')[0];
+          const scriptContent = document.createElement('script');
+
+          scriptContent.type = 'text/javascript';
+          scriptContent.async = false;
+          scriptContent.src = url;
+          if (onloadCb) {
+            scriptContent.onload = onloadCb;
+          }
+          bodyElement.appendChild(scriptContent);
+        }
+
+        function formatPrice(price) {
+          return (price || 0).toLocaleString().replace(/\D+/g, ' ');
+        }
+
+        function initSwiper() {
+          bannersSwiper = new Swiper('.swiper-container', {
+            spaceBetween: 0,
+            init: false,
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+          });
+        }
+
+        createScript('https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js', () => {
+          initSwiper();
+        });
+
+        function getAcademyProducts(arr, element) {
+          element.innerHTML = '';
+
+          arr.forEach((item) => {
+            element.innerHTML += `
+                <div class="swiper-slide samsung-header__slide">
+                  <a class="samsung-header__banner-link" target="_blank" href="https://www.citrus.ua${item.url}">
+                    <picture>
+                      <source srcset="${item.imgDesktop}" media="(min-width: 561px)" />
+                      <img class="samsung-header__banner" src="${item.imgMobile}" alt="" />
+                    </picture>
+                  </a>
+                </div>
+              `;
+          });
+
+          bannersSwiper.init();
+        }
+
+        function initBrandCategories(elem, categories) {
+          const rootElem = document.getElementById(elem);
+
+          if (!rootElem) {
+            return;
+          }
+
+          rootElem.innerHTML = '';
+          categories.forEach((category) => {
+            rootElem.innerHTML += `
+                  <li class="samsung-categories__item">
+                    <a class="samsung-categories__link" href="https://www.citrus.ua/${category.url}" target="_blank">
+                      <div class="samsung-categories__item-container">
+                        <div class="samsung-categories__image">
+                          <img src="https://i.citrus.ua/uploads/shop/8/e/8e0e37cfa746636414ddcf62d1055307.jpg" alt="${category.name}" />
+                        </div>
+                      </div>
+                    </a>
+                    <a class="samsung-categories__link" href="https://www.citrus.ua/${category.url}" target="_blank">
+                      <p class="samsung-categories__item-title">${category.name}</p>
+                    </a>
+                  </li>
+            `;
+          });
+        }
+
+        fetch('https://api.citrus.ua/v5/sliders/694')
+          .then((response) => response.json())
+          .then((data) => {
+            getAcademyProducts(data.data, document.getElementById('samsungBanners'));
+          });
+
+        initBrandCategories('samsungCategoriesList', categories);
+      })();
+    </script>
+  </body>
+</html>

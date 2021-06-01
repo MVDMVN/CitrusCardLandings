@@ -1,0 +1,376 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: 0;
+  overflow-x: hidden; }
+
+ul {
+  margin: 0;
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  color: transparent; }
+
+form select,
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding: 0 0 0 12px;
+  background-color: #ffffff; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3b6d9a;
+  outline: none;
+  transition: 0.3s; }
+
+button {
+  display: block;
+  background: 0 0;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  line-height: 44px;
+  transition: 0.3s;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-size: 18px; }
+
+.imacm1 {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto; }
+  .imacm1-header {
+    background-color: #fff;
+    padding: 60px 16px 40px 16px; }
+    .imacm1-header__title {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      color: #000000;
+      margin-bottom: 40px; }
+    .imacm1-header__image {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto;
+      transition: 0.3s; }
+    @media screen and (min-width: 768px) {
+      .imacm1-header {
+        padding: 60px 24px; }
+        .imacm1-header__title {
+          font-size: 36px;
+          line-height: 42px; }
+        .imacm1-header__image {
+          max-width: 600px; } }
+    @media screen and (min-width: 1024px) {
+      .imacm1-header {
+        padding: 80px 24px; }
+        .imacm1-header__title {
+          font-size: 48px;
+          line-height: 56px;
+          margin-bottom: 60px; }
+        .imacm1-header__image {
+          max-width: 950px;
+          margin: 0 auto; } }
+    @media screen and (min-width: 1366px) {
+      .imacm1-header__title {
+        font-size: 54px;
+        line-height: 63px; }
+      .imacm1-header__image {
+        max-width: 1100px; } }
+  .imacm1-processor {
+    padding: 40px 16px; }
+    .imacm1-processor__title {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 28px;
+      max-width: 566px;
+      width: 100%;
+      margin: 0 auto 22px auto;
+      text-align: center; }
+    .imacm1-processor__subtitle {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      max-width: 566px;
+      width: 100%;
+      margin: 0 auto 40px auto;
+      text-align: center; }
+    .imacm1-processor__image {
+      max-width: 480px;
+      margin: 0 auto;
+      transition: 0.3s; }
+    @media screen and (min-width: 768px) {
+      .imacm1-processor {
+        padding: 60px 24px; }
+        .imacm1-processor__title {
+          font-size: 36px;
+          line-height: 42px;
+          max-width: 770px;
+          margin: 0 auto 28px auto; }
+        .imacm1-processor__subtitle {
+          font-size: 26px;
+          line-height: 30px;
+          max-width: 770px; }
+        .imacm1-processor__image {
+          max-width: 750px; } }
+    @media screen and (min-width: 1024px) {
+      .imacm1-processor {
+        padding: 80px 24px; }
+        .imacm1-processor__title {
+          font-size: 48px;
+          line-height: 56px;
+          max-width: 870px;
+          margin: 0 auto 48px auto; }
+        .imacm1-processor__subtitle {
+          font-size: 32px;
+          line-height: 37px;
+          max-width: 870px;
+          margin: 0 auto 60px auto; }
+        .imacm1-processor__image {
+          max-width: 950px; } }
+    @media screen and (min-width: 1366px) {
+      .imacm1-processor__title {
+        font-size: 54px;
+        line-height: 63px; }
+      .imacm1-processor__subtitle {
+        font-size: 36px;
+        line-height: 42px; } }
+  .imacm1-advantages {
+    background-color: #fafafa; }
+    .imacm1-advantages__title {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 28px;
+      color: #000000;
+      padding: 40px 16px;
+      max-width: 490px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center; }
+    @media screen and (min-width: 768px) {
+      .imacm1-advantages__title {
+        font-size: 36px;
+        line-height: 42px;
+        padding: 60px 24px; } }
+    @media screen and (min-width: 1024px) {
+      .imacm1-advantages__title {
+        font-size: 48px;
+        line-height: 56px;
+        padding: 80px 0; } }
+    @media screen and (min-width: 1366px) {
+      .imacm1-advantages__title {
+        font-size: 54px;
+        line-height: 63px;
+        max-width: 540px; } }
+  .imacm1-colors {
+    padding: 40px 16px; }
+    .imacm1-colors__title {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 28px;
+      max-width: 676px;
+      width: 100%;
+      margin: 0 auto 40px auto;
+      text-align: center; }
+    .imacm1-colors__image {
+      max-width: 420px;
+      width: 100%;
+      margin: 0 auto; }
+    @media screen and (min-width: 768px) {
+      .imacm1-colors {
+        padding: 60px 24px; }
+        .imacm1-colors__title {
+          font-size: 36px;
+          line-height: 42px;
+          max-width: 678px; }
+        .imacm1-colors__image {
+          max-width: 600px; } }
+    @media screen and (min-width: 1024px) {
+      .imacm1-colors {
+        padding: 80px 24px; }
+        .imacm1-colors__title {
+          font-size: 48px;
+          line-height: 56px;
+          margin: 0 auto 60px auto; }
+        .imacm1-colors__image {
+          max-width: 870px; } }
+    @media screen and (min-width: 1366px) {
+      .imacm1-colors__title {
+        font-size: 54px;
+        line-height: 63px;
+        max-width: 770px; } }
+  .imacm1-connectivity {
+    background-color: #fafafa; }
+    .imacm1-connectivity__title {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 28px;
+      color: #000000;
+      padding: 40px 16px 0 16px;
+      max-width: 450px;
+      width: 100%;
+      margin: 0 auto 22px auto;
+      text-align: center; }
+    .imacm1-connectivity__subtitle {
+      font-size: 16px;
+      line-height: 19px;
+      padding: 0 16px;
+      max-width: 450px;
+      width: 100%;
+      margin: 0 auto 40px auto;
+      text-align: center; }
+    @media screen and (min-width: 768px) {
+      .imacm1-connectivity__title {
+        font-size: 36px;
+        line-height: 42px;
+        padding: 60px 0 0 0;
+        margin: 0 auto 28px auto;
+        max-width: 530px; }
+      .imacm1-connectivity__subtitle {
+        font-size: 26px;
+        line-height: 30px;
+        max-width: 530px;
+        padding: 0; } }
+    @media screen and (min-width: 1024px) {
+      .imacm1-connectivity__title {
+        font-size: 48px;
+        line-height: 56px;
+        padding: 80px 0 0 0;
+        max-width: 600px;
+        margin: 0 auto 34px auto; }
+      .imacm1-connectivity__subtitle {
+        font-size: 26px;
+        line-height: 30px;
+        max-width: 600px;
+        margin: 0 auto 60px auto; } }
+    @media screen and (min-width: 1366px) {
+      .imacm1-connectivity__title {
+        font-size: 54px;
+        line-height: 63px;
+        margin: 0 auto 48px auto; }
+      .imacm1-connectivity__subtitle {
+        font-size: 36px;
+        line-height: 42px; } }
+  .imacm1-characteristics {
+    padding: 40px 16px; }
+    .imacm1-characteristics__title {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 28px;
+      color: #000000;
+      text-align: center;
+      margin-bottom: 40px; }
+    .imacm1-characteristics__list {
+      display: flex;
+      flex-direction: column;
+      max-width: 450px;
+      width: 100%;
+      margin: 0 auto; }
+    .imacm1-characteristics__item {
+      flex-basis: calc(100% / 2 - 13px); }
+      .imacm1-characteristics__item:first-child {
+        margin-bottom: 36px; }
+    .imacm1-characteristics__item-text {
+      font-size: 18px;
+      line-height: 23px;
+      color: #000000;
+      position: relative;
+      text-align: center; }
+      .imacm1-characteristics__item-text:not(:last-child)::after {
+        content: '';
+        display: block;
+        margin: 24px auto 0;
+        height: 2px;
+        width: 199px;
+        background-color: #161616; }
+      .imacm1-characteristics__item-text:not(:last-child) {
+        margin-bottom: 36px; }
+      .first-item-column .imacm1-characteristics__item-text::after {
+        content: '';
+        display: block;
+        margin: 24px auto 0;
+        height: 2px;
+        width: 199px;
+        background-color: #161616; }
+    @media screen and (min-width: 768px) {
+      .imacm1-characteristics {
+        padding: 60px 24px; }
+        .imacm1-characteristics__title {
+          font-size: 36px;
+          line-height: 42px; }
+        .imacm1-characteristics__list {
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: space-between;
+          max-width: 918px;
+          margin: 0 auto; }
+        .imacm1-characteristics__item:first-child {
+          margin-bottom: 0; }
+        .imacm1-characteristics__item-text {
+          font-size: 18px;
+          line-height: 23px;
+          text-align: left; }
+          .imacm1-characteristics__item-text:last-child::after {
+            display: none; }
+          .imacm1-characteristics__item-text:not(:last-child)::after {
+            margin: 24px 0 0 0; } }
+    @media screen and (min-width: 1024px) {
+      .imacm1-characteristics__title {
+        font-size: 48px;
+        line-height: 56px;
+        margin-bottom: 60px; }
+      .imacm1-characteristics__item-text {
+        font-size: 22px;
+        line-height: 29px; } }
+    @media screen and (min-width: 1366px) {
+      .imacm1-characteristics__title {
+        font-size: 54px;
+        line-height: 63px; } }
+  .imacm1-equipment__image {
+    display: flex;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; }
+
+.acc-product-description__custom-html
+.imacm1
+.imacm1-header
+.imacm1-header__image
+.acc-image-height-container-100 {
+  height: 100vw;
+  max-height: 205px; }
+
+.acc-product-description__custom-html
+.imacm1
+.imacm1-advantages
+.imacm1-advantages__image
+.acc-image-height-container-100 {
+  height: 100vw; }
+
+.acc-product-description__custom-html
+.imacm1
+.imacm1-connectivity
+.imacm1-connectivity__image
+.acc-image-height-container-100 {
+  height: 100vw; }
+
+.acc-product-description__custom-html
+.imacm1
+.imacm1-equipment
+.acc-image-height-container-100 {
+  height: 100vw; }
+
+/*# sourceMappingURL=style.css.map */
