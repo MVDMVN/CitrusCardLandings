@@ -1,5 +1,4 @@
 
-
 .log--base .catalog__main-content, .shadow {
     box-shadow: none;
   }
@@ -330,7 +329,6 @@
   .samsung-header__item {
     border-radius: 20px;
     overflow: hidden;
-  
     box-shadow: 0px 40px 30px -20px rgba(22, 56, 124, 0.1);
   }
 
@@ -339,9 +337,6 @@
       font-size: 32px;
       margin-bottom: 24px;
       padding-top: 24px;
-    }
-    h1.samsung-header__title {
-      padding-top: 9px;
     }
   }
 
@@ -725,7 +720,7 @@
 
   @media screen and (max-width: 1365px) {
     .samsung-title {
-      margin-bottom: 32px;
+      margin-bottom: 40px;
       font-size: 28px;
       line-height: 42px;
     }
@@ -733,7 +728,7 @@
 
   @media screen and (max-width: 767px) {
     .samsung-title {
-      margin-bottom: 32px;
+      margin-bottom: 24px;
       font-size: 22px;
       line-height: 33px;
     }
@@ -1472,9 +1467,5 @@
     }
   }
     /* spinner */
-
-
-
-
 
  
