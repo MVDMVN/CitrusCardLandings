@@ -22,7 +22,75 @@
       </section>
       <section class="samsung-ecosystem samsung__ecosystem">
         <p class="samsung-ecosystem__title">Экосистемы Samsung</p>
-        <ul class="samsung-ecosystem__list" id="samsungEcosystemItems"></ul>
+        <div class="samsung-ecosystem__navigation">
+          <ul class="samsung-ecosystem__list" id="samsungEcosystemItems">
+            <li class="samsung-ecosystem__item active" data-tab="8496" data-banner="samsung">
+              <div class="samsung-ecosystem__item-image samsung-logo">
+                <img
+                  src="https://i.citrus.ua/uploads/promo/samsung-shop-in-shop/ecosystem/samsung-menu-logo.svg"
+                  alt=""
+                />
+              </div>
+              <p class="samsung-ecosystem__item-title">Samsung</p>
+            </li>
+            <li class="samsung-ecosystem__item" data-tab="8497" data-banner="smartphones" data-link="smartphones">
+              <div class="samsung-ecosystem__item-image">
+                <img
+                  src="https://i.citrus.ua/uploads/promo/samsung-shop-in-shop/ecosystem/samsung-menu-phone-logo.svg"
+                  alt=""
+                />
+              </div>
+              <p class="samsung-ecosystem__item-title">Смартфоны</p>
+            </li>
+            <li class="samsung-ecosystem__item" data-tab="8498">
+              <div class="samsung-ecosystem__item-image">
+                <img
+                  src="https://i.citrus.ua/uploads/promo/samsung-shop-in-shop/ecosystem/samsung-menu-watch-logo.svg"
+                  alt=""
+                />
+              </div>
+              <p class="samsung-ecosystem__item-title">Wearable-гаджеты</p>
+            </li>
+            <li class="samsung-ecosystem__item" data-tab="8499" data-banner="tablets" data-link="tablets">
+              <div class="samsung-ecosystem__item-image">
+                <img
+                  src="https://i.citrus.ua/uploads/promo/samsung-shop-in-shop/ecosystem/samsung-menu-tablet-logo.svg"
+                  alt=""
+                />
+              </div>
+              <p class="samsung-ecosystem__item-title">Планшеты</p>
+            </li>
+            <li class="samsung-ecosystem__item" data-tab="8500" data-link="tv">
+              <div class="samsung-ecosystem__item-image">
+                <img
+                  src="https://i.citrus.ua/uploads/promo/samsung-shop-in-shop/ecosystem/samsung-menu-tv-logo.svg"
+                  alt=""
+                />
+              </div>
+              <p class="samsung-ecosystem__item-title">TV</p>
+            </li>
+            <li class="samsung-ecosystem__item" data-tab="8501" data-banner="machines">
+              <div class="samsung-ecosystem__item-image">
+                <img
+                  src="https://i.citrus.ua/uploads/promo/samsung-shop-in-shop/ecosystem/samsung-menu-machine-logo.svg"
+                  alt=""
+                />
+              </div>
+              <p class="samsung-ecosystem__item-title">Бытовая техника</p>
+            </li>
+          </ul>
+        </div>
+        <div class="samsung-ecosystem__products">
+          <div class="samsung-ecosystem__products-container">
+            <p class="samsung-ecosystem__subtitle">Samsung</p>
+            <div id="8496" class="samsung-ecosystem__content shown"></div>
+            <div id="8497" class="samsung-ecosystem__content"></div>
+            <div id="8498" class="samsung-ecosystem__content"></div>
+            <div id="8499" class="samsung-ecosystem__content"></div>
+            <div id="8500" class="samsung-ecosystem__content"></div>
+            <div id="8501" class="samsung-ecosystem__content"></div>
+          </div>
+        </div>
       </section>
       <section class="samsung-categories samsung__categories">
         <p class="samsung-categories__title">Другие категории бренда</p>
@@ -36,6 +104,36 @@
         }
 
         let bannerSwiper;
+        let initTab = 8496;
+        let activeTab = 'samsung';
+        getSamsungItems(initTab, document.getElementById('8496'), activeTab);
+
+        const banners = {
+          samsung: [
+            'https://i.citrus.ua/uploads/promo/samsung-shop-in-shop/ecosystem/products/smartphones-image-small-1.png',
+            'https://i.citrus.ua/uploads/promo/samsung-shop-in-shop/ecosystem/products/all-small-image-1.png',
+          ],
+          smartphones: [
+            'https://i.citrus.ua/uploads/promo/samsung-shop-in-shop/ecosystem/products/smartphones-image-small-1.png',
+            'https://i.citrus.ua/uploads/promo/samsung-shop-in-shop/ecosystem/products/smartphones-small-image-2.png',
+          ],
+          tablets: [
+            'https://i.citrus.ua/uploads/promo/samsung-shop-in-shop/ecosystem/products/tablets-small-image-1.png',
+            'https://i.citrus.ua/uploads/promo/samsung-shop-in-shop/ecosystem/products/tablets-small-image-2.png',
+          ],
+          machines: [
+            'https://i.citrus.ua/uploads/promo/samsung-shop-in-shop/ecosystem/products/machines-small-image-1.png',
+            'https://i.citrus.ua/uploads/promo/samsung-shop-in-shop/ecosystem/products/machines-small-image-2.png',
+            'https://i.citrus.ua/uploads/promo/samsung-shop-in-shop/ecosystem/products/machines-small-image-3.png',
+            'https://i.citrus.ua/uploads/promo/samsung-shop-in-shop/ecosystem/products/machines-small-image-4.png',
+          ],
+        };
+
+        const links = {
+          smartphones: ['https://www.citrus.ua/smartfony/brand-samsung/', 'Все смартфоны'],
+          tablets: ['https://www.citrus.ua/planshety/brand-samsung/', 'Все планшеты'],
+          tv: ['https://www.citrus.ua/televizory/brand-samsung/', 'Все телевизоры'],
+        };
 
         const categories = [
           {
@@ -181,6 +279,93 @@
           initSwiper();
         });
 
+        function tabChange(event) {
+          event.preventDefault();
+
+          let previousTab = document.getElementById(initTab);
+          previousTab.classList.remove('shown');
+
+          let activeTabs = document.querySelectorAll('.active');
+          activeTabs.forEach((item) => {
+            item.classList.remove('active');
+          });
+
+          event.target.classList.add('active');
+          let elementId = event.target.getAttribute('data-tab');
+          let elementBanner = event.target.getAttribute('data-banner');
+          let elementLink = event.target.getAttribute('data-link');
+          initTab = elementId;
+
+          let element = document.getElementById(elementId);
+          element.classList.add('shown');
+          if (!elementBanner) {
+            element.classList.add('empty');
+          }
+          if (elementId === '8501') {
+            element.classList.add('machines');
+          }
+
+          getSamsungItems(elementId, element, elementBanner, elementLink);
+        }
+
+        function formatPrice(price) {
+          return (price || 0).toLocaleString().replace(/\D+/g, ' ');
+        }
+
+        function getSamsungItems(segmentNumber, element, banner, link) {
+          if (document.querySelector('.samsung-ecosystem__all-link')) {
+            document.querySelector('.samsung-ecosystem__all-link').remove();
+          }
+          fetch(`https://api.citrus.ua/v5/products?segmentId=${segmentNumber}`)
+            .then((response) => response.json())
+            .then((data) => {
+              element.innerHTML = '';
+              if (banner) {
+                banners[banner].forEach((item) => {
+                  element.innerHTML += `
+                  <div class="samsung-ecosystem__image">
+                    <img src="${item}" alt="Samsuns Shop in Shop Image" />
+                  </div>
+                  `;
+                });
+              }
+              data.data.forEach((item) => {
+                element.innerHTML += `
+                <div class="samsung-ecosystem__product">
+                  <a href="https://www.citrus.ua${item.url}" target="_blank">
+                  <div class="samsung-ecosystem__preview-wrapper">
+                    <div class="samsung-ecosystem__preview"  style="background-image: url(${item.preview.src})">
+                    </div>
+                  </div>
+                  <p href="https://www.citrus.ua${item.url}" target="_blank" class="samsung-ecosystem__product-title">${
+                  item.name
+                }</p>
+                  <div class="samsung-ecosystem__prices">
+                    <div class="samsung-ecosystem__discount">
+                      <span class="samsung-ecosystem__sale-percentage">${item.sale.percent}%</span>
+                      <span class="samsung-ecosystem__price-old">${formatPrice(item.prices.old)}</span>
+                    </div>
+                    <div class="samsung-ecosystem__price-block">
+                      <span class="samsung-ecosystem__price-current">${formatPrice(
+                        item.prices.price,
+                      )} <sub class="samsung-ecosystem__currency">₴</sub></span>
+                    </div>
+                  </div>
+                  </a>
+                </div>
+            `;
+              });
+              if (link) {
+                let productsContainer = document.querySelector('.samsung-ecosystem__products');
+                console.log(productsContainer);
+                console.log(links[link][1]);
+                productsContainer.innerHTML += `
+                  <a class="samsung-ecosystem__all-link" href="${links[link][0]}" target="_blank">${links[link][1]}</a>
+                `;
+              }
+            });
+        }
+
         function getAcademyProducts(arr, element) {
           element.innerHTML = '';
 
@@ -189,7 +374,7 @@
                 <div class="swiper-slide samsung-header__slide">
                   <a class="samsung-header__banner-link" target="_blank" href="https://www.citrus.ua${item.url}">
                     <picture>
-                      <source srcset="${item.imgDesktop}" media="(min-width: 561px)" />
+                      <source class="samsung-header__banner" srcset="${item.imgDesktop}" media="(min-width: 561px)" />
                       <img class="samsung-header__banner" src="${item.imgMobile}" alt="" />
                     </picture>
                   </a>
@@ -211,14 +396,11 @@
           categories.forEach((category) => {
             rootElem.innerHTML += `
                   <li class="samsung-categories__item">
-                    <a class="samsung-categories__link" href="https://www.citrus.ua/${category.url}" target="_blank">
-                      <div class="samsung-categories__item-container">
-                        <div class="samsung-categories__image">
-                          <img src="https://i.citrus.ua/uploads/shop/8/e/8e0e37cfa746636414ddcf62d1055307.jpg" alt="${category.name}" />
-                        </div>
+                    <a href="https://www.citrus.ua/${category.url}" target="_blank">
+                    <div class="samsung-categories__image-container">
+                      <div class="samsung-categories__image" style="background-image: url(${category.icon})">
                       </div>
-                    </a>
-                    <a class="samsung-categories__link" href="https://www.citrus.ua/${category.url}" target="_blank">
+                    </div>
                       <p class="samsung-categories__item-title">${category.name}</p>
                     </a>
                   </li>
@@ -233,6 +415,11 @@
           });
 
         initBrandCategories('samsungCategoriesList', categories);
+
+        let tabElements = document.querySelectorAll('[data-tab]');
+        [].forEach.call(tabElements, function (element) {
+          element.addEventListener('click', tabChange);
+        });
       })();
     </script>
   </body>

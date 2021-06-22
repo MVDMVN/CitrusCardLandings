@@ -1,0 +1,1285 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0; }
+
+body {
+  overflow-x: hidden; }
+
+ul {
+  margin: 0;
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  color: transparent; }
+
+form select,
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding: 0 0 0 12px;
+  background-color: #ffffff; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3b6d9a;
+  outline: none;
+  transition: 0.3s; }
+
+button {
+  display: block;
+  background: 0 0;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  line-height: 44px;
+  transition: 0.3s;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-size: 18px; }
+
+.matexpro {
+  background-color: #ffffff;
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto; }
+  .matexpro-header {
+    padding: 40px 16px;
+    display: flex;
+    flex-direction: column; }
+    .matexpro-header__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 24px auto; }
+    .matexpro-header__logo {
+      max-width: 271px;
+      width: 100%;
+      margin-bottom: 24px; }
+    .matexpro-header__title {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000; }
+    .matexpro-header__image {
+      max-width: 500px;
+      margin: 0 auto;
+      transition: 0.3s; }
+    @media screen and (min-width: 768px) {
+      .matexpro-header {
+        padding: 60px 24px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center; }
+        .matexpro-header__content {
+          margin: 0 24px 0 0;
+          width: 36%; }
+        .matexpro-header__title {
+          font-size: 16px;
+          line-height: 21px; }
+        .matexpro-header__image {
+          width: 57%;
+          min-width: 390px;
+          margin: 0;
+          max-width: 540px; } }
+    @media screen and (min-width: 1024px) {
+      .matexpro-header {
+        padding: 60px 24px; }
+        .matexpro-header__content {
+          width: 37%; }
+        .matexpro-header__title {
+          font-size: 22px;
+          line-height: 29px; }
+        .matexpro-header__image {
+          max-width: 538px; } }
+    @media screen and (min-width: 1366px) {
+      .matexpro-header {
+        padding: 80px 24px; }
+        .matexpro-header__title {
+          font-size: 24px;
+          line-height: 31px; }
+        .matexpro-header__image {
+          max-width: initial; } }
+  .matexpro-reasons__header {
+    background: url("https://i.citrus.ua/uploads/promo/Huawei%20Mate%20X%20Pro/reasons-bg.jpg") center/100% no-repeat;
+    margin-bottom: 40px; }
+    .matexpro-reasons__header-title {
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 34px;
+      color: #ffffff;
+      text-align: center;
+      padding: 40px 16px; }
+  .matexpro-reasons__list {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 36px 17px;
+    max-width: 480px;
+    margin: 0 auto 40px auto;
+    padding: 0 16px;
+    transition: 0.3s; }
+  .matexpro-reasons__item {
+    text-align: center; }
+    .matexpro-reasons__item-image {
+      margin-bottom: 18px; }
+    .matexpro-reasons__item-title {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000; }
+  @media screen and (min-width: 768px) {
+    .matexpro-reasons__header {
+      background: url("https://i.citrus.ua/uploads/promo/Huawei%20Mate%20X%20Pro/reasons-bg.jpg") center no-repeat;
+      margin-bottom: 60px; }
+      .matexpro-reasons__header__title {
+        font-size: 28px;
+        line-height: 36px; }
+    .matexpro-reasons__list {
+      max-width: 1245px;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 40px 24px;
+      margin: 0 auto 60px auto; } }
+  @media screen and (min-width: 1024px) {
+    .matexpro-reasons__header__title {
+      font-size: 34px;
+      line-height: 44px; }
+    .matexpro-reasons__item-image {
+      margin-bottom: 24px; }
+    .matexpro-reasons__item-title {
+      font-size: 22px;
+      line-height: 29px; } }
+  @media screen and (min-width: 1366px) {
+    .matexpro-reasons__header__title {
+      font-size: 38px;
+      line-height: 49px; }
+    .matexpro-reasons__item-title {
+      font-size: 24px;
+      line-height: 31px; } }
+  .matexpro-screen {
+    background: url("https://i.citrus.ua/uploads/promo/Huawei%20Mate%20X%20Pro/screen-bg.jpg") center/100% no-repeat;
+    padding: 0 24px; }
+    .matexpro-screen__subtitle {
+      font-size: 16px;
+      line-height: 21px;
+      color: #ffffff;
+      margin-bottom: 8px;
+      padding-top: 60px;
+      text-align: center; }
+    .matexpro-screen__title {
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 34px;
+      color: #ffffff;
+      padding-bottom: 60px;
+      text-align: center; }
+    @media screen and (min-width: 768px) {
+      .matexpro-screen__subtitle {
+        padding-top: 128px; }
+      .matexpro-screen__title {
+        padding-bottom: 128px; } }
+    @media screen and (min-width: 1024px) {
+      .matexpro-screen__subtitle {
+        padding-top: 173px;
+        font-size: 23px;
+        line-height: 29px; }
+      .matexpro-screen__title {
+        padding-bottom: 173px;
+        font-size: 34px;
+        line-height: 44px; } }
+    @media screen and (min-width: 1366px) {
+      .matexpro-screen__subtitle {
+        padding-top: 252px;
+        font-size: 24px;
+        line-height: 31px; }
+      .matexpro-screen__title {
+        padding-bottom: 252px;
+        font-size: 38px;
+        line-height: 49px; } }
+  .matexpro-diagonal {
+    padding: 40px 24px; }
+    .matexpro-diagonal__image {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 36px auto;
+      transition: 0.3s; }
+    .matexpro-diagonal__title {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      max-width: 650px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center; }
+    @media screen and (min-width: 768px) {
+      .matexpro-diagonal {
+        padding: 60px 24px; }
+        .matexpro-diagonal__image {
+          max-width: 710px;
+          margin: 0 auto 40px auto; }
+        .matexpro-diagonal__title {
+          max-width: 1034px; } }
+    @media screen and (min-width: 1024px) {
+      .matexpro-diagonal__image {
+        max-width: 1000px; }
+      .matexpro-diagonal__title {
+        font-size: 22px;
+        line-height: 29px; } }
+    @media screen and (min-width: 1366px) {
+      .matexpro-diagonal {
+        padding: 80px 24px; }
+        .matexpro-diagonal__image {
+          max-width: 1034px;
+          margin: 0 auto 60px auto; }
+        .matexpro-diagonal__title {
+          font-size: 24px;
+          line-height: 31px; } }
+  .matexpro-resolution {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column; }
+    .matexpro-resolution__image {
+      max-width: 354px;
+      width: 100%;
+      margin-bottom: 24px;
+      transition: 0.3s; }
+    .matexpro-resolution__title {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      padding: 0 16px;
+      max-width: 480px;
+      margin: 0 auto; }
+    @media screen and (min-width: 768px) {
+      .matexpro-resolution {
+        flex-direction: row;
+        align-items: center; }
+        .matexpro-resolution__image {
+          max-width: 450px;
+          min-width: 354px;
+          margin-right: 24px;
+          margin-bottom: 0; }
+        .matexpro-resolution__title {
+          padding-left: 0;
+          padding-right: 24px;
+          max-width: 505px;
+          margin: 0; } }
+    @media screen and (min-width: 1024px) {
+      .matexpro-resolution {
+        padding: 60px 0; }
+        .matexpro-resolution__image {
+          max-width: 671px;
+          min-width: 460px; }
+        .matexpro-resolution__title {
+          font-size: 22px;
+          line-height: 29px; } }
+    @media screen and (min-width: 1366px) {
+      .matexpro-resolution {
+        padding: 80px 0; }
+        .matexpro-resolution__title {
+          font-size: 24px;
+          line-height: 31px; } }
+  .matexpro-ratio {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px; }
+    .matexpro-ratio__content {
+      order: 2;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 0 16px; }
+    .matexpro-ratio__title {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      margin-bottom: 16px; }
+    .matexpro-ratio__desc {
+      display: inline-block;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      border: 2px solid #000000;
+      padding: 12px 20px; }
+    .matexpro-ratio__image {
+      order: 1;
+      max-width: 354px;
+      width: 100%;
+      margin: 0 0 24px auto;
+      transition: 0.3s; }
+    @media screen and (min-width: 768px) {
+      .matexpro-ratio {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-left: 40px; }
+        .matexpro-ratio__content {
+          order: 1;
+          max-width: 450px;
+          margin: 0 0 0 auto;
+          padding: 0 24px; }
+        .matexpro-ratio__image {
+          order: 2;
+          max-width: 460px; } }
+    @media screen and (min-width: 1024px) {
+      .matexpro-ratio__title {
+        font-size: 22px;
+        line-height: 29px; }
+      .matexpro-ratio__image {
+        max-width: 671px; } }
+    @media screen and (min-width: 1366px) {
+      .matexpro-ratio__title {
+        font-size: 24px;
+        line-height: 31px; } }
+  .matexpro-colors {
+    padding: 40px 16px; }
+    .matexpro-colors__title {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      text-align: center;
+      margin-bottom: 8px; }
+    .matexpro-colors__subtitle {
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 34px;
+      color: #000000;
+      text-align: center;
+      margin-bottom: 36px; }
+    .matexpro-colors__image {
+      max-width: 650px;
+      width: 100%;
+      margin: 0 auto 36px auto;
+      transition: 0.3s; }
+    .matexpro-colors__desc {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto;
+      transition: 0.3s;
+      text-align: center; }
+    @media screen and (min-width: 768px) {
+      .matexpro-colors {
+        padding: 60px 24px; }
+        .matexpro-colors__subtitle {
+          font-size: 28px;
+          line-height: 36px;
+          margin-bottom: 40px; }
+        .matexpro-colors__image {
+          max-width: 780px;
+          margin: 0 auto 40px auto; }
+        .matexpro-colors__desc {
+          max-width: 780px; } }
+    @media screen and (min-width: 1024px) {
+      .matexpro-colors__title {
+        font-size: 22px;
+        line-height: 29px;
+        margin-bottom: 14px; }
+      .matexpro-colors__subtitle {
+        font-size: 34px;
+        line-height: 44px; }
+      .matexpro-colors__image {
+        max-width: 1034px; }
+      .matexpro-colors__desc {
+        max-width: 1034px;
+        font-size: 22px;
+        line-height: 29px; } }
+    @media screen and (min-width: 1366px) {
+      .matexpro-colors {
+        padding: 80px 24px; }
+        .matexpro-colors__title {
+          font-size: 24px;
+          line-height: 31px;
+          margin-bottom: 16px; }
+        .matexpro-colors__subtitle {
+          font-size: 38px;
+          line-height: 49px;
+          margin-bottom: 60px; }
+        .matexpro-colors__image {
+          margin: 0 auto 60px auto; }
+        .matexpro-colors__desc {
+          font-size: 24px;
+          line-height: 31px; } }
+  .matexpro-case {
+    padding: 40px 16px;
+    display: flex;
+    flex-direction: column; }
+    .matexpro-case__image {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 24px auto;
+      transition: 0.3s; }
+    .matexpro-case__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto; }
+    .matexpro-case__title {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      margin-bottom: 8px; }
+    .matexpro-case__subtitle {
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 34px;
+      color: #000000;
+      margin-bottom: 24px; }
+    .matexpro-case__desc {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      margin-bottom: 24px; }
+    .matexpro-case__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 270px;
+      width: 100%; }
+    .matexpro-case__item {
+      font-weight: 500;
+      font-size: 40px;
+      color: #000000; }
+      .matexpro-case__item span {
+        font-size: 18px;
+        line-height: 23px;
+        color: #000000; }
+    @media screen and (min-width: 768px) {
+      .matexpro-case {
+        padding: 40px 24px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        .matexpro-case__image {
+          margin: 0 24px 0 0;
+          max-width: 378px; }
+        .matexpro-case__content {
+          max-width: 378px;
+          margin: 0; } }
+    @media screen and (min-width: 1024px) {
+      .matexpro-case {
+        padding: 60px 24px; }
+        .matexpro-case__image {
+          max-width: 505px; }
+        .matexpro-case__content {
+          max-width: 505px; }
+        .matexpro-case__title {
+          font-size: 22px;
+          line-height: 29px;
+          margin-bottom: 14px; }
+        .matexpro-case__subtitle {
+          font-size: 34px;
+          line-height: 44px; }
+        .matexpro-case__desc {
+          font-size: 22px;
+          line-height: 29px; }
+        .matexpro-case__list {
+          max-width: 310px; }
+        .matexpro-case__item {
+          font-size: 50px;
+          line-height: 65px; }
+          .matexpro-case__item span {
+            font-size: 24px;
+            line-height: 31px; } }
+    @media screen and (min-width: 1366px) {
+      .matexpro-case {
+        padding: 80px 24px; }
+        .matexpro-case__title {
+          font-size: 24px;
+          line-height: 31px;
+          margin-bottom: 16px; }
+        .matexpro-case__subtitle {
+          font-size: 38px;
+          line-height: 49px; }
+        .matexpro-case__desc {
+          font-size: 24px;
+          line-height: 31px; }
+        .matexpro-case__list {
+          max-width: 340px; }
+        .matexpro-case__item {
+          font-size: 56px;
+          line-height: 73px; }
+          .matexpro-case__item span {
+            font-size: 24px;
+            line-height: 31px; } }
+  .matexpro-processor {
+    padding: 40px 0; }
+    .matexpro-processor__title {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      padding: 0 16px;
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 8px auto;
+      text-align: center; }
+    .matexpro-processor__subtitle {
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 34px;
+      color: #000000;
+      padding: 0 16px;
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 36px auto;
+      text-align: center; }
+    .matexpro-processor__image {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 36px auto;
+      padding: 0 16px; }
+    .matexpro-processor__desc {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      padding: 0 16px;
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center; }
+    @media screen and (min-width: 768px) {
+      .matexpro-processor {
+        padding: 60px 0; }
+        .matexpro-processor__title {
+          padding: 0 24px;
+          max-width: 505px; }
+        .matexpro-processor__subtitle {
+          font-size: 28px;
+          line-height: 36px;
+          padding: 0 24px;
+          max-width: 505px;
+          margin: 0 auto 40px auto; }
+        .matexpro-processor__image {
+          max-width: 780px;
+          margin: 0 auto 40px auto; }
+        .matexpro-processor__desc {
+          max-width: 780px; } }
+    @media screen and (min-width: 1024px) {
+      .matexpro-processor__title {
+        font-size: 22px;
+        line-height: 29px;
+        margin: 0 auto 14px auto; }
+      .matexpro-processor__subtitle {
+        font-size: 34px;
+        line-height: 44px; }
+      .matexpro-processor__image {
+        max-width: 1034px; }
+      .matexpro-processor__desc {
+        max-width: 1034px; } }
+    @media screen and (min-width: 1366px) {
+      .matexpro-processor {
+        padding: 80px 0; }
+        .matexpro-processor__title {
+          font-size: 24px;
+          line-height: 31px;
+          margin: 0 auto 16px auto; }
+        .matexpro-processor__subtitle {
+          font-size: 38px;
+          line-height: 49px;
+          margin: 0 auto 60px auto; }
+        .matexpro-processor__image {
+          margin: 0 auto 60px auto; }
+        .matexpro-processor__desc {
+          font-size: 24px;
+          line-height: 31px; } }
+  .matexpro-cooling {
+    padding: 40px 0; }
+    .matexpro-cooling__title {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      padding: 0 16px;
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 8px auto;
+      text-align: center; }
+    .matexpro-cooling__subtitle {
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 34px;
+      color: #000000;
+      padding: 0 16px;
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 36px auto;
+      text-align: center; }
+    .matexpro-cooling__image {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 36px auto; }
+    .matexpro-cooling__desc {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      padding: 0 16px;
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center; }
+    @media screen and (min-width: 768px) {
+      .matexpro-cooling {
+        padding: 60px 0; }
+        .matexpro-cooling__title {
+          padding: 0 24px;
+          max-width: 505px; }
+        .matexpro-cooling__subtitle {
+          font-size: 28px;
+          line-height: 36px;
+          padding: 0 24px;
+          max-width: 505px;
+          margin: 0 auto 40px auto; }
+        .matexpro-cooling__image {
+          max-width: 780px;
+          margin: 0 auto 40px auto; }
+        .matexpro-cooling__desc {
+          max-width: 780px; } }
+    @media screen and (min-width: 1024px) {
+      .matexpro-cooling__title {
+        font-size: 22px;
+        line-height: 29px;
+        margin: 0 auto 14px auto; }
+      .matexpro-cooling__subtitle {
+        font-size: 34px;
+        line-height: 44px; }
+      .matexpro-cooling__image {
+        max-width: 1034px; }
+      .matexpro-cooling__desc {
+        max-width: 1034px; } }
+    @media screen and (min-width: 1366px) {
+      .matexpro-cooling {
+        padding: 80px 0; }
+        .matexpro-cooling__title {
+          font-size: 24px;
+          line-height: 31px;
+          margin: 0 auto 16px auto; }
+        .matexpro-cooling__subtitle {
+          font-size: 38px;
+          line-height: 49px;
+          margin: 0 auto 60px auto; }
+        .matexpro-cooling__image {
+          margin: 0 auto 60px auto; }
+        .matexpro-cooling__desc {
+          font-size: 24px;
+          line-height: 31px; } }
+  .matexpro-connectivity {
+    padding: 40px 0; }
+    .matexpro-connectivity__title {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      padding: 0 16px;
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 8px auto;
+      text-align: center; }
+    .matexpro-connectivity__subtitle {
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 34px;
+      color: #000000;
+      padding: 0 16px;
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 36px auto;
+      text-align: center; }
+    .matexpro-connectivity__image {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 36px auto; }
+    .matexpro-connectivity__desc {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      padding: 0 16px;
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center; }
+    @media screen and (min-width: 768px) {
+      .matexpro-connectivity {
+        padding: 60px 0; }
+        .matexpro-connectivity__title {
+          padding: 0 24px;
+          max-width: 505px; }
+        .matexpro-connectivity__subtitle {
+          font-size: 28px;
+          line-height: 36px;
+          padding: 0 24px;
+          max-width: 505px;
+          margin: 0 auto 40px auto; }
+        .matexpro-connectivity__image {
+          max-width: 780px;
+          margin: 0 auto 40px auto; }
+        .matexpro-connectivity__desc {
+          max-width: 780px; } }
+    @media screen and (min-width: 1024px) {
+      .matexpro-connectivity__title {
+        font-size: 22px;
+        line-height: 29px;
+        margin: 0 auto 14px auto; }
+      .matexpro-connectivity__subtitle {
+        font-size: 34px;
+        line-height: 44px; }
+      .matexpro-connectivity__image {
+        max-width: 1034px; }
+      .matexpro-connectivity__desc {
+        max-width: 1034px; } }
+    @media screen and (min-width: 1366px) {
+      .matexpro-connectivity {
+        padding: 80px 0; }
+        .matexpro-connectivity__title {
+          font-size: 24px;
+          line-height: 31px;
+          margin: 0 auto 16px auto; }
+        .matexpro-connectivity__subtitle {
+          font-size: 38px;
+          line-height: 49px;
+          margin: 0 auto 60px auto; }
+        .matexpro-connectivity__image {
+          margin: 0 auto 60px auto; }
+        .matexpro-connectivity__desc {
+          font-size: 24px;
+          line-height: 31px; } }
+  .matexpro-titles {
+    padding: 40px 0 0 16px;
+    max-width: 353px;
+    width: 100%; }
+    .matexpro-titles__main-title {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      margin-bottom: 8px;
+      text-align: right; }
+    .matexpro-titles__subtitle {
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 34px;
+      color: #000000;
+      margin-bottom: 24px;
+      text-align: right; }
+    @media screen and (min-width: 768px) {
+      .matexpro-titles {
+        padding: 60px 0 0 24px; }
+        .matexpro-titles__subtitle {
+          font-size: 28px;
+          line-height: 36px; } }
+    @media screen and (min-width: 1024px) {
+      .matexpro-titles {
+        max-width: 458px; }
+        .matexpro-titles__main-title {
+          font-size: 22px;
+          line-height: 29px;
+          margin-bottom: 14px; }
+        .matexpro-titles__subtitle {
+          font-size: 34px;
+          line-height: 44px; } }
+    @media screen and (min-width: 1366px) {
+      .matexpro-titles {
+        padding: 80px 0 0 60px;
+        max-width: 671px; }
+        .matexpro-titles__main-title {
+          font-size: 24px;
+          line-height: 31px;
+          max-width: 611px;
+          margin-bottom: 16px; }
+        .matexpro-titles__subtitle {
+          font-size: 38px;
+          line-height: 49px; } }
+  .matexpro-battery {
+    padding: 0 0 40px 0;
+    display: flex;
+    flex-direction: column; }
+    .matexpro-battery__image {
+      max-width: 354px;
+      width: 100%;
+      margin-bottom: 24px;
+      transition: 0.3s; }
+    .matexpro-battery__title {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      padding: 0 16px;
+      max-width: 480px;
+      margin: 0 auto; }
+    @media screen and (min-width: 768px) {
+      .matexpro-battery {
+        flex-direction: row;
+        align-items: center; }
+        .matexpro-battery__image {
+          max-width: 450px;
+          min-width: 354px;
+          margin-right: 24px;
+          margin-bottom: 0; }
+        .matexpro-battery__title {
+          padding-left: 0;
+          padding-right: 24px;
+          max-width: 505px;
+          margin: 0; } }
+    @media screen and (min-width: 1024px) {
+      .matexpro-battery {
+        padding: 0 0 60px 0; }
+        .matexpro-battery__image {
+          max-width: 671px;
+          min-width: 460px; }
+        .matexpro-battery__title {
+          font-size: 22px;
+          line-height: 29px; } }
+    @media screen and (min-width: 1366px) {
+      .matexpro-battery {
+        padding: 0 0 80px 0; }
+        .matexpro-battery__title {
+          font-size: 24px;
+          line-height: 31px; } }
+  .matexpro-charge {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px; }
+    .matexpro-charge__content {
+      order: 2;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 0 16px; }
+    .matexpro-charge__title {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      margin-bottom: 16px; }
+    .matexpro-charge__desc {
+      display: inline-block;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      border: 2px solid #000000;
+      padding: 12px 20px; }
+    .matexpro-charge__image {
+      order: 1;
+      max-width: 354px;
+      width: 100%;
+      margin: 0 0 24px auto;
+      transition: 0.3s; }
+    @media screen and (min-width: 768px) {
+      .matexpro-charge {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-left: 40px; }
+        .matexpro-charge__content {
+          order: 1;
+          max-width: 450px;
+          margin: 0 0 0 auto;
+          padding: 0 24px; }
+        .matexpro-charge__image {
+          order: 2;
+          max-width: 460px; } }
+    @media screen and (min-width: 1024px) {
+      .matexpro-charge__title {
+        font-size: 22px;
+        line-height: 29px; }
+      .matexpro-charge__image {
+        max-width: 671px; } }
+    @media screen and (min-width: 1366px) {
+      .matexpro-charge__title {
+        font-size: 24px;
+        line-height: 31px; } }
+  .matexpro-privacy {
+    padding: 0 0 40px 0;
+    display: flex;
+    flex-direction: column; }
+    .matexpro-privacy__image {
+      max-width: 354px;
+      width: 100%;
+      margin-bottom: 24px;
+      transition: 0.3s; }
+    .matexpro-privacy__title {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      padding: 0 16px;
+      max-width: 480px;
+      margin: 0 auto; }
+    @media screen and (min-width: 768px) {
+      .matexpro-privacy {
+        flex-direction: row;
+        align-items: center; }
+        .matexpro-privacy__image {
+          max-width: 450px;
+          min-width: 354px;
+          margin-right: 24px;
+          margin-bottom: 0; }
+        .matexpro-privacy__title {
+          padding-left: 0;
+          padding-right: 24px;
+          max-width: 505px;
+          margin: 0; } }
+    @media screen and (min-width: 1024px) {
+      .matexpro-privacy {
+        padding: 0 0 60px 0; }
+        .matexpro-privacy__image {
+          max-width: 671px;
+          min-width: 460px; }
+        .matexpro-privacy__title {
+          font-size: 22px;
+          line-height: 29px; } }
+    @media screen and (min-width: 1366px) {
+      .matexpro-privacy {
+        padding: 0 0 80px 0; }
+        .matexpro-privacy__title {
+          font-size: 24px;
+          line-height: 31px; } }
+  .matexpro-camera {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px; }
+    .matexpro-camera__content {
+      order: 2;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 0 16px; }
+    .matexpro-camera__title {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      margin-bottom: 16px; }
+    .matexpro-camera__desc {
+      display: inline-block;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      border: 2px solid #000000;
+      padding: 12px 20px; }
+    .matexpro-camera__image {
+      order: 1;
+      max-width: 354px;
+      width: 100%;
+      margin: 0 0 24px auto;
+      transition: 0.3s; }
+    @media screen and (min-width: 768px) {
+      .matexpro-camera {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-left: 40px; }
+        .matexpro-camera__content {
+          order: 1;
+          max-width: 450px;
+          margin: 0 0 0 auto;
+          padding: 0 24px; }
+        .matexpro-camera__image {
+          order: 2;
+          max-width: 460px; } }
+    @media screen and (min-width: 1024px) {
+      .matexpro-camera__title {
+        font-size: 22px;
+        line-height: 29px; }
+      .matexpro-camera__image {
+        max-width: 671px; } }
+    @media screen and (min-width: 1366px) {
+      .matexpro-camera__title {
+        font-size: 24px;
+        line-height: 31px; } }
+  .matexpro-touchscreen {
+    padding: 40px 0; }
+    .matexpro-touchscreen__title {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      padding: 0 16px;
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 8px auto;
+      text-align: center; }
+    .matexpro-touchscreen__subtitle {
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 34px;
+      color: #000000;
+      padding: 0 16px;
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 36px auto;
+      text-align: center; }
+    .matexpro-touchscreen__image {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 36px auto; }
+    .matexpro-touchscreen__desc {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      padding: 0 16px;
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center; }
+    @media screen and (min-width: 768px) {
+      .matexpro-touchscreen {
+        padding: 60px 0; }
+        .matexpro-touchscreen__title {
+          padding: 0 24px;
+          max-width: 505px; }
+        .matexpro-touchscreen__subtitle {
+          font-size: 28px;
+          line-height: 36px;
+          padding: 0 24px;
+          max-width: 505px;
+          margin: 0 auto 40px auto; }
+        .matexpro-touchscreen__image {
+          max-width: 780px;
+          margin: 0 auto 40px auto; }
+        .matexpro-touchscreen__desc {
+          max-width: 780px; } }
+    @media screen and (min-width: 1024px) {
+      .matexpro-touchscreen__title {
+        font-size: 22px;
+        line-height: 29px;
+        margin: 0 auto 14px auto; }
+      .matexpro-touchscreen__subtitle {
+        font-size: 34px;
+        line-height: 44px; }
+      .matexpro-touchscreen__image {
+        max-width: 1034px; }
+      .matexpro-touchscreen__desc {
+        max-width: 1034px; } }
+    @media screen and (min-width: 1366px) {
+      .matexpro-touchscreen {
+        padding: 80px 0; }
+        .matexpro-touchscreen__title {
+          font-size: 24px;
+          line-height: 31px;
+          margin: 0 auto 16px auto; }
+        .matexpro-touchscreen__subtitle {
+          font-size: 38px;
+          line-height: 49px;
+          margin: 0 auto 60px auto; }
+        .matexpro-touchscreen__image {
+          margin: 0 auto 60px auto; }
+        .matexpro-touchscreen__desc {
+          font-size: 24px;
+          line-height: 31px; } }
+  .matexpro-sound {
+    padding: 0 0 40px 0;
+    display: flex;
+    flex-direction: column; }
+    .matexpro-sound__image {
+      max-width: 354px;
+      width: 100%;
+      margin-bottom: 24px;
+      transition: 0.3s; }
+    .matexpro-sound__title {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      padding: 0 16px;
+      max-width: 480px;
+      margin: 0 auto; }
+    @media screen and (min-width: 768px) {
+      .matexpro-sound {
+        flex-direction: row;
+        align-items: center; }
+        .matexpro-sound__image {
+          max-width: 450px;
+          min-width: 354px;
+          margin-right: 24px;
+          margin-bottom: 0; }
+        .matexpro-sound__title {
+          padding-left: 0;
+          padding-right: 24px;
+          max-width: 505px;
+          margin: 0; } }
+    @media screen and (min-width: 1024px) {
+      .matexpro-sound {
+        padding: 0 0 60px 0; }
+        .matexpro-sound__image {
+          max-width: 671px;
+          min-width: 460px; }
+        .matexpro-sound__title {
+          font-size: 22px;
+          line-height: 29px; } }
+    @media screen and (min-width: 1366px) {
+      .matexpro-sound {
+        padding: 0 0 80px 0; }
+        .matexpro-sound__title {
+          font-size: 24px;
+          line-height: 31px; } }
+  .matexpro-microphones {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px; }
+    .matexpro-microphones__content {
+      order: 2;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 0 16px; }
+    .matexpro-microphones__title {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      margin-bottom: 16px; }
+    .matexpro-microphones__desc {
+      display: inline-block;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      border: 2px solid #000000;
+      padding: 12px 20px; }
+    .matexpro-microphones__image {
+      order: 1;
+      max-width: 354px;
+      width: 100%;
+      margin: 0 0 24px auto;
+      transition: 0.3s; }
+    @media screen and (min-width: 768px) {
+      .matexpro-microphones {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-left: 40px; }
+        .matexpro-microphones__content {
+          order: 1;
+          max-width: 450px;
+          margin: 0 0 0 auto;
+          padding: 0 24px; }
+        .matexpro-microphones__image {
+          order: 2;
+          max-width: 460px; } }
+    @media screen and (min-width: 1024px) {
+      .matexpro-microphones__title {
+        font-size: 22px;
+        line-height: 29px; }
+      .matexpro-microphones__image {
+        max-width: 671px; } }
+    @media screen and (min-width: 1366px) {
+      .matexpro-microphones__title {
+        font-size: 24px;
+        line-height: 31px; } }
+  .matexpro-list {
+    padding: 40px 0;
+    border-top: 1px solid #d1d1d1; }
+    .matexpro-list__list {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto;
+      list-style-position: inside;
+      padding: 0 16px; }
+    .matexpro-list__item {
+      font-size: 12px;
+      line-height: 16px;
+      color: #797979; }
+      .matexpro-list__item:not(:last-child) {
+        margin-bottom: 8px; }
+    @media screen and (min-width: 768px) {
+      .matexpro-list {
+        padding: 60px 0;
+        max-width: 1100px;
+        width: 100%;
+        margin: 0 auto; }
+        .matexpro-list__list {
+          max-width: 1000px;
+          padding: 0 24px; }
+        .matexpro-list__item {
+          font-size: 14px;
+          line-height: 18px; } }
+
+.acc-product-description__custom-html
+.matexpro
+.matexpro-header
+.matexpro-header__content
+.matexpro-header__logo
+.acc-image-height-container-100 {
+  height: 6vw; }
+
+.acc-product-description__custom-html .matexpro .matexpro-header .matexpro-header__image {
+  width: 100%;
+  display: flex; }
+
+.acc-product-description__custom-html
+.matexpro
+.matexpro-header
+.matexpro-header__image
+.acc-image-height-container-100 {
+  width: 100%;
+  display: flex;
+  height: 66vw; }
+
+.acc-product-description__custom-html
+.matexpro
+.matexpro-reasons
+.matexpro-reasons__list
+.matexpro-reasons__item
+.matexpro-reasons__item-image
+.acc-image-height-container-100 {
+  height: 31vw; }
+
+.acc-product-description__custom-html
+.matexpro
+.matexpro-reasons
+.matexpro-reasons__list
+.matexpro-reasons__item
+.matexpro-reasons__item-image
+.acc-image-height-container-100 {
+  height: 31vw; }
+
+.acc-product-description__custom-html
+.matexpro
+.matexpro-diagonal
+.matexpro-diagonal__image
+.acc-image-height-container-100 {
+  height: 43vw; }
+
+.acc-product-description__custom-html
+.matexpro
+.matexpro-resolution
+.matexpro-resolution__image
+.acc-image-height-container-100 {
+  height: 260px; }
+
+.acc-product-description__custom-html .matexpro .matexpro-ratio .matexpro-ratio__image .acc-image-height-container-100 {
+  height: 260px; }
+
+.acc-product-description__custom-html
+.matexpro
+.matexpro-colors
+.matexpro-colors__image
+.acc-image-height-container-100 {
+  height: 47vw; }
+
+.acc-product-description__custom-html
+.matexpro
+.matexpro-processor
+.matexpro-processor__image
+.acc-image-height-container-100 {
+  height: 53vw; }
+
+.acc-product-description__custom-html
+.matexpro
+.matexpro-cooling
+.matexpro-cooling__image
+.acc-image-height-container-100 {
+  height: 53vw; }
+
+.acc-product-description__custom-html
+.matexpro
+.matexpro-connectivity
+.matexpro-connectivity__image
+.acc-image-height-container-100 {
+  height: 37vw; }
+
+.acc-product-description__custom-html
+.matexpro
+.matexpro-touchscreen
+.matexpro-touchscreen__image
+.acc-image-height-container-100 {
+  height: 67vw; }
+
+/*# sourceMappingURL=style.css.map */

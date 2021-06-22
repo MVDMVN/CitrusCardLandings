@@ -190,7 +190,332 @@ button {
     .samsung-header__title {
       font-size: 48px;
       line-height: 56px;
-      padding: 64px 0 48px 0; } }
+      padding: 64px 0 48px 0; }
+    .samsung-header__banner {
+      border-radius: 10px; } }
+.samsung-ecosystem {
+  padding: 24px 0; }
+  .samsung-ecosystem__title {
+    font-size: 24px;
+    line-height: 28px;
+    color: #1d1d1f;
+    text-align: center;
+    margin-bottom: 24px; }
+  .samsung-ecosystem__navigation {
+    overflow-x: scroll;
+    width: 100%;
+    position: relative; }
+  .samsung-ecosystem__list {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    min-width: 535px;
+    margin: 0 auto; }
+  .samsung-ecosystem__item {
+    width: 16%;
+    padding-top: 20px;
+    cursor: pointer;
+    position: relative; }
+    .samsung-ecosystem__item:hover {
+      background-color: rgba(243, 243, 243, 0.7); }
+  .samsung-ecosystem__item.active {
+    background-color: rgba(243, 243, 243, 0.3);
+    padding-bottom: 20px; }
+    .samsung-ecosystem__item.active:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #1c1b1a; }
+  .samsung-ecosystem__item-image {
+    width: 36px;
+    height: 36px;
+    margin: 0 auto 4px auto;
+    pointer-events: none; }
+  .samsung-ecosystem__item-image.samsung-logo {
+    width: 58px;
+    display: flex; }
+  .samsung-ecosystem__item-title {
+    font-size: 12px;
+    line-height: 13px;
+    color: #1d1d1f;
+    text-align: center;
+    pointer-events: none; }
+  .samsung-ecosystem__products {
+    padding: 0 12px 24px 12px;
+    background: #fafafa; }
+  .samsung-ecosystem__products-container {
+    max-width: 560px;
+    width: 100%;
+    margin: 0 auto 40px auto;
+    transition: 1s; }
+  .samsung-ecosystem__subtitle {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 16px;
+    padding-top: 16px; }
+  .samsung-ecosystem__content {
+    display: none; }
+  .samsung-ecosystem__content.shown {
+    display: grid;
+    grid-template-areas: 'firstImage firstImage' 'productItem-3 productItem-4' 'secondImage secondImage' 'productItem-5 productItem-6' 'thirdImage thirdImage' 'productItem-7 productItem-8' 'fourthImage fourthImage' 'productItem-9 productItem-10';
+    grid-template-rows: 1fr;
+    gap: 6px 12px;
+    position: relative; }
+  .samsung-ecosystem__content.shown.machines {
+    grid-template-areas: 'firstImage firstImage' 'productItem-5 productItem-6' 'secondImage secondImage' 'productItem-7 productItem-8' 'thirdImage thirdImage' 'productItem-9 productItem-10' 'fourthImage fourthImage' 'productItem-11 productItem-12'; }
+  .samsung-ecosystem__content.shown.empty {
+    grid-template-areas: 'productItem-1 productItem-2' 'productItem-3 productItem-4' 'productItem-5 productItem-6' 'productItem-7 productItem-8'; }
+  .samsung-ecosystem__image {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    margin-bottom: 6px; }
+    .samsung-ecosystem__image img {
+      border-radius: 20px;
+      box-shadow: 0px 4.24102px 8.48203px rgba(0, 0, 0, 0.1); }
+    .samsung-ecosystem__image:nth-child(1) {
+      grid-area: firstImage; }
+    .samsung-ecosystem__image:nth-child(2) {
+      grid-area: secondImage; }
+    .samsung-ecosystem__image:nth-child(3) {
+      grid-area: thirdImage; }
+    .samsung-ecosystem__image:nth-child(4) {
+      grid-area: fourthImage; }
+  .samsung-ecosystem__product {
+    background-color: #fff;
+    box-shadow: 0px 4.24102px 8.48203px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+    padding: 24px 0; }
+    .samsung-ecosystem__product:nth-child(1) {
+      grid-area: productItem-1; }
+    .samsung-ecosystem__product:nth-child(2) {
+      grid-area: productItem-2; }
+    .samsung-ecosystem__product:nth-child(3) {
+      grid-area: productItem-3; }
+    .samsung-ecosystem__product:nth-child(4) {
+      grid-area: productItem-4; }
+    .samsung-ecosystem__product:nth-child(5) {
+      grid-area: productItem-5; }
+    .samsung-ecosystem__product:nth-child(6) {
+      grid-area: productItem-6; }
+    .samsung-ecosystem__product:nth-child(7) {
+      grid-area: productItem-7; }
+    .samsung-ecosystem__product:nth-child(8) {
+      grid-area: productItem-8; }
+    .samsung-ecosystem__product:nth-child(9) {
+      grid-area: productItem-9; }
+    .samsung-ecosystem__product:nth-child(10) {
+      grid-area: productItem-10; }
+    .samsung-ecosystem__product:hover {
+      box-shadow: 0px 13px 22px rgba(0, 0, 0, 0.1); }
+  .machines .samsung-ecosystem__product:nth-child(1) {
+    grid-area: productItem-1; }
+  .machines .samsung-ecosystem__product:nth-child(2) {
+    grid-area: productItem-2; }
+  .machines .samsung-ecosystem__product:nth-child(3) {
+    grid-area: productItem-3; }
+  .machines .samsung-ecosystem__product:nth-child(4) {
+    grid-area: productItem-4; }
+  .machines .samsung-ecosystem__product:nth-child(5) {
+    grid-area: productItem-5; }
+  .machines .samsung-ecosystem__product:nth-child(6) {
+    grid-area: productItem-6; }
+  .machines .samsung-ecosystem__product:nth-child(7) {
+    grid-area: productItem-7; }
+  .machines .samsung-ecosystem__product:nth-child(8) {
+    grid-area: productItem-8; }
+  .machines .samsung-ecosystem__product:nth-child(9) {
+    grid-area: productItem-9; }
+  .machines .samsung-ecosystem__product:nth-child(10) {
+    grid-area: productItem-10; }
+  .machines .samsung-ecosystem__product:nth-child(11) {
+    grid-area: productItem-11; }
+  .machines .samsung-ecosystem__product:nth-child(12) {
+    grid-area: productItem-12; }
+  .samsung-ecosystem__preview-wrapper {
+    margin-left: 12px;
+    margin-right: 12px;
+    position: relative;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .samsung-ecosystem__preview-wrapper:before {
+      content: '';
+      display: block;
+      padding-top: 100%; }
+  .samsung-ecosystem__preview {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+    width: 60%;
+    height: 100%; }
+  .samsung-ecosystem__product-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-break: break-word;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 6px;
+    font-size: 12px;
+    color: #3b6d9a;
+    transition: color 0.25s ease-in-out; }
+    .samsung-ecosystem__product-title:hover {
+      color: #ff680a; }
+  .samsung-ecosystem__prices {
+    display: flex;
+    align-items: flex-end;
+    margin-top: auto;
+    position: relative;
+    height: 35px;
+    padding-left: 12px; }
+  .samsung-ecosystem__discount {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+  .samsung-ecosystem__sale-percentage {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 12px;
+    color: #fff;
+    padding-left: 4px;
+    padding-right: 4px;
+    background: #f00;
+    border-radius: 4px; }
+  .samsung-ecosystem__price-old {
+    margin-right: 8px;
+    font-size: 12px;
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.54); }
+  .samsung-ecosystem__price-block {
+    display: flex;
+    align-items: baseline; }
+  .samsung-ecosystem__price-current {
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.87);
+    display: flex;
+    align-items: baseline; }
+  .samsung-ecosystem__currency {
+    margin-left: 2px;
+    font-size: 10px; }
+  .samsung-ecosystem__all-link {
+    max-width: 210px;
+    width: 100%;
+    background-color: #ff680a;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 14px;
+    border-radius: 50px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 24px auto;
+    text-transform: uppercase; }
+    .samsung-ecosystem__all-link:hover {
+      background-color: #000000;
+      color: #ffffff; }
+  @media screen and (min-width: 768px) {
+    .samsung-ecosystem {
+      padding: 64px 0 44px 0; }
+      .samsung-ecosystem__title {
+        font-size: 32px;
+        line-height: 37px;
+        margin-bottom: 38px; }
+      .samsung-ecosystem__navigation {
+        overflow-x: hidden; }
+      .samsung-ecosystem__list {
+        max-width: 923px; }
+      .samsung-ecosystem__item-image {
+        width: 50px;
+        height: 50px;
+        margin: 0 autp 12px auto; }
+      .samsung-ecosystem__item-image.samsung-logo {
+        width: 97px; }
+      .samsung-ecosystem__products {
+        padding: 0 24px 40px 24px; }
+      .samsung-ecosystem__products-container {
+        max-width: 670px; }
+      .samsung-ecosystem__subtitle {
+        font-size: 40px;
+        line-height: 47px;
+        padding-top: 32px;
+        margin-bottom: 40px; }
+      .samsung-ecosystem__preview-wrapper {
+        margin-bottom: 18px; }
+      .samsung-ecosystem__product-title {
+        font-size: 16px;
+        line-height: 21px; }
+      .samsung-ecosystem__prices {
+        height: 41px; }
+      .samsung-ecosystem__sale-percentage {
+        font-size: 14px;
+        border-radius: 4px; }
+      .samsung-ecosystem__price-old {
+        font-size: 14px;
+        line-height: 20px;
+        margin-right: 14px; }
+      .samsung-ecosystem__price-current {
+        font-size: 18px; }
+      .samsung-ecosystem__content.shown.empty {
+        grid-template-areas: 'productItem-1 productItem-2' 'productItem-3 productItem-4' 'productItem-5 productItem-6' 'productItem-7 productItem-8';
+        justify-content: center; } }
+  @media screen and (min-width: 1024px) {
+    .samsung-ecosystem__list {
+      max-width: 1366px; }
+    .samsung-ecosystem__item-image {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 12px auto; }
+    .samsung-ecosystem__item-image.samsung-logo {
+      width: 133px; }
+    .samsung-ecosystem__products {
+      padding: 0 24px 60px 24px; }
+    .samsung-ecosystem__products-container {
+      max-width: 1366px; }
+    .samsung-ecosystem__content.shown {
+      grid-template-areas: 'firstImage firstImage productItem-3 productItem-4' 'productItem-5 productItem-6 secondImage secondImage' 'productItem-7 productItem-8 productItem-9 productItem-10';
+      grid-gap: 12px; }
+    .samsung-ecosystem__content.shown.machines {
+      grid-template-areas: 'firstImage firstImage productItem-5 productItem-6' 'productItem-7 productItem-8 secondImage secondImage' 'thirdImage thirdImage productItem-9 productItem-10' 'productItem-11 productItem-12 fourthImage fourthImage'; }
+    .samsung-ecosystem .samsung-ecosystem__content.shown.empty {
+      grid-template-areas: 'productItem-1 productItem-2 productItem-3 productItem-4' 'productItem-5 productItem-6 productItem-7 productItem-8';
+      grid-template-columns: initial; }
+    .samsung-ecosystem__image {
+      margin-top: 0;
+      margin-bottom: 0;
+      align-items: initial; }
+    .samsung-ecosystem__preview-wrapper {
+      max-height: 170px; }
+    .samsung-ecosystem__product-title {
+      padding-left: 24px;
+      padding-right: 24px; }
+    .samsung-ecosystem__item-title {
+      font-size: 16px;
+      line-height: 18px; }
+    .samsung-ecosystem__prices {
+      padding-right: 24px;
+      padding-left: 24px; } }
+  @media screen and (min-width: 1200px) {
+    .samsung-ecosystem__preview-wrapper {
+      max-height: 230px; }
+    .samsung-ecosystem__product-title {
+      font-size: 18px; }
+    .samsung-ecosystem__price-old {
+      font-size: 20px; }
+    .samsung-ecosystem__price-current {
+      font-size: 22px; } }
 .samsung-categories__title {
   font-size: 24px;
   line-height: 28px;
@@ -212,27 +537,36 @@ button {
   width: 100%;
   margin: 0 auto;
   text-align: center; }
-.samsung-categories__link {
-  color: #1d1d1f;
-  transition: 0.3s; }
-  .samsung-categories__link:hover {
+  .samsung-categories__item:hover .samsung-categories__item-title {
     color: #f6731c; }
-.samsung-categories__item-container {
-  background: #fafafa;
-  box-shadow: inset 0px 0px 24px #e1e1e1;
-  border-radius: 50%;
-  max-width: 120px;
-  width: 100%;
-  height: 120px;
+  .samsung-categories__item:hover .samsung-categories__image {
+    transform: scale(1.1); }
+.samsung-categories__image-container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 10px auto; }
+  width: calc(100% - 12px);
+  max-width: 180px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fafafa;
+  box-shadow: inset 0px 0px 24px #e1e1e1;
+  border-radius: 50%;
+  overflow: hidden; }
+  .samsung-categories__image-container:before {
+    content: '';
+    display: block;
+    padding-top: 100%; }
 .samsung-categories__image {
-  display: flex;
-  align-items: center;
-  height: 75px;
-  width: 75px; }
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+  width: 47%;
+  height: 47%;
+  transition: transform 0.3s; }
 .samsung-categories__item-title {
   font-size: 14px;
   line-height: 18px; }
@@ -248,12 +582,9 @@ button {
     grid-gap: 40px 24px; }
   .samsung-categories__item {
     max-width: 210px; }
-  .samsung-categories__item-container {
-    max-width: 165px;
-    height: 165px; }
   .samsung-categories__image {
-    height: 105px;
-    width: 105px; }
+    width: 57%;
+    height: 57%; }
   .samsung-categories__item-title {
     font-size: 16px;
     line-height: 21px; } }
@@ -265,7 +596,7 @@ button {
 @media screen and (min-width: 1366px) {
   .samsung-categories__list {
     max-width: 1366px;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(6, 1fr); } }
 
 /*# sourceMappingURL=style.css.map */

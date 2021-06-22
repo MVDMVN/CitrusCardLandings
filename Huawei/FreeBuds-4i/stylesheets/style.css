@@ -1,0 +1,1285 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  color: transparent;
+}
+
+form select,
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding: 0 0 0 12px;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3b6d9a;
+  outline: none;
+  transition: 0.3s;
+}
+
+button {
+  display: block;
+  background: 0 0;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  line-height: 44px;
+  transition: 0.3s;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+}
+
+.product__description.base-padding {
+  padding: 0;
+}
+.buds-4i img {
+  margin: 0;
+}
+.buds-4i p {
+  margin: 0;
+  line-height: normal;
+}
+.buds-4i ul {
+  list-style: none;
+  margin: 0;
+}
+.buds-4i ul li {
+  line-height: normal;
+}
+.buds-4i {
+  overflow: hidden;
+}
+/*buds-header*/
+.buds-4i .buds-header {
+  padding-top: 25px;
+  padding-bottom: 48px;
+}
+.buds-4i .buds-header__logo {
+  display: none;
+}
+.buds-4i .buds-header__content {
+  margin-bottom: 21px;
+}
+.buds-4i .buds-header__text {
+  width: 255px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1px;
+  margin-bottom: 8px;
+}
+.buds-4i .buds-header__text .acc-image-height-container-100 {
+  height: 21px;
+}
+.buds-4i .buds-header__description {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 300;
+  font-size: 16px;
+}
+.buds-4i .buds-header__preview {
+  width: 246px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.buds-4i .buds-header__preview .acc-image-height-container-100 {
+  height: 253px;
+}
+@media screen and (min-width: 768px) {
+  .buds-4i .buds-header {
+    padding-top: 60px;
+    padding-bottom: 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 30px;
+    position: relative;
+  }
+  .buds-4i .buds-header__logo {
+    display: block;
+    line-height: 1px;
+    width: 179px;
+    position: absolute;
+    right: 30px;
+    top: 58px;
+  }
+  .buds-4i .buds-header__logo .acc-image-height-container-100 {
+    width: 179px;
+    height: 40px;
+  }
+  .buds-4i .buds-header__content {
+    margin-bottom: 0;
+    order: 1;
+  }
+  .buds-4i .buds-header__text {
+    width: 370px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .buds-4i .buds-header__text .acc-image-height-container-100 {
+    width: 370px;
+    height: 30px;
+  }
+  .buds-4i .buds-header__description {
+    font-size: 18px;
+  }
+  .buds-4i .buds-header__preview {
+    margin: 0;
+    width: 369px;
+    position: relative;
+    left: -68px;
+  }
+  .buds-4i .buds-header__preview .acc-image-height-container-100 {
+    height: 344px;
+    width: 332px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .buds-4i .buds-header {
+    padding-top: 60px;
+    padding-right: 62px;
+    padding-bottom: 100px;
+  }
+  .buds-4i .buds-header__logo {
+    right: 62px;
+    top: 58px;
+  }
+  .buds-4i .buds-header__text {
+    width: 466px;
+    margin-bottom: 16px;
+  }
+  .buds-4i .buds-header__description {
+    font-size: 24px;
+  }
+  .buds-4i .buds-header__preview {
+    width: 500px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .buds-4i .buds-header {
+    padding-top: 26px;
+    padding-bottom: 106px;
+    padding-right: 94px;
+    padding-left: 64px;
+  }
+  .buds-4i .buds-header__logo {
+    top: 24px;
+    right: 24px;
+  }
+  .buds-4i .buds-header__text {
+    width: 598px;
+    margin-bottom: 22px;
+  }
+  .buds-4i .buds-header__description {
+    font-size: 32px;
+  }
+  .buds-4i .buds-header__preview {
+    width: 477px;
+    left: 0;
+  }
+}
+/*buds-advantages*/
+.buds-4i .buds-advantages__list {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 36px 17px;
+  max-width: 480px;
+  margin: 0 auto 40px auto;
+  padding: 0 16px;
+  transition: 0.3s;
+}
+
+.buds-4i .buds-advantages__item-title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.buds-4i .buds-advantages__item-subtitle {
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .buds-4i .buds-advantages__list {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1236px;
+    grid-gap: 24px;
+  }
+
+  .buds-4i .buds-advantages__item-title {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 8px;
+  }
+
+  .buds-4i .buds-advantages__item-subtitle {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .buds-4i .buds-advantages__item-title {
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  .buds-4i .buds-advantages__item-subtitle {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .buds-4i .buds-advantages__item-title {
+    font-size: 26px;
+    line-height: 34px;
+  }
+}
+/*buds-preview*/
+.buds-4i .buds-preview {
+  padding-bottom: 48px;
+}
+.buds-4i .buds-preview__content {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 47px;
+}
+.buds-4i .buds-preview__title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.buds-4i .buds-preview__description {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.3;
+}
+.buds-4i .buds-preview__image {
+  line-height: 1px;
+}
+.buds-4i .buds-preview__image .acc-image-height-container-100 {
+  height: 48.5vw;
+}
+@media screen and (min-width: 768px) {
+  .buds-4i .buds-preview__content {
+    padding-left: 24px;
+    padding-right: 51px;
+    margin-bottom: 87px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .buds-4i .buds-preview__title {
+    text-align: left;
+    margin-bottom: 0;
+    font-size: 32px;
+    width: 285px;
+  }
+  .buds-4i .buds-preview__description {
+    width: 320px;
+    text-align: left;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .buds-4i .buds-preview {
+    padding-bottom: 60px;
+  }
+  .buds-4i .buds-preview__content {
+    padding-left: 64px;
+    padding-right: 93px;
+    margin-bottom: 60px;
+  }
+  .buds-4i .buds-preview__description {
+    font-size: 18px;
+    width: 407px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .buds-4i .buds-preview {
+    padding-bottom: 80px;
+  }
+  .buds-4i .buds-preview__content {
+    padding-left: 110px;
+    padding-right: 264px;
+    margin-bottom: 80px;
+  }
+  .buds-4i .buds-preview__title {
+    font-size: 48px;
+    width: 381px;
+  }
+}
+/*buds-comfort*/
+.buds-4i .buds-comfort {
+  padding-bottom: 47px;
+  display: grid;
+  grid-template-areas:
+    'left-image right-image'
+    'content content';
+}
+.buds-4i .buds-comfort .acc-image-height-container-100 {
+  height: 61.9vw;
+}
+.buds-4i .buds-comfort__left {
+  width: 100%;
+  grid-area: left-image;
+}
+.buds-4i .buds-comfort__right {
+  width: 100%;
+  grid-area: right-image;
+}
+.buds-4i .buds-comfort__content {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 16px;
+  grid-area: content;
+}
+.buds-4i .buds-comfort__title {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: bold;
+}
+.buds-4i .buds-comfort__description {
+  font-size: 16px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.87);
+}
+@media screen and (min-width: 768px) {
+  .buds-4i .buds-comfort {
+    padding-left: 63px;
+    padding-right: 24px;
+    padding-bottom: 47px;
+    grid-template-areas:
+      'left-image content'
+      'left-image right-image';
+  }
+  .buds-4i .buds-comfort .acc-image-height-container-100 {
+    width: 310px;
+    height: 383px;
+  }
+  .buds-4i .buds-comfort__left {
+    width: 310px;
+  }
+  .buds-4i .buds-comfort__right {
+    width: 310px;
+    justify-self: flex-end;
+  }
+  .buds-4i .buds-comfort__content {
+    margin-top: 85px;
+    padding: 0;
+    margin-bottom: 37px;
+    width: 320px;
+    justify-self: flex-end;
+  }
+  .buds-4i .buds-comfort__title {
+    text-align: left;
+    margin-bottom: 16px;
+    font-size: 32px;
+  }
+  .buds-4i .buds-comfort__description {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .buds-4i .buds-comfort {
+    padding-bottom: 60px;
+    padding-right: 80px;
+    padding-left: 64px;
+  }
+  .buds-4i .buds-comfort__left {
+    width: 380px;
+  }
+  .buds-4i .buds-comfort__right {
+    width: 380px;
+    margin-right: 40px;
+  }
+  .buds-4i .buds-comfort__content {
+    width: 420px;
+    margin-top: 87px;
+    margin-bottom: 55px;
+  }
+  .buds-4i .buds-comfort__description {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .buds-4i .buds-comfort {
+    padding-left: 169px;
+    padding-right: 169px;
+    padding-bottom: 80px;
+  }
+  .buds-4i .buds-comfort__left {
+    width: 420px;
+  }
+  .buds-4i .buds-comfort__right {
+    width: 420px;
+    margin-right: 0;
+  }
+  .buds-4i .buds-comfort__content {
+    margin-top: 69px;
+    margin-bottom: 21px;
+  }
+  .buds-4i .buds-comfort__title {
+    font-size: 48px;
+  }
+  .buds-4i .buds-comfort__description {
+    font-size: 18px;
+  }
+}
+/*buds-info*/
+.buds-4i .buds-info {
+  padding-bottom: 48px;
+}
+.buds-4i .buds-info__title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.87);
+  margin-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.buds-4i .buds-info__preview {
+  line-height: 1px;
+  margin-bottom: 16px;
+}
+.buds-4i .buds-info__preview .acc-image-height-container-100 {
+  height: 43.8vw;
+}
+.buds-4i .buds-info__description {
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.87);
+  box-sizing: content-box;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .buds-4i .buds-info__title {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+  .buds-4i .buds-info__preview {
+    margin-bottom: 24px;
+  }
+  .buds-4i .buds-info__description {
+    padding-left: 24px;
+    max-width: 650px;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .buds-4i .buds-info {
+    padding-bottom: 60px;
+  }
+  .buds-4i .buds-info__title {
+    margin-bottom: 32px;
+  }
+  .buds-4i .buds-info__preview {
+    margin-bottom: 32px;
+  }
+  .buds-4i .buds-info__description {
+    padding-left: 64px;
+    padding-right: 64px;
+    max-width: none;
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .buds-4i .buds-info {
+    padding-bottom: 80px;
+  }
+  .buds-4i .buds-info__title {
+    margin-bottom: 48px;
+    font-size: 48px;
+  }
+  .buds-4i .buds-info__description {
+    max-width: 800px;
+  }
+}
+/*buds-microphone*/
+.buds-4i .buds-microphone {
+  padding-bottom: 48px;
+}
+.buds-4i .buds-microphone__preview {
+  line-height: 1px;
+  max-width: 630px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+}
+.buds-4i .buds-microphone__preview .acc-image-height-container-100 {
+  max-height: 390px;
+  height: 61.9vw;
+}
+.buds-4i .buds-microphone__description {
+  text-align: center;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.87);
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media screen and (min-width: 768px) {
+  .buds-4i .buds-microphone {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .buds-4i .buds-microphone__preview {
+    margin-bottom: 0;
+    width: 345px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .buds-4i .buds-microphone__preview .acc-image-height-container-100 {
+    width: 345px;
+    height: 213px;
+  }
+  .buds-4i .buds-microphone__description {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+    font-size: 16px;
+    width: 320px;
+    order: -1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .buds-4i .buds-microphone {
+    padding-left: 55px;
+    padding-right: 17px;
+    padding-bottom: 60px;
+  }
+  .buds-4i .buds-microphone__preview {
+    width: 496px;
+  }
+  .buds-4i .buds-microphone__description {
+    font-size: 18px;
+    width: 413px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .buds-4i .buds-microphone {
+    padding-left: 168px;
+    padding-right: 65px;
+    padding-bottom: 80px;
+  }
+  .buds-4i .buds-microphone__preview {
+    width: 630px;
+  }
+}
+/*buds-time*/
+.buds-4i .buds-time {
+  padding-bottom: 47px;
+}
+.buds-4i .buds-time__title {
+  margin-bottom: 16px;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: bold;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.87);
+}
+.buds-4i .buds-time__preview {
+  margin-bottom: 16px;
+  line-height: 1px;
+}
+.buds-4i .buds-time__preview .acc-image-height-container-100 {
+  height: 26vw;
+}
+.buds-4i .buds-time__items {
+  position: relative;
+  padding-top: 26px;
+  margin-left: 13px;
+  margin-right: 13px;
+  margin-bottom: 13px;
+  display: flex;
+  justify-content: space-around;
+}
+.buds-4i .buds-time__items::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 17px;
+  background: linear-gradient(90deg, #ff9d00 -2.3%, #808080 100.9%);
+  border-radius: 6px;
+}
+.buds-4i .buds-time__item {
+  font-size: 14px;
+  color: #000000;
+}
+.buds-4i .buds-time__description {
+  padding-left: 16px;
+  padding-right: 25px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.87);
+  margin-bottom: 24px;
+}
+.buds-4i .buds-time__advantage:not(:last-child) {
+  margin-bottom: 24px;
+}
+.buds-4i .buds-time__advantage-title {
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #000000;
+  text-align: center;
+}
+.buds-4i .buds-time__advantage-description {
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .buds-4i .buds-time {
+    padding-bottom: 48px;
+  }
+  .buds-4i .buds-time__title {
+    margin-bottom: 32px;
+    font-size: 32px;
+  }
+  .buds-4i .buds-time__preview {
+    margin-bottom: 32px;
+  }
+  .buds-4i .buds-time__items {
+    padding-top: 58px;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 32px;
+  }
+  .buds-4i .buds-time__items::before {
+    height: 39px;
+    border-radius: 14px;
+  }
+  .buds-4i .buds-time__item {
+    font-size: 16px;
+  }
+  .buds-4i .buds-time__description {
+    padding-left: 24px;
+    max-width: 650px;
+    margin-bottom: 31px;
+  }
+  .buds-4i .buds-time__advantages {
+    display: flex;
+    padding-left: 24px;
+    padding-right: 24px;
+    justify-content: space-between;
+  }
+  .buds-4i .buds-time__advantage {
+    width: 180px;
+  }
+  .buds-4i .buds-time__advantage:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .buds-4i .buds-time__advantage-title {
+    text-align: left;
+    font-size: 24px;
+  }
+  .buds-4i .buds-time__advantage-description {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .buds-4i .buds-time {
+    padding-bottom: 60px;
+  }
+  .buds-4i .buds-time__preview {
+    margin-bottom: 39px;
+  }
+  .buds-4i .buds-time__items {
+    margin-left: 19px;
+    margin-right: 19px;
+    margin-bottom: 40px;
+  }
+  .buds-4i .buds-time__item {
+    font-size: 20px;
+  }
+  .buds-4i .buds-time__description {
+    padding-left: 66px;
+    max-width: 800px;
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+  .buds-4i .buds-time__advantages {
+    padding-left: 66px;
+    padding-right: 19px;
+  }
+  .buds-4i .buds-time__advantage {
+    width: 263px;
+  }
+  .buds-4i .buds-time__advantage-title {
+    font-size: 36px;
+  }
+  .buds-4i .buds-time__advantage-description {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .buds-4i .buds-time {
+    padding-bottom: 80px;
+  }
+  .buds-4i .buds-time__title {
+    font-size: 48px;
+  }
+  .buds-4i .buds-time__preview {
+    margin-bottom: 45px;
+  }
+  .buds-4i .buds-time__items {
+    margin-left: 17px;
+    margin-right: 17px;
+    margin-bottom: 48px;
+    padding-top: 72px;
+  }
+  .buds-4i .buds-time__items::before {
+    height: 57px;
+  }
+  .buds-4i .buds-time__item {
+    font-size: 24px;
+  }
+  .buds-4i .buds-time__advantages {
+    padding-left: 66px;
+    padding-right: 66px;
+  }
+}
+/*buds-connect*/
+.buds-4i .buds-connect {
+  background-color: #f3f5f7;
+  padding-top: 31px;
+  padding-bottom: 30px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 46px;
+}
+.buds-4i .buds-connect__preview {
+  line-height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 283px;
+  margin-bottom: 23px;
+}
+.buds-4i .buds-connect__preview .acc-image-height-container-100 {
+  height: 249px;
+}
+.buds-4i .buds-connect__title {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.87);
+  margin-bottom: 16px;
+}
+.buds-4i .buds-connect__description {
+  text-align: center;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.87);
+}
+@media screen and (min-width: 768px) {
+  .buds-4i .buds-connect {
+    padding-left: 24px;
+    padding-top: 56px;
+    padding-bottom: 73px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+  .buds-4i .buds-connect__preview {
+    margin: 0;
+  }
+  .buds-4i .buds-connect__preview .acc-image-height-container-100 {
+    width: 283px;
+  }
+  .buds-4i .buds-connect__content {
+    width: 320px;
+  }
+  .buds-4i .buds-connect__title {
+    text-align: left;
+    font-size: 24px;
+  }
+  .buds-4i .buds-connect__description {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .buds-4i .buds-connect {
+    padding-left: 57px;
+    padding-top: 81px;
+    padding-bottom: 81px;
+    padding-right: 57px;
+    margin-bottom: 60px;
+  }
+  .buds-4i .buds-connect__preview {
+    width: 445px;
+  }
+  .buds-4i .buds-connect__content {
+    width: 397px;
+  }
+  .buds-4i .buds-connect__title {
+    font-size: 32px;
+  }
+  .buds-4i .buds-connect__description {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .buds-4i .buds-connect {
+    padding-left: 151px;
+    padding-top: 91px;
+    padding-bottom: 91px;
+    padding-right: 189px;
+    margin-bottom: 80px;
+  }
+  .buds-4i .buds-connect__preview {
+    width: 463px;
+  }
+  .buds-4i .buds-connect__title {
+    font-size: 48px;
+  }
+}
+/*buds-touch*/
+.buds-4i .buds-touch {
+  padding-bottom: 48px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.buds-4i .buds-touch__content {
+  width: 100%;
+  margin-bottom: 6px;
+}
+.buds-4i .buds-touch__title {
+  margin-bottom: 16px;
+  font-weight: bold;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.87);
+}
+.buds-4i .buds-touch__description {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.87);
+}
+.buds-4i .buds-touch__left,
+.buds-4i .buds-touch__right {
+  width: calc(50% - 8px);
+  max-width: 236px;
+}
+.buds-4i .buds-touch__left .acc-image-height-container-100 {
+  max-height: 211px;
+  height: 38.2vw;
+}
+.buds-4i .buds-touch__right .acc-image-height-container-100 {
+  max-height: 310px;
+  height: 56vw;
+}
+.buds-4i .buds-touch__right {
+  position: relative;
+  margin-left: 16px;
+}
+.buds-4i .buds-touch__right::before {
+  content: '';
+  position: absolute;
+  top: 56px;
+  width: 31px;
+  height: 31px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  z-index: 2;
+  background: linear-gradient(221.92deg, #fba4ff -10.42%, #6680e5 84.76%);
+  opacity: 0.69;
+}
+.buds-4i .buds-touch__right::after {
+  content: '';
+  position: absolute;
+  top: 48px;
+  width: 46px;
+  height: 46px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  z-index: 1;
+  background: linear-gradient(221.92deg, #fba4ff -10.42%, #6680e5 84.76%);
+  opacity: 0.22;
+  animation: circle-bounce 0.5s ease-in-out infinite alternate-reverse;
+}
+@keyframes circle-bounce {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  100% {
+    transform: translateX(-50%) scale(1.2);
+  }
+}
+@media screen and (min-width: 768px) {
+  .buds-4i .buds-touch {
+    padding-left: 24px;
+    padding-right: 24px;
+    display: grid;
+    grid-template-areas:
+      'touch-content touch-right'
+      'touch-left touch-right';
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .buds-4i .buds-touch__content {
+    width: 346px;
+    margin-bottom: 30px;
+    grid-area: touch-content;
+  }
+  .buds-4i .buds-touch__left {
+    grid-area: touch-left;
+    width: 346px;
+    max-width: none;
+  }
+  .buds-4i .buds-touch__right {
+    grid-area: touch-right;
+    width: 286px;
+    max-width: none;
+    margin-left: 0;
+  }
+  .buds-4i .buds-touch__right::before {
+    width: 55px;
+    height: 55px;
+    top: 89px;
+  }
+  .buds-4i .buds-touch__right::after {
+    width: 81px;
+    height: 81px;
+    top: 75px;
+  }
+  .buds-4i .buds-touch__left .acc-image-height-container-100 {
+    max-height: none;
+    width: 346px;
+    height: 309px;
+  }
+  .buds-4i .buds-touch__right .acc-image-height-container-100 {
+    max-height: none;
+    width: 286px;
+    height: 376px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .buds-4i .buds-touch {
+    padding-left: 62px;
+    padding-right: 62px;
+    padding-bottom: 60px;
+  }
+  .buds-4i .buds-touch__content {
+    width: 386px;
+    margin-bottom: 32px;
+  }
+  .buds-4i .buds-touch__title {
+    font-size: 32px;
+  }
+  .buds-4i .buds-touch__description {
+    font-size: 18px;
+  }
+  .buds-4i .buds-touch__left {
+    width: 386px;
+  }
+  .buds-4i .buds-touch__right {
+    width: 383px;
+  }
+  .buds-4i .buds-touch__right::before {
+    width: 69px;
+    height: 69px;
+    top: 127px;
+  }
+  .buds-4i .buds-touch__right::after {
+    width: 102px;
+    height: 102px;
+    top: 111px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .buds-4i .buds-touch {
+    padding-left: 167px;
+    padding-right: 167px;
+    padding-bottom: 80px;
+  }
+  .buds-4i .buds-touch__content {
+    width: 418px;
+    margin-bottom: 48px;
+  }
+  .buds-4i .buds-touch__title {
+    font-size: 48px;
+  }
+  .buds-4i .buds-touch__left {
+    width: 422px;
+  }
+  .buds-4i .buds-touch__right {
+    width: 422px;
+  }
+  .buds-4i .buds-touch__right::before {
+    top: 116px;
+  }
+  .buds-4i .buds-touch__right::after {
+    top: 100px;
+  }
+}
+/*buds-model*/
+.buds-4i .buds-model {
+  padding-bottom: 57px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.buds-4i .buds-model__content {
+  margin-bottom: 34px;
+}
+.buds-4i .buds-model__title {
+  text-align: center;
+  margin-bottom: 16px;
+  font-weight: bold;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.87);
+}
+.buds-4i .buds-model__description {
+  text-align: center;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.87);
+}
+.buds-4i .buds-model__preview {
+  line-height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 288px;
+}
+.buds-4i .buds-model__preview .acc-image-height-container-100 {
+  height: 191px;
+}
+@media screen and (min-width: 768px) {
+  .buds-4i .buds-model {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .buds-4i .buds-model__content {
+    margin-bottom: 0;
+    width: 320px;
+  }
+  .buds-4i .buds-model__title {
+    text-align: left;
+  }
+  .buds-4i .buds-model__description {
+    text-align: left;
+  }
+  .buds-4i .buds-model__preview {
+    width: 360px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .buds-4i .buds-model__preview .acc-image-height-container-100 {
+    width: 360px;
+    height: 239px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .buds-4i .buds-model {
+    padding-bottom: 62px;
+    padding-right: 62px;
+    padding-left: 64px;
+  }
+  .buds-4i .buds-model__content {
+    width: 393px;
+  }
+  .buds-4i .buds-model__title {
+    font-size: 32px;
+  }
+  .buds-4i .buds-model__description {
+    font-size: 18px;
+  }
+  .buds-4i .buds-model__preview {
+    width: 438px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .buds-4i .buds-model {
+    padding-bottom: 80px;
+    padding-right: 65px;
+    padding-left: 171px;
+  }
+  .buds-4i .buds-model__title {
+    font-size: 48px;
+  }
+  .buds-4i .buds-model__preview {
+    width: 605px;
+  }
+}
+/*buds-app*/
+.buds-4i .buds-app {
+  padding-bottom: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.buds-4i .buds-app__title {
+  text-align: center;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.87);
+}
+.buds-4i .buds-app__content {
+  margin-bottom: 47px;
+}
+.buds-4i .buds-app__preview {
+  line-height: 1px;
+  margin-bottom: 16px;
+  width: 113px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.buds-4i .buds-app__preview .acc-image-height-container-100 {
+  height: 120px;
+}
+.buds-4i .buds-app__description {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.87);
+  margin-bottom: 8px;
+}
+.buds-4i .buds-app__note {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.35);
+}
+.buds-4i .buds-app__link {
+  margin-top: 4px;
+  font-weight: 300;
+  font-style: italic;
+  text-decoration-line: underline;
+  color: rgba(0, 0, 0, 0.87);
+  display: inline-block;
+}
+.buds-4i .buds-app__footer {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.25;
+  color: rgba(63, 78, 93, 0.6);
+}
+@media screen and (min-width: 768px) {
+  .buds-4i .buds-app {
+    padding-bottom: 60px;
+    padding-left: 31px;
+    padding-right: 31px;
+  }
+  .buds-4i .buds-app__title {
+    text-align: left;
+    font-size: 24px;
+  }
+  .buds-4i .buds-app__content {
+    display: flex;
+  }
+  .buds-4i .buds-app__preview {
+    width: 163px;
+    min-width: 163px;
+    margin-right: 16px;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .buds-4i .buds-app__preview .acc-image-height-container-100 {
+    height: 161px;
+    width: 151px;
+    min-width: 151px;
+  }
+  .buds-4i .buds-app__footer {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .buds-4i .buds-app {
+    padding-left: 49px;
+    padding-right: 49px;
+  }
+  .buds-4i .buds-app__content {
+    margin-bottom: 60px;
+  }
+  .buds-4i .buds-app__title {
+    font-size: 36px;
+  }
+  .buds-4i .buds-app__description {
+    font-size: 18px;
+  }
+  .buds-4i .buds-app__note {
+    font-size: 18px;
+  }
+  .buds-4i .buds-app__note br {
+    display: none;
+  }
+  .buds-4i .buds-app__footer {
+    max-width: 895px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .buds-4i .buds-app {
+    padding-left: 155px;
+    padding-right: 155px;
+  }
+  .buds-4i .buds-app__content {
+    margin-bottom: 80px;
+  }
+  .buds-4i .buds-app__footer {
+    max-width: 800px;
+  }
+}
+
+.acc-product-description__custom-html
+  .buds-4i
+  .buds-advantages
+  .buds-advantages__list
+  .buds-advantages__item
+  .buds-advantages__item-image
+  .acc-image-height-container-100 {
+  height: 50vw;
+  max-height: 250px;
+}
