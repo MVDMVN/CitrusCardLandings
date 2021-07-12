@@ -103,7 +103,7 @@
           window.dataLayer = [];
         }
 
-        let bannerSwiper;
+        let bannersSwiper;
         let initTab = 8496;
         let activeTab = 'samsung';
         getSamsungItems(initTab, document.getElementById('8496'), activeTab);
@@ -308,6 +308,14 @@
           getSamsungItems(elementId, element, elementBanner, elementLink);
         }
 
+        function getDisplay(number) {
+          return number == '0' ? 'none' : 'flex';
+        }
+
+        function getOpacity(number) {
+          return number == '0' ? '0' : '1';
+        }
+
         function formatPrice(price) {
           return (price || 0).toLocaleString().replace(/\D+/g, ' ');
         }
@@ -341,7 +349,7 @@
                   item.name
                 }</p>
                   <div class="samsung-ecosystem__prices">
-                    <div class="samsung-ecosystem__discount">
+                    <div class="samsung-ecosystem__discount" style="display:${getDisplay(item.prices.old)}">
                       <span class="samsung-ecosystem__sale-percentage">${item.sale.percent}%</span>
                       <span class="samsung-ecosystem__price-old">${formatPrice(item.prices.old)}</span>
                     </div>
@@ -357,8 +365,6 @@
               });
               if (link) {
                 let productsContainer = document.querySelector('.samsung-ecosystem__products');
-                console.log(productsContainer);
-                console.log(links[link][1]);
                 productsContainer.innerHTML += `
                   <a class="samsung-ecosystem__all-link" href="${links[link][0]}" target="_blank">${links[link][1]}</a>
                 `;
@@ -366,7 +372,7 @@
             });
         }
 
-        function getAcademyProducts(arr, element) {
+        function showBanners(arr, element) {
           element.innerHTML = '';
 
           arr.forEach((item) => {
@@ -381,8 +387,13 @@
                 </div>
               `;
           });
+          setTimeout(swiperInitialize, 500);
+        }
 
-          bannersSwiper.init();
+        function swiperInitialize() {
+          if (typeof bannersSwiper !== 'undefined') {
+            bannersSwiper.init();
+          }
         }
 
         function initBrandCategories(elem, categories) {
@@ -408,12 +419,15 @@
           });
         }
 
-        fetch('https://api.citrus.ua/v5/sliders/694')
-          .then((response) => response.json())
-          .then((data) => {
-            getAcademyProducts(data.data, document.getElementById('samsungBanners'));
-          });
+        function getBannersImages() {
+          fetch('https://api.citrus.ua/v5/sliders/694')
+            .then((response) => response.json())
+            .then((data) => {
+              showBanners(data.data, document.getElementById('samsungBanners'));
+            });
+        }
 
+        getBannersImages();
         initBrandCategories('samsungCategoriesList', categories);
 
         let tabElements = document.querySelectorAll('[data-tab]');

@@ -259,7 +259,7 @@ button {
       }
 
       &__banner {
-        border-radius: 10px;
+        border-radius: 20px;
       }
     }
   }
@@ -370,6 +370,7 @@ button {
         'fourthImage fourthImage'
         'productItem-9 productItem-10';
       grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 6px 12px;
       position: relative;
     }
@@ -673,6 +674,7 @@ button {
           'productItem-5 productItem-6 secondImage secondImage'
           'productItem-7 productItem-8 productItem-9 productItem-10';
         grid-gap: 12px;
+        grid-template-columns: initial;
       }
 
       &__content.shown.machines {
@@ -694,6 +696,10 @@ button {
         margin-top: 0;
         margin-bottom: 0;
         align-items: initial;
+      }
+
+      &__product {
+        border-radius: 20px;
       }
 
       &__preview-wrapper {
@@ -736,6 +742,8 @@ button {
   }
 
   &-categories {
+    background-color: #ffffff;
+
     &__title {
       font-size: 24px;
       line-height: 28px;
@@ -753,7 +761,7 @@ button {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 24px 8px;
       justify-content: center;
-      padding: 0 8px;
+      padding: 0 8px 40px 8px;
     }
 
     &__item {
@@ -781,7 +789,7 @@ button {
       margin-bottom: 15px;
       margin-left: auto;
       margin-right: auto;
-      background: #fafafa;
+      background: #ffffff;
       box-shadow: inset 0px 0px 24px #e1e1e1;
       border-radius: 50%;
       overflow: hidden;
@@ -820,6 +828,7 @@ button {
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 40px 24px;
+        padding: 0 8px 60px 8px;
       }
 
       &__item {
@@ -853,4 +862,10 @@ button {
       }
     }
   }
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  pointer-events: all;
+  cursor: pointer;
 }

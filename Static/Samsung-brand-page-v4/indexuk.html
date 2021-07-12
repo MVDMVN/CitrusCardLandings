@@ -97,13 +97,14 @@
         <ul class="samsung-categories__list" id="samsungCategoriesList"></ul>
       </section>
     </div>
+
     <script>
       (function () {
         if (!window.dataLayer) {
           window.dataLayer = [];
         }
 
-        let bannerSwiper;
+        let bannersSwiper;
         let initTab = 8496;
         let activeTab = 'samsung';
         getSamsungItems(initTab, document.getElementById('8496'), activeTab);
@@ -416,6 +417,14 @@
           getSamsungItems(elementId, element, elementBanner, elementLink);
         }
 
+        function getDisplay(number) {
+          return number == '0' ? 'none' : 'flex';
+        }
+
+        function getOpacity(number) {
+          return number == '0' ? '0' : '1';
+        }
+
         function formatPrice(price) {
           return (price || 0).toLocaleString().replace(/\D+/g, ' ');
         }
@@ -431,66 +440,71 @@
               if (banner) {
                 banners[banner].forEach((item) => {
                   element.innerHTML += `
-                  <div class="samsung-ecosystem__image">
-                    <img src="${item}" alt="Samsuns Shop in Shop Image" />
-                  </div>
-                  `;
+                    <div class="samsung-ecosystem__image">
+                      <img src="${item}" alt="Samsuns Shop in Shop Image" />
+                    </div>
+                    `;
                 });
               }
               data.data.forEach((item) => {
                 element.innerHTML += `
-                <div class="samsung-ecosystem__product">
-                  <a href="https://www.citrus.ua/uk${item.url}" target="_blank">
-                  <div class="samsung-ecosystem__preview-wrapper">
-                    <div class="samsung-ecosystem__preview"  style="background-image: url(${item.preview.src})">
+                  <div class="samsung-ecosystem__product">
+                    <a href="https://www.citrus.ua/uk${item.url}" target="_blank">
+                    <div class="samsung-ecosystem__preview-wrapper">
+                      <div class="samsung-ecosystem__preview"  style="background-image: url(${item.preview.src})">
+                      </div>
                     </div>
+                    <p href="https://www.citrus.ua/uk${
+                      item.url
+                    }" target="_blank" class="samsung-ecosystem__product-title">${item.name}</p>
+                    <div class="samsung-ecosystem__prices">
+                      <div class="samsung-ecosystem__discount" style="display:${getDisplay(item.prices.old)}">
+                        <span class="samsung-ecosystem__sale-percentage">${item.sale.percent}%</span>
+                        <span class="samsung-ecosystem__price-old">${formatPrice(item.prices.old)}</span>
+                      </div>
+                      <div class="samsung-ecosystem__price-block">
+                        <span class="samsung-ecosystem__price-current">${formatPrice(
+                          item.prices.price,
+                        )} <sub class="samsung-ecosystem__currency">₴</sub></span>
+                      </div>
+                    </div>
+                    </a>
                   </div>
-                  <p href="https://www.citrus.ua/uk${
-                    item.url
-                  }" target="_blank" class="samsung-ecosystem__product-title">${item.name}</p>
-                  <div class="samsung-ecosystem__prices">
-                    <div class="samsung-ecosystem__discount">
-                      <span class="samsung-ecosystem__sale-percentage">${item.sale.percent}%</span>
-                      <span class="samsung-ecosystem__price-old">${formatPrice(item.prices.old)}</span>
-                    </div>
-                    <div class="samsung-ecosystem__price-block">
-                      <span class="samsung-ecosystem__price-current">${formatPrice(
-                        item.prices.price,
-                      )} <sub class="samsung-ecosystem__currency">₴</sub></span>
-                    </div>
-                  </div>
-                  </a>
-                </div>
-            `;
+              `;
               });
               if (link) {
                 let productsContainer = document.querySelector('.samsung-ecosystem__products');
                 console.log(productsContainer);
                 console.log(links[link][1]);
                 productsContainer.innerHTML += `
-                  <a class="samsung-ecosystem__all-link" href="${links[link][0]}" target="_blank">${links[link][1]}</a>
-                `;
+                    <a class="samsung-ecosystem__all-link" href="${links[link][0]}" target="_blank">${links[link][1]}</a>
+                  `;
               }
             });
         }
 
-        function getAcademyProducts(arr, element) {
+        function showBanners(arr, element) {
           element.innerHTML = '';
 
           arr.forEach((item) => {
             element.innerHTML += `
-                <div class="swiper-slide samsung-header__slide">
-                  <a class="samsung-header__banner-link" target="_blank" href="https://www.citrus.ua/uk${item.url}">
-                    <picture>
-                      <source class="samsung-header__banner" srcset="${item.imgDesktop}" media="(min-width: 561px)" />
-                      <img class="samsung-header__banner" src="${item.imgMobile}" alt="" />
-                    </picture>
-                  </a>
-                </div>
-              `;
+            <div class="swiper-slide samsung-header__slide">
+              <a class="samsung-header__banner-link" target="_blank" href="https://www.citrus.ua/uk${item.url}">
+                <picture>
+                  <source class="samsung-header__banner" srcset="${item.imgDesktop}" media="(min-width: 561px)" />
+                  <img class="samsung-header__banner" src="${item.imgMobile}" alt="" />
+                </picture>
+              </a>
+            </div>
+          `;
           });
+          setTimeout(swiperInitialize, 500);
+        }
 
-          bannersSwiper.init();
+        function swiperInitialize() {
+          if (typeof bannersSwiper !== 'undefined') {
+            bannersSwiper.init();
+          }
         }
 
         function initBrandCategories(elem, categories) {
@@ -503,30 +517,33 @@
           rootElem.innerHTML = '';
           categories.forEach((category) => {
             rootElem.innerHTML += `
-                  <li class="samsung-categories__item">
-                    <a href="https://www.citrus.ua/${category.url}" target="_blank">
-                    <div class="samsung-categories__image-container">
-                      <div class="samsung-categories__image" style="background-image: url(${category.icon})">
-                      </div>
-                    </div>
-                      <p class="samsung-categories__item-title">${category.name}</p>
-                    </a>
-                  </li>
-            `;
+            <li class="samsung-categories__item">
+              <a href="https://www.citrus.ua/${category.url}" target="_blank">
+              <div class="samsung-categories__image-container">
+                <div class="samsung-categories__image" style="background-image: url(${category.icon})">
+                </div>
+              </div>
+                <p class="samsung-categories__item-title">${category.name}</p>
+              </a>
+            </li>
+      `;
           });
         }
 
-        fetch('https://api.citrus.ua/v5/sliders/694', {
-          headers: {
-            'X-Locale': 'uk',
-          },
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            getAcademyProducts(data.data, document.getElementById('samsungBanners'));
-          });
+        function getBannersImages() {
+          fetch('https://api.citrus.ua/v5/sliders/694', {
+            headers: {
+              'X-Locale': 'uk',
+            },
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              showBanners(data.data, document.getElementById('samsungBanners'));
+            });
+        }
 
-        initBrandCategories('samsungCategoriesList', categoriesUk);
+        getBannersImages();
+        initBrandCategories('samsungCategoriesList', categories);
 
         let tabElements = document.querySelectorAll('[data-tab]');
         [].forEach.call(tabElements, function (element) {

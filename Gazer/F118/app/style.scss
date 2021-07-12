@@ -1,0 +1,569 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  // margin: 50px 0 50px 0;
+  overflow-x: hidden;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  color: transparent;
+}
+
+form select,
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding: 0 0 0 12px;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3b6d9a;
+  outline: none;
+  transition: 0.3s;
+}
+
+button {
+  display: block;
+  background: 0 0;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  line-height: 44px;
+  transition: 0.3s;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+}
+
+.f118 {
+  background-color: #ffffff;
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+
+  &-header {
+    background: url('https://i.citrus.ua/uploads/promo/Gazer/F118Images/bg/header-bg-desc.jpg') center center no-repeat;
+    padding: 20px 16px 0 16px;
+    transition: 0.3s;
+
+    &__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 32px auto;
+    }
+
+    &__logo {
+      max-width: 201px;
+      width: 100%;
+      margin: 0 auto 8px auto;
+      transition: 0.3s;
+    }
+
+    &__title {
+      font-size: 14px;
+      line-height: 21px;
+      text-align: center;
+      color: #000000;
+      margin-bottom: 8px;
+      transition: 0.3s;
+    }
+
+    &__name {
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 37px;
+      text-align: center;
+      color: #000000;
+      transition: 0.3s;
+    }
+
+    &__image {
+      max-width: 354px;
+      width: 100%;
+      margin: 0 auto;
+      transition: 0.3s;
+    }
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &__content {
+        max-width: 235px;
+        margin: 0 24px 0 0;
+      }
+
+      &__logo {
+        max-width: 241px;
+        margin: 0 0 16px 0;
+      }
+
+      &__title {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 16px;
+        text-align: left;
+      }
+
+      &__name {
+        font-size: 40px;
+        line-height: 47px;
+      }
+
+      &__image {
+        max-width: 354px;
+        margin: 0;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      &__content {
+        max-width: 284px;
+      }
+
+      &__logo {
+        max-width: 322px;
+      }
+
+      &__title {
+        font-size: 18px;
+        line-height: 27px;
+      }
+
+      &__name {
+        font-size: 50px;
+        line-height: 59px;
+      }
+
+      &__image {
+        max-width: 482px;
+      }
+    }
+
+    @media screen and (min-width: 1366px) {
+      &__content {
+        max-width: 415px;
+      }
+
+      &__logo {
+        max-width: 314px;
+      }
+
+      &__title {
+        font-size: 22px;
+        line-height: 33px;
+      }
+
+      &__name {
+        font-size: 73px;
+        line-height: 86px;
+      }
+
+      &__image {
+        max-width: 671px;
+      }
+    }
+  }
+
+  &-click {
+    background: url('https://i.citrus.ua/uploads/promo/Gazer/F118Images/bg/clicks-bg-desc.jpg') center center no-repeat;
+
+    &__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 32px auto;
+      padding: 0 16px;
+    }
+
+    &__title {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      color: #000000;
+      margin-bottom: 16px;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+      line-height: 21px;
+      color: #000000;
+    }
+
+    &__image {
+      max-width: 413px;
+      width: 100%;
+      margin: 0 0 0 auto;
+      padding-left: 16px;
+    }
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 0;
+
+      &__content {
+        max-width: 260px;
+        margin: 0 24px 0 auto;
+        padding: 0;
+      }
+
+      &__title {
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      padding: 40px 0;
+
+      &__content {
+        max-width: 360px;
+      }
+
+      &__title {
+        font-size: 28px;
+        line-height: 33px;
+        margin-bottom: 24px;
+      }
+
+      &__subtitle {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      &__image {
+        max-width: 562px;
+      }
+    }
+
+    @media screen and (min-width: 1366px) {
+      padding: 55px 0;
+
+      &__content {
+        max-width: 420px;
+      }
+
+      &__title {
+        font-size: 32px;
+        line-height: 37px;
+        margin: 0 62px 0 auto;
+      }
+
+      &__subtitle {
+        font-size: 18px;
+        line-height: 27px;
+      }
+
+      &__image {
+        max-width: 783px;
+      }
+    }
+  }
+
+  &-screen {
+    background: url('https://i.citrus.ua/uploads/promo/Gazer/F118Images/bg/screen-bg-desc.jpg') center center no-repeat;
+
+    &__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 32px auto;
+      padding: 0 16px;
+    }
+
+    &__title {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      color: #000000;
+      margin-bottom: 16px;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+      line-height: 21px;
+      color: #000000;
+    }
+
+    &__image {
+      max-width: 413px;
+      width: 100%;
+      margin: 0 0 0 auto;
+      padding-left: 16px;
+    }
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 28px 0;
+
+      &__content {
+        max-width: 260px;
+        margin: 0 24px 0 auto;
+        padding: 0;
+      }
+
+      &__title {
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      &__content {
+        max-width: 360px;
+      }
+
+      &__title {
+        font-size: 28px;
+        line-height: 33px;
+        margin-bottom: 24px;
+      }
+
+      &__subtitle {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      &__image {
+        max-width: 562px;
+      }
+    }
+
+    @media screen and (min-width: 1366px) {
+      &__content {
+        max-width: 420px;
+      }
+
+      &__title {
+        font-size: 32px;
+        line-height: 37px;
+        margin: 0 62px 0 auto;
+      }
+
+      &__subtitle {
+        font-size: 18px;
+        line-height: 27px;
+      }
+
+      &__image {
+        max-width: 783px;
+      }
+    }
+  }
+
+  &-navigation {
+    background: url('https://i.citrus.ua/uploads/promo/Gazer/F118Images/bg/clicks-bg-desc.jpg') center center no-repeat;
+
+    &__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 32px auto;
+      padding: 0 16px;
+    }
+
+    &__title {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      color: #000000;
+      margin-bottom: 16px;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+      line-height: 21px;
+      color: #000000;
+    }
+
+    &__image {
+      max-width: 413px;
+      width: 100%;
+      margin: 0 0 0 auto;
+      padding-left: 16px;
+    }
+
+    @media screen and (min-width: 768px) {
+      background: url(https://i.citrus.ua/uploads/promo/Gazer/F118Images/bg/clicks-bg-desc.jpg) center/100% no-repeat;
+      display: flex;
+      justify-content: center;
+      padding: 113px 0;
+
+      &__content {
+        max-width: 260px;
+        margin: 0 24px 0 auto;
+        padding: 0;
+      }
+
+      &__title {
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      padding: 155px 0;
+
+      &__content {
+        max-width: 360px;
+      }
+
+      &__title {
+        font-size: 28px;
+        line-height: 33px;
+        margin-bottom: 24px;
+      }
+
+      &__subtitle {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      &__image {
+        max-width: 562px;
+      }
+    }
+
+    @media screen and (min-width: 1366px) {
+      padding: 91px 0;
+
+      &__content {
+        max-width: 420px;
+      }
+
+      &__title {
+        font-size: 32px;
+        line-height: 37px;
+        margin: 0 62px 0 auto;
+      }
+
+      &__subtitle {
+        font-size: 18px;
+        line-height: 27px;
+      }
+
+      &__image {
+        max-width: 783px;
+      }
+    }
+  }
+
+  &-camera {
+    background: url('https://i.citrus.ua/uploads/promo/Gazer/F118Images/bg/camera-bg-desc.jpg') center center no-repeat;
+
+    &__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 32px auto;
+      padding: 0 16px;
+    }
+
+    &__title {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      color: #000000;
+      margin-bottom: 16px;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+      line-height: 21px;
+      color: #000000;
+    }
+
+    &__image {
+      max-width: 413px;
+      width: 100%;
+      margin: 0 auto;
+      padding-left: 16px;
+    }
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: center;
+      padding: 19px 0;
+
+      &__content {
+        max-width: 260px;
+        margin: 60px 24px 0 auto;
+        padding: 0;
+      }
+
+      &__title {
+        font-size: 24px;
+        line-height: 28px;
+      }
+
+      &__image {
+        margin: 0;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      &__content {
+        max-width: 360px;
+        margin: 90px 24px 0 auto;
+      }
+
+      &__title {
+        font-size: 28px;
+        line-height: 33px;
+        margin-bottom: 24px;
+      }
+
+      &__subtitle {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      &__image {
+        max-width: 562px;
+      }
+    }
+
+    @media screen and (min-width: 1366px) {
+      &__content {
+        max-width: 420px;
+        margin: 120px 24px 0 auto;
+      }
+
+      &__title {
+        font-size: 32px;
+        line-height: 37px;
+        margin: 0 62px 0 auto;
+      }
+
+      &__subtitle {
+        font-size: 18px;
+        line-height: 27px;
+      }
+
+      &__image {
+        max-width: 783px;
+      }
+    }
+  }
+}

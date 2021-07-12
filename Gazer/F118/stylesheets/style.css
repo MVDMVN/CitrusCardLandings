@@ -1,0 +1,383 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0; }
+
+body {
+  overflow-x: hidden; }
+
+ul {
+  margin: 0;
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  color: transparent; }
+
+form select,
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding: 0 0 0 12px;
+  background-color: #ffffff; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3b6d9a;
+  outline: none;
+  transition: 0.3s; }
+
+button {
+  display: block;
+  background: 0 0;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  line-height: 44px;
+  transition: 0.3s;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-size: 18px; }
+
+.f118 {
+  background-color: #ffffff;
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto; }
+  .f118-header {
+    background: url("https://i.citrus.ua/uploads/promo/Gazer/F118Images/bg/header-bg-desc.jpg") center center no-repeat;
+    padding: 20px 16px 0 16px;
+    transition: 0.3s; }
+    .f118-header__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 32px auto; }
+    .f118-header__logo {
+      max-width: 201px;
+      width: 100%;
+      margin: 0 auto 8px auto;
+      transition: 0.3s; }
+    .f118-header__title {
+      font-size: 14px;
+      line-height: 21px;
+      text-align: center;
+      color: #000000;
+      margin-bottom: 8px;
+      transition: 0.3s; }
+    .f118-header__name {
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 37px;
+      text-align: center;
+      color: #000000;
+      transition: 0.3s; }
+    .f118-header__image {
+      max-width: 354px;
+      width: 100%;
+      margin: 0 auto;
+      transition: 0.3s; }
+    @media screen and (min-width: 768px) {
+      .f118-header {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .f118-header__content {
+          max-width: 235px;
+          margin: 0 24px 0 0; }
+        .f118-header__logo {
+          max-width: 241px;
+          margin: 0 0 16px 0; }
+        .f118-header__title {
+          font-size: 16px;
+          line-height: 24px;
+          margin-bottom: 16px;
+          text-align: left; }
+        .f118-header__name {
+          font-size: 40px;
+          line-height: 47px; }
+        .f118-header__image {
+          max-width: 354px;
+          margin: 0; } }
+    @media screen and (min-width: 1024px) {
+      .f118-header__content {
+        max-width: 284px; }
+      .f118-header__logo {
+        max-width: 322px; }
+      .f118-header__title {
+        font-size: 18px;
+        line-height: 27px; }
+      .f118-header__name {
+        font-size: 50px;
+        line-height: 59px; }
+      .f118-header__image {
+        max-width: 482px; } }
+    @media screen and (min-width: 1366px) {
+      .f118-header__content {
+        max-width: 415px; }
+      .f118-header__logo {
+        max-width: 314px; }
+      .f118-header__title {
+        font-size: 22px;
+        line-height: 33px; }
+      .f118-header__name {
+        font-size: 73px;
+        line-height: 86px; }
+      .f118-header__image {
+        max-width: 671px; } }
+  .f118-click {
+    background: url("https://i.citrus.ua/uploads/promo/Gazer/F118Images/bg/clicks-bg-desc.jpg") center center no-repeat; }
+    .f118-click__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 32px auto;
+      padding: 0 16px; }
+    .f118-click__title {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      color: #000000;
+      margin-bottom: 16px; }
+    .f118-click__subtitle {
+      font-size: 14px;
+      line-height: 21px;
+      color: #000000; }
+    .f118-click__image {
+      max-width: 413px;
+      width: 100%;
+      margin: 0 0 0 auto;
+      padding-left: 16px; }
+    @media screen and (min-width: 768px) {
+      .f118-click {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0; }
+        .f118-click__content {
+          max-width: 260px;
+          margin: 0 24px 0 auto;
+          padding: 0; }
+        .f118-click__title {
+          font-size: 24px;
+          line-height: 28px; } }
+    @media screen and (min-width: 1024px) {
+      .f118-click {
+        padding: 40px 0; }
+        .f118-click__content {
+          max-width: 360px; }
+        .f118-click__title {
+          font-size: 28px;
+          line-height: 33px;
+          margin-bottom: 24px; }
+        .f118-click__subtitle {
+          font-size: 16px;
+          line-height: 24px; }
+        .f118-click__image {
+          max-width: 562px; } }
+    @media screen and (min-width: 1366px) {
+      .f118-click {
+        padding: 55px 0; }
+        .f118-click__content {
+          max-width: 420px; }
+        .f118-click__title {
+          font-size: 32px;
+          line-height: 37px;
+          margin: 0 62px 0 auto; }
+        .f118-click__subtitle {
+          font-size: 18px;
+          line-height: 27px; }
+        .f118-click__image {
+          max-width: 783px; } }
+  .f118-screen {
+    background: url("https://i.citrus.ua/uploads/promo/Gazer/F118Images/bg/screen-bg-desc.jpg") center center no-repeat; }
+    .f118-screen__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 32px auto;
+      padding: 0 16px; }
+    .f118-screen__title {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      color: #000000;
+      margin-bottom: 16px; }
+    .f118-screen__subtitle {
+      font-size: 14px;
+      line-height: 21px;
+      color: #000000; }
+    .f118-screen__image {
+      max-width: 413px;
+      width: 100%;
+      margin: 0 0 0 auto;
+      padding-left: 16px; }
+    @media screen and (min-width: 768px) {
+      .f118-screen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 28px 0; }
+        .f118-screen__content {
+          max-width: 260px;
+          margin: 0 24px 0 auto;
+          padding: 0; }
+        .f118-screen__title {
+          font-size: 24px;
+          line-height: 28px; } }
+    @media screen and (min-width: 1024px) {
+      .f118-screen__content {
+        max-width: 360px; }
+      .f118-screen__title {
+        font-size: 28px;
+        line-height: 33px;
+        margin-bottom: 24px; }
+      .f118-screen__subtitle {
+        font-size: 16px;
+        line-height: 24px; }
+      .f118-screen__image {
+        max-width: 562px; } }
+    @media screen and (min-width: 1366px) {
+      .f118-screen__content {
+        max-width: 420px; }
+      .f118-screen__title {
+        font-size: 32px;
+        line-height: 37px;
+        margin: 0 62px 0 auto; }
+      .f118-screen__subtitle {
+        font-size: 18px;
+        line-height: 27px; }
+      .f118-screen__image {
+        max-width: 783px; } }
+  .f118-navigation {
+    background: url("https://i.citrus.ua/uploads/promo/Gazer/F118Images/bg/clicks-bg-desc.jpg") center center no-repeat; }
+    .f118-navigation__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 32px auto;
+      padding: 0 16px; }
+    .f118-navigation__title {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      color: #000000;
+      margin-bottom: 16px; }
+    .f118-navigation__subtitle {
+      font-size: 14px;
+      line-height: 21px;
+      color: #000000; }
+    .f118-navigation__image {
+      max-width: 413px;
+      width: 100%;
+      margin: 0 0 0 auto;
+      padding-left: 16px; }
+    @media screen and (min-width: 768px) {
+      .f118-navigation {
+        background: url(https://i.citrus.ua/uploads/promo/Gazer/F118Images/bg/clicks-bg-desc.jpg) center/100% no-repeat;
+        display: flex;
+        justify-content: center;
+        padding: 113px 0; }
+        .f118-navigation__content {
+          max-width: 260px;
+          margin: 0 24px 0 auto;
+          padding: 0; }
+        .f118-navigation__title {
+          font-size: 24px;
+          line-height: 28px; } }
+    @media screen and (min-width: 1024px) {
+      .f118-navigation {
+        padding: 155px 0; }
+        .f118-navigation__content {
+          max-width: 360px; }
+        .f118-navigation__title {
+          font-size: 28px;
+          line-height: 33px;
+          margin-bottom: 24px; }
+        .f118-navigation__subtitle {
+          font-size: 16px;
+          line-height: 24px; }
+        .f118-navigation__image {
+          max-width: 562px; } }
+    @media screen and (min-width: 1366px) {
+      .f118-navigation {
+        padding: 91px 0; }
+        .f118-navigation__content {
+          max-width: 420px; }
+        .f118-navigation__title {
+          font-size: 32px;
+          line-height: 37px;
+          margin: 0 62px 0 auto; }
+        .f118-navigation__subtitle {
+          font-size: 18px;
+          line-height: 27px; }
+        .f118-navigation__image {
+          max-width: 783px; } }
+  .f118-camera {
+    background: url("https://i.citrus.ua/uploads/promo/Gazer/F118Images/bg/camera-bg-desc.jpg") center center no-repeat; }
+    .f118-camera__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 32px auto;
+      padding: 0 16px; }
+    .f118-camera__title {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      color: #000000;
+      margin-bottom: 16px; }
+    .f118-camera__subtitle {
+      font-size: 14px;
+      line-height: 21px;
+      color: #000000; }
+    .f118-camera__image {
+      max-width: 413px;
+      width: 100%;
+      margin: 0 auto;
+      padding-left: 16px; }
+    @media screen and (min-width: 768px) {
+      .f118-camera {
+        display: flex;
+        justify-content: center;
+        padding: 19px 0; }
+        .f118-camera__content {
+          max-width: 260px;
+          margin: 60px 24px 0 auto;
+          padding: 0; }
+        .f118-camera__title {
+          font-size: 24px;
+          line-height: 28px; }
+        .f118-camera__image {
+          margin: 0; } }
+    @media screen and (min-width: 1024px) {
+      .f118-camera__content {
+        max-width: 360px;
+        margin: 90px 24px 0 auto; }
+      .f118-camera__title {
+        font-size: 28px;
+        line-height: 33px;
+        margin-bottom: 24px; }
+      .f118-camera__subtitle {
+        font-size: 16px;
+        line-height: 24px; }
+      .f118-camera__image {
+        max-width: 562px; } }
+    @media screen and (min-width: 1366px) {
+      .f118-camera__content {
+        max-width: 420px;
+        margin: 120px 24px 0 auto; }
+      .f118-camera__title {
+        font-size: 32px;
+        line-height: 37px;
+        margin: 0 62px 0 auto; }
+      .f118-camera__subtitle {
+        font-size: 18px;
+        line-height: 27px; }
+      .f118-camera__image {
+        max-width: 783px; } }
+
+/*# sourceMappingURL=style.css.map */
