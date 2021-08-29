@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    ul {
+      margin: 0;
+      list-style: none;
+    }
+
+    img {
+      max-width: 100%;
+      color: transparent;
+    }
+
+    form select,
+    input {
+      border: 1px solid #c4c4c4;
+      border-radius: 4px;
+      height: 36px;
+      width: 100%;
+      padding: 0 0 0 12px;
+      background-color: #ffffff;
+    }
+
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      color: #3b6d9a;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    button {
+      display: block;
+      background: 0 0;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+      width: 100%;
+      line-height: 44px;
+      transition: 0.3s;
+      border-radius: 4px;
+      margin-bottom: 24px;
+      white-space: nowrap;
+      font-family: Roboto, sans-serif;
+      font-size: 18px;
+    }
+
+    .career__image {
+      max-width: 1366px;
+      width: 100%;
+      margin: 0 auto 40px auto;
+      display: flex;
+    }
+
+    .career__title {
+      text-align: center;
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 24px;
+      padding: 0 16px;
+    }
+
+    .career__desc {
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto 16px auto;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: center;
+      padding: 0 16px;
+    }
+
+    .career__vacancies-title {
+      text-align: center;
+      font-size: 20px;
+      line-height: 26px;
+      padding: 0 16px;
+    }
+
+    .jobs-city {
+      display: flex;
+      margin: 40px auto 0 auto;
+      max-width: 269px;
+      width: 100%;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: #212529;
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-radius: 10px;
+
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+
+      background-image: url('https://i.citrus.ua/uploads/promo/youtube_blogger/Vector-1.png?_t=1569844350');
+      background-repeat: no-repeat;
+      background-position: top 21px right 15px;
+    }
+
+    .jobs-vacancies {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 40px 16px 16px 16px;
+    }
+
+    .jobs-vacancies__item-link {
+      margin-bottom: 16px;
+    }
+
+    .jobs-vacancies__item {
+      background-color: #f3f4f5;
+      border-radius: 10px;
+      padding: 24px;
+      transition: 0.3s;
+    }
+
+    .jobs-vacancies__item-link:hover .jobs-vacancies__item {
+      background-color: #ffffff;
+      box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .jobs-vacancies__item-name {
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      transition: 0.3s;
+    }
+
+    .jobs-vacancies__item-link:hover .jobs-vacancies__item-name {
+      color: #ff680a;
+    }
+
+    .jobs-vacancies__item-region {
+      font-size: 14px;
+      line-height: 18px;
+      color: rgba(0, 0, 0, 0.54);
+    }
+
+    .career__links {
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto 40px auto;
+    }
+
+    .career__links-item {
+      text-align: center;
+      font-size: 16px;
+      line-height: 20px;
+      transition: 0.3s;
+    }
+
+    .career__links-item a:hover {
+      color: #ff680a;
+    }
+
+    .career__links-item:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    @media screen and (min-width: 768px) {
+      .jobs-vacancies {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: initial;
+      }
+
+      .jobs-vacancies__item-link {
+        width: 45%;
+        display: flex;
+        margin-bottom: 24px;
+      }
+
+      .jobs-vacancies__item-link:nth-child(odd) {
+        margin-right: 24px;
+      }
+
+      .jobs-vacancies__item {
+        width: 100%;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      .career__image {
+        margin: 0 auto 64px auto;
+      }
+
+      .career__title {
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 32px;
+        padding: 0 24px;
+      }
+
+      .career__desc {
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0 auto 24px auto;
+        padding: 0 24px;
+      }
+
+      .career__vacancies-title {
+        font-size: 24px;
+        line-height: 30px;
+        padding: 0 24px;
+      }
+
+      .jobs-vacancies {
+        max-width: 1366px;
+      }
+      .jobs-vacancies__item-link {
+        width: 31%;
+      }
+
+      .jobs-vacancies__item-link:not(:nth-child(2n + 1)) {
+        margin-right: 24px;
+      }
+    }
+  </style>
+<body>
+  <div class="career">
+    <div class="career__image">
+      <img alt="Citrus Career Image" src="https://i.citrus.ua/uploads/banana/2020/january/1366469.jpg" />
+    </div>
+    <h1 class="career__title">Работай так, как мечтал</h1>
+    <p class="career__desc">
+      Хватит пасти задних. Все веселье и драйв здесь! Мы не обещаем, что будет легко. Мы гарантируем, что будет круто! Самая яркая компания ищет самых ярких людей в команду. Присоединяйся!
+    </p>
+    <h2 class="career__vacancies-title">В нашей компании сейчас размещены такие вакансии:</h2>
+    <select class="jobs-city" id="jobsCity" onchange=""></select>
+    <ul id="jobsVacancies" class="jobs-vacancies"></ul>
+    <ul class="career__links">
+      <li class="career__links-item">
+        <a href="https://www.work.ua/jobs/by-company/246049/#open-jobs" target="_blank"
+          >Все вакансии компании «Цитрус» на work.ua</a
+        >
+      </li>
+      <li class="career__links-item">
+        <a href="https://www.work.ua/ua/jobs/by-company/246049/">Мы на Work.ua</a>
+      </li>
+      <li class="career__links-item">
+        <a href="https://rabota.ua/company1224008">Мы на Rabota.ua</a>
+      </li>
+    </ul>
+  </div>
+</body>
+  <script>
+    let jobsList = [];
+    const jobsCityElement = document.getElementById('jobsCity');
+
+    function worksCallback(data) {
+      jobsList = data.jobs;
+
+      let jobsCities = new Set();
+      jobsCities.add('Все регионы');
+
+      jobsCityElement.innerHTML = '';
+
+      jobsList.forEach((job) => {
+        jobsCities.add(job.region);
+      });
+
+      jobsCities.forEach((city) => {
+        jobsCityElement.innerHTML += `
+            <option value="${city}">${city}</option>
+          `;
+      });
+
+      citySelect(data.jobs);
+    }
+
+    function citySelect(jobs) {
+      const selectedCity = jobsCityElement.options[jobsCityElement.selectedIndex].value;
+      let cityVacancies;
+      if (selectedCity === 'Все регионы' || selectedCity === 'Всі регіони') {
+        cityVacancies = jobs;
+      } else {
+        cityVacancies = jobs.filter((item) => item.region === selectedCity);
+      }
+      const vacanciesList = document.getElementById('jobsVacancies');
+      vacanciesList.innerHTML = '';
+
+      cityVacancies.forEach((vacancy) => {
+        vacanciesList.innerHTML += `
+          <a href="${vacancy.link}" class="jobs-vacancies__item-link">
+            <li class="jobs-vacancies__item">
+              <p class="jobs-vacancies__item-name">${vacancy.name}</p>
+              <p class="jobs-vacancies__item-region">${vacancy.region}</p>
+            </li>
+            </a>
+          `;
+      });
+    }
+
+    jobsCityElement.addEventListener('change', () => {
+      citySelect(jobsList);
+    });
+
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.src = 'https://www.work.ua/export/company/company_jobs.php?id=246049&callback=worksCallback';
+    script.type = 'text/javascript';
+    head.appendChild(script);
+  </script>
+
+  <!-- <script
+    type="text/javascript"
+    src="https://www.work.ua/export/company/company_jobs.php?id=246049&callback=worksCallback"
+  ></script> -->
+</html>

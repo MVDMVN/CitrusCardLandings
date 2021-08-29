@@ -1,0 +1,1305 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0; }
+
+body {
+  overflow-x: hidden; }
+
+ul {
+  margin: 0;
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  color: transparent; }
+
+form select,
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding: 0 0 0 12px;
+  background-color: #ffffff; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3b6d9a;
+  outline: none;
+  transition: 0.3s; }
+
+button {
+  display: block;
+  background: 0 0;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  line-height: 44px;
+  transition: 0.3s;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-size: 18px; }
+
+.watch3 {
+  background-color: #ffffff;
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto; }
+  .watch3-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 36px 0 10px 0; }
+    .watch3-header__content {
+      padding: 0 16px; }
+    .watch3-header__huawei-logo {
+      display: flex;
+      justify-content: center;
+      max-width: 118px;
+      width: 100%;
+      margin: 0 auto 24px auto;
+      transition: 0.3s; }
+    .watch3-header__logo {
+      display: flex;
+      justify-content: center;
+      max-width: 213px;
+      width: 100%;
+      margin: 0 auto 16px auto;
+      transition: 0.3s; }
+    .watch3-header__title {
+      font-size: 16px;
+      line-height: 21px;
+      color: rgba(0, 0, 0, 0.87);
+      text-align: center;
+      margin-bottom: 40px;
+      transition: 0.3s; }
+    .watch3-header__image {
+      max-width: 354px;
+      width: 100%;
+      display: flex;
+      margin: 0 0 0 auto;
+      padding-left: 16px;
+      transition: 0.3s; }
+    @media screen and (min-width: 768px) {
+      .watch3-header {
+        flex-direction: row;
+        padding: 60px 0 10px 0; }
+        .watch3-header__content {
+          padding: 0 0 100px 24px;
+          max-width: 333px;
+          margin-right: 24px; }
+        .watch3-header__huawei-logo {
+          justify-content: flex-start;
+          margin: 0 0 40px 0; }
+        .watch3-header__logo {
+          margin: 0 0 16px 0;
+          max-width: 240px; }
+        .watch3-header__title {
+          font-size: 18px;
+          line-height: 23px;
+          text-align: left; }
+        .watch3-header__image {
+          max-width: 490px; } }
+    @media screen and (min-width: 1024px) {
+      .watch3-header {
+        padding: 80px 0 20px 0; }
+        .watch3-header__content {
+          max-width: 400px;
+          margin-right: 85px;
+          padding: 0 0 140px 24px; }
+        .watch3-header__huawei-logo {
+          max-width: 140px;
+          margin: 0 0 60px 0; }
+        .watch3-header__logo {
+          max-width: 378px;
+          margin: 0 0 24px 0; }
+        .watch3-header__title {
+          font-size: 24px;
+          line-height: 31px; }
+        .watch3-header__image {
+          max-width: 671px; } }
+    @media screen and (min-width: 1366px) {
+      .watch3-header {
+        padding: 172px 0 20px 0; }
+        .watch3-header__content {
+          max-width: 550px;
+          margin-right: 136px;
+          padding-left: 136px; }
+        .watch3-header__huawei-logo {
+          max-width: 200px;
+          margin: 0 0 60px 0; }
+        .watch3-header__logo {
+          max-width: 380px; } }
+  .watch3-advantages__title {
+    background-color: #000000;
+    padding: 24px 0;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 36px;
+    color: #ffffff; }
+  .watch3-advantages__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px; }
+  .watch3-advantages__item {
+    background-color: #000000;
+    padding: 16px 0;
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto 10px auto; }
+  .watch3-advantages__item-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    color: #ffffff;
+    margin-bottom: 16px;
+    text-align: center;
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto 16px auto;
+    padding: 0 16px; }
+  .watch3-advantages__item-subtitle {
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff;
+    margin-bottom: 16px;
+    text-align: center;
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto 16px auto;
+    padding: 0 16px; }
+  .watch3-advantages__item-image img {
+    margin: 0 auto;
+    display: block; }
+  @media screen and (min-width: 768px) {
+    .watch3-advantages__title {
+      font-size: 28px;
+      line-height: 36px; }
+    .watch3-advantages__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      max-width: 731px;
+      justify-content: space-between;
+      margin: 0 auto;
+      padding: 0; }
+    .watch3-advantages__item {
+      width: 31.5%;
+      margin: 0 0 10px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; } }
+  @media screen and (min-width: 1024px) {
+    .watch3-advantages__title {
+      padding: 32px 0;
+      font-size: 38px;
+      line-height: 49px; }
+    .watch3-advantages__list {
+      max-width: 988px; }
+    .watch3-advantages__item {
+      margin: 0 0 16px 0; }
+    .watch3-advantages__item-title {
+      font-size: 18px;
+      line-height: 23px;
+      margin-bottom: 18px; }
+    .watch3-advantages__item-subtitle {
+      font-size: 16px;
+      line-height: 21px; } }
+  @media screen and (min-width: 1366px) {
+    .watch3-advantages__title {
+      font-size: 42px;
+      line-height: 55px;
+      padding: 40px 0; }
+    .watch3-advantages__list {
+      max-width: 1366px; }
+    .watch3-advantages__item {
+      margin: 0 0 20px 0; }
+    .watch3-advantages__item-title {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 24px; }
+    .watch3-advantages__item-subtitle {
+      font-size: 18px;
+      line-height: 23px;
+      margin-bottom: 24px; } }
+  .watch3-design {
+    background-color: #000000;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px; }
+    .watch3-design__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 24px auto;
+      transition: 0.3s; }
+    .watch3-design__title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 31px;
+      color: #ffffff;
+      margin-bottom: 18px;
+      transition: 0.3s; }
+    .watch3-design__subtitle {
+      font-size: 16px;
+      line-height: 21px;
+      color: #ffffff;
+      transition: 0.3s; }
+    .watch3-design__image {
+      max-width: 330px;
+      width: 100%;
+      margin: 0 auto;
+      transition: 0.3s; }
+    @media screen and (min-width: 768px) {
+      .watch3-design {
+        padding: 40px 24px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        .watch3-design__content {
+          max-width: 330px;
+          margin: 0 24px 0 0; }
+        .watch3-design__title {
+          font-size: 26px;
+          line-height: 34px;
+          margin-bottom: 24px; }
+        .watch3-design__subtitle {
+          font-size: 16px;
+          line-height: 21px; }
+        .watch3-design__image {
+          margin: 0;
+          max-width: 458px; } }
+    @media screen and (min-width: 1024px) {
+      .watch3-design {
+        margin-bottom: 20px; }
+        .watch3-design__content {
+          max-width: 458px; }
+        .watch3-design__title {
+          font-size: 32px;
+          line-height: 42px; }
+        .watch3-design__subtitle {
+          font-size: 24px;
+          line-height: 31px; }
+        .watch3-design__image {
+          max-width: 535px; } }
+    @media screen and (min-width: 1366px) {
+      .watch3-design__content {
+        max-width: 535px; }
+      .watch3-design__title {
+        font-size: 38px;
+        line-height: 49px;
+        margin-bottom: 30px; }
+      .watch3-design__subtitle {
+        font-size: 24px;
+        line-height: 31px; } }
+  .watch3-band {
+    background-color: #000000;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px; }
+    .watch3-band__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 24px auto;
+      transition: 0.3s; }
+    .watch3-band__title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 31px;
+      color: #ffffff;
+      margin-bottom: 18px;
+      transition: 0.3s; }
+    .watch3-band__subtitle {
+      font-size: 16px;
+      line-height: 21px;
+      color: #ffffff;
+      transition: 0.3s; }
+    .watch3-band__image {
+      max-width: 330px;
+      width: 100%;
+      margin: 0 auto;
+      transition: 0.3s; }
+    @media screen and (min-width: 768px) {
+      .watch3-band {
+        padding: 40px 24px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        .watch3-band__content {
+          max-width: 330px;
+          margin: 0 24px 0 0; }
+        .watch3-band__title {
+          font-size: 26px;
+          line-height: 34px;
+          margin-bottom: 24px; }
+        .watch3-band__subtitle {
+          font-size: 16px;
+          line-height: 21px; }
+        .watch3-band__image {
+          margin: 0;
+          max-width: 458px; } }
+    @media screen and (min-width: 1024px) {
+      .watch3-band {
+        margin-bottom: 20px; }
+        .watch3-band__content {
+          max-width: 458px; }
+        .watch3-band__title {
+          font-size: 32px;
+          line-height: 42px; }
+        .watch3-band__subtitle {
+          font-size: 24px;
+          line-height: 31px; }
+        .watch3-band__image {
+          max-width: 535px; } }
+    @media screen and (min-width: 1366px) {
+      .watch3-band__content {
+        max-width: 535px; }
+      .watch3-band__title {
+        font-size: 38px;
+        line-height: 49px;
+        margin-bottom: 30px; }
+      .watch3-band__subtitle {
+        font-size: 24px;
+        line-height: 31px; } }
+  .watch3-battery {
+    background-color: #ffffff;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px; }
+    .watch3-battery__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 24px auto;
+      transition: 0.3s; }
+    .watch3-battery__title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 31px;
+      color: #000000;
+      margin-bottom: 18px;
+      transition: 0.3s; }
+    .watch3-battery__subtitle {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      transition: 0.3s; }
+    .watch3-battery__image {
+      max-width: 330px;
+      width: 100%;
+      margin: 0 auto;
+      transition: 0.3s; }
+    @media screen and (min-width: 768px) {
+      .watch3-battery {
+        padding: 40px 24px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        .watch3-battery__content {
+          max-width: 330px;
+          margin: 0 24px 0 0; }
+        .watch3-battery__title {
+          font-size: 26px;
+          line-height: 34px;
+          margin-bottom: 24px; }
+        .watch3-battery__subtitle {
+          font-size: 16px;
+          line-height: 21px; }
+        .watch3-battery__image {
+          margin: 0;
+          max-width: 458px; } }
+    @media screen and (min-width: 1024px) {
+      .watch3-battery {
+        margin-bottom: 20px; }
+        .watch3-battery__content {
+          max-width: 458px; }
+        .watch3-battery__title {
+          font-size: 32px;
+          line-height: 42px; }
+        .watch3-battery__subtitle {
+          font-size: 24px;
+          line-height: 31px; }
+        .watch3-battery__image {
+          max-width: 535px; } }
+    @media screen and (min-width: 1366px) {
+      .watch3-battery__content {
+        max-width: 535px; }
+      .watch3-battery__title {
+        font-size: 38px;
+        line-height: 49px;
+        margin-bottom: 30px; }
+      .watch3-battery__subtitle {
+        font-size: 24px;
+        line-height: 31px; } }
+  .watch3-faces {
+    background-color: #000000;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px; }
+    .watch3-faces__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 24px auto;
+      transition: 0.3s; }
+    .watch3-faces__title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 31px;
+      color: #ffffff;
+      margin-bottom: 18px;
+      transition: 0.3s; }
+    .watch3-faces__subtitle {
+      font-size: 16px;
+      line-height: 21px;
+      color: #ffffff;
+      transition: 0.3s; }
+    .watch3-faces__image {
+      max-width: 330px;
+      width: 100%;
+      margin: 0 auto;
+      transition: 0.3s; }
+    @media screen and (min-width: 768px) {
+      .watch3-faces {
+        padding: 40px 24px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        .watch3-faces__content {
+          max-width: 330px;
+          margin: 0 24px 0 0; }
+        .watch3-faces__title {
+          font-size: 26px;
+          line-height: 34px;
+          margin-bottom: 24px; }
+        .watch3-faces__subtitle {
+          font-size: 16px;
+          line-height: 21px; }
+        .watch3-faces__image {
+          margin: 0;
+          max-width: 458px; } }
+    @media screen and (min-width: 1024px) {
+      .watch3-faces {
+        margin-bottom: 20px; }
+        .watch3-faces__content {
+          max-width: 458px; }
+        .watch3-faces__title {
+          font-size: 32px;
+          line-height: 42px; }
+        .watch3-faces__subtitle {
+          font-size: 24px;
+          line-height: 31px; }
+        .watch3-faces__image {
+          max-width: 535px; } }
+    @media screen and (min-width: 1366px) {
+      .watch3-faces__content {
+        max-width: 535px; }
+      .watch3-faces__title {
+        font-size: 38px;
+        line-height: 49px;
+        margin-bottom: 30px; }
+      .watch3-faces__subtitle {
+        font-size: 24px;
+        line-height: 31px; } }
+  .watch3-ai {
+    background-color: #000000;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px; }
+    .watch3-ai__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 24px auto;
+      transition: 0.3s; }
+    .watch3-ai__title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 31px;
+      color: #ffffff;
+      margin-bottom: 18px;
+      transition: 0.3s; }
+    .watch3-ai__subtitle {
+      font-size: 16px;
+      line-height: 21px;
+      color: #ffffff;
+      transition: 0.3s; }
+    .watch3-ai__image {
+      max-width: 330px;
+      width: 100%;
+      margin: 0 auto;
+      transition: 0.3s; }
+    @media screen and (min-width: 768px) {
+      .watch3-ai {
+        padding: 40px 24px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        .watch3-ai__content {
+          max-width: 330px;
+          margin: 0 24px 0 0; }
+        .watch3-ai__title {
+          font-size: 26px;
+          line-height: 34px;
+          margin-bottom: 24px; }
+        .watch3-ai__subtitle {
+          font-size: 16px;
+          line-height: 21px; }
+        .watch3-ai__image {
+          margin: 0;
+          max-width: 458px; } }
+    @media screen and (min-width: 1024px) {
+      .watch3-ai {
+        margin-bottom: 20px; }
+        .watch3-ai__content {
+          max-width: 458px; }
+        .watch3-ai__title {
+          font-size: 32px;
+          line-height: 42px; }
+        .watch3-ai__subtitle {
+          font-size: 24px;
+          line-height: 31px; }
+        .watch3-ai__image {
+          max-width: 535px; } }
+    @media screen and (min-width: 1366px) {
+      .watch3-ai__content {
+        max-width: 535px; }
+      .watch3-ai__title {
+        font-size: 38px;
+        line-height: 49px;
+        margin-bottom: 30px; }
+      .watch3-ai__subtitle {
+        font-size: 24px;
+        line-height: 31px; } }
+  .watch3-usage {
+    background-color: #000000;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px; }
+    .watch3-usage__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 24px auto;
+      transition: 0.3s; }
+    .watch3-usage__title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 31px;
+      color: #ffffff;
+      margin-bottom: 18px;
+      transition: 0.3s; }
+    .watch3-usage__subtitle {
+      font-size: 16px;
+      line-height: 21px;
+      color: #ffffff;
+      transition: 0.3s; }
+    .watch3-usage__image {
+      max-width: 330px;
+      width: 100%;
+      margin: 0 auto;
+      transition: 0.3s; }
+    @media screen and (min-width: 768px) {
+      .watch3-usage {
+        padding: 40px 24px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        .watch3-usage__content {
+          max-width: 330px;
+          margin: 0 24px 0 0; }
+        .watch3-usage__title {
+          font-size: 26px;
+          line-height: 34px;
+          margin-bottom: 24px; }
+        .watch3-usage__subtitle {
+          font-size: 16px;
+          line-height: 21px; }
+        .watch3-usage__image {
+          margin: 0;
+          max-width: 458px; } }
+    @media screen and (min-width: 1024px) {
+      .watch3-usage {
+        margin-bottom: 20px; }
+        .watch3-usage__content {
+          max-width: 458px; }
+        .watch3-usage__title {
+          font-size: 32px;
+          line-height: 42px; }
+        .watch3-usage__subtitle {
+          font-size: 24px;
+          line-height: 31px; }
+        .watch3-usage__image {
+          max-width: 535px; } }
+    @media screen and (min-width: 1366px) {
+      .watch3-usage__content {
+        max-width: 535px; }
+      .watch3-usage__title {
+        font-size: 38px;
+        line-height: 49px;
+        margin-bottom: 30px; }
+      .watch3-usage__subtitle {
+        font-size: 24px;
+        line-height: 31px; } }
+  .watch3-esim {
+    background-color: #000000;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px; }
+    .watch3-esim__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 24px auto;
+      transition: 0.3s; }
+    .watch3-esim__title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 31px;
+      color: #ffffff;
+      margin-bottom: 18px;
+      transition: 0.3s; }
+    .watch3-esim__subtitle {
+      font-size: 16px;
+      line-height: 21px;
+      color: #ffffff;
+      transition: 0.3s;
+      margin-bottom: 18px; }
+    .watch3-esim__note {
+      font-size: 12px;
+      line-height: 16px;
+      color: rgba(255, 255, 255, 0.8); }
+    .watch3-esim__image {
+      max-width: 330px;
+      width: 100%;
+      margin: 0 auto;
+      transition: 0.3s; }
+    @media screen and (min-width: 768px) {
+      .watch3-esim {
+        padding: 40px 24px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        .watch3-esim__content {
+          max-width: 330px;
+          margin: 0 24px 0 0; }
+        .watch3-esim__title {
+          font-size: 26px;
+          line-height: 34px; }
+        .watch3-esim__subtitle {
+          font-size: 16px;
+          line-height: 21px;
+          margin-bottom: 24px; }
+        .watch3-esim__image {
+          margin: 0;
+          max-width: 458px; } }
+    @media screen and (min-width: 1024px) {
+      .watch3-esim {
+        margin-bottom: 20px; }
+        .watch3-esim__content {
+          max-width: 458px; }
+        .watch3-esim__title {
+          font-size: 32px;
+          line-height: 42px; }
+        .watch3-esim__subtitle {
+          font-size: 24px;
+          line-height: 31px;
+          margin-bottom: 24px; }
+        .watch3-esim__note {
+          font-size: 14px;
+          line-height: 18px; }
+        .watch3-esim__image {
+          max-width: 535px; } }
+    @media screen and (min-width: 1366px) {
+      .watch3-esim__content {
+        max-width: 535px; }
+      .watch3-esim__title {
+        font-size: 38px;
+        line-height: 49px;
+        margin-bottom: 30px; }
+      .watch3-esim__subtitle {
+        font-size: 24px;
+        line-height: 31px; } }
+  .watch3-oxygen {
+    background-color: #ffffff;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px; }
+    .watch3-oxygen__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 24px auto;
+      transition: 0.3s; }
+    .watch3-oxygen__title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 31px;
+      color: #000000;
+      margin-bottom: 18px;
+      transition: 0.3s; }
+    .watch3-oxygen__subtitle {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      transition: 0.3s; }
+    .watch3-oxygen__image {
+      max-width: 330px;
+      width: 100%;
+      margin: 0 auto;
+      transition: 0.3s; }
+    @media screen and (min-width: 768px) {
+      .watch3-oxygen {
+        padding: 40px 24px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        .watch3-oxygen__content {
+          max-width: 330px;
+          margin: 0 24px 0 0; }
+        .watch3-oxygen__title {
+          font-size: 26px;
+          line-height: 34px;
+          margin-bottom: 24px; }
+        .watch3-oxygen__subtitle {
+          font-size: 16px;
+          line-height: 21px; }
+        .watch3-oxygen__image {
+          margin: 0;
+          max-width: 458px; } }
+    @media screen and (min-width: 1024px) {
+      .watch3-oxygen {
+        margin-bottom: 20px; }
+        .watch3-oxygen__content {
+          max-width: 458px; }
+        .watch3-oxygen__title {
+          font-size: 32px;
+          line-height: 42px; }
+        .watch3-oxygen__subtitle {
+          font-size: 24px;
+          line-height: 31px; }
+        .watch3-oxygen__image {
+          max-width: 535px; } }
+    @media screen and (min-width: 1366px) {
+      .watch3-oxygen__content {
+        max-width: 535px; }
+      .watch3-oxygen__title {
+        font-size: 38px;
+        line-height: 49px;
+        margin-bottom: 30px; }
+      .watch3-oxygen__subtitle {
+        font-size: 24px;
+        line-height: 31px; } }
+  .watch3-infographic {
+    background-color: #ffffff;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px; }
+    .watch3-infographic__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 24px auto;
+      transition: 0.3s; }
+    .watch3-infographic__title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 31px;
+      color: #000000;
+      margin-bottom: 18px;
+      transition: 0.3s; }
+    .watch3-infographic__subtitle {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      transition: 0.3s; }
+    .watch3-infographic__image {
+      max-width: 330px;
+      width: 100%;
+      margin: 0 auto;
+      transition: 0.3s; }
+    @media screen and (min-width: 768px) {
+      .watch3-infographic {
+        padding: 40px 24px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        .watch3-infographic__content {
+          max-width: 330px;
+          margin: 0 24px 0 0; }
+        .watch3-infographic__title {
+          font-size: 26px;
+          line-height: 34px;
+          margin-bottom: 24px; }
+        .watch3-infographic__subtitle {
+          font-size: 16px;
+          line-height: 21px; }
+        .watch3-infographic__image {
+          margin: 0;
+          max-width: 458px; } }
+    @media screen and (min-width: 1024px) {
+      .watch3-infographic {
+        margin-bottom: 20px; }
+        .watch3-infographic__content {
+          max-width: 458px; }
+        .watch3-infographic__title {
+          font-size: 32px;
+          line-height: 42px; }
+        .watch3-infographic__subtitle {
+          font-size: 24px;
+          line-height: 31px; }
+        .watch3-infographic__image {
+          max-width: 535px; } }
+    @media screen and (min-width: 1366px) {
+      .watch3-infographic__content {
+        max-width: 535px; }
+      .watch3-infographic__title {
+        font-size: 38px;
+        line-height: 49px;
+        margin-bottom: 30px; }
+      .watch3-infographic__subtitle {
+        font-size: 24px;
+        line-height: 31px; } }
+  .watch3-temperature {
+    background-color: #ffffff;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px; }
+    .watch3-temperature__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 24px auto;
+      transition: 0.3s; }
+    .watch3-temperature__title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 31px;
+      color: #000000;
+      margin-bottom: 18px;
+      transition: 0.3s; }
+    .watch3-temperature__subtitle {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      transition: 0.3s; }
+    .watch3-temperature__image {
+      max-width: 330px;
+      width: 100%;
+      margin: 0 auto;
+      transition: 0.3s; }
+    @media screen and (min-width: 768px) {
+      .watch3-temperature {
+        padding: 40px 24px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        .watch3-temperature__content {
+          max-width: 330px;
+          margin: 0 24px 0 0; }
+        .watch3-temperature__title {
+          font-size: 26px;
+          line-height: 34px;
+          margin-bottom: 24px; }
+        .watch3-temperature__subtitle {
+          font-size: 16px;
+          line-height: 21px; }
+        .watch3-temperature__image {
+          margin: 0;
+          max-width: 458px; } }
+    @media screen and (min-width: 1024px) {
+      .watch3-temperature {
+        margin-bottom: 20px; }
+        .watch3-temperature__content {
+          max-width: 458px; }
+        .watch3-temperature__title {
+          font-size: 32px;
+          line-height: 42px; }
+        .watch3-temperature__subtitle {
+          font-size: 24px;
+          line-height: 31px; }
+        .watch3-temperature__image {
+          max-width: 535px; } }
+    @media screen and (min-width: 1366px) {
+      .watch3-temperature__content {
+        max-width: 535px; }
+      .watch3-temperature__title {
+        font-size: 38px;
+        line-height: 49px;
+        margin-bottom: 30px; }
+      .watch3-temperature__subtitle {
+        font-size: 24px;
+        line-height: 31px; } }
+  .watch3-music {
+    background-color: #000000;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px; }
+    .watch3-music__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 24px auto;
+      transition: 0.3s; }
+    .watch3-music__title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 31px;
+      color: #ffffff;
+      margin-bottom: 18px;
+      transition: 0.3s; }
+    .watch3-music__subtitle {
+      font-size: 16px;
+      line-height: 21px;
+      color: #ffffff;
+      transition: 0.3s; }
+    .watch3-music__image {
+      max-width: 330px;
+      width: 100%;
+      margin: 0 auto;
+      transition: 0.3s; }
+    @media screen and (min-width: 768px) {
+      .watch3-music {
+        padding: 40px 24px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        .watch3-music__content {
+          max-width: 330px;
+          margin: 0 24px 0 0; }
+        .watch3-music__title {
+          font-size: 26px;
+          line-height: 34px;
+          margin-bottom: 24px; }
+        .watch3-music__subtitle {
+          font-size: 16px;
+          line-height: 21px; }
+        .watch3-music__image {
+          margin: 0;
+          max-width: 458px; } }
+    @media screen and (min-width: 1024px) {
+      .watch3-music {
+        margin-bottom: 20px; }
+        .watch3-music__content {
+          max-width: 458px; }
+        .watch3-music__title {
+          font-size: 32px;
+          line-height: 42px; }
+        .watch3-music__subtitle {
+          font-size: 24px;
+          line-height: 31px; }
+        .watch3-music__image {
+          max-width: 535px; } }
+    @media screen and (min-width: 1366px) {
+      .watch3-music__content {
+        max-width: 535px; }
+      .watch3-music__title {
+        font-size: 38px;
+        line-height: 49px;
+        margin-bottom: 30px; }
+      .watch3-music__subtitle {
+        font-size: 24px;
+        line-height: 31px; } }
+  .watch3-sport {
+    background-color: #ffffff;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px; }
+    .watch3-sport__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 24px auto;
+      transition: 0.3s; }
+    .watch3-sport__title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 31px;
+      color: #000000;
+      margin-bottom: 18px;
+      transition: 0.3s; }
+    .watch3-sport__subtitle {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      transition: 0.3s; }
+    .watch3-sport__image {
+      max-width: 330px;
+      width: 100%;
+      margin: 0 auto;
+      transition: 0.3s; }
+    @media screen and (min-width: 768px) {
+      .watch3-sport {
+        padding: 40px 24px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        .watch3-sport__content {
+          max-width: 330px;
+          margin: 0 24px 0 0; }
+        .watch3-sport__title {
+          font-size: 26px;
+          line-height: 34px;
+          margin-bottom: 24px; }
+        .watch3-sport__subtitle {
+          font-size: 16px;
+          line-height: 21px; }
+        .watch3-sport__image {
+          margin: 0;
+          max-width: 458px; } }
+    @media screen and (min-width: 1024px) {
+      .watch3-sport {
+        margin-bottom: 20px; }
+        .watch3-sport__content {
+          max-width: 458px; }
+        .watch3-sport__title {
+          font-size: 32px;
+          line-height: 42px; }
+        .watch3-sport__subtitle {
+          font-size: 24px;
+          line-height: 31px; }
+        .watch3-sport__image {
+          max-width: 535px; } }
+    @media screen and (min-width: 1366px) {
+      .watch3-sport__content {
+        max-width: 535px; }
+      .watch3-sport__title {
+        font-size: 38px;
+        line-height: 49px;
+        margin-bottom: 30px; }
+      .watch3-sport__subtitle {
+        font-size: 24px;
+        line-height: 31px; } }
+  .watch3-safety {
+    background-color: #ffffff;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px; }
+    .watch3-safety__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto 24px auto;
+      transition: 0.3s; }
+    .watch3-safety__title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 31px;
+      color: #000000;
+      margin-bottom: 18px;
+      transition: 0.3s; }
+    .watch3-safety__subtitle {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      transition: 0.3s; }
+    .watch3-safety__image {
+      max-width: 330px;
+      width: 100%;
+      margin: 0 auto;
+      transition: 0.3s; }
+    @media screen and (min-width: 768px) {
+      .watch3-safety {
+        padding: 40px 24px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        .watch3-safety__content {
+          max-width: 330px;
+          margin: 0 24px 0 0; }
+        .watch3-safety__title {
+          font-size: 26px;
+          line-height: 34px;
+          margin-bottom: 24px; }
+        .watch3-safety__subtitle {
+          font-size: 16px;
+          line-height: 21px; }
+        .watch3-safety__image {
+          margin: 0;
+          max-width: 458px; } }
+    @media screen and (min-width: 1024px) {
+      .watch3-safety {
+        margin-bottom: 20px; }
+        .watch3-safety__content {
+          max-width: 458px; }
+        .watch3-safety__title {
+          font-size: 32px;
+          line-height: 42px; }
+        .watch3-safety__subtitle {
+          font-size: 24px;
+          line-height: 31px; }
+        .watch3-safety__image {
+          max-width: 535px; } }
+    @media screen and (min-width: 1366px) {
+      .watch3-safety__content {
+        max-width: 535px; }
+      .watch3-safety__title {
+        font-size: 38px;
+        line-height: 49px;
+        margin-bottom: 30px; }
+      .watch3-safety__subtitle {
+        font-size: 24px;
+        line-height: 31px; } }
+  .watch3-info {
+    padding: 0 16px 40px 16px; }
+    .watch3-info__title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      color: #000000;
+      max-width: 566px;
+      width: 100%;
+      margin: 0 auto 16px auto; }
+    .watch3-info__info-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+    .watch3-info__images {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 220px;
+      width: 100%;
+      margin: 0 auto; }
+    .watch3-info__app-logo {
+      max-width: 90px;
+      width: 100%; }
+    .watch3-info__qr {
+      max-width: 112px;
+      width: 100%; }
+    .watch3-info__content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto; }
+    .watch3-info__content-title {
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      color: #000000;
+      margin-bottom: 10px; }
+    .watch3-info__content-subtitle {
+      font-size: 12px;
+      line-height: 14px;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.35);
+      margin-bottom: 4px; }
+    .watch3-info__link {
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 14px;
+      display: flex;
+      justify-content: center;
+      text-decoration-line: underline;
+      color: #000000; }
+      .watch3-info__link:hover {
+        color: #f77c2f; }
+    @media screen and (min-width: 768px) {
+      .watch3-info {
+        padding: 0 24px 60px 24px; }
+        .watch3-info__title {
+          font-size: 28px;
+          line-height: 33px; }
+        .watch3-info__info-container {
+          flex-direction: row;
+          justify-content: center; }
+        .watch3-info__images {
+          margin: 0 16px 0 0; }
+        .watch3-info__app-logo {
+          max-width: 100px; }
+        .watch3-info__qr {
+          max-width: 125px; }
+        .watch3-info__content {
+          max-width: 470px;
+          margin: 0; }
+        .watch3-info__content-title {
+          text-align: left;
+          font-size: 16px;
+          line-height: 19px; }
+        .watch3-info__content-subtitle {
+          font-size: 16px;
+          line-height: 19px;
+          text-align: left; }
+        .watch3-info__link {
+          font-size: 16px;
+          line-height: 19px;
+          justify-content: flex-start; } }
+    @media screen and (min-width: 1024px) {
+      .watch3-info {
+        padding: 0 24px 100px 24px; }
+        .watch3-info__title {
+          font-weight: 500;
+          font-size: 32px;
+          line-height: 42px;
+          max-width: 780px; }
+        .watch3-info__images {
+          max-width: 290px; }
+        .watch3-info__app-logo {
+          max-width: 120px; }
+        .watch3-info__qr {
+          max-width: 150px; } }
+    @media screen and (min-width: 1366px) {
+      .watch3-info__title {
+        font-size: 38px;
+        line-height: 49px;
+        max-width: 870px; }
+      .watch3-info__content {
+        max-width: 750px; }
+      .watch3-info__content-title {
+        font-size: 18px;
+        line-height: 21px; }
+      .watch3-info__content-subtitle {
+        font-size: 16px;
+        line-height: 19px; } }
+  .watch3-faq {
+    padding: 40px 16px;
+    border-top: 1px solid #d1d1d1; }
+    .watch3-faq__list {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto;
+      list-style-position: inside;
+      transition: 0.3s; }
+    .watch3-faq__item {
+      font-size: 14px;
+      line-height: 18px;
+      color: #797979;
+      transition: 0.3s; }
+      .watch3-faq__item:not(:last-child) {
+        margin-bottom: 8px; }
+    @media screen and (min-width: 768px) {
+      .watch3-faq {
+        padding: 40px 24px; }
+        .watch3-faq__list {
+          max-width: 760px; } }
+    @media screen and (min-width: 1024px) {
+      .watch3-faq {
+        padding: 40px 24px 100px 24px; }
+        .watch3-faq__list {
+          max-width: 1100px; } }
+
+/*# sourceMappingURL=style.css.map */
